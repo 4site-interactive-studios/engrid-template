@@ -1,0 +1,17 @@
+cc_page-pre-header
+cc_page-header
+bc_outside-header
+b_pre-header
+b_header
+b_banner
+b_banner-overlay
+b_top-copy
+b_sidebar-copy
+b_form
+b_pre-footer
+b_footer
+bc_outside-footer
+cc_page-footer
+p_background
+p_background-overlay
+p_custom-code

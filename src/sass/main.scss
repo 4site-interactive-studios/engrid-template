@@ -1,0 +1,6 @@
+@import "reset";
+@import "breakpoint-sass";
+@import "breakpoint-slicer";
+$slicer-breakpoints: 0 400px 900px 1200px 1440px;
+
+@import "font";

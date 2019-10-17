@@ -1,0 +1,707 @@
+#grid-wrapper .en__component--advrow,
+#EN__RootElement
+  div.pboAdvancedRow__preview
+  .en__component--row.en__component--advrow {
+  display: grid;
+  display: -ms-grid;
+}
+
+/* IE 11 Grid Fallback: Displays everyone on section after the other */
+@media all and (-ms-high-contrast: none) {
+  #grid-wrapper .en__component--advrow,
+  #grid-wrapper
+    ~ #EN__RootElement
+    div.pboAdvancedRow__preview
+    .en__component--row.en__component--advrow {
+    display: block !important;
+  }
+
+  #grid-wrapper .en__component--advrow > div,
+  #grid-wrapper
+    ~ #EN__RootElement
+    div.pboAdvancedRow__preview
+    .en__component--row.en__component--advrow
+    > div {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+#en__pagebuilder :not(.pboAdvancedRow__preview) .ccfs::before,
+#en__pagebuilder :not(.pboAdvancedRow__preview) .pb::before,
+#en__pagebuilder :not(.pboAdvancedRow__preview) .pbo::before,
+#en__pagebuilder :not(.pboAdvancedRow__preview) .pcc::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  color: #ce4f60;
+  position: static;
+  line-height: 25px;
+  opacity: 0.5;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 0;
+}
+
+#en__pagebuilder :not(.pboAdvancedRow__preview) .ccfs::before {
+  content: "CONTENT COLUMN - FOOTER SPACER";
+}
+
+#en__pagebuilder :not(.pboAdvancedRow__preview) .pb::before {
+  content: "PAGE - BACKGROUND IMAGE";
+}
+#en__pagebuilder :not(.pboAdvancedRow__preview) .pbo::before {
+  content: "PAGE - BACKGROUND IMAGE OVERLAY";
+}
+#en__pagebuilder :not(.pboAdvancedRow__preview) .pcc::before {
+  content: "PAGE - CUSTOM CODE";
+}
+
+#en__pagebuilder .en__container {
+  margin-bottom: 0px !important;
+}
+
+body#en__pagebuilder #grid-wrapper .en__component--advrow {
+  width: 100%;
+}
+
+/* EN sets width to 100%, without setting max-width it overflows offscreen */
+@media only screen and (max-width: 599px),
+  only screen and (max-device-width: 599px) {
+  .en__component--column.en__component--advcolumn,
+  .en__component--row--2 .en__component--column {
+    max-width: 100vw;
+  }
+}
+
+body:not(#en__pagebuilder) #grid-wrapper .en__component--advrow {
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.ccpph:before {
+  content: "Content Column - Page Pre-Header (ccpph)" !important;
+}
+
+.ccpph {
+  grid-area: ccpph;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.ccph:before {
+  content: "Content Column - Page Header (ccph)" !important;
+}
+
+.ccph {
+  grid-area: ccph;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bcoh:before {
+  content: "Body Column - Outside Header (bcoh)" !important;
+}
+
+.bcoh {
+  grid-area: bcoh;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bph:before {
+  content: "Body - Page Header (bph)" !important;
+}
+
+.bph {
+  grid-area: bph;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bh:before {
+  content: "Body - Header (bh)" !important;
+}
+
+.bh {
+  grid-area: bh;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bb:before {
+  content: "Body - Banner (bb)" !important;
+}
+
+.bb {
+  grid-area: bb;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bbo:before {
+  content: "Body - Banner Overlay (bbo)" !important;
+}
+
+.bbo {
+  grid-area: bbo;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.btc:before {
+  content: "Body - Top Copy (btc)" !important;
+}
+
+.btc {
+  grid-area: btc;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bsc:before {
+  content: "Body - Sidebar Copy (bsc)" !important;
+}
+
+.bsc {
+  grid-area: bsc;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bform:before {
+  content: "Body - Form (bform)" !important;
+}
+
+.bform {
+  grid-area: bform;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bpf:before {
+  content: "Body - Pre Footer (bpf)" !important;
+}
+
+.bpf {
+  grid-area: bpf;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bf:before {
+  content: "Body - Footer (bf)" !important;
+}
+
+.bf {
+  grid-area: bf;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.ccfs:before {
+  content: "Content Column - Footer Spacer (ccfs)" !important;
+}
+
+.ccfs {
+  grid-area: ccfs;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bcof:before {
+  content: "Body Column - Outside Footer (bcof)" !important;
+}
+
+.bcof {
+  grid-area: bcof;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.ccpf:before {
+  content: "Content Column - Page Footer (ccpf)" !important;
+}
+
+.ccpf {
+  grid-area: ccpf;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.pb:before {
+  content: "Page - Background (pb)" !important;
+}
+
+.pb {
+  grid-area: pb;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.pbo:before {
+  content: "Page - Background Overlay (pbo)" !important;
+}
+
+.pbo {
+  grid-area: pbo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.pcc:before {
+  content: "Page - Custom Code (pcc)" !important;
+}
+
+.pcc {
+  grid-area: pcc;
+}
+
+body#en__pagebuilder .pb img {
+  width: auto !important;
+  height: 350px !important;
+  margin: 0 auto;
+}
+
+body:not(#en__pagebuilder) .pb {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body:not(#en__pagebuilder) .pcc {
+  display: none;
+}
+
+/* The Content Column - Page Footer has internal components that should horizontally line up to the body */
+.layout-1 .en__component--advrow .ccpf {
+  display: grid;
+  grid-template-columns:
+    [content-start]
+    minmax(0px, var(--body-column-left-gutter)) [body-start]
+    minmax(0px, var(--body-left-gutter)) [center-start]
+    minmax(600px, var(--body-width)) [center-end]
+    minmax(0px, var(--body-right-gutter)) [body-end]
+    minmax(0px, var(--body-column-right-gutter))
+    [content-end];
+}
+
+.layout-1 .bh {
+  background-color: #ffffff;
+  border-top-left-radius: var(--body-border-radius);
+  border-top-right-radius: var(--body-border-radius);
+  margin-top: var(--body-margin);
+  padding-top: var(--body-padding-lg);
+}
+
+.layout-1 .btc {
+  background-color: #ffffff;
+  padding-left: var(--body-padding);
+  padding-right: var(--body-padding);
+}
+
+.layout-1 .bform {
+  background-color: #ffffff;
+  padding-left: var(--body-padding);
+  padding-right: var(--body-padding);
+}
+
+.layout-1 .bf {
+  background-color: #ffffff;
+  border-bottom-left-radius: var(--body-border-radius);
+  border-bottom-right-radius: var(--body-border-radius);
+  padding-left: var(--body-padding);
+  padding-right: var(--body-padding);
+  padding-bottom: var(--body-padding-lg);
+  margin-bottom: var(--body-margin);
+}
+
+body:not(#en__pagebuilder) .layout-1 .pb {
+  background-position: right top;
+}
+
+@media (min-width: 600px) {
+  .layout-1 .ccpf {
+    background: rgba(0, 0, 0, 0.5);
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5)));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  }
+}
+
+.layout-1 .ccpf > div {
+  grid-column: center-start / content-end;
+  color: #ffffff;
+}
+
+.layout-1 #nav-footer a {
+  text-decoration: none;
+  display: inline-block;
+  padding: var(--body-padding) var(--body-padding-sm);
+  color: #ffffff;
+}
+
+body:not(#en__pagebuilder) .layout-1 .pb {
+  background-color: #487c0f;
+}
+
+@media (max-width: 599px) {
+  .layout-1 #nav-footer {
+    padding: var(--body-padding) 0 var(--body-padding) 0;
+  }
+
+  .layout-1 #nav-footer a {
+    display: block;
+    padding: var(--body-padding-sm) var(--body-padding-lg)
+      var(--body-padding-sm) var(--body-padding);
+    color: #78a22e;
+  }
+
+  .layout-1 .en__component--advrow,
+  .layout-1
+    ~ #EN__RootElement
+    div.pboAdvancedRow__preview
+    .en__component--row.en__component--advrow {
+    grid-template-columns:
+      [content-start]
+      0px [body-start]
+      0px [center-start]
+      auto [center-end]
+      0px [body-end]
+      0px
+      [content-end];
+  }
+
+  .layout-1 .en__component--advrow .ccpf {
+    grid-template-columns:
+      [content-start]
+      0px [body-start]
+      0px [center-start]
+      auto [center-end]
+      0px [body-end]
+      0px
+      [content-end];
+  }
+
+  .layout-1 .pb,
+  .layout-1 .pbo {
+    display: none;
+  }
+
+  .layout-1 .bh {
+    margin-top: 0rem;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .layout-1 .bf {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .layout-1 .pb {
+    background-image: none;
+  }
+}
+
+/*
+* ##########################################################
+* # RAN Layout 1 (layout-1 left-left)
+* # The Content Column is left aligned and Body Column is left aligned inside it.
+* ##########################################################
+*/
+
+/* Should eventually be replaced with SCSS Variables*/
+.layout-1.left-left,
+.layout-1.left-left ~ #EN__RootElement {
+  --content-width: 1100px;
+
+  --body-column-left-gutter: 35px;
+  --body-left-gutter: 0px;
+  --body-width: 600px;
+  --body-right-gutter: 0px;
+  --body-column-right-gutter: 1fr;
+
+  --body-border-radius: 0.4375rem;
+  --body-margin: 2.1875rem;
+
+  --body-padding-sm: 0.8652rem;
+  --body-padding: 1.375rem;
+  --body-padding-lg: 2.1875rem;
+}
+
+/* Grid Template Rows - Sets Content Column - Page Footer to 1fr which causes it to be "stickied" to the bottom of the page if the other content is shorter than the page is tall */
+.layout-1.left-left .en__component--advrow,
+.layout-1.left-left
+  ~ #EN__RootElement
+  div.pboAdvancedRow__preview
+  .en__component--row.en__component--advrow {
+  grid-template-areas:
+    "ccpph    ccpph   ccpph   ccpph   ccpph"
+    "ccph     ccph    ccph    ccph    ccph"
+    ".        bcoh    bcoh    bcoh    ."
+    ".        .       bph     .       ."
+    ".        .       bh      .       ."
+    ".        .       bb      .       ."
+    ".        .       bbo     .       ."
+    ".        .       btc     .       ."
+    ".        .       bsc     .       ."
+    ".        .       bform   .       ."
+    ".        .       bpf     .       ."
+    ".        .       bf      .       ."
+    ".        bcof    bcof    bcof    ."
+    "ccfs     ccfs    ccfs    ccfs    ccfs"
+    "ccpf     ccpf    ccpf    ccpf    ccpf"
+    "pb       pb      pb      pb      pb"
+    "pbo      pbo     pbo     pbo     pbo"
+    "pcc      pcc     pcc     pcc     pcc";
+  grid-template-rows: [ccpph-start] auto [ccph-start ccpph-end] auto [bcoh-start ccph-end] auto [bph-start bcoh-end] auto [bh-start bph-end] auto [bb-start bh-end] auto [bbo-start bb-end] auto [btc-start bbo-end] auto [bsc-start btc-end] auto [bform-start bsc-end] auto [bpf-start bform-end] auto [bf-start bpf-end] auto [bcof-start bf-end] auto [ccfs-start bcof-end] 1fr [ccpf-start ccfs-end] auto [pb-start ccpf-end] auto [pbo-start pb-end] auto [pcc-start pbo-end] auto [pcc-end];
+  grid-template-columns:
+    [content-start]
+    minmax(0px, var(--body-column-left-gutter)) [body-start]
+    minmax(0px, var(--body-left-gutter)) [center-start]
+    minmax(600px, var(--body-width)) [center-end]
+    minmax(0px, var(--body-right-gutter)) [body-end]
+    minmax(0px, var(--body-column-right-gutter))
+    [content-end];
+}
+
+body:not(#en__pagebuilder) .layout-1.left-left .ccph {
+  display: none;
+}
+
+body:not(#en__pagebuilder) .layout-1.left-left .pb {
+  grid-row: bcoh-start / ccpf-end;
+  grid-column: content / content;
+  z-index: -1;
+}
+
+body:not(#en__pagebuilder) .layout-1.left-left .pbo {
+  grid-row: bcoh-start / ccpf-end;
+  grid-column: center-end / content-end;
+  z-index: -1;
+  margin: var(--body-margin);
+  color: #ffffff;
+}
+
+@media (max-width: 1099px) {
+  .layout-1.left-left .pbo {
+    display: none;
+  }
+}
+
+/*
+* ##########################################################
+* # RAN Layout 1 (layout-1 center-left)
+* # The Content Column is centered and Body Column is left aligned inside it.
+* ##########################################################
+*/
+
+/* To be replaced with SCSS Variables*/
+.layout-1.center-left,
+.layout-1.center-left ~ #EN__RootElement {
+  --content-width: 1100px;
+
+  --body-column-left-gutter: 1fr;
+  --body-left-gutter: 0px;
+  --body-width: 650px;
+  --body-right-gutter: 450px;
+  --body-column-right-gutter: 1fr;
+
+  --body-border-radius: 0.4375rem;
+  --body-margin: 2.1875rem;
+
+  --body-padding-sm: 0.8652rem;
+  --body-padding: 1.375rem;
+  --body-padding-lg: 2.1875rem;
+}
+
+/* Grid Template Rows - Sets Content Column - Page Footer to 1fr which causes it to be "stickied" to the bottom of the page if the other content is shorter than the page is tall */
+.layout-1.center-left .en__component--advrow,
+.layout-1.center-left
+  ~ #EN__RootElement
+  div.pboAdvancedRow__preview
+  .en__component--row.en__component--advrow {
+  grid-template-areas:
+    "ccpph    ccpph   ccpph   ccpph   ccpph"
+    "ccph     ccph    ccph    ccph    ccph"
+    ".        bcoh    bcoh    bcoh    ."
+    ".        .       bph     .       ."
+    ".        .       bh      .       ."
+    ".        .       bb      .       ."
+    ".        .       bbo     .       ."
+    ".        .       btc     .       ."
+    ".        .       bsc     .       ."
+    ".        .       bform   .       ."
+    ".        .       bpf     .       ."
+    ".        .       bf      .       ."
+    ".        bcof    bcof    bcof    ."
+    "ccfs     ccfs    ccfs    ccfs    ccfs"
+    "ccpf     ccpf    ccpf    ccpf    ccpf"
+    "pb       pb      pb      pb      pb"
+    "pbo      pbo     pbo     pbo     pbo"
+    "pcc      pcc     pcc     pcc     pcc";
+  grid-template-rows: [ccpph-start] auto [ccph-start ccpph-end] auto [bcoh-start ccph-end] auto [bph-start bcoh-end] auto [bh-start bph-end] auto [bb-start bh-end] auto [bbo-start bb-end] auto [btc-start bbo-end] auto [bsc-start btc-end] auto [bform-start bsc-end] auto [bpf-start bform-end] auto [bf-start bpf-end] auto [bcof-start bf-end] auto [ccfs-start bcof-end] 1fr [ccpf-start ccfs-end] auto [pb-start ccpf-end] auto [pbo-start pb-end] auto [pcc-start pbo-end] auto [pcc-end];
+  grid-template-columns:
+    [content-start]
+    minmax(0px, var(--body-column-left-gutter)) [body-start]
+    minmax(0px, var(--body-left-gutter)) [center-start]
+    minmax(600px, var(--body-width)) [center-end]
+    minmax(0px, var(--body-right-gutter)) [body-end]
+    minmax(0px, var(--body-column-right-gutter))
+    [content-end];
+}
+
+.layout-1.center-left .ccph,
+.layout-1.center-left .ccpf {
+  grid-template-columns:
+    [content-start]
+    minmax(0px, var(--body-column-left-gutter)) [body-start]
+    minmax(0px, var(--body-left-gutter)) [center-start]
+    minmax(0px, var(--body-width)) [center-end]
+    minmax(0px, var(--body-right-gutter)) [body-end]
+    minmax(0px, var(--body-column-right-gutter))
+    [content-end];
+  display: grid;
+}
+
+.layout-1.center-left .ccph {
+  background-color: #2e2e2c;
+  padding: 1rem 0;
+}
+
+.layout-1.center-left .ccph .en__component--copyblock,
+.layout-1.center-left .ccpf .en__component--copyblock {
+  grid-column: body;
+}
+
+.layout-1.center-left #nav-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.layout-1.center-left #nav-header .navbar-donate {
+  background-color: #f1700b;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 10px 50px 10px;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 38px;
+}
+
+body:not(#en__pagebuilder) .layout-1.center-left .pb {
+  grid-row: bcoh-start / ccpf-end;
+  grid-column: content / content;
+  z-index: -1;
+}
+
+body:not(#en__pagebuilder) .layout-1.center-left .pbo {
+  grid-row: bcoh-start / ccpf-end;
+  grid-column: center-end / content-end;
+  z-index: -1;
+  margin: var(--body-margin);
+  color: #ffffff;
+}
+
+@media (max-width: 1099px) {
+  .layout-1.center-left .pbo {
+    display: none;
+  }
+}
+
+/*
+* ##########################################################
+* # RAN Layout 1 (layout-1 center-center)
+* # The Content Column is centered and Body Column is left aligned inside it.
+* ##########################################################
+*/
+
+/* Should eventually be replaced with SCSS Variables*/
+.layout-1.center-center,
+.layout-1.center-center ~ #EN__RootElement {
+  --content-width: 1100px;
+
+  --body-column-left-gutter: 1fr;
+  --body-left-gutter: 140px;
+  --body-width: 820px;
+  --body-right-gutter: 140px;
+  --body-column-right-gutter: 1fr;
+
+  --body-border-radius: 0.4375rem;
+  --body-margin: 2.1875rem;
+
+  --body-padding-sm: 0.8652rem;
+  --body-padding: 1.375rem;
+  --body-padding-lg: 2.1875rem;
+}
+
+/* Grid Template Rows - Sets Content Column - Page Footer to 1fr which causes it to be "stickied" to the bottom of the page if the other content is shorter than the page is tall */
+.layout-1.center-center .en__component--advrow,
+.layout-1.center-center
+  ~ #EN__RootElement
+  div.pboAdvancedRow__preview
+  .en__component--row.en__component--advrow {
+  grid-template-areas:
+    "ccpph    ccpph   ccpph   ccpph   ccpph"
+    "ccph     ccph    ccph    ccph    ccph"
+    ".        bcoh    bcoh    bcoh    ."
+    ".        .       bph     .       ."
+    ".        .       bh      .       ."
+    ".        .       bb      .       ."
+    ".        .       bbo     .       ."
+    ".        .       btc     .       ."
+    ".        .       bsc     .       ."
+    ".        .       bform   .       ."
+    ".        .       bpf     .       ."
+    ".        .       bf      .       ."
+    ".        bcof    bcof    bcof    ."
+    "ccfs     ccfs    ccfs    ccfs    ccfs"
+    "ccpf     ccpf    ccpf    ccpf    ccpf"
+    "pb       pb      pb      pb      pb"
+    "pbo      pbo     pbo     pbo     pbo"
+    "pcc      pcc     pcc     pcc     pcc";
+  grid-template-rows: [ccpph-start] auto [ccph-start ccpph-end] auto [bcoh-start ccph-end] auto [bph-start bcoh-end] auto [bh-start bph-end] auto [bb-start bh-end] auto [bbo-start bb-end] auto [btc-start bbo-end] auto [bsc-start btc-end] auto [bform-start bsc-end] auto [bpf-start bform-end] auto [bf-start bpf-end] auto [bcof-start bf-end] auto [ccfs-start bcof-end] 1fr [ccpf-start ccfs-end] auto [pb-start ccpf-end] auto [pbo-start pb-end] auto [pcc-start pbo-end] auto [pcc-end];
+  grid-template-columns:
+    [content-start]
+    minmax(0px, var(--body-column-left-gutter)) [body-start]
+    minmax(0px, var(--body-left-gutter)) [center-start]
+    minmax(600px, var(--body-width)) [center-end]
+    minmax(0px, var(--body-right-gutter)) [body-end]
+    minmax(0px, var(--body-column-right-gutter))
+    [content-end];
+}
+
+.layout-1.center-center .ccph,
+.layout-1.center-center .ccpf {
+  grid-template-columns:
+    [content-start]
+    minmax(0px, var(--body-column-left-gutter)) [body-start]
+    minmax(0px, var(--body-left-gutter)) [center-start]
+    minmax(0px, var(--body-width)) [center-end]
+    minmax(0px, var(--body-right-gutter)) [body-end]
+    minmax(0px, var(--body-column-right-gutter))
+    [content-end];
+  display: grid;
+}
+
+.layout-1.center-center .ccph {
+  background-color: #2e2e2c;
+  padding: 1rem 0;
+}
+
+.layout-1.center-center .ccph .en__component--copyblock,
+.layout-1.center-center .ccpf .en__component--copyblock {
+  grid-column: body;
+}
+
+.layout-1.center-center #nav-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.layout-1.center-center #nav-header .navbar-donate {
+  background-color: #f1700b;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 10px 50px 10px;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 38px;
+}
+
+body:not(#en__pagebuilder) .layout-1.center-center .pb {
+  grid-row: bcoh-start / ccpf-end;
+  grid-column: content / content;
+  z-index: -1;
+}
+
+body:not(#en__pagebuilder) .layout-1.center-center .pbo {
+  display: none;
+}

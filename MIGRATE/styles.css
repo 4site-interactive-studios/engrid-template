@@ -1,0 +1,38 @@
+form {
+  margin-bottom: 0;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+/** Utility Class: Hide Columns and Content **/
+
+/** Style Hidden Content and Columns in Page Builder **/
+#en__pagebuilder .hide {
+  background-color: #ff00001a !important;
+}
+
+#en__pagebuilder .hide.en__component--column {
+  outline-color: #ff0000 !important;
+  z-index: 1;
+}
+
+.show .hide.en__component--column:not(.bb):not(.bbo):not(.pb):not(.pbo) {
+  background-color: #ff00001a !important;
+  outline-color: #ff0000 !important;
+  z-index: 1;
+  outline: 1px dashed;
+}
+
+/** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/
+#grid-wrapper:not(.show)
+  :not(.pboAdvancedRow__preview)
+  .hide.en__component--column {
+  display: none;
+}
+
+/** Hide CONTENT when viewed publicly, but not when viewed in page builder. **/
+body:not(#en__pagebuilder) #grid-wrapper:not(.show) .hide {
+  display: none !important;
+}
