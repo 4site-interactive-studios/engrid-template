@@ -1,3 +1,4 @@
+export const enInput = (() => {
 
 /* @TODO */
 /************************************
@@ -31,17 +32,15 @@ function onDOMContentLoaded() {
  * NOTE: STILL NEEDS WORK TO FUNCTION ON "SPLIT" CUSTOM EN FIELDS
  * REF: https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event
  ***********************************/
-
-export const enInput = (() => {
   // Occurs when an input field gets focus
-  const handleFocus = e => {
+  const handleFocus = (e:any) => {
     const target = e.target;
     const targetWrapper = target.parentNode.parentNode;
     targetWrapper.classList.add("has-focus");
   };
 
   // Occurs when a user leaves an input field
-  const handleBlur = e => {
+  const handleBlur = (e:any) => {
     const target = e.target;
     const targetWrapper = target.parentNode.parentNode;
     targetWrapper.classList.remove("has-focus");
@@ -54,25 +53,25 @@ export const enInput = (() => {
   };
 
   // Occurs when a user changes the selected option of a <select> element
-  const handleChange = e => {
+  const handleChange = (e:any) => {
     const target = e.target;
     const targetWrapper = target.parentNode.parentNode;
     targetWrapper.classList.add("has-value");
   };  
 
   // Occurs when a text or textarea element gets user input
-  const handleInput = e => {
+  const handleInput = (e:any) => {
     const target = e.target;
     const targetWrapper = target.parentNode.parentNode;
     targetWrapper.classList.add("has-value");
   };
 
   // Occurs on browser autofill of fields
-  const onAutoFillStart = e =>
+  const onAutoFillStart = (e:any) =>
     e.parentNode.parentNode.classList.add("is-autofilled", "has-value");
-  const onAutoFillCancel = e =>
+  const onAutoFillCancel = (e:any) =>
     e.parentNode.parentNode.classList.remove("is-autofilled", "has-value");
-  const onAnimationStart = ({ target, animationName }) => {
+  const onAnimationStart = ({ (target:any), (animationName:any) }) => {
     switch (animationName) {
       case "onAutoFillStart":
         return onAutoFillStart(target);
@@ -82,8 +81,8 @@ export const enInput = (() => {
   };
 
   // Register events
-  const bindEvents = element => {
-    const enField = element.querySelector("input, textarea, select");
+  const bindEvents = (e:any) => {
+    const enField = e.querySelector("input, textarea, select");
     enField.addEventListener("focus", handleFocus);
     enField.addEventListener("blur", handleBlur);
     enField.addEventListener("change", handleChange);
@@ -97,20 +96,13 @@ export const enInput = (() => {
     const formInput = document.querySelectorAll(
       ".en__field--text, .en__field--textarea, .en__field--select"
     );
-    formInput.forEach(element => {
-      if (element.querySelector("input, textarea, select").value) {
-        element.parentNode.parentNode.classList.add("has-value");
+    formInput.forEach(e => {
+      if (e.querySelector("input, textarea, select").value) {
+        e.parentNode.parentNode.classList.add("has-value");
       }
-      bindEvents(element);
+      bindEvents(e);
     });
   };
-
-  return {
-    init: init
-  };
-})();
-
-enInput.init();
 
 /* @TODO */
 /************************************
@@ -208,4 +200,11 @@ function layoutcentercenter() {
     gridWrapper.classList.remove("center-center");
     gridWrapper.classList.add("center-center");
   }
-}
+}  
+
+  return {
+    init: init
+  };
+})();
+
+enInput.init();
