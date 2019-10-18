@@ -3,11 +3,11 @@
 @import "breakpoint-slicer";
 $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
-$cor_codigofalado: #eb007d;
-/* TESTE de MEDIA QUERY */
+/* MEDIA QUERY TESTING */
+/* https://github.com/lolmaus/breakpoint-slicer */
 // @include to(2) {
 //   body {
-//     background-color: $cor_codigofalado;
+//     background-color: #eb007d;
 //   }
 // }
 // @include from(3) {
@@ -26,6 +26,7 @@ $cor_codigofalado: #eb007d;
 @import "grid";
 @import "layout-1";
 @import "page-builder";
+@import "debug";
 
 @import "hack";
 
