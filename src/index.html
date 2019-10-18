@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
   </head>
   <body class="loading">
-    <div id="grid-wrapper" class="layout-1 float-labels left-left">
+    <div id="grid-wrapper" class="float-labels fancy-errors layout-1 left-left">
       <!-- Start EN Page Builder -->
 
       <form method="post" action="/page/49914/data/2" class="en__component en__component--page">
@@ -777,105 +777,5 @@ style="
 
       <!-- End EN Page Builder -->
     </div>
-
-    <script>
-      const body = document.body;
-      const gridWrapper = document.getElementById("grid-wrapper");
-
-      document.addEventListener(
-        "DOMContentLoaded",
-        function() {
-          onDOMContentLoaded();
-        },
-        false
-      );
-
-      function onDOMContentLoaded() {
-        body.classList.remove("loading");
-        body.classList.add("loaded");
-
-        // Find Inline Background Image, hide it, and set it as the background image.
-        var p_background = document.querySelector(".pb");
-        var p_backgroundImg = document.querySelector(".pb img");
-        var p_backgroundImgSrc;
-
-        if (p_backgroundImg) {
-          p_backgroundImgSrc = document.querySelector(".pb img").src;
-          p_backgroundImg.style.display = "none";
-        }
-
-        if (p_background && p_backgroundImgSrc) {
-          p_background.style.backgroundImage =
-            "url(" + p_backgroundImgSrc + ")";
-        }
-
-        if (window.location.search.indexOf("mode=DEMO") > -1) {
-          // More advanced method: https://gomakethings.com/getting-all-query-string-values-from-a-url-with-vanilla-js/
-          body.classList.add("demo");
-          gridWrapper.insertAdjacentHTML(
-            "afterend",
-            '<span id="debug"><button id="debug-template" type="button" onclick="debugTemplate()">Outlines</button><button id="visualize-layout" type="button" onclick="visualizeLayout()">Blocks</button><button id="layoutleft" type="button" onclick="layoutleftleft()">Layout Left Left</button><button id="layoutcenter" type="button" onclick="layoutcenterleft()">Layout Center Left</button><button id="layoutcentercenter" type="button" onclick="layoutcentercenter()">Layout Center Center</button></span>'
-          );
-        }
-      }
-
-      /*               '<span id="debug"><button id="debug-template" type="button" onclick="debugTemplate()">Toggle Debug</button><button id="visualize-layout" type="button" onclick="visualizeLayout()">Visualize Layout</button><button id="layout1" type="button" onclick="layout1()">Layout 1</button><button id="layout2" type="button" onclick="layout2()">Layout 2</button><button id="layoutleft" type="button" onclick="layoutleftleft()">Layout Left Left</button><button id="layoutcenter" type="button" onclick="layoutcenterleft()">Layout Center Left</button><button id="layoutcentercenter" type="button" onclick="layoutcentercenter()">Layout Center Center</button></span>' */
-
-      function debugTemplate() {
-        if (body) {
-          body.classList.toggle("debug");
-          body.classList.remove("visualize-layout");
-        }
-      }
-
-      function visualizeLayout() {
-        if (body) {
-          body.classList.toggle("visualize-layout");
-          body.classList.remove("debug");
-        }
-      }
-
-      function layout1() {
-        if (gridWrapper) {
-          gridWrapper.classList.remove("layout-1");
-          gridWrapper.classList.remove("layout-2");
-          gridWrapper.classList.add("layout-1");
-        }
-      }
-
-      function layout2() {
-        if (gridWrapper) {
-          gridWrapper.classList.remove("layout-1");
-          gridWrapper.classList.remove("layout-2");
-          gridWrapper.classList.add("layout-2");
-        }
-      }
-
-      function layoutleftleft() {
-        if (gridWrapper) {
-          gridWrapper.classList.remove("left-left");
-          gridWrapper.classList.remove("center-left");
-          gridWrapper.classList.remove("center-center");
-          gridWrapper.classList.add("left-left");
-        }
-      }
-
-      function layoutcenterleft() {
-        if (gridWrapper) {
-          gridWrapper.classList.remove("left-left");
-          gridWrapper.classList.remove("center-left");
-          gridWrapper.classList.remove("center-center");
-          gridWrapper.classList.add("center-left");
-        }
-      }
-      function layoutcentercenter() {
-        if (gridWrapper) {
-          gridWrapper.classList.remove("left-left");
-          gridWrapper.classList.remove("center-left");
-          gridWrapper.classList.remove("center-center");
-          gridWrapper.classList.add("center-center");
-        }
-      }
-    </script>
   </body>
 </html>

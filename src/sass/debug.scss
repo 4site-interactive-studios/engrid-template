@@ -8,13 +8,15 @@
   margin: 1rem;
   button {
     margin: 0 1rem;
+    cursor: pointer;
   }
 }
 
-body.debug * {
-  -webkit-transition: none !important;
-  transition: none !important;
-}
+/* TODO Might not be needed, was put here to prevent small CSS transitions from appearing while debugging between different states */
+// body.debug * {
+//   -webkit-transition: none !important;
+//   transition: none !important;
+// }
 
 body.demo #debug {
   display: block;
@@ -24,7 +26,14 @@ body.demo #debug {
   padding: 0.25rem;
   z-index: 9999;
   opacity: 0.75;
+  opacity: 0;
+  transition: opacity 0.3s;  
 }
+
+body.demo #debug:hover {
+  opacity: 1;
+}
+
 
 /*
 * ##########################################################
@@ -33,9 +42,9 @@ body.demo #debug {
 */
 
 body.visualize-layout,
-body.visualize-layout #main-content-wrapper,
-body.visualize-layout #main-content,
-body.visualize-layout #main-content-inner,
+body.visualize-layout #grid-wrapper-wrapper,
+body.visualize-layout #grid-wrapper,
+body.visualize-layout #grid-wrapper-inner,
 body.visualize-layout .en__component--row {
   background: #ffffff !important;
 }
@@ -52,6 +61,7 @@ body.visualize-layout div {
   border-color: #adaaaa !important;
 }
 
+/* @TODO Color distribution need to be regenerated due to new sections being added */
 /*
 * ##########################################################
 * # DEBUG: COLORFUL LAYOUT FOR CSS GRID TEMPLATE

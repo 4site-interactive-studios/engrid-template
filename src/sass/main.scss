@@ -30,5 +30,32 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
 @import "hack";
 
-// The file below SHOULD be empty
-@import "temp";
+// @TODO Needs to be migrated to SCSS
+:root {
+    --client-white: #ffffff;
+    --client-black: #000000;
+    --client-gray: #8a8a8a;
+    --client-light-gray: #cacaca;
+  
+    --client-button-background-color: #78a22e;
+    --client-button-background-color-hover: #78a22e;
+    --client-button-background-color-disabled: #1779ba;
+    --client-button-border-color: #78a22e;
+    --client-button-border-radius: 500px;
+    --client-button-font-color: #ffffff;
+  
+    --client-submit-button-background-color: #f1700b;
+    --client-submit-button-background-color-hover: #f1700b;
+    --client-submit-button-border-color: #f1700b;
+    --client-submit-button-font-color: #ffffff;
+
+    --client-checkmark-background-color: #f1700b;
+    --client-checkmark-border-color: #f1700b;
+    --client-checkmark-font-color: #ffffff;
+  
+    --client-error-red: #e74b3c;
+    --client-error-red-grayscale: #949494;
+    --client-error-red-faded: #fef6f5;
+  
+    --client-error-page-group-background: #f4ddda;
+  }
