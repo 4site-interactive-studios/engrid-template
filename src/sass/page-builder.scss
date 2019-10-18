@@ -1,0 +1,76 @@
+// Styles Related to the Page-Builder
+#en__pagebuilder {
+  /* When in page builder we want to center the content area on the page and must reduce it by 50px to make it visible because of the sidebar */
+  width: calc(100% - 51px);
+  /* If in page builder, give the background some color so that input fields stand out */
+  background-color: #f1f1f1;
+  /* If the user accidentally deletes all content from the form, prevent it from completely collapsing in on itself and making it impossible for the user to add new content */
+  form {
+    min-height: 25px !important;
+    outline: solid 1px #999999;
+  }
+
+  /* Adjust the editable space in the Page Editor so that the content can occupy as much space as possible */
+  .en__container {
+    margin-left: 1px !important;
+    margin-right: 1px !important;
+    border: none !important;
+    margin-bottom: 0px !important;
+  }
+
+  /* Page builder adds a hidden div to the bottom of the layout, this can result in undesired spacing */
+  .en__component--row:nth-last-child(2) {
+    padding-bottom: 0px;
+  }
+
+  //   Grid Start
+  :not(.pboAdvancedRow__preview) .ccfs::before,
+  :not(.pboAdvancedRow__preview) .pb::before,
+  :not(.pboAdvancedRow__preview) .pbo::before,
+  :not(.pboAdvancedRow__preview) .pcc::before {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: bold;
+    color: #ce4f60;
+    position: static;
+    line-height: 25px;
+    opacity: 0.5;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 0;
+  }
+
+  :not(.pboAdvancedRow__preview) .ccfs::before {
+    content: "CONTENT COLUMN - FOOTER SPACER";
+  }
+
+  :not(.pboAdvancedRow__preview) .pb::before {
+    content: "PAGE - BACKGROUND IMAGE";
+  }
+  :not(.pboAdvancedRow__preview) .pbo::before {
+    content: "PAGE - BACKGROUND IMAGE OVERLAY";
+  }
+  :not(.pboAdvancedRow__preview) .pcc::before {
+    content: "PAGE - CUSTOM CODE";
+  }
+  #grid-wrapper {
+    .en__component--advrow {
+      width: 100%;
+    }
+  }
+  //   Grid End
+  .hide {
+    background-color: #ff00001a !important;
+    &.en__component--column {
+      outline-color: #ff0000 !important;
+      z-index: 1;
+    }
+  }
+  .pb img {
+    width: auto !important;
+    height: 350px !important;
+    margin: 0 auto;
+  }
+}

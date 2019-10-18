@@ -1,0 +1,165 @@
+// All Grid Related Items
+/** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/
+#grid-wrapper:not(.show)
+  :not(.pboAdvancedRow__preview)
+  .hide.en__component--column {
+  display: none;
+}
+
+/** Hide CONTENT when viewed publicly, but not when viewed in page builder. **/
+body:not(#en__pagebuilder) #grid-wrapper:not(.show) .hide {
+  display: none !important;
+}
+
+body:not(#en__pagebuilder) #grid-wrapper .en__component--advrow {
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.ccpph:before {
+  content: "Content Column - Page Pre-Header (ccpph)" !important;
+}
+
+.ccpph {
+  grid-area: ccpph;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.ccph:before {
+  content: "Content Column - Page Header (ccph)" !important;
+}
+
+.ccph {
+  grid-area: ccph;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bcoh:before {
+  content: "Body Column - Outside Header (bcoh)" !important;
+}
+
+.bcoh {
+  grid-area: bcoh;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bph:before {
+  content: "Body - Page Header (bph)" !important;
+}
+
+.bph {
+  grid-area: bph;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bh:before {
+  content: "Body - Header (bh)" !important;
+}
+
+.bh {
+  grid-area: bh;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bb:before {
+  content: "Body - Banner (bb)" !important;
+}
+
+.bb {
+  grid-area: bb;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bbo:before {
+  content: "Body - Banner Overlay (bbo)" !important;
+}
+
+.bbo {
+  grid-area: bbo;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.btc:before {
+  content: "Body - Top Copy (btc)" !important;
+}
+
+.btc {
+  grid-area: btc;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bsc:before {
+  content: "Body - Sidebar Copy (bsc)" !important;
+}
+
+.bsc {
+  grid-area: bsc;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bform:before {
+  content: "Body - Form (bform)" !important;
+}
+
+.bform {
+  grid-area: bform;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bpf:before {
+  content: "Body - Pre Footer (bpf)" !important;
+}
+
+.bpf {
+  grid-area: bpf;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bf:before {
+  content: "Body - Footer (bf)" !important;
+}
+
+.bf {
+  grid-area: bf;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.ccfs:before {
+  content: "Content Column - Footer Spacer (ccfs)" !important;
+}
+
+.ccfs {
+  grid-area: ccfs;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.bcof:before {
+  content: "Body Column - Outside Footer (bcof)" !important;
+}
+
+.bcof {
+  grid-area: bcof;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.ccpf:before {
+  content: "Content Column - Page Footer (ccpf)" !important;
+}
+
+.ccpf {
+  grid-area: ccpf;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.pb:before {
+  content: "Page - Background (pb)" !important;
+}
+
+.pb {
+  grid-area: pb;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.pbo:before {
+  content: "Page - Background Overlay (pbo)" !important;
+}
+
+.pbo {
+  grid-area: pbo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.pcc:before {
+  content: "Page - Custom Code (pcc)" !important;
+}
+
+.pcc {
+  grid-area: pcc;
+}

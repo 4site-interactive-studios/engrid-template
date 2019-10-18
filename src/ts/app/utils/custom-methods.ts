@@ -44,3 +44,10 @@ export const enInput = (() => {
     init: init
   };
 })();
+
+
+
+
+export const log = (text : string) => {
+  console.log(text);
+}

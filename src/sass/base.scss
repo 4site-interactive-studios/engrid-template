@@ -1,0 +1,28 @@
+/* BASE Layout */
+
+#grid-wrapper {
+  .en__component--advrow,
+  #EN__RootElement
+    div.pboAdvancedRow__preview
+    .en__component--row.en__component--advrow {
+    display: grid;
+  }
+
+  @include to(2) {
+    /* EN sets width to 100%, without setting max-width it overflows offscreen */
+    .en__component--column.en__component--advcolumn,
+    .en__component--row--2 .en__component--column {
+      max-width: 100vw;
+    }
+  }
+}
+body:not(#en__pagebuilder) {
+  .pb {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .pcc {
+    display: none;
+  }
+}
