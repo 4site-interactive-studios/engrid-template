@@ -1,3 +1,14 @@
+body:not(#en__pagebuilder) {
+  .pb {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .pcc {
+    display: none;
+  }
+}
+
 // Layout 1 Styling
 
 .layout-1 {
@@ -426,4 +437,15 @@ body:not(#en__pagebuilder) .layout-1 {
       color: #ffffff;
     }
   }
+}
+
+/* @TODO Probably a better place to put this */
+body:not(#en__pagebuilder) .layout-1.center-left .pb,
+body:not(#en__pagebuilder) .layout-1.center-center .pb {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-size: cover !important;
+  background-position: initial !important;
+  background-attachment: initial !important;
 }

@@ -1,3 +1,14 @@
+/* BASE Layout */
+
+#grid-wrapper {
+  .en__component--advrow,
+  #EN__RootElement
+    div.pboAdvancedRow__preview
+    .en__component--row.en__component--advrow {
+    display: grid;
+  }
+}
+
 // All Grid Related Items
 /** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/
 #grid-wrapper:not(.show)
