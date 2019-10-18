@@ -7,7 +7,7 @@ export const enInput = (() => {
 const body = document.body;
 const gridWrapper = document.getElementById("grid-wrapper");
 
-/* @TODO */
+/* @TODO Might not be neccisary to check for DOM Content Loaded becaus index.ts already does this*/
 /************************************
  * Defines what happens on DOM Content Loaded
  ***********************************/
@@ -32,15 +32,16 @@ function onDOMContentLoaded() {
  * NOTE: STILL NEEDS WORK TO FUNCTION ON "SPLIT" CUSTOM EN FIELDS
  * REF: https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event
  ***********************************/
+
   // Occurs when an input field gets focus
-  const handleFocus = (e:any) => {
+  const handleFocus = e => {
     const target = e.target;
     const targetWrapper = target.parentNode.parentNode;
     targetWrapper.classList.add("has-focus");
   };
 
   // Occurs when a user leaves an input field
-  const handleBlur = (e:any) => {
+  const handleBlur = e => {
     const target = e.target;
     const targetWrapper = target.parentNode.parentNode;
     targetWrapper.classList.remove("has-focus");
@@ -53,25 +54,25 @@ function onDOMContentLoaded() {
   };
 
   // Occurs when a user changes the selected option of a <select> element
-  const handleChange = (e:any) => {
+  const handleChange = e => {
     const target = e.target;
     const targetWrapper = target.parentNode.parentNode;
     targetWrapper.classList.add("has-value");
   };  
 
   // Occurs when a text or textarea element gets user input
-  const handleInput = (e:any) => {
+  const handleInput = e => {
     const target = e.target;
     const targetWrapper = target.parentNode.parentNode;
     targetWrapper.classList.add("has-value");
   };
 
   // Occurs on browser autofill of fields
-  const onAutoFillStart = (e:any) =>
+  const onAutoFillStart = e =>
     e.parentNode.parentNode.classList.add("is-autofilled", "has-value");
-  const onAutoFillCancel = (e:any) =>
+  const onAutoFillCancel = e =>
     e.parentNode.parentNode.classList.remove("is-autofilled", "has-value");
-  const onAnimationStart = ({ (target:any), (animationName:any) }) => {
+  const onAnimationStart = ({ target, animationName }) => {
     switch (animationName) {
       case "onAutoFillStart":
         return onAutoFillStart(target);
@@ -81,7 +82,7 @@ function onDOMContentLoaded() {
   };
 
   // Register events
-  const bindEvents = (e:any) => {
+  const bindEvents = e => {
     const enField = e.querySelector("input, textarea, select");
     enField.addEventListener("focus", handleFocus);
     enField.addEventListener("blur", handleBlur);
@@ -127,9 +128,9 @@ function onDOMContentLoaded() {
 
 
 /* @TODO Not sure where this came from*/
-export const log = (text : string) => {
-  console.log(text);
-}
+// export const log = (text : string) => {
+//   console.log(text);
+// }
 
 
 /* @TODO This code feels messy*/
@@ -206,5 +207,3 @@ function layoutcentercenter() {
     init: init
   };
 })();
-
-enInput.init();
