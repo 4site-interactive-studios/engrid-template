@@ -1,0 +1,131 @@
+/*
+* ##########################################################
+* # DEBUG: DEBUG BAR and GLOBAL SETTINGS
+* ##########################################################
+*/
+
+#debug {
+  margin: 1rem;
+  button {
+    margin: 0 1rem;
+  }
+}
+
+body.debug * {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+body.demo #debug {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0.25rem;
+  z-index: 9999;
+  opacity: 0.75;
+}
+
+/*
+* ##########################################################
+* # DEBUG: VISUALIZE PAGE STRUCTURE
+* ##########################################################
+*/
+
+body.visualize-layout,
+body.visualize-layout #main-content-wrapper,
+body.visualize-layout #main-content,
+body.visualize-layout #main-content-inner,
+body.visualize-layout .en__component--row {
+  background: #ffffff !important;
+}
+
+body.visualize-layout .en__component--column {
+  background: #e3e3e3 !important;
+}
+
+body.visualize-layout .en__component--column > * {
+  visibility: hidden !important;
+}
+
+body.visualize-layout div {
+  border-color: #adaaaa !important;
+}
+
+/*
+* ##########################################################
+* # DEBUG: COLORFUL LAYOUT FOR CSS GRID TEMPLATE
+* ##########################################################
+*/
+
+.debug {
+  .ccpph {
+    border: 3px solid #ff9999;
+    background-color: #ffffff;
+  }
+  .ccph {
+    border: 3px solid #ff0000;
+    background-color: #ffffff;
+  }
+  .bcoh {
+    border: 3px solid #ff9633;
+    background-color: transparent;
+  }
+  .bph {
+    border: 3px solid #a0ff99;
+    background-color: transparent;
+  }
+  .bh {
+    border: 3px solid #a0ff99;
+    background-color: #ffffff;
+  }
+
+  .bb {
+    border: 3px solid #11ff00;
+    background-color: #ffffff;
+  }
+  .btc {
+    border: 3px solid #009dff;
+    background-color: #ffffff;
+  }
+  .bsc {
+    border: 3px solid #0022ff;
+    background-color: #ffffff;
+  }
+  .bform {
+    border: 3px solid #deccff;
+    background-color: #ffffff;
+  }
+  .bpf {
+    border: 3px solid #bd99ff;
+    background-color: #ffffff;
+  }
+  .bf {
+    border: 3px solid #dd33ff;
+    background-color: #ffffff;
+  }
+  .bcof {
+    border: 3px solid #ff99df;
+    background-color: transparent;
+  }
+  .ccfs {
+    border: 3px solid #000000;
+    background-color: transparent;
+  }
+  .ccpf {
+    border: 3px solid #ff00ae;
+    background-color: transparent;
+  }
+  .pb {
+    border: 3px solid #610000;
+    background-color: #350000;
+  }
+  .pbo {
+    border: 3px solid #196113;
+    background-color: #ffffff;
+  }
+  .pcc {
+    border: 3px solid #003c61;
+    background-color: #ffffff;
+  }
+}

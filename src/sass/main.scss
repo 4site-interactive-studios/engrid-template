@@ -1,0 +1,33 @@
+@import "reset";
+@import "breakpoint-sass";
+@import "breakpoint-slicer";
+$slicer-breakpoints: 0 400px 600px 1024px 1200px;
+
+$cor_codigofalado: #eb007d;
+/* TESTE de MEDIA QUERY */
+// @include to(2) {
+//   body {
+//     background-color: $cor_codigofalado;
+//   }
+// }
+// @include from(3) {
+//   body {
+//     background-color: peru;
+//   }
+// }
+// @include between(2, 4) {
+//   body {
+//     background-color: purple;
+//   }
+// }
+@import "font";
+@import "util";
+@import "base";
+@import "grid";
+@import "layout-1";
+@import "page-builder";
+
+@import "hack";
+
+// The file below SHOULD be empty
+@import "temp";
