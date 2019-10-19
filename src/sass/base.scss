@@ -467,7 +467,11 @@ width: 33.333333%;
   position: relative;
   margin-left: 2rem;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -598,7 +602,24 @@ body.embedded #grid-wrapper .en__tweetButton {
     * REF: https://medium.com/@brunn/detecting-autofilled-fields-in-javascript-aed598d25da7
     ***********************************/
 
+@-webkit-keyframes onAutoFillStart {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+
 @keyframes onAutoFillStart {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+@-webkit-keyframes onAutoFillCancel {
   from {
     /**/
   }
@@ -617,23 +638,24 @@ body.embedded #grid-wrapper .en__tweetButton {
 input:-webkit-autofill {
   /* Expose a hook for JavaScript when autofill is shown */
   /* JavaScript can capture 'animationstart' events */
+  -webkit-animation-name: onAutoFillStart;
   animation-name: onAutoFillStart;
 
   /* Make the background color become blue/yellow really slowly */
+  -webkit-transition: background-color 50000s ease-in-out 0s;
   transition: background-color 50000s ease-in-out 0s;
 }
 
 input:not(:-webkit-autofill) {
   /* Expose a hook for JS onAutoFillCancel */
   /* JavaScript can capture 'animationstart' events */
+  -webkit-animation-name: onAutoFillCancel;
   animation-name: onAutoFillCancel;
 }
 
 .is-autofilled,
 .is-autofilled label {
   -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -o-transition: none !important;
   transition: none !important;
 }
 
@@ -684,7 +706,7 @@ input:not(:-webkit-autofill) {
 * ##########################################################
 */
 
-.fancy-errors #grid-wrapper .en__component .en__field__error {
+#grid-wrapper.fancy-errors .en__component .en__field__error {
   padding: 0.25rem 0.5rem;
   color: var(--client-white);
   font-size: 0.75rem;
@@ -695,51 +717,42 @@ input:not(:-webkit-autofill) {
   order: 3;
 }
 
-.fancy-errors #grid-wrapper .en__field--text.en__field--validationFailed input,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors .en__field--text.en__field--validationFailed input,
+#grid-wrapper.fancy-errors
   .en__field--textarea.en__field--validationFailed
   textarea,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__field--select.en__field--validationFailed
   select {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
 
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--select.en__field--withOther.en__field--validationFailed
   .en__field__element,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--radio.en__field--validationFailed
   .en__field__element,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--checkbox.en__field--validationFailed
   .en__field__element,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--splittext.en__field--validationFailed
   .en__field__element,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--tripletext.en__field--validationFailed
   .en__field__element,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--splitselect.en__field--validationFailed
   .en__field__element,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--tripleselect.en__field--validationFailed
   .en__field__element {
@@ -747,43 +760,35 @@ input:not(:-webkit-autofill) {
   border-bottom-right-radius: 0rem;
 }
 
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--select.en__field--withOther.en__field--validationFailed.has-value
   .en__field__element,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--radio.en__field--validationFailed.has-value
   .en__field__element,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--checkbox.en__field--validationFailed.has-value
   .en__field__element,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--splittext.en__field--validationFailed.has-value
   .en__field__element,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--tripletext.en__field--validationFailed.has-value
   .en__field__element,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--splitselect.en__field--validationFailed.has-value
   .en__field__element,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__component
   .en__field.en__field--tripleselect.en__field--validationFailed.has-value
   .en__field__element,
-.fancy-errors
-  #grid-wrapper
+#grid-wrapper.fancy-errors
   .en__field--validationFailed.has-value
   .en__field__error {
   border-color: var(--client-error-red-grayscale);

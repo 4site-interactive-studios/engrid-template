@@ -53,47 +53,6 @@ export const enInput = (() => {
     });
   };
 
-  function debugTemplate() {
-    if (body) {
-      body.classList.toggle("debug");
-      body.classList.remove("visualize-layout");
-    }
-  }
-
-  function visualizeLayout() {
-    if (body) {
-      body.classList.toggle("visualize-layout");
-      body.classList.remove("debug");
-    }
-  }
-
-  /* @TODO The code for removing/adding layout classes is overkill. Probably a better way to do it by having the classes prefixed with something like "l-" so they can be removed in bulk */
-  function layoutleftleft() {
-    if (gridWrapper) {
-      gridWrapper.classList.remove("left-left");
-      gridWrapper.classList.remove("center-left");
-      gridWrapper.classList.remove("center-center");
-      gridWrapper.classList.add("left-left");
-    }
-  }
-
-  function layoutcenterleft() {
-    if (gridWrapper) {
-      gridWrapper.classList.remove("left-left");
-      gridWrapper.classList.remove("center-left");
-      gridWrapper.classList.remove("center-center");
-      gridWrapper.classList.add("center-left");
-    }
-  }
-  function layoutcentercenter() {
-    if (gridWrapper) {
-      gridWrapper.classList.remove("left-left");
-      gridWrapper.classList.remove("center-left");
-      gridWrapper.classList.remove("center-center");
-      gridWrapper.classList.add("center-center");
-    }
-  }
-
   return {
     init: init
   };
@@ -194,12 +153,125 @@ export const bindEvents = (e: Element) => {
 };
 
 export const debugBar = () => {
-  if (window.location.search.indexOf("mode=DEMO") > -1) {
+  if (
+    window.location.search.indexOf("mode=DEMO") > -1 ||
+    location.hostname === "localhost" ||
+    location.hostname === "127.0.0.1"
+  ) {
     // More advanced method: https://gomakethings.com/getting-all-query-string-values-from-a-url-with-vanilla-js/
     body.classList.add("demo");
-    gridWrapper.insertAdjacentHTML(
-      "afterend",
-      '<span id="debug"><button id="debug-template" type="button" onclick="debugTemplate()">Outlines</button><button id="visualize-layout" type="button" onclick="visualizeLayout()">Blocks</button><button id="layoutleft" type="button" onclick="layoutleftleft()">Layout Left Left</button><button id="layoutcenter" type="button" onclick="layoutcenterleft()">Layout Center Left</button><button id="layoutcentercenter" type="button" onclick="layoutcentercenter()">Layout Center Center</button></span>'
-    );
+    if (gridWrapper) {
+      gridWrapper.insertAdjacentHTML(
+        "afterend",
+        '<span id="debug"><button id="debug-template" type="button">Outlines</button><button id="visualize-layout" type="button">Blocks</button><button id="layout-leftleft" type="button">Layout Left Left</button><button id="layout-centerleft" type="button">Layout Center Left</button><button id="layout-centercenter" type="button">Layout Center Center</button></span>'
+      );
+    }
+
+    if (document.getElementById("debug-template")) {
+      const debugTemplateButton = document.getElementById(
+        "debug-template"
+      ) as HTMLButtonElement;
+      debugTemplateButton.addEventListener(
+        "click",
+        function() {
+          debugTemplate();
+        },
+        false
+      );
+    }
+
+    if (document.getElementById("visualize-layout")) {
+      const debugTemplateButton = document.getElementById(
+        "visualize-layout"
+      ) as HTMLButtonElement;
+      debugTemplateButton.addEventListener(
+        "click",
+        function() {
+          visualizeLayout();
+        },
+        false
+      );
+    }
+
+    if (document.getElementById("layout-leftleft")) {
+      const debugTemplateButton = document.getElementById(
+        "layout-leftleft"
+      ) as HTMLButtonElement;
+      debugTemplateButton.addEventListener(
+        "click",
+        function() {
+          layoutLeftLeft();
+        },
+        false
+      );
+    }
+
+    if (document.getElementById("layout-centerleft")) {
+      const debugTemplateButton = document.getElementById(
+        "layout-centerleft"
+      ) as HTMLButtonElement;
+      debugTemplateButton.addEventListener(
+        "click",
+        function() {
+          layoutCenterLeft();
+        },
+        false
+      );
+    }
+
+    if (document.getElementById("layout-centercenter")) {
+      const debugTemplateButton = document.getElementById(
+        "layout-centercenter"
+      ) as HTMLButtonElement;
+      debugTemplateButton.addEventListener(
+        "click",
+        function() {
+          layoutCenterCenter();
+        },
+        false
+      );
+    }
+
+    const debugTemplate = () => {
+      if (body) {
+        body.classList.toggle("debug");
+        body.classList.remove("visualize-layout");
+      }
+    };
+
+    const visualizeLayout = () => {
+      if (body) {
+        body.classList.toggle("visualize-layout");
+        body.classList.remove("debug");
+      }
+    };
+
+    /* @TODO The code for removing/adding layout classes is overkill. Probably a better way to do it by having the classes prefixed with something like "l-" so they can be removed in bulk */
+    const layoutLeftLeft = () => {
+      if (gridWrapper) {
+        gridWrapper.classList.remove("left-left");
+        gridWrapper.classList.remove("center-left");
+        gridWrapper.classList.remove("center-center");
+        gridWrapper.classList.add("left-left");
+      }
+    };
+
+    const layoutCenterLeft = () => {
+      if (gridWrapper) {
+        gridWrapper.classList.remove("left-left");
+        gridWrapper.classList.remove("center-left");
+        gridWrapper.classList.remove("center-center");
+        gridWrapper.classList.add("center-left");
+      }
+    };
+
+    const layoutCenterCenter = () => {
+      if (gridWrapper) {
+        gridWrapper.classList.remove("left-left");
+        gridWrapper.classList.remove("center-left");
+        gridWrapper.classList.remove("center-center");
+        gridWrapper.classList.add("center-center");
+      }
+    };
   }
 };
