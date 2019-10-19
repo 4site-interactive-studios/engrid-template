@@ -1,4 +1,11 @@
-import * as custom from "./utils/custom-methods";
+import * as app from "./utils/custom-methods";
 export const run = () => {
-  custom.enInput.init();
+  // The entire App
+  app.body.classList.remove("loading");
+  app.body.classList.add("loaded");
+  app.setBackgroundImages();
+
+  app.enInput.init();
+
+  app.debugBar();
 };
