@@ -1,6 +1,5 @@
 // Engaging Networks Overrides and Fixes
 
-
 @include to(2) {
   /* EN sets width to 100%, without setting max-width it overflows offscreen */
   .en__component--column.en__component--advcolumn,
@@ -315,354 +314,391 @@ width: 33.333333%;
 /************************************
    * Inputs
    ***********************************/
-  
-  /* General */
-  #grid-wrapper input[type="date"],
-  #grid-wrapper input[type="datetime"],
-  #grid-wrapper input[type="datetime-local"],
-  #grid-wrapper input[type="email"],
-  #grid-wrapper input[type="month"],
-  #grid-wrapper input[type="number"],
-  #grid-wrapper input[type="password"],
-  #grid-wrapper input[type="range"],
-  #grid-wrapper input[type="search"],
-  #grid-wrapper input[type="tel"],
-  #grid-wrapper input[type="text"],
-  #grid-wrapper input[type="time"],
-  #grid-wrapper input[type="url"],
-  #grid-wrapper input[type="week"],
-  #grid-wrapper input[type="hidden"],
-  #grid-wrapper select,
-  #grid-wrapper textarea {
-    max-width: 100%;
-    width: 100%;
-    min-width: initial;
-    display: block;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    /* height: 2.4375rem; */
-    height: auto !important;
-    margin: 0rem;
-    padding: 0.5rem;
-    border: 1px solid var(--client-light-gray);
-    border-radius: 0.3rem;
-    background-color: var(--client-white);
-    -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
-    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1.5;
-    color: var(--client-black);
-    transition: box-shadow 0.25s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.25s;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-  
-  #grid-wrapper select {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
-    background-origin: content-box;
-    background-position: right -1rem center;
-    background-repeat: no-repeat;
-    background-size: 0.5625rem 0.375rem;
-    padding-right: 1.5rem;
-    transition: box-shadow 0.25s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.25s;
-  }
-  
-  #grid-wrapper textarea {
-    height: 7rem;
-    resize: vertical;
-  }
-  
-  /* Focus state */
-  #grid-wrapper input[type="date"]:focus,
-  #grid-wrapper input[type="datetime"]:focus,
-  #grid-wrapper input[type="datetime-local"]:focus,
-  #grid-wrapper input[type="email"]:focus,
-  #grid-wrapper input[type="month"]:focus,
-  #grid-wrapper input[type="number"]:focus,
-  #grid-wrapper input[type="password"]:focus,
-  #grid-wrapper input[type="range"]:focus,
-  #grid-wrapper input[type="search"]:focus,
-  #grid-wrapper input[type="tel"]:focus,
-  #grid-wrapper input[type="text"]:focus,
-  #grid-wrapper input[type="time"]:focus,
-  #grid-wrapper input[type="url"]:focus,
-  #grid-wrapper input[type="week"]:focus,
-  #grid-wrapper select:focus,
-  #grid-wrapper textarea:focus {
-    outline: none;
-    border: 1px solid var(--client-gray);
-    background-color:var(--client-button-font-color);
-    -webkit-box-shadow: 0 0 0.3125rem var(--client-light-gray);
-    box-shadow: 0 0 0.3125rem var(--client-light-gray);
-    transition: box-shadow 0.25s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.25s;
-  }
-  
-  /**
+
+/* General */
+#grid-wrapper input[type="date"],
+#grid-wrapper input[type="datetime"],
+#grid-wrapper input[type="datetime-local"],
+#grid-wrapper input[type="email"],
+#grid-wrapper input[type="month"],
+#grid-wrapper input[type="number"],
+#grid-wrapper input[type="password"],
+#grid-wrapper input[type="range"],
+#grid-wrapper input[type="search"],
+#grid-wrapper input[type="tel"],
+#grid-wrapper input[type="text"],
+#grid-wrapper input[type="time"],
+#grid-wrapper input[type="url"],
+#grid-wrapper input[type="week"],
+#grid-wrapper input[type="hidden"],
+#grid-wrapper select,
+#grid-wrapper textarea {
+  max-width: 100%;
+  width: 100%;
+  min-width: initial;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* height: 2.4375rem; */
+  height: auto !important;
+  margin: 0rem;
+  padding: 0.5rem;
+  border: 1px solid var(--client-light-gray);
+  border-radius: 0.3rem;
+  background-color: var(--client-white);
+  -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: var(--client-black);
+  transition: box-shadow 0.25s, border-color 0.25s ease-in-out,
+    -webkit-box-shadow 0.25s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#grid-wrapper select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
+  background-origin: content-box;
+  background-position: right -1rem center;
+  background-repeat: no-repeat;
+  background-size: 0.5625rem 0.375rem;
+  padding-right: 1.5rem;
+  transition: box-shadow 0.25s, border-color 0.25s ease-in-out,
+    -webkit-box-shadow 0.25s;
+}
+
+#grid-wrapper textarea {
+  height: 7rem;
+  resize: vertical;
+}
+
+/* Focus state */
+#grid-wrapper input[type="date"]:focus,
+#grid-wrapper input[type="datetime"]:focus,
+#grid-wrapper input[type="datetime-local"]:focus,
+#grid-wrapper input[type="email"]:focus,
+#grid-wrapper input[type="month"]:focus,
+#grid-wrapper input[type="number"]:focus,
+#grid-wrapper input[type="password"]:focus,
+#grid-wrapper input[type="range"]:focus,
+#grid-wrapper input[type="search"]:focus,
+#grid-wrapper input[type="tel"]:focus,
+#grid-wrapper input[type="text"]:focus,
+#grid-wrapper input[type="time"]:focus,
+#grid-wrapper input[type="url"]:focus,
+#grid-wrapper input[type="week"]:focus,
+#grid-wrapper select:focus,
+#grid-wrapper textarea:focus {
+  outline: none;
+  border: 1px solid var(--client-gray);
+  background-color: var(--client-button-font-color);
+  -webkit-box-shadow: 0 0 0.3125rem var(--client-light-gray);
+  box-shadow: 0 0 0.3125rem var(--client-light-gray);
+  transition: box-shadow 0.25s, border-color 0.25s ease-in-out,
+    -webkit-box-shadow 0.25s;
+}
+
+/**
     * Form Block Component: Select Fields
     * Overrides EN Default Styling to ensure mobile friendly widths
     */
-  #grid-wrapper .en__field__input--select {
-    min-width: initial !important;
-  }
-  
-  /* Placeholder styling */
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  ::-webkit-input-placeholder {
-    color: var(--client-light-gray);
-    opacity: 1;
-    /* Firefox */
-  }
-  
-  :-ms-input-placeholder {
-    color: var(--client-light-gray);
-    opacity: 1;
-    /* Firefox */
-  }
-  
-  ::-ms-input-placeholder {
-    color: var(--client-light-gray);
-    opacity: 1;
-    /* Firefox */
-  }
-  
-  ::placeholder {
-    color: var(--client-light-gray);
-    opacity: 1;
-    /* Firefox */
-  }
-  
-  /* Internet Explorer 10-11 */
-  :-ms-input-placeholder {
-    color: var(--client-light-gray);
-  }
-  
-  /* Microsoft Edge */
-  ::-ms-input-placeholder {
-    color: var(--client-light-gray);
-  }
-  
-  /* Custom Styling for Radio & Checkbox Inputs */
-  #grid-wrapper .en__field__input--radio,
-  #grid-wrapper .en__field__input--checkbox {
-    border: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap;
-  }
-  
-  #grid-wrapper .en__field__input--radio+.en__field__label,
-  #grid-wrapper .en__field__input--checkbox+.en__field__label {
-    position: relative;
-    margin-left: 2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;  
-  }
-  
-  #grid-wrapper .en__field__input--radio+.en__field__label::before,
-  #grid-wrapper .en__field__input--checkbox+.en__field__label::before {
-    content: "";
-    position: absolute;
-    height: calc(1.4rem - 2px);
-    width: calc(1.4rem - 2px);
-    left: -2rem;
-    display: inline-block;
-    vertical-align: middle;
-    border: 1px solid #c3c3c3;
-    -webkit-box-shadow: inset 0 0 0 5px var(--client-white);
-    box-shadow: inset 0 0 0 5px var(--client-white);
-    background-color: var(--client-white);
-    cursor: pointer;
-    -webkit-transition-duration: .25s;
-    transition-duration: .25s;
-    -webkit-transition-property: border-color, background-color;
-    transition-property: border-color, background-color;
-  }
-  
-  #grid-wrapper .en__field__input--radio+.en__field__label::before {
-    border-radius: 50%;
-  }
-  
-  #grid-wrapper .en__field__input--checkbox+.en__field__label::before {
-    border-radius: .2rem;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  
-  #grid-wrapper .en__field__input--radio:checked+.en__field__label::before,
-  #grid-wrapper .en__field__input--checkbox:checked+.en__field__label::before {
-    background-color:var(--client-checkmark-background-color);  
-    border-color:var(--client-checkmark-border-color);
-  }
-  
-  /* CSS code for checkmark symbol */
-  /* REF: https://www.toptal.com/designers/htmlarrows/symbols/check-mark/ */
-  #grid-wrapper .en__field__input--checkbox:checked+.en__field__label::before {
-    content: "\a0\2713";
-    background-color:var(--client-checkmark-background-color);  
-    border-color:var(--client-checkmark-border-color);
-    color:var(--client-checkmark-font-color);
-  }
-  
-  /* QA Needed: Would like to find a way so that radio input focus is round rather than square. May require re-writing how radio inputs are styled */
-  #grid-wrapper .en__field__input--radio:focus+.en__field__label::before,
-  #grid-wrapper .en__field__input--checkbox:focus+.en__field__label::before {
-    outline:var(--client-gray) auto 0.3125rem;
-  }
-  
-  /* Buttons */
-  #grid-wrapper button {
-    display: block;
-    margin: 0 0 1rem 0;
-    font-family: inherit;
-    padding: 0.85rem 1rem;
-    -webkit-appearance: none;
-    border: 1px solid transparent;
-    border-radius: 0.3rem;
-    -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
-    transition: background-color 0.25s ease-out, color 0.25s ease-out;
-    font-size: 1rem;
-    text-align: center;
-    cursor: pointer;
-    background-color:var(--client-button-background-color);
-    color:var(--client-white);
-  }
-  
-  #grid-wrapper .en__submit button {
-    margin-top: 2rem;
-    background-color:var(--client-submit-button-background-color);
-    border-color:var(--client-submit-button-background-color);
-    color:var(--client-submit-button-font-color);  
-  }
+#grid-wrapper .en__field__input--select {
+  min-width: initial !important;
+}
 
-  #grid-wrapper .en__submit button:hover,
-  #grid-wrapper .en__submit button:focus{
-    background-color:var(--client-submit-button-background-color-hover);
-  }
-  
-  #grid-wrapper .next-step .en__submit button {
-    width: initial;
-    margin-left: auto;
-  }
-  
-  #grid-wrapper button:hover,
-  #grid-wrapper button:focus {
-    background-color:var(--client-button-background-color-hover);
-  }
-  
-  #grid-wrapper button[disabled],
-  #grid-wrapper button[disabled]:hover,
-  #grid-wrapper button[disabled]:focus {
-    background-color:var(--client-button-background-color-disabled);
-    color:var(--client-button-font-color);
-  }
-  
-  #grid-wrapper button[disabled] {
-    opacity: 0.25;
-    cursor: not-allowed;
-  }
-  
-  /* QA Needed: EN's hidden input field */
-  .en__field--hidden {
-    display: block;
-    width: 100% !important;
-  }
-  
-  /* Needs QA: Makes images responsive. Look into not using !important. */
-  #grid-wrapper img {
-    max-width: 100%;
-    height: auto !important;
-    margin: 0 auto;
-    display: inherit;
-  }
-  
-  /* When embedded, remove unnecessary padding */
-  body.embedded #grid-wrapper .en__tweetButton {
-    padding-right: 0px;
-  }
-  
-  /************************************
+/* Placeholder styling */
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+::-webkit-input-placeholder {
+  color: var(--client-light-gray);
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  color: var(--client-light-gray);
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  color: var(--client-light-gray);
+  opacity: 1;
+  /* Firefox */
+}
+
+::placeholder {
+  color: var(--client-light-gray);
+  opacity: 1;
+  /* Firefox */
+}
+
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  color: var(--client-light-gray);
+}
+
+/* Microsoft Edge */
+::-ms-input-placeholder {
+  color: var(--client-light-gray);
+}
+
+/* Custom Styling for Radio & Checkbox Inputs */
+#grid-wrapper .en__field__input--radio,
+#grid-wrapper .en__field__input--checkbox {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+#grid-wrapper .en__field__input--radio + .en__field__label,
+#grid-wrapper .en__field__input--checkbox + .en__field__label {
+  position: relative;
+  margin-left: 2rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#grid-wrapper .en__field__input--radio + .en__field__label::before,
+#grid-wrapper .en__field__input--checkbox + .en__field__label::before {
+  content: "";
+  position: absolute;
+  height: calc(1.4rem - 2px);
+  width: calc(1.4rem - 2px);
+  left: -2rem;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #c3c3c3;
+  -webkit-box-shadow: inset 0 0 0 5px var(--client-white);
+  box-shadow: inset 0 0 0 5px var(--client-white);
+  background-color: var(--client-white);
+  cursor: pointer;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: border-color, background-color;
+  transition-property: border-color, background-color;
+}
+
+#grid-wrapper .en__field__input--radio + .en__field__label::before {
+  border-radius: 50%;
+}
+
+#grid-wrapper .en__field__input--checkbox + .en__field__label::before {
+  border-radius: 0.2rem;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#grid-wrapper .en__field__input--radio:checked + .en__field__label::before,
+#grid-wrapper .en__field__input--checkbox:checked + .en__field__label::before {
+  background-color: var(--client-checkmark-background-color);
+  border-color: var(--client-checkmark-border-color);
+}
+
+/* CSS code for checkmark symbol */
+/* REF: https://www.toptal.com/designers/htmlarrows/symbols/check-mark/ */
+#grid-wrapper .en__field__input--checkbox:checked + .en__field__label::before {
+  content: "\a0\2713";
+  background-color: var(--client-checkmark-background-color);
+  border-color: var(--client-checkmark-border-color);
+  color: var(--client-checkmark-font-color);
+}
+
+/* QA Needed: Would like to find a way so that radio input focus is round rather than square. May require re-writing how radio inputs are styled */
+#grid-wrapper .en__field__input--radio:focus + .en__field__label::before,
+#grid-wrapper .en__field__input--checkbox:focus + .en__field__label::before {
+  outline: var(--client-gray) auto 0.3125rem;
+}
+
+/* Buttons */
+#grid-wrapper button {
+  display: block;
+  margin: 0 0 1rem 0;
+  font-family: inherit;
+  padding: 0.85rem 1rem;
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0.3rem;
+  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--client-button-background-color);
+  color: var(--client-white);
+}
+
+#grid-wrapper .en__submit button {
+  margin-top: 2rem;
+  background-color: var(--client-submit-button-background-color);
+  border-color: var(--client-submit-button-background-color);
+  color: var(--client-submit-button-font-color);
+}
+
+#grid-wrapper .en__submit button:hover,
+#grid-wrapper .en__submit button:focus {
+  background-color: var(--client-submit-button-background-color-hover);
+}
+
+#grid-wrapper .next-step .en__submit button {
+  width: initial;
+  margin-left: auto;
+}
+
+#grid-wrapper button:hover,
+#grid-wrapper button:focus {
+  background-color: var(--client-button-background-color-hover);
+}
+
+#grid-wrapper button[disabled],
+#grid-wrapper button[disabled]:hover,
+#grid-wrapper button[disabled]:focus {
+  background-color: var(--client-button-background-color-disabled);
+  color: var(--client-button-font-color);
+}
+
+#grid-wrapper button[disabled] {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+/* QA Needed: EN's hidden input field */
+.en__field--hidden {
+  display: block;
+  width: 100% !important;
+}
+
+/* Needs QA: Makes images responsive. Look into not using !important. */
+#grid-wrapper img {
+  max-width: 100%;
+  height: auto !important;
+  margin: 0 auto;
+  display: inherit;
+}
+
+/* When embedded, remove unnecessary padding */
+body.embedded #grid-wrapper .en__tweetButton {
+  padding-right: 0px;
+}
+
+/************************************
     * Browser Form Autofill
     * REF: https://medium.com/@brunn/detecting-autofilled-fields-in-javascript-aed598d25da7
     ***********************************/
-  
-  @keyframes onAutoFillStart {from {/**/}  to {/**/}}
-  @keyframes onAutoFillCancel {from {/**/}  to {/**/}}
-  input:-webkit-autofill {
-      /* Expose a hook for JavaScript when autofill is shown */
-      /* JavaScript can capture 'animationstart' events */
-      animation-name: onAutoFillStart;
-      
-      /* Make the background color become blue/yellow really slowly */
-      transition: background-color 50000s ease-in-out 0s;
+
+@-webkit-keyframes onAutoFillStart {
+  from {
+    /**/
   }
-  
-  input:not(:-webkit-autofill) {
-      /* Expose a hook for JS onAutoFillCancel */
-      /* JavaScript can capture 'animationstart' events */
-      animation-name: onAutoFillCancel;
+  to {
+    /**/
   }
-  
-  .is-autofilled,
-  .is-autofilled label{
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
+}
+
+@keyframes onAutoFillStart {
+  from {
+    /**/
   }
-  
-  /* Needs code that account for the small text shown during the process of autofilling */
-  /* Fernando says he has seen this happening elsewhere */
-  /* https://stackoverflow.com/questions/57242841/input-text-very-small-when-hovering-on-autofill-suggestion */
-  /* https://bugs.chromium.org/p/chromium/issues/detail?id=953689#c24 */
-  /* Screencast: https://d.pr/v/2xecBA */
-  
-  
-  /************************************
+  to {
+    /**/
+  }
+}
+@-webkit-keyframes onAutoFillCancel {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+@keyframes onAutoFillCancel {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+input:-webkit-autofill {
+  /* Expose a hook for JavaScript when autofill is shown */
+  /* JavaScript can capture 'animationstart' events */
+  -webkit-animation-name: onAutoFillStart;
+  animation-name: onAutoFillStart;
+
+  /* Make the background color become blue/yellow really slowly */
+  -webkit-transition: background-color 50000s ease-in-out 0s;
+  transition: background-color 50000s ease-in-out 0s;
+}
+
+input:not(:-webkit-autofill) {
+  /* Expose a hook for JS onAutoFillCancel */
+  /* JavaScript can capture 'animationstart' events */
+  -webkit-animation-name: onAutoFillCancel;
+  animation-name: onAutoFillCancel;
+}
+
+.is-autofilled,
+.is-autofilled label {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+/* Needs code that account for the small text shown during the process of autofilling */
+/* Fernando says he has seen this happening elsewhere */
+/* https://stackoverflow.com/questions/57242841/input-text-very-small-when-hovering-on-autofill-suggestion */
+/* https://bugs.chromium.org/p/chromium/issues/detail?id=953689#c24 */
+/* Screencast: https://d.pr/v/2xecBA */
+
+/************************************
     * Error Messages
     ***********************************/
-  
-  /* Page Level Errors */
-  .en__errorHeader {
-    margin-left: -1.875rem;
-    margin-right: -1.875rem;
-    padding: 0.5rem 2rem;
-    color:var(--client-error-red);
-    font-weight: 700;
-    text-align: center;
-    background-color:var(--client-error-red);
-  }
-  
-  .en__errorList>.en__error {
-    margin-left: -1.875rem;
-    margin-right: -1.875rem;
-    padding: 0.5rem 2rem;
-    list-style: none;
-    color:var(--client-error-page-group-background);
-    text-align: center;
-    background-color:var(--client-error-page-group-background);
-  }
-  
-  /* Field Level Inline Errors */
-  #grid-wrapper .en__component .en__field__error {
-    padding: 0.25rem 0.5rem 0 0;
-    color:var(--client-error-red);
-    font-size: 0.75rem;
-    -webkit-box-ordinal-group: 4;
-    -ms-flex-order: 3;
-    order: 3;
-  }
-  
+
+/* Page Level Errors */
+.en__errorHeader {
+  margin-left: -1.875rem;
+  margin-right: -1.875rem;
+  padding: 0.5rem 2rem;
+  color: var(--client-error-red);
+  font-weight: 700;
+  text-align: center;
+  background-color: var(--client-error-red);
+}
+
+.en__errorList > .en__error {
+  margin-left: -1.875rem;
+  margin-right: -1.875rem;
+  padding: 0.5rem 2rem;
+  list-style: none;
+  color: var(--client-error-page-group-background);
+  text-align: center;
+  background-color: var(--client-error-page-group-background);
+}
+
+/* Field Level Inline Errors */
+#grid-wrapper .en__component .en__field__error {
+  padding: 0.25rem 0.5rem 0 0;
+  color: var(--client-error-red);
+  font-size: 0.75rem;
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
+}
 
 /*
 * ##########################################################
@@ -670,275 +706,388 @@ width: 33.333333%;
 * ##########################################################
 */
 
-  .fancy-errors #grid-wrapper .en__component .en__field__error {
-    padding: 0.25rem 0.5rem;
-    color: var(--client-white);
-    font-size: 0.75rem;
-    border-radius: 0.3rem;
-    background-color:var(--client-error-red);
-    -webkit-box-ordinal-group: 4;
-    -ms-flex-order: 3;
-    order: 3;
-  }
+#grid-wrapper.fancy-errors .en__component .en__field__error {
+  padding: 0.25rem 0.5rem;
+  color: var(--client-white);
+  font-size: 0.75rem;
+  border-radius: 0.3rem;
+  background-color: var(--client-error-red);
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
+}
 
-  .fancy-errors #grid-wrapper .en__field--text.en__field--validationFailed input,
-  .fancy-errors #grid-wrapper .en__field--textarea.en__field--validationFailed textarea,
-  .fancy-errors #grid-wrapper .en__field--select.en__field--validationFailed select {
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-  }  
+#grid-wrapper.fancy-errors .en__field--text.en__field--validationFailed input,
+#grid-wrapper.fancy-errors
+  .en__field--textarea.en__field--validationFailed
+  textarea,
+#grid-wrapper.fancy-errors
+  .en__field--select.en__field--validationFailed
+  select {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
 
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__element,
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__element,
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__element,
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__element,
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__element,
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__element,
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__element {
-    border-bottom-left-radius: 0rem;
-    border-bottom-right-radius: 0rem;  
-  }
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--select.en__field--withOther.en__field--validationFailed
+  .en__field__element,
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--radio.en__field--validationFailed
+  .en__field__element,
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--checkbox.en__field--validationFailed
+  .en__field__element,
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--splittext.en__field--validationFailed
+  .en__field__element,
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--tripletext.en__field--validationFailed
+  .en__field__element,
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--splitselect.en__field--validationFailed
+  .en__field__element,
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--tripleselect.en__field--validationFailed
+  .en__field__element {
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
 
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed.has-value .en__field__element,
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--radio.en__field--validationFailed.has-value .en__field__element,
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--checkbox.en__field--validationFailed.has-value .en__field__element,
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--splittext.en__field--validationFailed.has-value .en__field__element,
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--tripletext.en__field--validationFailed.has-value .en__field__element,
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--splitselect.en__field--validationFailed.has-value .en__field__element,
-  .fancy-errors #grid-wrapper .en__component .en__field.en__field--tripleselect.en__field--validationFailed.has-value .en__field__element,
-  .fancy-errors #grid-wrapper .en__field--validationFailed.has-value .en__field__error {
-    border-color:var(--client-error-red-grayscale);
-    background-color:var(--client-error-red-grayscale);
-    color: var(--client-white);
-  }
-  
-  /* TODO Not working anymore since we removed our corresponding JS */
-  /* When EN's field validator flags an error it jumps the user to the first error on thepage. Our custom error JS executes after EN's and sets a body level class that we can reorder the field presentation on. If we don't wait to re-order the fields, the page will jump to the error which appears below the input resulting in the user having to scroll up to make the change. This is something that should be fixed on EN's end and how they handle errors, but until then we need this work around */
-  /* Code dependent on "oc-en-error-helpers.js" which must execute after EN's "pagedata.js" */
-  body.error-jump-assist #grid-wrapper .en__component .en__field__error {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
-  }
-  
-  #grid-wrapper .en__field--text.en__field--validationFailed input,
-  #grid-wrapper .en__field--textarea.en__field--validationFailed textarea,
-  #grid-wrapper .en__field--select.en__field--validationFailed select {
-    border-color:var(--client-error-red);
-    background-color:var(--client-error-red-faded);
-  }
-  
-  #grid-wrapper .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__element,
-  #grid-wrapper .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__element,
-  #grid-wrapper .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__element,
-  #grid-wrapper .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__element,
-  #grid-wrapper .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__element,
-  #grid-wrapper .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__element,
-  #grid-wrapper .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__element {
-    border: 1px solid var(--client-error-red);
-    background-color:var(--client-error-red-faded);
-    padding: 0.5rem 0.5rem 0rem 0.5rem;
-    border-radius: 0.3rem;
-  }
-  
-  #grid-wrapper .en__field--text.en__field--validationFailed .en__field__error,
-  #grid-wrapper .en__field--textarea.en__field--validationFailed .en__field__error,
-  #grid-wrapper .en__field--select.en__field--validationFailed .en__field__error,
-  #grid-wrapper .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__error,
-  #grid-wrapper .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__error,
-  #grid-wrapper .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__error,
-  #grid-wrapper .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__error,
-  #grid-wrapper .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__error,
-  #grid-wrapper .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__error,
-  #grid-wrapper .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__error {
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-  }
-  
-  #grid-wrapper .en__field--radio.en__field--validationFailed #grid-wrapper .en__field--checkbox.en__field--validationFailed {
-    border-color:var(--client-error-red);
-  }
-  
-  #grid-wrapper div[class*="-column-"].en__field .en__field__element,
-  #grid-wrapper .en__field.column .en__field__element {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  
-  #grid-wrapper div[class*="-row-"].en__field .en__field__element,
-  #grid-wrapper .en__field.row .en__field__element {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  
-  /*
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--select.en__field--withOther.en__field--validationFailed.has-value
+  .en__field__element,
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--radio.en__field--validationFailed.has-value
+  .en__field__element,
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--checkbox.en__field--validationFailed.has-value
+  .en__field__element,
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--splittext.en__field--validationFailed.has-value
+  .en__field__element,
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--tripletext.en__field--validationFailed.has-value
+  .en__field__element,
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--splitselect.en__field--validationFailed.has-value
+  .en__field__element,
+#grid-wrapper.fancy-errors
+  .en__component
+  .en__field.en__field--tripleselect.en__field--validationFailed.has-value
+  .en__field__element,
+#grid-wrapper.fancy-errors
+  .en__field--validationFailed.has-value
+  .en__field__error {
+  border-color: var(--client-error-red-grayscale);
+  background-color: var(--client-error-red-grayscale);
+  color: var(--client-white);
+}
+
+/* TODO Not working anymore since we removed our corresponding JS */
+/* When EN's field validator flags an error it jumps the user to the first error on thepage. Our custom error JS executes after EN's and sets a body level class that we can reorder the field presentation on. If we don't wait to re-order the fields, the page will jump to the error which appears below the input resulting in the user having to scroll up to make the change. This is something that should be fixed on EN's end and how they handle errors, but until then we need this work around */
+/* Code dependent on "oc-en-error-helpers.js" which must execute after EN's "pagedata.js" */
+body.error-jump-assist #grid-wrapper .en__component .en__field__error {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+#grid-wrapper .en__field--text.en__field--validationFailed input,
+#grid-wrapper .en__field--textarea.en__field--validationFailed textarea,
+#grid-wrapper .en__field--select.en__field--validationFailed select {
+  border-color: var(--client-error-red);
+  background-color: var(--client-error-red-faded);
+}
+
+#grid-wrapper
+  .en__component
+  .en__field.en__field--select.en__field--withOther.en__field--validationFailed
+  .en__field__element,
+#grid-wrapper
+  .en__component
+  .en__field.en__field--radio.en__field--validationFailed
+  .en__field__element,
+#grid-wrapper
+  .en__component
+  .en__field.en__field--checkbox.en__field--validationFailed
+  .en__field__element,
+#grid-wrapper
+  .en__component
+  .en__field.en__field--splittext.en__field--validationFailed
+  .en__field__element,
+#grid-wrapper
+  .en__component
+  .en__field.en__field--tripletext.en__field--validationFailed
+  .en__field__element,
+#grid-wrapper
+  .en__component
+  .en__field.en__field--splitselect.en__field--validationFailed
+  .en__field__element,
+#grid-wrapper
+  .en__component
+  .en__field.en__field--tripleselect.en__field--validationFailed
+  .en__field__element {
+  border: 1px solid var(--client-error-red);
+  background-color: var(--client-error-red-faded);
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+#grid-wrapper .en__field--text.en__field--validationFailed .en__field__error,
+#grid-wrapper
+  .en__field--textarea.en__field--validationFailed
+  .en__field__error,
+#grid-wrapper .en__field--select.en__field--validationFailed .en__field__error,
+#grid-wrapper
+  .en__component
+  .en__field.en__field--select.en__field--withOther.en__field--validationFailed
+  .en__field__error,
+#grid-wrapper
+  .en__component
+  .en__field.en__field--radio.en__field--validationFailed
+  .en__field__error,
+#grid-wrapper
+  .en__component
+  .en__field.en__field--checkbox.en__field--validationFailed
+  .en__field__error,
+#grid-wrapper
+  .en__component
+  .en__field.en__field--splittext.en__field--validationFailed
+  .en__field__error,
+#grid-wrapper
+  .en__component
+  .en__field.en__field--tripletext.en__field--validationFailed
+  .en__field__error,
+#grid-wrapper
+  .en__component
+  .en__field.en__field--splitselect.en__field--validationFailed
+  .en__field__error,
+#grid-wrapper
+  .en__component
+  .en__field.en__field--tripleselect.en__field--validationFailed
+  .en__field__error {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+#grid-wrapper
+  .en__field--radio.en__field--validationFailed
+  #grid-wrapper
+  .en__field--checkbox.en__field--validationFailed {
+  border-color: var(--client-error-red);
+}
+
+#grid-wrapper div[class*="-column-"].en__field .en__field__element,
+#grid-wrapper .en__field.column .en__field__element {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#grid-wrapper div[class*="-row-"].en__field .en__field__element,
+#grid-wrapper .en__field.row .en__field__element {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*
    * ##########################################################
    * # FLOAT LABELS
    * ##########################################################
    */
-  
-  .float-labels #grid-wrapper .en__field--text input[type="text"],
-  .float-labels #grid-wrapper .en__field--textarea textarea {
-    padding: 1rem 0.5rem 0rem 0.5rem;
-  }
-  
-  .float-labels #grid-wrapper .en__field--select select {
-    padding: 1rem 1.5rem 0rem 0.5rem;
-    background-position: right -1rem top 0.25rem;
-  }
-  
-  .float-labels #grid-wrapper .en__field--text label.en__field__label,
-  .float-labels #grid-wrapper .en__field--textarea label.en__field__label,
-  .float-labels #grid-wrapper .en__field--select label.en__field__label {
-    /* z-index: -1; */
-    position: absolute;
-    -webkit-transform-origin: top left;
-    transform-origin: top left;
-    -webkit-transform: translate(0.5rem, 4px) scale(1);
-    transform: translate(0.5rem, 4px) scale(1);
-    opacity: 0.5;
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out;
-    cursor: text;
-  }
-  
-  .float-labels #grid-wrapper .en__field--text.has-value label.en__field__label,
-  .float-labels #grid-wrapper .en__field--text.has-focus label.en__field__label,
-  .float-labels #grid-wrapper .en__field--textarea.has-value label.en__field__label,
-  .float-labels #grid-wrapper .en__field--textarea.has-focus label.en__field__label,
-  .float-labels #grid-wrapper .en__field--select label.en__field__label {
-    -webkit-transform: translate(0.5rem, 0px) scale(0.7);
-    transform: translate(0.5rem, 0px) scale(0.7);
-  }
-  
-  .float-labels #grid-wrapper .en__field--text.en__field--validationFailed label,
-  .float-labels #grid-wrapper .en__field--textarea.en__field--validationFailed label,
-  .float-labels #grid-wrapper .en__field--select.en__field--validationFailed label {
-    opacity: 1;
-  }
-  
-  .float-labels #grid-wrapper .en__field--text.en__field--validationNeeded .en__field__error,
-  .float-labels #grid-wrapper .en__field--textarea.en__field--validationNeeded .en__field__error,
-  .float-labels #grid-wrapper .en__field--select.en__field--validationNeeded .en__field__error {
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-  }
-  
-  .float-labels #grid-wrapper .en__field--text.en__field--validationNeeded input,
-  .float-labels #grid-wrapper .en__field--textarea.en__field--validationNeeded textarea,
-  .float-labels #grid-wrapper .en__field--select.en__field--validationNeeded select {
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-  }
-  
-  /* Uses Padding instead of Margin because padding is counted in the Flex-basis width whereas Margin is outside */
-  /* One optimization idea is to break this file up into three CSS files, 1-10, 11-20, and 21-30. That was they can be included only if that template is using them. */
-  /* Should confirm if the EN class field could even hold enough chars to fit defining 20 fields plus their start/stop classes */
-  /* Why 20 pre-defined options? To cover a single form component with all of the following: * 1. First Name (50%) | 2. Last Name (50%) * 3. Email (100%) * 4. Email Opt-in (100%) * 5. Phone (100%) * 6. Phone Opt-in (100%) * 7. Street (100%) * 8. Street 2 (100%) * 9. City (33%) | 10. State (33%) | 11. Zip (33%) * 12. Country (100%) * 13. Giving Frequency (100%) * 14. Giving Amount (100%) * 15. Gift Type (100%) * 16. Credit Card Number (100%) * 17. Credit Card Expiration (50%) | 18. Credit Card CVV (50%) * 19. Custom Field (100%) * 20. Custom Field (100%) */
-  /* Make all en fields 100% */
-  .en__field {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    padding-bottom: 1rem;
-    margin-bottom: 0rem;    
-  }
 
-  .en__field__element--splittext,
-  .en__field__element--splitselect,
-  .en__field__element--tripleselect {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-  }
-  
-  /* Includes overrides of existing CSS, need for resolve this duplicate styling */
-  .en__field__element--splittext .en__field__item:nth-of-type(1),
-  .en__field__element--splitselect .en__field__item:nth-of-type(1) {
-    -ms-flex-preferred-size: 50% !important;
-    flex-basis: 50% !important;
-    padding-left: 0rem !important;
-    padding-right: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-    margin: 0 !important;
-  }
-  
-  /* Includes overrides of existing CSS, need for resolve this duplicate styling */
-  .en__field__element--splittext .en__field__item:nth-of-type(2),
-  .en__field__element--splitselect .en__field__item:nth-of-type(2) {
-    -ms-flex-preferred-size: 50% !important;
-    flex-basis: 50% !important;
-    padding-left: 0.5rem !important;
-    padding-right: 0rem !important;
-    padding-bottom: 0.5rem !important;
-    margin: 0 !important;
-  }
-  
-  /* Includes overrides of existing CSS, need for resolve this duplicate styling */
-  .en__field__element--tripletext .en__field__item:nth-of-type(1),
-  .en__field__element--tripleselect .en__field__item:nth-of-type(1) {
-    -ms-flex-preferred-size: 33.33333% !important;
-    flex-basis: 33.33333% !important;
-    padding-left: 0rem !important;
-    padding-right: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-    margin: 0 !important;
-  }
-  
-  /* Includes overrides of existing CSS, need for resolve this duplicate styling */
-  .en__field__element--tripletext .en__field__item:nth-of-type(2),
-  .en__field__element--tripleselect .en__field__item:nth-of-type(2) {
-    -ms-flex-preferred-size: 33.33333% !important;
-    flex-basis: 33.33333% !important;
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-    margin: 0 !important;
-  }
-  
-  /* Includes overrides of existing CSS, need for resolve this duplicate styling */
-  .en__field__element--tripletext .en__field__item:nth-of-type(3),
-  .en__field__element--tripleselect .en__field__item:nth-of-type(3) {
-    -ms-flex-preferred-size: 33.33333% !important;
-    flex-basis: 33.33333% !important;
-    padding-left: 0.5rem !important;
-    padding-right: 0rem !important;
-    padding-bottom: 0.5rem !important;
-    margin: 0 !important;
-  }
-  
-  #grid-wrapper .en__field--validationFailed.has-value input,
-  #grid-wrapper .en__field--validationFailed.has-value textarea,
-  #grid-wrapper .en__field--select.en__field--validationFailed.has-value select {
-    border-color:var(--client-error-red-grayscale);
-  }
-  
-  .en__component--formblock {
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
-  }
-  
-  /* Override */
-  #grid-wrapper .en__field__input--checkbox:checked+.en__field__label::before {
-    font-size: 0.8rem;
-  }
-  
-  .en__field--withOther .en__field__element--select .en__field__item:first-child {
-    margin-right: 0 !important;
-  }
-  
-  .en__field--withOther .en__field__element--select .en__field__item--other {
-    margin-left: 1rem !important;
-  }
+#grid-wrapper.float-labels .en__field--text input[type="text"],
+#grid-wrapper.float-labels .en__field--textarea textarea {
+  padding: 1rem 0.5rem 0rem 0.5rem;
+}
+
+#grid-wrapper.float-labels .en__field--select select {
+  padding: 1rem 1.5rem 0rem 0.5rem;
+  background-position: right -1rem top 0.25rem;
+}
+
+#grid-wrapper.float-labels .en__field--text label.en__field__label,
+#grid-wrapper.float-labels .en__field--textarea label.en__field__label,
+#grid-wrapper.float-labels .en__field--select label.en__field__label {
+  /* z-index: -1; */
+  position: absolute;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: translate(0.5rem, 4px) scale(1);
+  transform: translate(0.5rem, 4px) scale(1);
+  opacity: 0.5;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  cursor: text;
+}
+
+#grid-wrapper.float-labels .en__field--text.has-value label.en__field__label,
+#grid-wrapper.float-labels .en__field--text.has-focus label.en__field__label,
+#grid-wrapper.float-labels
+  .en__field--textarea.has-value
+  label.en__field__label,
+#grid-wrapper.float-labels
+  .en__field--textarea.has-focus
+  label.en__field__label,
+#grid-wrapper.float-labels .en__field--select label.en__field__label {
+  -webkit-transform: translate(0.5rem, 0px) scale(0.7);
+  transform: translate(0.5rem, 0px) scale(0.7);
+}
+
+#grid-wrapper.float-labels .en__field--text.en__field--validationFailed label,
+#grid-wrapper.float-labels
+  .en__field--textarea.en__field--validationFailed
+  label,
+#grid-wrapper.float-labels
+  .en__field--select.en__field--validationFailed
+  label {
+  opacity: 1;
+}
+
+#grid-wrapper.float-labels
+  .en__field--text.en__field--validationNeeded
+  .en__field__error,
+#grid-wrapper.float-labels
+  .en__field--textarea.en__field--validationNeeded
+  .en__field__error,
+#grid-wrapper.float-labels
+  .en__field--select.en__field--validationNeeded
+  .en__field__error {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+#grid-wrapper.float-labels .en__field--text.en__field--validationNeeded input,
+#grid-wrapper.float-labels
+  .en__field--textarea.en__field--validationNeeded
+  textarea,
+#grid-wrapper.float-labels
+  .en__field--select.en__field--validationNeeded
+  select {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+/* Uses Padding instead of Margin because padding is counted in the Flex-basis width whereas Margin is outside */
+/* One optimization idea is to break this file up into three CSS files, 1-10, 11-20, and 21-30. That was they can be included only if that template is using them. */
+/* Should confirm if the EN class field could even hold enough chars to fit defining 20 fields plus their start/stop classes */
+/* Why 20 pre-defined options? To cover a single form component with all of the following: * 1. First Name (50%) | 2. Last Name (50%) * 3. Email (100%) * 4. Email Opt-in (100%) * 5. Phone (100%) * 6. Phone Opt-in (100%) * 7. Street (100%) * 8. Street 2 (100%) * 9. City (33%) | 10. State (33%) | 11. Zip (33%) * 12. Country (100%) * 13. Giving Frequency (100%) * 14. Giving Amount (100%) * 15. Gift Type (100%) * 16. Credit Card Number (100%) * 17. Credit Card Expiration (50%) | 18. Credit Card CVV (50%) * 19. Custom Field (100%) * 20. Custom Field (100%) */
+/* Make all en fields 100% */
+.en__field {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  padding-bottom: 1rem;
+  margin-bottom: 0rem;
+}
+
+.en__field__element--splittext,
+.en__field__element--splitselect,
+.en__field__element--tripleselect {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+/* Includes overrides of existing CSS, need for resolve this duplicate styling */
+.en__field__element--splittext .en__field__item:nth-of-type(1),
+.en__field__element--splitselect .en__field__item:nth-of-type(1) {
+  -ms-flex-preferred-size: 50% !important;
+  flex-basis: 50% !important;
+  padding-left: 0rem !important;
+  padding-right: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  margin: 0 !important;
+}
+
+/* Includes overrides of existing CSS, need for resolve this duplicate styling */
+.en__field__element--splittext .en__field__item:nth-of-type(2),
+.en__field__element--splitselect .en__field__item:nth-of-type(2) {
+  -ms-flex-preferred-size: 50% !important;
+  flex-basis: 50% !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0.5rem !important;
+  margin: 0 !important;
+}
+
+/* Includes overrides of existing CSS, need for resolve this duplicate styling */
+.en__field__element--tripletext .en__field__item:nth-of-type(1),
+.en__field__element--tripleselect .en__field__item:nth-of-type(1) {
+  -ms-flex-preferred-size: 33.33333% !important;
+  flex-basis: 33.33333% !important;
+  padding-left: 0rem !important;
+  padding-right: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  margin: 0 !important;
+}
+
+/* Includes overrides of existing CSS, need for resolve this duplicate styling */
+.en__field__element--tripletext .en__field__item:nth-of-type(2),
+.en__field__element--tripleselect .en__field__item:nth-of-type(2) {
+  -ms-flex-preferred-size: 33.33333% !important;
+  flex-basis: 33.33333% !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  margin: 0 !important;
+}
+
+/* Includes overrides of existing CSS, need for resolve this duplicate styling */
+.en__field__element--tripletext .en__field__item:nth-of-type(3),
+.en__field__element--tripleselect .en__field__item:nth-of-type(3) {
+  -ms-flex-preferred-size: 33.33333% !important;
+  flex-basis: 33.33333% !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0.5rem !important;
+  margin: 0 !important;
+}
+
+#grid-wrapper .en__field--validationFailed.has-value input,
+#grid-wrapper .en__field--validationFailed.has-value textarea,
+#grid-wrapper .en__field--select.en__field--validationFailed.has-value select {
+  border-color: var(--client-error-red-grayscale);
+}
+
+.en__component--formblock {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+/* Override */
+#grid-wrapper .en__field__input--checkbox:checked + .en__field__label::before {
+  font-size: 0.8rem;
+}
+
+.en__field--withOther .en__field__element--select .en__field__item:first-child {
+  margin-right: 0 !important;
+}
+
+.en__field--withOther .en__field__element--select .en__field__item--other {
+  margin-left: 1rem !important;
+}
 
 /* @TODO Hot fixes for demo, should be revisited */
 input[name="transaction.donationAmt.other"] {
