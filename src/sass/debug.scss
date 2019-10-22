@@ -162,7 +162,10 @@ body.visualize-layout div {
       }
 
       #debug-bar button {
-        margin: 0 1rem;
+        margin: 0rem 1rem;
+        padding: 0.25rem 1rem;
+        border: 1px solid #000000;
+        background-color: #ffffff;
         cursor: pointer;
       }
 
@@ -195,6 +198,43 @@ body.visualize-layout div {
         font-size: 0.75rem;
       }
 
+      // .page-alert::before,
+      // .page-alert::after,
+      // .content-header::before,
+      // .content-header::after,
+      // .body-headerOutside::before,
+      // .body-headerOutside::after,
+      // .body-header::before,
+      // .body-header::after,
+      // .body-banner::before,
+      // .body-banner::after,
+      // .body-bannerOverlay::before,
+      // .body-bannerOverlay::after,
+      // .body-top::before,
+      // .body-top::after,
+      // .body-side::before,
+      // .body-side::after,
+      // .body-main::before,
+      // .body-main::after,
+      // .body-bottom::before,
+      // .body-bottom::after,
+      // .body-footer::before,
+      // .body-footer::after,
+      // .body-footerOutside::before,
+      // .body-footerOutside::after,
+      // .content-footerSpacer::before,
+      // .content-footerSpacer::after,
+      // .content-footer::before,
+      // .content-footer::after,
+      // .page-customCode::before,
+      // .page-customCode::after,
+      // .page-backgroundImage::before,
+      // .page-backgroundImage::after,
+      // .page-backgroundImageOverlay::before,
+      // .page-backgroundImageOverlay::after{
+      //   background-color: #000000;
+      // }
+
       .debug #engrid .en__component--advrow > div::before {
         content: "#" attr(id);
         left: 0px;
@@ -205,12 +245,6 @@ body.visualize-layout div {
         right: 0px;
         bottom: 0px;
       }
-
-      // This was a cool effect, but was only displaying on the body divs. Probably had something to do with their special positions set for their ::after box shadows
-      // .debug-on div::before,
-      // .debug-on div::after {
-      //   background-color: rgba(0, 0, 0, 0.5) !important;
-      // }
 
       .debug .page-alert {
         border-color: rgba(255, 0, 0, 0.5);
