@@ -24,43 +24,45 @@
   }
 
   //   Grid Start
-  :not(.pboAdvancedRow__preview) .ccfs::before,
-  :not(.pboAdvancedRow__preview) .pb::before,
-  :not(.pboAdvancedRow__preview) .pbo::before,
-  :not(.pboAdvancedRow__preview) .pcc::before {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-weight: bold;
-    color: #ce4f60;
-    position: static;
-    line-height: 25px;
-    opacity: 0.5;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    height: 0;
-  }
+  // :not(.pboAdvancedRow__preview) .ccfs::before,
+  // :not(.pboAdvancedRow__preview) .pb::before,
+  // :not(.pboAdvancedRow__preview) .pbo::before,
+  // :not(.pboAdvancedRow__preview) .pcc::before {
+  //   display: -webkit-box;
+  //   display: -ms-flexbox;
+  //   display: flex;
+  //   font-weight: bold;
+  //   color: #ce4f60;
+  //   position: static;
+  //   line-height: 25px;
+  //   opacity: 0.5;
+  //   -webkit-box-pack: center;
+  //   -ms-flex-pack: center;
+  //   justify-content: center;
+  //   height: 0;
+  // }
 
-  :not(.pboAdvancedRow__preview) .ccfs::before {
-    content: "CONTENT COLUMN - FOOTER SPACER";
-  }
+  // :not(.pboAdvancedRow__preview) .ccfs::before {
+  //   content: "CONTENT COLUMN - FOOTER SPACER";
+  // }
 
-  :not(.pboAdvancedRow__preview) .pb::before {
-    content: "PAGE - BACKGROUND IMAGE";
-  }
-  :not(.pboAdvancedRow__preview) .pbo::before {
-    content: "PAGE - BACKGROUND IMAGE OVERLAY";
-  }
-  :not(.pboAdvancedRow__preview) .pcc::before {
-    content: "PAGE - CUSTOM CODE";
-  }
+  // :not(.pboAdvancedRow__preview) .pb::before {
+  //   content: "PAGE - BACKGROUND IMAGE";
+  // }
+  // :not(.pboAdvancedRow__preview) .pbo::before {
+  //   content: "PAGE - BACKGROUND IMAGE OVERLAY";
+  // }
+  // :not(.pboAdvancedRow__preview) .pcc::before {
+  //   content: "PAGE - CUSTOM CODE";
+  // }
+  
+  // @TODO Might need to be moved into main.css
   #engrid {
     .en__component--advrow {
       width: 100%;
     }
   }
-  //   Grid End
+
   .hide {
     background-color: #ff00001a !important;
     &.en__component--column {
@@ -68,7 +70,13 @@
       z-index: 1;
     }
   }
-  .pb img {
+
+  .page-backgroundImage,
+  .page-backgroundImageOverlay{
+    min-height: 350px !important;
+  }
+
+  .page-backgroundImage img {
     width: auto !important;
     height: 350px !important;
     margin: 0 auto;

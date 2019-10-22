@@ -284,6 +284,10 @@ body:not(#en__pagebuilder)
     0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
+body:not(#en__pagebuilder) #engrid .page-customCode{
+  display: none;
+}
+
 #engrid .en__component--advrow .page-backgroundImage {
   background-attachment: fixed;
   background-size: cover;
@@ -291,6 +295,6 @@ body:not(#en__pagebuilder)
   z-index: -3;
 }
 
-#engrid .en__component--advrow .page-backgroundImageOverlay {
+body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImageOverlay {
   z-index: -1;
 }

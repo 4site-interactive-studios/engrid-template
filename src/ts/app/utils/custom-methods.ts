@@ -60,17 +60,17 @@ export const enInput = (() => {
 
 export const setBackgroundImages = () => {
   // Find Inline Background Image, hide it, and set it as the background image.
-  let p_background = document.querySelector(".pb") as HTMLElement;
-  let p_backgroundImg = document.querySelector(".pb img") as HTMLImageElement;
-  let p_backgroundImgSrc: any = null;
+  let pageBackground = document.querySelector(".page-backgroundImage") as HTMLElement;
+  let pageBackgroundImg = document.querySelector(".page-backgroundImage img") as HTMLImageElement;
+  let pageBackgroundImgSrc: any = null;
 
-  if (p_backgroundImg) {
-    p_backgroundImgSrc = p_backgroundImg.src;
-    p_backgroundImg.style.display = "none";
+  if (pageBackgroundImg) {
+    pageBackgroundImgSrc = pageBackgroundImg.src;
+    pageBackgroundImg.style.display = "none";
   }
 
-  if (p_background && p_backgroundImgSrc) {
-    p_background.style.backgroundImage = "url(" + p_backgroundImgSrc + ")";
+  if (pageBackground && pageBackgroundImgSrc) {
+    pageBackground.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
   }
 };
 

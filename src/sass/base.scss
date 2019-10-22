@@ -1070,3 +1070,15 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 input[name="transaction.donationAmt.other"] {
   max-width: 168px !important;
 }
+
+/* Custom Styles */
+
+#nav-header .navbar-donate {
+  background-color: #f1700b;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 10px 50px 10px;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 38px;
+}
