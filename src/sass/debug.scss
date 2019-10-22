@@ -1,5 +1,15 @@
 /*
 * ##########################################################
+* # EN PAGE BUILDER
+* ##########################################################
+*/
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.ccpph:before {
+  content: "Content Column - Page Pre-Header (ccpph)" !important;
+}
+
+/*
+* ##########################################################
 * # DEBUG: DEBUG BAR and GLOBAL SETTINGS
 * ##########################################################
 */

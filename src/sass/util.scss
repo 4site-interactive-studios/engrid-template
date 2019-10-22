@@ -1,3 +1,17 @@
+// All Grid Related Items
+/** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/
+#engrid
+  .en__component--advrow:not(.show)
+  :not(.pboAdvancedRow__preview)
+  .hide.en__component--column {
+  display: none;
+}
+
+/** Hide CONTENT when viewed publicly, but not when viewed in page builder. **/
+body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
+  display: none !important;
+}
+
 /* Utility Classes for General Purposes */
 .no-margin {
   margin: 0px;

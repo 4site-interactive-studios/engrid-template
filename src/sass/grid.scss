@@ -1,5 +1,4 @@
 /* BASE Layout */
-
 #engrid .en__component--advrow {
   .en__component--advrow,
   #EN__RootElement
@@ -9,424 +8,289 @@
   }
 }
 
-// All Grid Related Items
-/** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/
-#engrid .en__component--advrow:not(.show)
-  :not(.pboAdvancedRow__preview)
-  .hide.en__component--column {
-  display: none;
-}
-
-/** Hide CONTENT when viewed publicly, but not when viewed in page builder. **/
-body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
-  display: none !important;
-}
-
-body:not(#en__pagebuilder) #engrid .en__component--advrow .en__component--advrow {
+body:not(#en__pagebuilder)
+  #engrid
+  .en__component--advrow
+  .en__component--advrow {
   width: 100vw;
   max-width: 100vw;
   min-height: 100vh;
 }
 
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.ccpph:before {
-//   content: "Content Column - Page Pre-Header (ccpph)" !important;
-// }
+/*
+* ##########################################################
+* # ENGRID - Mobile First Styling
+* # We specify 'grid-template-areas' and 'grid-area' in the event the Advanced Rows
+* # are created in a different DOM order in Engaging Networks Page Builder, since
+* # the user can not re-order the rows once they add them.
+* ##########################################################
+*/
 
-// .ccpph {
-//   grid-area: ccpph;
-// }
+#engrid .en__component--advrow {
+  min-height: 100vh;
+}
 
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.ccph:before {
-//   content: "Content Column - Page Header (ccph)" !important;
-// }
+/* The 'pseudo-subgrid' is used to position first generation child content horizontally in page spanning grid components' */
+/* prettier-ignore */
+#engrid .en__component--advrow,
+#EN__RootElement .en__component--advrow,
+#engrid .en__component--advrow .pseudo-subgrid {
+  display: grid;
+  grid-template-columns:
+  [
+    pc-start lpc-start lpc-end cc-start lcc-start lcc-end bc-start lbc-start lbc-end
+  ] auto [
+    rbc-start rbc-end bc-end rcc-start rcc-end cc-end rpc-start rpc-end pc-end
+  ];
+}
 
-// .ccph {
-//   grid-area: ccph;
-// }
+/* prettier-ignore */
+#engrid .en__component--advrow,
+#EN__RootElement .en__component--advrow {
+  grid-template-areas:
+    "page-alert"
+    "content-header"
+    "body-headerOutside"
+    "body-header"
+    "body-banner"
+    "body-bannerOverlay"
+    "body-top"
+    "body-side"
+    "body-main"
+    "body-bottom"
+    "body-footer"
+    "body-footerOutside"
+    "content-footerSpacer"
+    "content-footer"
+    "page-customCode"
+    "page-backgroundImage"
+    "page-backgroundImageOverlay";
+  grid-template-rows:
+  [
+    page-alert-start]            minmax(0px, auto)  [page-alert-end
+    content-header-start]        minmax(0px, auto)  [content-header-end
+    body-headerOutside-start]    minmax(0px, auto)  [body-headerOutside-end
+    body-header-start]           minmax(0px, auto)  [body-header-end
+    body-banner-start]           minmax(0px, auto)  [body-banner-end
+    body-bannerOverlay-start]    minmax(0px, auto)  [body-bannerOverlay-end
+    body-top-start]              minmax(0px, auto)  [body-top-end
+    body-side-start]             minmax(0px, auto)  [body-side-end  
+    body-main-start]             minmax(0px, auto)  [body-main-end  
+    body-bottom-start]           minmax(0px, auto)  [body-bottom-end  
+    body-footer-start]           minmax(0px, auto)  [body-footer-end
+    body-footerOutside-start]    minmax(0px, auto)  [body-footerOutside-end  
+    content-footerSpacer-start]  minmax(0px, 1fr)   [content-footerSpacer-end
+    content-footer-start]        minmax(0px, auto)  [content-footer-end
+    page-customCode-start]       minmax(0px, auto)  [page-customCode-end          
+    page-backgroundImage-start]  minmax(0px, auto)  [page-backgroundImage-end
+    page-backgroundImageOverlay-start]  minmax(0px, auto)  [page-backgroundImageOverlay-end
+  ];        
+}
 
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.bcoh:before {
-//   content: "Body Column - Outside Header (bcoh)" !important;
-// }
+#engrid .en__component--advrow .page-alert,
+#EN__RootElement .en__component--advrow .page-alert {
+  grid-area: page-alert;
+  grid-column: pc;
+  grid-row: page-alert;
+}
 
-// .bcoh {
-//   grid-area: bcoh;
-// }
+#engrid .en__component--advrow .content-header,
+#EN__RootElement .en__component--advrow .content-header {
+  grid-area: content-header;
+  grid-column: pc;
+  grid-row: content-header;
+}
 
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.bph:before {
-//   content: "Body - Page Header (bph)" !important;
-// }
+#engrid .en__component--advrow .content-header.pseudo-subgrid > div,
+#EN__RootElement .en__component--advrow .content-header.pseudo-subgrid > div {
+  grid-column: cc;
+}
 
-// .bph {
-//   grid-area: bph;
-// }
+#engrid .en__component--advrow .body-headerOutside,
+#EN__RootElement .en__component--advrow .body-headerOutside {
+  grid-area: body-headerOutside;
+  grid-column: cc;
+  grid-row: body-headerOutside;
+}
 
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.bh:before {
-//   content: "Body - Header (bh)" !important;
-// }
+#engrid .en__component--advrow .body-header,
+#EN__RootElement .en__component--advrow .body-header {
+  grid-area: body-header;
+  grid-column: bc;
+  grid-row: body-header;
+}
 
-// .bh {
-//   grid-area: bh;
-// }
+#engrid .en__component--advrow .body-banner,
+#EN__RootElement .en__component--advrow .body-banner {
+  grid-area: body-banner;
+  grid-column: bc;
+  grid-row: body-banner;
+}
 
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.bb:before {
-//   content: "Body - Banner (bb)" !important;
-// }
+#engrid .en__component--advrow .body-bannerOverlay,
+#EN__RootElement .en__component--advrow .body-bannerOverlay {
+  grid-area: body-bannerOverlay;
+  grid-column: bc;
+  grid-row: body-bannerOverlay;
+}
 
-// .bb {
-//   grid-area: bb;
-// }
+#engrid .en__component--advrow .body-top,
+#EN__RootElement .en__component--advrow .body-top {
+  grid-area: body-top;
+  grid-column: bc;
+  grid-row: body-top;
+}
 
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.bbo:before {
-//   content: "Body - Banner Overlay (bbo)" !important;
-// }
+#engrid .en__component--advrow .body-side,
+#EN__RootElement .en__component--advrow .body-side {
+  grid-area: body-side;
+  grid-column: bc;
+  grid-row: body-side;
+}
 
-// .bbo {
-//   grid-area: bbo;
-// }
+#engrid .en__component--advrow .body-main,
+#EN__RootElement .en__component--advrow .body-main {
+  grid-area: body-main;
+  grid-column: bc;
+  grid-row: body-main;
+}
 
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.btc:before {
-//   content: "Body - Top Copy (btc)" !important;
-// }
+#engrid .en__component--advrow .body-bottom,
+#EN__RootElement .en__component--advrow .body-bottom {
+  grid-area: body-bottom;
+  grid-column: bc;
+  grid-row: body-bottom;
+}
 
-// .btc {
-//   grid-area: btc;
-// }
+#engrid .en__component--advrow .body-footer,
+#EN__RootElement .en__component--advrow .body-footer {
+  grid-area: body-footer;
+  grid-column: bc;
+  grid-row: body-footer;
+}
 
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.bsc:before {
-//   content: "Body - Sidebar Copy (bsc)" !important;
-// }
+#engrid .en__component--advrow .body-footerOutside,
+#EN__RootElement .en__component--advrow .body-footerOutside {
+  grid-area: body-footerOutside;
+  grid-column: cc;
+  grid-row: body-footerOutside;
+}
 
-// .bsc {
-//   grid-area: bsc;
-// }
+#engrid .en__component--advrow .content-footerSpacer,
+#EN__RootElement .en__component--advrow .content-footerSpacer {
+  grid-area: content-footerSpacer;
+  grid-column: cc;
+  grid-row: content-footerSpacer;
+}
 
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.bform:before {
-//   content: "Body - Form (bform)" !important;
-// }
+#engrid .en__component--advrow .content-footer,
+#EN__RootElement .en__component--advrow .content-footer {
+  grid-area: content-footer;
+  grid-column: pc;
+  grid-row: content-footer;
+}
 
-// .bform {
-//   grid-area: bform;
-// }
+#engrid .en__component--advrow .content-footer.pseudo-subgrid > div,
+#EN__RootElement .en__component--advrow .content-footer.pseudo-subgrid > div {
+  grid-column: cc;
+}
 
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.bpf:before {
-//   content: "Body - Pre Footer (bpf)" !important;
-// }
+#engrid .en__component--advrow .page-customCode,
+#EN__RootElement .en__component--advrow .page-customCode {
+  grid-area: page-customCode;
+  grid-column: pc;
+  grid-row: page-customCode;
+}
 
-// .bpf {
-//   grid-area: bpf;
-// }
+#engrid .en__component--advrow .page-backgroundImage,
+#EN__RootElement .en__component--advrow .page-backgroundImage {
+  grid-area: page-backgroundImage;
+  grid-column: pc;
+  grid-row: page-backgroundImage;
+}
 
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.bf:before {
-//   content: "Body - Footer (bf)" !important;
-// }
+#engrid .en__component--advrow .page-backgroundImageOverlay,
+#EN__RootElement .en__component--advrow .page-backgroundImageOverlay {
+  grid-area: page-backgroundImageOverlay;
+  grid-column: pc;
+  grid-row: page-backgroundImageOverlay;
+}
 
-// .bf {
-//   grid-area: bf;
-// }
-
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.ccfs:before {
-//   content: "Content Column - Footer Spacer (ccfs)" !important;
-// }
-
-// .ccfs {
-//   grid-area: ccfs;
-// }
-
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.bcof:before {
-//   content: "Body Column - Outside Footer (bcof)" !important;
-// }
-
-// .bcof {
-//   grid-area: bcof;
-// }
-
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.ccpf:before {
-//   content: "Content Column - Page Footer (ccpf)" !important;
-// }
-
-// .ccpf {
-//   grid-area: ccpf;
-// }
-
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.pb:before {
-//   content: "Page - Background (pb)" !important;
-// }
-
-// .pb {
-//   grid-area: pb;
-// }
-
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.pbo:before {
-//   content: "Page - Background Overlay (pbo)" !important;
-// }
-
-// .pbo {
-//   grid-area: pbo;
-//   display: -webkit-box;
-//   display: -ms-flexbox;
-//   display: flex;
-// }
-
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.pcc:before {
-//   content: "Page - Custom Code (pcc)" !important;
-// }
-
-// .pcc {
-//   grid-area: pcc;
-// }
+#engrid .en__component--advrow > div,
+#EN__RootElement .en__component--advrow > div {
+  // display: flex;
+  // flex-direction: column;
+  // flex-wrap: wrap;
+  grid-column: pc;
+}
 
 /*
-      * ##########################################################
-      * # ENGRID - Mobile First Styling
-      * # We specify 'grid-template-areas' and 'grid-area' in the event the Advanced Rows
-      * # are created in a different DOM order in Engaging Networks Page Builder, since
-      * # the user can not re-order the rows once they add them.
-      * ##########################################################
-      */
+* ##########################################################
+* # ENGRID - BODY Column Breakpoint Styling
+* ##########################################################
+*/
 
-      #engrid .en__component--advrow {
-        min-height: 100vh;
-      }
+/* Sum of all MIN values of the Body Columns */
+@media screen and (min-width: 650px) {
+  /* prettier-ignore */
+  #engrid .en__component--advrow,
+  #engrid .en__component--advrow .pseudo-subgrid{
+    grid-template-columns:
+    [
+      pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
+      cc-start lcc-start]  minmax(0px, 50px)     [lcc-end
+      bc-start lbc-start]  minmax(300px, 425px)  [lbc-end
+      rbc-start]           minmax(300px, 425px)  [rbc-end bc-end
+      rcc-start]           minmax(0px, 50px)     [rcc-end cc-end
+      rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end
+    ];
+  }
+}
 
-      /* The 'pseudo-subgrid' is used to position first generation child content horizontally in page spanning grid components' */
-      /* prettier-ignore */
-      #engrid .en__component--advrow,
-      #engrid .en__component--advrow .pseudo-subgrid {
-        display: grid;
-        grid-template-columns:
-        [
-          pc-start lpc-start lpc-end cc-start lcc-start lcc-end bc-start lbc-start lbc-end
-        ] auto [
-          rbc-start rbc-end bc-end rcc-start rcc-end cc-end rpc-start rpc-end pc-end
-        ];
-      }
+/*
+* ##########################################################
+* # ENGRID - Default Stylings
+* ##########################################################
+*/
 
-      /* prettier-ignore */
-      #engrid .en__component--advrow {
-        grid-template-areas:
-          "page-alert"
-          "content-header"
-          "body-headerOutside"
-          "body-header"
-          "body-banner"
-          "body-bannerOverlay"
-          "body-top"
-          "body-side"
-          "body-main"
-          "body-bottom"
-          "body-footer"
-          "body-footerOutside"
-          "content-footerSpacer"
-          "content-footer"
-          "page-customCode"
-          "page-backgroundImage"
-          "page-backgroundImageOverlay";
-        grid-template-rows:
-        [
-          page-alert-start]            minmax(0px, auto)  [page-alert-end
-          content-header-start]        minmax(0px, auto)  [content-header-end
-          body-headerOutside-start]    minmax(0px, auto)  [body-headerOutside-end
-          body-header-start]           minmax(0px, auto)  [body-header-end
-          body-banner-start]           minmax(0px, auto)  [body-banner-end
-          body-bannerOverlay-start]    minmax(0px, auto)  [body-bannerOverlay-end
-          body-top-start]              minmax(0px, auto)  [body-top-end
-          body-side-start]             minmax(0px, auto)  [body-side-end  
-          body-main-start]             minmax(0px, auto)  [body-main-end  
-          body-bottom-start]           minmax(0px, auto)  [body-bottom-end  
-          body-footer-start]           minmax(0px, auto)  [body-footer-end
-          body-footerOutside-start]    minmax(0px, auto)  [body-footerOutside-end  
-          content-footerSpacer-start]  minmax(0px, 1fr)   [content-footerSpacer-end
-          content-footer-start]        minmax(0px, auto)  [content-footer-end
-          page-customCode-start]       minmax(0px, auto)  [page-customCode-end          
-          page-backgroundImage-start]  minmax(0px, auto)  [page-backgroundImage-end
-          page-backgroundImageOverlay-start]  minmax(0px, auto)  [page-backgroundImageOverlay-end
-        ];        
-      }
+#engrid .en__component--advrow .body-header,
+#engrid .en__component--advrow .body-banner,
+#engrid .en__component--advrow .body-bannerOverlay,
+#engrid .en__component--advrow .body-top,
+#engrid .en__component--advrow .body-side,
+#engrid .en__component--advrow .body-main,
+#engrid .en__component--advrow .body-bottom,
+#engrid .en__component--advrow .body-footer {
+  position: relative;
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+}
 
-      #engrid .en__component--advrow .page-alert {
-        grid-area: page-alert;
-        grid-column: pc;
-        grid-row: page-alert;
-      }
+#engrid .en__component--advrow .body-header::before,
+#engrid .en__component--advrow .body-banner::before,
+#engrid .en__component--advrow .body-top::before,
+#engrid .en__component--advrow .body-side::before,
+#engrid .en__component--advrow .body-main::before,
+#engrid .en__component--advrow .body-bottom::before,
+#engrid .en__component--advrow .body-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
 
-      #engrid .en__component--advrow .content-header {
-        grid-area: content-header;
-        grid-column: pc;
-        grid-row: content-header;
-      }
+#engrid .en__component--advrow .page-backgroundImage {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top right;
+  z-index: -3;
+}
 
-      #engrid .en__component--advrow .content-header.pseudo-subgrid > div{
-        grid-column: cc;
-      }      
-
-      #engrid .en__component--advrow .body-headerOutside {
-        grid-area: body-headerOutside;
-        grid-column: cc;
-        grid-row: body-headerOutside;
-      }
-
-      #engrid .en__component--advrow .body-header {
-
-        grid-area: body-header;
-        grid-column: bc;
-        grid-row: body-header;
-      }
-
-      #engrid .en__component--advrow .body-banner {
-        grid-area: body-banner;
-        grid-column: bc;
-        grid-row: body-banner;
-      }
-
-      #engrid .en__component--advrow .body-bannerOverlay {
-        grid-area: body-bannerOverlay;
-        grid-column: bc;
-        grid-row: body-bannerOverlay;
-      }
-
-      #engrid .en__component--advrow .body-top {
-        grid-area: body-top;
-        grid-column: bc;
-        grid-row: body-top;
-      }
-
-      #engrid .en__component--advrow .body-side {
-        grid-area: body-side;
-        grid-column: bc;
-        grid-row: body-side;
-      }
-
-      #engrid .en__component--advrow .body-main {
-        grid-area: body-main;
-        grid-column: bc;
-        grid-row: body-main;
-      }
-
-      #engrid .en__component--advrow .body-bottom {
-        grid-area: body-bottom;
-        grid-column: bc;
-        grid-row: body-bottom;
-      }
-
-      #engrid .en__component--advrow .body-footer {
-        grid-area: body-footer;
-        grid-column: bc;
-        grid-row: body-footer;
-      }
-
-      #engrid .en__component--advrow .body-footerOutside {
-        grid-area: body-footerOutside;
-        grid-column: cc;
-        grid-row: body-footerOutside;
-      }            
-
-      #engrid .en__component--advrow .content-footerSpacer {
-        grid-area: content-footerSpacer;
-        grid-column: cc;
-        grid-row: content-footerSpacer;
-      }
-
-      #engrid .en__component--advrow .content-footer {
-        grid-area: content-footer;
-        grid-column: pc;
-        grid-row: content-footer;
-      }
-
-      #engrid .en__component--advrow .content-footer.pseudo-subgrid > div{
-        grid-column: cc;
-      }        
-      
-      #engrid .en__component--advrow .page-customCode {
-        grid-area: page-customCode;
-        grid-column: pc;
-        grid-row: page-customCode;
-      }
-
-      #engrid .en__component--advrow .page-backgroundImage {
-        grid-area: page-backgroundImage;
-        grid-column: pc;
-        grid-row: page-backgroundImage;
-      }
-
-      #engrid .en__component--advrow .page-backgroundImageOverlay {
-        grid-area: page-backgroundImageOverlay;
-        grid-column: pc;
-        grid-row: page-backgroundImageOverlay;
-      }  
-
-      #engrid .en__component--advrow > div {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        grid-column: pc;
-      }
-
-      /*
-      * ##########################################################
-      * # ENGRID - BODY Column Breakpoint Styling
-      * ##########################################################
-      */
-
-      /* Sum of all MIN values of the Body Columns */
-      @media screen and (min-width: 650px) {
-        /* prettier-ignore */
-        #engrid .en__component--advrow,
-        #engrid .en__component--advrow .pseudo-subgrid{
-          grid-template-columns:
-          [
-            pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
-            cc-start lcc-start]  minmax(0px, 50px)     [lcc-end
-            bc-start lbc-start]  minmax(300px, 425px)  [lbc-end
-            rbc-start]           minmax(300px, 425px)  [rbc-end bc-end
-            rcc-start]           minmax(0px, 50px)     [rcc-end cc-end
-            rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end
-          ];
-        }
-      }
-
-      /*
-      * ##########################################################
-      * # ENGRID - Default Stylings
-      * ##########################################################
-      */
-
-      #engrid .en__component--advrow .body-header,
-      #engrid .en__component--advrow .body-banner,
-      #engrid .en__component--advrow .body-bannerOverlay,
-      #engrid .en__component--advrow .body-top,
-      #engrid .en__component--advrow .body-side,
-      #engrid .en__component--advrow .body-main,
-      #engrid .en__component--advrow .body-bottom,
-      #engrid .en__component--advrow .body-footer{
-        position: relative;
-        background-color: #ffffff;
-        padding: 0.5rem 1rem;
-      }
-
-      #engrid .en__component--advrow .body-header::before,
-      #engrid .en__component--advrow .body-banner::before,
-      #engrid .en__component--advrow .body-top::before,
-      #engrid .en__component--advrow .body-side::before,
-      #engrid .en__component--advrow .body-main::before,
-      #engrid .en__component--advrow .body-bottom::before,
-      #engrid .en__component--advrow .body-footer::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -2;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-      }
-
-      #engrid .en__component--advrow .page-backgroundImage {
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: top right;
-        z-index: -3;
-      }
-      
-      #engrid .en__component--advrow .page-backgroundImageOverlay {
-        z-index: -1;
-      }
+#engrid .en__component--advrow .page-backgroundImageOverlay {
+  z-index: -1;
+}
