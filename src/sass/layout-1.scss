@@ -156,13 +156,13 @@
   body:not(#en__pagebuilder)
     #engrid.layout-centerleft1col
     .page-backgroundImage {
-    grid-row: body-headerOutside-start / content-footerOutside-end;
+    grid-row: content-header-end / content-footer-end;
   }
 
   body:not(#en__pagebuilder)
     #engrid.layout-centerleft1col
     .page-backgroundImageOverlay {
-    grid-row: content-header-start / content-footer-end;
+    grid-row: content-header-end / content-footer-end;
     grid-column: rcc-start / pc-end;
     padding-left: var(--body-padding);
     padding-right: var(--body-padding);
@@ -255,7 +255,7 @@
   body:not(#en__pagebuilder)
     #engrid.layout-centercenter1col
     .page-backgroundImage {
-    grid-row: body-headerOutside-start / content-footerOutside-end;
+    grid-row: content-header-end / content-footer-end;
   }
 }
 
@@ -356,7 +356,7 @@
   body:not(#en__pagebuilder)
     #engrid.layout-centercenter2col
     .page-backgroundImage {
-    grid-row: body-headerOutside-start / content-footerOutside-end;
+    grid-row: content-header-end / content-footer-end;
   }
 }
 

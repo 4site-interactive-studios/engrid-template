@@ -67,23 +67,23 @@ body:not(#en__pagebuilder)
     "page-backgroundImageOverlay";
   grid-template-rows:
   [
-    page-alert-start]            minmax(0px, auto)  [page-alert-end
-    content-header-start]        minmax(0px, auto)  [content-header-end
-    body-headerOutside-start]    minmax(0px, auto)  [body-headerOutside-end
-    body-header-start]           minmax(0px, auto)  [body-header-end
-    body-banner-start]           minmax(0px, auto)  [body-banner-end
-    body-bannerOverlay-start]    minmax(0px, auto)  [body-bannerOverlay-end
-    body-top-start]              minmax(0px, auto)  [body-top-end
-    body-side-start]             minmax(0px, auto)  [body-side-end  
-    body-main-start]             minmax(0px, auto)  [body-main-end  
-    body-bottom-start]           minmax(0px, auto)  [body-bottom-end  
-    body-footer-start]           minmax(0px, auto)  [body-footer-end
-    body-footerOutside-start]    minmax(0px, auto)  [body-footerOutside-end  
-    content-footerSpacer-start]  minmax(0px, 1fr)   [content-footerSpacer-end
-    content-footer-start]        minmax(0px, auto)  [content-footer-end
-    page-customCode-start]       minmax(0px, auto)  [page-customCode-end          
-    page-backgroundImage-start]  minmax(0px, auto)  [page-backgroundImage-end
-    page-backgroundImageOverlay-start]  minmax(0px, auto)  [page-backgroundImageOverlay-end
+    page-start page-alert-start]        minmax(0px, auto)  [page-alert-end
+    content-header-start]               minmax(0px, auto)  [content-header-end
+    body-headerOutside-start]           minmax(0px, auto)  [body-headerOutside-end
+    body-header-start]                  minmax(0px, auto)  [body-header-end
+    body-banner-start]                  minmax(0px, auto)  [body-banner-end
+    body-bannerOverlay-start]           minmax(0px, auto)  [body-bannerOverlay-end
+    body-top-start]                     minmax(0px, auto)  [body-top-end
+    body-side-start]                    minmax(0px, auto)  [body-side-end  
+    body-main-start]                    minmax(0px, auto)  [body-main-end  
+    body-bottom-start]                  minmax(0px, auto)  [body-bottom-end  
+    body-footer-start]                  minmax(0px, auto)  [body-footer-end
+    body-footerOutside-start]           minmax(0px, auto)  [body-footerOutside-end  
+    content-footerSpacer-start]         minmax(0px, 1fr)   [content-footerSpacer-end
+    content-footer-start]               minmax(0px, auto)  [content-footer-end
+    page-customCode-start]              minmax(0px, auto)  [page-customCode-end          
+    page-backgroundImage-start]         minmax(0px, auto)  [page-backgroundImage-end
+    page-backgroundImageOverlay-start]  minmax(0px, auto)  [page-backgroundImageOverlay-end page-end
   ];        
 }
 
