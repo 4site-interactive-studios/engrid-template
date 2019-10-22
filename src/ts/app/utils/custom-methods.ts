@@ -154,30 +154,24 @@ export const bindEvents = (e: Element) => {
 
 export const debugBar = () => {
 
-  const debugStart = (e: MouseEvent) => {
+  const debugStart = () => {
     body.classList.add("debug-on");
   }
   
-  const debugStop = (e: MouseEvent) => {
+  const debugStop = () => {
     body.classList.remove("debug-on");
   }
-
-  if (window.location.href.indexOf("debug") != -1) {
-    body.classList.add("debug");
-    // debugStart();
-  }
   
-  if (body.classList.contains("debug")) {
-    body.addEventListener("mouseenter", debugStart);
-    body.addEventListener("mouseleave", debugStop);
-  }
   
   if (
     window.location.search.indexOf("mode=DEMO") > -1 ||
+    window.location.href.indexOf("debug") != -1 ||
     location.hostname === "localhost" ||
     location.hostname === "127.0.0.1"
   ) {
-    body.classList.add("demo");
+    body.classList.add("debug", "demo");
+    body.addEventListener("mouseenter", debugStart);
+    body.addEventListener("mouseleave", debugStop);    
     if (enGrid) {
       enGrid.insertAdjacentHTML(
         "afterend",
