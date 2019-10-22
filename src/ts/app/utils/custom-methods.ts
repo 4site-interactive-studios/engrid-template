@@ -1,6 +1,6 @@
 export const body = document.body;
-export const gridWrapper = document.getElementById(
-  "grid-wrapper"
+export const enGrid = document.getElementById(
+  "engrid"
 ) as HTMLElement;
 export const enInput = (() => {
   /* @TODO */
@@ -153,125 +153,117 @@ export const bindEvents = (e: Element) => {
 };
 
 export const debugBar = () => {
+
+  const debugStart = (e: MouseEvent) => {
+    body.classList.add("debug-on");
+  }
+  
+  const debugStop = (e: MouseEvent) => {
+    body.classList.remove("debug-on");
+  }
+
+  if (window.location.href.indexOf("debug") != -1) {
+    body.classList.add("debug");
+    // debugStart();
+  }
+  
+  if (body.classList.contains("debug")) {
+    body.addEventListener("mouseenter", debugStart);
+    body.addEventListener("mouseleave", debugStop);
+  }
+  
   if (
     window.location.search.indexOf("mode=DEMO") > -1 ||
     location.hostname === "localhost" ||
     location.hostname === "127.0.0.1"
   ) {
-    // More advanced method: https://gomakethings.com/getting-all-query-string-values-from-a-url-with-vanilla-js/
     body.classList.add("demo");
-    if (gridWrapper) {
-      gridWrapper.insertAdjacentHTML(
+    if (enGrid) {
+      enGrid.insertAdjacentHTML(
         "afterend",
-        '<span id="debug"><button id="debug-template" type="button">Outlines</button><button id="visualize-layout" type="button">Blocks</button><button id="layout-leftleft" type="button">Layout Left Left</button><button id="layout-centerleft" type="button">Layout Center Left</button><button id="layout-centercenter" type="button">Layout Center Center</button></span>'
+        '<span id="debug-bar">' +
+          '<button id="visualize-toggle" type="button">Visualize Layout</button>' +
+          '<button id="layout-toggle" type="button">Layout Toggle</button>' +
+          "</span>"
       );
     }
-
-    if (document.getElementById("debug-template")) {
+    if (document.getElementById("visualize-toggle")) {
       const debugTemplateButton = document.getElementById(
-        "debug-template"
-      ) as HTMLButtonElement;
-      debugTemplateButton.addEventListener(
-        "click",
-        function() {
-          debugTemplate();
-        },
-        false
+        "visualize-toggle"
       );
+      if(debugTemplateButton){
+        debugTemplateButton.addEventListener(
+          "click",
+          function() {
+            visualizeToggle();
+          },
+          false
+        );
+      }
     }
-
-    if (document.getElementById("visualize-layout")) {
-      const debugTemplateButton = document.getElementById(
-        "visualize-layout"
-      ) as HTMLButtonElement;
-      debugTemplateButton.addEventListener(
-        "click",
-        function() {
-          visualizeLayout();
-        },
-        false
-      );
+    
+    if (document.getElementById("layout-toggle")) {
+      const debugTemplateButton = document.getElementById("layout-toggle");
+      if(debugTemplateButton){
+        debugTemplateButton.addEventListener(
+          "click",
+          function() {
+            layoutToggle();
+          },
+          false
+        );
+      }
     }
-
-    if (document.getElementById("layout-leftleft")) {
-      const debugTemplateButton = document.getElementById(
-        "layout-leftleft"
-      ) as HTMLButtonElement;
-      debugTemplateButton.addEventListener(
-        "click",
-        function() {
-          layoutLeftLeft();
-        },
-        false
-      );
-    }
-
-    if (document.getElementById("layout-centerleft")) {
-      const debugTemplateButton = document.getElementById(
-        "layout-centerleft"
-      ) as HTMLButtonElement;
-      debugTemplateButton.addEventListener(
-        "click",
-        function() {
-          layoutCenterLeft();
-        },
-        false
-      );
-    }
-
-    if (document.getElementById("layout-centercenter")) {
-      const debugTemplateButton = document.getElementById(
-        "layout-centercenter"
-      ) as HTMLButtonElement;
-      debugTemplateButton.addEventListener(
-        "click",
-        function() {
-          layoutCenterCenter();
-        },
-        false
-      );
-    }
-
-    const debugTemplate = () => {
+    
+    const visualizeToggle = () => {
       if (body) {
-        body.classList.toggle("debug");
-        body.classList.remove("visualize-layout");
+        if (body.classList.contains("visualize-outline")) {
+          removeClassesByPrefix(body, "visualize-");
+          body.classList.add("visualize-blocks");
+        } else if (body.classList.contains("visualize-blocks")) {
+          removeClassesByPrefix(body, "visualize-");
+        } else if (body) {
+          body.classList.add("visualize-outline");
+        } else {
+          console.log(
+            "While trying to switch visualizations, something unexpected happen."
+          );
+        }
       }
     };
+    
+    const layoutToggle = () => {
+      if (enGrid) {
+        if (enGrid.classList.contains("layout-leftleft1col")) {
+          removeClassesByPrefix(enGrid, "layout-");
+          enGrid.classList.add("layout-centerleft1col");
+        } else if (enGrid.classList.contains("layout-centerleft1col")) {
+          removeClassesByPrefix(enGrid, "layout-");
+          enGrid.classList.add("layout-centercenter1col");
+        } else if (enGrid.classList.contains("layout-centercenter1col")) {
+          removeClassesByPrefix(enGrid, "layout-");
+          enGrid.classList.add("layout-centercenter2col");
+        } else if (enGrid.classList.contains("layout-centercenter2col")) {
+          removeClassesByPrefix(enGrid, "layout-");
+          enGrid.classList.add("layout-debug");
+        } else if (enGrid.classList.contains("layout-debug")) {
+          removeClassesByPrefix(enGrid, "layout-");
+          enGrid.classList.add("layout-leftleft1col");
+        } else {
+          console.log(
+            "While trying to switch layouts, something unexpected happen."
+          );
+        }
+      }
+    };
+    
+    const removeClassesByPrefix = (el: HTMLElement, prefix: string) => {
+      for (var i = el.classList.length - 1; i >= 0; i--) {
+        if (el.classList[i].startsWith(prefix)) {
+          el.classList.remove(el.classList[i]);
+        }
+      }
+    }
 
-    const visualizeLayout = () => {
-      if (body) {
-        body.classList.toggle("visualize-layout");
-        body.classList.remove("debug");
-      }
-    };
-
-    /* @TODO The code for removing/adding layout classes is overkill. Probably a better way to do it by having the classes prefixed with something like "l-" so they can be removed in bulk */
-    const layoutLeftLeft = () => {
-      if (gridWrapper) {
-        gridWrapper.classList.remove("left-left");
-        gridWrapper.classList.remove("center-left");
-        gridWrapper.classList.remove("center-center");
-        gridWrapper.classList.add("left-left");
-      }
-    };
-
-    const layoutCenterLeft = () => {
-      if (gridWrapper) {
-        gridWrapper.classList.remove("left-left");
-        gridWrapper.classList.remove("center-left");
-        gridWrapper.classList.remove("center-center");
-        gridWrapper.classList.add("center-left");
-      }
-    };
-
-    const layoutCenterCenter = () => {
-      if (gridWrapper) {
-        gridWrapper.classList.remove("left-left");
-        gridWrapper.classList.remove("center-left");
-        gridWrapper.classList.remove("center-center");
-        gridWrapper.classList.add("center-center");
-      }
-    };
   }
 };
