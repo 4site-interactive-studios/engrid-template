@@ -1,6 +1,5 @@
 /* BASE Layout - IE 11 Fallback for ENGRID's CSS Grid */
-#engrid .en__component--advrow,
-#EN__RootElement .en__component--advrow{
+#engrid .en__component--advrow{
   flex-direction: column;
 }
 
@@ -12,9 +11,7 @@
 /* BASE Layout - For Browsers that do support CSS Grid */
 @supports (display: grid) {
   #engrid .en__component--advrow,
-  #engrid .en__component--advrow .pseudo-subgrid,
-  #EN__RootElement .en__component--advrow,
-  #EN__RootElement .en__component--advrow .pseudo-subgrid {
+  #engrid .en__component--advrow .pseudo-subgrid{
     /* autoprefixer grid: off */
     display: grid;
   }
