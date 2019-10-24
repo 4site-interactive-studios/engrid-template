@@ -1,9 +1,21 @@
-/* BASE Layout */
-#engrid .en__component--advrow {
-  .en__component--advrow,
-  #EN__RootElement
-    div.pboAdvancedRow__preview
-    .en__component--row.en__component--advrow {
+/* BASE Layout - IE 11 Fallback for ENGRID's CSS Grid */
+#engrid .en__component--advrow,
+#EN__RootElement .en__component--advrow{
+  flex-direction: column;
+}
+
+/* @TODO Required otherwise Flexbox collapses in on itself in IE 11 */
+#engrid .en__component--advcolumn{
+  flex-basis: auto;
+}
+
+/* BASE Layout - For Browsers that do support CSS Grid */
+@supports (display: grid) {
+  #engrid .en__component--advrow,
+  #engrid .en__component--advrow .pseudo-subgrid,
+  #EN__RootElement .en__component--advrow,
+  #EN__RootElement .en__component--advrow .pseudo-subgrid {
+    /* autoprefixer grid: off */
     display: grid;
   }
 }
@@ -16,6 +28,27 @@ body:not(#en__pagebuilder)
   max-width: 100vw;
   min-height: 100vh;
 }
+
+// All Grid Rows
+// .page-alert,
+// .content-header,
+// .body-headerOutside,
+// .body-header,
+// .body-banner,
+// .body-bannerOverlay,
+// .body-top,
+// .body-side,
+// .body-main,
+// .body-bottom,
+// .body-footer,
+// .body-footerOutside,
+// .content-footerSpacer,
+// .content-footer,
+// .page-customCode,
+// .page-backgroundImage,
+// .page-backgroundImageOverlay{
+//  tbd:tbd
+// }
 
 /*
 * ##########################################################
@@ -35,7 +68,7 @@ body:not(#en__pagebuilder)
 #engrid .en__component--advrow,
 #EN__RootElement .en__component--advrow,
 #engrid .en__component--advrow .pseudo-subgrid {
-  display: grid;
+  /* autoprefixer grid: off */
   grid-template-columns:
   [
     pc-start lpc-start lpc-end cc-start lcc-start lcc-end bc-start lbc-start lbc-end
@@ -44,27 +77,42 @@ body:not(#en__pagebuilder)
   ];
 }
 
+//IE 11 Fallback for ENGRID's CSS Grid
+@supports not (display: grid) {
+  // #engrid .en__component--advrow,
+  // #EN__RootElement .en__component--advrow,
+  // #engrid .en__component--advrow .pseudo-subgrid {
+  //   display: flexbox;
+  //   flex-direction: column;
+  //   flex-basis: auto;
+  // }
+
+  /* TODO This was not tested, should be revisited post completion to not completely abandon IE11 */
+  /* IE 11 Grid Fallback: Displays every section one after the other */
+  // #engrid .en__component--advrow,
+  // #engrid
+  //   ~ #EN__RootElement
+  //   div.pboAdvancedRow__preview
+  //   .en__component--row.en__component--advrow {
+  //   display: block;
+  // }
+
+  // #engrid .en__component--advrow > div,
+  // #engrid
+  //   ~ #EN__RootElement
+  //   div.pboAdvancedRow__preview
+  //   .en__component--row.en__component--advrow
+  //   > div {
+  //   display: -webkit-box;
+  //   display: -ms-flexbox;
+  //   display: flex;
+  // }
+}
+
 /* prettier-ignore */
 #engrid .en__component--advrow,
 #EN__RootElement .en__component--advrow {
-  grid-template-areas:
-    "page-alert"
-    "content-header"
-    "body-headerOutside"
-    "body-header"
-    "body-banner"
-    "body-bannerOverlay"
-    "body-top"
-    "body-side"
-    "body-main"
-    "body-bottom"
-    "body-footer"
-    "body-footerOutside"
-    "content-footerSpacer"
-    "content-footer"
-    "page-customCode"
-    "page-backgroundImage"
-    "page-backgroundImageOverlay";
+  /* autoprefixer grid: off */
   grid-template-rows:
   [
     page-start page-alert-start]        minmax(0px, auto)  [page-alert-end
@@ -89,14 +137,12 @@ body:not(#en__pagebuilder)
 
 #engrid .en__component--advrow .page-alert,
 #EN__RootElement .en__component--advrow .page-alert {
-  grid-area: page-alert;
   grid-column: pc;
   grid-row: page-alert;
 }
 
 #engrid .en__component--advrow .content-header,
 #EN__RootElement .en__component--advrow .content-header {
-  grid-area: content-header;
   grid-column: pc;
   grid-row: content-header;
 }
@@ -108,84 +154,72 @@ body:not(#en__pagebuilder)
 
 #engrid .en__component--advrow .body-headerOutside,
 #EN__RootElement .en__component--advrow .body-headerOutside {
-  grid-area: body-headerOutside;
   grid-column: cc;
   grid-row: body-headerOutside;
 }
 
 #engrid .en__component--advrow .body-header,
 #EN__RootElement .en__component--advrow .body-header {
-  grid-area: body-header;
   grid-column: bc;
   grid-row: body-header;
 }
 
 #engrid .en__component--advrow .body-banner,
 #EN__RootElement .en__component--advrow .body-banner {
-  grid-area: body-banner;
   grid-column: bc;
   grid-row: body-banner;
 }
 
 #engrid .en__component--advrow .body-bannerOverlay,
 #EN__RootElement .en__component--advrow .body-bannerOverlay {
-  grid-area: body-bannerOverlay;
   grid-column: bc;
   grid-row: body-bannerOverlay;
 }
 
 #engrid .en__component--advrow .body-top,
 #EN__RootElement .en__component--advrow .body-top {
-  grid-area: body-top;
   grid-column: bc;
   grid-row: body-top;
 }
 
 #engrid .en__component--advrow .body-side,
 #EN__RootElement .en__component--advrow .body-side {
-  grid-area: body-side;
   grid-column: bc;
   grid-row: body-side;
 }
 
 #engrid .en__component--advrow .body-main,
 #EN__RootElement .en__component--advrow .body-main {
-  grid-area: body-main;
   grid-column: bc;
   grid-row: body-main;
 }
 
 #engrid .en__component--advrow .body-bottom,
 #EN__RootElement .en__component--advrow .body-bottom {
-  grid-area: body-bottom;
   grid-column: bc;
   grid-row: body-bottom;
 }
 
 #engrid .en__component--advrow .body-footer,
 #EN__RootElement .en__component--advrow .body-footer {
-  grid-area: body-footer;
   grid-column: bc;
   grid-row: body-footer;
 }
 
 #engrid .en__component--advrow .body-footerOutside,
 #EN__RootElement .en__component--advrow .body-footerOutside {
-  grid-area: body-footerOutside;
   grid-column: cc;
   grid-row: body-footerOutside;
 }
 
 #engrid .en__component--advrow .content-footerSpacer,
 #EN__RootElement .en__component--advrow .content-footerSpacer {
-  grid-area: content-footerSpacer;
   grid-column: cc;
   grid-row: content-footerSpacer;
 }
 
 #engrid .en__component--advrow .content-footer,
 #EN__RootElement .en__component--advrow .content-footer {
-  grid-area: content-footer;
   grid-column: pc;
   grid-row: content-footer;
 }
@@ -197,30 +231,24 @@ body:not(#en__pagebuilder)
 
 #engrid .en__component--advrow .page-customCode,
 #EN__RootElement .en__component--advrow .page-customCode {
-  grid-area: page-customCode;
   grid-column: pc;
   grid-row: page-customCode;
 }
 
 #engrid .en__component--advrow .page-backgroundImage,
 #EN__RootElement .en__component--advrow .page-backgroundImage {
-  grid-area: page-backgroundImage;
   grid-column: pc;
   grid-row: page-backgroundImage;
 }
 
 #engrid .en__component--advrow .page-backgroundImageOverlay,
 #EN__RootElement .en__component--advrow .page-backgroundImageOverlay {
-  grid-area: page-backgroundImageOverlay;
   grid-column: pc;
   grid-row: page-backgroundImageOverlay;
 }
 
 #engrid .en__component--advrow > div,
 #EN__RootElement .en__component--advrow > div {
-  // display: flex;
-  // flex-direction: column;
-  // flex-wrap: wrap;
   grid-column: pc;
 }
 
@@ -235,6 +263,7 @@ body:not(#en__pagebuilder)
   /* prettier-ignore */
   #engrid .en__component--advrow,
   #engrid .en__component--advrow .pseudo-subgrid{
+    /* autoprefixer grid: off */
     grid-template-columns:
     [
       pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
@@ -280,11 +309,13 @@ body:not(#en__pagebuilder)
   bottom: 0;
   left: 0;
   z-index: -2;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
-body:not(#en__pagebuilder) #engrid .page-customCode{
+body:not(#en__pagebuilder) #engrid .page-customCode {
   display: none;
 }
 
@@ -295,6 +326,9 @@ body:not(#en__pagebuilder) #engrid .page-customCode{
   z-index: -3;
 }
 
-body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImageOverlay {
+body:not(#en__pagebuilder)
+  #engrid
+  .en__component--advrow
+  .page-backgroundImageOverlay {
   z-index: -1;
 }
