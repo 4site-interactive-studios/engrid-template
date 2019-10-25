@@ -7,17 +7,15 @@ export const enInput = (() => {
    ***********************************/
 
   // @TODO Needs to be expanded to bind other EN elements (checkbox, radio) and compound elements (split-text, split-select, select with other input, etc...)
+  // @TODO A "Not" condition is needed for .en__field--email because someone could name their email opt in "Email" and it will get the .en_field--email class generated for it
   // get DOM elements
   const init = () => {
     const formInput = document.querySelectorAll(
-      ".en__field--text, .en__field--email, .en__field--telephone, .en__field--textarea, .en__field--select"
+      ".en__field--text, .en__field--email:not(.en__field--checkbox), .en__field--telephone, .en__field--textarea, .en__field--select"
     );
     const otherInputs = document.querySelectorAll(".en__field__input--other");
     Array.from(formInput).forEach(e => {
-      let element = e.querySelector("input, textarea, select") as
-        | HTMLInputElement
-        | HTMLSelectElement
-        | HTMLTextAreaElement;
+      let element = e.querySelector("input, textarea, select") as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
       if (element.value) {
         e.classList.add("has-value");
       }
@@ -38,9 +36,7 @@ export const enInput = (() => {
               const targetWrapper = target.parentNode as HTMLElement;
               targetWrapper.classList.remove("en__field__item--hidden");
               if (targetWrapper.parentNode) {
-                const lastRadioInput = targetWrapper.parentNode.querySelector(
-                  ".en__field__item:nth-last-child(2) input"
-                ) as HTMLInputElement;
+                const lastRadioInput = targetWrapper.parentNode.querySelector(".en__field__item:nth-last-child(2) input") as HTMLInputElement;
                 lastRadioInput.checked = !0;
               }
             }
@@ -58,12 +54,8 @@ export const enInput = (() => {
 
 export const setBackgroundImages = () => {
   // Find Inline Background Image, hide it, and set it as the background image.
-  let pageBackground = document.querySelector(
-    ".page-backgroundImage"
-  ) as HTMLElement;
-  let pageBackgroundImg = document.querySelector(
-    ".page-backgroundImage img"
-  ) as HTMLImageElement;
+  let pageBackground = document.querySelector(".page-backgroundImage") as HTMLElement;
+  let pageBackgroundImg = document.querySelector(".page-backgroundImage img") as HTMLImageElement;
   let pageBackgroundImgSrc: any = null;
 
   if (pageBackgroundImg) {
@@ -130,8 +122,7 @@ export const bindEvents = (e: Element) => {
     e.parentNode.parentNode.classList.add("is-autofilled", "has-value");
   };
 
-  const onAutoFillCancel = (e: any) =>
-    e.parentNode.parentNode.classList.remove("is-autofilled", "has-value");
+  const onAutoFillCancel = (e: any) => e.parentNode.parentNode.classList.remove("is-autofilled", "has-value");
   const onAnimationStart = (e: any) => {
     const target = e.target as HTMLElement;
     const animation = e.animationName;
@@ -143,10 +134,7 @@ export const bindEvents = (e: Element) => {
     }
   };
 
-  const enField = e.querySelector("input, textarea, select") as
-    | HTMLInputElement
-    | HTMLTextAreaElement
-    | HTMLSelectElement;
+  const enField = e.querySelector("input, textarea, select") as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
   enField.addEventListener("focus", handleFocus);
   enField.addEventListener("blur", handleBlur);
   enField.addEventListener("change", handleChange);
@@ -217,9 +205,7 @@ export const debugBar = () => {
         } else if (body) {
           body.classList.add("visualize-outline");
         } else {
-          console.log(
-            "While trying to switch visualizations, something unexpected happen."
-          );
+          console.log("While trying to switch visualizations, something unexpected happen.");
         }
       }
     };
@@ -242,9 +228,7 @@ export const debugBar = () => {
           removeClassesByPrefix(enGrid, "layout-");
           enGrid.classList.add("layout-leftleft1col");
         } else {
-          console.log(
-            "While trying to switch layouts, something unexpected happen."
-          );
+          console.log("While trying to switch layouts, something unexpected happen.");
         }
       }
     };

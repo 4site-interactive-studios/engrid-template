@@ -83,34 +83,13 @@ margin-bottom: 0;
 }*/
 
 /* Make the spacing between wrapping elements tighter so the user knows they're related */
-#engrid
-  .en__component
-  .en__field.en__field--select
-  .en__field__item:not(.en__field__item--other),
-#engrid
-  .en__component
-  .en__field.en__field--radio
-  .en__field__item:not(.en__field__item--other),
-#engrid
-  .en__component
-  .en__field.en__field--checkbox
-  .en__field__item:not(.en__field__item--other),
-#engrid
-  .en__component
-  .en__field.en__field--splittext
-  .en__field__item:not(.en__field__item--other),
-#engrid
-  .en__component
-  .en__field.en__field--tripletext
-  .en__field__item:not(.en__field__item--other),
-#engrid
-  .en__component
-  .en__field.en__field--splitselect
-  .en__field__item:not(.en__field__item--other),
-#engrid
-  .en__component
-  .en__field.en__field--tripleselect
-  .en__field__item:not(.en__field__item--other) {
+#engrid .en__component .en__field.en__field--select .en__field__item:not(.en__field__item--other),
+#engrid .en__component .en__field.en__field--radio .en__field__item:not(.en__field__item--other),
+#engrid .en__component .en__field.en__field--checkbox .en__field__item:not(.en__field__item--other),
+#engrid .en__component .en__field.en__field--splittext .en__field__item:not(.en__field__item--other),
+#engrid .en__component .en__field.en__field--tripletext .en__field__item:not(.en__field__item--other),
+#engrid .en__component .en__field.en__field--splitselect .en__field__item:not(.en__field__item--other),
+#engrid .en__component .en__field.en__field--tripleselect .en__field__item:not(.en__field__item--other) {
   margin-bottom: 0.5rem;
   margin-right: 1rem;
   display: -webkit-box;
@@ -129,21 +108,11 @@ margin-bottom: 0;
 /* Pick up the normal spacing on the error element to contunue form pacing continues as expected when in an error state */
 #engrid .en__component .en__field.en__field--select.en__field--validationFailed,
 #engrid .en__component .en__field.en__field--radio.en__field--validationFailed,
-#engrid
-  .en__component
-  .en__field.en__field--checkbox.en__field--validationFailed,
-#engrid
-  .en__component
-  .en__field.en__field--splittext.en__field--validationFailed,
-#engrid
-  .en__component
-  .en__field.en__field--tripletext.en__field--validationFailed,
-#engrid
-  .en__component
-  .en__field.en__field--splitselect.en__field--validationFailed,
-#engrid
-  .en__component
-  .en__field.en__field--tripleselect.en__field--validationFailed {
+#engrid .en__component .en__field.en__field--checkbox.en__field--validationFailed,
+#engrid .en__component .en__field.en__field--splittext.en__field--validationFailed,
+#engrid .en__component .en__field.en__field--tripletext.en__field--validationFailed,
+#engrid .en__component .en__field.en__field--splitselect.en__field--validationFailed,
+#engrid .en__component .en__field.en__field--tripleselect.en__field--validationFailed {
   margin-bottom: 1rem;
 }
 
@@ -193,30 +162,19 @@ margin-right: .5rem;
 }*/
 
 body #engrid .en__component--formblock .en__field:first-of-type,
-body
-  #engrid
-  .en__component--formblock
-  .en__field
-  div.en__field__item:first-of-type {
+body #engrid .en__component--formblock .en__field div.en__field__item:first-of-type {
   margin-left: 0rem !important;
 }
 
 /* Needs QA: ENs page builder adds a div to the formblock DOM on hover. This will cause a small right margin to appear as the expected input fields are no longer the last of their siblings */
 body #engrid .en__component--formblock .en__field:last-of-type,
-body
-  #engrid
-  .en__component--formblock
-  .en__field
-  div.en__field__item:last-of-type {
+body #engrid .en__component--formblock .en__field div.en__field__item:last-of-type {
   margin-right: 0rem !important;
 }
 
 /* If the form field has a hidden "other" field we need to remove the end of row spacing */
 /* NEED TO REVISIT FOR CODE CLEANUP */
-#engrid
-  .en__component--formblock
-  .en__field--withOther
-  div.en__field__item:nth-last-child(2) {
+#engrid .en__component--formblock .en__field--withOther div.en__field__item:nth-last-child(2) {
   margin-right: 0px;
 }
 
@@ -306,18 +264,17 @@ width: 33.333333%;
   height: auto !important;
   margin: 0rem;
   padding: 0.5rem;
-  border: 1px solid var(--client-light-gray);
-  border-radius: 0.3rem;
-  background-color: var(--client-white);
+  border: 1px solid $client-input-border-color;
+  border-radius: $client-input-border-radius;
+  background-color: $client-input-background-color;
   -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   font-family: inherit;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
-  color: var(--client-black);
-  transition: box-shadow 0.25s, border-color 0.25s ease-in-out,
-    -webkit-box-shadow 0.25s;
+  color: $client-black;
+  transition: box-shadow 0.25s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.25s;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -330,8 +287,7 @@ width: 33.333333%;
   background-repeat: no-repeat;
   background-size: 0.5625rem 0.375rem;
   padding-right: 1.5rem;
-  transition: box-shadow 0.25s, border-color 0.25s ease-in-out,
-    -webkit-box-shadow 0.25s;
+  transition: box-shadow 0.25s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.25s;
 }
 
 #engrid textarea {
@@ -357,12 +313,11 @@ width: 33.333333%;
 #engrid select:focus,
 #engrid textarea:focus {
   outline: none;
-  border: 1px solid var(--client-gray);
-  background-color: var(--client-button-font-color);
-  -webkit-box-shadow: 0 0 0.3125rem var(--client-light-gray);
-  box-shadow: 0 0 0.3125rem var(--client-light-gray);
-  transition: box-shadow 0.25s, border-color 0.25s ease-in-out,
-    -webkit-box-shadow 0.25s;
+  border: 1px solid $client-gray;
+  background-color: $client-button-font-color;
+  -webkit-box-shadow: 0 0 0.3125rem $client-light-gray;
+  box-shadow: 0 0 0.3125rem $client-light-gray;
+  transition: box-shadow 0.25s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.25s;
 }
 
 /**
@@ -376,37 +331,37 @@ width: 33.333333%;
 /* Placeholder styling */
 /* Chrome, Firefox, Opera, Safari 10.1+ */
 ::-webkit-input-placeholder {
-  color: var(--client-light-gray);
+  color: $client-light-gray;
   opacity: 1;
   /* Firefox */
 }
 
 :-ms-input-placeholder {
-  color: var(--client-light-gray);
+  color: $client-light-gray;
   opacity: 1;
   /* Firefox */
 }
 
 ::-ms-input-placeholder {
-  color: var(--client-light-gray);
+  color: $client-light-gray;
   opacity: 1;
   /* Firefox */
 }
 
 ::placeholder {
-  color: var(--client-light-gray);
+  color: $client-light-gray;
   opacity: 1;
   /* Firefox */
 }
 
 /* Internet Explorer 10-11 */
 :-ms-input-placeholder {
-  color: var(--client-light-gray);
+  color: $client-light-gray;
 }
 
 /* Microsoft Edge */
 ::-ms-input-placeholder {
-  color: var(--client-light-gray);
+  color: $client-light-gray;
 }
 
 /* Custom Styling for Radio & Checkbox Inputs */
@@ -448,9 +403,9 @@ width: 33.333333%;
   display: inline-block;
   vertical-align: middle;
   border: 1px solid #c3c3c3;
-  -webkit-box-shadow: inset 0 0 0 5px var(--client-white);
-  box-shadow: inset 0 0 0 5px var(--client-white);
-  background-color: var(--client-white);
+  -webkit-box-shadow: inset 0 0 0 5px $client-white;
+  box-shadow: inset 0 0 0 5px $client-white;
+  background-color: $client-white;
   cursor: pointer;
   -webkit-transition-duration: 0.25s;
   transition-duration: 0.25s;
@@ -470,23 +425,23 @@ width: 33.333333%;
 
 #engrid .en__field__input--radio:checked + .en__field__label::before,
 #engrid .en__field__input--checkbox:checked + .en__field__label::before {
-  background-color: var(--client-checkmark-background-color);
-  border-color: var(--client-checkmark-border-color);
+  background-color: $client-checkmark-background-color;
+  border-color: $client-checkmark-border-color;
 }
 
 /* CSS code for checkmark symbol */
 /* REF: https://www.toptal.com/designers/htmlarrows/symbols/check-mark/ */
 #engrid .en__field__input--checkbox:checked + .en__field__label::before {
   content: "\a0\2713";
-  background-color: var(--client-checkmark-background-color);
-  border-color: var(--client-checkmark-border-color);
-  color: var(--client-checkmark-font-color);
+  background-color: $client-checkmark-background-color;
+  border-color: $client-checkmark-border-color;
+  color: $client-checkmark-font-color;
 }
 
 /* QA Needed: Would like to find a way so that radio input focus is round rather than square. May require re-writing how radio inputs are styled */
 #engrid .en__field__input--radio:focus + .en__field__label::before,
 #engrid .en__field__input--checkbox:focus + .en__field__label::before {
-  outline: var(--client-gray) auto 0.3125rem;
+  outline: $client-gray auto 0.3125rem;
 }
 
 /* Buttons */
@@ -497,26 +452,26 @@ width: 33.333333%;
   padding: 0.85rem 1rem;
   -webkit-appearance: none;
   border: 1px solid transparent;
-  border-radius: 0.3rem;
+  border-radius: $client-input-border-radius;
   -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   font-size: 1rem;
   text-align: center;
   cursor: pointer;
-  background-color: var(--client-button-background-color);
-  color: var(--client-white);
+  background-color: $client-button-background-color;
+  color: $client-white;
 }
 
 #engrid .en__submit button {
   margin-top: 2rem;
-  background-color: var(--client-submit-button-background-color);
-  border-color: var(--client-submit-button-background-color);
-  color: var(--client-submit-button-font-color);
+  background-color: $client-submit-button-background-color;
+  border-color: $client-submit-button-background-color;
+  color: $client-submit-button-font-color;
 }
 
 #engrid .en__submit button:hover,
 #engrid .en__submit button:focus {
-  background-color: var(--client-submit-button-background-color-hover);
+  background-color: $client-submit-button-background-color-hover;
 }
 
 #engrid .next-step .en__submit button {
@@ -526,14 +481,14 @@ width: 33.333333%;
 
 #engrid button:hover,
 #engrid button:focus {
-  background-color: var(--client-button-background-color-hover);
+  background-color: $client-button-background-color-hover;
 }
 
 #engrid button[disabled],
 #engrid button[disabled]:hover,
 #engrid button[disabled]:focus {
-  background-color: var(--client-button-background-color-disabled);
-  color: var(--client-button-font-color);
+  background-color: $client-button-background-color-disabled;
+  color: $client-button-font-color;
 }
 
 #engrid button[disabled] {
@@ -637,10 +592,10 @@ input:not(:-webkit-autofill) {
   margin-left: -1.875rem;
   margin-right: -1.875rem;
   padding: 0.5rem 2rem;
-  color: var(--client-error-red);
+  color: $client-error-red;
   font-weight: 700;
   text-align: center;
-  background-color: var(--client-error-red);
+  background-color: $client-error-red;
 }
 
 .en__errorList > .en__error {
@@ -648,15 +603,15 @@ input:not(:-webkit-autofill) {
   margin-right: -1.875rem;
   padding: 0.5rem 2rem;
   list-style: none;
-  color: var(--client-error-page-group-background);
+  color: $client-error-page-group-background;
   text-align: center;
-  background-color: var(--client-error-page-group-background);
+  background-color: $client-error-page-group-background;
 }
 
 /* Field Level Inline Errors */
 #engrid .en__component .en__field__error {
   padding: 0.25rem 0.5rem 0 0;
-  color: var(--client-error-red);
+  color: $client-error-red;
   font-size: 0.75rem;
   -webkit-box-ordinal-group: 4;
   -ms-flex-order: 3;
@@ -671,10 +626,10 @@ input:not(:-webkit-autofill) {
 
 #engrid.fancy-errors .en__component .en__field__error {
   padding: 0.25rem 0.5rem;
-  color: var(--client-white);
+  color: $client-white;
   font-size: 0.75rem;
-  border-radius: 0.3rem;
-  background-color: var(--client-error-red);
+  border-radius: $client-input-border-radius;
+  background-color: $client-error-red;
   -webkit-box-ordinal-group: 4;
   -ms-flex-order: 3;
   order: 3;
@@ -691,70 +646,28 @@ input:not(:-webkit-autofill) {
   }
 }
 
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--select.en__field--withOther.en__field--validationFailed
-  .en__field__element,
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--radio.en__field--validationFailed
-  .en__field__element,
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--checkbox.en__field--validationFailed
-  .en__field__element,
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--splittext.en__field--validationFailed
-  .en__field__element,
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--tripletext.en__field--validationFailed
-  .en__field__element,
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--splitselect.en__field--validationFailed
-  .en__field__element,
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--tripleselect.en__field--validationFailed
-  .en__field__element {
+#engrid.fancy-errors .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__element,
+#engrid.fancy-errors .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__element,
+#engrid.fancy-errors .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__element,
+#engrid.fancy-errors .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__element,
+#engrid.fancy-errors .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__element,
+#engrid.fancy-errors .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__element,
+#engrid.fancy-errors .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__element {
   border-bottom-left-radius: 0rem;
   border-bottom-right-radius: 0rem;
 }
 
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--select.en__field--withOther.en__field--validationFailed.has-value
-  .en__field__element,
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--radio.en__field--validationFailed.has-value
-  .en__field__element,
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--checkbox.en__field--validationFailed.has-value
-  .en__field__element,
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--splittext.en__field--validationFailed.has-value
-  .en__field__element,
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--tripletext.en__field--validationFailed.has-value
-  .en__field__element,
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--splitselect.en__field--validationFailed.has-value
-  .en__field__element,
-#engrid.fancy-errors
-  .en__component
-  .en__field.en__field--tripleselect.en__field--validationFailed.has-value
-  .en__field__element,
+#engrid.fancy-errors .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed.has-value .en__field__element,
+#engrid.fancy-errors .en__component .en__field.en__field--radio.en__field--validationFailed.has-value .en__field__element,
+#engrid.fancy-errors .en__component .en__field.en__field--checkbox.en__field--validationFailed.has-value .en__field__element,
+#engrid.fancy-errors .en__component .en__field.en__field--splittext.en__field--validationFailed.has-value .en__field__element,
+#engrid.fancy-errors .en__component .en__field.en__field--tripletext.en__field--validationFailed.has-value .en__field__element,
+#engrid.fancy-errors .en__component .en__field.en__field--splitselect.en__field--validationFailed.has-value .en__field__element,
+#engrid.fancy-errors .en__component .en__field.en__field--tripleselect.en__field--validationFailed.has-value .en__field__element,
 #engrid.fancy-errors .en__field--validationFailed.has-value .en__field__error {
-  border-color: var(--client-error-red-grayscale);
-  background-color: var(--client-error-red-grayscale);
-  color: var(--client-white);
+  border-color: $client-error-red-grayscale;
+  background-color: $client-error-red-grayscale;
+  color: $client-white;
 }
 
 /* TODO Not working anymore since we removed our corresponding JS */
@@ -772,43 +685,22 @@ body.error-jump-assist #engrid .en__component .en__field__error {
   .en__field--telephone.en__field--validationFailed input,
   .en__field--textarea.en__field--validationFailed textarea,
   .en__field--select.en__field--validationFailed select {
-    border-color: var(--client-error-red);
-    background-color: var(--client-error-red-faded);
+    border-color: $client-error-red;
+    background-color: $client-error-red-faded;
   }
 }
 
-#engrid
-  .en__component
-  .en__field.en__field--select.en__field--withOther.en__field--validationFailed
-  .en__field__element,
-#engrid
-  .en__component
-  .en__field.en__field--radio.en__field--validationFailed
-  .en__field__element,
-#engrid
-  .en__component
-  .en__field.en__field--checkbox.en__field--validationFailed
-  .en__field__element,
-#engrid
-  .en__component
-  .en__field.en__field--splittext.en__field--validationFailed
-  .en__field__element,
-#engrid
-  .en__component
-  .en__field.en__field--tripletext.en__field--validationFailed
-  .en__field__element,
-#engrid
-  .en__component
-  .en__field.en__field--splitselect.en__field--validationFailed
-  .en__field__element,
-#engrid
-  .en__component
-  .en__field.en__field--tripleselect.en__field--validationFailed
-  .en__field__element {
-  border: 1px solid var(--client-error-red);
-  background-color: var(--client-error-red-faded);
+#engrid .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__element,
+#engrid .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__element,
+#engrid .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__element,
+#engrid .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__element,
+#engrid .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__element,
+#engrid .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__element,
+#engrid .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__element {
+  border: 1px solid $client-error-red;
+  background-color: $client-error-red-faded;
   padding: 0.5rem 0.5rem 0rem 0.5rem;
-  border-radius: 0.3rem;
+  border-radius: $client-input-border-radius;
 }
 
 #engrid .en__field--text.en__field--validationFailed .en__field__error,
@@ -816,43 +708,19 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 #engrid .en__field--telephone.en__field--validationFailed .en__field__error,
 #engrid .en__field--textarea.en__field--validationFailed .en__field__error,
 #engrid .en__field--select.en__field--validationFailed .en__field__error,
-#engrid
-  .en__component
-  .en__field.en__field--select.en__field--withOther.en__field--validationFailed
-  .en__field__error,
-#engrid
-  .en__component
-  .en__field.en__field--radio.en__field--validationFailed
-  .en__field__error,
-#engrid
-  .en__component
-  .en__field.en__field--checkbox.en__field--validationFailed
-  .en__field__error,
-#engrid
-  .en__component
-  .en__field.en__field--splittext.en__field--validationFailed
-  .en__field__error,
-#engrid
-  .en__component
-  .en__field.en__field--tripletext.en__field--validationFailed
-  .en__field__error,
-#engrid
-  .en__component
-  .en__field.en__field--splitselect.en__field--validationFailed
-  .en__field__error,
-#engrid
-  .en__component
-  .en__field.en__field--tripleselect.en__field--validationFailed
-  .en__field__error {
+#engrid .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__error,
+#engrid .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__error,
+#engrid .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__error,
+#engrid .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__error,
+#engrid .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__error,
+#engrid .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__error,
+#engrid .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__error {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
 }
 
-#engrid
-  .en__field--radio.en__field--validationFailed
-  #engrid
-  .en__field--checkbox.en__field--validationFailed {
-  border-color: var(--client-error-red);
+#engrid .en__field--radio.en__field--validationFailed #engrid .en__field--checkbox.en__field--validationFailed {
+  border-color: $client-error-red;
 }
 
 #engrid div[class*="-column-"].en__field .en__field__element,
@@ -884,6 +752,8 @@ body.error-jump-assist #engrid .en__component .en__field__error {
    */
 
 #engrid.float-labels .en__field--text input[type="text"],
+#engrid.float-labels .en__field--email input[type="email"],
+#engrid.float-labels .en__field--telephone input[type="tel"],
 #engrid.float-labels .en__field--textarea textarea {
   padding: 1rem 0.5rem 0rem 0.5rem;
 }
@@ -894,6 +764,8 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 }
 
 #engrid.float-labels .en__field--text label.en__field__label,
+#engrid.float-labels .en__field--email label.en__field__label,
+#engrid.float-labels .en__field--telephone label.en__field__label,
 #engrid.float-labels .en__field--textarea label.en__field__label,
 #engrid.float-labels .en__field--select label.en__field__label {
   /* z-index: -1; */
@@ -910,6 +782,10 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 
 #engrid.float-labels .en__field--text.has-value label.en__field__label,
 #engrid.float-labels .en__field--text.has-focus label.en__field__label,
+#engrid.float-labels .en__field--email.has-value label.en__field__label,
+#engrid.float-labels .en__field--email.has-focus label.en__field__label,
+#engrid.float-labels .en__field--telephone.has-value label.en__field__label,
+#engrid.float-labels .en__field--telephone.has-focus label.en__field__label,
 #engrid.float-labels .en__field--textarea.has-value label.en__field__label,
 #engrid.float-labels .en__field--textarea.has-focus label.en__field__label,
 #engrid.float-labels .en__field--select label.en__field__label {
@@ -919,26 +795,26 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 
 #engrid.float-labels {
   .en__field--text.en__field--validationFailed label,
+  .en__field--email.en__field--validationFailed label,
+  .en__field--telephone.en__field--validationFailed label,
   .en__field--textarea.en__field--validationFailed label,
   .en__field--select.en__field--validationFailed label {
     opacity: 1;
   }
 }
 
-#engrid.float-labels
-  .en__field--text.en__field--validationNeeded
-  .en__field__error,
-#engrid.float-labels
-  .en__field--textarea.en__field--validationNeeded
-  .en__field__error,
-#engrid.float-labels
-  .en__field--select.en__field--validationNeeded
-  .en__field__error {
+#engrid.float-labels .en__field--text.en__field--validationNeeded .en__field__error,
+#engrid.float-labels .en__field--email.en__field--validationNeeded .en__field__error,
+#engrid.float-labels .en__field--telephone.en__field--validationNeeded .en__field__error,
+#engrid.float-labels .en__field--textarea.en__field--validationNeeded .en__field__error,
+#engrid.float-labels .en__field--select.en__field--validationNeeded .en__field__error {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
 }
 
 #engrid.float-labels .en__field--text.en__field--validationNeeded input,
+#engrid.float-labels .en__field--email.en__field--validationNeeded input,
+#engrid.float-labels .en__field--telephone.en__field--validationNeeded input,
 #engrid.float-labels .en__field--textarea.en__field--validationNeeded textarea,
 #engrid.float-labels .en__field--select.en__field--validationNeeded select {
   border-bottom-right-radius: 0px;
@@ -1023,18 +899,26 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 #engrid .en__field--validationFailed.has-value input,
 #engrid .en__field--validationFailed.has-value textarea,
 #engrid .en__field--select.en__field--validationFailed.has-value select {
-  border-color: var(--client-error-red-grayscale);
+  border-color: $client-error-red-grayscale;
   background-color: initial;
 }
 
 .en__component--formblock {
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
+  padding-left: -0.5rem;
+  padding-right: -0.5rem;
 }
 
 #engrid .en__field {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+#engrid .en__field:first-child {
+  padding-left: 0;
+}
+
+#engrid .en__field:last-child {
+  padding-right: 0;
 }
 
 /* Override */
@@ -1070,6 +954,14 @@ input[name="transaction.donationAmt.other"] {
 /* Default Stylings for Common Form Fields */
 /* Can be disabled by added manual-form-layout at the template or component level */
 #engrid div:not(.manual-form-layout) {
+  .en__component--formblock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
   .en__field--firstName,
   .en__field--lastName {
     -ms-flex-preferred-size: 50%;
@@ -1077,31 +969,80 @@ input[name="transaction.donationAmt.other"] {
   }
 
   .en__field--lastName {
-    margin-right: 0;
+    padding-right: 0;
   }
 
   .en__field--emailAddress,
   .en__field--phoneNumber,
   .en__field--country,
-  .en__field--address1 {
+  .en__field--address1,
+  .en__field--honname,
+  .en__field--infname,
+  .en__field--infemail,
+  .en__field--infcountry,
+  .en__field--infadd1,
+  .en__field--gftrsn {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .en__field--city,
   .en__field--region,
-  .en__field--postcode {
+  .en__field--postcode,
+  .en__field--infcity,
+  .en__field--infreg,
+  .en__field--infpostcd {
     -ms-flex-preferred-size: calc(100% / 3);
     flex-basis: calc(100% / 3);
   }
 
-  .en__field--city {
-    margin-left: 0;
+  .en__field--city,
+  .en__field--infcity {
+    padding-left: 0;
   }
 
-  .en__field--postcode {
-    margin-right: 0;
+  .en__field--postcode,
+  .en__field--infpostcd {
+    padding-right: 0;
+  }
+
+  .en__field--recurrpay,
+  .en__field--donationAmt {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .en__field--country {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    top: 2.3rem;
+    text-align: right;
+    margin: 0;
+  }
+
+  .en__field--country::before {
+    content: "";
+    display: block;
+    height: 60%;
+    width: 1px;
+    background-color: #cacaca;
+    position: absolute;
+    left: 0;
+    top: 20%;
+  }
+
+  .en__field--country #en__field_supporter_country {
+    border: none;
+    background-color: transparent;
+    text-align-last: center;
+    width: 89px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 }
