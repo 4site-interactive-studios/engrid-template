@@ -1,451 +1,397 @@
-body:not(#en__pagebuilder) {
-  .pb {
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  .pcc {
+/*
+* ##########################################################
+* # ENGRID - Mobile First Styling
+* # LAYOUT - Left Left 1 Column - layout-leftleft1col
+* ##########################################################
+*/
+
+#engrid.layout-leftleft1col {
+  .page-alert,
+  .content-header,
+  .body-headerOutside,
+  .body-banner,
+  .body-bannerOverlay,
+  .body-side,
+  .body-footerOutside {
     display: none;
   }
 }
 
-// Layout 1 Styling
+/*
+* ##########################################################
+* # ENGRID - BODY Column Breakpoint Styling
+* # LAYOUT - Left Left 1 Column - layout-leftleft1col
+* ##########################################################
+*/
 
-.layout-1 {
-  /* The Content Column - Page Footer has internal components that should horizontally line up to the body */
-  .ccpf {
-    display: grid;
-    grid-template-columns:
-      [content-start]
-      minmax(0px, var(--body-column-left-gutter)) [body-start]
-      minmax(0px, var(--body-left-gutter)) [center-start]
-      minmax(600px, var(--body-width)) [center-end]
-      minmax(0px, var(--body-right-gutter)) [body-end]
-      minmax(0px, var(--body-column-right-gutter))
-      [content-end];
-    > div {
-      grid-column: center-start / content-end;
-      color: #ffffff;
+/* Sum of all MIN values of the Body Columns */
+@media screen and (min-width: 650px) {
+  /* prettier-ignore */
+  #engrid.layout-leftleft1col .en__component--advrow,
+        #engrid.layout-leftleft1col .en__component--advrow .pseudo-subgrid{
+          /* autoprefixer grid: off */
+          grid-template-columns:
+          [
+            pc-start lpc-start]  minmax(25px, 25px)    [lpc-end
+            cc-start lcc-start]  minmax(0px, 0px)      [lcc-end
+            bc-start lbc-start]  minmax(300px, 300px)  [lbc-end
+            rbc-start]           minmax(300px, 300px)  [rbc-end bc-end
+            rcc-start]           minmax(0px, 200px)    [rcc-end cc-end
+            rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end
+          ];
+        }
+
+  #engrid.layout-leftleft1col {
+    [class^="body-"] {
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    .body-header {
+      margin-top: 1rem;
+      border-top: 1px solid black;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .body-footer {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid black;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
     }
   }
-  .bh {
-    background-color: #ffffff;
-    border-top-left-radius: var(--body-border-radius);
-    border-top-right-radius: var(--body-border-radius);
-    margin-top: var(--body-margin);
-    padding-top: var(--body-padding-lg);
-  }
-  .btc {
-    background-color: #ffffff;
-    padding-left: var(--body-padding);
-    padding-right: var(--body-padding);
-  }
-  .bform {
-    background-color: #ffffff;
-    padding-left: var(--body-padding);
-    padding-right: var(--body-padding);
-  }
-  .bf {
-    background-color: #ffffff;
-    border-bottom-left-radius: var(--body-border-radius);
-    border-bottom-right-radius: var(--body-border-radius);
-    padding-left: var(--body-padding);
-    padding-right: var(--body-padding);
-    padding-bottom: var(--body-padding-lg);
-    margin-bottom: var(--body-margin);
-  }
-  #nav-footer a {
-    text-decoration: none;
-    display: inline-block;
-    padding: var(--body-padding) var(--body-padding-sm);
-    color: #ffffff;
-  }
 
-  //   MOBILE (max-width: 600px)
-  @include to(2) {
-    #nav-footer {
-      padding: var(--body-padding) 0 var(--body-padding) 0;
-      a {
-        display: block;
-        padding: var(--body-padding-sm) var(--body-padding-lg)
-          var(--body-padding-sm) var(--body-padding);
-        color: #78a22e;
-      }
+  body:not(#en__pagebuilder) #engrid.layout-leftleft1col {
+    .page-backgroundImage {
+      grid-row: content-header-start / content-footer-end;
     }
-    .en__component--advrow,
-    ~ #EN__RootElement
-      div.pboAdvancedRow__preview
-      .en__component--row.en__component--advrow {
-      grid-template-columns:
-        [content-start]
-        0px [body-start]
-        0px [center-start]
-        auto [center-end]
-        0px [body-end]
-        0px
-        [content-end];
-    }
-    .ccpf {
-      grid-template-columns:
-        [content-start]
-        0px [body-start]
-        0px [center-start]
-        auto [center-end]
-        0px [body-end]
-        0px
-        [content-end];
-    }
-    .pb,
-    .pbo {
-      display: none;
-    }
-    .bh {
-      margin-top: 0rem;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-    }
-    .bf {
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-    }
-    .pb {
-      background-image: none;
+
+    .page-backgroundImageOverlay {
+      grid-row: content-header-start / content-footer-end;
+      grid-column: rcc-start / pc-end;
+      padding-left: var(--body-padding);
+      padding-right: var(--body-padding);
     }
   }
-  /*
-    * ##########################################################
-    * # RAN Layout 1 (layout-1 left-left)
-    * # The Content Column is left aligned and Body Column is left aligned inside it.
-    * ##########################################################
-    */
-  &.left-left,
-  &.left-left ~ #EN__RootElement {
-    /* @TODO: Replace with SCSS Variables*/
+}
 
-    --content-width: 1100px;
+/*
+* ##########################################################
+* # ENGRID - Content Column Breakpoint Styling
+* # LAYOUT - Left Left 1 Column - layout-leftleft1col
+* ##########################################################
+*/
 
-    --body-column-left-gutter: 35px;
-    --body-left-gutter: 0px;
-    --body-width: 600px;
-    --body-right-gutter: 0px;
-    --body-column-right-gutter: 1fr;
+/* Sum of all MAX values of the Body Columns + 1px */
+@media screen and (min-width: 851px) {
+}
 
-    --body-border-radius: 0.4375rem;
-    --body-margin: 2.1875rem;
+/*
+* ##########################################################
+* # ENGRID - Mobile First Styling
+* # LAYOUT - Center Left 1 Column - layout-centerleft1col
+* ##########################################################
+*/
 
-    --body-padding-sm: 0.8652rem;
-    --body-padding: 1.375rem;
-    --body-padding-lg: 2.1875rem;
-
-    /* Grid Template Rows - Sets Content Column - Page Footer to 1fr which causes it to be "stickied" to the bottom of the page if the other content is shorter than the page is tall */
-    .en__component--advrow,
-    ~ #EN__RootElement
-      div.pboAdvancedRow__preview
-      .en__component--row.en__component--advrow {
-      grid-template-areas:
-        "ccpph    ccpph   ccpph   ccpph   ccpph"
-        "ccph     ccph    ccph    ccph    ccph"
-        ".        bcoh    bcoh    bcoh    ."
-        ".        .       bph     .       ."
-        ".        .       bh      .       ."
-        ".        .       bb      .       ."
-        ".        .       bbo     .       ."
-        ".        .       btc     .       ."
-        ".        .       bsc     .       ."
-        ".        .       bform   .       ."
-        ".        .       bpf     .       ."
-        ".        .       bf      .       ."
-        ".        bcof    bcof    bcof    ."
-        "ccfs     ccfs    ccfs    ccfs    ccfs"
-        "ccpf     ccpf    ccpf    ccpf    ccpf"
-        "pb       pb      pb      pb      pb"
-        "pbo      pbo     pbo     pbo     pbo"
-        "pcc      pcc     pcc     pcc     pcc";
-      grid-template-rows: [ccpph-start] auto [ccph-start ccpph-end] auto [bcoh-start ccph-end] auto [bph-start bcoh-end] auto [bh-start bph-end] auto [bb-start bh-end] auto [bbo-start bb-end] auto [btc-start bbo-end] auto [bsc-start btc-end] auto [bform-start bsc-end] auto [bpf-start bform-end] auto [bf-start bpf-end] auto [bcof-start bf-end] auto [ccfs-start bcof-end] 1fr [ccpf-start ccfs-end] auto [pb-start ccpf-end] auto [pbo-start pb-end] auto [pcc-start pbo-end] auto [pcc-end];
-      grid-template-columns:
-        [content-start]
-        minmax(0px, var(--body-column-left-gutter)) [body-start]
-        minmax(0px, var(--body-left-gutter)) [center-start]
-        minmax(600px, var(--body-width)) [center-end]
-        minmax(0px, var(--body-right-gutter)) [body-end]
-        minmax(0px, var(--body-column-right-gutter))
-        [content-end];
-    }
-    // From 0 to 1024px
-    @include to(4) {
-      .pbo {
-        display: none;
-      }
-    }
+#engrid.layout-centerleft1col {
+  .page-alert,
+  .body-headerOutside,
+  .body-banner,
+  .body-bannerOverlay,
+  .body-side,
+  .body-footerOutside {
+    display: none;
   }
-  /*
-    * ##########################################################
-    * # RAN Layout 1 (layout-1 center-left)
-    * # The Content Column is centered and Body Column is left aligned inside it.
-    * ##########################################################
-    */
-  &.center-left,
-  &.center-left ~ #EN__RootElement {
-    /* @TODO: Replace with SCSS Variables*/
-    --content-width: 1100px;
 
-    --body-column-left-gutter: 1fr;
-    --body-left-gutter: 0px;
-    --body-width: 650px;
-    --body-right-gutter: 450px;
-    --body-column-right-gutter: 1fr;
+  .content-header {
+    background: #2e2e2c;
 
-    --body-border-radius: 0.4375rem;
-    --body-margin: 2.1875rem;
-
-    --body-padding-sm: 0.8652rem;
-    --body-padding: 1.375rem;
-    --body-padding-lg: 2.1875rem;
-    /* Grid Template Rows - Sets Content Column - Page Footer to 1fr which causes it to be "stickied" to the bottom of the page if the other content is shorter than the page is tall */
-    .en__component--advrow,
-    ~ #EN__RootElement
-      div.pboAdvancedRow__preview
-      .en__component--row.en__component--advrow {
-      grid-template-areas:
-        "ccpph    ccpph   ccpph   ccpph   ccpph"
-        "ccph     ccph    ccph    ccph    ccph"
-        ".        bcoh    bcoh    bcoh    ."
-        ".        .       bph     .       ."
-        ".        .       bh      .       ."
-        ".        .       bb      .       ."
-        ".        .       bbo     .       ."
-        ".        .       btc     .       ."
-        ".        .       bsc     .       ."
-        ".        .       bform   .       ."
-        ".        .       bpf     .       ."
-        ".        .       bf      .       ."
-        ".        bcof    bcof    bcof    ."
-        "ccfs     ccfs    ccfs    ccfs    ccfs"
-        "ccpf     ccpf    ccpf    ccpf    ccpf"
-        "pb       pb      pb      pb      pb"
-        "pbo      pbo     pbo     pbo     pbo"
-        "pcc      pcc     pcc     pcc     pcc";
-      grid-template-rows: [ccpph-start] auto [ccph-start ccpph-end] auto [bcoh-start ccph-end] auto [bph-start bcoh-end] auto [bh-start bph-end] auto [bb-start bh-end] auto [bbo-start bb-end] auto [btc-start bbo-end] auto [bsc-start btc-end] auto [bform-start bsc-end] auto [bpf-start bform-end] auto [bf-start bpf-end] auto [bcof-start bf-end] auto [ccfs-start bcof-end] 1fr [ccpf-start ccfs-end] auto [pb-start ccpf-end] auto [pbo-start pb-end] auto [pcc-start pbo-end] auto [pcc-end];
-      grid-template-columns:
-        [content-start]
-        minmax(0px, var(--body-column-left-gutter)) [body-start]
-        minmax(0px, var(--body-left-gutter)) [center-start]
-        minmax(600px, var(--body-width)) [center-end]
-        minmax(0px, var(--body-right-gutter)) [body-end]
-        minmax(0px, var(--body-column-right-gutter))
-        [content-end];
-    }
-    .ccph,
-    .ccpf {
-      grid-template-columns:
-        [content-start]
-        minmax(0px, var(--body-column-left-gutter)) [body-start]
-        minmax(0px, var(--body-left-gutter)) [center-start]
-        minmax(0px, var(--body-width)) [center-end]
-        minmax(0px, var(--body-right-gutter)) [body-end]
-        minmax(0px, var(--body-column-right-gutter))
-        [content-end];
-      display: grid;
-      .en__component--copyblock {
-        grid-column: body;
-      }
-    }
-    .ccph {
-      background-color: #2e2e2c;
-      padding: 1rem 0;
-    }
-    #nav-header {
+    .header {
+      grid-column: cc;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      .navbar-donate {
-        background-color: #f1700b;
-        text-transform: uppercase;
-        font-size: 18px;
-        padding: 10px 50px 10px;
-        color: #ffffff;
-        text-decoration: none;
-        line-height: 38px;
-      }
-    }
-    // From 0 to 1024px
-    @include to(4) {
-      .pbo {
-        display: none;
-      }
-    }
-  }
-  /*
-    * ##########################################################
-    * # RAN Layout 1 (layout-1 center-center)
-    * # The Content Column is centered and Body Column is left aligned inside it.
-    * ##########################################################
-    */
-  &.center-center,
-  &.center-center ~ #EN__RootElement {
-    /* @TODO: Replace with SCSS Variables*/
-    --content-width: 1100px;
-
-    --body-column-left-gutter: 1fr;
-    --body-left-gutter: 140px;
-    --body-width: 820px;
-    --body-right-gutter: 140px;
-    --body-column-right-gutter: 1fr;
-
-    --body-border-radius: 0.4375rem;
-    --body-margin: 2.1875rem;
-
-    --body-padding-sm: 0.8652rem;
-    --body-padding: 1.375rem;
-    --body-padding-lg: 2.1875rem;
-    /* Grid Template Rows - Sets Content Column - Page Footer to 1fr which causes it to be "stickied" to the bottom of the page if the other content is shorter than the page is tall */
-    .en__component--advrow,
-    ~ #EN__RootElement
-      div.pboAdvancedRow__preview
-      .en__component--row.en__component--advrow {
-      grid-template-areas:
-        "ccpph    ccpph   ccpph   ccpph   ccpph"
-        "ccph     ccph    ccph    ccph    ccph"
-        ".        bcoh    bcoh    bcoh    ."
-        ".        .       bph     .       ."
-        ".        .       bh      .       ."
-        ".        .       bb      .       ."
-        ".        .       bbo     .       ."
-        ".        .       btc     .       ."
-        ".        .       bsc     .       ."
-        ".        .       bform   .       ."
-        ".        .       bpf     .       ."
-        ".        .       bf      .       ."
-        ".        bcof    bcof    bcof    ."
-        "ccfs     ccfs    ccfs    ccfs    ccfs"
-        "ccpf     ccpf    ccpf    ccpf    ccpf"
-        "pb       pb      pb      pb      pb"
-        "pbo      pbo     pbo     pbo     pbo"
-        "pcc      pcc     pcc     pcc     pcc";
-      grid-template-rows: [ccpph-start] auto [ccph-start ccpph-end] auto [bcoh-start ccph-end] auto [bph-start bcoh-end] auto [bh-start bph-end] auto [bb-start bh-end] auto [bbo-start bb-end] auto [btc-start bbo-end] auto [bsc-start btc-end] auto [bform-start bsc-end] auto [bpf-start bform-end] auto [bf-start bpf-end] auto [bcof-start bf-end] auto [ccfs-start bcof-end] 1fr [ccpf-start ccfs-end] auto [pb-start ccpf-end] auto [pbo-start pb-end] auto [pcc-start pbo-end] auto [pcc-end];
-      grid-template-columns:
-        [content-start]
-        minmax(0px, var(--body-column-left-gutter)) [body-start]
-        minmax(0px, var(--body-left-gutter)) [center-start]
-        minmax(600px, var(--body-width)) [center-end]
-        minmax(0px, var(--body-right-gutter)) [body-end]
-        minmax(0px, var(--body-column-right-gutter))
-        [content-end];
-    }
-    .ccph,
-    .ccpf {
-      grid-template-columns:
-        [content-start]
-        minmax(0px, var(--body-column-left-gutter)) [body-start]
-        minmax(0px, var(--body-left-gutter)) [center-start]
-        minmax(0px, var(--body-width)) [center-end]
-        minmax(0px, var(--body-right-gutter)) [body-end]
-        minmax(0px, var(--body-column-right-gutter))
-        [content-end];
-      display: grid;
-      .en__component--copyblock {
-        grid-column: body;
-      }
-    }
-    .ccph {
-      background-color: #2e2e2c;
       padding: 1rem 0;
     }
-    #nav-header {
+  }
+}
+
+/*
+* ##########################################################
+* # ENGRID - BODY Column Breakpoint Styling
+* # LAYOUT - Center Left 1 Column - layout-centerleft1col
+* ##########################################################
+*/
+
+/* Sum of all MIN values of the Body Columns */
+@media screen and (min-width: 650px) {
+  /* prettier-ignore */
+  #engrid.layout-centerleft1col .en__component--advrow,
+        #engrid.layout-centerleft1col .en__component--advrow .pseudo-subgrid {
+          /* autoprefixer grid: off */
+          grid-template-columns:
+          [
+            pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
+            cc-start lcc-start]  minmax(0px, 0px)      [lcc-end
+            bc-start lbc-start]  minmax(300px, 425px)  [lbc-end
+            rbc-start]           minmax(300px, 425px)  [rbc-end bc-end
+            rcc-start]           minmax(0px, 250px)    [rcc-end cc-end
+            rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end            
+          ];
+       
+        }
+
+  #engrid.layout-centerleft1col {
+    [class^="body-"] {
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    .body-header {
+      margin-top: 1rem;
+      border-top: 1px solid black;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .body-footer {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid black;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
+    .page-backgroundImage {
+      grid-row: content-header-end / content-footer-end;
+    }
+
+    .page-backgroundImageOverlay {
+      grid-row: content-header-end / content-footer-end;
+      grid-column: rcc-start / pc-end;
+      padding-left: var(--body-padding);
+      padding-right: var(--body-padding);
+    }
+  }
+}
+
+/*
+* ##########################################################
+* # ENGRID - Content Column Breakpoint Styling
+* # LAYOUT - Center Left 1 Column - layout-centerleft1col
+* ##########################################################
+*/
+
+/* Sum of all MAX values of the Body Columns + 1px */
+@media screen and (min-width: 1151px) {
+}
+
+/*
+* ##########################################################
+* # ENGRID - Mobile First Styling
+* # LAYOUT - Center Center 1 Column - layout-centercenter1col
+* ##########################################################
+*/
+
+#engrid.layout-centercenter1col {
+  .page-alert,
+  .body-banner,
+  .body-bannerOverlay,
+  .body-footerOutside,
+  .page-backgroundImageOverlay {
+    display: none;
+  }
+
+  .content-header {
+    background: #2e2e2c;
+
+    .header {
+      grid-column: cc;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      .navbar-donate {
-        background-color: #f1700b;
-        text-transform: uppercase;
-        font-size: 18px;
-        padding: 10px 50px 10px;
-        color: #ffffff;
-        text-decoration: none;
-        line-height: 38px;
-      }
-    }
-    .pb {
-      grid-row: bcoh-start / ccpf-end;
-      grid-column: content / content;
-      z-index: -1;
-    }
-    .pbo {
-      display: none;
-    }
-  }
-}
-body:not(#en__pagebuilder) .layout-1 {
-  .pb {
-    background-position: right top;
-    background-color: #487c0f;
-  }
-  @include from(3) {
-    .ccpf {
-      background: rgba(0, 0, 0, 0.5);
-      background: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(transparent),
-        to(rgba(0, 0, 0, 0.5))
-      );
-      background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
-    }
-  }
-
-  &.left-left {
-    .ccph {
-      display: none;
-    }
-    .pb {
-      grid-row: bcoh-start / ccpf-end;
-      grid-column: content / content;
-      z-index: -1;
-    }
-    .pbo {
-      grid-row: bcoh-start / ccpf-end;
-      grid-column: center-end / content-end;
-      z-index: -1;
-      margin: var(--body-margin);
-      color: #ffffff;
-    }
-  }
-  &.center-left {
-    .pb {
-      grid-row: bcoh-start / ccpf-end;
-      grid-column: content / content;
-      z-index: -1;
-    }
-    .pbo {
-      grid-row: bcoh-start / ccpf-end;
-      grid-column: center-end / content-end;
-      z-index: -1;
-      margin: var(--body-margin);
-      color: #ffffff;
+      padding: 1rem 0;
     }
   }
 }
 
-/* @TODO Probably a better place to put this */
-body:not(#en__pagebuilder) .layout-1.center-left .pb,
-body:not(#en__pagebuilder) .layout-1.center-center .pb {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  background-size: cover !important;
-  background-position: initial !important;
-  background-attachment: initial !important;
+/*
+* ##########################################################
+* # ENGRID - BODY Column Breakpoint Styling
+* # LAYOUT - Center Center 1 Column - layout-centercenter1col
+* ##########################################################
+*/
+
+/* Sum of all MIN values of the Body Columns */
+@media screen and (min-width: 550px) {
+  /* prettier-ignore */
+  #engrid.layout-centercenter1col .en__component--advrow,
+        #engrid.layout-centercenter1col .en__component--advrow .pseudo-subgrid {
+          /* autoprefixer grid: off */
+          grid-template-columns:
+          [
+            pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
+            cc-start lcc-start]  minmax(0px, 250px)    [lcc-end
+            bc-start lbc-start]  minmax(250px, 250px)  [lbc-end
+            rbc-start]           minmax(250px, 250px)  [rbc-end bc-end
+            rcc-start]           minmax(0px, 250px)    [rcc-end cc-end
+            rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end            
+          ];
+       
+        }
+
+  #engrid.layout-centercenter1col {
+    [class^="body-"] {
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    .body-header {
+      margin-top: 1rem;
+      border-top: 1px solid black;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .body-footer {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid black;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  body:not(#en__pagebuilder)
+    #engrid.layout-centercenter1col
+    .page-backgroundImage {
+    grid-row: content-header-end / content-footer-end;
+  }
+}
+
+/*
+* ##########################################################
+* # ENGRID - Content Column Breakpoint Styling
+* # LAYOUT - Center Center 1 Column - layout-centercenter1col
+* ##########################################################
+*/
+
+/* Sum of all MAX values of the Body Columns + 1px */
+@media screen and (min-width: 1051px) {
+}
+
+/*
+* ##########################################################
+* # ENGRID - Mobile First Styling
+* # LAYOUT - Center Center 2 Column - layout-centercenter2col
+* ##########################################################
+*/
+
+#engrid.layout-centercenter2col {
+  .page-alert,
+  .body-headerOutside,
+  .body-banner,
+  .body-bannerOverlay,
+  .body-footerOutside,
+  .page-backgroundImageOverlay {
+    display: none;
+  }
+
+  .content-header {
+    background: #2e2e2c;
+
+    .header {
+      grid-column: cc;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+  }
+}
+
+/*
+* ##########################################################
+* # ENGRID - BODY Column Breakpoint Styling
+* # LAYOUT - Center Center 2 Column - layout-centercenter2col
+* ##########################################################
+*/
+
+/* Sum of all MIN values of the Body Columns */
+@media screen and (min-width: 750px) {
+  /* prettier-ignore */
+  #engrid.layout-centercenter2col .en__component--advrow,
+        #engrid.layout-centercenter2col .en__component--advrow .pseudo-subgrid {
+          /* autoprefixer grid: off */
+          grid-template-columns:
+          [
+            pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
+            cc-start lcc-start]  minmax(0px, 125px)    [lcc-end
+            bc-start lbc-start]  minmax(400px, 425px)  [lbc-end
+            rbc-start]           minmax(300px, 425px)  [rbc-end bc-end
+            rcc-start]           minmax(0px, 125px)    [rcc-end cc-end
+            rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end            
+          ];
+       
+        }
+
+  #engrid.layout-centercenter2col {
+    [class^="body-"] {
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    .body-header {
+      margin-top: 1rem;
+      border-top: 1px solid black;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .body-side {
+      grid-row: body-side-start / body-main-end;
+      grid-column: lbc;
+      border-right: none;
+    }
+
+    .body-main {
+      grid-row: body-side-start / body-main-end;
+      grid-column: rbc;
+      border-left: none;
+    }
+
+    .body-footer {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid black;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  body:not(#en__pagebuilder)
+    #engrid.layout-centercenter2col
+    .page-backgroundImage {
+    grid-row: content-header-end / content-footer-end;
+  }
+}
+
+/*
+* ##########################################################
+* # ENGRID - Content Column Breakpoint Styling
+* # LAYOUT - Center Center 2 Column - layout-centercenter2col
+* ##########################################################
+*/
+
+/* Sum of all MAX values of the Body Columns + 1px */
+@media screen and (min-width: 1201px) {
 }

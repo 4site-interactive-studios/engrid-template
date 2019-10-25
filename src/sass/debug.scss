@@ -1,5 +1,15 @@
 /*
 * ##########################################################
+* # EN PAGE BUILDER
+* ##########################################################
+*/
+
+// #EN__RootElement .pboAdvancedRow__preview .en__component--column.ccpph:before {
+//   content: "Content Column - Page Pre-Header (ccpph)" !important;
+// }
+
+/*
+* ##########################################################
 * # DEBUG: DEBUG BAR and GLOBAL SETTINGS
 * ##########################################################
 */
@@ -42,9 +52,9 @@ body.demo #debug:hover {
 */
 
 body.visualize-layout,
-body.visualize-layout #grid-wrapper-wrapper,
-body.visualize-layout #grid-wrapper,
-body.visualize-layout #grid-wrapper-inner,
+body.visualize-layout #engrid-wrapper,
+body.visualize-layout #engrid,
+body.visualize-layout #engrid-inner,
 body.visualize-layout .en__component--row {
   background: #ffffff !important;
 }
@@ -68,74 +78,213 @@ body.visualize-layout div {
 * ##########################################################
 */
 
-.debug {
-  .ccpph {
-    border: 3px solid #ff9999;
-    background-color: #ffffff;
-  }
-  .ccph {
-    border: 3px solid #ff0000;
-    background-color: #ffffff;
-  }
-  .bcoh {
-    border: 3px solid #ff9633;
-    background-color: transparent;
-  }
-  .bph {
-    border: 3px solid #a0ff99;
-    background-color: transparent;
-  }
-  .bh {
-    border: 3px solid #a0ff99;
-    background-color: #ffffff;
-  }
+// .debug {
+//   .ccpph {
+//     border: 3px solid #ff9999;
+//     background-color: #ffffff;
+//   }
+//   .ccph {
+//     border: 3px solid #ff0000;
+//     background-color: #ffffff;
+//   }
+//   .bcoh {
+//     border: 3px solid #ff9633;
+//     background-color: transparent;
+//   }
+//   .bph {
+//     border: 3px solid #a0ff99;
+//     background-color: transparent;
+//   }
+//   .bh {
+//     border: 3px solid #a0ff99;
+//     background-color: #ffffff;
+//   }
 
-  .bb {
-    border: 3px solid #11ff00;
-    background-color: #ffffff;
-  }
-  .btc {
-    border: 3px solid #009dff;
-    background-color: #ffffff;
-  }
-  .bsc {
-    border: 3px solid #0022ff;
-    background-color: #ffffff;
-  }
-  .bform {
-    border: 3px solid #deccff;
-    background-color: #ffffff;
-  }
-  .bpf {
-    border: 3px solid #bd99ff;
-    background-color: #ffffff;
-  }
-  .bf {
-    border: 3px solid #dd33ff;
-    background-color: #ffffff;
-  }
-  .bcof {
-    border: 3px solid #ff99df;
-    background-color: transparent;
-  }
-  .ccfs {
-    border: 3px solid #000000;
-    background-color: transparent;
-  }
-  .ccpf {
-    border: 3px solid #ff00ae;
-    background-color: transparent;
-  }
-  .pb {
-    border: 3px solid #610000;
-    background-color: #350000;
-  }
-  .pbo {
-    border: 3px solid #196113;
-    background-color: #ffffff;
-  }
-  .pcc {
-    border: 3px solid #003c61;
-    background-color: #ffffff;
-  }
-}
+//   .bb {
+//     border: 3px solid #11ff00;
+//     background-color: #ffffff;
+//   }
+//   .btc {
+//     border: 3px solid #009dff;
+//     background-color: #ffffff;
+//   }
+//   .bsc {
+//     border: 3px solid #0022ff;
+//     background-color: #ffffff;
+//   }
+//   .bform {
+//     border: 3px solid #deccff;
+//     background-color: #ffffff;
+//   }
+//   .bpf {
+//     border: 3px solid #bd99ff;
+//     background-color: #ffffff;
+//   }
+//   .bf {
+//     border: 3px solid #dd33ff;
+//     background-color: #ffffff;
+//   }
+//   .bcof {
+//     border: 3px solid #ff99df;
+//     background-color: transparent;
+//   }
+//   .ccfs {
+//     border: 3px solid #000000;
+//     background-color: transparent;
+//   }
+//   .ccpf {
+//     border: 3px solid #ff00ae;
+//     background-color: transparent;
+//   }
+//   .pb {
+//     border: 3px solid #610000;
+//     background-color: #350000;
+//   }
+//   .pbo {
+//     border: 3px solid #196113;
+//     background-color: #ffffff;
+//   }
+//   .pcc {
+//     border: 3px solid #003c61;
+//     background-color: #ffffff;
+//   }
+// }
+
+      /*
+      * ##########################################################
+      * # ENGRID - Debug Styling
+      * ##########################################################
+      */
+      #debug-bar {
+        margin: 1rem;
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 0.25rem;
+        z-index: 9999;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+
+      .debug-on #debug-bar {
+        opacity: 1;
+      }
+
+      #debug-bar button {
+        margin: 0rem 1rem;
+        padding: 0.25rem 1rem;
+        border: 1px solid #000000;
+        background-color: #ffffff;
+        cursor: pointer;
+      }
+
+      body:not(.debug-on) #engrid .en__component--advrow > div {
+        border-color: transparent;
+      }
+
+      body:not(.debug-on) #engrid .en__component--advrow > div::before,
+      body:not(.debug-on) #engrid .en__component--advrow > div::after {
+        opacity: 0;
+      }
+
+      .debug #engrid .en__component--advrow > div {
+        border-width: 0.1px;
+        border-style: dashed;
+        position: relative;
+      }
+
+      .debug-on #engrid .en__component--advrow > div > *{
+        opacity: .5 !important;
+      }
+
+      .debug #engrid .en__component--advrow > div::before,
+      .debug #engrid .en__component--advrow > div::after {
+        position: absolute;
+        z-index: 9999;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 1);
+        font-family: "Lucida Console", Monaco, monospace;
+        font-size: 0.75rem;
+      }
+
+      // .page-alert::before,
+      // .page-alert::after,
+      // .content-header::before,
+      // .content-header::after,
+      // .body-headerOutside::before,
+      // .body-headerOutside::after,
+      // .body-header::before,
+      // .body-header::after,
+      // .body-banner::before,
+      // .body-banner::after,
+      // .body-bannerOverlay::before,
+      // .body-bannerOverlay::after,
+      // .body-top::before,
+      // .body-top::after,
+      // .body-side::before,
+      // .body-side::after,
+      // .body-main::before,
+      // .body-main::after,
+      // .body-bottom::before,
+      // .body-bottom::after,
+      // .body-footer::before,
+      // .body-footer::after,
+      // .body-footerOutside::before,
+      // .body-footerOutside::after,
+      // .content-footerSpacer::before,
+      // .content-footerSpacer::after,
+      // .content-footer::before,
+      // .content-footer::after,
+      // .page-customCode::before,
+      // .page-customCode::after,
+      // .page-backgroundImage::before,
+      // .page-backgroundImage::after,
+      // .page-backgroundImageOverlay::before,
+      // .page-backgroundImageOverlay::after{
+      //   background-color: #000000;
+      // }
+
+      .debug #engrid .en__component--advrow > div::before {
+        content: "#" attr(id);
+        left: 0px;
+      }
+
+      .debug #engrid .en__component--advrow > div::after {
+        content: "." attr(class);
+        right: 0px;
+        bottom: 0px;
+      }
+
+      .debug .page-alert {
+        border-color: rgba(255, 0, 0, 0.5);
+      }
+
+      .debug .page-alert::before,
+      .debug .page-alert::after {
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+
+      .debug .content-header,
+      .debug .content-footer {
+        border-color: rgba(0, 0, 255, 0.5);
+      }
+
+      .debug .content-header::before,
+      .debug .content-header::after,
+      .debug .content-footer::before,
+      .debug .content-footer::after {
+        background-color: rgba(0, 0, 255, 0.5);
+      }
+
+      .debug .body-headerOutside,
+      .debug .body-headerOutside {
+        border-color: rgba(0, 128, 0, 0.5);
+      }
+
+      .debug .body-headerOutside::before,
+      .debug .body-headerOutside::after,
+      .debug .body-footerOutside::before,
+      .debug .body-footerOutside::after {
+        background-color: rgba(0, 128, 0, 0.5);
+      }

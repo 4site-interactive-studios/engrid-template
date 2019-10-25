@@ -1,28 +1,4 @@
 // SHAME Corner
-
-/* TODO This was not tested, should be revisited post completion to not completely abandon IE11 */
-/* IE 11 Grid Fallback: Displays everyone on section after the other */
-@media all and (-ms-high-contrast: none) {
-  #grid-wrapper .en__component--advrow,
-  #grid-wrapper
-    ~ #EN__RootElement
-    div.pboAdvancedRow__preview
-    .en__component--row.en__component--advrow {
-    display: block !important;
-  }
-
-  #grid-wrapper .en__component--advrow > div,
-  #grid-wrapper
-    ~ #EN__RootElement
-    div.pboAdvancedRow__preview
-    .en__component--row.en__component--advrow
-    > div {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-  }
-}
-
 /* Fix for flexbox sub-pixel rounding causing a 1px jitter in Chrome. */
 /* And because EN inserts a div at the end of rows in the page builder, we needed to use a more permiscuse scope. */
 /* This fix has NOT been tested for regressions in other browsers */
@@ -41,3 +17,84 @@ body:not(#en__pagebuilder) .en__component--column:last-of-type,
 #EN__RootElement .pboAdvancedRow__preview .en__component--column:before {
   padding: 0.5rem 0;
 }
+
+/*
+* ##########################################################
+* # TEMP STYLINGS - TO BE DELETED
+* ##########################################################
+*/
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#engrid input,
+#engrid button {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.simulated-tall {
+  height: 120vh;
+}
+
+#engrid .page-backgroundImage {
+  // background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1874/orangutan-compressed.jpg?v=1571158014000");
+}
+
+body:not(#en__pagebuilder) #engrid {
+  @include from(3) {
+    .content-footer {
+      background: rgba(0, 0, 0, 0.5);
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(transparent),
+        to(rgba(0, 0, 0, 0.5))
+      );
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+    }
+  }
+}
+
+#nav-footer a {
+  text-decoration: none;
+  display: inline-block;
+  padding: var(--body-padding) var(--body-padding-sm);
+  color: #ffffff;
+}
+
+@include to(2) {
+  #nav-footer {
+    padding: var(--body-padding) 0 var(--body-padding) 0;
+    a {
+      display: block;
+      padding: var(--body-padding-sm) var(--body-padding-lg)
+        var(--body-padding-sm) var(--body-padding);
+      color: #78a22e;
+    }
+  }
+}
+
+// body:not(#en__pagebuilder) {
+//   .pb {
+//     background-size: cover;
+//     background-position: center;
+//     background-attachment: fixed;
+//   }
+//   .pcc {
+//     display: none;
+//   }
+// }
+
+// /* @TODO Probably a better place to put this */
+// body:not(#en__pagebuilder) .layout-1.center-left .pb,
+// body:not(#en__pagebuilder) .layout-1.center-center .pb {
+//   position: sticky;
+//   top: 0;
+//   height: 100vh;
+//   background-size: cover !important;
+//   background-position: initial !important;
+//   background-attachment: initial !important;
+// }
