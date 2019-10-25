@@ -200,10 +200,8 @@
 
 #engrid.layout-centercenter1col {
   .page-alert,
-  .body-headerOutside,
   .body-banner,
   .body-bannerOverlay,
-  .body-side,
   .body-footerOutside,
   .page-backgroundImageOverlay {
     display: none;
@@ -233,7 +231,7 @@
 */
 
 /* Sum of all MIN values of the Body Columns */
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 550px) {
   /* prettier-ignore */
   #engrid.layout-centercenter1col .en__component--advrow,
         #engrid.layout-centercenter1col .en__component--advrow .pseudo-subgrid {
@@ -241,10 +239,10 @@
           grid-template-columns:
           [
             pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
-            cc-start lcc-start]  minmax(0px, 150px)    [lcc-end
-            bc-start lbc-start]  minmax(300px, 425px)  [lbc-end
-            rbc-start]           minmax(300px, 425px)  [rbc-end bc-end
-            rcc-start]           minmax(0px, 150px)    [rcc-end cc-end
+            cc-start lcc-start]  minmax(0px, 250px)    [lcc-end
+            bc-start lbc-start]  minmax(250px, 250px)  [lbc-end
+            rbc-start]           minmax(250px, 250px)  [rbc-end bc-end
+            rcc-start]           minmax(0px, 250px)    [rcc-end cc-end
             rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end            
           ];
        
@@ -286,7 +284,7 @@
 */
 
 /* Sum of all MAX values of the Body Columns + 1px */
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1051px) {
 }
 
 /*
