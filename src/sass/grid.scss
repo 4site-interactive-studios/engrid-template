@@ -1,17 +1,21 @@
 /* BASE Layout - IE 11 Fallback for ENGRID's CSS Grid */
-#engrid .en__component--advrow{
+#engrid .en__component--advrow {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 /* @TODO Required otherwise Flexbox collapses in on itself in IE 11 */
-#engrid .en__component--advcolumn{
+#engrid .en__component--advcolumn {
+  -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
 /* BASE Layout - For Browsers that do support CSS Grid */
 @supports (display: grid) {
   #engrid .en__component--advrow,
-  #engrid .en__component--advrow .pseudo-subgrid{
+  #engrid .en__component--advrow .pseudo-subgrid {
     /* autoprefixer grid: off */
     display: grid;
   }
@@ -25,6 +29,73 @@ body:not(#en__pagebuilder)
   max-width: 100vw;
   min-height: 100vh;
 }
+
+#en__pagebuilder .messageOverlay.hidden:only-child::before {
+  font-size: 18px;
+  font-weight: 700;
+  color: #999999;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+#en__pagebuilder .messageOverlay.hidden:only-child {
+  visibility: visible;
+  color: transparent;
+  background-color: transparent;
+}
+
+#en__pagebuilder .messageOverlay.hidden:only-child .messageOverlay__message {
+  display: none;
+}
+
+#en__pagebuilder .messageOverlay.hidden {
+  visibility: hidden;
+  display: block !important;
+}
+
+/* prettier-ignore */
+#en__pagebuilder .page-alert .messageOverlay.hidden:only-child::before { content: "Col 1 - Page Alert"; }
+/* prettier-ignore */
+#en__pagebuilder .content-header .messageOverlay.hidden:only-child::before { content: "Col 2 - Content Header"; }
+/* prettier-ignore */
+#en__pagebuilder .body-headerOutside .messageOverlay.hidden:only-child::before { content: "Col 3 - Body Header Outside"; }
+/* prettier-ignore */
+#en__pagebuilder .body-header .messageOverlay.hidden:only-child::before { content: "Col 4 - Body Header"; }
+/* prettier-ignore */
+#en__pagebuilder .body-banner .messageOverlay.hidden:only-child::before { content: "Col 5 - Body Banner"; }
+/* prettier-ignore */
+#en__pagebuilder .body-bannerOverlay .messageOverlay.hidden:only-child::before { content: "Col 6 - Body Banner Overlay"; }
+/* prettier-ignore */
+#en__pagebuilder .body-top .messageOverlay.hidden:only-child::before { content: "Col 7 - Body Top"; }
+/* prettier-ignore */
+#en__pagebuilder .body-side .messageOverlay.hidden:only-child::before { content: "Col 8 - Body Side"; }
+/* prettier-ignore */
+#en__pagebuilder .body-main .messageOverlay.hidden:only-child::before { content: "Col 9 - Body Main"; }
+/* prettier-ignore */
+#en__pagebuilder .body-bottom .messageOverlay.hidden:only-child::before { content: "Col 10 - Body Bottom"; }
+/* prettier-ignore */
+#en__pagebuilder .body-footer .messageOverlay.hidden:only-child::before { content: "Col 11 - Body Footer"; }
+/* prettier-ignore */
+#en__pagebuilder .body-footerOutside .messageOverlay.hidden:only-child::before { content: "Col 12 - Body Footer Outside"; }
+/* prettier-ignore */
+#en__pagebuilder .content-footerSpacer .messageOverlay.hidden:only-child::before { content: "Col 13 - Content Footer Spacer"; }
+/* prettier-ignore */
+#en__pagebuilder .content-footer .messageOverlay.hidden:only-child::before { content: "Col 14 - Content Footer"; }
+/* prettier-ignore */
+#en__pagebuilder .page-customCode .messageOverlay.hidden:only-child::before { content: "Col 15 - Custom Code"; }
+/* prettier-ignore */
+#en__pagebuilder .page-backgroundImage .messageOverlay.hidden:only-child::before { content: "Col 16 - Page Background Image"; }
+/* prettier-ignore */
+#en__pagebuilder .page-backgroundImageOverlay .messageOverlay.hidden:only-child::before { content: "Col 17 - Page Background Image Overlay"; }
 
 // All Grid Rows
 // .page-alert,
@@ -44,7 +115,7 @@ body:not(#en__pagebuilder)
 // .page-customCode,
 // .page-backgroundImage,
 // .page-backgroundImageOverlay{
-//  tbd:tbd
+//
 // }
 
 /*

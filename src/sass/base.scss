@@ -121,21 +121,14 @@ margin-bottom: 0;
   align-items: center;
 }
 
-#engrid
-  .en__component
-  div[class*="withOther"].en__field
-  .en__field__item {
+#engrid .en__component div[class*="withOther"].en__field .en__field__item {
   margin-bottom: 0.5rem;
   margin-right: 1rem;
 }
 
 /* Pick up the normal spacing on the error element to contunue form pacing continues as expected when in an error state */
-#engrid
-  .en__component
-  .en__field.en__field--select.en__field--validationFailed,
-#engrid
-  .en__component
-  .en__field.en__field--radio.en__field--validationFailed,
+#engrid .en__component .en__field.en__field--select.en__field--validationFailed,
+#engrid .en__component .en__field.en__field--radio.en__field--validationFailed,
 #engrid
   .en__component
   .en__field.en__field--checkbox.en__field--validationFailed,
@@ -228,20 +221,13 @@ body
 }
 
 #engrid .en__component--formblock .en__field:only-child,
-#engrid
-  .en__component--formblock
-  .en__field
-  div.en__field__item:only-child {
+#engrid .en__component--formblock .en__field div.en__field__item:only-child {
   margin-left: 0;
   margin-right: 0;
 }
 
 #engrid .en__component--formblock .row-wrap .en__field,
-#engrid
-  .en__component--formblock
-  .row-wrap
-  .en__field
-  div.en__field__item {
+#engrid .en__component--formblock .row-wrap .en__field div.en__field__item {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -694,15 +680,15 @@ input:not(:-webkit-autofill) {
   order: 3;
 }
 
-#engrid.fancy-errors .en__field--text.en__field--validationFailed input,
-#engrid.fancy-errors
-  .en__field--textarea.en__field--validationFailed
-  textarea,
-#engrid.fancy-errors
-  .en__field--select.en__field--validationFailed
-  select {
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
+#engrid.fancy-errors {
+  .en__field--text.en__field--validationFailed input,
+  .en__field--email.en__field--validationFailed input,
+  .en__field--telephone.en__field--validationFailed input,
+  .en__field--textarea.en__field--validationFailed textarea,
+  .en__field--select.en__field--validationFailed select {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
 }
 
 #engrid.fancy-errors
@@ -765,9 +751,7 @@ input:not(:-webkit-autofill) {
   .en__component
   .en__field.en__field--tripleselect.en__field--validationFailed.has-value
   .en__field__element,
-#engrid.fancy-errors
-  .en__field--validationFailed.has-value
-  .en__field__error {
+#engrid.fancy-errors .en__field--validationFailed.has-value .en__field__error {
   border-color: var(--client-error-red-grayscale);
   background-color: var(--client-error-red-grayscale);
   color: var(--client-white);
@@ -782,11 +766,15 @@ body.error-jump-assist #engrid .en__component .en__field__error {
   order: 1;
 }
 
-#engrid .en__field--text.en__field--validationFailed input,
-#engrid .en__field--textarea.en__field--validationFailed textarea,
-#engrid .en__field--select.en__field--validationFailed select {
-  border-color: var(--client-error-red);
-  background-color: var(--client-error-red-faded);
+#engrid {
+  .en__field--text.en__field--validationFailed input,
+  .en__field--email.en__field--validationFailed input,
+  .en__field--telephone.en__field--validationFailed input,
+  .en__field--textarea.en__field--validationFailed textarea,
+  .en__field--select.en__field--validationFailed select {
+    border-color: var(--client-error-red);
+    background-color: var(--client-error-red-faded);
+  }
 }
 
 #engrid
@@ -824,9 +812,9 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 }
 
 #engrid .en__field--text.en__field--validationFailed .en__field__error,
-#engrid
-  .en__field--textarea.en__field--validationFailed
-  .en__field__error,
+#engrid .en__field--email.en__field--validationFailed .en__field__error,
+#engrid .en__field--telephone.en__field--validationFailed .en__field__error,
+#engrid .en__field--textarea.en__field--validationFailed .en__field__error,
 #engrid .en__field--select.en__field--validationFailed .en__field__error,
 #engrid
   .en__component
@@ -922,25 +910,19 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 
 #engrid.float-labels .en__field--text.has-value label.en__field__label,
 #engrid.float-labels .en__field--text.has-focus label.en__field__label,
-#engrid.float-labels
-  .en__field--textarea.has-value
-  label.en__field__label,
-#engrid.float-labels
-  .en__field--textarea.has-focus
-  label.en__field__label,
+#engrid.float-labels .en__field--textarea.has-value label.en__field__label,
+#engrid.float-labels .en__field--textarea.has-focus label.en__field__label,
 #engrid.float-labels .en__field--select label.en__field__label {
   -webkit-transform: translate(0.5rem, 0px) scale(0.7);
   transform: translate(0.5rem, 0px) scale(0.7);
 }
 
-#engrid.float-labels .en__field--text.en__field--validationFailed label,
-#engrid.float-labels
-  .en__field--textarea.en__field--validationFailed
-  label,
-#engrid.float-labels
-  .en__field--select.en__field--validationFailed
-  label {
-  opacity: 1;
+#engrid.float-labels {
+  .en__field--text.en__field--validationFailed label,
+  .en__field--textarea.en__field--validationFailed label,
+  .en__field--select.en__field--validationFailed label {
+    opacity: 1;
+  }
 }
 
 #engrid.float-labels
@@ -957,12 +939,8 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 }
 
 #engrid.float-labels .en__field--text.en__field--validationNeeded input,
-#engrid.float-labels
-  .en__field--textarea.en__field--validationNeeded
-  textarea,
-#engrid.float-labels
-  .en__field--select.en__field--validationNeeded
-  select {
+#engrid.float-labels .en__field--textarea.en__field--validationNeeded textarea,
+#engrid.float-labels .en__field--select.en__field--validationNeeded select {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
@@ -1046,11 +1024,17 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 #engrid .en__field--validationFailed.has-value textarea,
 #engrid .en__field--select.en__field--validationFailed.has-value select {
   border-color: var(--client-error-red-grayscale);
+  background-color: initial;
 }
 
 .en__component--formblock {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
+}
+
+#engrid .en__field {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 /* Override */
@@ -1081,4 +1065,43 @@ input[name="transaction.donationAmt.other"] {
   color: #ffffff;
   text-decoration: none;
   line-height: 38px;
+}
+
+/* Default Stylings for Common Form Fields */
+/* Can be disabled by added manual-form-layout at the template or component level */
+#engrid div:not(.manual-form-layout) {
+  .en__field--firstName,
+  .en__field--lastName {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+
+  .en__field--lastName {
+    margin-right: 0;
+  }
+
+  .en__field--emailAddress,
+  .en__field--phoneNumber,
+  .en__field--country,
+  .en__field--address1 {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .en__field--city,
+  .en__field--region,
+  .en__field--postcode {
+    -ms-flex-preferred-size: calc(100% / 3);
+    flex-basis: calc(100% / 3);
+  }
+
+  .en__field--city {
+    margin-left: 0;
+  }
+
+  .en__field--postcode {
+    margin-right: 0;
+  }
 }

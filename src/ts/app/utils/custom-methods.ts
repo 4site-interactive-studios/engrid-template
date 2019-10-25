@@ -1,7 +1,5 @@
 export const body = document.body;
-export const enGrid = document.getElementById(
-  "engrid"
-) as HTMLElement;
+export const enGrid = document.getElementById("engrid") as HTMLElement;
 export const enInput = (() => {
   /* @TODO */
   /************************************
@@ -12,7 +10,7 @@ export const enInput = (() => {
   // get DOM elements
   const init = () => {
     const formInput = document.querySelectorAll(
-      ".en__field--text, .en__field--textarea, .en__field--select"
+      ".en__field--text, .en__field--email, .en__field--telephone, .en__field--textarea, .en__field--select"
     );
     const otherInputs = document.querySelectorAll(".en__field__input--other");
     Array.from(formInput).forEach(e => {
@@ -60,8 +58,12 @@ export const enInput = (() => {
 
 export const setBackgroundImages = () => {
   // Find Inline Background Image, hide it, and set it as the background image.
-  let pageBackground = document.querySelector(".page-backgroundImage") as HTMLElement;
-  let pageBackgroundImg = document.querySelector(".page-backgroundImage img") as HTMLImageElement;
+  let pageBackground = document.querySelector(
+    ".page-backgroundImage"
+  ) as HTMLElement;
+  let pageBackgroundImg = document.querySelector(
+    ".page-backgroundImage img"
+  ) as HTMLImageElement;
   let pageBackgroundImgSrc: any = null;
 
   if (pageBackgroundImg) {
@@ -153,16 +155,14 @@ export const bindEvents = (e: Element) => {
 };
 
 export const debugBar = () => {
-
   const debugStart = () => {
     body.classList.add("debug-on");
-  }
-  
+  };
+
   const debugStop = () => {
     body.classList.remove("debug-on");
-  }
-  
-  
+  };
+
   if (
     window.location.search.indexOf("mode=DEMO") > -1 ||
     window.location.href.indexOf("debug") != -1 ||
@@ -171,7 +171,7 @@ export const debugBar = () => {
   ) {
     body.classList.add("debug", "demo");
     body.addEventListener("mouseenter", debugStart);
-    body.addEventListener("mouseleave", debugStop);    
+    body.addEventListener("mouseleave", debugStop);
     if (enGrid) {
       enGrid.insertAdjacentHTML(
         "afterend",
@@ -182,10 +182,8 @@ export const debugBar = () => {
       );
     }
     if (document.getElementById("visualize-toggle")) {
-      const debugTemplateButton = document.getElementById(
-        "visualize-toggle"
-      );
-      if(debugTemplateButton){
+      const debugTemplateButton = document.getElementById("visualize-toggle");
+      if (debugTemplateButton) {
         debugTemplateButton.addEventListener(
           "click",
           function() {
@@ -195,10 +193,10 @@ export const debugBar = () => {
         );
       }
     }
-    
+
     if (document.getElementById("layout-toggle")) {
       const debugTemplateButton = document.getElementById("layout-toggle");
-      if(debugTemplateButton){
+      if (debugTemplateButton) {
         debugTemplateButton.addEventListener(
           "click",
           function() {
@@ -208,7 +206,7 @@ export const debugBar = () => {
         );
       }
     }
-    
+
     const visualizeToggle = () => {
       if (body) {
         if (body.classList.contains("visualize-outline")) {
@@ -225,7 +223,7 @@ export const debugBar = () => {
         }
       }
     };
-    
+
     const layoutToggle = () => {
       if (enGrid) {
         if (enGrid.classList.contains("layout-leftleft1col")) {
@@ -250,14 +248,13 @@ export const debugBar = () => {
         }
       }
     };
-    
+
     const removeClassesByPrefix = (el: HTMLElement, prefix: string) => {
       for (var i = el.classList.length - 1; i >= 0; i--) {
         if (el.classList[i].startsWith(prefix)) {
           el.classList.remove(el.classList[i]);
         }
       }
-    }
-
+    };
   }
 };
