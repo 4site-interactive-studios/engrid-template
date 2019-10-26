@@ -385,6 +385,7 @@ width: 33.333333%;
   position: relative;
   margin-left: 2rem;
   cursor: pointer;
+  // display: inline-block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -988,6 +989,7 @@ input[name="transaction.donationAmt.other"] {
   .en__field--infcountry,
   .en__field--infadd1,
   .en__field--gftrsn,
+  .en__field--paymenttype,
   .en__field--ccnumber {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1098,4 +1100,87 @@ input[name="transaction.donationAmt.other"] {
 // If Float Labels are enabled, we need to hide the Credit Card Expiration Fields otherwise this happnes: https://d.pr/i/1AK8yM */
 .float-labels .en__field--ccexpire .en__field__label {
   display: none;
+}
+
+// BRAND STYLES
+@font-face {
+  font-family: HarmoniaSansStd;
+  src: local(HarmoniaSansStd-Bold),
+    // url(https://apps.4sitestudios.com/clients/ran/templates/new-grid/HarmoniaSansStd-Bold.woff2) format("woff2"),
+      // url(https://apps.4sitestudios.com/clients/ran/templates/new-grid/to/HarmoniaSansStd-Bold.woff) format("woff"),
+      // url(/path/to/HarmoniaSansStd-Bold.ttf) format("truetype");
+      url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-Bold.woff2?v=1572111965000) format("woff2"),
+    url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-Bold.woff?v=1572111964000) format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+#engrid .en__component--copyblock p {
+  font-family: HarmoniaSansStd;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+}
+
+#engrid h1 {
+  font-family: HarmoniaSansStd;
+  font-size: 48px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+#engrid h2 {
+  font-family: HarmoniaSansStd;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+#engrid h3 {
+  font-family: HarmoniaSansStd;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+#engrid label.en__field__label {
+  font-family: HarmoniaSansStd-SemiBd;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.68px;
+}
+
+#engrid .en__field__label--item {
+  font-family: HarmoniaSansStd;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+}
+
+#engrid .highlight {
+  background-color: #f9f003;
+  padding: 0.5rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: -0.5rem;
 }

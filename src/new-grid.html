@@ -2,11 +2,7 @@
   <head>
     <meta name="viewport" content="width=device-width" />
 
-    <link
-      href="https://cdn.jsdelivr.net/combine/npm/normalize.css@8.0.1,npm/sanitize.css@11.0.0"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="https://cdn.jsdelivr.net/combine/npm/normalize.css@8.0.1,npm/sanitize.css@11.0.0" rel="stylesheet" type="text/css" />
 
     <style>
       /*
@@ -89,9 +85,9 @@
         grid-row: content-header;
       }
 
-      #engrid .content-header.pseudo-subgrid > div{
+      #engrid .content-header.pseudo-subgrid > div {
         grid-column: cc;
-      }      
+      }
 
       #engrid .body-headerOutside {
         grid-area: body-headerOutside;
@@ -100,7 +96,6 @@
       }
 
       #engrid .body-header {
-
         grid-area: body-header;
         grid-column: bc;
         grid-row: body-header;
@@ -152,7 +147,7 @@
         grid-area: body-footerOutside;
         grid-column: cc;
         grid-row: body-footerOutside;
-      }            
+      }
 
       #engrid .content-footerSpacer {
         grid-area: content-footerSpacer;
@@ -166,10 +161,10 @@
         grid-row: content-footer;
       }
 
-      #engrid .content-footer.pseudo-subgrid > div{
+      #engrid .content-footer.pseudo-subgrid > div {
         grid-column: cc;
-      }        
-      
+      }
+
       #engrid .page-customCode {
         grid-area: page-customCode;
         grid-column: pc;
@@ -186,7 +181,7 @@
         grid-area: page-backgroundImageOverlay;
         grid-column: pc;
         grid-row: page-backgroundImageOverlay;
-      }  
+      }
 
       #engrid > div {
         display: flex;
@@ -216,7 +211,7 @@
             rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end
           ];
         }
-      }  
+      }
 
       /*
       * ##########################################################
@@ -224,7 +219,7 @@
       * # LAYOUT - Left Left 1 Column - layout-leftleft1col
       * ##########################################################
       */
-      
+
       /* Currently scoped to only be on Debug, but that can be dropped when ready to go live */
       #engrid.layout-leftleft1col .page-alert,
       #engrid.layout-leftleft1col .content-header,
@@ -234,7 +229,7 @@
       #engrid.layout-leftleft1col .body-side,
       #engrid.layout-leftleft1col .body-footerOutside,
       #engrid.layout-leftleft1col .page-customCode,
-      #engrid.layout-leftleft1col .page-backgroundImageOverlay{
+      #engrid.layout-leftleft1col .page-backgroundImageOverlay {
         display: none;
       }
 
@@ -261,24 +256,24 @@
           ];
         }
 
-        #engrid.layout-leftleft1col [class^="body-"]{
+        #engrid.layout-leftleft1col [class^="body-"] {
           border-left: 1px solid black;
           border-right: 1px solid black;
         }
 
-        #engrid.layout-leftleft1col .body-header{
+        #engrid.layout-leftleft1col .body-header {
           margin-top: 1rem;
           border-top: 1px solid black;
           border-top-left-radius: 5px;
-          border-top-right-radius: 5px;    
+          border-top-right-radius: 5px;
         }
 
-        #engrid.layout-leftleft1col .body-footer{        
+        #engrid.layout-leftleft1col .body-footer {
           margin-bottom: 1rem;
-          border-bottom: 1px solid black;;
+          border-bottom: 1px solid black;
           border-bottom-left-radius: 5px;
-          border-bottom-right-radius: 5px;    
-        }        
+          border-bottom-right-radius: 5px;
+        }
 
         #engrid.layout-leftleft1col .page-backgroundImage {
           grid-row: content-header-start / content-footer-end;
@@ -286,7 +281,7 @@
 
         #engrid.layout-leftleft1col .page-backgroundImageOverlay {
           grid-row: content-header-start / content-footer-end;
-        }        
+        }
       }
 
       /*
@@ -315,7 +310,7 @@
       #engrid.layout-centerleft1col .body-side,
       #engrid.layout-centerleft1col .body-footerOutside,
       #engrid.layout-centerleft1col .page-customCode,
-      #engrid.layout-centerleft1col .page-backgroundImageOverlay{
+      #engrid.layout-centerleft1col .page-backgroundImageOverlay {
         display: none;
       }
 
@@ -359,28 +354,28 @@
           ];
         }
 
-        #engrid.layout-centerleft1col .header{
-          grid-column: cc; 
-        }  
+        #engrid.layout-centerleft1col .header {
+          grid-column: cc;
+        }
 
-        #engrid.layout-centerleft1col [class^="body-"]{
+        #engrid.layout-centerleft1col [class^="body-"] {
           border-left: 1px solid black;
           border-right: 1px solid black;
         }
 
-        #engrid.layout-centerleft1col .body-header{
+        #engrid.layout-centerleft1col .body-header {
           margin-top: 1rem;
           border-top: 1px solid black;
           border-top-left-radius: 5px;
-          border-top-right-radius: 5px;    
+          border-top-right-radius: 5px;
         }
 
-        #engrid.layout-centerleft1col .body-footer{        
+        #engrid.layout-centerleft1col .body-footer {
           margin-bottom: 1rem;
-          border-bottom: 1px solid black;;
+          border-bottom: 1px solid black;
           border-bottom-left-radius: 5px;
-          border-bottom-right-radius: 5px;    
-        }  
+          border-bottom-right-radius: 5px;
+        }
 
         #engrid.layout-centerleft1col .page-backgroundImage {
           grid-row: body-headerOutside-start / content-footerOutside-end;
@@ -413,7 +408,7 @@
       #engrid.layout-centercenter1col .body-side,
       #engrid.layout-centercenter1col .body-footerOutside,
       #engrid.layout-centercenter1col .page-customCode,
-      #engrid.layout-centercenter1col .page-backgroundImageOverlay{
+      #engrid.layout-centercenter1col .page-backgroundImageOverlay {
         display: none;
       }
 
@@ -457,28 +452,28 @@
           ];
         }
 
-        #engrid.layout-centercenter1col .header{
-          grid-column: cc; 
+        #engrid.layout-centercenter1col .header {
+          grid-column: cc;
         }
 
-        #engrid.layout-centercenter1col [class^="body-"]{
+        #engrid.layout-centercenter1col [class^="body-"] {
           border-left: 1px solid black;
           border-right: 1px solid black;
         }
 
-        #engrid.layout-centercenter1col .body-header{
+        #engrid.layout-centercenter1col .body-header {
           margin-top: 1rem;
           border-top: 1px solid black;
           border-top-left-radius: 5px;
-          border-top-right-radius: 5px;    
+          border-top-right-radius: 5px;
         }
 
-        #engrid.layout-centercenter1col .body-footer{        
+        #engrid.layout-centercenter1col .body-footer {
           margin-bottom: 1rem;
-          border-bottom: 1px solid black;;
+          border-bottom: 1px solid black;
           border-bottom-left-radius: 5px;
-          border-bottom-right-radius: 5px;    
-        }      
+          border-bottom-right-radius: 5px;
+        }
 
         #engrid.layout-centercenter1col .page-backgroundImage {
           grid-row: body-headerOutside-start / content-footerOutside-end;
@@ -510,7 +505,7 @@
       #engrid.layout-centercenter2col .body-bannerOverlay,
       #engrid.layout-centercenter2col .body-footerOutside,
       #engrid.layout-centercenter2col .page-customCode,
-      #engrid.layout-centercenter2col .page-backgroundImageOverlay{
+      #engrid.layout-centercenter2col .page-backgroundImageOverlay {
         display: none;
       }
 
@@ -555,41 +550,41 @@
           ];
         }
 
-        #engrid.layout-centercenter2col [class^="body-"]{
+        #engrid.layout-centercenter2col [class^="body-"] {
           border-left: 1px solid black;
           border-right: 1px solid black;
         }
 
-        #engrid.layout-centercenter2col .body-header{
+        #engrid.layout-centercenter2col .body-header {
           margin-top: 1rem;
           border-top: 1px solid black;
           border-top-left-radius: 5px;
-          border-top-right-radius: 5px;    
+          border-top-right-radius: 5px;
         }
 
         #engrid.layout-centercenter2col .body-side {
           grid-row: body-side-start / body-main-end;
           grid-column: lbc;
           border-right: none;
-        }    
+        }
 
         #engrid.layout-centercenter2col .body-main {
           grid-row: body-side-start / body-main-end;
           grid-column: rbc;
           border-left: none;
-        }         
+        }
 
-        #engrid.layout-centercenter2col .body-footer{        
+        #engrid.layout-centercenter2col .body-footer {
           margin-bottom: 1rem;
-          border-bottom: 1px solid black;;
+          border-bottom: 1px solid black;
           border-bottom-left-radius: 5px;
-          border-bottom-right-radius: 5px;    
-        }  
+          border-bottom-right-radius: 5px;
+        }
 
         #engrid.layout-centercenter2col .page-backgroundImage {
           grid-row: body-headerOutside-start / content-footerOutside-end;
         }
-      }      
+      }
 
       /*
       * ##########################################################
@@ -614,7 +609,7 @@
       #engrid .body-side,
       #engrid .body-main,
       #engrid .body-bottom,
-      #engrid .body-footer{
+      #engrid .body-footer {
         position: relative;
         background-color: #ffffff;
         padding: 0.5rem 1rem;
@@ -626,7 +621,7 @@
       #engrid .body-side::before,
       #engrid .body-main::before,
       #engrid .body-bottom::before,
-      #engrid .body-footer::before{
+      #engrid .body-footer::before {
         content: "";
         position: absolute;
         top: 0;
@@ -643,10 +638,10 @@
         background-position: top right;
         z-index: -3;
       }
-      
+
       #engrid .page-backgroundImageOverlay {
         z-index: -1;
-      } 
+      }
 
       /*
       * ##########################################################
@@ -689,8 +684,8 @@
         position: relative;
       }
 
-      .debug-on #engrid > div > *{
-        opacity: .5 !important;
+      .debug-on #engrid > div > * {
+        opacity: 0.5 !important;
       }
 
       .debug #engrid > div::before,
@@ -769,13 +764,13 @@
         margin-bottom: 1rem;
       }
 
-      .simulated-tall{
+      .simulated-tall {
         height: 120vh;
-      }    
+      }
 
-       #engrid .page-backgroundImage { 
+      #engrid .page-backgroundImage {
         background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1874/orangutan-compressed.jpg?v=1571158014000");
-       }
+      }
     </style>
 
     <script type="text/javascript">
@@ -790,17 +785,13 @@
         const engrid = document.getElementById("engrid");
 
         if (window.location.href.indexOf("debug") != -1) {
-          body.classList.add("debug");
+          body.classList.add("debug debug-on");
           debugStart();
         }
 
         if (body.classList.contains("debug")) {
-          document
-            .querySelector("body")
-            .addEventListener("mouseenter", debugStart);
-          document
-            .querySelector("body")
-            .addEventListener("mouseleave", debugStop);
+          document.querySelector("body").addEventListener("mouseenter", debugStart);
+          document.querySelector("body").addEventListener("mouseleave", debugStop);
         }
 
         function debugStart() {
@@ -811,11 +802,7 @@
           body.classList.remove("debug-on");
         }
 
-        if (
-          window.location.search.indexOf("mode=DEMO") > -1 ||
-          location.hostname === "localhost" ||
-          location.hostname === "127.0.0.1"
-        ) {
+        if (window.location.search.indexOf("mode=DEMO") > -1 || location.hostname === "localhost" || location.hostname === "127.0.0.1") {
           if (engrid) {
             engrid.insertAdjacentHTML(
               "afterend",
@@ -828,9 +815,7 @@
         }
 
         if (document.getElementById("visualize-toggle")) {
-          const debugTemplateButton = document.getElementById(
-            "visualize-toggle"
-          );
+          const debugTemplateButton = document.getElementById("visualize-toggle");
           debugTemplateButton.addEventListener(
             "click",
             function() {
@@ -861,9 +846,7 @@
             } else if (body) {
               body.classList.add("visualize-outline");
             } else {
-              console.log(
-                "While trying to switch visualizations, something unexpected happen."
-              );
+              console.log("While trying to switch visualizations, something unexpected happen.");
             }
           }
         };
@@ -886,9 +869,7 @@
               removeClassesByPrefix(engrid, "layout-");
               engrid.classList.add("layout-leftleft1col");
             } else {
-              console.log(
-                "While trying to switch layouts, something unexpected happen."
-              );
+              console.log("While trying to switch layouts, something unexpected happen.");
             }
           }
         };
@@ -943,7 +924,7 @@
       </div>
       <div class="body-footerOutside">
         <p>Body Footer Outside</p>
-      </div>                                    
+      </div>
       <div class="content-footerSpacer">
         <p>Content - Footer Spacer</p>
       </div>
@@ -951,7 +932,7 @@
         <div class="footer">
           <div class="content-footer-logo">Content Footer - Logo</div>
           <div class="content-footer-cta">Content Footer - CTA</div>
-        </div>        
+        </div>
       </div>
       <div class="page-backgroundImage">
         <p>Page - Background Image</p>
@@ -961,11 +942,11 @@
       </div>
       <div class="page-customCode">
         <p>Page - Custom Code</p>
-      </div>      
+      </div>
     </div>
   </body>
 
-<!--
+  <!--
   <h1>Section Ipsum</h1>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec arcu
@@ -989,6 +970,4 @@
     />
     <button>Submit</button>
   </form>
--->
-
-</html>
+--></html>

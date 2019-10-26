@@ -145,11 +145,17 @@ export const bindEvents = (e: Element) => {
 
 export const debugBar = () => {
   const debugStart = () => {
-    body.classList.add("debug-on");
+    if (body.classList.contains("debug-enabled")) {
+      body.classList.remove("debug-off");
+      body.classList.add("debug-on");
+    }
   };
 
   const debugStop = () => {
-    body.classList.remove("debug-on");
+    if (body.classList.contains("debug-enabled")) {
+      body.classList.remove("debug-on");
+      body.classList.add("debug-off");
+    }
   };
 
   if (
@@ -158,25 +164,27 @@ export const debugBar = () => {
     location.hostname === "localhost" ||
     location.hostname === "127.0.0.1"
   ) {
-    body.classList.add("debug", "demo");
+    body.classList.add("debug-enabled");
     body.addEventListener("mouseenter", debugStart);
     body.addEventListener("mouseleave", debugStop);
     if (enGrid) {
       enGrid.insertAdjacentHTML(
         "afterend",
         '<span id="debug-bar">' +
-          '<button id="visualize-toggle" type="button">Visualize Layout</button>' +
+          '<button id="debug-toggle" type="button">Debug Toggle</button>' +
           '<button id="layout-toggle" type="button">Layout Toggle</button>' +
           "</span>"
       );
+    } else {
+      body.classList.add("debug-disabled");
     }
-    if (document.getElementById("visualize-toggle")) {
-      const debugTemplateButton = document.getElementById("visualize-toggle");
+    if (document.getElementById("debug-toggle")) {
+      const debugTemplateButton = document.getElementById("debug-toggle");
       if (debugTemplateButton) {
         debugTemplateButton.addEventListener(
           "click",
           function() {
-            visualizeToggle();
+            debugToggle();
           },
           false
         );
@@ -196,15 +204,18 @@ export const debugBar = () => {
       }
     }
 
-    const visualizeToggle = () => {
+    const debugToggle = () => {
       if (body) {
-        if (body.classList.contains("visualize-outline")) {
-          removeClassesByPrefix(body, "visualize-");
-          body.classList.add("visualize-blocks");
-        } else if (body.classList.contains("visualize-blocks")) {
-          removeClassesByPrefix(body, "visualize-");
-        } else if (body) {
-          body.classList.add("visualize-outline");
+        if (body.classList.contains("debug-enabled")) {
+          body.classList.remove("debug-enabled");
+          body.classList.remove("debug-on");
+          body.classList.add("debug-disabled");
+          body.classList.add("debug-off");
+        } else if (body.classList.contains("debug-disabled")) {
+          body.classList.remove("debug-disabled");
+          body.classList.remove("debug-off");
+          body.classList.add("debug-enabled");
+          body.classList.add("debug-on");
         } else {
           console.log("While trying to switch visualizations, something unexpected happen.");
         }
@@ -269,6 +280,7 @@ export const inputPlaceholder = () => {
     // const enFieldInfreg = document.querySelector("#en__field_transaction_infreg") as HTMLSelectElement;
     const enFieldInfpostcd = document.querySelector("#en__field_transaction_infpostcd") as HTMLInputElement;
     const enFieldGftrsn = document.querySelector("#en__field_transaction_gftrsn") as HTMLInputElement;
+    // const enPaymentType = document.querySelector("#en__field_transaction_paymenttype") as HTMLInputElement;
     const enFieldCcnumber = document.querySelector("#en__field_transaction_ccnumber") as HTMLInputElement;
     // const enFieldCcexpire = document.querySelector("#en__field_transaction_ccexpire") as HTMLInputElement;
     const enFieldCcvv = document.querySelector("#en__field_transaction_ccvv") as HTMLInputElement;
@@ -315,32 +327,35 @@ export const inputPlaceholder = () => {
       enFieldHonname.placeholder = "Honoree name";
     }
     if (enFieldInfname) {
-      enFieldInfname.placeholder = "Inform name";
+      enFieldInfname.placeholder = "Recipient name";
     }
     if (enFieldInfemail) {
-      enFieldInfemail.placeholder = "Inform email address";
+      enFieldInfemail.placeholder = "Recipient email address";
     }
     // if (enFieldInfcountry){
     //   enFieldInfcountry.placeholder = "TBD";
     // }
     if (enFieldInfadd1) {
-      enFieldInfadd1.placeholder = "Inform street address";
+      enFieldInfadd1.placeholder = "Recipient street address";
     }
     if (enFieldInfadd2) {
-      enFieldInfadd2.placeholder = "Inform Apt., ste., bldg.";
+      enFieldInfadd2.placeholder = "Recipient Apt., ste., bldg.";
     }
     if (enFieldInfcity) {
-      enFieldInfcity.placeholder = "Inform city";
+      enFieldInfcity.placeholder = "Recipient city";
     }
     // if (enFieldInfreg){
     //   enFieldInfreg.placeholder = "TBD";
     // }
     if (enFieldInfpostcd) {
-      enFieldInfpostcd.placeholder = "Inform post code";
+      enFieldInfpostcd.placeholder = "Recipient postal code";
     }
     if (enFieldGftrsn) {
-      enFieldGftrsn.placeholder = "Reason for you gift";
+      enFieldGftrsn.placeholder = "Reason for your gift";
     }
+    // if (enPaymentType) {
+    //   enPaymentType.placeholder = "TBD";
+    // }
     if (enFieldCcnumber) {
       enFieldCcnumber.placeholder = "•••• •••• •••• ••••";
     }
