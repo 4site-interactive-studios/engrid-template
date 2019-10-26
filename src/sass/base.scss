@@ -963,17 +963,19 @@ input[name="transaction.donationAmt.other"] {
   }
 
   .en__field--firstName,
-  .en__field--lastName {
+  .en__field--lastName,
+  .en__field--ccexpire,
+  .en__field--ccvv,
+  .en__field--bankAccountNumber,
+  .en__field--bankRoutingNumber {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
   }
 
-  .en__field--lastName {
-    padding-right: 0;
-  }
-
+  .en__field--checkbox,
   .en__field--emailAddress,
   .en__field--phoneNumber,
+  .en__field--phoneNumber2,
   .en__field--country,
   .en__field--address1,
   .en__field--honname,
@@ -981,7 +983,8 @@ input[name="transaction.donationAmt.other"] {
   .en__field--infemail,
   .en__field--infcountry,
   .en__field--infadd1,
-  .en__field--gftrsn {
+  .en__field--gftrsn,
+  .en__field--ccnumber {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     padding-left: 0;
@@ -999,12 +1002,15 @@ input[name="transaction.donationAmt.other"] {
   }
 
   .en__field--city,
-  .en__field--infcity {
+  .en__field--infcity,
+  .en__field--ccexpire {
     padding-left: 0;
   }
 
+  .en__field--lastName,
   .en__field--postcode,
-  .en__field--infpostcd {
+  .en__field--infpostcd,
+  .en__field--ccvv {
     padding-right: 0;
   }
 
@@ -1044,5 +1050,41 @@ input[name="transaction.donationAmt.other"] {
     width: 89px;
     -webkit-box-shadow: none;
     box-shadow: none;
+  }
+
+  .en__field--donationAmt.en__field--withOther .en__field__element--radio .en__field__item:nth-last-child(1) {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
+  .en__field--donationAmt.en__field--withOther .en__field__element--radio .en__field__item:nth-last-child(2) {
+    display: none !important;
+  }
+
+  .en__field--donationAmt.en__field--withOther.en__field--validationFailed .en__field__element--radio {
+    border-radius: 0.3rem !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .en__field--donationAmt.en__field--withOther.en__field--validationFailed .en__field__error {
+    border-radius: 0.3rem !important;
+  }
+
+  .en__field--donationAmt.en__field--withOther {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+#engrid.float-labels div:not(.manual-form-layout) {
+  .en__field--country {
+    top: 0.1rem;
+  }
+
+  .en__field--country #en__field_supporter_country {
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    background-position: right -1rem top 0.55rem;
   }
 }
