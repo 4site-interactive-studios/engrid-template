@@ -46,13 +46,7 @@ body:not(#en__pagebuilder) #engrid {
   @include from(3) {
     .content-footer {
       background: rgba(0, 0, 0, 0.5);
-      background: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(transparent),
-        to(rgba(0, 0, 0, 0.5))
-      );
+      background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5)));
       background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
     }
   }
@@ -61,17 +55,16 @@ body:not(#en__pagebuilder) #engrid {
 #nav-footer a {
   text-decoration: none;
   display: inline-block;
-  padding: var(--body-padding) var(--body-padding-sm);
+  padding: $body-padding $body-padding-sm;
   color: #ffffff;
 }
 
 @include to(2) {
   #nav-footer {
-    padding: var(--body-padding) 0 var(--body-padding) 0;
+    padding: $body-padding 0 $body-padding 0;
     a {
       display: block;
-      padding: var(--body-padding-sm) var(--body-padding-lg)
-        var(--body-padding-sm) var(--body-padding);
+      padding: $body-padding-sm $body-padding-lg $body-padding-sm $body-padding;
       color: #78a22e;
     }
   }
@@ -98,3 +91,10 @@ body:not(#en__pagebuilder) #engrid {
 //   background-position: initial !important;
 //   background-attachment: initial !important;
 // }
+
+/* RAN Named their EMAIl Opt-in `email` which causes it to get the generated class `en__field--email` that matches the auto assigned class `en__field--email` given to EMAIL type fields. This fixes that collision of styles. */
+div[for="en__field_supporter_questions_102600"] {
+  position: relative;
+  -webkit-transform: initial;
+          transform: initial;
+}

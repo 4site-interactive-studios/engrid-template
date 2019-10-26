@@ -20,6 +20,46 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 //     background-color: purple;
 //   }
 // }
+
+$client-white: #ffffff;
+$client-black: #000000;
+$client-gray: #8a8a8a;
+$client-light-gray: #cacaca;
+$client-orange: #f1700b;
+
+$client-input-border-radius: 0px;
+$client-input-border-color: #000000;
+$client-input-background-color: transparent;
+
+$client-button-background-color: #000000;
+$client-button-background-color-hover: #f1700b;
+$client-button-background-color-active: #f1700b;
+$client-button-background-color-disabled: #949494;
+$client-button-border-color: #000000;
+$client-button-border-color-active: #f1700b;
+$client-button-border-color-hover: #f1700b;
+$client-button-border-radius: 0px;
+$client-button-font-color: #ffffff;
+$client-button-font-color-active: #ffffff;
+
+$client-submit-button-background-color: #f1700b;
+$client-submit-button-background-color-hover: #f1700b;
+$client-submit-button-border-color: #f1700b;
+$client-submit-button-font-color: #ffffff;
+
+$client-checkmark-background-color: #f1700b;
+$client-checkmark-border-color: #f1700b;
+$client-checkmark-font-color: #ffffff;
+
+$client-error-red: #e74b3c;
+$client-error-red-grayscale: #949494;
+$client-error-red-faded: #fef6f5;
+$client-error-page-group-background: #f4ddda;
+
+$body-padding-sm: 0.8652rem;
+$body-padding: 1.375rem;
+$body-padding-lg: 2.1875rem;
+
 @import "font";
 @import "util";
 @import "base";
@@ -29,37 +69,3 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 @import "debug";
 
 @import "hack";
-
-// @TODO Needs to be migrated to SCSS
-:root {
-    --client-white: #ffffff;
-    --client-black: #000000;
-    --client-gray: #8a8a8a;
-    --client-light-gray: #cacaca;
-  
-    --client-button-background-color: #78a22e;
-    --client-button-background-color-hover: #78a22e;
-    --client-button-background-color-disabled: #1779ba;
-    --client-button-border-color: #78a22e;
-    --client-button-border-radius: 500px;
-    --client-button-font-color: #ffffff;
-  
-    --client-submit-button-background-color: #f1700b;
-    --client-submit-button-background-color-hover: #f1700b;
-    --client-submit-button-border-color: #f1700b;
-    --client-submit-button-font-color: #ffffff;
-
-    --client-checkmark-background-color: #f1700b;
-    --client-checkmark-border-color: #f1700b;
-    --client-checkmark-font-color: #ffffff;
-  
-    --client-error-red: #e74b3c;
-    --client-error-red-grayscale: #949494;
-    --client-error-red-faded: #fef6f5;
-  
-    --client-error-page-group-background: #f4ddda;
-
-    --body-padding-sm: 0.8652rem;
-    --body-padding: 1.375rem;
-    --body-padding-lg: 2.1875rem;    
-  }
