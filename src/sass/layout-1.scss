@@ -199,27 +199,14 @@
 */
 
 #engrid.layout-centercenter1col {
-  .page-alert,
+  .content-header,
+  .body-header,
   .body-banner,
   .body-bannerOverlay,
+  .body-side,
   .body-footerOutside,
   .page-backgroundImageOverlay {
     display: none;
-  }
-
-  .content-header {
-    background: #2e2e2c;
-
-    .header {
-      grid-column: cc;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      padding: 1rem 0;
-    }
   }
 }
 
