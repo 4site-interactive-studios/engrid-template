@@ -7,14 +7,15 @@ export const enInput = (() => {
    ***********************************/
 
   // @TODO Needs to be expanded to bind other EN elements (checkbox, radio) and compound elements (split-text, split-select, select with other input, etc...)
-  // @TODO A "Not" condition is needed for .en__field--email because someone could name their email opt in "Email" and it will get the .en_field--email class generated for it
+  // @TODO A "Not" condition is needed for #en__field_transaction_email because someone could name their email opt in "Email" and it will get the .en_field--email class generated for it
   // get DOM elements
   const init = () => {
     const formInput = document.querySelectorAll(
-      ".en__field--text, .en__field--email:not(.en__field--checkbox), .en__field--telephone, .en__field--textarea, .en__field--select"
+      ".en__field--text, .en__field--email:not(.en__field--checkbox), .en__field--telephone, .en__field--number, .en__field--textarea, .en__field--select, .en__field--checkbox"
     );
     const otherInputs = document.querySelectorAll(".en__field__input--other");
     Array.from(formInput).forEach(e => {
+      // @TODO Currently checkboxes always return as having a value, since they do but they're just not checked. Need to update and account for that, should also do Radio's while we're at it
       let element = e.querySelector("input, textarea, select") as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
       if (element.value) {
         e.classList.add("has-value");
@@ -240,5 +241,120 @@ export const debugBar = () => {
         }
       }
     };
+  }
+};
+
+export const inputPlaceholder = () => {
+  const enGridFloatLabels = document.querySelector("#engrid:not(.float-labels)") as HTMLElement;
+  if (enGridFloatLabels) {
+    const enFieldDonationAmt = document.querySelector(".en__field--donationAmt.en__field--withOther .en__field__input--other") as HTMLInputElement;
+    const enFieldFirstName = document.querySelector("#en__field_supporter_firstName") as HTMLInputElement;
+    const enFieldLastName = document.querySelector("#en__field_supporter_lastName") as HTMLInputElement;
+    const enFieldEmailAddress = document.querySelector("#en__field_supporter_emailAddress") as HTMLInputElement;
+    const enFieldPhoneNumber = document.querySelector("#en__field_supporter_phoneNumber") as HTMLInputElement;
+    const enFieldPhoneNumber2 = document.querySelector("#en__field_supporter_phoneNumber2") as HTMLInputElement;
+    // const enFieldCountry = document.querySelector("#en__field_supporter_country") as HTMLSelectElement;
+    const enFieldAddress1 = document.querySelector("#en__field_supporter_address1") as HTMLInputElement;
+    const enFieldAddress2 = document.querySelector("#en__field_supporter_address2") as HTMLInputElement;
+    const enFieldCity = document.querySelector("#en__field_supporter_city") as HTMLInputElement;
+    // const enFieldRegion = document.querySelector("#en__field_supporter_region") as HTMLSelectElement;
+    const enFieldPostcode = document.querySelector("#en__field_supporter_postcode") as HTMLInputElement;
+    const enFieldHonname = document.querySelector("#en__field_transaction_honname") as HTMLInputElement;
+    const enFieldInfname = document.querySelector("#en__field_transaction_infname") as HTMLInputElement;
+    const enFieldInfemail = document.querySelector("#en__field_transaction_infemail") as HTMLInputElement;
+    // const enFieldInfcountry = document.querySelector("#en__field_transaction_infcountry") as HTMLSelectElement;
+    const enFieldInfadd1 = document.querySelector("#en__field_transaction_infadd1") as HTMLInputElement;
+    const enFieldInfadd2 = document.querySelector("#en__field_transaction_infadd2") as HTMLInputElement;
+    const enFieldInfcity = document.querySelector("#en__field_transaction_infcity") as HTMLInputElement;
+    // const enFieldInfreg = document.querySelector("#en__field_transaction_infreg") as HTMLSelectElement;
+    const enFieldInfpostcd = document.querySelector("#en__field_transaction_infpostcd") as HTMLInputElement;
+    const enFieldGftrsn = document.querySelector("#en__field_transaction_gftrsn") as HTMLInputElement;
+    const enFieldCcnumber = document.querySelector("#en__field_transaction_ccnumber") as HTMLInputElement;
+    // const enFieldCcexpire = document.querySelector("#en__field_transaction_ccexpire") as HTMLInputElement;
+    const enFieldCcvv = document.querySelector("#en__field_transaction_ccvv") as HTMLInputElement;
+    const enFieldBankAccountNumber = document.querySelector("#en__field_supporter_bankAccountNumber") as HTMLInputElement;
+    const enFieldBankRoutingNumber = document.querySelector("#en__field_supporter_bankRoutingNumber") as HTMLInputElement;
+
+    if (enFieldDonationAmt) {
+      enFieldDonationAmt.placeholder = "Other";
+    }
+    if (enFieldFirstName) {
+      enFieldFirstName.placeholder = "First name";
+    }
+    if (enFieldLastName) {
+      enFieldLastName.placeholder = "Last name";
+    }
+    if (enFieldEmailAddress) {
+      enFieldEmailAddress.placeholder = "Email address";
+    }
+    if (enFieldPhoneNumber) {
+      enFieldPhoneNumber.placeholder = "Phone number";
+    }
+    if (enFieldPhoneNumber2) {
+      enFieldPhoneNumber2.placeholder = "Mobile phone number";
+    }
+    // if (enFieldCountry){
+    //   enFieldCountry.placeholder = "Country";
+    // }
+    if (enFieldAddress1) {
+      enFieldAddress1.placeholder = "Street address";
+    }
+    if (enFieldAddress2) {
+      enFieldAddress2.placeholder = "Apt., ste., bldg.";
+    }
+    if (enFieldCity) {
+      enFieldCity.placeholder = "City";
+    }
+    // if (enFieldRegion){
+    //   enFieldRegion.placeholder = "TBD";
+    // }
+    if (enFieldPostcode) {
+      enFieldPostcode.placeholder = "Post code";
+    }
+    if (enFieldHonname) {
+      enFieldHonname.placeholder = "Honoree name";
+    }
+    if (enFieldInfname) {
+      enFieldInfname.placeholder = "Inform name";
+    }
+    if (enFieldInfemail) {
+      enFieldInfemail.placeholder = "Inform email address";
+    }
+    // if (enFieldInfcountry){
+    //   enFieldInfcountry.placeholder = "TBD";
+    // }
+    if (enFieldInfadd1) {
+      enFieldInfadd1.placeholder = "Inform street address";
+    }
+    if (enFieldInfadd2) {
+      enFieldInfadd2.placeholder = "Inform Apt., ste., bldg.";
+    }
+    if (enFieldInfcity) {
+      enFieldInfcity.placeholder = "Inform city";
+    }
+    // if (enFieldInfreg){
+    //   enFieldInfreg.placeholder = "TBD";
+    // }
+    if (enFieldInfpostcd) {
+      enFieldInfpostcd.placeholder = "Inform post code";
+    }
+    if (enFieldGftrsn) {
+      enFieldGftrsn.placeholder = "Reason for you gift";
+    }
+    if (enFieldCcnumber) {
+      enFieldCcnumber.placeholder = "•••• •••• •••• ••••";
+    }
+    // if (enFieldCcexpire) {
+    //   enFieldCcexpire.placeholder = "MM / YY";
+    // }
+    if (enFieldCcvv) {
+      enFieldCcvv.placeholder = "CVV";
+    }
+    if (enFieldBankAccountNumber) {
+      enFieldBankAccountNumber.placeholder = "Bank account number";
+    }
+    if (enFieldBankRoutingNumber) {
+      enFieldBankRoutingNumber.placeholder = "Bank routing number";
+    }
   }
 };

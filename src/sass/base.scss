@@ -639,6 +639,7 @@ input:not(:-webkit-autofill) {
   .en__field--text.en__field--validationFailed input,
   .en__field--email.en__field--validationFailed input,
   .en__field--telephone.en__field--validationFailed input,
+  .en__field--number.en__field--validationFailed input,
   .en__field--textarea.en__field--validationFailed textarea,
   .en__field--select.en__field--validationFailed select {
     border-bottom-right-radius: 0px;
@@ -683,6 +684,7 @@ body.error-jump-assist #engrid .en__component .en__field__error {
   .en__field--text.en__field--validationFailed input,
   .en__field--email.en__field--validationFailed input,
   .en__field--telephone.en__field--validationFailed input,
+  .en__field--number.en__field--validationFailed input,
   .en__field--textarea.en__field--validationFailed textarea,
   .en__field--select.en__field--validationFailed select {
     border-color: $client-error-red;
@@ -706,6 +708,7 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 #engrid .en__field--text.en__field--validationFailed .en__field__error,
 #engrid .en__field--email.en__field--validationFailed .en__field__error,
 #engrid .en__field--telephone.en__field--validationFailed .en__field__error,
+#engrid .en__field--number.en__field--validationFailed .en__field__error,
 #engrid .en__field--textarea.en__field--validationFailed .en__field__error,
 #engrid .en__field--select.en__field--validationFailed .en__field__error,
 #engrid .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__error,
@@ -797,6 +800,7 @@ body.error-jump-assist #engrid .en__component .en__field__error {
   .en__field--text.en__field--validationFailed label,
   .en__field--email.en__field--validationFailed label,
   .en__field--telephone.en__field--validationFailed label,
+  .en__field--number.en__field--validationFailed label,
   .en__field--textarea.en__field--validationFailed label,
   .en__field--select.en__field--validationFailed label {
     opacity: 1;
@@ -1087,4 +1091,11 @@ input[name="transaction.donationAmt.other"] {
     padding: 0.5rem 1.5rem 0.5rem 0.5rem;
     background-position: right -1rem top 0.55rem;
   }
+}
+
+// @TODO Style Mandatory Checboxes https://d.pr/i/KAZKV6
+
+// If Float Labels are enabled, we need to hide the Credit Card Expiration Fields otherwise this happnes: https://d.pr/i/1AK8yM */
+.float-labels .en__field--ccexpire .en__field__label {
+  display: none;
 }

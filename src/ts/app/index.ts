@@ -5,6 +5,7 @@ export const run = () => {
   app.body.classList.add("loaded");
   app.setBackgroundImages();
 
+  app.inputPlaceholder();
   app.enInput.init();
 
   app.debugBar();
