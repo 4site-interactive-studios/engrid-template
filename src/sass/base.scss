@@ -1106,18 +1106,17 @@ input[name="transaction.donationAmt.other"] {
 @font-face {
   font-family: HarmoniaSansStd;
   src: local(HarmoniaSansStd-Bold),
-    // url(https://apps.4sitestudios.com/clients/ran/templates/new-grid/HarmoniaSansStd-Bold.woff2) format("woff2"),
-      // url(https://apps.4sitestudios.com/clients/ran/templates/new-grid/to/HarmoniaSansStd-Bold.woff) format("woff"),
-      // url(/path/to/HarmoniaSansStd-Bold.ttf) format("truetype");
-      url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-Bold.woff2?v=1572111965000) format("woff2"),
-    url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-Bold.woff?v=1572111964000) format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
+    url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-Regular.otf?v=1572290525000) format("otf");
+}
+
+@font-face {
+  font-family: HarmoniaSansStd-SemiBd;
+  src: local(HarmoniaSansStd-Bold),
+    url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-SemiBd.otf?v=1572290535000) format("otf");
 }
 
 #engrid .en__component--copyblock p {
-  font-family: HarmoniaSansStd;
+  // font-family: HarmoniaSansStd;
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
@@ -1127,7 +1126,7 @@ input[name="transaction.donationAmt.other"] {
 }
 
 #engrid h1 {
-  font-family: HarmoniaSansStd;
+  // font-family: HarmoniaSansStd;
   font-size: 48px;
   font-weight: 900;
   font-stretch: normal;
@@ -1138,7 +1137,7 @@ input[name="transaction.donationAmt.other"] {
 }
 
 #engrid h2 {
-  font-family: HarmoniaSansStd;
+  // font-family: HarmoniaSansStd;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -1148,7 +1147,7 @@ input[name="transaction.donationAmt.other"] {
 }
 
 #engrid h3 {
-  font-family: HarmoniaSansStd;
+  // font-family: HarmoniaSansStd;
   font-size: 16px;
   font-weight: bold;
   font-stretch: normal;
@@ -1158,7 +1157,7 @@ input[name="transaction.donationAmt.other"] {
 }
 
 #engrid label.en__field__label {
-  font-family: HarmoniaSansStd-SemiBd;
+  // font-family: HarmoniaSansStd-SemiBd;
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
@@ -1168,7 +1167,7 @@ input[name="transaction.donationAmt.other"] {
 }
 
 #engrid .en__field__label--item {
-  font-family: HarmoniaSansStd;
+  // font-family: HarmoniaSansStd;
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
