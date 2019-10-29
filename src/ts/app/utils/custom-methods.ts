@@ -155,6 +155,10 @@ export const debugBar = () => {
     if (body.classList.contains("debug-enabled")) {
       body.classList.remove("debug-on");
       body.classList.add("debug-off");
+      // const debugBar = (HTMLButtonElement) => document.getElementById("debug-toggle");
+      // if(debugBar){
+      //   debugBar.innerHTML = "Turn Debug On";
+      // }
     }
   };
 
@@ -171,7 +175,7 @@ export const debugBar = () => {
       enGrid.insertAdjacentHTML(
         "afterend",
         '<span id="debug-bar">' +
-          '<button id="debug-toggle" type="button">Debug Toggle</button>' +
+          '<button id="debug-toggle" type="button">Turn Debug Off</button>' +
           '<button id="layout-toggle" type="button">Layout Toggle</button>' +
           "</span>"
       );
@@ -258,7 +262,7 @@ export const debugBar = () => {
 export const inputPlaceholder = () => {
   const enGridFloatLabels = document.querySelector("#engrid:not(.float-labels)") as HTMLElement;
   if (enGridFloatLabels) {
-    const enFieldDonationAmt = document.querySelector(".en__field--donationAmt.en__field--withOther .en__field__input--other") as HTMLInputElement;
+    // const enFieldDonationAmt = document.querySelector(".en__field--donationAmt.en__field--withOther .en__field__input--other") as HTMLInputElement;
     const enFieldFirstName = document.querySelector("#en__field_supporter_firstName") as HTMLInputElement;
     const enFieldLastName = document.querySelector("#en__field_supporter_lastName") as HTMLInputElement;
     const enFieldEmailAddress = document.querySelector("#en__field_supporter_emailAddress") as HTMLInputElement;
@@ -287,9 +291,9 @@ export const inputPlaceholder = () => {
     const enFieldBankAccountNumber = document.querySelector("#en__field_supporter_bankAccountNumber") as HTMLInputElement;
     const enFieldBankRoutingNumber = document.querySelector("#en__field_supporter_bankRoutingNumber") as HTMLInputElement;
 
-    if (enFieldDonationAmt) {
-      enFieldDonationAmt.placeholder = "Other";
-    }
+    // if (enFieldDonationAmt) {
+    //   enFieldDonationAmt.placeholder = "Other";
+    // }
     if (enFieldFirstName) {
       enFieldFirstName.placeholder = "First name";
     }

@@ -54,13 +54,18 @@
 @supports (display: grid) {
   #engrid .en__component--advrow,
   #engrid .en__component--advrow .pseudo-subgrid,
-  #EN__RootElement .pboAdvancedRow__preview .en__component--row.en__component--advrow {
+  #EN__RootElement
+    .pboAdvancedRow__preview
+    .en__component--row.en__component--advrow {
     /* autoprefixer grid: off */
     display: grid;
   }
 }
 
-body:not(#en__pagebuilder) #engrid .en__component--advrow .en__component--advrow {
+body:not(#en__pagebuilder)
+  #engrid
+  .en__component--advrow
+  .en__component--advrow {
   width: 100vw;
   max-width: 100vw;
   min-height: 100vh;
@@ -376,7 +381,15 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow .en__component--advrow
 #engrid .en__component--advrow .body-footer {
   position: relative;
   background-color: #ffffff;
-  padding: 0.5rem 1rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+#engrid .en__component--advrow .body-header {
+  padding-top: 4rem;
+}
+#engrid .en__component--advrow .body-footer {
+  padding-bottom: 4rem;
 }
 
 #engrid .en__component--advrow .body-header::before,
@@ -393,21 +406,26 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow .en__component--advrow
   bottom: 0;
   left: 0;
   z-index: -2;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 body:not(#en__pagebuilder) #engrid .page-customCode {
   display: none;
 }
 
-#engrid .en__component--advrow .page-backgroundImage {
+body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImage {
   background-attachment: fixed;
   background-size: cover;
   background-position: top right;
   z-index: -3;
 }
 
-body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImageOverlay {
+body:not(#en__pagebuilder)
+  #engrid
+  .en__component--advrow
+  .page-backgroundImageOverlay {
   z-index: -1;
 }
