@@ -130,7 +130,13 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   text-align: center
 }
 
-.footer-wrapper {
+.footer-wrapper{
  justify-content: space-between;
  align-items: center;
 }
+
+.footer-badges{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
