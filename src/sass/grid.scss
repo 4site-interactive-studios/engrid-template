@@ -1,3 +1,41 @@
+// Section Names
+// page-alert
+// content-header pseudo-subgrid
+// body-headerOutside
+// body-header
+// body-banner
+// body-bannerOverlay
+// body-top
+// body-side
+// body-main
+// body-bottom
+// body-footer
+// body-footerOutside
+// content-footerSpacer
+// content-footer pseudo-subgrid
+// page-customCode
+// page-backgroundImage
+// page-backgroundImageOverlay
+
+// Section Classes
+// .page-alert,
+// .content-header,
+// .body-headerOutside,
+// .body-header,
+// .body-banner,
+// .body-bannerOverlay,
+// .body-top,
+// .body-side,
+// .body-main,
+// .body-bottom,
+// .body-footer,
+// .body-footerOutside,
+// .content-footerSpacer,
+// .content-footer,
+// .page-customCode,
+// .page-backgroundImage,
+// .page-backgroundImageOverlay
+
 /* BASE Layout - IE 11 Fallback for ENGRID's CSS Grid */
 #engrid .en__component--advrow {
   -webkit-box-orient: vertical;
@@ -15,7 +53,10 @@
 /* BASE Layout - For Browsers that do support CSS Grid */
 @supports (display: grid) {
   #engrid .en__component--advrow,
-  #engrid .en__component--advrow .pseudo-subgrid {
+  #engrid .en__component--advrow .pseudo-subgrid,
+  #EN__RootElement
+    .pboAdvancedRow__preview
+    .en__component--row.en__component--advrow {
     /* autoprefixer grid: off */
     display: grid;
   }
@@ -63,60 +104,39 @@ body:not(#en__pagebuilder)
 }
 
 /* prettier-ignore */
-#en__pagebuilder .page-alert .messageOverlay.hidden:only-child::before { content: "Col 1 - Page Alert"; }
+#en__pagebuilder .page-alert .messageOverlay.hidden:only-child::before { content: "Page Alert"; }
 /* prettier-ignore */
-#en__pagebuilder .content-header .messageOverlay.hidden:only-child::before { content: "Col 2 - Content Header"; }
+#en__pagebuilder .content-header .messageOverlay.hidden:only-child::before { content: "Content Header"; }
 /* prettier-ignore */
-#en__pagebuilder .body-headerOutside .messageOverlay.hidden:only-child::before { content: "Col 3 - Body Header Outside"; }
+#en__pagebuilder .body-headerOutside .messageOverlay.hidden:only-child::before { content: "Body Header Outside"; }
 /* prettier-ignore */
-#en__pagebuilder .body-header .messageOverlay.hidden:only-child::before { content: "Col 4 - Body Header"; }
+#en__pagebuilder .body-header .messageOverlay.hidden:only-child::before { content: "Body Header"; }
 /* prettier-ignore */
-#en__pagebuilder .body-banner .messageOverlay.hidden:only-child::before { content: "Col 5 - Body Banner"; }
+#en__pagebuilder .body-banner .messageOverlay.hidden:only-child::before { content: "Body Banner"; }
 /* prettier-ignore */
-#en__pagebuilder .body-bannerOverlay .messageOverlay.hidden:only-child::before { content: "Col 6 - Body Banner Overlay"; }
+#en__pagebuilder .body-bannerOverlay .messageOverlay.hidden:only-child::before { content: "Body Banner Overlay"; }
 /* prettier-ignore */
-#en__pagebuilder .body-top .messageOverlay.hidden:only-child::before { content: "Col 7 - Body Top"; }
+#en__pagebuilder .body-top .messageOverlay.hidden:only-child::before { content: "Body Top"; }
 /* prettier-ignore */
-#en__pagebuilder .body-side .messageOverlay.hidden:only-child::before { content: "Col 8 - Body Side"; }
+#en__pagebuilder .body-side .messageOverlay.hidden:only-child::before { content: "Body Side"; }
 /* prettier-ignore */
-#en__pagebuilder .body-main .messageOverlay.hidden:only-child::before { content: "Col 9 - Body Main"; }
+#en__pagebuilder .body-main .messageOverlay.hidden:only-child::before { content: "Body Main"; }
 /* prettier-ignore */
-#en__pagebuilder .body-bottom .messageOverlay.hidden:only-child::before { content: "Col 10 - Body Bottom"; }
+#en__pagebuilder .body-bottom .messageOverlay.hidden:only-child::before { content: "Body Bottom"; }
 /* prettier-ignore */
-#en__pagebuilder .body-footer .messageOverlay.hidden:only-child::before { content: "Col 11 - Body Footer"; }
+#en__pagebuilder .body-footer .messageOverlay.hidden:only-child::before { content: "Body Footer"; }
 /* prettier-ignore */
-#en__pagebuilder .body-footerOutside .messageOverlay.hidden:only-child::before { content: "Col 12 - Body Footer Outside"; }
+#en__pagebuilder .body-footerOutside .messageOverlay.hidden:only-child::before { content: "Body Footer Outside"; }
 /* prettier-ignore */
-#en__pagebuilder .content-footerSpacer .messageOverlay.hidden:only-child::before { content: "Col 13 - Content Footer Spacer"; }
+#en__pagebuilder .content-footerSpacer .messageOverlay.hidden:only-child::before { content: "Content Footer Spacer"; }
 /* prettier-ignore */
-#en__pagebuilder .content-footer .messageOverlay.hidden:only-child::before { content: "Col 14 - Content Footer"; }
+#en__pagebuilder .content-footer .messageOverlay.hidden:only-child::before { content: "Content Footer"; }
 /* prettier-ignore */
-#en__pagebuilder .page-customCode .messageOverlay.hidden:only-child::before { content: "Col 15 - Custom Code"; }
+#en__pagebuilder .page-customCode .messageOverlay.hidden:only-child::before { content: "Custom Code"; }
 /* prettier-ignore */
-#en__pagebuilder .page-backgroundImage .messageOverlay.hidden:only-child::before { content: "Col 16 - Page Background Image"; }
+#en__pagebuilder .page-backgroundImage .messageOverlay.hidden:only-child::before { content: "Page Background Image"; }
 /* prettier-ignore */
-#en__pagebuilder .page-backgroundImageOverlay .messageOverlay.hidden:only-child::before { content: "Col 17 - Page Background Image Overlay"; }
-
-// All Grid Rows
-// .page-alert,
-// .content-header,
-// .body-headerOutside,
-// .body-header,
-// .body-banner,
-// .body-bannerOverlay,
-// .body-top,
-// .body-side,
-// .body-main,
-// .body-bottom,
-// .body-footer,
-// .body-footerOutside,
-// .content-footerSpacer,
-// .content-footer,
-// .page-customCode,
-// .page-backgroundImage,
-// .page-backgroundImageOverlay{
-//
-// }
+#en__pagebuilder .page-backgroundImageOverlay .messageOverlay.hidden:only-child::before { content: "Page Background Image Overlay"; }
 
 /*
 * ##########################################################
@@ -134,8 +154,9 @@ body:not(#en__pagebuilder)
 /* The 'pseudo-subgrid' is used to position first generation child content horizontally in page spanning grid components' */
 /* prettier-ignore */
 #engrid .en__component--advrow,
+#engrid .en__component--advrow .pseudo-subgrid,
 #EN__RootElement .en__component--advrow,
-#engrid .en__component--advrow .pseudo-subgrid {
+#EN__RootElement .en__component--advrow .pseudo-subgrid {
   /* autoprefixer grid: off */
   grid-template-columns:
   [
@@ -179,7 +200,7 @@ body:not(#en__pagebuilder)
 
 /* prettier-ignore */
 #engrid .en__component--advrow,
-#EN__RootElement .en__component--advrow {
+#EN__RootElement .pboAdvancedRow__preview .en__component--row.en__component--advrow {
   /* autoprefixer grid: off */
   grid-template-rows:
   [
@@ -360,7 +381,15 @@ body:not(#en__pagebuilder)
 #engrid .en__component--advrow .body-footer {
   position: relative;
   background-color: #ffffff;
-  padding: 0.5rem 1rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+#engrid .en__component--advrow .body-header {
+  padding-top: 4rem;
+}
+#engrid .en__component--advrow .body-footer {
+  padding-bottom: 4rem;
 }
 
 #engrid .en__component--advrow .body-header::before,
@@ -387,7 +416,7 @@ body:not(#en__pagebuilder) #engrid .page-customCode {
   display: none;
 }
 
-#engrid .en__component--advrow .page-backgroundImage {
+body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImage {
   background-attachment: fixed;
   background-size: cover;
   background-position: top right;

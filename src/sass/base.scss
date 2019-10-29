@@ -385,6 +385,7 @@ width: 33.333333%;
   position: relative;
   margin-left: 2rem;
   cursor: pointer;
+  // display: inline-block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -939,9 +940,9 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 }
 
 /* @TODO Hot fixes for demo, should be revisited */
-input[name="transaction.donationAmt.other"] {
-  max-width: 168px !important;
-}
+// input[name="transaction.donationAmt.other"] {
+//   max-width: 168px !important;
+// }
 
 /* Custom Styles */
 
@@ -988,7 +989,9 @@ input[name="transaction.donationAmt.other"] {
   .en__field--infcountry,
   .en__field--infadd1,
   .en__field--gftrsn,
-  .en__field--ccnumber {
+  .en__field--paymenttype,
+  .en__field--ccnumber,
+  .en__field--bankAccountType {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     padding-left: 0;
@@ -1095,7 +1098,15 @@ input[name="transaction.donationAmt.other"] {
 
 // @TODO Style Mandatory Checboxes https://d.pr/i/KAZKV6
 
-// If Float Labels are enabled, we need to hide the Credit Card Expiration Fields otherwise this happnes: https://d.pr/i/1AK8yM */
+// If Float Labels are enabled, we need to hide the Credit Card Expiration Fields otherwise this happens: https://d.pr/i/1AK8yM */
 .float-labels .en__field--ccexpire .en__field__label {
   display: none;
+}
+
+// Remove Number Input Spinners on Other Input Gift Amount field https://stackoverflow.com/a/4298216
+.en__field--donationAmt input[type=number]::-webkit-inner-spin-button,
+.en__field--donationAmt input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none; 
+  margin: 0;
+  -moz-appearance:textfield;
 }

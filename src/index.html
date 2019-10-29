@@ -17,8 +17,33 @@
 
   <!-- Address bar color in mobile browser -->
   <meta name="theme-color" content="#487c0f" />
-
   
+    <!-- Development: Conditionaly Load CSS and JS  -->
+	<style>body:not(#en__pagebuilder).loading{visibility:hidden}body.loading::before{content:"Loading...";visibility:visible;display:flex;width:100vw;height:100vh;align-items:center;justify-content:center;position:fixed}</style>
+     <script> 
+        // set the attributes for mainCSS element  
+        var mainCSS = document.createElement('link'); 
+        mainCSS.rel = 'stylesheet';  
+        mainCSS.type = 'text/css'; 
+        mainCSS.href = 'https://apps.4sitestudios.com/clients/ran/templates/new-grid/main.css';  
+    
+        // set the attributes for mainJS element 
+        var mainJS = document.createElement('script'); 
+        mainJS.type = 'text/javascript'; 
+        mainJS.src = 'https://apps.4sitestudios.com/clients/ran/templates/new-grid/main.js'; 
+    
+        window.addEventListener('DOMContentLoaded', (event) => {
+            var body = document.getElementsByTagName('body')[0];
+            if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+                // Loading in a development environment where CSS and JS are inserted dynamically. No need to load static resources.
+            } else {
+                body.appendChild(mainCSS);
+                body.appendChild(mainJS);
+            }
+        });
+    
+    </script>
+
   <meta name="title" content=""/>
 <meta property="og:title" content=""/>
 <meta property="og:description" content=""/>
@@ -28,20 +53,15 @@
 <meta property="og:url" content="https://act.ran.org/page/14297/donate/1?locale=en-US"/>
 <link rel="image_src" href=""/>
 <link href='https://act.ran.org/ea-demo/frontend/pbAssets/build/css/enPage.css?v=3.54.0' rel='stylesheet' type='text/css' />
-<script>var pageJson = {"clientId":10042,"campaignId":41820,"pageNumber":1,"campaignPageId":14297,"pageCount":2,"pageName":"New Template - Reference Donation Page - centercenter1col (Do Not Use)","giftProcess":false,"locale":"en-US"};</script>
+<script>var pageJson = {"pageCount":2,"pageName":"New Template - Reference Donation Page - centercenter1col (Do Not Use)","giftProcess":false,"campaignPageId":14297,"clientId":10042,"campaignId":41820,"pageNumber":1,"locale":"en-US"};</script>
 <script src='https://act.ran.org/page/14297/campaigner/0/pagedata.js?locale=en-US'></script>
 <script src='https://act.ran.org/ea-demo/frontend/pbAssets/build/js/enPage.js?v=3.54.0'></script>
 </head>
   <body class="loading">
     <div id="engrid" class="layout-debug-OFF layout-centercenter1col float-labels-OFF fancy-errors">
-    <link
-      href="https://apps.4sitestudios.com/clients/ran/templates/new-grid/main.css"
-      rel="stylesheet"
-      type="text/css"
-    />        
-    <!-- Start EN Page Builder --><form method="post" action="https://act.ran.org/page/14297/donate/2" class="en__component en__component--page">
+    <!-- Start EN Page Builder --><form method="post" action="/page/14297/donate/2" class="en__component en__component--page">
 	<input type="hidden" name="hidden" class="en__hiddenFields" value="">
-	<input type="hidden" name="sessionId" value="2883cad2ba6d442aa507e1c533816eec-server50025">
+	<input type="hidden" name="sessionId" value="142a287bab894b949bdddb8cb4e4e29f-server50011">
 	<input type="hidden" name="gatewaykey" value="">
 	<input type="hidden" name="gatewayaccountid" value="">
 	<input type="hidden" name="gatewaymode" value="">
@@ -116,7 +136,7 @@ style="
 
 "
 >
-	<p>Give Monthly and we&#39;ll match your gift 2 times</p>
+	<p class="highlight">Give Monthly and we&#39;ll match your gift 2 times</p>
 
 	
 	
@@ -271,7 +291,43 @@ style="
 
 "
 >
-	<h2>In Honor of Giving</h2>
+	<h2>Give In Honor / In Memoriam</h2>
+
+	
+	
+</div>
+		<div class="en__component en__component--formblock" style="">
+	
+	
+			<div class="en__field en__field--text en__field--153884 en__field--honname en__mandatory">
+	<label for="en__field_transaction_honname" class="en__field__label" style="">Honoree Name</label>
+	<div class="en__field__element en__field__element--text">
+		<input id="en__field_transaction_honname" type="text" class="en__field__input en__field__input--text" name="transaction.honname" value="" />
+	 </div>
+</div>
+			<div class="en__field en__field--textarea en__field--153883 en__field--gftrsn en__mandatory">
+	<label for="en__field_transaction_gftrsn" class="en__field__label" style="">Gift Reason</label>
+	<div class="en__field__element en__field__element--textarea">
+		<textarea id="en__field_transaction_gftrsn" class="en__field__input en__field__input--textarea" name="transaction.gftrsn" maxlength="2000"></textarea>
+	 </div>
+</div>
+	
+	
+	
+</div>
+		<div class="en__component en__component--copyblock form-section-header form-sub-section-header give-in-honor"
+
+style="
+
+
+
+
+
+
+
+"
+>
+	<h3>Recipient Infromation</h3>
 
 	
 	
@@ -279,26 +335,20 @@ style="
 		<div class="en__component en__component--formblock give-in-honor" style="">
 	
 	
-			<div class="en__field en__field--text en__field--153844 en__field--honname en__mandatory">
-	<label for="en__field_transaction_honname" class="en__field__label" style="">Honoree Name</label>
-	<div class="en__field__element en__field__element--text">
-		<input id="en__field_transaction_honname" type="text" class="en__field__input en__field__input--text" name="transaction.honname" value="" />
-	 </div>
-</div>
 			<div class="en__field en__field--text en__field--153848 en__field--infname en__mandatory">
-	<label for="en__field_transaction_infname" class="en__field__label" style="">Inform Name</label>
+	<label for="en__field_transaction_infname" class="en__field__label" style="">Name</label>
 	<div class="en__field__element en__field__element--text">
 		<input id="en__field_transaction_infname" type="text" class="en__field__input en__field__input--text" name="transaction.infname" value="" />
 	 </div>
 </div>
 			<div class="en__field en__field--email en__field--153845 en__field--infemail en__mandatory">
-	<label for="en__field_transaction_infemail" class="en__field__label" style="">Inform Email</label>
+	<label for="en__field_transaction_infemail" class="en__field__label" style="">Email</label>
 	<div class="en__field__element en__field__element--email">
 		<input id="en__field_transaction_infemail" type="email" autocomplete="email" class="en__field__input en__field__input--email" name="transaction.infemail" value="" />
 	 </div>
 </div>
 			<div class="en__field en__field--select en__field--153846 en__field--infcountry en__mandatory">
-	<label for="en__field_transaction_infcountry" class="en__field__label" style="">Inform Country</label>
+	<label for="en__field_transaction_infcountry" class="en__field__label" style="">Country</label>
 		<div class="en__field__element en__field__element--select">
 		<select id="en__field_transaction_infcountry" class="en__field__input en__field__input--select" name="transaction.infcountry" >
 			<option selected="selected" value="US">United States</option>
@@ -554,23 +604,22 @@ style="
 	</div>
 </div>
 			<div class="en__field en__field--text en__field--153847 en__field--infadd1 en__mandatory">
-	<label for="en__field_transaction_infadd1" class="en__field__label" style="">Inform Address</label>
+	<label for="en__field_transaction_infadd1" class="en__field__label" style="">Address</label>
 	<div class="en__field__element en__field__element--text">
 		<input id="en__field_transaction_infadd1" type="text" class="en__field__input en__field__input--text" name="transaction.infadd1" value="" />
 	 </div>
 </div>
 			<div class="en__field en__field--text en__field--153849 en__field--infcity en__mandatory">
-	<label for="en__field_transaction_infcity" class="en__field__label" style="">Inform City</label>
+	<label for="en__field_transaction_infcity" class="en__field__label" style="">City</label>
 	<div class="en__field__element en__field__element--text">
 		<input id="en__field_transaction_infcity" type="text" class="en__field__input en__field__input--text" name="transaction.infcity" value="" />
 	 </div>
 </div>
 			<div class="en__field en__field--select en__field--153851 en__field--infreg en__mandatory">
-	<label for="en__field_transaction_infreg" class="en__field__label" style="">Inform State or Province</label>
+	<label for="en__field_transaction_infreg" class="en__field__label" style="">State</label>
 		<div class="en__field__element en__field__element--select">
 		<select id="en__field_transaction_infreg" class="en__field__input en__field__input--select" name="transaction.infreg" >
-			<option value="">Select State or Province</option>
-			<option value="">---</option>
+			<option selected="selected" value="">Select State</option>
 			<option value="AL">Alabama</option>
 			<option value="AK">Alaska</option>
 			<option value="AZ">Arizona</option>
@@ -641,15 +690,9 @@ style="
 	</div>
 </div>
 			<div class="en__field en__field--text en__field--153850 en__field--infpostcd en__mandatory">
-	<label for="en__field_transaction_infpostcd" class="en__field__label" style="">Inform Postal Code</label>
+	<label for="en__field_transaction_infpostcd" class="en__field__label" style="">Postal Code</label>
 	<div class="en__field__element en__field__element--text">
 		<input id="en__field_transaction_infpostcd" type="text" class="en__field__input en__field__input--text" name="transaction.infpostcd" value="" />
-	 </div>
-</div>
-			<div class="en__field en__field--textarea en__field--153854 en__field--gftrsn en__mandatory">
-	<label for="en__field_transaction_gftrsn" class="en__field__label" style="">Gift Reason</label>
-	<div class="en__field__element en__field__element--textarea">
-		<textarea id="en__field_transaction_gftrsn" class="en__field__input en__field__input--textarea" name="transaction.gftrsn" maxlength="2000"></textarea>
 	 </div>
 </div>
 	
@@ -944,10 +987,10 @@ style="
 	 </div>
 </div>
 			<div class="en__field en__field--select en__field--153556 en__field--region">
-	<label for="en__field_supporter_region" class="en__field__label" style="">State or Province</label>
+	<label for="en__field_supporter_region" class="en__field__label" style="">State</label>
 		<div class="en__field__element en__field__element--select">
 		<select id="en__field_supporter_region" class="en__field__input en__field__input--select" name="supporter.region" >
-			<option selected="selected" value="">Select State or Province</option>
+			<option selected="selected" value="Select State">Select State</option>
 			<option value="AL">Alabama</option>
 			<option value="AK">Alaska</option>
 			<option value="AZ">Arizona</option>
@@ -1043,6 +1086,17 @@ style="
 		<div class="en__component en__component--formblock give-by-card" style="">
 	
 	
+			<div class="en__field en__field--select en__field--153886 en__field--paymenttype en__mandatory">
+	<label for="en__field_transaction_paymenttype" class="en__field__label" style="">Card Type</label>
+		<div class="en__field__element en__field__element--select">
+		<select id="en__field_transaction_paymenttype" class="en__field__input en__field__input--select" name="transaction.paymenttype" >
+			<option selected="selected" value="VI">Visa</option>
+			<option value="MC">MasterCard</option>
+			<option value="DI">Discover</option>
+			<option value="AX">Amex</option>
+		</select>
+	</div>
+</div>
 			<div class="en__field en__field--telephone en__field--153870 en__field--ccnumber en__mandatory">
 	<label for="en__field_transaction_ccnumber" class="en__field__label" style="">Card Number</label>
 	<div class="en__field__element en__field__element--telephone">
@@ -1252,7 +1306,7 @@ style="
 </div>
 </form>     <!-- End EN Page Builder -->
      </div>
-   <script async type="text/javascript" src="https://apps.4sitestudios.com/clients/ran/templates/new-grid/main.js"></script>
+     
    </body>
 </html>
 <!-- New Template - Reference Donation Page - centercenter1col (Do Not Use):14297:41820:10042 -->

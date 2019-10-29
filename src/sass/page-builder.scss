@@ -1,4 +1,120 @@
 // Styles Related to the Page-Builder
+
+/*
+* ##########################################################
+* # ENGRID - Mobile First Styling
+* # LAYOUT - Page Builder Preview Layout
+* ##########################################################
+*/
+
+// Vertically center the labels
+#EN__RootElement .pboAdvancedRow__preview .en__component--column div {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.page-alert::before {
+  content: "Page Alert";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.content-header::before {
+  content: "Content Header";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-headerOutside::before {
+  content: "Body Header Outside";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-header::before {
+  content: "Body Header";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-banner::before {
+  content: "Body Banner";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-bannerOverlay::before {
+  content: "Body Banner Overlay";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-top::before {
+  content: "Body Top";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-side::before {
+  content: "Body Side";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-main::before {
+  content: "Body Main";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-bottom::before {
+  content: "Body Bottom";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-footer::before {
+  content: "Body Footer";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-footerOutside::before {
+  content: "Body Footer Outside";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.content-footerSpacer::before {
+  content: "Content Footer Spacer";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.content-footer::before {
+  content: "Content Footer";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.page-customCode::before {
+  content: "Page Custom Code";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.page-backgroundImage::before {
+  content: "Page Background Image";
+}
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.page-backgroundImageOverlay::before {
+  content: "Page Background Image Overlay";
+}
+
+/*
+* ##########################################################
+* # ENGRID - BODY Column Breakpoint Styling
+* # LAYOUT - Page Builder Preview Layout
+* ##########################################################
+*/
+
+/* Sum of all MIN values of the Body Columns */
+@media screen and (min-width: 700px) {
+  /* prettier-ignore */
+  #EN__RootElement .pboAdvancedRow__preview .en__component--advrow,
+  #EN__RootElement .pboAdvancedRow__preview .en__component--advrow .pseudo-subgrid{
+    /* autoprefixer grid: off */
+    grid-template-columns:
+    [
+      pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
+      cc-start lcc-start]  minmax(25px, 1fr)     [lcc-end
+      bc-start lbc-start]  minmax(300px, 300px)  [lbc-end
+      rbc-start]           minmax(300px, 300px)  [rbc-end bc-end
+      rcc-start]           minmax(25px, 1fr)     [rcc-end cc-end
+      rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end
+    ];
+  }
+}
+
+/*
+* ##########################################################
+* # ENGRID - Content Column Breakpoint Styling
+* # LAYOUT - Page Builder Preview Layout
+* ##########################################################
+*/
+
+/* Sum of all MAX values of the Body Columns + 1px */
+@media screen and (min-width: 701px) {
+}
+
+/*
+* ##########################################################
+* # LAYOUT - Page Builder Custom Styles
+* ##########################################################
+*/
+
+// Styles Related to the Page-Builder
 #en__pagebuilder {
   /* When in page builder we want to center the content area on the page and must reduce it by 50px to make it visible because of the sidebar */
   width: calc(100% - 51px);
@@ -11,7 +127,7 @@
   }
 
   /* Adjust the editable space in the Page Editor so that the content can occupy as much space as possible */
-  .en__container {
+  .pboAdvancedRow__preview .en__container {
     margin-left: 1px !important;
     margin-right: 1px !important;
     border: none !important;
@@ -19,64 +135,33 @@
   }
 
   /* Page builder adds a hidden div to the bottom of the layout, this can result in undesired spacing */
-  .en__component--row:nth-last-child(2) {
+  .pboAdvancedRow__preview .en__component--row:nth-last-child(2) {
     padding-bottom: 0px;
   }
 
-  //   Grid Start
-  // :not(.pboAdvancedRow__preview) .ccfs::before,
-  // :not(.pboAdvancedRow__preview) .pb::before,
-  // :not(.pboAdvancedRow__preview) .pbo::before,
-  // :not(.pboAdvancedRow__preview) .pcc::before {
-  //   display: -webkit-box;
-  //   display: -ms-flexbox;
-  //   display: flex;
-  //   font-weight: bold;
-  //   color: #ce4f60;
-  //   position: static;
-  //   line-height: 25px;
-  //   opacity: 0.5;
-  //   -webkit-box-pack: center;
-  //   -ms-flex-pack: center;
-  //   justify-content: center;
-  //   height: 0;
-  // }
+  #EN__RootElement .pboAdvancedRow__preview .en__component--column:before
 
-  // :not(.pboAdvancedRow__preview) .ccfs::before {
-  //   content: "CONTENT COLUMN - FOOTER SPACER";
-  // }
-
-  // :not(.pboAdvancedRow__preview) .pb::before {
-  //   content: "PAGE - BACKGROUND IMAGE";
-  // }
-  // :not(.pboAdvancedRow__preview) .pbo::before {
-  //   content: "PAGE - BACKGROUND IMAGE OVERLAY";
-  // }
-  // :not(.pboAdvancedRow__preview) .pcc::before {
-  //   content: "PAGE - CUSTOM CODE";
-  // }
-  
-  // @TODO Might need to be moved into main.css
+  // @TODO Might need to be moved into main.pboAdvancedRow__preview .css
   #engrid {
-    .en__component--advrow {
+    .pboAdvancedRow__preview .en__component--advrow {
       width: 100%;
     }
   }
 
-  .hide {
+  .pboAdvancedRow__preview .hide {
     background-color: #ff00001a !important;
-    &.en__component--column {
+    &.pboAdvancedRow__preview .en__component--column {
       outline-color: #ff0000 !important;
       z-index: 1;
     }
   }
 
-  .page-backgroundImage,
-  .page-backgroundImageOverlay{
+  .pboAdvancedRow__preview .page-backgroundImage,
+  .pboAdvancedRow__preview .page-backgroundImageOverlay {
     min-height: 350px !important;
   }
 
-  .page-backgroundImage img {
+  .pboAdvancedRow__preview .page-backgroundImage img {
     width: auto !important;
     height: 350px !important;
     margin: 0 auto;

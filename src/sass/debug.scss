@@ -28,7 +28,7 @@
 //   transition: none !important;
 // }
 
-body.demo #debug {
+body.debug #debug {
   display: block;
   position: fixed;
   top: 0;
@@ -37,13 +37,13 @@ body.demo #debug {
   z-index: 9999;
   opacity: 0.75;
   opacity: 0;
-  transition: opacity 0.3s;  
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
-body.demo #debug:hover {
+body.debug #debug:hover {
   opacity: 1;
 }
-
 
 /*
 * ##########################################################
@@ -150,141 +150,143 @@ body.visualize-layout div {
 //   }
 // }
 
-      /*
+/*
       * ##########################################################
       * # ENGRID - Debug Styling
       * ##########################################################
       */
-      #debug-bar {
-        margin: 1rem;
-        display: block;
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding: 0.25rem;
-        z-index: 9999;
-        opacity: 0;
-        transition: opacity 0.2s;
-      }
+#debug-bar {
+  margin: 1rem;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0.25rem;
+  z-index: 9999;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
 
-      .debug-on #debug-bar {
-        opacity: 1;
-      }
+.debug-on #debug-bar,
+.debug-disabled #debug-bar {
+  opacity: 1;
+}
 
-      #debug-bar button {
-        margin: 0rem 1rem;
-        padding: 0.25rem 1rem;
-        border: 1px solid #000000;
-        background-color: #ffffff;
-        cursor: pointer;
-      }
+#debug-bar button {
+  margin: 0rem 1rem;
+  padding: 0.25rem 1rem;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  cursor: pointer;
+}
 
-      body:not(.debug-on) #engrid .en__component--advrow > div {
-        border-color: transparent;
-      }
+body:not(.debug-on) #engrid .en__component--advrow > div {
+  border-color: transparent;
+}
 
-      body:not(.debug-on) #engrid .en__component--advrow > div::before,
-      body:not(.debug-on) #engrid .en__component--advrow > div::after {
-        opacity: 0;
-      }
+body:not(.debug-on) #engrid .en__component--advrow > div::before,
+body:not(.debug-on) #engrid .en__component--advrow > div::after {
+  opacity: 0;
+}
 
-      .debug #engrid .en__component--advrow > div {
-        border-width: 0.1px;
-        border-style: dashed;
-        position: relative;
-      }
+.debug #engrid .en__component--advrow > div {
+  border-width: 0.1px;
+  border-style: dashed;
+  position: relative;
+}
 
-      .debug-on #engrid .en__component--advrow > div > *{
-        opacity: .5 !important;
-      }
+.debug-enabled.debug-on #engrid .en__component--advrow > div > * {
+  opacity: 0.5 !important;
+}
 
-      .debug #engrid .en__component--advrow > div::before,
-      .debug #engrid .en__component--advrow > div::after {
-        position: absolute;
-        z-index: 9999;
-        font-weight: bold;
-        color: rgba(255, 255, 255, 1);
-        font-family: "Lucida Console", Monaco, monospace;
-        font-size: 0.75rem;
-      }
+.debug #engrid .en__component--advrow > div::before,
+.debug #engrid .en__component--advrow > div::after {
+  position: absolute;
+  z-index: 9999;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 0.75rem;
+}
 
-      // .page-alert::before,
-      // .page-alert::after,
-      // .content-header::before,
-      // .content-header::after,
-      // .body-headerOutside::before,
-      // .body-headerOutside::after,
-      // .body-header::before,
-      // .body-header::after,
-      // .body-banner::before,
-      // .body-banner::after,
-      // .body-bannerOverlay::before,
-      // .body-bannerOverlay::after,
-      // .body-top::before,
-      // .body-top::after,
-      // .body-side::before,
-      // .body-side::after,
-      // .body-main::before,
-      // .body-main::after,
-      // .body-bottom::before,
-      // .body-bottom::after,
-      // .body-footer::before,
-      // .body-footer::after,
-      // .body-footerOutside::before,
-      // .body-footerOutside::after,
-      // .content-footerSpacer::before,
-      // .content-footerSpacer::after,
-      // .content-footer::before,
-      // .content-footer::after,
-      // .page-customCode::before,
-      // .page-customCode::after,
-      // .page-backgroundImage::before,
-      // .page-backgroundImage::after,
-      // .page-backgroundImageOverlay::before,
-      // .page-backgroundImageOverlay::after{
-      //   background-color: #000000;
-      // }
+// .page-alert::before,
+// .page-alert::after,
+// .content-header::before,
+// .content-header::after,
+// .body-headerOutside::before,
+// .body-headerOutside::after,
+// .body-header::before,
+// .body-header::after,
+// .body-banner::before,
+// .body-banner::after,
+// .body-bannerOverlay::before,
+// .body-bannerOverlay::after,
+// .body-top::before,
+// .body-top::after,
+// .body-side::before,
+// .body-side::after,
+// .body-main::before,
+// .body-main::after,
+// .body-bottom::before,
+// .body-bottom::after,
+// .body-footer::before,
+// .body-footer::after,
+// .body-footerOutside::before,
+// .body-footerOutside::after,
+// .content-footerSpacer::before,
+// .content-footerSpacer::after,
+// .content-footer::before,
+// .content-footer::after,
+// .page-customCode::before,
+// .page-customCode::after,
+// .page-backgroundImage::before,
+// .page-backgroundImage::after,
+// .page-backgroundImageOverlay::before,
+// .page-backgroundImageOverlay::after{
+//   background-color: #000000;
+// }
 
-      .debug #engrid .en__component--advrow > div::before {
-        content: "#" attr(id);
-        left: 0px;
-      }
+.debug #engrid .en__component--advrow > div::before {
+  content: "#" attr(id);
+  left: 0px;
+}
 
-      .debug #engrid .en__component--advrow > div::after {
-        content: "." attr(class);
-        right: 0px;
-        bottom: 0px;
-      }
+.debug #engrid .en__component--advrow > div::after {
+  content: "." attr(class);
+  right: 0px;
+  bottom: 0px;
+}
 
-      .debug .page-alert {
-        border-color: rgba(255, 0, 0, 0.5);
-      }
+.debug .page-alert {
+  border-color: rgba(255, 0, 0, 0.5);
+}
 
-      .debug .page-alert::before,
-      .debug .page-alert::after {
-        background-color: rgba(255, 0, 0, 0.5);
-      }
+.debug .page-alert::before,
+.debug .page-alert::after {
+  background-color: rgba(255, 0, 0, 0.5);
+}
 
-      .debug .content-header,
-      .debug .content-footer {
-        border-color: rgba(0, 0, 255, 0.5);
-      }
+.debug .content-header,
+.debug .content-footer {
+  border-color: rgba(0, 0, 255, 0.5);
+}
 
-      .debug .content-header::before,
-      .debug .content-header::after,
-      .debug .content-footer::before,
-      .debug .content-footer::after {
-        background-color: rgba(0, 0, 255, 0.5);
-      }
+.debug .content-header::before,
+.debug .content-header::after,
+.debug .content-footer::before,
+.debug .content-footer::after {
+  background-color: rgba(0, 0, 255, 0.5);
+}
 
-      .debug .body-headerOutside,
-      .debug .body-headerOutside {
-        border-color: rgba(0, 128, 0, 0.5);
-      }
+.debug .body-headerOutside,
+.debug .body-headerOutside {
+  border-color: rgba(0, 128, 0, 0.5);
+}
 
-      .debug .body-headerOutside::before,
-      .debug .body-headerOutside::after,
-      .debug .body-footerOutside::before,
-      .debug .body-footerOutside::after {
-        background-color: rgba(0, 128, 0, 0.5);
-      }
+.debug .body-headerOutside::before,
+.debug .body-headerOutside::after,
+.debug .body-footerOutside::before,
+.debug .body-footerOutside::after {
+  background-color: rgba(0, 128, 0, 0.5);
+}
