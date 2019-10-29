@@ -220,12 +220,16 @@
       rbc-start]           minmax(calc(50vw - 15px), 250px)  [rbc-end bc-end
       rcc-start]           minmax(15px, 1fr)                 [rcc-end cc-end
       rpc-start]           minmax(0px, 1fr)                  [rpc-end pc-end        
-    ]; 
+    ];
   }
 
   .body-headerOutside {
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .content-footer.pseudo-subgrid > div{
+    grid-column: bc;
   }
 }
 
@@ -293,6 +297,10 @@ body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
     }
+
+    .content-footer.pseudo-subgrid > div{
+      grid-column: cc;
+    }    
   }
 }
 
