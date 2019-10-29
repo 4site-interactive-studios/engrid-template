@@ -119,9 +119,14 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   background-position: bottom;
 }
 
-.pre-footer-card-wrapper,
-.footer-wrapper  {
+
+
+
+
+.pre-footer-card-wrapper{
   display: flex;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .pre-footer-card{
@@ -130,7 +135,9 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   text-align: center
 }
 
+
 .footer-wrapper{
+ display: flex;
  justify-content: space-between;
  align-items: center;
 }

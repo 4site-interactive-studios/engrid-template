@@ -309,7 +309,7 @@ export const inputPlaceholder = () => {
       enFieldPhoneNumber.placeholder = "Phone number";
     }
     if (enFieldPhoneNumber2) {
-      enFieldPhoneNumber2.placeholder = "Mobile phone number";
+      enFieldPhoneNumber2.placeholder = "000-000-0000 (optional)";
     }
     // if (enFieldCountry){
     //   enFieldCountry.placeholder = "Country";
