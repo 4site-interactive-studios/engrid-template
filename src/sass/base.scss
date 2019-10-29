@@ -990,7 +990,8 @@ input[name="transaction.donationAmt.other"] {
   .en__field--infadd1,
   .en__field--gftrsn,
   .en__field--paymenttype,
-  .en__field--ccnumber {
+  .en__field--ccnumber,
+  .en__field--bankAccountType {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     padding-left: 0;
