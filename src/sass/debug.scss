@@ -185,10 +185,10 @@ body:not(.debug-on) #engrid .en__component--advrow > div {
   border-color: transparent;
 }
 
-body:not(.debug-on) #engrid .en__component--advrow > div::before,
-body:not(.debug-on) #engrid .en__component--advrow > div::after {
-  opacity: 0;
-}
+// body.debug-enabled:not(.debug-on) #engrid .en__component--advrow > div::before,
+// body.debug-enabled:not(.debug-on) #engrid .en__component--advrow > div::after {
+//   opacity: 0;
+// }
 
 .debug #engrid .en__component--advrow > div {
   border-width: 0.1px;
