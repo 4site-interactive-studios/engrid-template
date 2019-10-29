@@ -471,7 +471,9 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 #engrid .give-by-select .en__field--radio input[type="radio"] + label,
 #engrid .give-by-select .en__field--radio .en__field__item--other input[type="text"],
 #engrid .en__field--donationAmt.en__field--radio input[type="radio"] + label,
-#engrid .en__field--donationAmt.en__field--radio .en__field__item--other input[type="text"] {
+#engrid .en__field--donationAmt.en__field--radio .en__field__item--other input[type="text"],
+#engrid .en__field--donationAmt.en__field--radio .en__field__item--other input[type="tel"],
+#engrid .en__field--donationAmt.en__field--radio .en__field__item--other input[type="number"] {
   background-color: $client-button-background-color;
   color: $client-button-font-color;
 }

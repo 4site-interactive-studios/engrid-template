@@ -940,9 +940,9 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 }
 
 /* @TODO Hot fixes for demo, should be revisited */
-input[name="transaction.donationAmt.other"] {
-  max-width: 168px !important;
-}
+// input[name="transaction.donationAmt.other"] {
+//   max-width: 168px !important;
+// }
 
 /* Custom Styles */
 
@@ -1098,142 +1098,15 @@ input[name="transaction.donationAmt.other"] {
 
 // @TODO Style Mandatory Checboxes https://d.pr/i/KAZKV6
 
-// If Float Labels are enabled, we need to hide the Credit Card Expiration Fields otherwise this happnes: https://d.pr/i/1AK8yM */
+// If Float Labels are enabled, we need to hide the Credit Card Expiration Fields otherwise this happens: https://d.pr/i/1AK8yM */
 .float-labels .en__field--ccexpire .en__field__label {
   display: none;
 }
 
-// BRAND STYLES
-@font-face {
-  font-family: HarmoniaSansStd;
-  src: local(HarmoniaSansStd-Bold),
-    url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-Regular.otf?v=1572290525000) format("otf");
-}
-
-@font-face {
-  font-family: HarmoniaSansStd-SemiBd;
-  src: local(HarmoniaSansStd-Bold),
-    url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-SemiBd.otf?v=1572290535000) format("otf");
-}
-
-#engrid .en__component--copyblock p {
-  // font-family: HarmoniaSansStd;
-  font-size: 18px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.44;
-  letter-spacing: normal;
-}
-
-#engrid h1 {
-  // font-family: HarmoniaSansStd;
-  font-size: 48px;
-  font-weight: 900;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -1px;
-  text-align: center;
-}
-
-#engrid h2 {
-  // font-family: HarmoniaSansStd;
-  font-size: 24px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-}
-
-#engrid h3 {
-  // font-family: HarmoniaSansStd;
-  font-size: 16px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-}
-
-#engrid label.en__field__label {
-  // font-family: HarmoniaSansStd-SemiBd;
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.68px;
-}
-
-#engrid .en__field__label--item {
-  // font-family: HarmoniaSansStd;
-  font-size: 18px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.44;
-  letter-spacing: normal;
-}
-
-#engrid .highlight {
-  background-color: #f9f003;
-  padding: 0.5rem;
-  font-weight: bold;
-  display: inline-block;
-  margin-left: -0.5rem;
-}
-
-.en__field--donationAmt .en__field__input--other{
-  padding-left: 1.35rem;
-}
-
-.en__field--donationAmt .en__field__item--other::before {
-  display: block;
-  content: "$";
-  position: relative;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  height: 0;
-  left: .65rem;
-  top: .5rem;
-  color: #ffff;
-  width: 0;
-}
-
-.en__field--donationAmt .en__field__item--other::after{
-  top: 3rem;
-  opacity: 0.8;
-  font-size: 80%;
-  position: relative;
-  font-family: inherit;
-  font-weight: normal;
-  line-height: 1.5;
-  margin-bottom: 0.5rem;
-  left: 1rem;
-  top: 0.25rem;
-  width: calc(100% - 16px);
-  display: inline-block;
-  height: 0px;
-}
-
-.en__field--donationAmt.monthly-giving .en__field__item--other::after {
-  content: "enter monthly amount";
-}
-
-.en__field--donationAmt:not(.monthly-giving) .en__field__item--other::after {
-  content: "enter amount";
-}
-
-/* We need to set labels for error messages, but don't want them visually displayed outside page builder */
-body:not(#en__pagebuilder) .en__field--recurrpay label,
-body:not(#en__pagebuilder) .en__field--donationAmt label{
-  display: none;
-}
-
-body{
-  background-color: #487c0f;
+// Remove Number Input Spinners on Other Input Gift Amount field https://stackoverflow.com/a/4298216
+.en__field--donationAmt input[type=number]::-webkit-inner-spin-button,
+.en__field--donationAmt input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none; 
+  margin: 0;
+  -moz-appearance:textfield;
 }

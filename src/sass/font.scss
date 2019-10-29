@@ -1,5 +1,101 @@
-@import url("https://use.typekit.net/bqp8wjl.css");
+// @import url("https://use.typekit.net/bqp8wjl.css");
+// body {
+//   font-family: "myriad-pro", sans-serif;
+// }
+
+// BRAND STYLES
+@font-face {
+  font-family: HarmoniaSansStd;
+  src: local(HarmoniaSansStd), url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-Regular.otf?v=1572290525000") format("opentype");
+
+
+  }
+
+@font-face {
+  font-family: HarmoniaSansStd-SemiBd;
+  src: local(HarmoniaSansStd-SemiBd), url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-SemiBd.otf?v=1572290535000") format("opentype");
+}
 
 body {
-  font-family: "myriad-pro", sans-serif;
+  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: HarmoniaSansStd;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;  
+}
+
+// #engrid .en__component--copyblock p {
+//   font-family: HarmoniaSansStd;
+//   font-size: 18px;
+//   font-weight: normal;
+//   font-stretch: normal;
+//   font-style: normal;
+//   line-height: 1.44;
+//   letter-spacing: normal;
+// }
+
+#engrid h1 {
+  font-family: HarmoniaSansStd;
+  font-size: 48px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+#engrid h2 {
+  font-family: HarmoniaSansStd;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+#engrid h3 {
+  font-family: HarmoniaSansStd;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+#engrid label.en__field__label {
+  font-family: HarmoniaSansStd-SemiBd;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.68px;
+}
+
+#engrid .en__field__label--item {
+  font-family: HarmoniaSansStd;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+}
+
+#engrid .en__field--donationAmt .en__field__label--item,
+#engrid .en__field--donationAmt .en__field__item--other::before,
+#engrid .en__field--donationAmt .en__field__item--other input{
+  font-family: HarmoniaSansStd;
+  font-size: 24px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
 }
