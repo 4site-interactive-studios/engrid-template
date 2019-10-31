@@ -161,14 +161,14 @@ margin-left: .5rem;
 margin-right: .5rem;
 }*/
 
-body #engrid .en__component--formblock .en__field:first-of-type,
-body #engrid .en__component--formblock .en__field div.en__field__item:first-of-type {
+body #engrid .en__component--formblock:not(.manual-form-layout) .en__field:first-of-type,
+body #engrid .en__component--formblock:not(.manual-form-layout) .en__field div.en__field__item:first-of-type {
   margin-left: 0rem !important;
 }
 
 /* Needs QA: ENs page builder adds a div to the formblock DOM on hover. This will cause a small right margin to appear as the expected input fields are no longer the last of their siblings */
-body #engrid .en__component--formblock .en__field:last-of-type,
-body #engrid .en__component--formblock .en__field div.en__field__item:last-of-type {
+body #engrid .en__component--formblock:not(.manual-form-layout) .en__field:last-of-type,
+body #engrid .en__component--formblock:not(.manual-form-layout) .en__field div.en__field__item:last-of-type {
   margin-right: 0rem !important;
 }
 
@@ -918,11 +918,11 @@ body.error-jump-assist #engrid .en__component .en__field__error {
   padding-right: 0.5rem;
 }
 
-#engrid .en__field:first-child {
+#engrid .en__component--formblock:not(.manual-form-layout) .en__field:first-child {
   padding-left: 0;
 }
 
-#engrid .en__field:last-child {
+#engrid .en__component--formblock:not(.manual-form-layout) .en__field:last-child {
   padding-right: 0;
 }
 

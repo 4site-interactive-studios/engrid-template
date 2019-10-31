@@ -200,7 +200,6 @@
 
 #engrid.layout-centercenter1col {
   .content-header,
-  .body-header,
   .body-banner,
   .body-bannerOverlay,
   .body-side,
@@ -228,7 +227,7 @@
     margin-bottom: 2rem;
   }
 
-  .content-footer.pseudo-subgrid > div{
+  .content-footer.pseudo-subgrid > div {
     grid-column: bc;
   }
 }
@@ -239,13 +238,14 @@ body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
   }
 
   /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
+  .page-backgroundImage::before {
+    content: "";
+    background-image: radial-gradient(circle at 50% 0, rgba(0, 0, 0, 0.3), transparent 53%);
+    z-index: -3;
+    grid-column: pc;
+  }
   .page-backgroundImageOverlay {
     grid-row: page-start / body-main-end;
-    background-image: radial-gradient(
-      circle at 50% 0,
-      rgba(0, 0, 0, 0.3),
-      transparent 53%
-    );
   }
 }
 
@@ -298,9 +298,9 @@ body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
       border-bottom-right-radius: 5px;
     }
 
-    .content-footer.pseudo-subgrid > div{
+    .content-footer.pseudo-subgrid > div {
       grid-column: cc;
-    }    
+    }
   }
 }
 

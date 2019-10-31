@@ -176,7 +176,7 @@ export const debugBar = () => {
       enGrid.insertAdjacentHTML(
         "afterend",
         '<span id="debug-bar">' +
-          '<button id="debug-toggle" type="button">Turn Debug On</button>' +
+          // '<button id="debug-toggle" type="button">Turn Debug On</button>' +
           '<button id="layout-toggle" type="button">Layout Toggle</button>' +
           "</span>"
       );
