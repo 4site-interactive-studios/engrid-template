@@ -96,10 +96,11 @@
 
 #engrid.layout-centerleft1col {
   .page-alert,
-  .body-headerOutside,
   .body-banner,
   .body-bannerOverlay,
+  .body-top,
   .body-side,
+  .body-bottom,
   .body-footerOutside {
     display: none;
   }
@@ -118,6 +119,13 @@
       padding: 1rem 0;
     }
   }
+
+  .body-headerOutside{
+    grid-column: bc;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
 }
 
 /*
@@ -137,9 +145,9 @@
           [
             pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
             cc-start lcc-start]  minmax(0px, 0px)      [lcc-end
-            bc-start lbc-start]  minmax(300px, 425px)  [lbc-end
-            rbc-start]           minmax(300px, 425px)  [rbc-end bc-end
-            rcc-start]           minmax(0px, 250px)    [rcc-end cc-end
+            bc-start lbc-start]  minmax(300px, 300px)  [lbc-end
+            rbc-start]           minmax(300px, 300px)  [rbc-end bc-end
+            rcc-start]           minmax(0px, 1.25fr)   [rcc-end cc-end
             rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end            
           ];
        
@@ -151,18 +159,8 @@
       border-right: 1px solid black;
     }
 
-    .body-header {
-      margin-top: 1rem;
-      border-top: 1px solid black;
-      border-top-left-radius: $client-input-border-radius;
-      border-top-right-radius: $client-input-border-radius;
-    }
-
     .body-footer {
-      margin-bottom: 1rem;
-      border-bottom: 1px solid black;
-      border-bottom-left-radius: $client-input-border-radius;
-      border-bottom-right-radius: $client-input-border-radius;
+      margin-bottom: 5rem;
     }
   }
 
@@ -188,7 +186,7 @@
 */
 
 /* Sum of all MAX values of the Body Columns + 1px */
-@media screen and (min-width: 1151px) {
+@media screen and (min-width: 900px) {
 }
 
 /*

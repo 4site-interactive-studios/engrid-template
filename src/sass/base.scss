@@ -1179,7 +1179,7 @@ body.error-jump-assist #engrid .en__component .en__field__error {
     padding-right: 0;
   }
 
-  .en__field--country {
+  #endgrid:not(.legacy) .en__field--country {
     position: absolute;
     right: 0;
     z-index: 1;
@@ -1188,7 +1188,7 @@ body.error-jump-assist #engrid .en__component .en__field__error {
     margin: 0;
   }
 
-  .en__field--country::before {
+  #endgrid:not(.legacy) .en__field--country::before {
     content: "";
     display: block;
     height: 60%;
@@ -1199,7 +1199,7 @@ body.error-jump-assist #engrid .en__component .en__field__error {
     top: 20%;
   }
 
-  .en__field--country #en__field_supporter_country {
+  #endgrid:not(.legacy) .en__field--country #en__field_supporter_country {
     border: none;
     background-color: transparent;
     text-align-last: center;
@@ -1240,12 +1240,12 @@ body.error-jump-assist #engrid .en__component .en__field__error {
   }
 }
 
-#engrid.float-labels div:not(.manual-form-layout) {
+#endgrid:not(.legacy).float-labels div:not(.manual-form-layout) {
   .en__field--country {
     top: 0.1rem;
   }
 
-  .en__field--country #en__field_supporter_country {
+  #endgrid:not(.legacy) .en__field--country #en__field_supporter_country {
     padding: 0.5rem 1.5rem 0.5rem 0.5rem;
     background-position: right -1rem top 0.55rem;
   }

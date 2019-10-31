@@ -431,6 +431,13 @@ body:not(#en__pagebuilder)
 }
 
 body:not(#en__pagebuilder)
+  #engrid.legacy
+  .en__component--advrow
+  .page-backgroundImage {
+  background-position: top right;
+}
+
+body:not(#en__pagebuilder)
   #engrid
   .en__component--advrow
   .page-backgroundImageOverlay {

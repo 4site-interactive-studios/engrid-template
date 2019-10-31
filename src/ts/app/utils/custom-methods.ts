@@ -63,9 +63,11 @@ export const setBackgroundImages = () => {
 
   if (pageBackgroundImg) {
     pageBackgroundImgSrc = pageBackgroundImg.src;
-    // pageBackgroundImg.style.display = "none";
+    pageBackgroundImg.style.display = "none";
   } else {
+    // Support for legacy pages
     pageBackgroundImgSrc = pageBackgroundLegacyImg.innerHTML;
+    pageBackgroundLegacyImg.style.display = "none";
   }
 
   if (pageBackground && pageBackgroundImgSrc) {
@@ -251,7 +253,7 @@ export const debugBar = () => {
         // } else {
         //   console.log("While trying to switch layouts, something unexpected happen.");
         // }
-        if (enGrid.classList.contains("layout-leftleft1col")) {
+        if (enGrid.classList.contains("layout-centerleft1col")) {
           removeClassesByPrefix(enGrid, "layout-");
           enGrid.classList.add("layout-centercenter1col");
         } else if (enGrid.classList.contains("layout-centercenter1col")) {
@@ -259,7 +261,7 @@ export const debugBar = () => {
           enGrid.classList.add("layout-debug");
         } else if (enGrid.classList.contains("layout-debug")) {
           removeClassesByPrefix(enGrid, "layout-");
-          enGrid.classList.add("layout-leftleft1col");
+          enGrid.classList.add("layout-centerleft1col");
         } else {
           console.log("While trying to switch layouts, something unexpected happen.");
         }        

@@ -26,6 +26,12 @@ body:not(#en__pagebuilder) .en__component--column:last-of-type,
   opacity: 1 !important;
 }
 
+/* Legacy Template Support */
+.en__component--row--1,
+.en__component--row--2{
+  display: initial !important;
+}
+
 /*
 * ##########################################################
 * # TEMP STYLINGS - TO BE DELETED
