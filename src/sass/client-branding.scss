@@ -74,7 +74,7 @@ body {
 
 /* We need to set labels for error messages, but don't want them visually displayed outside page builder */
 /* en__field--153853 is In Memoriam */
-body:not(#en__pagebuilder) .en__field--153853,
+body:not(#en__pagebuilder) .en__field--153853 label,
 body:not(#en__pagebuilder) .en__field--donationAmt label,
 body:not(#en__pagebuilder) .en__field--donationAmt label {
   display: none;
