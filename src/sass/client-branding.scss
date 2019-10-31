@@ -275,10 +275,16 @@ body
       background-position-x: calc(50% - 1.5rem);
       background-position-y: calc(50% - 1px);
       background-repeat: no-repeat;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 0.4px;
+      text-align: center;
+      color: #ffffff;
+      line-height: 1;
     }
   }
-  
-  .give-by-select .en__field--radio .card label{
+
+  .give-by-select .en__field--radio .card label {
     background-size: 24px 18px;
     background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/card.png?v=1572545889000");
   }
