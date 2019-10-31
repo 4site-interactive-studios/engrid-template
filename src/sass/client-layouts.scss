@@ -241,10 +241,10 @@ body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
   /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
   .page-backgroundImageOverlay {
     grid-row: page-start / body-main-end;
-    background-image: radial-gradient(
-      circle at 50% 0,
-      rgba(0, 0, 0, 0.3),
-      transparent 53%
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      transparent 30%
     );
   }
 }
@@ -293,9 +293,6 @@ body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
 
     .body-footer {
       margin-bottom: 1rem;
-      border-bottom: 1px solid black;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
     }
 
     .content-footer.pseudo-subgrid > div{
