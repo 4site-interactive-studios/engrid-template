@@ -158,10 +158,10 @@ body
   .content-footerSpacer {
     background-color: #ffffff;
     background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/pre-footer-donation-background.png");
-    background-size: cover;
-    background-position: top;
+    background-size: contain;
+    background-position: bottom;
     background-repeat: no-repeat;
-    min-height: 1000px;
+    // min-height: 1000px;
     h1 {
       line-height: 1;
       margin-top: 90px;
@@ -195,6 +195,7 @@ body
         color: #000000;
         text-transform: uppercase;
         line-height: 1;
+        padding: 1rem 1rem 0.5rem 1rem; // Corrects for the fact the font is vertically off center
       }
     }
     p {
