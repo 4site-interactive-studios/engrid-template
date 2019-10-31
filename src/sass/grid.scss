@@ -62,13 +62,18 @@
   }
 }
 
+// Max sure the first descendents of advanced rows (should only be one) occupy the full viewport at a minimum
 body:not(#en__pagebuilder)
-  #engrid
-  .en__component--advrow
-  .en__component--advrow {
+  #engrid:not(.legacy)
+  form > .en__component--advrow {
   width: 100vw;
   max-width: 100vw;
-  min-height: 100vh;
+}
+
+#engrid.legacy
+  .en__component--advrow
+  .en__component--advrow {
+  display: flex !important;
 }
 
 #en__pagebuilder .messageOverlay.hidden:only-child::before {
@@ -147,7 +152,7 @@ body:not(#en__pagebuilder)
 * ##########################################################
 */
 
-#engrid .en__component--advrow {
+#engrid:not(.legacy) .en__component--advrow {
   min-height: 100vh;
 }
 
