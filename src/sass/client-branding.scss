@@ -158,8 +158,8 @@ body
   .content-footerSpacer {
     background-color: #ffffff;
     background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/pre-footer-donation-background.png");
-    background-size: contain;
-    background-position: bottom;
+    background-size: cover;
+    background-position: bottom left;
     background-repeat: no-repeat;
     // min-height: 1000px;
     h1 {
