@@ -417,10 +417,11 @@ body:not(#en__pagebuilder) #engrid .page-customCode {
 }
 
 body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImage {
-  background-attachment: fixed;
-  background-size: cover;
   background-position: top right;
+  background-repeat: no-repeat;
   z-index: -3;
+  clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
+  height: 120vh;
 }
 
 body:not(#en__pagebuilder)

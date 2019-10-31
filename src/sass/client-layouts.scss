@@ -246,6 +246,11 @@ body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
   }
   .page-backgroundImageOverlay {
     grid-row: page-start / body-main-end;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      transparent 30%
+    );
   }
 }
 
@@ -293,9 +298,6 @@ body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
 
     .body-footer {
       margin-bottom: 1rem;
-      border-bottom: 1px solid black;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
     }
 
     .content-footer.pseudo-subgrid > div {

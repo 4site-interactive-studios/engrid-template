@@ -1,23 +1,22 @@
-body{
-  background-color: #487c0f;
-}
-
-#en__pagebuilder{
-  background-color: #487c0f !important;
+body {
+  background-color: #fff;
 }
 
 #engrid .highlight {
   background-color: #f9f003;
   padding: 0.5rem;
-  font-weight: bold;
+  font-weight: 500;
+
   display: inline-block;
-  // margin-left: -0.5rem;
+  margin-left: -0.5rem;
+  &.big {
+    font-size: 24px;
+  }
 }
 
-
-#engrid .en__field--donationAmt input[type=text].en__field__input--other,
-#engrid .en__field--donationAmt input[type=number].en__field__input--other,
-#engrid .en__field--donationAmt input[type=tel].en__field__input--other{
+#engrid .en__field--donationAmt input[type="text"].en__field__input--other,
+#engrid .en__field--donationAmt input[type="number"].en__field__input--other,
+#engrid .en__field--donationAmt input[type="tel"].en__field__input--other {
   padding-left: 33%;
   // padding-right: 27%;
   // text-align: center;
@@ -57,7 +56,7 @@ body{
 //   bottom: 1.25rem;
 //   display: inline-block;
 //   height: 0;
-//   margin-left: .5rem;  
+//   margin-left: .5rem;
 // }
 
 // .en__field--donationAmt.monthly-giving .en__field__item--other::after {
@@ -70,18 +69,26 @@ body{
 
 /* We need to set labels for error messages, but don't want them visually displayed outside page builder */
 body:not(#en__pagebuilder) .en__field--recurrpay label,
-body:not(#en__pagebuilder) .en__field--donationAmt label{
+body:not(#en__pagebuilder) .en__field--donationAmt label {
   display: none;
 }
 
+.en__field--recurrpay.en__mandatory label.en__field__label {
+  font-size: 24px !important;
+  font-weight: 900 !important;
+  text-transform: none !important;
+  &::before {
+    top: 3px;
+  }
+}
 
-#engrid .monthly-gift-upsell-tooltip{
+#engrid .monthly-gift-upsell-tooltip {
   text-align: center;
 }
 
 #engrid .monthly-gift-upsell-tooltip .highlight:after {
-  top: 50px;
-  left: 50%;
+  top: 73px;
+  left: 60%;
   content: " ";
   height: 0;
   width: 0;
@@ -89,11 +96,24 @@ body:not(#en__pagebuilder) .en__field--donationAmt label{
   pointer-events: none;
   border: 20px solid transparent;
   border-top-color: #f9f003;
-  margin-left: 43px;
+  margin-left: 30px;
   z-index: 1;
 }
 
-#engrid .en__field--donationAmt .en__field__element--radio{
+#engrid .en__field__input--checkbox + .en__field__label {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.4px;
+  display: inline-block;
+  .highlight {
+    font-weight: 700;
+    margin-top: -0.5rem;
+    margin-left: -0.2rem;
+  }
+}
+
+#engrid .en__field--donationAmt .en__field__element--radio {
   justify-content: center;
   flex-wrap: wrap;
   justify-items: center;
@@ -101,8 +121,16 @@ body:not(#en__pagebuilder) .en__field--donationAmt label{
 }
 
 #engrid .en__field--donationAmt .en__field__element--radio .en__field__item,
-body #engrid .en__component--formblock .en__field--donationAmt div.en__field__item:first-of-type,
-body #engrid .en__component--formblock .en__field--donationAmt div.en__field__item:last-of-type{
+body
+  #engrid
+  .en__component--formblock
+  .en__field--donationAmt
+  div.en__field__item:first-of-type,
+body
+  #engrid
+  .en__component--formblock
+  .en__field--donationAmt
+  div.en__field__item:last-of-type {
   margin: 0 0.25rem 1rem 0.25rem !important;
   margin-top: 0 !important;
   margin-right: 0.25rem !important;
@@ -110,11 +138,15 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   margin-left: 0.25rem !important;
 }
 
-#engrid .en__field--donationAmt .en__field__element--radio .en__field__item{
+#engrid .en__field--donationAmt .en__field__element--radio .en__field__item {
   width: calc(33% - 0.5rem);
 }
 
-#engrid .en__field--donationAmt .en__field__element--radio .en__field__item label{
+#engrid
+  .en__field--donationAmt
+  .en__field__element--radio
+  .en__field__item
+  label {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -122,37 +154,112 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   align-items: center;
 }
 
-.content-footer{
-  background-color: #ffffff;
-  background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/pre-footer-donation-background.jpg?v=1572375726000");
-  background-position: bottom;
+#engrid {
+  .content-footer {
+    background-color: #ffffff;
+    background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/pre-footer-donation-background.png");
+    background-size: contain;
+    background-position: center 350px;
+    background-repeat: no-repeat;
+    min-height: 650px;
+    h1 {
+      line-height: 1;
+      margin-top: 90px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .pre-footer-card-wrapper {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 260px;
+    justify-content: space-between;
+  }
+
+  .pre-footer-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 315px;
+    img {
+      display: block;
+      margin-bottom: 35px;
+    }
+    .header-wrapper {
+      h2 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        color: #000000;
+        text-transform: uppercase;
+        line-height: 1;
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.58;
+      letter-spacing: 0.2px;
+      text-align: center;
+      color: #000000;
+    }
+  }
+
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: #78a22f;
+    color: #fff;
+    padding: 30px 50px;
+    max-width: 100vw;
+    div {
+    }
+    .footer-logo {
+      min-width: 245px;
+    }
+    .footer-menu {
+      a {
+        display: block;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .footer-copy {
+      max-width: 452px;
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.57;
+        letter-spacing: 0.6px;
+        color: #ffffff;
+        border-left: 1px solid #fff;
+        padding-left: 65px;
+      }
+    }
+    .footer-badges {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        display: block;
+        &:first-of-type {
+          margin-right: 30px !important;
+        }
+      }
+    }
+  }
 }
-
-
-
-
-
-.pre-footer-card-wrapper{
-  display: flex;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.pre-footer-card{
-  display: flex;
-  flex-direction: column;
-  text-align: center
-}
-
-
-.footer-wrapper{
- display: flex;
- justify-content: space-between;
- align-items: center;
-}
-
-.footer-badges{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- }

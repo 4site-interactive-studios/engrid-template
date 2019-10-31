@@ -5,15 +5,43 @@
 
 // BRAND STYLES
 @font-face {
-  font-family: HarmoniaSansStd;
-  src: local(HarmoniaSansStd), url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-Regular.otf?v=1572290525000") format("opentype");
-
-
-  }
+  font-family: "HarmoniaSansStd";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("HarmoniaSansStd"), local("HarmoniaSansStd-Regular"),
+    url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-Regular.otf")
+      format("opentype");
+}
 
 @font-face {
-  font-family: HarmoniaSansStd-SemiBd;
-  src: local(HarmoniaSansStd-SemiBd), url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-SemiBd.otf?v=1572290535000") format("opentype");
+  font-family: "HarmoniaSansStd";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("HarmoniaSansStd Medium"), local("HarmoniaSansStd-Medium"),
+    url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-SemiBd.otf")
+      format("opentype");
+}
+
+@font-face {
+  font-family: "HarmoniaSansStd";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("HarmoniaSansStd Bold"), local("HarmoniaSansStd-Bold"),
+    url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-Bold.otf")
+      format("opentype");
+}
+
+@font-face {
+  font-family: "HarmoniaSansStd";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local("HarmoniaSansStd Black"), local("HarmoniaSansStd-Black"),
+    url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-Black.otf")
+      format("opentype");
 }
 
 body {
@@ -24,7 +52,7 @@ body {
   font-stretch: normal;
   font-style: normal;
   line-height: 1.44;
-  letter-spacing: normal;  
+  letter-spacing: normal;
 }
 
 // #engrid .en__component--copyblock p {
@@ -46,6 +74,8 @@ body {
   line-height: normal;
   letter-spacing: -1px;
   text-align: center;
+  margin-bottom: 0;
+  text-transform: uppercase;
 }
 
 #engrid h2 {
@@ -69,13 +99,14 @@ body {
 }
 
 #engrid label.en__field__label {
-  font-family: HarmoniaSansStd-SemiBd;
+  font-family: HarmoniaSansStd;
   font-size: 12px;
-  font-weight: normal;
+  font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.68px;
+  text-transform: uppercase;
 }
 
 #engrid .en__field__label--item {
@@ -90,7 +121,7 @@ body {
 
 #engrid .en__field--donationAmt .en__field__label--item,
 #engrid .en__field--donationAmt .en__field__item--other::before,
-#engrid .en__field--donationAmt .en__field__item--other input{
+#engrid .en__field--donationAmt .en__field__item--other input {
   font-family: HarmoniaSansStd;
   font-size: 24px;
   font-weight: 900;
@@ -98,8 +129,4 @@ body {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-}
-
-#engrid .en__field__element--checkbox label.en__field__label--item{
-  line-height: 20.39px;
 }
