@@ -11,7 +11,7 @@ body{
   padding: 0.5rem;
   font-weight: bold;
   display: inline-block;
-  margin-left: -0.5rem;
+  // margin-left: -0.5rem;
 }
 
 
@@ -36,6 +36,15 @@ body{
   top: 1.1rem;
   color: #ffffff;
   width: 0;
+}
+
+#engrid .en__field--monthly_upsell_checkbox .en__field__input--checkbox + .en__field__label{
+  display: inline-block !important;
+
+}
+
+#engrid .en__field--monthly_upsell_checkbox .en__field__input--checkbox + .en__field__label::before{
+  margin-top: 0.25rem;
 }
 
 // .en__field--donationAmt .en__field__item--other::after{
