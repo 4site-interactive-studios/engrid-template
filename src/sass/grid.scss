@@ -422,11 +422,11 @@ body:not(#en__pagebuilder)
   #engrid
   .en__component--advrow
   .page-backgroundImage {
-  background-position: center;
+  background-position: top left;
   background-repeat: no-repeat;
   z-index: -3;
   clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
-  background-size: contain;
+  background-size: cover;
   height: 120vh;
 }
 

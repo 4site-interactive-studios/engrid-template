@@ -50,15 +50,15 @@
     .body-header {
       margin-top: 1rem;
       border-top: 1px solid black;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+      border-top-left-radius: $client-input-border-radius;
+      border-top-right-radius: $client-input-border-radius;
     }
 
     .body-footer {
       margin-bottom: 1rem;
       border-bottom: 1px solid black;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: $client-input-border-radius;
+      border-bottom-right-radius: $client-input-border-radius;
     }
   }
 
@@ -154,15 +154,15 @@
     .body-header {
       margin-top: 1rem;
       border-top: 1px solid black;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+      border-top-left-radius: $client-input-border-radius;
+      border-top-right-radius: $client-input-border-radius;
     }
 
     .body-footer {
       margin-bottom: 1rem;
       border-bottom: 1px solid black;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: $client-input-border-radius;
+      border-bottom-right-radius: $client-input-border-radius;
     }
   }
 
@@ -300,8 +300,8 @@ body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
     .body-header {
       margin-top: 1rem;
       border-top: 1px solid black;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+      border-top-left-radius: $client-input-border-radius;
+      border-top-right-radius: $client-input-border-radius;
     }
 
     .body-footer {
@@ -392,8 +392,8 @@ body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
     .body-header {
       margin-top: 1rem;
       border-top: 1px solid black;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+      border-top-left-radius: $client-input-border-radius;
+      border-top-right-radius: $client-input-border-radius;
     }
 
     .body-side {
