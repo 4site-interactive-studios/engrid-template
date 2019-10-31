@@ -435,6 +435,28 @@ body:not(#en__pagebuilder)
   height: 120vh;
 }
 
+// body:not(#en__pagebuilder)
+//   #engrid:not(.legacy)
+//   .en__component--advrow
+//   .page-backgroundImage {
+//   background-position: top left;
+//   background-repeat: no-repeat;
+//   z-index: -3;
+//   clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
+//   background-size: cover;
+//   height: 120vh;
+// }
+
+// body:not(#en__pagebuilder)
+//   #engrid.legacy
+//   .en__component--advrow
+//   .page-backgroundImage {
+//   background-position: top right;
+//   background-repeat: no-repeat;
+//   z-index: -3;
+//   background-size: cover;
+// }
+
 body:not(#en__pagebuilder)
   #engrid.legacy
   .en__component--advrow
