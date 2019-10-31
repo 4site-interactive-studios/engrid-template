@@ -264,17 +264,17 @@ export const inputPlaceholder = () => {
   const enGridFloatLabels = document.querySelector("#engrid:not(.float-labels)") as HTMLElement;
   if (enGridFloatLabels) {
     const enFieldDonationAmt = document.querySelector(".en__field--donationAmt.en__field--withOther .en__field__input--other") as HTMLInputElement;
-    const enFieldFirstName = document.querySelector("#en__field_supporter_firstName") as HTMLInputElement;
-    const enFieldLastName = document.querySelector("#en__field_supporter_lastName") as HTMLInputElement;
-    const enFieldEmailAddress = document.querySelector("#en__field_supporter_emailAddress") as HTMLInputElement;
-    const enFieldPhoneNumber = document.querySelector("#en__field_supporter_phoneNumber") as HTMLInputElement;
+    // const enFieldFirstName = document.querySelector("#en__field_supporter_firstName") as HTMLInputElement;
+    // const enFieldLastName = document.querySelector("#en__field_supporter_lastName") as HTMLInputElement;
+    // const enFieldEmailAddress = document.querySelector("#en__field_supporter_emailAddress") as HTMLInputElement;
+    // const enFieldPhoneNumber = document.querySelector("#en__field_supporter_phoneNumber") as HTMLInputElement;
     const enFieldPhoneNumber2 = document.querySelector("#en__field_supporter_phoneNumber2") as HTMLInputElement;
     // const enFieldCountry = document.querySelector("#en__field_supporter_country") as HTMLSelectElement;
-    const enFieldAddress1 = document.querySelector("#en__field_supporter_address1") as HTMLInputElement;
-    const enFieldAddress2 = document.querySelector("#en__field_supporter_address2") as HTMLInputElement;
-    const enFieldCity = document.querySelector("#en__field_supporter_city") as HTMLInputElement;
+    // const enFieldAddress1 = document.querySelector("#en__field_supporter_address1") as HTMLInputElement;
+    // const enFieldAddress2 = document.querySelector("#en__field_supporter_address2") as HTMLInputElement;
+    // const enFieldCity = document.querySelector("#en__field_supporter_city") as HTMLInputElement;
     // const enFieldRegion = document.querySelector("#en__field_supporter_region") as HTMLSelectElement;
-    const enFieldPostcode = document.querySelector("#en__field_supporter_postcode") as HTMLInputElement;
+    // const enFieldPostcode = document.querySelector("#en__field_supporter_postcode") as HTMLInputElement;
     const enFieldHonname = document.querySelector("#en__field_transaction_honname") as HTMLInputElement;
     const enFieldInfname = document.querySelector("#en__field_transaction_infname") as HTMLInputElement;
     const enFieldInfemail = document.querySelector("#en__field_transaction_infemail") as HTMLInputElement;
@@ -288,47 +288,47 @@ export const inputPlaceholder = () => {
     // const enPaymentType = document.querySelector("#en__field_transaction_paymenttype") as HTMLInputElement;
     const enFieldCcnumber = document.querySelector("#en__field_transaction_ccnumber") as HTMLInputElement;
     // const enFieldCcexpire = document.querySelector("#en__field_transaction_ccexpire") as HTMLInputElement;
-    const enFieldCcvv = document.querySelector("#en__field_transaction_ccvv") as HTMLInputElement;
-    const enFieldBankAccountNumber = document.querySelector("#en__field_supporter_bankAccountNumber") as HTMLInputElement;
-    const enFieldBankRoutingNumber = document.querySelector("#en__field_supporter_bankRoutingNumber") as HTMLInputElement;
+    // const enFieldCcvv = document.querySelector("#en__field_transaction_ccvv") as HTMLInputElement;
+    // const enFieldBankAccountNumber = document.querySelector("#en__field_supporter_bankAccountNumber") as HTMLInputElement;
+    // const enFieldBankRoutingNumber = document.querySelector("#en__field_supporter_bankRoutingNumber") as HTMLInputElement;
 
     if (enFieldDonationAmt) {
       enFieldDonationAmt.placeholder = "Other";
       enFieldDonationAmt.setAttribute("type", "number");
     }
-    if (enFieldFirstName) {
-      enFieldFirstName.placeholder = "First name";
-    }
-    if (enFieldLastName) {
-      enFieldLastName.placeholder = "Last name";
-    }
-    if (enFieldEmailAddress) {
-      enFieldEmailAddress.placeholder = "Email address";
-    }
-    if (enFieldPhoneNumber) {
-      enFieldPhoneNumber.placeholder = "Phone number";
-    }
+    // if (enFieldFirstName) {
+    //   enFieldFirstName.placeholder = "First name";
+    // }
+    // if (enFieldLastName) {
+    //   enFieldLastName.placeholder = "Last name";
+    // }
+    // if (enFieldEmailAddress) {
+    //   enFieldEmailAddress.placeholder = "Email address";
+    // }
+    // if (enFieldPhoneNumber) {
+    //   enFieldPhoneNumber.placeholder = "Phone number";
+    // }
     if (enFieldPhoneNumber2) {
       enFieldPhoneNumber2.placeholder = "000-000-0000 (optional)";
     }
     // if (enFieldCountry){
     //   enFieldCountry.placeholder = "Country";
+    // // }
+    // if (enFieldAddress1) {
+    //   enFieldAddress1.placeholder = "Street address";
     // }
-    if (enFieldAddress1) {
-      enFieldAddress1.placeholder = "Street address";
-    }
-    if (enFieldAddress2) {
-      enFieldAddress2.placeholder = "Apt., ste., bldg.";
-    }
-    if (enFieldCity) {
-      enFieldCity.placeholder = "City";
-    }
+    // if (enFieldAddress2) {
+    //   enFieldAddress2.placeholder = "Apt., ste., bldg.";
+    // }
+    // if (enFieldCity) {
+    //   enFieldCity.placeholder = "City";
+    // }
     // if (enFieldRegion){
     //   enFieldRegion.placeholder = "TBD";
     // }
-    if (enFieldPostcode) {
-      enFieldPostcode.placeholder = "Post code";
-    }
+    // if (enFieldPostcode) {
+    //   enFieldPostcode.placeholder = "Post code";
+    // }
     if (enFieldHonname) {
       enFieldHonname.placeholder = "Honoree name";
     }
@@ -368,14 +368,14 @@ export const inputPlaceholder = () => {
     // if (enFieldCcexpire) {
     //   enFieldCcexpire.placeholder = "MM / YY";
     // }
-    if (enFieldCcvv) {
-      enFieldCcvv.placeholder = "CVV";
-    }
-    if (enFieldBankAccountNumber) {
-      enFieldBankAccountNumber.placeholder = "Bank account number";
-    }
-    if (enFieldBankRoutingNumber) {
-      enFieldBankRoutingNumber.placeholder = "Bank routing number";
-    }
+    // if (enFieldCcvv) {
+    //   enFieldCcvv.placeholder = "CVV";
+    // }
+    // if (enFieldBankAccountNumber) {
+    //   enFieldBankAccountNumber.placeholder = "Bank account number";
+    // }
+    // if (enFieldBankRoutingNumber) {
+    //   enFieldBankRoutingNumber.placeholder = "Bank routing number";
+    // }
   }
 };
