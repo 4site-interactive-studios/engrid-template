@@ -410,18 +410,23 @@ body:not(#en__pagebuilder)
   //   0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
   // box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
   //   0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  box-shadow: 0 36px 50px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 36px 50px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 body:not(#en__pagebuilder) #engrid .page-customCode {
   display: none;
 }
 
-body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImage {
-  background-position: top;
+body:not(#en__pagebuilder)
+  #engrid
+  .en__component--advrow
+  .page-backgroundImage {
+  background-position: center;
   background-repeat: no-repeat;
   z-index: -3;
   clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
+  background-size: contain;
   height: 120vh;
 }
 
