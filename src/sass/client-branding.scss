@@ -37,6 +37,15 @@ body {
   width: 0;
 }
 
+#engrid .en__field--monthly_upsell_checkbox .en__field__input--checkbox + .en__field__label{
+  display: inline-block !important;
+
+}
+
+#engrid .en__field--monthly_upsell_checkbox .en__field__input--checkbox + .en__field__label::before{
+  margin-top: 0.25rem;
+}
+
 // .en__field--donationAmt .en__field__item--other::after{
 //   opacity: .8;
 //   font-size: 80%;

@@ -1072,11 +1072,11 @@ body.error-jump-assist #engrid .en__component .en__field__error {
   padding-right: 0.5rem;
 }
 
-#engrid .en__field:first-child {
+#engrid .en__component--formblock:not(.manual-form-layout) .en__field:first-child {
   padding-left: 0;
 }
 
-#engrid .en__field:last-child {
+#engrid .en__component--formblock:not(.manual-form-layout) .en__field:last-child {
   padding-right: 0;
 }
 
