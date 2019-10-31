@@ -57,11 +57,15 @@ export const setBackgroundImages = () => {
   // Find Inline Background Image, hide it, and set it as the background image.
   let pageBackground = document.querySelector(".page-backgroundImage") as HTMLElement;
   let pageBackgroundImg = document.querySelector(".page-backgroundImage img") as HTMLImageElement;
+  let pageBackgroundLegacyImg = document.querySelector(".background-image p") as HTMLElement;
+  
   let pageBackgroundImgSrc: any = null;
 
   if (pageBackgroundImg) {
     pageBackgroundImgSrc = pageBackgroundImg.src;
-    pageBackgroundImg.style.display = "none";
+    // pageBackgroundImg.style.display = "none";
+  } else {
+    pageBackgroundImgSrc = pageBackgroundLegacyImg.innerHTML;
   }
 
   if (pageBackground && pageBackgroundImgSrc) {
