@@ -156,12 +156,10 @@ body.visualize-layout div {
       * ##########################################################
       */
 #debug-bar {
-  margin: 1rem;
   display: block;
   position: fixed;
-  top: 0;
-  right: 0;
-  padding: 0.25rem;
+  top: 20px;
+  right: 20px;
   z-index: 9999;
   opacity: 0;
   -webkit-transition: opacity 0.2s;
