@@ -75,7 +75,7 @@ body {
   letter-spacing: -1px;
   text-align: center;
   margin-bottom: 0;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 #engrid h2 {
@@ -106,7 +106,7 @@ body {
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.68px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 #engrid .en__field__label--item {
@@ -129,4 +129,18 @@ body {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+}
+
+.give-by-select .en__field--radio{
+
+  label{
+    justify-content: center;
+    margin-top: 0.83rem;
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1;
+    padding: 18px 0;
+  }    
 }
