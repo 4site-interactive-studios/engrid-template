@@ -14,6 +14,7 @@ export default class ShowHideRadioCheckboxes {
   hide(item: HTMLInputElement) {
     let inputValue = item.value;
     document.querySelectorAll("." + this.classes + inputValue).forEach(el => {
+      // Consider toggling "hide" class so these fields can be displayed when in a debug state
       if (el instanceof HTMLElement) el.style.display = "none";
     });
   }
@@ -21,6 +22,7 @@ export default class ShowHideRadioCheckboxes {
   show(item: HTMLInputElement) {
     let inputValue = item.value;
     document.querySelectorAll("." + this.classes + inputValue).forEach(el => {
+      // Consider toggling "hide" class so these fields can be displayed when in a debug state
       if (el instanceof HTMLElement) el.style.display = "";
     });
     if (item.type == "checkbox" && !item.checked) {

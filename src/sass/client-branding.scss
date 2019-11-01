@@ -392,4 +392,9 @@ body
     background-size: 17px 20px;
     background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/paypal.png?v=1572545891000");
   }
+
+  // This field had a highlight applied to it that causes the checbox to show up off center
+  #en__field_supporter_monthly_upsell_checkbox:checked + .en__field__label:after{
+    top: .25rem;
+  }
 }

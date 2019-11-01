@@ -1270,19 +1270,19 @@ body.error-jump-assist #engrid .en__component .en__field__error {
   -moz-appearance: textfield;
 }
 
-// Helper class to only show something when "Give Monthly" is selected
-body:not(#en__pagebuilder)
-  #engrid:not(.has-give-monthly)
-  .only-show-when-giving-monthly {
-  display: none !important;
-}
+// // Helper class to only show something when "Give Monthly" is selected
+// body:not(#en__pagebuilder)
+//   #engrid:not(.has-give-monthly)
+//   .only-show-when-giving-monthly {
+//   display: none !important;
+// }
 
-// Helper class to only show something when "Give Once" is selected
-body:not(#en__pagebuilder)
-  #engrid:not(.has-give-once)
-  .only-show-when-giving-once {
-  display: none !important;
-}
+// // Helper class to only show something when "Give Once" is selected
+// body:not(#en__pagebuilder)
+//   #engrid:not(.has-give-once)
+//   .only-show-when-giving-once {
+//   display: none !important;
+// }
 
 // Helper class to only show something when "Give Once" is selected
 // body:not(#en__pagebuilder) #engrid:not(.has-give-in-honor) .give-in-honor{
