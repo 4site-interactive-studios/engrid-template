@@ -397,3 +397,30 @@ export const inputPlaceholder = () => {
     // }
   }
 };
+
+export const watchFieldsForChanges = () => {
+  const enFieldTransactionInmem = document.getElementById('en__field_transaction_inmem') as HTMLInputElement
+  
+  const handleEnFieldTransactionInmemChange = (e: Event) => {
+    if (enFieldTransactionInmem.checked) {
+      enGrid.classList.add("has-give-in-honor");
+    } else {
+      enGrid.classList.remove("has-give-in-honor");
+    }
+  };
+  
+
+  if(enFieldTransactionInmem){
+    
+    // Run on page load
+    if (enFieldTransactionInmem.checked) {
+      enGrid.classList.add("has-give-in-honor");
+    } else {
+      enGrid.classList.remove("has-give-in-honor");
+    }
+
+    // Run on change
+    enFieldTransactionInmem.addEventListener("change", handleEnFieldTransactionInmemChange);
+    
+  }
+}

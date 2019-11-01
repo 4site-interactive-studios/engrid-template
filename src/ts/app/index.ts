@@ -6,6 +6,7 @@ export const run = () => {
   app.setBackgroundImages();
 
   app.inputPlaceholder();
+  app.watchFieldsForChanges();
   app.enInput.init();
 
   app.debugBar();
