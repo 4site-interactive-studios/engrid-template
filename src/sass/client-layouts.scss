@@ -1,47 +1,111 @@
 /*
+* ####################################################################################################################
+* Layout - Center Left 1 Column
+* ####################################################################################################################
+*/
+
+/*
 * ##########################################################
 * # ENGRID - Mobile First Styling
-* # LAYOUT - Left Left 1 Column - layout-leftleft1col
+* # LAYOUT - Center Left 1 Column - layout-centerleft1col
 * ##########################################################
 */
 
-#engrid.layout-leftleft1col {
-  .page-alert,
+#engrid.layout-centerleft1col {
   .content-header,
-  .body-headerOutside,
   .body-banner,
   .body-bannerOverlay,
   .body-side,
   .body-footerOutside {
     display: none;
   }
+
+  /* prettier-ignore */
+  .en__component--advrow,
+  .en__component--advrow .pseudo-subgrid {
+    /* autoprefixer grid: off */
+    grid-template-columns:
+    [
+      pc-start lpc-start]  minmax(0px, 1fr)                  [lpc-end
+      cc-start lcc-start]  minmax(15px, 1fr)                 [lcc-end
+      bc-start lbc-start]  minmax(calc(50vw - 15px), 250px)  [lbc-end
+      rbc-start]           minmax(calc(50vw - 15px), 250px)  [rbc-end bc-end
+      rcc-start]           minmax(15px, 1fr)                 [rcc-end cc-end
+      rpc-start]           minmax(0px, 1fr)                  [rpc-end pc-end               
+    ];
+  }
+
+  .body-headerOutside {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    grid-column: bc;
+  }
+
+  .content-footerSpacer {
+    grid-column: pc;
+  }
+
+  .content-footerSpacer > div{
+    grid-column: cc;
+  }
+
+  .content-footer.pseudo-subgrid > div {
+    grid-column: bc;
+  }
+}
+
+body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
+  .page-backgroundImage {
+    grid-row: page-start / content-footerSpacer-end;
+  }
+
+  /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
+  .page-backgroundImage::before {
+    content: "";
+    background-image: radial-gradient(circle at 50% 0, rgba(0, 0, 0, 0.3), transparent 53%);
+    z-index: -3;
+    grid-column: pc;
+  }
+  .page-backgroundImageOverlay {
+    grid-row: page-start / body-main-end;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      transparent 30%
+    );
+  }
 }
 
 /*
 * ##########################################################
 * # ENGRID - BODY Column Breakpoint Styling
-* # LAYOUT - Left Left 1 Column - layout-leftleft1col
+* # LAYOUT - Center Left 1 Column - layout-centerleft1col
 * ##########################################################
 */
 
 /* Sum of all MIN values of the Body Columns */
-@media screen and (min-width: 650px) {
-  /* prettier-ignore */
-  #engrid.layout-leftleft1col .en__component--advrow,
-  #engrid.layout-leftleft1col .en__component--advrow .pseudo-subgrid{
-          /* autoprefixer grid: off */
-          grid-template-columns:
-          [
-            pc-start lpc-start]  minmax(25px, 25px)    [lpc-end
-            cc-start lcc-start]  minmax(0px, 0px)      [lcc-end
-            bc-start lbc-start]  minmax(300px, 300px)  [lbc-end
-            rbc-start]           minmax(300px, 300px)  [rbc-end bc-end
-            rcc-start]           minmax(0px, 200px)    [rcc-end cc-end
-            rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end
-          ];
-        }
+@media screen and (min-width: 600px) {
+  #engrid.layout-centerleft1col {
+    /* prettier-ignore */
+    .en__component--advrow,
+    .en__component--advrow .pseudo-subgrid {
+      /* autoprefixer grid: off */
+      grid-template-columns:
+      [
+        pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
+        cc-start lcc-start]  minmax(0px, 0px)      [lcc-end
+        bc-start lbc-start]  minmax(300px, 300px)  [lbc-end
+        rbc-start]           minmax(300px, 300px)  [rbc-end bc-end
+        rcc-start]           minmax(0px, 1.25fr)   [rcc-end cc-end
+        rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end            
+      ]; 
+    }
 
-  #engrid.layout-leftleft1col {
+    .body-headerOutside {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
     [class^="body-"] {
       border-left: 1px solid black;
       border-right: 1px solid black;
@@ -55,125 +119,11 @@
     }
 
     .body-footer {
-      margin-bottom: 1rem;
-      border-bottom: 1px solid black;
-      border-bottom-left-radius: $client-input-border-radius;
-      border-bottom-right-radius: $client-input-border-radius;
-    }
-  }
-
-  body:not(#en__pagebuilder) #engrid.layout-leftleft1col {
-    .page-backgroundImage {
-      grid-row: content-header-start / content-footer-end;
-    }
-
-    .page-backgroundImageOverlay {
-      grid-row: content-header-start / content-footer-end;
-      grid-column: rcc-start / pc-end;
-      padding-left: $body-padding;
-      padding-right: $body-padding;
-    }
-  }
-}
-
-/*
-* ##########################################################
-* # ENGRID - Content Column Breakpoint Styling
-* # LAYOUT - Left Left 1 Column - layout-leftleft1col
-* ##########################################################
-*/
-
-/* Sum of all MAX values of the Body Columns + 1px */
-@media screen and (min-width: 851px) {
-}
-
-/*
-* ##########################################################
-* # ENGRID - Mobile First Styling
-* # LAYOUT - Center Left 1 Column - layout-centerleft1col
-* ##########################################################
-*/
-
-#engrid.layout-centerleft1col {
-  .page-alert,
-  .body-banner,
-  .body-bannerOverlay,
-  .body-top,
-  .body-side,
-  .body-bottom,
-  .body-footerOutside {
-    display: none;
-  }
-
-  .content-header {
-    background: #2e2e2c;
-
-    .header {
-      grid-column: cc;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      padding: 1rem 0;
-    }
-  }
-
-  .body-headerOutside{
-    grid-column: bc;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-  }
-
-}
-
-/*
-* ##########################################################
-* # ENGRID - BODY Column Breakpoint Styling
-* # LAYOUT - Center Left 1 Column - layout-centerleft1col
-* ##########################################################
-*/
-
-/* Sum of all MIN values of the Body Columns */
-@media screen and (min-width: 650px) {
-  /* prettier-ignore */
-  #engrid.layout-centerleft1col .en__component--advrow,
-        #engrid.layout-centerleft1col .en__component--advrow .pseudo-subgrid {
-          /* autoprefixer grid: off */
-          grid-template-columns:
-          [
-            pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
-            cc-start lcc-start]  minmax(0px, 0px)      [lcc-end
-            bc-start lbc-start]  minmax(300px, 300px)  [lbc-end
-            rbc-start]           minmax(300px, 300px)  [rbc-end bc-end
-            rcc-start]           minmax(0px, 1.25fr)   [rcc-end cc-end
-            rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end            
-          ];
-       
-        }
-
-  #engrid.layout-centerleft1col {
-    [class^="body-"] {
-      border-left: 1px solid black;
-      border-right: 1px solid black;
-    }
-
-    .body-footer {
       margin-bottom: 5rem;
     }
-  }
 
-  body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
-    .page-backgroundImage {
-      grid-row: content-header-end / content-footer-end;
-    }
-
-    .page-backgroundImageOverlay {
-      grid-row: content-header-end / content-footer-end;
-      grid-column: rcc-start / pc-end;
-      padding-left: $body-padding;
-      padding-right: $body-padding;
+    .content-footer.pseudo-subgrid > div {
+      grid-column: cc;
     }
   }
 }
@@ -188,6 +138,12 @@
 /* Sum of all MAX values of the Body Columns + 1px */
 @media screen and (min-width: 900px) {
 }
+
+/*
+* ####################################################################################################################
+* Layout - Center Center 1 Column
+* ####################################################################################################################
+*/
 
 /*
 * ##########################################################
@@ -321,113 +277,4 @@ body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
 
 /* Sum of all MAX values of the Body Columns + 1px */
 @media screen and (min-width: 1231px) {
-}
-
-/*
-* ##########################################################
-* # ENGRID - Mobile First Styling
-* # LAYOUT - Center Center 2 Column - layout-centercenter2col
-* ##########################################################
-*/
-
-#engrid.layout-centercenter2col {
-  .page-alert,
-  .body-headerOutside,
-  .body-banner,
-  .body-bannerOverlay,
-  .body-footerOutside,
-  .page-backgroundImageOverlay {
-    display: none;
-  }
-
-  .content-header {
-    background: #2e2e2c;
-
-    .header {
-      grid-column: cc;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      padding: 1rem 0;
-    }
-  }
-}
-
-/*
-* ##########################################################
-* # ENGRID - BODY Column Breakpoint Styling
-* # LAYOUT - Center Center 2 Column - layout-centercenter2col
-* ##########################################################
-*/
-
-/* Sum of all MIN values of the Body Columns */
-@media screen and (min-width: 750px) {
-  /* prettier-ignore */
-  #engrid.layout-centercenter2col .en__component--advrow,
-        #engrid.layout-centercenter2col .en__component--advrow .pseudo-subgrid {
-          /* autoprefixer grid: off */
-          grid-template-columns:
-          [
-            pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
-            cc-start lcc-start]  minmax(0px, 125px)    [lcc-end
-            bc-start lbc-start]  minmax(400px, 425px)  [lbc-end
-            rbc-start]           minmax(300px, 425px)  [rbc-end bc-end
-            rcc-start]           minmax(0px, 125px)    [rcc-end cc-end
-            rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end            
-          ];
-       
-        }
-
-  #engrid.layout-centercenter2col {
-    [class^="body-"] {
-      border-left: 1px solid black;
-      border-right: 1px solid black;
-    }
-
-    .body-header {
-      margin-top: 1rem;
-      border-top: 1px solid black;
-      border-top-left-radius: $client-input-border-radius;
-      border-top-right-radius: $client-input-border-radius;
-    }
-
-    .body-side {
-      grid-row: body-side-start / body-main-end;
-      grid-column: lbc;
-      border-right: none;
-    }
-
-    .body-main {
-      grid-row: body-side-start / body-main-end;
-      grid-column: rbc;
-      border-left: none;
-    }
-
-    .body-footer {
-      margin-bottom: 1rem;
-      border-bottom: 1px solid black;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-  }
-
-  body:not(#en__pagebuilder)
-    #engrid.layout-centercenter2col
-    .page-backgroundImage {
-    grid-row: content-header-end / content-footer-end;
-  }
-}
-
-/*
-* ##########################################################
-* # ENGRID - Content Column Breakpoint Styling
-* # LAYOUT - Center Center 2 Column - layout-centercenter2col
-* ##########################################################
-*/
-
-/* Sum of all MAX values of the Body Columns + 1px */
-@media screen and (min-width: 1201px) {
 }
