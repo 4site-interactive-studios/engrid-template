@@ -1,10 +1,8 @@
-export default class GiveBySelect {
-  // All Affected Radio Elements
-  public elements: NodeList = document.getElementsByName(
-    "transaction.giveBySelect"
-  );
-  // Class used on Show/Hide Divs + Radio Value
-  public classes: String = "give-by-";
+export default class ShowHideRadioCheckboxes {
+  // All Affected Elements
+  public elements: NodeList;
+  // Class used on Show/Hide Divs + Input Value
+  public classes: string;
 
   // Hide All Divs
   hideAll() {
@@ -23,16 +21,20 @@ export default class GiveBySelect {
   show(item: HTMLInputElement) {
     let inputValue = item.value;
     document.querySelectorAll("." + this.classes + inputValue).forEach(el => {
-      if (el instanceof HTMLElement) el.style.display = "block";
+      if (el instanceof HTMLElement) el.style.display = "";
     });
+    if (item.type == "checkbox" && !item.checked) {
+      this.hide(item);
+    }
   }
 
-  constructor() {
+  constructor(elements: string, classes: string) {
+    this.elements = document.getElementsByName(elements);
+    this.classes = classes;
     this.hideAll();
     for (let i = 0; i < this.elements.length; i++) {
       let element = <HTMLInputElement>this.elements[i];
       if (element.checked) {
-        this.hideAll();
         this.show(element);
       }
       element.addEventListener("change", (e: Event) => {

@@ -27,11 +27,11 @@
 <meta property="og:description" content=""/>
 <meta name="description" content=""/>
 <meta property="og:image" content=""/>
-<link rel="canonical" href="https://act.ran.org/page/14297/donate/1?mode=DEMO&amp;locale=en-US"/>
-<meta property="og:url" content="https://act.ran.org/page/14297/donate/1?mode=DEMO&amp;locale=en-US"/>
+<link rel="canonical" href="https://act.ran.org/page/14297/donate/1?locale=en-US"/>
+<meta property="og:url" content="https://act.ran.org/page/14297/donate/1?locale=en-US"/>
 <link rel="image_src" href=""/>
 <link href='https://act.ran.org/ea-demo/frontend/pbAssets/build/css/enPage.css?v=3.54.0' rel='stylesheet' type='text/css' />
-<script>var pageJson = {"clientId":10042,"campaignPageId":14297,"pageNumber":1,"campaignId":41820,"pageCount":1,"giftProcess":false,"pageName":"New Template - Reference Donation Page - centercenter1col (Do Not Use)","locale":"en-US"};</script>
+<script>var pageJson = {"clientId":10042,"campaignId":41820,"pageNumber":1,"campaignPageId":14297,"pageCount":1,"pageName":"New Template - Reference Donation Page - centercenter1col (Do Not Use)","giftProcess":false,"locale":"en-US"};</script>
 <script src='https://act.ran.org/page/14297/campaigner/0/pagedata.js?locale=en-US'></script>
 <script src='https://act.ran.org/ea-demo/frontend/pbAssets/build/js/enPage.js?v=3.54.0'></script>
 </head>
@@ -258,7 +258,7 @@ style="
 	
 	
 </div>
-		<div class="en__component en__component--copyblock form-section-header give-in-honor"
+		<div class="en__component en__component--copyblock form-section-header inmem-Y"
 
 style="
 
@@ -275,7 +275,7 @@ style="
 	
 	
 </div>
-		<div class="en__component en__component--formblock" style="">
+		<div class="en__component en__component--formblock give-in-honor inmem-Y" style="">
 	
 	
 			<div class="en__field en__field--text en__field--153884 en__field--honname en__mandatory">
@@ -294,7 +294,7 @@ style="
 	
 	
 </div>
-		<div class="en__component en__component--copyblock form-section-header form-sub-section-header give-in-honor"
+		<div class="en__component en__component--copyblock form-section-header form-sub-section-header inmem-Y"
 
 style="
 
@@ -311,7 +311,7 @@ style="
 	
 	
 </div>
-		<div class="en__component en__component--formblock give-in-honor" style="">
+		<div class="en__component en__component--formblock inmem-Y" style="">
 	
 	
 			<div class="en__field en__field--text en__field--153848 en__field--infname en__mandatory">
@@ -1062,23 +1062,27 @@ style="
 	
 	
 </div>
-		<div class="en__component en__component--formblock give-by-card" style="">
+		<div class="en__component en__component--formblock" style="">
 	
 	
-			<div class="en__field en__field--select en__field--153886 en__field--paymenttype en__mandatory">
-	<label for="en__field_transaction_paymenttype" class="en__field__label" style="">Card Type</label>
+			<div class="en__field en__field--select en__field--155938 en__field--paymenttype en__mandatory">
+	<label for="en__field_transaction_paymenttype" class="en__field__label" style="">Payment Type</label>
 		<div class="en__field__element en__field__element--select">
 		<select id="en__field_transaction_paymenttype" class="en__field__input en__field__input--select" name="transaction.paymenttype" >
-			<option selected="selected" value="na">Payment Method</option>
-			<option value="VI">Visa</option>
+			<option selected="selected" value="VI">Visa</option>
 			<option value="MC">MasterCard</option>
 			<option value="DI">Discover</option>
 			<option value="AX">Amex</option>
-			<option value="paypal">PayPal</option>
-			<option value="checking">Checking</option>
 		</select>
 	</div>
 </div>
+	
+	
+	
+</div>
+		<div class="en__component en__component--formblock giveBySelect-card" style="">
+	
+	
 			<div class="en__field en__field--telephone en__field--153870 en__field--ccnumber">
 	<label for="en__field_transaction_ccnumber" class="en__field__label" style="">Card Number</label>
 	<div class="en__field__element en__field__element--telephone">
@@ -1133,7 +1137,7 @@ style="
 	
 	
 </div>
-		<div class="en__component en__component--formblock give-by-paypal" style="">
+		<div class="en__component en__component--formblock giveBySelect-paypal" style="">
 	
 	
 			<input type="hidden" class="en__field__input en__field__input--hidden" name="supporter.NOT_TAGGED_17" value="By submitting this form, you agree to allow Rainforest Action Network to take funds from your account monthly." />
@@ -1142,7 +1146,7 @@ style="
 	
 	
 </div>
-		<div class="en__component en__component--copyblock give-by-paypal"
+		<div class="en__component en__component--copyblock giveBySelect-paypal"
 
 style="
 
@@ -1159,20 +1163,20 @@ style="
 	
 	
 </div>
-		<div class="en__component en__component--formblock give-by-check" style="">
+		<div class="en__component en__component--formblock giveBySelect-check" style="">
 	
 	
-			<div class="en__field en__field--text en__field--154366 en__field--bankAccountType en__mandatory">
+			<div class="en__field en__field--text en__field--154366 en__field--bankAccountType">
 	<label for="en__field_supporter_bankAccountType" class="en__field__label" style="">Bank Account Type</label>
 	<div class="en__field__element en__field__element--text">
-		<input id="en__field_supporter_bankAccountType" type="text" class="en__field__input en__field__input--text" name="supporter.bankAccountType" value="" />
+		<input id="en__field_supporter_bankAccountType" type="text" class="en__field__input en__field__input--text" name="supporter.bankAccountType" value="CHECKING" />
 	 </div>
 </div>
 	
 	
 	
 </div>
-		<div class="en__component en__component--formblock give-by-check" style="">
+		<div class="en__component en__component--formblock giveBySelect-check" style="">
 	
 	
 			<div class="en__field en__field--telephone en__field--153879 en__field--bankAccountNumber">
@@ -1226,7 +1230,7 @@ style="
 "
 >
 	<!-- Custom Checkbox using the same markup as Engaging Networks -->
-<div class="en__field en__field--checkbox en__field--000000 en__field--monthly_upsell_checkbox pseudo-en-field"><!--<label class="en__field__label en__field__label--positionabove" style=""></label>-->
+<div class="en__field en__field--checkbox en__field--000000 en__field--monthly_upsell_checkbox pseudo-en-field only-show-when-giving-once"><!--<label class="en__field__label en__field__label--positionabove" style=""></label>-->
 <div class="en__field__element en__field__element--checkbox">
 <div class="en__field__item"><input class="en__field__input en__field__input--checkbox" id="en__field_supporter_monthly_upsell_checkbox" name="supporter.monthly_upsell_checkbox" type="checkbox" value="Y" /> <label class="en__field__label en__field__label--item" for="en__field_supporter_monthly_upsell_checkbox"><span class="highlight">Make this a monthly recurring gift!</span> Recurring gifts help us act faster on urgent issues.</label></div>
 </div>
