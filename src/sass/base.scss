@@ -1268,28 +1268,28 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 
 
 // Helper class to only show something when "Give Monthly" is selected
-#engrid:not(.has-give-monthly) .only-show-when-giving-monthly{
+body:not(#en__pagebuilder) #engrid:not(.has-give-monthly) .only-show-when-giving-monthly{
   display: none !important;
 }
   
 // Helper class to only show something when "Give Once" is selected
-#engrid:not(.has-give-once) .only-show-when-giving-once{
+body:not(#en__pagebuilder) #engrid:not(.has-give-once) .only-show-when-giving-once{
   display: none !important;
 }
 
 // Helper class to only show something when "Give Once" is selected
-#engrid:not(.has-give-in-honor) .give-in-honor{
+body:not(#en__pagebuilder) #engrid:not(.has-give-in-honor) .give-in-honor{
   display: none !important;
 }
 
-#engrid:not(.has-give-by-card) .give-by-card{
+body:not(#en__pagebuilder) #engrid:not(.has-give-by-card) .give-by-card{
   display: none !important;
 }
 
-#engrid:not(.has-give-by-check) .give-by-check{
+body:not(#en__pagebuilder) #engrid:not(.has-give-by-check) .give-by-check{
   display: none !important;
 }
 
-#engrid:not(.has-give-by-paypal) .give-by-paypal{
+body:not(#en__pagebuilder) #engrid:not(.has-give-by-paypal) .give-by-paypal{
   display: none !important;
 }
