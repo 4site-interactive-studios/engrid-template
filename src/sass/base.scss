@@ -1281,3 +1281,15 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 #engrid:not(.has-give-in-honor) .give-in-honor{
   display: none !important;
 }
+
+#engrid:not(.has-give-by-card) .give-by-card{
+  display: none !important;
+}
+
+#engrid:not(.has-give-by-check) .give-by-check{
+  display: none !important;
+}
+
+#engrid:not(.has-give-by-paypal) .give-by-paypal{
+  display: none !important;
+}

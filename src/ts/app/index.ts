@@ -6,7 +6,10 @@ export const run = () => {
   app.setBackgroundImages();
 
   app.inputPlaceholder();
-  app.watchFieldsForChanges();
+  app.watchInmemField();
+  app.watchRecurrpayField();
+  app.watchGiveBySelectField();
+  app.watchLegacyGiveBySelectField();
   app.enInput.init();
 
   app.debugBar();
