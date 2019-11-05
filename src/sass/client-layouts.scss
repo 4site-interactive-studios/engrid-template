@@ -41,11 +41,11 @@
     grid-column: bc;
   }
 
-  .content-footerSpacer {
+  .content-preFooter {
     grid-column: pc;
   }
 
-  .content-footerSpacer > div {
+  .content-preFooter > div {
     grid-column: cc;
   }
 
@@ -62,14 +62,28 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
   /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
   .page-backgroundImage::before {
     content: "";
-    background-image: radial-gradient(circle at 50% 0, rgba(0, 0, 0, 0.3), transparent 53%);
+    background-image: radial-gradient(
+      circle at 50% 0,
+      rgba(0, 0, 0, 0.3),
+      transparent 53%
+    );
     z-index: -3;
     grid-column: pc;
   }
   .page-backgroundImageOverlay {
     grid-row: page-start / body-main-end;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), color-stop(30%, transparent));
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 30%);
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.3)),
+      color-stop(30%, transparent)
+    );
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      transparent 30%
+    );
   }
 }
 
@@ -157,6 +171,11 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
     display: none;
   }
 
+  .body-main,
+  .content-preFooter{
+    display: none;
+  }
+
   /* prettier-ignore */
   .en__component--advrow,
   .en__component--advrow .pseudo-subgrid {
@@ -177,12 +196,22 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
     margin-bottom: 2rem;
   }
 
-  .content-footerSpacer {
+  .content-preFooter {
     grid-column: pc;
+    background-size: contain;
   }
 
-  .content-footerSpacer > div {
-    grid-column: cc;
+  // Specified on child dom elements so that if there are none, then the parent div collapses its vertical height.
+  .content-preFooter > div{
+    min-height: 710px;
+  }
+
+  .content-preFooter.pseudo-subgrid > div {
+    grid-column: bc;
+  }
+
+  .body-footer {
+    margin-bottom: 5rem;
   }
 
   .content-footer.pseudo-subgrid > div {
@@ -198,14 +227,28 @@ body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
   /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
   .page-backgroundImage::before {
     content: "";
-    background-image: radial-gradient(circle at 50% 0, rgba(0, 0, 0, 0.3), transparent 53%);
+    background-image: radial-gradient(
+      circle at 50% 0,
+      rgba(0, 0, 0, 0.3),
+      transparent 53%
+    );
     z-index: -3;
     grid-column: pc;
   }
   .page-backgroundImageOverlay {
     grid-row: page-start / body-main-end;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), color-stop(30%, transparent));
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 30%);
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.3)),
+      color-stop(30%, transparent)
+    );
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      transparent 30%
+    );
   }
 }
 
@@ -241,6 +284,25 @@ body#en__pagebuilder #engrid.layout-centercenter1col {
       ]; 
     }
 
+    .en__component--advrow .body-header,
+    .en__component--advrow .body-banner,
+    .en__component--advrow .body-bannerOverlay,
+    .en__component--advrow .body-top,
+    .en__component--advrow .body-side,
+    .en__component--advrow .body-main,
+    .en__component--advrow .body-bottom,
+    .en__component--advrow .body-footer {
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+    }
+
+    .en__component--advrow .body-header {
+      padding-top: 4rem;
+    }
+    .en__component--advrow .body-footer {
+      padding-bottom: 4rem;
+    }
+
     .body-headerOutside {
       margin-top: 4rem;
       margin-bottom: 4rem;
@@ -258,9 +320,9 @@ body#en__pagebuilder #engrid.layout-centercenter1col {
       border-top-right-radius: $client-input-border-radius;
     }
 
-    .body-footer {
-      margin-bottom: 5rem;
-    }
+    .content-preFooter.pseudo-subgrid > div {
+      grid-column: cc;
+    }    
 
     .content-footer.pseudo-subgrid > div {
       grid-column: cc;
@@ -277,4 +339,14 @@ body#en__pagebuilder #engrid.layout-centercenter1col {
 
 /* Sum of all MAX values of the Body Columns + 1px */
 @media screen and (min-width: 1231px) {
+  #engrid.layout-centercenter1col {
+
+    .content-preFooter{
+      background-size: cover;
+    }
+    // Specified on child dom elements so that if there are none, then the parent div collapses its vertical height.
+    .content-preFooter > div{
+      min-height: 1010px;
+    }
+  }
 }

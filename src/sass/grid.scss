@@ -12,6 +12,7 @@
 // body-footer
 // body-footerOutside
 // content-footerSpacer
+// content-preFooter pseudo-subgrid
 // content-footer pseudo-subgrid
 // page-customCode
 // page-backgroundImage
@@ -31,6 +32,7 @@
 // .body-footer,
 // .body-footerOutside,
 // .content-footerSpacer,
+// .content-preFooter,
 // .content-footer,
 // .page-customCode,
 // .page-backgroundImage,
@@ -54,7 +56,9 @@
 @supports (display: grid) {
   #engrid .en__component--advrow,
   #engrid .en__component--advrow .pseudo-subgrid,
-  #EN__RootElement .pboAdvancedRow__preview .en__component--row.en__component--advrow {
+  #EN__RootElement
+    .pboAdvancedRow__preview
+    .en__component--row.en__component--advrow {
     /* autoprefixer grid: off */
     display: grid;
   }
@@ -131,6 +135,8 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
 /* prettier-ignore */
 #en__pagebuilder .content-footerSpacer .messageOverlay.hidden:only-child::before { content: "Content Footer Spacer"; }
 /* prettier-ignore */
+#en__pagebuilder .content-preFooter .messageOverlay.hidden:only-child::before { content: "Content Pre Footer"; }
+/* prettier-ignore */
 #en__pagebuilder .content-footer .messageOverlay.hidden:only-child::before { content: "Content Footer"; }
 /* prettier-ignore */
 #en__pagebuilder .page-customCode .messageOverlay.hidden:only-child::before { content: "Custom Code"; }
@@ -165,6 +171,8 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
 #en__pagebuilder .body-footerOutside { min-height: 5rem; }
 /* prettier-ignore */
 #en__pagebuilder .content-footerSpacer { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .content-preFooter { min-height: 5rem; }
 /* prettier-ignore */
 #en__pagebuilder .content-footer { min-height: 5rem; }
 /* prettier-ignore */
@@ -253,6 +261,7 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
     body-footer-start]                  minmax(0px, auto)  [body-footer-end
     body-footerOutside-start]           minmax(0px, auto)  [body-footerOutside-end  
     content-footerSpacer-start]         minmax(0px, 1fr)   [content-footerSpacer-end
+    content-preFooter-start]            minmax(0px, auto)  [content-preFooter-end
     content-footer-start]               minmax(0px, auto)  [content-footer-end
     page-customCode-start]              minmax(0px, auto)  [page-customCode-end          
     page-backgroundImage-start]         minmax(0px, auto)  [page-backgroundImage-end
@@ -343,6 +352,12 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
   grid-row: content-footerSpacer;
 }
 
+#engrid .en__component--advrow .content-preFooter,
+#EN__RootElement .en__component--advrow .content-preFooter {
+  grid-column: cc;
+  grid-row: content-preFooter;
+}
+
 #engrid .en__component--advrow .content-footer,
 #EN__RootElement .en__component--advrow .content-footer {
   grid-column: pc;
@@ -417,15 +432,21 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
 #engrid .en__component--advrow .body-footer {
   position: relative;
   background-color: #ffffff;
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 #engrid .en__component--advrow .body-header {
-  padding-top: 4rem;
+  padding-top: 1.75rem;
+  min-height: $client-body-border-radius;
+  border-top-left-radius: $client-body-border-radius;
+  border-top-right-radius: $client-body-border-radius;
 }
 #engrid .en__component--advrow .body-footer {
-  padding-bottom: 4rem;
+  padding-bottom: 1.75rem;
+  min-height: $client-body-border-radius;
+  border-bottom-left-radius: $client-body-border-radius;
+  border-bottom-right-radius: $client-body-border-radius;
 }
 
 #engrid .en__component--advrow .body-header::before,
@@ -446,21 +467,33 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
   //   0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
   // box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
   //   0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  -webkit-box-shadow: 0 36px 50px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-          box-shadow: 0 36px 50px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 36px 50px 0 rgba(0, 0, 0, 0.2),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 36px 50px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 body:not(#en__pagebuilder) #engrid .page-customCode {
   display: none;
 }
 
-body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImage {
+// @TODO The minimum height requirment is causing vertically small content (e.g. Title and one sentence) to always overlow past the bottom edge of the viewport. One solution is to also add a body class when the JS that sets the background image is triggered. This could be referenced to only apply the min-height when that's present
+body:not(#en__pagebuilder)
+  #engrid
+  .en__component--advrow
+  .page-backgroundImage {
   background-position: top left;
   background-repeat: no-repeat;
   z-index: -3;
-  -webkit-clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
-          clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   background-size: cover;
+}
+
+body:not(#en__pagebuilder).page-backgroundImage-overflow
+  #engrid
+  .en__component--advrow
+  .page-backgroundImage {
+  -webkit-clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
+  clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   height: 120vh;
 }
 
@@ -486,10 +519,16 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImage 
 //   background-size: cover;
 // }
 
-body:not(#en__pagebuilder) #engrid.legacy .en__component--advrow .page-backgroundImage {
+body:not(#en__pagebuilder)
+  #engrid.legacy
+  .en__component--advrow
+  .page-backgroundImage {
   background-position: top right;
 }
 
-body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImageOverlay {
+body:not(#en__pagebuilder)
+  #engrid
+  .en__component--advrow
+  .page-backgroundImageOverlay {
   z-index: -1;
 }

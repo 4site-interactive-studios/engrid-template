@@ -72,6 +72,22 @@ export const setBackgroundImages = () => {
 
   let pageBackgroundImgSrc: any = null;
 
+  /*!
+  * Determine if an element is in the viewport
+  * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+  * @param  {Node}    elem The element
+  * @return {Boolean}      Returns true if element is in the viewport
+  */
+  const isInViewport = (e: any) => {
+    const distance = e.getBoundingClientRect();
+    return (
+      distance.top >= 0 &&
+      distance.left >= 0 &&
+      distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  };
+
   if (pageBackgroundImg) {
     pageBackgroundImgSrc = pageBackgroundImg.src;
     pageBackgroundImg.style.display = "none";
@@ -82,7 +98,14 @@ export const setBackgroundImages = () => {
   }
 
   if (pageBackground && pageBackgroundImgSrc) {
+    const contentFooter = document.querySelector('.content-footer');
+    if(isInViewport(contentFooter)){
+      body.classList.add("page-backgroundImage-visible");
+    } else {
+      body.classList.add("page-backgroundImage-overflow");
+    }
     pageBackground.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
+
   }
 };
 

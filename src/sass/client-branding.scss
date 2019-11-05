@@ -248,10 +248,9 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
 }
 
 #engrid {
-  .content-footerSpacer {
+  .content-preFooter {
     background-color: #ffffff;
     background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/pre-footer-donation-background.png");
-    background-size: cover;
     background-position: bottom left;
     background-repeat: no-repeat;
     // min-height: 1000px;
@@ -324,18 +323,22 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     color: #fff;
     padding: 30px 0px;
-    div {
-    }
+    flex-wrap: wrap;
     .footer-logo {
-      min-width: 245px;
+      padding: 1rem;
+      img{
+        width: 100%;
+        max-width: 245px;
+      }
     }
     .footer-menu {
+      padding: 1rem;
       a {
         display: block;
         color: #fff;
@@ -348,6 +351,7 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
       }
     }
     .footer-copy {
+      padding: 1rem;
       max-width: 452px;
 
       p {
@@ -356,11 +360,10 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
         line-height: 1.57;
         letter-spacing: 0.6px;
         color: #ffffff;
-        border-left: 1px solid #fff;
-        padding-left: 65px;
       }
     }
     .footer-badges {
+      padding: 1rem;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -376,6 +379,19 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
           margin-right: 30px !important;
         }
       }
+    }
+  }
+
+  @media screen and (min-width: 970px) {
+    .footer-wrapper .footer-copy p{
+      border-left: 1px solid #fff;
+      padding-left: 65px;
+    }
+  }
+
+  @media screen and (max-width: 497px) {
+    .footer-wrapper {
+      text-align: center;
     }
   }
 

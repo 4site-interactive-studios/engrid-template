@@ -59,6 +59,9 @@
 #EN__RootElement .pboAdvancedRow__preview .en__component--column.content-footerSpacer::before {
   content: "Content Footer Spacer";
 }
+#EN__RootElement .pboAdvancedRow__preview .en__component--column.content-preFooter::before {
+  content: "Content Pre Footer";
+}
 #EN__RootElement .pboAdvancedRow__preview .en__component--column.content-footer::before {
   content: "Content Footer";
 }
