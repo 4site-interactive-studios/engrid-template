@@ -171,10 +171,11 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
     display: none;
   }
 
-  .body-main,
-  .content-preFooter{
-    display: none;
-  }
+  // For testing vertically short content
+  // .body-main,
+  // .content-preFooter{
+  //   display: none;
+  // }
 
   /* prettier-ignore */
   .en__component--advrow,
