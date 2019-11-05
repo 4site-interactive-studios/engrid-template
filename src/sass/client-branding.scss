@@ -80,6 +80,8 @@ body {
 
 .give-by-select .en__field--radio {
   label {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 0.83rem;
     display: block;
@@ -127,17 +129,11 @@ body {
   width: 0;
 }
 
-#engrid
-  .en__field--monthly_upsell_checkbox
-  .en__field__input--checkbox
-  + .en__field__label {
+#engrid .en__field--monthly_upsell_checkbox .en__field__input--checkbox + .en__field__label {
   display: inline-block !important;
 }
 
-#engrid
-  .en__field--monthly_upsell_checkbox
-  .en__field__input--checkbox
-  + .en__field__label::before {
+#engrid .en__field--monthly_upsell_checkbox .en__field__input--checkbox + .en__field__label::before {
   margin-top: 0.25rem;
 }
 
@@ -214,23 +210,18 @@ body:not(#en__pagebuilder) .en__field--donationAmt label {
 }
 
 #engrid .en__field--donationAmt .en__field__element--radio {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-items: center;
   margin: 0.9375rem auto;
 }
 
 #engrid .en__field--donationAmt .en__field__element--radio .en__field__item,
-body
-  #engrid
-  .en__component--formblock
-  .en__field--donationAmt
-  div.en__field__item:first-of-type,
-body
-  #engrid
-  .en__component--formblock
-  .en__field--donationAmt
-  div.en__field__item:last-of-type {
+body #engrid .en__component--formblock .en__field--donationAmt div.en__field__item:first-of-type,
+body #engrid .en__component--formblock .en__field--donationAmt div.en__field__item:last-of-type {
   margin: 0 0.25rem 1rem 0.25rem !important;
   margin-top: 0 !important;
   margin-right: 0.25rem !important;
@@ -242,15 +233,17 @@ body
   width: calc(33% - 0.5rem);
 }
 
-#engrid
-  .en__field--donationAmt
-  .en__field__element--radio
-  .en__field__item
-  label {
+#engrid .en__field--donationAmt .en__field__element--radio .en__field__item label {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   height: 64px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -262,26 +255,41 @@ body
     background-position: bottom left;
     background-repeat: no-repeat;
     // min-height: 1000px;
+
     h1 {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
       line-height: 1;
-      margin-top: 90px;
       margin-bottom: 60px;
     }
   }
 
   .pre-footer-card-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
     margin-bottom: 260px;
-    justify-content: space-between;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .pre-footer-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
-    max-width: 315px;
+    width: 100%;
+    max-width: 350px;
+    padding: 0rem 1rem 2rem 1rem;
     img {
       display: block;
       margin-bottom: 35px;
@@ -311,8 +319,14 @@ body
   }
 
   .footer-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: #fff;
     padding: 30px 0px;
@@ -347,8 +361,14 @@ body
       }
     }
     .footer-badges {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       img {
         display: block;
@@ -360,9 +380,13 @@ body
   }
 
   .give-by-select .en__field--radio .en__field__item {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
 
     input[type="radio"] + label {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
       flex-grow: 1;
       padding: 1rem 0 1rem 2.25rem;
       background-position-x: calc(50% - 1.5rem);
@@ -394,7 +418,7 @@ body
   }
 
   // This field had a highlight applied to it that causes the checbox to show up off center
-  #en__field_supporter_monthly_upsell_checkbox:checked + .en__field__label:after{
-    top: .25rem;
+  #en__field_supporter_monthly_upsell_checkbox:checked + .en__field__label:after {
+    top: 0.25rem;
   }
 }

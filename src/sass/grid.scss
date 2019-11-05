@@ -54,25 +54,21 @@
 @supports (display: grid) {
   #engrid .en__component--advrow,
   #engrid .en__component--advrow .pseudo-subgrid,
-  #EN__RootElement
-    .pboAdvancedRow__preview
-    .en__component--row.en__component--advrow {
+  #EN__RootElement .pboAdvancedRow__preview .en__component--row.en__component--advrow {
     /* autoprefixer grid: off */
     display: grid;
   }
 }
 
 // Max sure the first descendents of advanced rows (should only be one) occupy the full viewport at a minimum
-body:not(#en__pagebuilder)
-  #engrid:not(.legacy)
-  form > .en__component--advrow {
+body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
   width: 100vw;
   max-width: 100vw;
 }
 
-#engrid.legacy
-  .en__component--advrow
-  .en__component--advrow {
+#engrid.legacy .en__component--advrow .en__component--advrow {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
 }
 
@@ -142,6 +138,41 @@ body:not(#en__pagebuilder)
 #en__pagebuilder .page-backgroundImage .messageOverlay.hidden:only-child::before { content: "Page Background Image"; }
 /* prettier-ignore */
 #en__pagebuilder .page-backgroundImageOverlay .messageOverlay.hidden:only-child::before { content: "Page Background Image Overlay"; }
+
+/* prettier-ignore */
+#en__pagebuilder .page-alert { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .content-header { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .body-headerOutside { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .body-header { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .body-banner { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .body-bannerOverlay { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .body-top { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .body-side { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .body-main { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .body-bottom { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .body-footer { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .body-footerOutside { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .content-footerSpacer { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .content-footer { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .page-customCode { min-height: 5rem; }
+/* prettier-ignore */
+#en__pagebuilder .page-backgroundImage { min-height: 15rem; }
+/* prettier-ignore */
+#en__pagebuilder .page-backgroundImageOverlay { min-height: 15rem; }
 
 /*
 * ##########################################################
@@ -415,22 +446,20 @@ body:not(#en__pagebuilder)
   //   0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
   // box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
   //   0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  box-shadow: 0 36px 50px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 36px 50px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 36px 50px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 body:not(#en__pagebuilder) #engrid .page-customCode {
   display: none;
 }
 
-body:not(#en__pagebuilder)
-  #engrid
-  .en__component--advrow
-  .page-backgroundImage {
+body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImage {
   background-position: top left;
   background-repeat: no-repeat;
   z-index: -3;
-  clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
+  -webkit-clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
+          clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   background-size: cover;
   height: 120vh;
 }
@@ -457,16 +486,10 @@ body:not(#en__pagebuilder)
 //   background-size: cover;
 // }
 
-body:not(#en__pagebuilder)
-  #engrid.legacy
-  .en__component--advrow
-  .page-backgroundImage {
+body:not(#en__pagebuilder) #engrid.legacy .en__component--advrow .page-backgroundImage {
   background-position: top right;
 }
 
-body:not(#en__pagebuilder)
-  #engrid
-  .en__component--advrow
-  .page-backgroundImageOverlay {
+body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImageOverlay {
   z-index: -1;
 }

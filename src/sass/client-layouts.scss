@@ -45,7 +45,7 @@
     grid-column: pc;
   }
 
-  .content-footerSpacer > div{
+  .content-footerSpacer > div {
     grid-column: cc;
   }
 
@@ -68,11 +68,8 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
   }
   .page-backgroundImageOverlay {
     grid-row: page-start / body-main-end;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.3) 0%,
-      transparent 30%
-    );
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), color-stop(30%, transparent));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 30%);
   }
 }
 
@@ -156,8 +153,7 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
   .content-header,
   .body-banner,
   .body-bannerOverlay,
-  .body-side,
-  .body-footerOutside {
+  .body-side {
     display: none;
   }
 
@@ -185,7 +181,7 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
     grid-column: pc;
   }
 
-  .content-footerSpacer > div{
+  .content-footerSpacer > div {
     grid-column: cc;
   }
 
@@ -208,11 +204,15 @@ body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
   }
   .page-backgroundImageOverlay {
     grid-row: page-start / body-main-end;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.3) 0%,
-      transparent 30%
-    );
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), color-stop(30%, transparent));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 30%);
+  }
+}
+
+body#en__pagebuilder #engrid.layout-centercenter1col {
+  .page-backgroundImage > div,
+  .page-backgroundImageOverlay > div {
+    grid-column: bc;
   }
 }
 
