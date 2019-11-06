@@ -73,18 +73,20 @@ export const setBackgroundImages = () => {
   let pageBackgroundImgSrc: any = null;
 
   /*!
-  * Determine if an element is in the viewport
-  * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
-  * @param  {Node}    elem The element
-  * @return {Boolean}      Returns true if element is in the viewport
-  */
+   * Determine if an element is in the viewport
+   * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+   * @param  {Node}    elem The element
+   * @return {Boolean}      Returns true if element is in the viewport
+   */
   const isInViewport = (e: any) => {
     const distance = e.getBoundingClientRect();
     return (
       distance.top >= 0 &&
       distance.left >= 0 &&
-      distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+      distance.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      distance.right <=
+        (window.innerWidth || document.documentElement.clientWidth)
     );
   };
 
@@ -98,14 +100,13 @@ export const setBackgroundImages = () => {
   }
 
   if (pageBackground && pageBackgroundImgSrc) {
-    const contentFooter = document.querySelector('.content-footer');
-    if(isInViewport(contentFooter)){
+    const contentFooter = document.querySelector(".content-footer");
+    if (isInViewport(contentFooter)) {
       body.classList.add("page-backgroundImage-visible");
     } else {
       body.classList.add("page-backgroundImage-overflow");
     }
     pageBackground.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
-
   }
 };
 
@@ -465,7 +466,9 @@ export const inputPlaceholder = () => {
 };
 
 export const watchInmemField = () => {
-  const enFieldTransactionInmem = document.getElementById("en__field_transaction_inmem") as HTMLInputElement;
+  const enFieldTransactionInmem = document.getElementById(
+    "en__field_transaction_inmem"
+  ) as HTMLInputElement;
 
   const handleEnFieldTransactionInmemChange = (e: Event) => {
     if (enFieldTransactionInmem.checked) {
@@ -493,14 +496,24 @@ export const watchInmemField = () => {
 };
 
 export const watchRecurrpayField = () => {
-  const enFieldRecurrpay = document.querySelector(".en__field--recurrpay") as HTMLElement;
-  const transactionRecurrpay = document.getElementsByName("transaction.recurrpay") as NodeList;
-  const enFieldRecurrpayStartingValue = document.querySelector('input[name="transaction.recurrpay"]:checked') as HTMLInputElement;
-  let enFieldRecurrpayCurrentValue = document.querySelector('input[name="transaction.recurrpay"]:checked') as HTMLInputElement;
+  const enFieldRecurrpay = document.querySelector(
+    ".en__field--recurrpay"
+  ) as HTMLElement;
+  const transactionRecurrpay = document.getElementsByName(
+    "transaction.recurrpay"
+  ) as NodeList;
+  const enFieldRecurrpayStartingValue = document.querySelector(
+    'input[name="transaction.recurrpay"]:checked'
+  ) as HTMLInputElement;
+  let enFieldRecurrpayCurrentValue = document.querySelector(
+    'input[name="transaction.recurrpay"]:checked'
+  ) as HTMLInputElement;
 
   const handleEnFieldRecurrpay = (e: Event) => {
-    enFieldRecurrpayCurrentValue = document.querySelector('input[name="transaction.recurrpay"]:checked') as HTMLInputElement;
-    if (enFieldRecurrpayCurrentValue.value == "Y"){
+    enFieldRecurrpayCurrentValue = document.querySelector(
+      'input[name="transaction.recurrpay"]:checked'
+    ) as HTMLInputElement;
+    if (enFieldRecurrpayCurrentValue.value == "Y") {
       enGrid.classList.remove("has-give-once");
       enGrid.classList.add("has-give-monthly");
     } else if (enFieldRecurrpayCurrentValue.value == "N") {
@@ -511,15 +524,17 @@ export const watchRecurrpayField = () => {
 
   // Check Giving Frequency on page load
   if (enFieldRecurrpay) {
-    enFieldRecurrpayCurrentValue = document.querySelector('input[name="transaction.recurrpay"]:checked') as HTMLInputElement;
-    if (enFieldRecurrpayCurrentValue.value == "Y"){
+    enFieldRecurrpayCurrentValue = document.querySelector(
+      'input[name="transaction.recurrpay"]:checked'
+    ) as HTMLInputElement;
+    if (enFieldRecurrpayCurrentValue.value == "Y") {
       enGrid.classList.remove("has-give-once");
       enGrid.classList.add("has-give-monthly");
     } else if (enFieldRecurrpayCurrentValue.value == "N") {
       enGrid.classList.add("has-give-once");
       enGrid.classList.remove("has-give-monthly");
-    }    
-  }  
+    }
+  }
 
   // Watch each Giving Frequency radio input for a change
   if (transactionRecurrpay) {
@@ -528,17 +543,24 @@ export const watchRecurrpayField = () => {
       element.addEventListener("change", handleEnFieldRecurrpay);
     });
   }
-
 };
 
 export const watchGiveBySelectField = () => {
-  const enFieldGiveBySelect = document.querySelector(".en__field--giveBySelect") as HTMLElement;
-  const transactionGiveBySelect = document.getElementsByName("transaction.giveBySelect") as NodeList;
-  let enFieldGiveBySelectCurrentValue = document.querySelector('input[name="transaction.giveBySelect"]:checked') as HTMLInputElement;
-  
+  const enFieldGiveBySelect = document.querySelector(
+    ".en__field--giveBySelect"
+  ) as HTMLElement;
+  const transactionGiveBySelect = document.getElementsByName(
+    "transaction.giveBySelect"
+  ) as NodeList;
+  let enFieldGiveBySelectCurrentValue = document.querySelector(
+    'input[name="transaction.giveBySelect"]:checked'
+  ) as HTMLInputElement;
+
   const handleEnFieldGiveBySelect = (e: Event) => {
-    enFieldGiveBySelectCurrentValue = document.querySelector('input[name="transaction.giveBySelect"]:checked') as HTMLInputElement;
-    if (enFieldGiveBySelectCurrentValue.value == "card"){
+    enFieldGiveBySelectCurrentValue = document.querySelector(
+      'input[name="transaction.giveBySelect"]:checked'
+    ) as HTMLInputElement;
+    if (enFieldGiveBySelectCurrentValue.value == "card") {
       enGrid.classList.add("has-give-by-card");
       enGrid.classList.remove("has-give-by-check");
       enGrid.classList.remove("has-give-by-paypal");
@@ -546,17 +568,19 @@ export const watchGiveBySelectField = () => {
       enGrid.classList.remove("has-give-by-card");
       enGrid.classList.add("has-give-by-check");
       enGrid.classList.remove("has-give-by-paypal");
-    } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {   
+    } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {
       enGrid.classList.remove("has-give-by-card");
       enGrid.classList.remove("has-give-by-check");
-      enGrid.classList.add("has-give-by-paypal");      
+      enGrid.classList.add("has-give-by-paypal");
     }
   };
 
   // Check Giving Frequency on page load
   if (enFieldGiveBySelect) {
-    enFieldGiveBySelectCurrentValue = document.querySelector('input[name="transaction.giveBySelect"]:checked') as HTMLInputElement;
-    if (enFieldGiveBySelectCurrentValue.value == "card"){
+    enFieldGiveBySelectCurrentValue = document.querySelector(
+      'input[name="transaction.giveBySelect"]:checked'
+    ) as HTMLInputElement;
+    if (enFieldGiveBySelectCurrentValue.value == "card") {
       enGrid.classList.add("has-give-by-card");
       enGrid.classList.remove("has-give-by-check");
       enGrid.classList.remove("has-give-by-paypal");
@@ -564,12 +588,12 @@ export const watchGiveBySelectField = () => {
       enGrid.classList.remove("has-give-by-card");
       enGrid.classList.add("has-give-by-check");
       enGrid.classList.remove("has-give-by-paypal");
-    } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {   
+    } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {
       enGrid.classList.remove("has-give-by-card");
       enGrid.classList.remove("has-give-by-check");
-      enGrid.classList.add("has-give-by-paypal");      
+      enGrid.classList.add("has-give-by-paypal");
     }
-  }  
+  }
 
   // Watch each Giving Frequency radio input for a change
   if (transactionGiveBySelect) {
@@ -578,37 +602,46 @@ export const watchGiveBySelectField = () => {
       element.addEventListener("change", handleEnFieldGiveBySelect);
     });
   }
-
-}
+};
 
 // Support the Legacy Give By Select field
 export const watchLegacyGiveBySelectField = () => {
-  const enFieldGiveBySelect = document.querySelector(".en__field--give-by-select") as HTMLElement;
-  const transactionGiveBySelect = document.getElementsByName("supporter.questions.180165") as NodeList;
-  let enFieldGiveBySelectCurrentValue = document.querySelector('input[name="supporter.questions.180165"]:checked') as HTMLInputElement;
-  
+  const enFieldGiveBySelect = document.querySelector(
+    ".en__field--give-by-select"
+  ) as HTMLElement;
+  const transactionGiveBySelect = document.getElementsByName(
+    "supporter.questions.180165"
+  ) as NodeList;
+  let enFieldGiveBySelectCurrentValue = document.querySelector(
+    'input[name="supporter.questions.180165"]:checked'
+  ) as HTMLInputElement;
+
   const handleEnFieldGiveBySelect = (e: Event) => {
-    enFieldGiveBySelectCurrentValue = document.querySelector('input[name="supporter.questions.180165"]:checked') as HTMLInputElement;
-    if (enFieldGiveBySelectCurrentValue.value == "card"){
+    enFieldGiveBySelectCurrentValue = document.querySelector(
+      'input[name="supporter.questions.180165"]:checked'
+    ) as HTMLInputElement;
+    if (enFieldGiveBySelectCurrentValue.value == "card") {
       enGrid.classList.add("has-give-by-card");
       enGrid.classList.remove("has-give-by-paypal");
-    } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {   
+    } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {
       enGrid.classList.remove("has-give-by-card");
-      enGrid.classList.add("has-give-by-paypal");      
+      enGrid.classList.add("has-give-by-paypal");
     }
   };
 
   // Check Giving Frequency on page load
   if (enFieldGiveBySelect) {
-    enFieldGiveBySelectCurrentValue = document.querySelector('input[name="supporter.questions.180165"]:checked') as HTMLInputElement;
-    if (enFieldGiveBySelectCurrentValue.value == "card"){
+    enFieldGiveBySelectCurrentValue = document.querySelector(
+      'input[name="supporter.questions.180165"]:checked'
+    ) as HTMLInputElement;
+    if (enFieldGiveBySelectCurrentValue.value == "card") {
       enGrid.classList.add("has-give-by-card");
       enGrid.classList.remove("has-give-by-paypal");
-    } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {   
+    } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {
       enGrid.classList.remove("has-give-by-card");
-      enGrid.classList.add("has-give-by-paypal");      
+      enGrid.classList.add("has-give-by-paypal");
     }
-  }  
+  }
 
   // Watch each Giving Frequency radio input for a change
   if (transactionGiveBySelect) {
@@ -617,5 +650,4 @@ export const watchLegacyGiveBySelectField = () => {
       element.addEventListener("change", handleEnFieldGiveBySelect);
     });
   }
-
-}
+};
