@@ -651,3 +651,110 @@ export const watchLegacyGiveBySelectField = () => {
     });
   }
 };
+
+/*
+ * Input fields as reference variables
+ */
+const field_credit_card = document.getElementById(
+  "en__field_transaction_ccnumber"
+) as HTMLInputElement;
+const field_payment_type = document.getElementById(
+  "en__field_transaction_paymenttype"
+) as HTMLSelectElement;
+let field_expiration_parts = document.querySelectorAll(
+  ".en__field--ccexpire .en__field__input--splitselect"
+);
+let field_expiration_month = field_expiration_parts[0] as HTMLSelectElement;
+let field_expiration_year = field_expiration_parts[1] as HTMLSelectElement;
+
+/*
+ * Helpers
+ */
+
+// current_month and current_year used by handleExpUpdate()
+let d = new Date();
+var current_month = d.getMonth() + 1; // month options in expiration dropdown are indexed from 1
+var current_year = d.getFullYear() - 2000;
+
+// getCardType used by handleCCUpdate()
+const getCardType = (cc_partial: string) => {
+  let key_character = cc_partial.charAt(0);
+  switch (key_character) {
+    case "3":
+      return "AX";
+    case "4":
+      return "VI";
+    case "5":
+      return "MC";
+    case "6":
+      return "DI";
+    default:
+      return "na";
+  }
+};
+
+/*
+ * Handlers
+ */
+const handleCCUpdate = () => {
+  let card_type = getCardType(field_credit_card.value);
+  if (card_type && field_payment_type.value != card_type) {
+    field_payment_type.value = card_type;
+  }
+};
+
+const handleExpUpdate = (e: string) => {
+  // handle if year is changed to current year (disable all months less than current month)
+  // handle if month is changed to less than current month (disable current year)
+  if (e == "month") {
+    let selected_month = parseInt(field_expiration_month.value);
+    let disable = selected_month < current_month;
+    for (let i = 0; i < field_expiration_year.options.length; i++) {
+      // disable or enable current year
+      if (parseInt(field_expiration_year.options[i].value) <= current_year) {
+        if (disable) {
+          //@TODO Couldn't get working in TypeScript
+          field_expiration_year.options[i].setAttribute("disabled", "disabled");
+        } else {
+          field_expiration_year.options[i].disabled = false;
+        }
+      }
+    }
+  } else if (e == "year") {
+    let selected_year = parseInt(field_expiration_year.value);
+    let disable = selected_year == current_year;
+    for (let i = 0; i < field_expiration_month.options.length; i++) {
+      // disable or enable all months less than current month
+      if (parseInt(field_expiration_month.options[i].value) < current_month) {
+        if (disable) {
+          //@TODO Couldn't get working in TypeScript
+          field_expiration_month.options[i].setAttribute(
+            "disabled",
+            "disabled"
+          );
+        } else {
+          field_expiration_month.options[i].disabled = false;
+        }
+      }
+    }
+  }
+};
+
+/*
+ * Event Listeners
+ */
+field_credit_card.addEventListener("keyup", function() {
+  handleCCUpdate();
+});
+field_credit_card.addEventListener("paste", function() {
+  handleCCUpdate();
+});
+field_credit_card.addEventListener("blur", function() {
+  handleCCUpdate();
+});
+field_expiration_month.addEventListener("change", function() {
+  handleExpUpdate("month");
+});
+field_expiration_year.addEventListener("change", function() {
+  handleExpUpdate("year");
+});
