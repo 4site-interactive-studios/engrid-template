@@ -202,11 +202,6 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
     background-size: contain;
   }
 
-  // Specified on child dom elements so that if there are none, then the parent div collapses its vertical height.
-  .content-preFooter > div{
-    min-height: 710px;
-  }
-
   .content-preFooter.pseudo-subgrid > div {
     grid-column: bc;
   }
@@ -221,6 +216,11 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
 }
 
 body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
+  // Specified on child dom elements so that if there are none, then the parent div collapses its vertical height.
+  .content-preFooter > div {
+    min-height: 710px;
+  }
+
   .page-backgroundImage {
     grid-row: page-start / content-footerSpacer-end;
   }
@@ -323,7 +323,7 @@ body#en__pagebuilder #engrid.layout-centercenter1col {
 
     .content-preFooter.pseudo-subgrid > div {
       grid-column: cc;
-    }    
+    }
 
     .content-footer.pseudo-subgrid > div {
       grid-column: cc;
@@ -341,12 +341,14 @@ body#en__pagebuilder #engrid.layout-centercenter1col {
 /* Sum of all MAX values of the Body Columns + 1px */
 @media screen and (min-width: 1231px) {
   #engrid.layout-centercenter1col {
-
-    .content-preFooter{
+    .content-preFooter {
       background-size: cover;
     }
+  }
+
+  body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
     // Specified on child dom elements so that if there are none, then the parent div collapses its vertical height.
-    .content-preFooter > div{
+    .content-preFooter > div {
       min-height: 1010px;
     }
   }
