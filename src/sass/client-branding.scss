@@ -196,7 +196,8 @@ body:not(#en__pagebuilder) .en__field--donationAmt label {
   z-index: 1;
 }
 
-#engrid .en__field__input--checkbox + .en__field__label {
+#engrid .en__field__input--checkbox + .en__field__label,
+#engrid .en__contactDetails__rows {
   font-size: 18px;
   font-weight: 400;
   text-transform: none;
@@ -329,10 +330,11 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
     align-items: center;
     color: #fff;
     padding: 30px 0px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     .footer-logo {
       padding: 1rem;
-      img{
+      img {
         width: 100%;
         max-width: 245px;
       }
@@ -383,7 +385,7 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   }
 
   @media screen and (min-width: 970px) {
-    .footer-wrapper .footer-copy p{
+    .footer-wrapper .footer-copy p {
       border-left: 1px solid #fff;
       padding-left: 65px;
     }
