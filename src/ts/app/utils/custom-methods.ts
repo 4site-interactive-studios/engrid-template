@@ -664,6 +664,9 @@ const field_payment_type = document.getElementById(
 let field_expiration_parts = document.querySelectorAll(
   ".en__field--ccexpire .en__field__input--splitselect"
 );
+const field_country = document.getElementById(
+  "en__field_supporter_country"
+) as HTMLInputElement;
 let field_expiration_month = field_expiration_parts[0] as HTMLSelectElement;
 let field_expiration_year = field_expiration_parts[1] as HTMLSelectElement;
 
@@ -709,6 +712,7 @@ const handleExpUpdate = (e: string) => {
   if (e == "month") {
     let selected_month = parseInt(field_expiration_month.value);
     let disable = selected_month < current_month;
+    console.log('month disable', disable, typeof disable, selected_month, current_month);
     for (let i = 0; i < field_expiration_year.options.length; i++) {
       // disable or enable current year
       if (parseInt(field_expiration_year.options[i].value) <= current_year) {
@@ -723,6 +727,7 @@ const handleExpUpdate = (e: string) => {
   } else if (e == "year") {
     let selected_year = parseInt(field_expiration_year.value);
     let disable = selected_year == current_year;
+    console.log('year disable', disable, typeof disable, selected_year, current_year);
     for (let i = 0; i < field_expiration_month.options.length; i++) {
       // disable or enable all months less than current month
       if (parseInt(field_expiration_month.options[i].value) < current_month) {
@@ -758,3 +763,14 @@ field_expiration_month.addEventListener("change", function() {
 field_expiration_year.addEventListener("change", function() {
   handleExpUpdate("year");
 });
+
+const getUrlParameter = (name: string) => {
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  var results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+let country_code = getUrlParameter('country');
+if(country_code) {
+  field_country.value = country_code;
+}
