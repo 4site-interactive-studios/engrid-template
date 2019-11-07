@@ -54,9 +54,7 @@
 @supports (display: grid) {
   #engrid .en__component--advrow,
   #engrid .en__component--advrow .pseudo-subgrid,
-  #EN__RootElement
-    .pboAdvancedRow__preview
-    .en__component--row.en__component--advrow {
+  #EN__RootElement .pboAdvancedRow__preview .en__component--row.en__component--advrow {
     /* autoprefixer grid: off */
     display: grid;
   }
@@ -465,10 +463,8 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
   //   0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
   // box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
   //   0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  -webkit-box-shadow: 0 36px 50px 0 rgba(0, 0, 0, 0.2),
-    0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  box-shadow: 0 36px 50px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 36px 50px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 36px 50px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 body:not(#en__pagebuilder) #engrid .page-customCode {
@@ -476,20 +472,14 @@ body:not(#en__pagebuilder) #engrid .page-customCode {
 }
 
 // @TODO The minimum height requirment is causing vertically small content (e.g. Title and one sentence) to always overlow past the bottom edge of the viewport. One solution is to also add a body class when the JS that sets the background image is triggered. This could be referenced to only apply the min-height when that's present
-body:not(#en__pagebuilder)
-  #engrid
-  .en__component--advrow
-  .page-backgroundImage {
+body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImage {
   background-position: top left;
   background-repeat: no-repeat;
   z-index: -3;
   background-size: cover;
 }
 
-body:not(#en__pagebuilder).page-backgroundImage-overflow
-  #engrid
-  .en__component--advrow
-  .page-backgroundImage {
+body:not(#en__pagebuilder).footer-below-fold #engrid .en__component--advrow .page-backgroundImage {
   -webkit-clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   height: 120vh;
@@ -517,16 +507,10 @@ body:not(#en__pagebuilder).page-backgroundImage-overflow
 //   background-size: cover;
 // }
 
-body:not(#en__pagebuilder)
-  #engrid.legacy
-  .en__component--advrow
-  .page-backgroundImage {
+body:not(#en__pagebuilder) #engrid.legacy .en__component--advrow .page-backgroundImage {
   background-position: top right;
 }
 
-body:not(#en__pagebuilder)
-  #engrid
-  .en__component--advrow
-  .page-backgroundImageOverlay {
+body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImageOverlay {
   z-index: -1;
 }

@@ -11,10 +11,12 @@ export const run = () => {
   // app.watchRecurrpayField();
   // app.watchGiveBySelectField();
   // app.watchLegacyGiveBySelectField();
+
+  app.contactDetailLabels();
   app.enInput.init();
 
   new ShowHideRadioCheckboxes("transaction.giveBySelect", "giveBySelect-");
-  new ShowHideRadioCheckboxes("supporter.questions.180165", "giveBySelect-");  
+  new ShowHideRadioCheckboxes("supporter.questions.180165", "giveBySelect-");
   new ShowHideRadioCheckboxes("transaction.inmem", "inmem-");
   new ShowHideRadioCheckboxes("transaction.recurrpay", "recurrpay-");
   app.debugBar();

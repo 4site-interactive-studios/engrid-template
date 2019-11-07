@@ -84,14 +84,18 @@ export const setBackgroundImages = () => {
     // Support for legacy pages
     pageBackgroundImgSrc = pageBackgroundLegacyImg.innerHTML;
     pageBackgroundLegacyImg.style.display = "none";
+  } else {
+    // Fallback Image
+    pageBackgroundImgSrc =
+      "https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/IMG-3019_Greenpeace_Victor_Moriyama-BACKGROUND.jpg?v=1572910092000";
   }
 
   if (pageBackground && pageBackgroundImgSrc) {
     const contentFooter = document.querySelector(".content-footer");
-    if (isInViewport(contentFooter)) {
-      body.classList.add("page-backgroundImage-visible");
+    if (contentFooter && isInViewport(contentFooter)) {
+      body.classList.add("footer-above-fold");
     } else {
-      body.classList.add("page-backgroundImage-overflow");
+      body.classList.add("footer-below-fold");
     }
     pageBackground.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
   }
@@ -164,7 +168,7 @@ export const bindEvents = (e: Element) => {
   };
 
   const enField = e.querySelector("input, textarea, select") as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
-  if (enField){
+  if (enField) {
     enField.addEventListener("focus", handleFocus);
     enField.addEventListener("blur", handleBlur);
     enField.addEventListener("change", handleChange);
@@ -682,16 +686,25 @@ if (field_expiration_month && field_expiration_year) {
 // EN Polyfill to support "label" clicking on Advocacy Recipient "labels"
 export const contactDetailLabels = () => {
   const contact = document.querySelectorAll(".en__contactDetails__rows") as NodeList;
+
+  // @TODO the targeting of the checkbox does not work and errors on click with a null value
+  const recipientChange = (e: Event) => {
+    let recipientRow = e.target as HTMLDivElement;
+    let recipientRowWrapper = recipientRow.parentNode as HTMLDivElement;
+    console.log("recipientChange: recipientRowWrapper: " + recipientRowWrapper);
+    let recipientRowCheckbox = recipientRowWrapper.querySelector(".en__contactDetails__select") as HTMLInputElement;
+    console.log("recipientChange: recipientRowCheckbox: " + recipientRowCheckbox);
+    if (recipientRowCheckbox.checked) {
+      recipientRowCheckbox.checked = false;
+    } else {
+      recipientRowCheckbox.checked = true;
+    }
+  };
+
   if (contact) {
     Array.from(contact).forEach(e => {
-      let element = e as HTMLElement;
+      let element = e as HTMLDivElement;
       element.addEventListener("click", recipientChange);
     });
   }
-
-  const recipientChange = (e: Event) => {
-    const recipientLabelRow = e.target as HTMLElement;
-    const contactCheckbox = recipientLabelRow.previousSibling as HTMLInputElement;
-    contactCheckbox.checked = !contactCheckbox.checked;
-  };
 };
