@@ -679,17 +679,6 @@ if (field_expiration_month && field_expiration_year) {
   });
 }
 
-const getUrlParameter = (name: string) => {
-  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-  var results = regex.exec(location.search);
-  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-};
-let country_code = getUrlParameter("country");
-if (country_code) {
-  field_country.value = country_code;
-}
-
 // EN Polyfill to support "label" clicking on Advocacy Recipient "labels"
 export const contactDetailLabels = () => {
   const contact = document.querySelectorAll(".en__contactDetails__rows") as NodeList;
