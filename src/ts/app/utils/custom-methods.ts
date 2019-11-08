@@ -70,7 +70,7 @@ export const setBackgroundImages = () => {
    */
   const isInViewport = (e: any) => {
     const distance = e.getBoundingClientRect();
-    console.log("Footer: ", distance);
+    // console.log("Footer: ", distance);
     return (
       distance.top >= 0 &&
       distance.left >= 0 &&
@@ -695,15 +695,15 @@ export const contactDetailLabels = () => {
   // @TODO Needs refactoring. Has to be a better way to do this.
   const recipientChange = (e: Event) => {
     let recipientRow = e.target as HTMLDivElement;
-    console.log("recipientChange: recipientRow: ", recipientRow);
+    // console.log("recipientChange: recipientRow: ", recipientRow);
     let recipientRowWrapper = recipientRow.parentNode as HTMLDivElement;
-    console.log("recipientChange: recipientRowWrapper: ", recipientRowWrapper);
+    // console.log("recipientChange: recipientRowWrapper: ", recipientRowWrapper);
     let recipientRowsWrapper = recipientRowWrapper.parentNode as HTMLDivElement;
-    console.log("recipientChange: recipientRowsWrapper: ", recipientRowsWrapper);
+    // console.log("recipientChange: recipientRowsWrapper: ", recipientRowsWrapper);
     let contactDetails = recipientRowsWrapper.parentNode as HTMLDivElement;
-    console.log("recipientChange: contactDetails: ", contactDetails);
+    // console.log("recipientChange: contactDetails: ", contactDetails);
     let contactDetailsCheckbox = contactDetails.querySelector("input") as HTMLInputElement;
-    console.log("recipientChange: contactDetailsCheckbox: ", contactDetailsCheckbox);
+    // console.log("recipientChange: contactDetailsCheckbox: ", contactDetailsCheckbox);
     if (contactDetailsCheckbox.checked) {
       contactDetailsCheckbox.checked = false;
     } else {
@@ -718,3 +718,24 @@ export const contactDetailLabels = () => {
     });
   }
 };
+
+// Adds a URL path that can be used to easily arrive at the editable version of the current page
+// By appending "/edit" to the end of a live URL you will see the editable version
+//@TODO Needs to be updated to adapt for "us.e-activist" and "e-activist" URLS, without needing it specified, as well as pass in page number and work for all page types without each needing to be specified
+export const easyEdit = () =>{
+  const liveURL = window.location.href as string;
+  let editURL = "" as string;
+  console.log("easyEdit loaded: liveURL: " + liveURL);
+  if (liveURL.search("edit") !== -1){
+    console.log("easyEdit: liveURL: contains edit");
+    if (liveURL.includes("https://act.ran.org/page/")) {
+      console.log("easyEdit: liveURL: contains https://act.ran.org/page/");
+      editURL = liveURL.replace("https://act.ran.org/page/", "https://us.e-activist.com/index.html#pages/");
+      editURL = editURL.replace("/donate/1", "/edit");
+      editURL = editURL.replace("/action/1", "/edit");
+      editURL = editURL.replace("/data/1", "/edit");
+      window.location.href = editURL;
+      console.log("easyEdit triggered: editURL: " + editURL);
+    }
+  }
+}

@@ -13,6 +13,7 @@ export const run = () => {
   // app.watchLegacyGiveBySelectField();
 
   app.contactDetailLabels();
+  app.easyEdit();
   app.enInput.init();
 
   new ShowHideRadioCheckboxes("transaction.giveBySelect", "giveBySelect-");
