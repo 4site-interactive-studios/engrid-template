@@ -687,17 +687,22 @@ if (field_expiration_month && field_expiration_year) {
 export const contactDetailLabels = () => {
   const contact = document.querySelectorAll(".en__contactDetails__rows") as NodeList;
 
-  // @TODO the targeting of the checkbox does not work and errors on click with a null value
+  // @TODO Needs refactoring. Has to be a better way to do this.
   const recipientChange = (e: Event) => {
     let recipientRow = e.target as HTMLDivElement;
+    console.log("recipientChange: recipientRow: ", recipientRow);
     let recipientRowWrapper = recipientRow.parentNode as HTMLDivElement;
-    console.log("recipientChange: recipientRowWrapper: " + recipientRowWrapper);
-    let recipientRowCheckbox = recipientRowWrapper.querySelector(".en__contactDetails__select") as HTMLInputElement;
-    console.log("recipientChange: recipientRowCheckbox: " + recipientRowCheckbox);
-    if (recipientRowCheckbox.checked) {
-      recipientRowCheckbox.checked = false;
+    console.log("recipientChange: recipientRowWrapper: ", recipientRowWrapper);
+    let recipientRowsWrapper = recipientRowWrapper.parentNode as HTMLDivElement;
+    console.log("recipientChange: recipientRowsWrapper: ", recipientRowsWrapper);
+    let contactDetails = recipientRowsWrapper.parentNode as HTMLDivElement;
+    console.log("recipientChange: contactDetails: ", contactDetails);
+    let contactDetailsCheckbox = contactDetails.querySelector("input") as HTMLInputElement;
+    console.log("recipientChange: contactDetailsCheckbox: ", contactDetailsCheckbox);
+    if (contactDetailsCheckbox.checked) {
+      contactDetailsCheckbox.checked = false;
     } else {
-      recipientRowCheckbox.checked = true;
+      contactDetailsCheckbox.checked = true;
     }
   };
 
