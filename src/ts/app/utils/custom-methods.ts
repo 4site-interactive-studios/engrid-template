@@ -55,11 +55,12 @@ export const enInput = (() => {
 
 export const setBackgroundImages = () => {
   // Find Inline Background Image, hide it, and set it as the background image.
-  let pageBackground = document.querySelector(".page-backgroundImage") as HTMLElement;
-  let pageBackgroundImg = document.querySelector(".page-backgroundImage img") as HTMLImageElement;
-  let pageBackgroundLegacyImg = document.querySelector(".background-image p") as HTMLElement;
-
-  let pageBackgroundImgSrc: any = null;
+  const pageBackground = document.querySelector(".page-backgroundImage") as HTMLElement;
+  const pageBackgroundImg = document.querySelector(".page-backgroundImage img") as HTMLImageElement;
+  const pageBackgroundLegacyImg = document.querySelector(".background-image p") as HTMLElement;
+  let pageBackgroundImgSrc = "" as string;
+  // let pageBackgroundImgSrc: any = null;
+  const contentFooter = document.querySelector(".content-footer");
 
   /*!
    * Determine if an element is in the viewport
@@ -69,6 +70,7 @@ export const setBackgroundImages = () => {
    */
   const isInViewport = (e: any) => {
     const distance = e.getBoundingClientRect();
+    console.log("Footer: ", distance);
     return (
       distance.top >= 0 &&
       distance.left >= 0 &&
@@ -77,6 +79,14 @@ export const setBackgroundImages = () => {
     );
   };
 
+  //Measure page layout to see if it's a short or tall page before applying the background image
+  if (contentFooter && isInViewport(contentFooter)) {
+    body.classList.add("footer-above-fold");
+  } else {
+    body.classList.add("footer-below-fold");
+  }
+
+  // Find the background image
   if (pageBackgroundImg) {
     pageBackgroundImgSrc = pageBackgroundImg.src;
     pageBackgroundImg.style.display = "none";
@@ -90,13 +100,8 @@ export const setBackgroundImages = () => {
       "https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/IMG-3019_Greenpeace_Victor_Moriyama-BACKGROUND.jpg?v=1572910092000";
   }
 
-  if (pageBackground && pageBackgroundImgSrc) {
-    const contentFooter = document.querySelector(".content-footer");
-    if (contentFooter && isInViewport(contentFooter)) {
-      body.classList.add("footer-above-fold");
-    } else {
-      body.classList.add("footer-below-fold");
-    }
+  // Set the background image
+  if (pageBackgroundImgSrc) {
     pageBackground.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
   }
 };
