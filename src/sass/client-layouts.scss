@@ -130,7 +130,7 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
     }
 
     .body-footer {
-      margin-bottom: 5rem;
+      margin-bottom: 7rem;
     }
 
     .content-footer.pseudo-subgrid > div {
@@ -162,6 +162,40 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
 * # LAYOUT - Center Center 1 Column - layout-centercenter1col
 * ##########################################################
 */
+
+@media screen and (max-width: 350px) {
+
+  // Remove down arrow when giving frequency wraps
+  #engrid .monthly-gift-upsell-tooltip .highlight:after{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    // Remove give by icons on small screens
+    #engrid .give-by-select .en__field--radio .en__field__item input[type="radio"] + label{
+      background-image: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+}
+
+@media screen and (max-width: 599px) {
+  #engrid.layout-centercenter1col {
+    // font-size: 94%;
+  }
+
+  // .en__field--donationAmt .en__field__item--other{
+  //   flex-basis: calc(100%);
+  // }
+
+  #engrid .en__field--donationAmt .en__field__element--radio .en__field__item {
+    width: calc(50% - 0.5rem);
+  }
+}
 
 #engrid.layout-centercenter1col {
   .content-header,
@@ -270,6 +304,8 @@ body#en__pagebuilder #engrid.layout-centercenter1col {
 /* Sum of all MIN values of the Body Columns */
 @media screen and (min-width: 600px) {
   #engrid.layout-centercenter1col {
+    // font-size: 100%;
+
     /* prettier-ignore */
     .en__component--advrow,
     .en__component--advrow .pseudo-subgrid {

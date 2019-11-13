@@ -44,10 +44,11 @@
       format("opentype");
 }
 
+// @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
 body {
   // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-family: HarmoniaSansStd;
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
