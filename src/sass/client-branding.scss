@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: $background-color;
 }
 
 // #engrid .en__component--copyblock p {
@@ -14,7 +14,7 @@ body {
 
 #engrid h1 {
   font-family: HarmoniaSansStd;
-  font-size: 48px;
+  font-size: calc(0.05552em * 48);
   font-weight: 900;
   font-stretch: normal;
   font-style: normal;
@@ -27,7 +27,7 @@ body {
 
 #engrid h2 {
   font-family: HarmoniaSansStd;
-  font-size: 24px;
+  font-size: calc(0.05552em * 24);
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -37,7 +37,7 @@ body {
 
 #engrid h3 {
   font-family: HarmoniaSansStd;
-  font-size: 16px;
+  font-size: calc(0.05552em * 16);
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -47,7 +47,7 @@ body {
 
 #engrid label.en__field__label {
   font-family: HarmoniaSansStd;
-  font-size: 12px;
+  font-size: calc(0.05552em * 12);
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -58,7 +58,7 @@ body {
 
 #engrid .en__field__label--item {
   font-family: HarmoniaSansStd;
-  font-size: 18px;
+  font-size: calc(0.05552em * 18);
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -70,7 +70,7 @@ body {
 #engrid .en__field--donationAmt .en__field__item--other::before,
 #engrid .en__field--donationAmt .en__field__item--other input {
   font-family: HarmoniaSansStd;
-  font-size: 24px;
+  font-size: calc(0.05552em * 24);
   font-weight: 900;
   font-stretch: normal;
   font-style: normal;
@@ -78,7 +78,11 @@ body {
   letter-spacing: normal;
 }
 
-.give-by-select .en__field--radio {
+#engrid .en__field--recurrpay label.en__field__label{
+  font-size: calc(0.05552em * 24);
+}
+
+#engrid .give-by-select .en__field--radio {
   label {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -86,7 +90,7 @@ body {
     margin-top: 0.83rem;
     display: block;
     width: 100%;
-    font-size: 24px;
+    font-size: calc(0.05552em * 24);
     font-weight: 900;
     line-height: 1;
     padding: 18px 0;
@@ -99,9 +103,9 @@ body {
   font-weight: 500;
 
   display: inline-block;
-  margin-left: -0.5rem;
+  // margin-left: -0.5rem;
   &.big {
-    font-size: 24px;
+    font-size: 120%;
   }
 }
 
@@ -114,13 +118,10 @@ body {
   min-height: 64px;
 }
 
-.en__field--donationAmt .en__field__item--other::before {
+#engrid .en__field--donationAmt .en__field__item--other::before {
   display: block;
   content: "$";
   position: relative;
-  // font-family: inherit;
-  // font-size: 1rem;
-  // font-weight: 400;
   height: 0;
   left: calc(33% - 1rem);
   top: 1.1rem;
@@ -165,15 +166,15 @@ body:not(#en__pagebuilder) .en__field--donationAmt label {
   display: none;
 }
 
-.en__field--recurrpay.en__mandatory label.en__field__label {
-  font-size: 24px !important;
+.en__field--recurrpay label.en__field__label {
+  // font-size: calc(0.05552em * 24) !important;
   font-weight: 900 !important;
   text-transform: none !important;
   &::before {
     top: 3px;
   }
 }
-.en__field--recurrpay.en__mandatory > label {
+.en__field--recurrpay > label {
   display: none;
 }
 
@@ -182,7 +183,7 @@ body:not(#en__pagebuilder) .en__field--donationAmt label {
 }
 
 #engrid .monthly-gift-upsell-tooltip .highlight:after {
-  top: 73px;
+  bottom: -12px;
   left: 60%;
   content: " ";
   height: 0;
@@ -197,7 +198,7 @@ body:not(#en__pagebuilder) .en__field--donationAmt label {
 
 #engrid .en__field__input--checkbox + .en__field__label,
 #engrid .en__contactDetails__rows {
-  font-size: 18px;
+  font-size: calc(0.05552em * 18);;
   font-weight: 400;
   text-transform: none;
   letter-spacing: 0.4px;
@@ -296,7 +297,7 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
     .header-wrapper {
       h2 {
         margin: 0;
-        font-size: 32px;
+        font-size: calc(0.05552em * 32);;
         font-weight: 900;
         letter-spacing: 1px;
         color: #000000;
@@ -306,7 +307,7 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
       }
     }
     p {
-      font-size: 16px;
+      font-size: calc(0.05552em * 16);;
       line-height: 1.58;
       letter-spacing: 0.2px;
       text-align: center;
@@ -343,7 +344,7 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
       a {
         display: block;
         color: #fff;
-        font-size: 16px;
+        font-size: calc(0.05552em * 16);;
         font-weight: bold;
         text-decoration: none;
         &:hover {
@@ -356,7 +357,7 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
       max-width: 452px;
 
       p {
-        font-size: 14px;
+        font-size: calc(0.05552em * 14);;
         font-weight: 400;
         line-height: 1.57;
         letter-spacing: 0.6px;
@@ -406,15 +407,15 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
       -ms-flex-positive: 1;
       flex-grow: 1;
       padding: 1rem 0 1rem 2.25rem;
-      background-position-x: calc(50% - 1.5rem);
-      background-position-y: calc(50% - 1px);
+      background-position-x: calc(50% - 25px);
+      background-position-y: calc(50% - 2px);
       background-repeat: no-repeat;
-      font-size: 18px;
+      font-size: calc(0.05552em * 18);;
       font-weight: bold;
       letter-spacing: 0.4px;
       text-align: center;
       color: #ffffff;
-      line-height: 1;
+      // line-height: 1;
       text-transform: none;
     }
   }
@@ -438,4 +439,44 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   #en__field_supporter_monthly_upsell_checkbox:checked + .en__field__label:after {
     top: 0.25rem;
   }
+
+  .en__field--donationAmt input.en__field__input--other::placeholder {
+    opacity: .7;
+  }
+
+  // All Styling Needed to visuall merge country with the Address Input
+  // .en__field--153552.en__field--country{
+  //   margin: 0;
+  //   padding: 0;
+  // }
+
+  // .en__field--153552.en__field--country label{
+  //   display: none;
+  // }
+
+  // .en__field--153552.en__field--country select{
+  //   width: 80px;
+  //   position: absolute;
+  //   top: 27px;
+  //   right: 1px;
+  //   z-index: 1;
+  //   text-align-last: right;
+  //   padding-right: 2rem;
+  //   border: none;
+  //   box-shadow: none;
+  // }
+
+  // .en__field--153552.en__field--country::before{
+  //   content: "";
+  //   position: absolute;
+  //   top: 27px;
+  //   right: 81px;
+  //   z-index: 1;
+  //   height: 32px;
+  //   width: 1px;
+  //   background: #cacaca;
+  //   margin-top: 5px;
+  //   margin-bottom: 5px;
+  // }
+
 }

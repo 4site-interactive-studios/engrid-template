@@ -45,7 +45,8 @@
 }
 
 // @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
-body {
+body,
+body#en__pagebuilder {
   // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-family: HarmoniaSansStd;
   font-size: 1.125em;

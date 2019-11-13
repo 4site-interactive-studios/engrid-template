@@ -469,7 +469,7 @@ width: 33.333333%;
   height: 16px;
   color: $client-checkmark-background-color;
   background-color: transparent;
-  font-size: 18px;
+  font-size: calc(0.05552em * 18);
 }
 
 /* QA Needed: Would like to find a way so that radio input focus is round rather than square. May require re-writing how radio inputs are styled */
@@ -504,7 +504,7 @@ width: 33.333333%;
   color: $client-submit-button-font-color;
   display: block;
   width: 100%;
-  font-size: 24px;
+  font-size: calc(0.05552em * 24);
   font-weight: 900;
   line-height: 1;
   padding: 18px 0;
@@ -549,7 +549,7 @@ width: 33.333333%;
 /* Needs QA: Makes images responsive. Look into not using !important. */
 #engrid img {
   max-width: 100%;
-  height: auto !important;
+  // height: auto !important;
   margin: 0 auto;
   display: inherit;
 }
@@ -987,7 +987,7 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 #nav-header .navbar-donate {
   background-color: #f1700b;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: calc(0.05552em * 18);
   padding: 10px 50px 10px;
   color: #ffffff;
   text-decoration: none;

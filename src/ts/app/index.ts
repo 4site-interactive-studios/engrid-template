@@ -2,9 +2,9 @@ import * as app from "./utils/custom-methods";
 import ShowHideRadioCheckboxes from "./utils/show-hide-radio-checkboxes";
 export const run = () => {
   // The entire App
-  app.body.classList.remove("loading");
-  app.body.classList.add("loaded");
   app.setBackgroundImages();
+  // app.body.classList.remove("loading");
+  // app.body.classList.add("loaded");
 
   app.inputPlaceholder();
   // app.watchInmemField();
