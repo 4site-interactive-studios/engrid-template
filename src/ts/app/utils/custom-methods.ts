@@ -494,25 +494,31 @@ export const watchRecurrpayField = () => {
   }
 };
 
+// @TODO Refactor (low priority)
 export const watchGiveBySelectField = () => {
   const enFieldGiveBySelect = document.querySelector(".en__field--giveBySelect") as HTMLElement;
   const transactionGiveBySelect = document.getElementsByName("transaction.giveBySelect") as NodeList;
+  const enFieldPaymentType = document.querySelector("#en__field_transaction_paymenttype") as HTMLSelectElement;
   let enFieldGiveBySelectCurrentValue = document.querySelector('input[name="transaction.giveBySelect"]:checked') as HTMLInputElement;
+  const prefix = "has-give-by-";
+  const enGrid_classes = enGrid.className.split(" ").filter(c => !c.startsWith(prefix));
+
 
   const handleEnFieldGiveBySelect = (e: Event) => {
     enFieldGiveBySelectCurrentValue = document.querySelector('input[name="transaction.giveBySelect"]:checked') as HTMLInputElement;
     if (enFieldGiveBySelectCurrentValue.value == "card") {
+      enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-card");
-      enGrid.classList.remove("has-give-by-check");
-      enGrid.classList.remove("has-give-by-paypal");
+      enFieldPaymentType.value = "card";
+      handleCCUpdate();
     } else if (enFieldGiveBySelectCurrentValue.value == "check") {
-      enGrid.classList.remove("has-give-by-card");
+      enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-check");
-      enGrid.classList.remove("has-give-by-paypal");
+      enFieldPaymentType.value = "check";
     } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {
-      enGrid.classList.remove("has-give-by-card");
-      enGrid.classList.remove("has-give-by-check");
+      enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-paypal");
+      enFieldPaymentType.value = "paypal";
     }
   };
 
@@ -520,17 +526,18 @@ export const watchGiveBySelectField = () => {
   if (enFieldGiveBySelect) {
     enFieldGiveBySelectCurrentValue = document.querySelector('input[name="transaction.giveBySelect"]:checked') as HTMLInputElement;
     if (enFieldGiveBySelectCurrentValue.value == "card") {
+      enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-card");
-      enGrid.classList.remove("has-give-by-check");
-      enGrid.classList.remove("has-give-by-paypal");
+      enFieldPaymentType.value = "card";
+      handleCCUpdate();
     } else if (enFieldGiveBySelectCurrentValue.value == "check") {
-      enGrid.classList.remove("has-give-by-card");
+      enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-check");
-      enGrid.classList.remove("has-give-by-paypal");
+      enFieldPaymentType.value = "check";
     } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {
-      enGrid.classList.remove("has-give-by-card");
-      enGrid.classList.remove("has-give-by-check");
+      enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-paypal");
+      enFieldPaymentType.value = "paypal";
     }
   }
 
@@ -543,7 +550,7 @@ export const watchGiveBySelectField = () => {
   }
 };
 
-// Support the Legacy Give By Select field
+// LEGACY: Support the Legacy Give By Select field
 export const watchLegacyGiveBySelectField = () => {
   const enFieldGiveBySelect = document.querySelector(".en__field--give-by-select") as HTMLElement;
   const transactionGiveBySelect = document.getElementsByName("supporter.questions.180165") as NodeList;
@@ -603,16 +610,53 @@ var current_year = d.getFullYear() - 2000;
 // getCardType used by handleCCUpdate()
 const getCardType = (cc_partial: string) => {
   let key_character = cc_partial.charAt(0);
+  const prefix = "live-card-type-";
+  const field_credit_card_classes = field_credit_card.className.split(" ").filter(c => !c.startsWith(prefix));
+  
   switch (key_character) {
+    case "0":
+      field_credit_card.className = field_credit_card_classes.join(" ").trim();
+      field_credit_card.classList.add("live-card-type-invalid");
+      return "na";
+    case "1":
+      field_credit_card.className = field_credit_card_classes.join(" ").trim();
+      field_credit_card.classList.add("live-card-type-invalid");
+      return "na";
+    case "2":
+      field_credit_card.className = field_credit_card_classes.join(" ").trim();
+      field_credit_card.classList.add("live-card-type-invalid");
+      return "na";
     case "3":
+      field_credit_card.className = field_credit_card_classes.join(" ").trim();
+      field_credit_card.classList.add("live-card-type-amex");
       return "AX";
     case "4":
+      field_credit_card.className = field_credit_card_classes.join(" ").trim();
+      field_credit_card.classList.add("live-card-type-visa");
       return "VI";
     case "5":
+      field_credit_card.className = field_credit_card_classes.join(" ").trim();
+      field_credit_card.classList.add("live-card-type-mastercard");
       return "MC";
     case "6":
+      field_credit_card.className = field_credit_card_classes.join(" ").trim();
+      field_credit_card.classList.add("live-card-type-discover");
       return "DI";
+    case "7":
+      field_credit_card.className = field_credit_card_classes.join(" ").trim();
+      field_credit_card.classList.add("live-card-type-invalid");
+      return "na";      
+    case "8":
+      field_credit_card.className = field_credit_card_classes.join(" ").trim();
+      field_credit_card.classList.add("live-card-type-invalid");
+      return "na";
+    case "9":
+      field_credit_card.className = field_credit_card_classes.join(" ").trim();
+      field_credit_card.classList.add("live-card-type-invalid");
+      return "na";
     default:
+      field_credit_card.className = field_credit_card_classes.join(" ").trim();
+      field_credit_card.classList.add("live-card-type-na");
       return "na";
   }
 };
@@ -738,4 +782,26 @@ export const easyEdit = () =>{
       console.log("easyEdit triggered: editURL: " + editURL);
     }
   }
+}
+
+// Replace Submit Button Text, but revert if there is client side error on the page.
+export const onFormSubmitSubmitButtonUpdate = () =>{
+  
+
+  const submitButton = document.querySelector(".en__submit button") as HTMLElement;
+  let submitButtonOriginalHTML = submitButton.innerHTML as string;
+  let submitButtonProcessingHTML = "<span class='loader-wrapper'><span class='loader loader-quart'></span><span class='submit-button-text-wrapper'>" + submitButtonOriginalHTML + "</span></span>" as string;  
+
+  if (submitButton){
+    window.enOnSubmit = function(){
+      submitButtonOriginalHTML = submitButton.innerHTML;
+      submitButton.innerHTML = submitButtonProcessingHTML;
+      return true;
+    }
+
+    window.enOnError = function(){
+      submitButton.innerHTML = submitButtonOriginalHTML;
+    }
+  }
+
 }
