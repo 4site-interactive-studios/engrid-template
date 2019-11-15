@@ -1630,3 +1630,38 @@ body.error-jump-assist #engrid .en__component .en__field__error {
       color: #9e9e9e;
   }
 }
+
+// @TODO Confirm the font-size styling is resetting the fonts https://act.ran.org/page/14333/event/1?mode=DEMO
+//Event styling
+#engrid .en__additional__amount,
+#engrid .en__additional__label,
+#engrid .en__ticket__currency,
+#engrid .en__ticket__name,
+#engrid .en__ticket__price {
+  font-size: inherit;
+}
+
+#engrid .en__ticket__selector{
+  display: flex;
+}
+
+#engrid .en__additional__amount,
+#engrid .en__ticket__field--cost{
+  width: initial;
+}
+
+.en__ticket__field--quantity{
+  width: initial;
+}
+
+#engrid .en__ticket__minus,
+#engrid .en__ticket__plus{
+  background-color: transparent;
+}
+
+#engrid .en__ticket__minus:hover,
+#engrid .en__ticket__minus:focus,
+#engrid .en__ticket__plus:hover,
+#engrid .en__ticket__plus:focus{
+  background-color: #ffffff;
+}
