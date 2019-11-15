@@ -1190,9 +1190,9 @@ body.error-jump-assist #engrid .en__component .en__field__error {
   background-color: initial;
 }
 
-.en__component--formblock {
-  padding-left: -0.5rem;
-  padding-right: -0.5rem;
+.en__component--formblock.manual-form-layout {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
 }
 
 #engrid .en__field {
