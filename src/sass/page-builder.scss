@@ -20,58 +20,94 @@
   justify-content: center;
 }
 
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.page-alert::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.page-alert::before {
   content: "Page Alert";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.content-header::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.content-header::before {
   content: "Content Header";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-headerOutside::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-headerOutside::before {
   content: "Body Header Outside";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-header::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-header::before {
   content: "Body Header";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-banner::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-banner::before {
   content: "Body Banner";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-bannerOverlay::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-bannerOverlay::before {
   content: "Body Banner Overlay";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-top::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-top::before {
   content: "Body Top";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-side::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-side::before {
   content: "Body Side";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-main::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-main::before {
   content: "Body Main";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-bottom::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-bottom::before {
   content: "Body Bottom";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-footer::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-footer::before {
   content: "Body Footer";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.body-footerOutside::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-footerOutside::before {
   content: "Body Footer Outside";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.content-footerSpacer::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.content-footerSpacer::before {
   content: "Content Footer Spacer";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.content-preFooter::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.content-preFooter::before {
   content: "Content Pre Footer";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.content-footer::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.content-footer::before {
   content: "Content Footer";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.page-customCode::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.page-customCode::before {
   content: "Page Custom Code";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.page-backgroundImage::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.page-backgroundImage::before {
   content: "Page Background Image";
 }
-#EN__RootElement .pboAdvancedRow__preview .en__component--column.page-backgroundImageOverlay::before {
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.page-backgroundImageOverlay::before {
   content: "Page Background Image Overlay";
 }
 
@@ -144,7 +180,7 @@
 
   #EN__RootElement .pboAdvancedRow__preview .en__component--column:before
 
-  // @TODO Might need to be moved into main.pboAdvancedRow__preview .css
+  // @TODO Might need to be moved into main.pboAdvancedRow__preview css
   #engrid {
     .pboAdvancedRow__preview .en__component--advrow {
       width: 100%;
