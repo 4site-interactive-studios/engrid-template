@@ -10,83 +10,82 @@
 * # LAYOUT - Center Left 1 Column - layout-centerleft1col
 * ##########################################################
 */
+@media screen and (max-width: 600px) {
+  #engrid.layout-centerleft1col {
+    .content-header,
+    .body-banner,
+    .body-bannerOverlay,
+    .body-side,
+    .body-footerOutside {
+      display: none;
+    }
 
-#engrid.layout-centerleft1col {
-  .content-header,
-  .body-banner,
-  .body-bannerOverlay,
-  .body-side,
-  .body-footerOutside {
-    display: none;
+    /* prettier-ignore */
+    .en__component--advrow,
+    .en__component--advrow .pseudo-subgrid {
+      /* autoprefixer grid: off */
+      grid-template-columns:
+      [
+        pc-start lpc-start]  minmax(0px, 1fr)                  [lpc-end
+        cc-start lcc-start]  minmax(15px, 1fr)                 [lcc-end
+        bc-start lbc-start]  minmax(calc(50vw - 15px), 250px)  [lbc-end
+        rbc-start]           minmax(calc(50vw - 15px), 250px)  [rbc-end bc-end
+        rcc-start]           minmax(15px, 1fr)                 [rcc-end cc-end
+        rpc-start]           minmax(0px, 1fr)                  [rpc-end pc-end               
+      ];
+    }
+
+    .body-headerOutside {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      grid-column: bc;
+    }
+
+    .content-preFooter {
+      grid-column: pc;
+    }
+
+    .content-preFooter > div {
+      grid-column: cc;
+    }
+
+    .content-footer.pseudo-subgrid > div {
+      grid-column: bc;
+    }
   }
 
-  /* prettier-ignore */
-  .en__component--advrow,
-  .en__component--advrow .pseudo-subgrid {
-    /* autoprefixer grid: off */
-    grid-template-columns:
-    [
-      pc-start lpc-start]  minmax(0px, 1fr)                  [lpc-end
-      cc-start lcc-start]  minmax(15px, 1fr)                 [lcc-end
-      bc-start lbc-start]  minmax(calc(50vw - 15px), 250px)  [lbc-end
-      rbc-start]           minmax(calc(50vw - 15px), 250px)  [rbc-end bc-end
-      rcc-start]           minmax(15px, 1fr)                 [rcc-end cc-end
-      rpc-start]           minmax(0px, 1fr)                  [rpc-end pc-end               
-    ];
-  }
+  body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
+    .page-backgroundImage {
+      grid-row: page-start / content-footerSpacer-end;
+    }
 
-  .body-headerOutside {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    grid-column: bc;
-  }
-
-  .content-preFooter {
-    grid-column: pc;
-  }
-
-  .content-preFooter > div {
-    grid-column: cc;
-  }
-
-  .content-footer.pseudo-subgrid > div {
-    grid-column: bc;
+    /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
+    .page-backgroundImage::before {
+      content: "";
+      background-image: radial-gradient(
+        circle at 50% 0,
+        rgba(0, 0, 0, 0.3),
+        transparent 53%
+      );
+      z-index: -3;
+      grid-column: pc;
+    }
+    .page-backgroundImageOverlay {
+      grid-row: page-start / body-main-end;
+      background-image: -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.3)),
+        color-stop(30%, transparent)
+      );
+      background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        transparent 30%
+      );
+    }
   }
 }
-
-body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
-  .page-backgroundImage {
-    grid-row: page-start / content-footerSpacer-end;
-  }
-
-  /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
-  .page-backgroundImage::before {
-    content: "";
-    background-image: radial-gradient(
-      circle at 50% 0,
-      rgba(0, 0, 0, 0.3),
-      transparent 53%
-    );
-    z-index: -3;
-    grid-column: pc;
-  }
-  .page-backgroundImageOverlay {
-    grid-row: page-start / body-main-end;
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(0, 0, 0, 0.3)),
-      color-stop(30%, transparent)
-    );
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.3) 0%,
-      transparent 30%
-    );
-  }
-}
-
 /*
 * ##########################################################
 * # ENGRID - BODY Column Breakpoint Styling
@@ -104,10 +103,10 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
       grid-template-columns:
       [
         pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
-        cc-start lcc-start]  minmax(0px, 0px)      [lcc-end
-        bc-start lbc-start]  minmax(300px, 300px)  [lbc-end
-        rbc-start]           minmax(300px, 300px)  [rbc-end bc-end
-        rcc-start]           minmax(0px, 1.25fr)   [rcc-end cc-end
+        cc-start lcc-start]  minmax(25px, 25px)    [lcc-end
+        bc-start lbc-start]  minmax(250px, 340px)  [lbc-end
+        rbc-start]           minmax(250px, 340px)  [rbc-end bc-end
+        rcc-start]           minmax(25px, 475px)   [rcc-end cc-end
         rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end            
       ]; 
     }
@@ -193,21 +192,29 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col {
   #engrid .give-by-select .en__field--radio label,
   #engrid .en__field--recurrpay label.en__field__label,
   #engrid .highlight.big {
-    font-size: calc((0.05552em * 24) * 0.90);
+    font-size: calc((0.05552em * 24) * 0.9);
   }
   body #engrid h3,
   #engrid .pre-footer-card p,
-  #engrid .pre-footer-card.footer-wrapper .footer-menu a{
+  #engrid .pre-footer-card.footer-wrapper .footer-menu a {
     font-size: calc((0.05552em * 16) * 1);
   }
   #engrid label.en__field__label {
     font-size: calc((0.05552em * 12) * 0.95);
   }
 
-  #engrid .en__field__label--item
-  #engrid .en__field__input--checkbox + .en__field__label,
+  #engrid
+    .en__field__label--item
+    #engrid
+    .en__field__input--checkbox
+    + .en__field__label,
   #engrid .en__contactDetails__rows,
-  #engrid .give-by-select .en__field--radio .en__field__item input[type="radio"] + label {
+  #engrid
+    .give-by-select
+    .en__field--radio
+    .en__field__item
+    input[type="radio"]
+    + label {
     font-size: calc((0.05552em * 18) * 1);
   }
 }
@@ -293,8 +300,7 @@ body:not(#en__pagebuilder) #engrid.layout-centercenter1col {
     grid-row: page-start / body-main-end;
     background-image: -webkit-gradient(
       linear,
-      left top,
-      left bottom,
+      left top, left bottom,
       from(rgba(0, 0, 0, 0.3)),
       color-stop(30%, transparent)
     );

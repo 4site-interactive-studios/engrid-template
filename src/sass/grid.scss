@@ -485,6 +485,7 @@ body:not(#en__pagebuilder)
   background-size: cover;
 }
 
+// @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
 body:not(#en__pagebuilder).footer-below-fold
   #engrid
   .en__component--advrow
@@ -492,6 +493,7 @@ body:not(#en__pagebuilder).footer-below-fold
   -webkit-clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   height: 120vh;
+  background-color: $background-image-background-color;
 }
 
 // body:not(#en__pagebuilder)

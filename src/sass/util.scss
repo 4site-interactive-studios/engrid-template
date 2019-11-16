@@ -1,5 +1,6 @@
 // All Grid Related Items
 /** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/
+/* prettier-ignore */
 #engrid .en__component--advrow:not(.show) :not(.pboAdvancedRow__preview) .hide.en__component--column {
   display: none;
 }
@@ -44,6 +45,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
   -ms-flex-align: end;
   align-items: flex-end;
 }
+
 
 .i1-25 .en__field:nth-of-type(1),
 .i2-25 .en__field:nth-of-type(2),
@@ -250,6 +252,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 
 /* Force input visibility */
 /* Still needs JS to auto select last radio on input */
+/* prettier-ignore */
 .i1-show-hidden-radio-input .en__field:nth-of-type(1) .en__field__element--radio .en__field__item:nth-last-child(1),
 .i2-show-hidden-radio-input .en__field:nth-of-type(2) .en__field__element--radio .en__field__item:nth-last-child(1),
 .i3-show-hidden-radio-input .en__field:nth-of-type(3) .en__field__element--radio .en__field__item:nth-last-child(1),
@@ -276,6 +279,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 }
 
 /* Hide Other Input Radio Value because it is auto-selected with JS when a value is entered in the Other Input Text field. */
+/* prettier-ignore */
 .i1-show-hidden-radio-input .en__field:nth-of-type(1) .en__field__element--radio .en__field__item:nth-last-child(2),
 .i2-show-hidden-radio-input .en__field:nth-of-type(2) .en__field__element--radio .en__field__item:nth-last-child(2),
 .i3-show-hidden-radio-input .en__field:nth-of-type(3) .en__field__element--radio .en__field__item:nth-last-child(2),
@@ -300,6 +304,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 }
 
 /* On error, restyle if the field is also centered */
+/* prettier-ignore */
 .i1-show-hidden-radio-input.i1-center .en__field:nth-of-type(1).en__field--validationFailed .en__field__element--radio,
 .i2-show-hidden-radio-input.i2-center .en__field:nth-of-type(2).en__field--validationFailed .en__field__element--radio,
 .i3-show-hidden-radio-input.i3-center .en__field:nth-of-type(3).en__field--validationFailed .en__field__element--radio,
@@ -325,6 +330,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 }
 
 /* On error, restyle if the field is also centered */
+/* prettier-ignore */
 .i1-show-hidden-radio-input.i1-center .en__field:nth-of-type(1).en__field--validationFailed .en__field__error,
 .i2-show-hidden-radio-input.i2-center .en__field:nth-of-type(2).en__field--validationFailed .en__field__error,
 .i3-show-hidden-radio-input.i3-center .en__field:nth-of-type(3).en__field--validationFailed .en__field__error,
@@ -450,6 +456,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
   }
 }
 
+/* prettier-ignore */
 #engrid .radio-to-buttons .en__field--radio input[type="radio"] + label,
 #engrid .give-by-select .en__field--radio input[type="radio"] + label,
 #engrid .en__field--donationAmt.en__field--radio input[type="radio"] + label {
@@ -462,18 +469,21 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 //   padding: 0.625rem 1.5625rem !important;
 // }
 
+/* prettier-ignore */
 #engrid .radio-to-buttons .en__field--radio .en__field__input--radio + .en__field__label,
 #engrid .give-by-select .en__field--radio .en__field__input--radio + .en__field__label,
 #engrid .en__field--donationAmt.en__field--radio .en__field__input--radio + .en__field__label {
   margin-left: 0rem !important;
 }
 
+/* prettier-ignore */
 #engrid .radio-to-buttons .en__field--radio .en__field__input--radio + .en__field__label::before,
 #engrid .give-by-select .en__field--radio .en__field__input--radio + .en__field__label::before,
 #engrid .en__field--donationAmt.en__field--radio .en__field__input--radio + .en__field__label::before {
   display: none !important;
 }
 
+/* prettier-ignore */
 #engrid .radio-to-buttons .en__field--radio input[type="radio"] + label,
 #engrid .radio-to-buttons .en__field--radio .en__field__item--other input[type="text"],
 #engrid .give-by-select .en__field--radio input[type="radio"] + label,
@@ -486,6 +496,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
   color: $client-button-font-color;
 }
 
+/* prettier-ignore */
 #engrid .radio-to-buttons .en__field--radio input[type="radio"]:checked + label,
 #engrid .radio-to-buttons .en__field--radio .en__field__item--other.has-value input,
 #engrid .radio-to-buttons .en__field--radio .en__field__item--other:not(.en__field__item--hidden) input,
@@ -501,6 +512,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
   color: $client-button-font-color-active;
 }
 
+/* prettier-ignore */
 #engrid .radio-to-buttons .en__field--radio label.en__field__label.en__field__label--item,
 #engrid .give-by-select .en__field--radio label.en__field__label.en__field__label--item,
 #engrid .en__field--donationAmt.en__field--radio label.en__field__label.en__field__label--item {
@@ -522,6 +534,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 //   border-color: $client-button-border-color;
 // }
 
+/* prettier-ignore */
 #engrid .radio-to-buttons .en__field__input--other,
 #engrid .give-by-select .en__field__input--other,
 #engrid .en__field--donationAmt.en__field__input--other {
@@ -533,6 +546,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 //   padding: 0.625rem 1.5625rem !important;
 // }
 
+/* prettier-ignore */
 #engrid .radio-to-buttons .en__field--radio input[type="radio"]:focus + label,
 #engrid .give-by-select .en__field--radio input[type="radio"]:focus + label,
 #engrid .en__field--donationAmt.en__field--radio input[type="radio"]:focus + label {

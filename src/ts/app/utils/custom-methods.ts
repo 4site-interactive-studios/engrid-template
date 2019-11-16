@@ -98,6 +98,7 @@ export const setBackgroundImages = () => {
     );
   };
 
+  //@TODO consider moving JS into page template as it's critical to initial render
   //Measure page layout to see if it's a short or tall page before applying the background image
   if (contentFooter && isInViewport(contentFooter)) {
     body.classList.add("footer-above-fold");
