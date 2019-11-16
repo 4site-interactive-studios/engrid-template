@@ -22,12 +22,6 @@
   }
 }
 
-/* TODO Might not be needed, was put here to prevent small CSS transitions from appearing while debugging between different states */
-// body.debug * {
-//   -webkit-transition: none !important;
-//   transition: none !important;
-// }
-
 body.debug #debug {
   display: block;
   position: fixed;
@@ -71,90 +65,11 @@ body.visualize-layout div {
   border-color: #adaaaa !important;
 }
 
-/* @TODO Color distribution need to be regenerated due to new sections being added */
 /*
 * ##########################################################
-* # DEBUG: COLORFUL LAYOUT FOR CSS GRID TEMPLATE
+* # ENGRID - Debug Styling
 * ##########################################################
 */
-
-// .debug {
-//   .ccpph {
-//     border: 3px solid #ff9999;
-//     background-color: #ffffff;
-//   }
-//   .ccph {
-//     border: 3px solid #ff0000;
-//     background-color: #ffffff;
-//   }
-//   .bcoh {
-//     border: 3px solid #ff9633;
-//     background-color: transparent;
-//   }
-//   .bph {
-//     border: 3px solid #a0ff99;
-//     background-color: transparent;
-//   }
-//   .bh {
-//     border: 3px solid #a0ff99;
-//     background-color: #ffffff;
-//   }
-
-//   .bb {
-//     border: 3px solid #11ff00;
-//     background-color: #ffffff;
-//   }
-//   .btc {
-//     border: 3px solid #009dff;
-//     background-color: #ffffff;
-//   }
-//   .bsc {
-//     border: 3px solid #0022ff;
-//     background-color: #ffffff;
-//   }
-//   .bform {
-//     border: 3px solid #deccff;
-//     background-color: #ffffff;
-//   }
-//   .bpf {
-//     border: 3px solid #bd99ff;
-//     background-color: #ffffff;
-//   }
-//   .bf {
-//     border: 3px solid #dd33ff;
-//     background-color: #ffffff;
-//   }
-//   .bcof {
-//     border: 3px solid #ff99df;
-//     background-color: transparent;
-//   }
-//   .ccfs {
-//     border: 3px solid #000000;
-//     background-color: transparent;
-//   }
-//   .ccpf {
-//     border: 3px solid #ff00ae;
-//     background-color: transparent;
-//   }
-//   .pb {
-//     border: 3px solid #610000;
-//     background-color: #350000;
-//   }
-//   .pbo {
-//     border: 3px solid #196113;
-//     background-color: #ffffff;
-//   }
-//   .pcc {
-//     border: 3px solid #003c61;
-//     background-color: #ffffff;
-//   }
-// }
-
-/*
-      * ##########################################################
-      * # ENGRID - Debug Styling
-      * ##########################################################
-      */
 #debug-bar {
   display: block;
   position: fixed;
