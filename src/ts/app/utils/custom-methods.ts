@@ -4,6 +4,9 @@ declare global {
     enOnError: any;
   }
 }
+import {amount} from "../index";
+import {frequency} from "../index";
+
 export const body = document.body;
 export const enGrid = document.getElementById("engrid") as HTMLElement;
 export const enInput = (() => {
@@ -910,6 +913,8 @@ export const easyEdit = () => {
 
 // Replace Submit Button Text, but revert if there is client side error on the page.
 export const onFormSubmitSubmitButtonUpdate = () => {
+  console.log("Amount:", amount);
+  console.log("Frequency:", frequency);
   const submitButton = document.querySelector(
     ".en__submit button"
   ) as HTMLElement;
@@ -927,6 +932,8 @@ export const onFormSubmitSubmitButtonUpdate = () => {
 
     window.enOnError = function() {
       submitButton.innerHTML = submitButtonOriginalHTML;
+      amount.load();
+      frequency.load();
     };
   }
 };

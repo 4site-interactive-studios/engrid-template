@@ -22,6 +22,11 @@ export default class LiveVariables {
     return amount > 0 ? amountTxt : "";
   }
 
+  private getUpsellAmountTxt(amount: number = 0) {
+    const amountTxt = "$" + Math.ceil(amount/5)*5;
+    return amount > 0 ? amountTxt : "";
+  }  
+
   public changeSubmitButton() {
     const submit = document.querySelector(
       ".en__submit button"
@@ -44,10 +49,10 @@ export default class LiveVariables {
     const live_upsell_amount = document.querySelectorAll(
       ".live-giving-upsell-amount"
     );
-    const multiplier = 1.25;
+    const multiplier = (1/12);
     live_upsell_amount.forEach(
       elem =>
-        (elem.innerHTML = this.getAmountTxt(this._amount.amount * multiplier))
+        (elem.innerHTML = this.getUpsellAmountTxt(this._amount.amount * multiplier))
     );
   }
   public changeLiveFrequency() {

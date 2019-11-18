@@ -3,14 +3,17 @@ import ShowHideRadioCheckboxes from "./utils/show-hide-radio-checkboxes";
 import DonationAmount from "./events/donation-amount";
 import DonationFrequency from "./events/donation-frequency";
 import LiveVariables from "./utils/live-variables";
+export let amount: DonationAmount;
+export let frequency: DonationFrequency;
 
 export const run = () => {
   // Event Classes
-  let amount = new DonationAmount(
+  amount = new DonationAmount(
     "transaction.donationAmt",
     "transaction.donationAmt.other"
   );
-  let frequency = new DonationFrequency("transaction.recurrpay");
+  frequency = new DonationFrequency("transaction.recurrpay");
+
   // The entire App
   app.setBackgroundImages();
 
