@@ -9,8 +9,28 @@ module.exports = {
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "Engaging Networks Grid Themes",
+      title: "Engaging Networks - Page Type Selection",
       template: "./src/index.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false
+      }
+    }),
+    new HtmlWebpackPlugin({
+      title: "Engaging Networks Page - Donation",
+      filename: "page-donation.html",
+      template: "./src/templates/page-donation.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false
+      }
+    }),
+    new HtmlWebpackPlugin({
+      title: "Engaging Networks Email - eCard",
+      filename: "email-ecard.html",
+      template: "./src/templates/email-ecard.html",
       inject: true,
       minify: {
         removeComments: true,
