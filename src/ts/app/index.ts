@@ -22,7 +22,6 @@ export const run = () => {
   app.watchRecurrpayField();
   app.watchGiveBySelectField();
   app.watchLegacyGiveBySelectField();
-  app.monthlyUpsell();
 
   app.contactDetailLabels();
   app.easyEdit();

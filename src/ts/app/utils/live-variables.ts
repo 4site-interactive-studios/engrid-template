@@ -8,6 +8,7 @@ import { form } from "../index";
 export default class LiveVariables {
   public _amount: DonationAmount;
   private _frequency: DonationFrequency;
+  private multiplier: number = 1 / 12;
 
   constructor() {
     this._amount = amount;
@@ -19,6 +20,13 @@ export default class LiveVariables {
     frequency.onFrequencyChange.subscribe(() => this.changeSubmitButton());
     form.onSubmit.subscribe(() => this.loadingSubmitButton());
     form.onError.subscribe(() => this.changeSubmitButton());
+    const upsellLink = document.querySelectorAll(".monthly-upsell") as NodeList;
+    if (upsellLink) {
+      Array.from(upsellLink).forEach(e => {
+        let element = e as HTMLDivElement;
+        element.addEventListener("click", this.upsold.bind(this));
+      });
+    }
   }
 
   private getAmountTxt(amount: number = 0) {
@@ -35,7 +43,7 @@ export default class LiveVariables {
 
   private getUpsellAmountRaw(amount: number = 0) {
     const amountRaw = Math.ceil(amount / 5) * 5;
-    return amount > 0 ? amountRaw : "";
+    return amount > 0 ? amountRaw.toString() : "";
   }
 
   public changeSubmitButton() {
@@ -52,10 +60,11 @@ export default class LiveVariables {
     const submit = document.querySelector(
       ".en__submit button"
     ) as HTMLButtonElement;
-    let submitButtonOriginalHTML = submit.innerHTML as string;
-    let submitButtonProcessingHTML = ("<span class='loader-wrapper'><span class='loader loader-quart'></span><span class='submit-button-text-wrapper'>" +
+    let submitButtonOriginalHTML = submit.innerHTML;
+    let submitButtonProcessingHTML =
+      "<span class='loader-wrapper'><span class='loader loader-quart'></span><span class='submit-button-text-wrapper'>" +
       submitButtonOriginalHTML +
-      "</span></span>") as string;
+      "</span></span>";
     submitButtonOriginalHTML = submit.innerHTML;
     submit.innerHTML = submitButtonProcessingHTML;
     return true;
@@ -72,11 +81,11 @@ export default class LiveVariables {
     const live_upsell_amount = document.querySelectorAll(
       ".live-giving-upsell-amount"
     );
-    const multiplier = 1 / 12;
+
     live_upsell_amount.forEach(
       elem =>
         (elem.innerHTML = this.getUpsellAmountTxt(
-          this._amount.amount * multiplier
+          this._amount.amount * this.multiplier
         ))
     );
 
@@ -86,7 +95,7 @@ export default class LiveVariables {
     live_upsell_amount_raw.forEach(
       elem =>
         (elem.innerHTML = this.getUpsellAmountRaw(
-          this._amount.amount * multiplier
+          this._amount.amount * this.multiplier
         ))
     );
   }
@@ -98,5 +107,50 @@ export default class LiveVariables {
         (elem.innerHTML =
           this._frequency.frequency == "single" ? "" : "monthly")
     );
+  }
+
+  // Watch for a clicks on monthly-upsell link
+  private upsold(e: Event) {
+    // Find and select monthly giving
+    const enFieldRecurrpay = document.querySelector(
+      ".en__field--recurrpay input[value='Y']"
+    ) as HTMLInputElement;
+    if (enFieldRecurrpay) {
+      enFieldRecurrpay.checked = true;
+    }
+
+    // Find the hidden radio select that needs to be selected when entering an "Other" amount
+    const enFieldOtherAmountRadio = document.querySelector(
+      ".en__field--donationAmt input[value='other']"
+    ) as HTMLInputElement;
+    if (enFieldOtherAmountRadio) {
+      enFieldOtherAmountRadio.checked = true;
+    }
+
+    // Enter the other amount and remove the "en__field__item--hidden" class from the input's parent
+    const enFieldOtherAmount = document.querySelector(
+      "input[name='transaction.donationAmt.other']"
+    ) as HTMLInputElement;
+    if (enFieldOtherAmount) {
+      // @TODO Needs to use getUpsellAmountRaw to set value
+
+      enFieldOtherAmount.value = this.getUpsellAmountRaw(
+        this._amount.amount * this.multiplier
+      );
+      amount.load();
+      frequency.load();
+      if (enFieldOtherAmount.parentElement) {
+        enFieldOtherAmount.parentElement.classList.remove(
+          "en__field__item--hidden"
+        );
+      }
+    }
+
+    const target = e.target as HTMLLinkElement;
+    const enForm = document.querySelector("form");
+    if (target && target.classList.contains("form-submit") && enForm) {
+      // Form submit
+      enForm.submit();
+    }
   }
 }
