@@ -12,6 +12,10 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  &.exitModal {
+    background-color: $client-error-red;
+    color: $client-white;
+  }
   &.is-hidden {
     top: -100vh;
   }

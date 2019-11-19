@@ -1,6 +1,8 @@
 import * as cookie from "./cookie";
 import { amount } from "../index";
 import { frequency } from "../index";
+import { form } from "../index";
+
 export default class Modal {
   public debug: boolean = false;
   private overlay: HTMLDivElement;
@@ -33,21 +35,40 @@ export default class Modal {
     document.body.appendChild(overlay);
 
     if (this.upsellModal) {
-      window.setTimeout(this.open.bind(this, this.upsellModal), 2000);
+      form.onSubmit.subscribe(() => this.openUpsell());
     }
     if (this.exitModal) {
       document.addEventListener("mouseout", (evt: any) => {
-        if (evt.toElement === null && evt.relatedTarget === null) {
+        // Only open the exit modal if you're currently seeing the upSell Modal
+        if (
+          evt.toElement === null &&
+          evt.relatedTarget === null &&
+          !this.overlay.classList.contains("is-hidden") &&
+          this.overlay.classList.contains("upsellModal")
+        ) {
           // An intent to exit has happene
           this.open(this.exitModal);
         }
       });
     }
   }
+  private openUpsell() {
+    const freq = frequency.frequency;
+    // Only open Upsell Modal if Frequency == Single
+    if (freq == "single") {
+      this.open(this.upsellModal);
+      return false;
+    } else {
+      // Only submits the form IF monthly (Delete this)
+      form.submit = true;
+      // Maybe we need to force a resubmit
+      return true;
+    }
+  }
   private open(modal: HTMLElement | null) {
     // If we can't find modal, get out
     if (!modal) return;
-    const hideModal = cookie.get("hide_" + modal.id); // Get cookie
+    const hideModal = cookie.get("hide_upsellModal"); // Get cookie
     // If we have a cooki AND no Debug, get out
     if (hideModal && !this.debug) return;
     const overlayContent = this.overlay.querySelector(
@@ -68,10 +89,10 @@ export default class Modal {
   private close(e: Event) {
     e.preventDefault();
     if (this.overlay.classList.contains("exitModal")) {
-      cookie.set("hide_exitModal", "1", { expires: 1 }); // Create one day cookie
+      this.open(this.upsellModal);
     } else {
       cookie.set("hide_upsellModal", "1", { expires: 1 }); // Create one day cookie
+      this.overlay.classList.add("is-hidden");
     }
-    this.overlay.classList.add("is-hidden");
   }
 }

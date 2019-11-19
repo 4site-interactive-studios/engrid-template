@@ -53,6 +53,7 @@ export default class LiveVariables {
       "</span></span>") as string;
     submitButtonOriginalHTML = submit.innerHTML;
     submit.innerHTML = submitButtonProcessingHTML;
+    return true;
   }
 
   public changeLiveAmount() {
