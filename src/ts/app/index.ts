@@ -2,18 +2,18 @@ import * as app from "./utils/custom-methods";
 import ShowHideRadioCheckboxes from "./utils/show-hide-radio-checkboxes";
 import DonationAmount from "./events/donation-amount";
 import DonationFrequency from "./events/donation-frequency";
+import DonationForm from "./events/donation-form";
 import LiveVariables from "./utils/live-variables";
-export let amount: DonationAmount;
-export let frequency: DonationFrequency;
+import Modal from "./utils/modal";
+
+export const amount = new DonationAmount(
+  "transaction.donationAmt",
+  "transaction.donationAmt.other"
+);
+export const frequency = new DonationFrequency("transaction.recurrpay");
+export const form = new DonationForm();
 
 export const run = () => {
-  // Event Classes
-  amount = new DonationAmount(
-    "transaction.donationAmt",
-    "transaction.donationAmt.other"
-  );
-  frequency = new DonationFrequency("transaction.recurrpay");
-
   // The entire App
   app.setBackgroundImages();
 
@@ -32,15 +32,27 @@ export const run = () => {
   new ShowHideRadioCheckboxes("transaction.inmem", "inmem-");
   new ShowHideRadioCheckboxes("transaction.recurrpay", "recurrpay-");
 
-  app.onFormSubmitSubmitButtonUpdate();
   app.debugBar();
 
   // Event Listener Examples
   amount.onAmountChange.subscribe(s => console.log(`Amount: ${s}`));
   frequency.onFrequencyChange.subscribe(s => console.log(`Frequency: ${s}`));
+  form.onSubmit.subscribe(s => console.log(`Submit: ${s}`));
+  form.onError.subscribe(s => console.log(`Error: ${s}`));
+
+  window.enOnSubmit = function() {
+    form.dispatchSubmit();
+  };
+  window.enOnError = function() {
+    form.dispatchError();
+  };
 
   // Live Variables
-  new LiveVariables(amount, frequency);
+  new LiveVariables();
+
+  // Modal
+  const modal = new Modal();
+  modal.debug = true;
 
   // On the end of the script, after all subscribers defined, let's load the current value
   amount.load();
