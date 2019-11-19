@@ -3,6 +3,7 @@ import { SignalDispatcher } from "strongly-typed-events";
 export default class DonationForm {
   private _onSubmit = new SignalDispatcher();
   private _onError = new SignalDispatcher();
+  public submit: boolean = false;
 
   public dispatchSubmit() {
     this._onSubmit.dispatch();

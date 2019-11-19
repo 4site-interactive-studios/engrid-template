@@ -42,6 +42,7 @@ export const run = () => {
 
   window.enOnSubmit = function() {
     form.dispatchSubmit();
+    return form.submit;
   };
   window.enOnError = function() {
     form.dispatchError();
@@ -52,7 +53,7 @@ export const run = () => {
 
   // Modal
   const modal = new Modal();
-  modal.debug = true;
+  modal.debug = true; // Comment it out to disable debug
 
   // On the end of the script, after all subscribers defined, let's load the current value
   amount.load();
