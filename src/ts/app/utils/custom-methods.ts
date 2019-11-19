@@ -4,8 +4,8 @@ declare global {
     enOnError: any;
   }
 }
-import {amount} from "../index";
-import {frequency} from "../index";
+import { amount } from "../index";
+import { frequency } from "../index";
 
 export const body = document.body;
 export const enGrid = document.getElementById("engrid") as HTMLElement;
@@ -935,5 +935,56 @@ export const onFormSubmitSubmitButtonUpdate = () => {
       amount.load();
       frequency.load();
     };
+  }
+};
+
+// Watch for a clicks on monthly-upsell link
+export const monthlyUpsell = () => {
+  const upsold = (e: Event) => {
+    // Find and select monthly giving
+    const enFieldRecurrpay = document.querySelector(
+      ".en__field--recurrpay input[value='Y']"
+    ) as HTMLInputElement;
+    if (enFieldRecurrpay) {
+      enFieldRecurrpay.checked = true;
+    }
+
+    // Find the hidden radio select that needs to be selected when entering an "Other" amount
+    const enFieldOtherAmountRadio = document.querySelector(
+      ".en__field--donationAmt input[value='other']"
+    ) as HTMLInputElement;
+    if (enFieldOtherAmountRadio) {
+      enFieldOtherAmountRadio.checked = true;
+    }
+
+    // Enter the other amount and remove the "en__field__item--hidden" class from the input's parent
+    const enFieldOtherAmount = document.querySelector(
+      "input[name='transaction.donationAmt.other']"
+    ) as HTMLInputElement;
+    if (enFieldOtherAmount) {
+      // @TODO Needs to use getUpsellAmountRaw to set value
+      enFieldOtherAmount.value = "123";
+      amount.load();
+      frequency.load();
+      if (enFieldOtherAmount.parentElement) {
+        enFieldOtherAmount.parentElement.classList.remove(
+          "en__field__item--hidden"
+        );
+      }
+    }
+
+    // @TODO Should only fire if form-submit class is present, then submit the form
+    const enForm = document.querySelector("form");
+    if (enForm) {
+      // enForm.submit();
+    }
+  };
+
+  const upsellLink = document.querySelectorAll(".monthly-upsell") as NodeList;
+  if (upsellLink) {
+    Array.from(upsellLink).forEach(e => {
+      let element = e as HTMLDivElement;
+      element.addEventListener("click", upsold);
+    });
   }
 };
