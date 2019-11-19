@@ -1,0 +1,115 @@
+#enModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2147483645;
+  background-color: rgba($client-black, 0.5);
+  width: 100vw;
+  height: 100%;
+  transition: top 0.4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  &.exitModal {
+    background-color: $client-error-red;
+    color: $client-white;
+  }
+  &.is-hidden {
+    top: -100vh;
+  }
+
+  .button-close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.6;
+    transition: 0.3s opacity ease-in-out;
+    @include to(2) {
+      top: -52px;
+      opacity: 1;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      left: 15px;
+      content: " ";
+      height: 33px;
+      width: 3px;
+      background-color: $client-black;
+      @include to(2) {
+        background-color: $client-body-background-color;
+      }
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+  .enModal-container {
+    max-width: 775px;
+    padding: 90px;
+    border-radius: $client-input-border-radius;
+    background-color: $client-body-background-color;
+    color: $client-black;
+    //font-family: graphik, sans-serif;
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 700;
+    z-index: 1;
+    position: relative;
+
+    @include to(2) {
+      padding: 60px 40px;
+      font-size: 30px;
+      max-height: 60vh;
+    }
+    .title {
+      color: $client-black;
+    }
+    .accent {
+      color: $client-orange;
+    }
+    .cta {
+      cursor: pointer;
+      font-weight: 700;
+      padding: 12px 25px;
+      background-color: $client-black;
+      color: $client-orange;
+      display: block;
+      max-width: 250px;
+      font-size: 26px;
+      text-align: center;
+      margin-top: 50px;
+      opacity: 1;
+      transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out;
+      @include to(2) {
+        font-size: 22px;
+        padding: 10px 20px;
+        max-width: 200px;
+      }
+      &:hover {
+        background-color: $client-orange;
+        color: $client-black;
+      }
+    }
+    .img {
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+      z-index: -1;
+      @include to(2) {
+        bottom: -80px;
+        max-height: 250px;
+      }
+    }
+  }
+}

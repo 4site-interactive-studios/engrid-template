@@ -1,11 +1,15 @@
 import DonationAmount from "../events/donation-amount";
 import DonationFrequency from "../events/donation-frequency";
 
+import { amount } from "../index";
+import { frequency } from "../index";
+import { form } from "../index";
+
 export default class LiveVariables {
   public _amount: DonationAmount;
   private _frequency: DonationFrequency;
 
-  constructor(amount: DonationAmount, frequency: DonationFrequency) {
+  constructor() {
     this._amount = amount;
     this._frequency = frequency;
     amount.onAmountChange.subscribe(() => this.changeSubmitButton());
@@ -13,6 +17,8 @@ export default class LiveVariables {
     amount.onAmountChange.subscribe(() => this.changeLiveUpsellAmount());
     frequency.onFrequencyChange.subscribe(() => this.changeLiveFrequency());
     frequency.onFrequencyChange.subscribe(() => this.changeSubmitButton());
+    form.onSubmit.subscribe(() => this.loadingSubmitButton());
+    form.onError.subscribe(() => this.changeSubmitButton());
   }
 
   private getAmountTxt(amount: number = 0) {
@@ -41,6 +47,18 @@ export default class LiveVariables {
     const frequency = this._frequency.frequency == "single" ? "" : " Monthly";
     const label = amount != "" ? "Donate " + amount + frequency : "Donate Now";
     submit.innerHTML = label;
+  }
+  public loadingSubmitButton() {
+    const submit = document.querySelector(
+      ".en__submit button"
+    ) as HTMLButtonElement;
+    let submitButtonOriginalHTML = submit.innerHTML as string;
+    let submitButtonProcessingHTML = ("<span class='loader-wrapper'><span class='loader loader-quart'></span><span class='submit-button-text-wrapper'>" +
+      submitButtonOriginalHTML +
+      "</span></span>") as string;
+    submitButtonOriginalHTML = submit.innerHTML;
+    submit.innerHTML = submitButtonProcessingHTML;
+    return true;
   }
 
   public changeLiveAmount() {
