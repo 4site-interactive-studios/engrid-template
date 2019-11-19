@@ -59,9 +59,9 @@ export default class Modal {
       this.open(this.upsellModal);
       return false;
     } else {
-      // Only submits the form IF monthly (Delete this)
+      // @TODO Only submits the form IF monthly (Delete this)
       form.submit = true;
-      // Maybe we need to force a resubmit
+      // @TODO Maybe we need to force a resubmit
       return true;
     }
   }
@@ -83,6 +83,7 @@ export default class Modal {
     // Load Values
     amount.load();
     frequency.load();
+    // @TODO After the Modal is open we need to find a way to register that there are new buttons with the "monthly-upsell" class that should be watched for clicks
     // Show Modal
     this.overlay.classList.remove("is-hidden");
   }
