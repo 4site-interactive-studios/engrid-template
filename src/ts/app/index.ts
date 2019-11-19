@@ -2,7 +2,7 @@ import * as app from "./utils/custom-methods";
 import ShowHideRadioCheckboxes from "./utils/show-hide-radio-checkboxes";
 import DonationAmount from "./events/donation-amount";
 import DonationFrequency from "./events/donation-frequency";
-import DonationForm from "./events/donation-form";
+import EnForm from "./events/en-form";
 import LiveVariables from "./utils/live-variables";
 import Modal from "./utils/modal";
 
@@ -11,7 +11,7 @@ export const amount = new DonationAmount(
   "transaction.donationAmt.other"
 );
 export const frequency = new DonationFrequency("transaction.recurrpay");
-export const form = new DonationForm();
+export const form = new EnForm();
 
 export const run = () => {
   // The entire App

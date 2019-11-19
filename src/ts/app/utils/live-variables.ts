@@ -4,6 +4,7 @@ import DonationFrequency from "../events/donation-frequency";
 import { amount } from "../index";
 import { frequency } from "../index";
 import { form } from "../index";
+import { fromStringWithSourceMap } from "source-list-map";
 
 export default class LiveVariables {
   public _amount: DonationAmount;
@@ -147,10 +148,9 @@ export default class LiveVariables {
     }
 
     const target = e.target as HTMLLinkElement;
-    const enForm = document.querySelector("form");
-    if (target && target.classList.contains("form-submit") && enForm) {
+    if (target && target.classList.contains("form-submit")) {
       // Form submit
-      enForm.submit();
+      form.submitForm();
     }
   }
 }
