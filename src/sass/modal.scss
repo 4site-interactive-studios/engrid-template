@@ -4,7 +4,7 @@
   left: 0;
   bottom: 0;
   z-index: 2147483645;
-  background-color: rgba($client-black, 0.5);
+  background-color: rgba($client-black, 0.85);
   width: 100vw;
   height: 100%;
   -webkit-transition: top 0.4s ease-in-out;
@@ -104,6 +104,10 @@
       text-align: center;
       margin-top: 50px;
       opacity: 1;
+      -webkit-transition: 0.3s background-color ease-in-out,
+        0.3s color ease-in-out;
+      -webkit-transition: 0.3s background-color ease-in-out,
+        0.3s color ease-in-out;
       -webkit-transition: 0.3s background-color ease-in-out,
         0.3s color ease-in-out;
       -webkit-transition: 0.3s background-color ease-in-out,
