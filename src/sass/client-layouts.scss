@@ -12,11 +12,14 @@
 */
 @media screen and (max-width: 600px) {
   #engrid.layout-centerleft1col {
+    .page-alert,
     .content-header,
     .body-banner,
     .body-bannerOverlay,
     .body-side,
-    .body-footerOutside {
+    .body-bottom,
+    .body-footerOutside,
+    .page-backgroundImageOverlay {
       display: none;
     }
 
@@ -230,10 +233,14 @@
 }
 
 #engrid.layout-centercenter1col {
+  .page-alert,
   .content-header,
   .body-banner,
   .body-bannerOverlay,
-  .body-side {
+  .body-side,
+  .body-bottom,
+  .body-footerOutside,
+  .page-backgroundImageOverlay {
     display: none;
   }
 

@@ -95,11 +95,7 @@
   .en__component--column.content-footer::before {
   content: "Content Footer";
 }
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.page-customCode::before {
-  content: "Page Custom Code";
-}
+
 #EN__RootElement
   .pboAdvancedRow__preview
   .en__component--column.page-backgroundImage::before {
@@ -109,6 +105,11 @@
   .pboAdvancedRow__preview
   .en__component--column.page-backgroundImageOverlay::before {
   content: "Page Background Image Overlay";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.page-customCode::before {
+  content: "Page Custom Code";
 }
 
 /*
@@ -200,7 +201,7 @@
     min-height: 350px !important;
   }
 
-  .pboAdvancedRow__preview .page-backgroundImage img {
+  .page-backgroundImage img {
     width: auto !important;
     height: 350px !important;
     margin: 0 auto;

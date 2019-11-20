@@ -484,3 +484,56 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   // }
 
 }
+
+#engrid:not(.legacy) .en__field--country{
+  position: absolute;
+  right: 0;
+  align-items: flex-end;
+  // label{
+  //   visibility: hidden;
+  // }
+  select{
+    width: 80px;
+    z-index: 1;
+    // border-top-color: transparent;
+    // border-right-color: transparent;
+    // border-bottom-color: transparent;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-align-last: right;
+  }
+  .en__field__error{
+    z-index: 1;
+  }
+}
+
+
+// #endgrid:not(.legacy) .en__field--country {
+//   position: absolute;
+//   right: 0;
+//   z-index: 1;
+//   top: 1.7rem;
+//   text-align: right;
+//   margin: 0;
+// }
+
+// #endgrid:not(.legacy) .en__field--country::before {
+//   content: "";
+//   display: block;
+//   height: 60%;
+//   width: 1px;
+//   background-color: #cacaca;
+//   position: absolute;
+//   left: 0;
+//   top: 20%;
+// }
+
+// #endgrid:not(.legacy) .en__field--country #en__field_supporter_country {
+//   border: none;
+//   background-color: transparent;
+//   text-align-last: center;
+//   width: 89px;
+//   -webkit-box-shadow: none;
+//   box-shadow: none;
+// }

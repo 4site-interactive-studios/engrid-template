@@ -1318,35 +1318,6 @@ body.error-jump-assist #engrid .en__component .en__field__error {
     padding-right: 0;
   }
 
-  #endgrid:not(.legacy) .en__field--country {
-    position: absolute;
-    right: 0;
-    z-index: 1;
-    top: 1.7rem;
-    text-align: right;
-    margin: 0;
-  }
-
-  #endgrid:not(.legacy) .en__field--country::before {
-    content: "";
-    display: block;
-    height: 60%;
-    width: 1px;
-    background-color: #cacaca;
-    position: absolute;
-    left: 0;
-    top: 20%;
-  }
-
-  #endgrid:not(.legacy) .en__field--country #en__field_supporter_country {
-    border: none;
-    background-color: transparent;
-    text-align-last: center;
-    width: 89px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-
   .en__field--donationAmt.en__field--withOther
     .en__field__element--radio
     .en__field__item:nth-last-child(1) {

@@ -13,9 +13,9 @@
 // content-footerSpacer
 // content-preFooter pseudo-subgrid
 // content-footer pseudo-subgrid
-// page-customCode
 // page-backgroundImage
 // page-backgroundImageOverlay
+// page-customCode
 
 // .page-alert,
 // .content-header,
@@ -32,9 +32,9 @@
 // .content-footerSpacer,
 // .content-preFooter,
 // .content-footer,
-// .page-customCode,
 // .page-backgroundImage,
 // .page-backgroundImageOverlay
+// .page-customCode
 
 /* BASE Layout - IE 11 Fallback for ENGRID's CSS Grid */
 #engrid .en__component--advrow {
@@ -137,11 +137,11 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
 /* prettier-ignore */
 #en__pagebuilder .content-footer .messageOverlay.hidden:only-child::before { content: "Content Footer"; }
 /* prettier-ignore */
-#en__pagebuilder .page-customCode .messageOverlay.hidden:only-child::before { content: "Custom Code"; }
-/* prettier-ignore */
 #en__pagebuilder .page-backgroundImage .messageOverlay.hidden:only-child::before { content: "Page Background Image"; }
 /* prettier-ignore */
 #en__pagebuilder .page-backgroundImageOverlay .messageOverlay.hidden:only-child::before { content: "Page Background Image Overlay"; }
+/* prettier-ignore */
+#en__pagebuilder .page-customCode .messageOverlay.hidden:only-child::before { content: "Custom Code"; }
 
 /* prettier-ignore */
 #en__pagebuilder .page-alert { min-height: 5rem; }
@@ -261,9 +261,9 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
     content-footerSpacer-start]         minmax(0px, 1fr)   [content-footerSpacer-end
     content-preFooter-start]            minmax(0px, auto)  [content-preFooter-end
     content-footer-start]               minmax(0px, auto)  [content-footer-end
-    page-customCode-start]              minmax(0px, auto)  [page-customCode-end          
     page-backgroundImage-start]         minmax(0px, auto)  [page-backgroundImage-end
     page-backgroundImageOverlay-start]  minmax(0px, auto)  [page-backgroundImageOverlay-end page-end
+    page-customCode-start]              minmax(0px, auto)  [page-customCode-end        
   ];        
 }
 
@@ -386,8 +386,13 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
 }
 
 #engrid .en__component--advrow > div,
-#EN__RootElement .en__component--advrow > div {
+#EN__RootElement .en__component--advrow > div{
   grid-column: pc;
+  grid-row: na; //None existant row name used as fallback for un-assogned rows to be placed at the bottom of the grid
+}
+
+#engrid .en__component--advrow.en__component--active .en__component__actions.en__component__actions--advrow{
+  grid-row: page;
 }
 
 /*
