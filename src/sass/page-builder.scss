@@ -179,7 +179,7 @@
     padding-bottom: 0px;
   }
 
-  #EN__RootElement .pboAdvancedRow__preview .en__component--column:before
+  // #EN__RootElement .pboAdvancedRow__preview .en__component--column:before
 
   // @TODO Might need to be moved into main.pboAdvancedRow__preview css
   #engrid {
@@ -188,10 +188,33 @@
     }
   }
 
-  .pboAdvancedRow__preview .hide {
+  .hide {
     background-color: #ff00001a !important;
     &.pboAdvancedRow__preview .en__component--column {
       outline-color: #ff0000 !important;
+      z-index: 1;
+    }
+  }
+
+  .inmem-Y,
+  .inmem-N,
+  .giveBySelect-card,
+  .giveBySelect-check,
+  .giveBySelect-paypal{
+    background-color: #0000ff1a !important;
+    &.pboAdvancedRow__preview .en__component--column {
+      outline-color: #0000ff !important;
+      z-index: 1;
+    }
+  }
+
+  .live-giving-amount,
+  .live-giving-upsell-amount,
+  .live-giving-upsell-amount-raw,
+  .live-giving-frequency{
+    background-color: #00ff001a !important;
+    &.pboAdvancedRow__preview .en__component--column {
+      outline-color: #00ff00 !important;
       z-index: 1;
     }
   }
