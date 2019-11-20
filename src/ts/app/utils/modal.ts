@@ -58,6 +58,8 @@ export default class Modal {
     if (freq == "single") {
       this.open(this.upsellModal);
       window.scrollTo(0, 0);
+      // Avoid form submission so you can see the modal
+      form.submit = false;
       return false;
     } else {
       // @TODO Only submits the form IF monthly (Delete this)

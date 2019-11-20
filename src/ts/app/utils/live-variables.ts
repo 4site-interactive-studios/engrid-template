@@ -21,13 +21,14 @@ export default class LiveVariables {
     frequency.onFrequencyChange.subscribe(() => this.changeSubmitButton());
     form.onSubmit.subscribe(() => this.loadingSubmitButton());
     form.onError.subscribe(() => this.changeSubmitButton());
-    const upsellLink = document.querySelectorAll(".monthly-upsell") as NodeList;
-    if (upsellLink) {
-      Array.from(upsellLink).forEach(e => {
-        let element = e as HTMLDivElement;
-        element.addEventListener("click", this.upsold.bind(this));
-      });
-    }
+
+    // Watch the monthly-upsell links
+    document.addEventListener("click", (e: Event) => {
+      const element = e.target as HTMLInputElement;
+      if (element && element.classList.contains("monthly-upsell")) {
+        this.upsold(e);
+      }
+    });
   }
 
   private getAmountTxt(amount: number = 0) {
