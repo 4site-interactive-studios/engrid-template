@@ -1257,12 +1257,15 @@ body.error-jump-assist #engrid .en__component .en__field__error {
 
   .en__field--firstName,
   .en__field--lastName,
-  .en__field--ccexpire,
-  .en__field--ccvv,
   .en__field--bankAccountNumber,
   .en__field--bankRoutingNumber {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
+  }
+
+  .en__field--ccexpire{
+    -ms-flex-preferred-size: calc((100% / 3) * 2);
+    flex-basis: calc((100% / 3) * 2);
   }
 
   .en__field--checkbox,
@@ -1291,7 +1294,8 @@ body.error-jump-assist #engrid .en__component .en__field__error {
   .en__field--postcode,
   .en__field--infcity,
   .en__field--infreg,
-  .en__field--infpostcd {
+  .en__field--infpostcd,
+  .en__field--ccvv {
     -ms-flex-preferred-size: calc(100% / 3);
     flex-basis: calc(100% / 3);
   }
