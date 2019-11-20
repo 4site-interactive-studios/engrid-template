@@ -25,8 +25,12 @@ export default class LiveVariables {
     // Watch the monthly-upsell links
     document.addEventListener("click", (e: Event) => {
       const element = e.target as HTMLInputElement;
-      if (element && element.classList.contains("monthly-upsell")) {
-        this.upsold(e);
+      if (element) {
+        if (element.classList.contains("monthly-upsell")) {
+          this.upsold(e);
+        } else if (element.classList.contains("form-submit")) {
+          form.submitForm();
+        }
       }
     });
   }
