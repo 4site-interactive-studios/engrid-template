@@ -35,8 +35,9 @@ $client-orange: #f1700b;
 $client-body-background-color: #ffffff; //@TODO Not yet used anywhere
 $client-body-border-radius: 0px;
 $body-padding-sm: 0.8652rem; //@TODO Revisit
-$body-padding: 1.375rem; //@TODO Revisit
-$body-padding-lg: 2.1875rem; //@TODO Revisit
+$body-padding: calc(0.8652rem * .75); //@TODO Revisit
+$body-padding-lg: calc(0.8652rem * 2.5); //@TODO Revisit
+$body-padding-xlg: calc(0.8652rem * 5); //@TODO Revisit
 
 $client-input-border-radius: 0px;
 $client-input-border-color: #000000;
@@ -66,6 +67,41 @@ $client-error-red: #e74b3c;
 $client-error-red-grayscale: #949494;
 $client-error-red-faded: #fef6f5;
 $client-error-page-group-background: #f4ddda;
+
+$client-highlight-background-color: #f9f003;
+$client-highlight-font-color: #343432;
+
+// Mixin generated at: http://text-crop.eightshapes.com/?typeface-selection=custom-font&typeface=Lato&custom-typeface-name=HarmoniaSansStd&custom-typeface-url=&custom-typeface-weight=900&custom-typeface-style=normal&weight-and-style=100&size=36&line-height=1.2&top-crop=12&bottom-crop=10
+@mixin text-crop($line-height: 1.3, $top-adjustment: 0px, $bottom-adjustment: 0px) {
+    // Configured in Step 1
+    $top-crop: 16;
+    $bottom-crop: 13;
+    $crop-font-size: 48;
+    $crop-line-height: 1.2;
+
+    // Apply values to calculate em-based margins that work with any font size
+    $dynamic-top-crop: max(($top-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size;
+    $dynamic-bottom-crop: max(($bottom-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size;
+
+    // Mixin output
+    line-height: $line-height;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+    }
+
+    &::before {
+        margin-bottom: calc(-#{$dynamic-top-crop}em + #{$top-adjustment});
+    }
+
+    &::after {
+        margin-top: calc(-#{$dynamic-bottom-crop}em + #{$bottom-adjustment});
+    }
+}
 
 @import "font";
 @import "util";

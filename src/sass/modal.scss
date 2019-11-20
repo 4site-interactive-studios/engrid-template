@@ -20,13 +20,24 @@
   align-items: center;
   overflow: hidden;
   &.exitModal {
-    background-color: $client-error-red;
+    background-color: rgba($client-error-red, 0.85);
     color: $client-white;
   }
-  // Hide close button on upsell modal
+
   &.upsellModal .button-close {
-    // display: none;
+    &::before,
+    &::after {
+      background-color: rgb(255, 255, 255); 
+    }
   }
+
+  &.exitModal .button-close {
+    &::before,
+    &::after {
+      background-color: rgb(0, 0, 0); 
+    }
+  }  
+
   &.is-hidden {
     top: -100vh;
   }
@@ -35,13 +46,13 @@
     position: absolute;
     right: 32px;
     top: 32px;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     opacity: 0.6;
     -webkit-transition: 0.3s opacity ease-in-out;
     transition: 0.3s opacity ease-in-out;
     @include to(2) {
-      top: -52px;
+      // top: -52px;
       opacity: 1;
     }
     &:hover {
@@ -52,11 +63,13 @@
       position: absolute;
       left: 15px;
       content: " ";
-      height: 33px;
+      height: 24px;
       width: 3px;
-      background-color: $client-black;
+      /* This value is the OPPOSITE color of our background */
+      
+      // background-color: $client-black;
       @include to(2) {
-        background-color: $client-body-background-color;
+        // background-color: $client-body-background-color;
       }
     }
     &::before {
@@ -69,8 +82,8 @@
     }
   }
   .enModal-container {
-    max-width: 775px;
-    padding: 90px;
+    max-width: 820px;
+    // padding: 90px;
     border-radius: $client-input-border-radius;
     background-color: $client-body-background-color;
     color: $client-black;
@@ -82,10 +95,44 @@
     position: relative;
 
     @include to(2) {
-      padding: 60px 40px;
-      font-size: 30px;
-      max-height: 60vh;
+      // padding: 60px 40px;
+      // font-size: 30px;
+      // max-height: 60vh;
     }
+
+    h1{
+      font-size: 48px;
+      font-weight: 900 !important;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+    }
+
+    .highlight{
+      background-color: $client-highlight-background-color;
+      color: $client-highlight-font-color;
+      padding: .15em;
+      display: inline-block;
+    }
+
+    .highlight::before {
+        margin-bottom: -.41rem;
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+    }
+
+    .highlight::after {
+        margin-top: -.37em;
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+    }
+      
     .title {
       color: $client-black;
     }
@@ -94,16 +141,16 @@
     }
     .cta {
       cursor: pointer;
-      // font-weight: 700;
-      padding: 12px 25px;
-      background-color: $client-black;
-      color: $client-orange;
-      display: block;
-      max-width: 250px;
-      // font-size: 26px;
-      text-align: center;
-      margin-top: 50px;
-      opacity: 1;
+      // // font-weight: 700;
+      // padding: 12px 25px;
+      // background-color: $client-black;
+      // color: $client-orange;
+      // display: block;
+      // max-width: 250px;
+      // // font-size: 26px;
+      // text-align: center;
+      // margin-top: 50px;
+      // opacity: 1;
       -webkit-transition: 0.3s background-color ease-in-out,
         0.3s color ease-in-out;
       -webkit-transition: 0.3s background-color ease-in-out,
@@ -119,13 +166,13 @@
       -webkit-transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out;
       transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out;
       @include to(2) {
-        font-size: 22px;
-        padding: 10px 20px;
-        max-width: 200px;
+        // font-size: 22px;
+        // padding: 10px 20px;
+        // max-width: 200px;
       }
       &:hover {
-        background-color: $client-orange;
-        color: $client-black;
+        // background-color: $client-orange;
+        // color: $client-black;
       }
     }
     .img {
@@ -138,13 +185,99 @@
         max-height: 250px;
       }
     }
-    .cta-bar {
+    .cta-groups{
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-      justify-content: space-between;
+    }
+    .cta-groups.column{
+      flex-direction: column;
+    }
+    .cta-groups.row{
+      margin-top: 2rem;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .cta-groups.center{
+      align-items: center;
+      justify-content: center;
+    }
+    .cta-groups .group{
+      flex-grow: 1;
+      display: flex;
+    }
+  }
+  &.exitModal #enModalContent{
+    padding: 4rem;
+    .cta-groups .group{
+      flex-direction: row;
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      &.primary{
+        justify-content: flex-end;
+        button{
+          margin: 0;
+          padding: 18px;
+        }
+      }
+      &.secondary{
+        justify-content: flex-start;
+        text-align: center;
+      }
+    }
+  }
+
+  &.upsellModal #enModalContent{
+    display:flex;
+    flex-direction: row;
+
+    .modal-left-column{
+      flex-basis: 50%;
+      background-size: cover;
+      background-position: left center;
+    }
+
+    .modal-right-column{
+      background-color: #2e2e2c;
+      flex-basis: 50%;
+      padding: $body-padding-lg;
+      text-align: center;
+      .cta-groups .group{
+        flex-direction: column;
+        &.primary{
+          margin-bottom: 100px;
+          button{
+            padding: 18px;
+          }
+        }
+      }
+    }  
+
+    @include to(2) {
+      flex-direction: column;
+
+      .modal-left-column{
+        display: none;
+      }
+
+    }
+
+  }
+
+  .cta.primary{
+    width: 100%;
+    max-width: 230px;
+  }
+
+  .dark-background{
+    h1,
+    p,
+    a{
+      color: #ffffff;
     }
   }
 }

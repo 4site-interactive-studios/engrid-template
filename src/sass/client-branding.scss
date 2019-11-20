@@ -97,11 +97,15 @@ body {
   }
 }
 
-#engrid .highlight {
-  background-color: #f9f003;
+#enModal .white-font{
+  color: $client-white;
+}
+
+#engrid .highlight{
+  background-color: $client-highlight-background-color;
+  color: $client-highlight-font-color;
   padding: 0.5rem;
   font-weight: 500;
-
   display: inline-block;
   // margin-left: -0.5rem;
   &.big {

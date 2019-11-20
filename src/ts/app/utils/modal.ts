@@ -46,7 +46,7 @@ export default class Modal {
           !this.overlay.classList.contains("is-hidden") &&
           this.overlay.classList.contains("upsellModal")
         ) {
-          // An intent to exit has happene
+          // An intent to exit has happend
           this.open(this.exitModal);
         }
       });
@@ -57,6 +57,7 @@ export default class Modal {
     // Only open Upsell Modal if Frequency == Single
     if (freq == "single") {
       this.open(this.upsellModal);
+      window.scrollTo(0, 0);
       return false;
     } else {
       // @TODO Only submits the form IF monthly (Delete this)
