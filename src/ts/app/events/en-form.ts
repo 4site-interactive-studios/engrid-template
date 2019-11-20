@@ -3,7 +3,7 @@ import { SignalDispatcher } from "strongly-typed-events";
 export default class EnForm {
   private _onSubmit = new SignalDispatcher();
   private _onError = new SignalDispatcher();
-  public submit: boolean = false;
+  public submit: boolean = true;
 
   public dispatchSubmit() {
     this._onSubmit.dispatch();
