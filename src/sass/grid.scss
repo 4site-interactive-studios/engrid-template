@@ -113,21 +113,21 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
 /* prettier-ignore */
 #en__pagebuilder .body-headerOutside .messageOverlay.hidden:only-child::before { content: "Body Header Outside"; }
 /* prettier-ignore */
-#en__pagebuilder .body-header .messageOverlay.hidden:only-child::before { content: "Body Header"; }
+#en__pagebuilder .body-header .messageOverlay.hidden:only-child::before { content: "Body Header Spacer"; }
 /* prettier-ignore */
 #en__pagebuilder .body-banner .messageOverlay.hidden:only-child::before { content: "Body Banner"; }
 /* prettier-ignore */
 #en__pagebuilder .body-bannerOverlay .messageOverlay.hidden:only-child::before { content: "Body Banner Overlay"; }
 /* prettier-ignore */
-#en__pagebuilder .body-top .messageOverlay.hidden:only-child::before { content: "Body Top"; }
+#en__pagebuilder .body-top .messageOverlay.hidden:only-child::before { content: "Body Top (Copy)"; }
 /* prettier-ignore */
-#en__pagebuilder .body-side .messageOverlay.hidden:only-child::before { content: "Body Side"; }
+#en__pagebuilder .body-side .messageOverlay.hidden:only-child::before { content: "Body Side (Copy)"; }
 /* prettier-ignore */
-#en__pagebuilder .body-main .messageOverlay.hidden:only-child::before { content: "Body Main"; }
+#en__pagebuilder .body-main .messageOverlay.hidden:only-child::before { content: "Body Main (Form)"; }
 /* prettier-ignore */
-#en__pagebuilder .body-bottom .messageOverlay.hidden:only-child::before { content: "Body Bottom"; }
+#en__pagebuilder .body-bottom .messageOverlay.hidden:only-child::before { content: "Body Bottom (Copy)"; }
 /* prettier-ignore */
-#en__pagebuilder .body-footer .messageOverlay.hidden:only-child::before { content: "Body Footer"; }
+#en__pagebuilder .body-footer .messageOverlay.hidden:only-child::before { content: "Body Footer Spacer"; }
 /* prettier-ignore */
 #en__pagebuilder .body-footerOutside .messageOverlay.hidden:only-child::before { content: "Body Footer Outside"; }
 /* prettier-ignore */

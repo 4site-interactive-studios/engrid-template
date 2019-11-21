@@ -241,6 +241,7 @@ export const debugBar = () => {
         '<span id="debug-bar">' +
           // '<button id="debug-toggle" type="button">Turn Debug On</button>' +
           '<button id="layout-toggle" type="button">Layout Toggle</button>' +
+          // '<button id="page-edit" type="button">Edit in EN (BETA)</button>' +
           "</span>"
       );
     } else {
@@ -270,6 +271,23 @@ export const debugBar = () => {
           false
         );
       }
+    }
+
+    if (document.getElementById("page-edit")) {
+      const debugTemplateButton = document.getElementById("page-edit");
+      if (debugTemplateButton) {
+        debugTemplateButton.addEventListener(
+          "click",
+          function() {
+            pageEdit();
+          },
+          false
+        );
+      }
+    }    
+
+    const pageEdit = () => {
+      window.location.href = window.location.href + "?edit";
     }
 
     const debugToggle = () => {
@@ -316,9 +334,9 @@ export const debugBar = () => {
           removeClassesByPrefix(enGrid, "layout-");
           enGrid.classList.add("layout-centercenter1col");
         } else if (enGrid.classList.contains("layout-centercenter1col")) {
-          removeClassesByPrefix(enGrid, "layout-");
-          enGrid.classList.add("layout-debug");
-        } else if (enGrid.classList.contains("layout-debug")) {
+        //   removeClassesByPrefix(enGrid, "layout-");
+        //   enGrid.classList.add("layout-debug");
+        // } else if (enGrid.classList.contains("layout-debug")) {
           removeClassesByPrefix(enGrid, "layout-");
           enGrid.classList.add("layout-centerleft1col");
         } else {
