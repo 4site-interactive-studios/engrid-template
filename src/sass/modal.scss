@@ -27,16 +27,16 @@
   &.upsellModal .button-close {
     &::before,
     &::after {
-      background-color: rgb(255, 255, 255); 
+      background-color: rgb(255, 255, 255);
     }
   }
 
   &.exitModal .button-close {
     &::before,
     &::after {
-      background-color: rgb(0, 0, 0); 
+      background-color: rgb(0, 0, 0);
     }
-  }  
+  }
 
   &.is-hidden {
     top: -100vh;
@@ -66,7 +66,7 @@
       height: 24px;
       width: 3px;
       /* This value is the OPPOSITE color of our background */
-      
+
       // background-color: $client-black;
       @include to(2) {
         // background-color: $client-body-background-color;
@@ -100,7 +100,7 @@
       // max-height: 60vh;
     }
 
-    h1{
+    h1 {
       font-size: 48px;
       font-weight: 900 !important;
       font-stretch: normal;
@@ -110,29 +110,29 @@
       text-transform: uppercase;
     }
 
-    .highlight{
+    .highlight {
       background-color: $client-highlight-background-color;
       color: $client-highlight-font-color;
-      padding: .15em;
+      padding: 0.15em;
       display: inline-block;
     }
 
     .highlight::before {
-        margin-bottom: -.41rem;
-        content: '';
-        display: block;
-        height: 0;
-        width: 0;
+      margin-bottom: -0.41rem;
+      content: "";
+      display: block;
+      height: 0;
+      width: 0;
     }
 
     .highlight::after {
-        margin-top: -.37em;
-        content: '';
-        display: block;
-        height: 0;
-        width: 0;
+      margin-top: -0.37em;
+      content: "";
+      display: block;
+      height: 0;
+      width: 0;
     }
-      
+
     .title {
       color: $client-black;
     }
@@ -151,6 +151,10 @@
       // text-align: center;
       // margin-top: 50px;
       // opacity: 1;
+      -webkit-transition: 0.3s background-color ease-in-out,
+        0.3s color ease-in-out;
+      -webkit-transition: 0.3s background-color ease-in-out,
+        0.3s color ease-in-out;
       -webkit-transition: 0.3s background-color ease-in-out,
         0.3s color ease-in-out;
       -webkit-transition: 0.3s background-color ease-in-out,
@@ -185,98 +189,134 @@
         max-height: 250px;
       }
     }
-    .cta-groups{
+    .cta-groups {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
     }
-    .cta-groups.column{
+    .cta-groups.column {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
-    .cta-groups.row{
+    .cta-groups.row {
       margin-top: 2rem;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
     }
-    .cta-groups.center{
+    .cta-groups.center {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
     }
-    .cta-groups .group{
+    .cta-groups .group {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
       flex-grow: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
     }
   }
-  &.exitModal #enModalContent{
+  &.exitModal #enModalContent {
     padding: 4rem;
-    .cta-groups .group{
+    .cta-groups .group {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
       margin-left: 1rem;
       margin-right: 1rem;
 
-      &.primary{
+      &.primary {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
-        button{
+        button {
           margin: 0;
           padding: 18px;
         }
       }
-      &.secondary{
+      &.secondary {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
         text-align: center;
       }
     }
   }
 
-  &.upsellModal #enModalContent{
-    display:flex;
+  &.upsellModal #enModalContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
 
-    .modal-left-column{
+    .modal-left-column {
+      -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
       background-size: cover;
       background-position: left center;
     }
 
-    .modal-right-column{
+    .modal-right-column {
       background-color: #2e2e2c;
+      -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
       padding: $body-padding-lg;
       text-align: center;
-      .cta-groups .group{
+      .cta-groups .group {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
-        &.primary{
-          margin-bottom: 100px;
-          button{
+        &.primary {
+          margin-bottom: 50px;
+          button {
             padding: 18px;
           }
         }
       }
-    }  
-
-    @include to(2) {
-      flex-direction: column;
-
-      .modal-left-column{
-        display: none;
-      }
-
     }
 
+    @include to(2) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+
+      .modal-left-column {
+        display: none;
+      }
+    }
   }
 
-  .cta.primary{
+  .cta.primary {
     width: 100%;
     max-width: 230px;
   }
 
-  .dark-background{
+  .dark-background {
     h1,
     p,
-    a{
+    a {
       color: #ffffff;
     }
   }

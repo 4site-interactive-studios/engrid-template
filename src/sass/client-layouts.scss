@@ -86,7 +86,18 @@
   .body-side,
   .body-footerOutside,
   .page-backgroundImageOverlay {
-    display: none;
+    // display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 
   /* prettier-ignore */
@@ -268,8 +279,6 @@ body#en__pagebuilder #engrid.layout-centercenter1col {
   }
 }
 
-
-
 /*
 * ####################################################################################################################
 * Layout - Center Left 1 Column
@@ -358,7 +367,18 @@ body#en__pagebuilder #engrid.layout-centercenter1col {
   .body-side,
   .body-footerOutside,
   .page-backgroundImageOverlay {
-    display: none;
+    // display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 
   /* prettier-ignore */
@@ -486,7 +506,7 @@ body#en__pagebuilder #engrid.layout-centerleft1col {
     .en__component--advrow .body-header {
       padding-top: 4rem;
     }
-    
+
     .en__component--advrow .body-footer {
       padding-bottom: 4rem;
     }
