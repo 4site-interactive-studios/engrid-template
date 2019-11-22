@@ -38,15 +38,11 @@
 
 /* BASE Layout - IE 11 Fallback for ENGRID's CSS Grid */
 #engrid .en__component--advrow {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 // Required otherwise Flexbox collapses in on itself in IE 11
 #engrid .en__component--advcolumn {
-  -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
@@ -69,8 +65,6 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
 }
 
 #engrid.legacy .en__component--advrow .en__component--advrow {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
 }
 
@@ -79,14 +73,9 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
   font-weight: 700;
   color: #999999;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: 100%;
 }
@@ -234,8 +223,6 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
   //   div.pboAdvancedRow__preview
   //   .en__component--row.en__component--advrow
   //   > div {
-  //   display: -webkit-box;
-  //   display: -ms-flexbox;
   //   display: flex;
   // }
 }
@@ -386,12 +373,14 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
 }
 
 #engrid .en__component--advrow > div,
-#EN__RootElement .en__component--advrow > div{
+#EN__RootElement .en__component--advrow > div {
   grid-column: pc;
   grid-row: na; //None existant row name used as fallback for un-assogned rows to be placed at the bottom of the grid
 }
 
-#engrid .en__component--advrow.en__component--active .en__component__actions.en__component__actions--advrow{
+#engrid
+  .en__component--advrow.en__component--active
+  .en__component__actions.en__component__actions--advrow {
   grid-row: page;
 }
 

@@ -24,28 +24,20 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 }
 
 .css-display_flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .css-flex-wrap_wrap {
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .css-align-items_flex-start {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
 }
 
 .css-align-items_flex-end {
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: flex-end;
 }
-
 
 .i1-25 .en__field:nth-of-type(1),
 .i2-25 .en__field:nth-of-type(2),
@@ -67,7 +59,6 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i18-25 .en__field:nth-of-type(18),
 .i19-25 .en__field:nth-of-type(19),
 .i20-25 .en__field:nth-of-type(20) {
-  -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -93,7 +84,6 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i18-33 .en__field:nth-of-type(18),
 .i19-33 .en__field:nth-of-type(19),
 .i20-33 .en__field:nth-of-type(20) {
-  -ms-flex-preferred-size: 33.33333%;
   flex-basis: 33.33333%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -119,7 +109,6 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i18-50 .en__field:nth-of-type(18),
 .i19-50 .en__field:nth-of-type(19),
 .i20-50 .en__field:nth-of-type(20) {
-  -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -145,7 +134,6 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i18-66 .en__field:nth-of-type(18),
 .i19-66 .en__field:nth-of-type(19),
 .i20-66 .en__field:nth-of-type(20) {
-  -ms-flex-preferred-size: 66.66666%;
   flex-basis: 66.66666%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -171,7 +159,6 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i18-75 .en__field:nth-of-type(18),
 .i19-75 .en__field:nth-of-type(19),
 .i20-75 .en__field:nth-of-type(20) {
-  -ms-flex-preferred-size: 75%;
   flex-basis: 75%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -245,8 +232,6 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i18-center .en__field:nth-of-type(18),
 .i19-center .en__field:nth-of-type(19),
 .i20-center .en__field:nth-of-type(20) {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -273,8 +258,6 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i18-show-hidden-radio-input .en__field:nth-of-type(18) .en__field__element--radio .en__field__item:nth-last-child(1),
 .i19-show-hidden-radio-input .en__field:nth-of-type(19) .en__field__element--radio .en__field__item:nth-last-child(1),
 .i20-show-hidden-radio-input .en__field:nth-of-type(20) .en__field__element--radio .en__field__item:nth-last-child(1) {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
 }
 
@@ -375,7 +358,6 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
   .i18-m50 .en__field:nth-of-type(18),
   .i19-m50 .en__field:nth-of-type(19),
   .i20-m50 .en__field:nth-of-type(20) {
-    -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -449,7 +431,6 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
   .i18-m100 .en__field:nth-of-type(18),
   .i19-m100 .en__field:nth-of-type(19),
   .i20-m100 .en__field:nth-of-type(20) {
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     padding-left: 0rem;
     padding-right: 0rem;

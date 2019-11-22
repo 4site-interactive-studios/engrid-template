@@ -78,14 +78,12 @@ body {
   letter-spacing: normal;
 }
 
-#engrid .en__field--recurrpay label.en__field__label{
+#engrid .en__field--recurrpay label.en__field__label {
   font-size: calc(0.05552em * 24);
 }
 
 #engrid .give-by-select .en__field--radio {
   label {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 0.83rem;
     display: block;
@@ -97,11 +95,11 @@ body {
   }
 }
 
-#enModal .white-font{
+#enModal .white-font {
   color: $client-white;
 }
 
-#engrid .highlight{
+#engrid .highlight {
   background-color: $client-highlight-background-color;
   color: $client-highlight-font-color;
   padding: 0.5rem;
@@ -133,11 +131,17 @@ body {
   width: 0;
 }
 
-#engrid .en__field--monthly_upsell_checkbox .en__field__input--checkbox + .en__field__label {
+#engrid
+  .en__field--monthly_upsell_checkbox
+  .en__field__input--checkbox
+  + .en__field__label {
   display: inline-block !important;
 }
 
-#engrid .en__field--monthly_upsell_checkbox .en__field__input--checkbox + .en__field__label::before {
+#engrid
+  .en__field--monthly_upsell_checkbox
+  .en__field__input--checkbox
+  + .en__field__label::before {
   margin-top: 0.25rem;
 }
 
@@ -202,7 +206,7 @@ body:not(#en__pagebuilder) .en__field--donationAmt label {
 
 #engrid .en__field__input--checkbox + .en__field__label,
 #engrid .en__contactDetails__rows {
-  font-size: calc(0.05552em * 18);;
+  font-size: calc(0.05552em * 18);
   font-weight: 400;
   text-transform: none;
   letter-spacing: 0.4px;
@@ -215,18 +219,23 @@ body:not(#en__pagebuilder) .en__field--donationAmt label {
 }
 
 #engrid .en__field--donationAmt .en__field__element--radio {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-items: center;
   margin: 0.9375rem auto;
 }
 
 #engrid .en__field--donationAmt .en__field__element--radio .en__field__item,
-body #engrid .en__component--formblock .en__field--donationAmt div.en__field__item:first-of-type,
-body #engrid .en__component--formblock .en__field--donationAmt div.en__field__item:last-of-type {
+body
+  #engrid
+  .en__component--formblock
+  .en__field--donationAmt
+  div.en__field__item:first-of-type,
+body
+  #engrid
+  .en__component--formblock
+  .en__field--donationAmt
+  div.en__field__item:last-of-type {
   margin: 0 0.25rem 1rem 0.25rem !important;
   margin-top: 0 !important;
   margin-right: 0.25rem !important;
@@ -238,17 +247,16 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   width: calc((100% / 3) - (1rem / 2));
 }
 
-#engrid .en__field--donationAmt .en__field__element--radio .en__field__item label {
+#engrid
+  .en__field--donationAmt
+  .en__field__element--radio
+  .en__field__item
+  label {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   height: 64px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -261,7 +269,6 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
     // min-height: 1000px;
 
     h1 {
-      -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
       line-height: 1;
       margin-bottom: 60px;
@@ -269,26 +276,16 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   }
 
   .pre-footer-card-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
     margin-bottom: 260px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
 
   .pre-footer-card {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
     width: 100%;
@@ -301,7 +298,7 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
     .header-wrapper {
       h2 {
         margin: 0;
-        font-size: calc(0.05552em * 32);;
+        font-size: calc(0.05552em * 32);
         font-weight: 900;
         letter-spacing: 1px;
         color: #000000;
@@ -311,7 +308,7 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
       }
     }
     p {
-      font-size: calc(0.05552em * 16);;
+      font-size: calc(0.05552em * 16);
       line-height: 1.58;
       letter-spacing: 0.2px;
       text-align: center;
@@ -323,19 +320,12 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   }
 
   .footer-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     color: #fff;
     padding: 30px 0px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     .footer-logo {
       padding: 1rem;
       img {
@@ -348,7 +338,7 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
       a {
         display: block;
         color: #fff;
-        font-size: calc(0.05552em * 16);;
+        font-size: calc(0.05552em * 16);
         font-weight: bold;
         text-decoration: none;
         &:hover {
@@ -361,7 +351,7 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
       max-width: 452px;
 
       p {
-        font-size: calc(0.05552em * 14);;
+        font-size: calc(0.05552em * 14);
         font-weight: 400;
         line-height: 1.57;
         letter-spacing: 0.6px;
@@ -370,14 +360,8 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
     }
     .footer-badges {
       padding: 1rem;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
       justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
       img {
         display: block;
@@ -402,19 +386,15 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   }
 
   .give-by-select .en__field--radio .en__field__item {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
 
     input[type="radio"] + label {
-      -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
       flex-grow: 1;
       padding: 1rem 0 1rem 2.25rem;
       background-position-x: calc(50% - 25px);
       background-position-y: calc(50% - 2px);
       background-repeat: no-repeat;
-      font-size: calc(0.05552em * 18);;
+      font-size: calc(0.05552em * 18);
       font-weight: bold;
       letter-spacing: 0.4px;
       text-align: center;
@@ -440,12 +420,13 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   }
 
   // This field had a highlight applied to it that causes the checbox to show up off center
-  #en__field_supporter_monthly_upsell_checkbox:checked + .en__field__label:after {
+  #en__field_supporter_monthly_upsell_checkbox:checked
+    + .en__field__label:after {
     top: 0.25rem;
   }
 
   .en__field--donationAmt input.en__field__input--other::placeholder {
-    opacity: .7;
+    opacity: 0.7;
   }
 
   // All Styling Needed to visuall merge country with the Address Input
@@ -482,17 +463,16 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
   //   margin-top: 5px;
   //   margin-bottom: 5px;
   // }
-
 }
 
-#engrid:not(.legacy) .en__field--country{
+#engrid:not(.legacy) .en__field--country {
   position: absolute;
   right: 0;
   align-items: flex-end;
   // label{
   //   visibility: hidden;
   // }
-  select{
+  select {
     width: 80px;
     z-index: 1;
     // border-top-color: transparent;
@@ -503,11 +483,10 @@ body #engrid .en__component--formblock .en__field--donationAmt div.en__field__it
     box-shadow: none;
     text-align-last: right;
   }
-  .en__field__error{
+  .en__field__error {
     z-index: 1;
   }
 }
-
 
 // #endgrid:not(.legacy) .en__field--country {
 //   position: absolute;
