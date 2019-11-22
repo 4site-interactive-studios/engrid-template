@@ -1,28 +1,9 @@
-// @TODO Look into https://www.npmjs.com/package/doiuse
-
-@import "reset";
+/* BREAKPOINTS */
 @import "breakpoint-sass";
 @import "breakpoint-slicer";
 $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
-/* MEDIA QUERY TESTING */
-/* https://github.com/lolmaus/breakpoint-slicer */
-// @include to(2) {
-//   body {
-//     background-color: #eb007d;
-//   }
-// }
-// @include from(3) {
-//   body {
-//     background-color: peru;
-//   }
-// }
-// @include between(2, 4) {
-//   body {
-//     background-color: purple;
-//   }
-// }
-
+/* SASS VARIABLES */
 $background-color: #ffffff;
 $background-image-background-color: #487c0f;
 
@@ -71,15 +52,39 @@ $client-error-page-group-background: #f4ddda;
 $client-highlight-background-color: #f9f003;
 $client-highlight-font-color: #343432;
 
-@import "font";
-// @import "util";
-@import "base";
-@import "grid";
-@import "client-branding";
-@import "client-layouts";
-@import "hack";
+/* BASE STYLING AND LAYOUTS*/
+@import "base/reset";
+@import "base/base";
+@import "base/engrid";
+@import "base/modal";
+@import "base/util";
+@import "base/hack";
+@import "base/page-builder";
+@import "base/debug";
+// @import "base/layouts/centercenter1col";
+// @import "base/layouts/centerleft1col";
 
-@import "page-builder";
-@import "modal";
+/* CLIENT STYLING AND LAYOTUS */
+@import "clients/ran/ran-font";
+@import "clients/ran/ran-branding";
+@import "clients/ran/layouts/ran-center1col";
 
-@import "debug";
+/* MEDIA QUERY TESTING */
+/* https://github.com/lolmaus/breakpoint-slicer */
+// @include to(2) {
+//   body {
+//     background-color: #eb007d;
+//   }
+// }
+// @include from(3) {
+//   body {
+//     background-color: peru;
+//   }
+// }
+// @include between(2, 4) {
+//   body {
+//     background-color: purple;
+//   }
+// }
+
+// @TODO Look into https://www.npmjs.com/package/doiuse

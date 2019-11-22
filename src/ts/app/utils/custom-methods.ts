@@ -284,11 +284,11 @@ export const debugBar = () => {
           false
         );
       }
-    }    
+    }
 
     const pageEdit = () => {
       window.location.href = window.location.href + "?edit";
-    }
+    };
 
     const debugToggle = () => {
       if (body) {
@@ -312,31 +312,16 @@ export const debugBar = () => {
 
     const layoutToggle = () => {
       if (enGrid) {
-        // if (enGrid.classList.contains("layout-leftleft1col")) {
-        //   removeClassesByPrefix(enGrid, "layout-");
-        //   enGrid.classList.add("layout-centerleft1col");
-        // } else if (enGrid.classList.contains("layout-centerleft1col")) {
-        //   removeClassesByPrefix(enGrid, "layout-");
-        //   enGrid.classList.add("layout-centercenter1col");
-        // } else if (enGrid.classList.contains("layout-centercenter1col")) {
-        //   removeClassesByPrefix(enGrid, "layout-");
-        //   enGrid.classList.add("layout-centercenter2col");
-        // } else if (enGrid.classList.contains("layout-centercenter2col")) {
-        //   removeClassesByPrefix(enGrid, "layout-");
-        //   enGrid.classList.add("layout-debug");
-        // } else if (enGrid.classList.contains("layout-debug")) {
-        //   removeClassesByPrefix(enGrid, "layout-");
-        //   enGrid.classList.add("layout-leftleft1col");
-        // } else {
-        //   console.log("While trying to switch layouts, something unexpected happen.");
-        // }
         if (enGrid.classList.contains("layout-centerleft1col")) {
           removeClassesByPrefix(enGrid, "layout-");
           enGrid.classList.add("layout-centercenter1col");
         } else if (enGrid.classList.contains("layout-centercenter1col")) {
-        //   removeClassesByPrefix(enGrid, "layout-");
-        //   enGrid.classList.add("layout-debug");
-        // } else if (enGrid.classList.contains("layout-debug")) {
+          removeClassesByPrefix(enGrid, "layout-");
+          enGrid.classList.add("layout-centercenter1col-wide");
+        } else if (enGrid.classList.contains("layout-centercenter1col-wide")) {
+          removeClassesByPrefix(enGrid, "layout-");
+          enGrid.classList.add("layout-centerright1col");
+        } else if (enGrid.classList.contains("layout-centerright1col")) {
           removeClassesByPrefix(enGrid, "layout-");
           enGrid.classList.add("layout-centerleft1col");
         } else {

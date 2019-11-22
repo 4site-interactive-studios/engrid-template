@@ -38,16 +38,3 @@
     url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/HarmoniaSansStd-Black.otf")
       format("opentype");
 }
-
-// @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
-body,
-body#en__pagebuilder {
-  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-family: HarmoniaSansStd;
-  font-size: 1.125em;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.44;
-  letter-spacing: normal;
-}

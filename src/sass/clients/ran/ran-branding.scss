@@ -1,5 +1,18 @@
+// @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
 body {
   background-color: $background-color;
+}
+
+body,
+body#en__pagebuilder {
+  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: HarmoniaSansStd;
+  font-size: 1.125em;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
 }
 
 body:not(#en__pagebuilder) {
