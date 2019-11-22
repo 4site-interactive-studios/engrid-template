@@ -2,271 +2,253 @@ body {
   background-color: $background-color;
 }
 
-// #engrid .en__component--copyblock p {
-//   font-family: HarmoniaSansStd;
-//   font-size: 18px;
-//   font-weight: normal;
-//   font-stretch: normal;
-//   font-style: normal;
-//   line-height: 1.44;
-//   letter-spacing: normal;
-// }
-
-#engrid h1 {
-  font-family: HarmoniaSansStd;
-  font-size: calc(0.05552em * 48);
-  font-weight: 900;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -1px;
-  text-align: center;
-  margin-bottom: 0;
-  text-transform: uppercase;
-}
-
-#engrid h2 {
-  font-family: HarmoniaSansStd;
-  font-size: calc(0.05552em * 24);
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-}
-
-#engrid h3 {
-  font-family: HarmoniaSansStd;
-  font-size: calc(0.05552em * 16);
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-}
-
-#engrid label.en__field__label {
-  font-family: HarmoniaSansStd;
-  font-size: calc(0.05552em * 12);
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.68px;
-  text-transform: uppercase;
-}
-
-#engrid .en__field__label--item {
-  font-family: HarmoniaSansStd;
-  font-size: calc(0.05552em * 18);
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.44;
-  letter-spacing: normal;
-}
-
-#engrid .en__field--donationAmt .en__field__label--item,
-#engrid .en__field--donationAmt .en__field__item--other::before,
-#engrid .en__field--donationAmt .en__field__item--other input {
-  font-family: HarmoniaSansStd;
-  font-size: calc(0.05552em * 24);
-  font-weight: 900;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-}
-
-#engrid .en__field--recurrpay label.en__field__label {
-  font-size: calc(0.05552em * 24);
-}
-
-#engrid .give-by-select .en__field--radio {
-  label {
-    justify-content: center;
-    margin-top: 0.83rem;
-    display: block;
-    width: 100%;
-    font-size: calc(0.05552em * 24);
-    font-weight: 900;
-    line-height: 1;
-    padding: 18px 0;
+body:not(#en__pagebuilder) {
+  /* We need to set labels for error messages, but don't want them visually displayed outside page builder */
+  /* en__field--153853 is In Memoriam */
+  .en__field--153853 label,
+  .en__field--donationAmt label {
+    display: none;
   }
-}
-
-#enModal .white-font {
-  color: $client-white;
-}
-
-#engrid .highlight {
-  background-color: $client-highlight-background-color;
-  color: $client-highlight-font-color;
-  padding: 0.5rem;
-  font-weight: 500;
-  display: inline-block;
-  // margin-left: -0.5rem;
-  &.big {
-    font-size: 120%;
-  }
-}
-
-#engrid .en__field--donationAmt input[type="text"].en__field__input--other,
-#engrid .en__field--donationAmt input[type="number"].en__field__input--other,
-#engrid .en__field--donationAmt input[type="tel"].en__field__input--other {
-  padding-left: 33%;
-  // padding-right: 27%;
-  // text-align: center;
-  min-height: 64px;
-}
-
-#engrid .en__field--donationAmt .en__field__item--other::before {
-  display: block;
-  content: "$";
-  position: relative;
-  height: 0;
-  left: calc((100% / 3) - 1rem);
-  top: 1.1rem;
-  color: #ffffff;
-  width: 0;
-}
-
-#engrid
-  .en__field--monthly_upsell_checkbox
-  .en__field__input--checkbox
-  + .en__field__label {
-  display: inline-block !important;
-}
-
-#engrid
-  .en__field--monthly_upsell_checkbox
-  .en__field__input--checkbox
-  + .en__field__label::before {
-  margin-top: 0.25rem;
-}
-
-// .en__field--donationAmt .en__field__item--other::after{
-//   opacity: .8;
-//   font-size: 80%;
-//   position: absolute;
-//   font-family: inherit;
-//   font-weight: 400;
-//   line-height: 1.5;
-//   bottom: 1.25rem;
-//   display: inline-block;
-//   height: 0;
-//   margin-left: .5rem;
-// }
-
-// .en__field--donationAmt.monthly-giving .en__field__item--other::after {
-//   content: "enter monthly amount";
-// }
-
-// .en__field--donationAmt:not(.monthly-giving) .en__field__item--other::after {
-//   content: "enter amount";
-// }
-
-/* We need to set labels for error messages, but don't want them visually displayed outside page builder */
-/* en__field--153853 is In Memoriam */
-body:not(#en__pagebuilder) .en__field--153853 label,
-body:not(#en__pagebuilder) .en__field--donationAmt label,
-body:not(#en__pagebuilder) .en__field--donationAmt label {
-  display: none;
-}
-
-.en__field--recurrpay label.en__field__label {
-  // font-size: calc(0.05552em * 24) !important;
-  font-weight: 900 !important;
-  text-transform: none !important;
-  &::before {
-    top: 3px;
-  }
-}
-.en__field--recurrpay > label {
-  display: none;
-}
-
-#engrid .monthly-gift-upsell-tooltip {
-  text-align: center;
-}
-
-#engrid .monthly-gift-upsell-tooltip .highlight:after {
-  bottom: -12px;
-  left: 60%;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border: 20px solid transparent;
-  border-top-color: #f9f003;
-  margin-left: 30px;
-  z-index: 1;
-}
-
-#engrid .en__field__input--checkbox + .en__field__label,
-#engrid .en__contactDetails__rows {
-  font-size: calc(0.05552em * 18);
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: 0.4px;
-  display: inline-block;
-  .highlight {
-    font-weight: 700;
-    margin-top: -0.5rem;
-    margin-left: -0.2rem;
-  }
-}
-
-#engrid .en__field--donationAmt .en__field__element--radio {
-  justify-content: center;
-  flex-wrap: wrap;
-  justify-items: center;
-  margin: 0.9375rem auto;
-}
-
-#engrid .en__field--donationAmt .en__field__element--radio .en__field__item,
-body
-  #engrid
-  .en__component--formblock
-  .en__field--donationAmt
-  div.en__field__item:first-of-type,
-body
-  #engrid
-  .en__component--formblock
-  .en__field--donationAmt
-  div.en__field__item:last-of-type {
-  margin: 0 0.25rem 1rem 0.25rem !important;
-  margin-top: 0 !important;
-  margin-right: 0.25rem !important;
-  margin-bottom: 1rem !important;
-  margin-left: 0.25rem !important;
-}
-
-#engrid .en__field--donationAmt .en__field__element--radio .en__field__item {
-  width: calc((100% / 3) - (1rem / 2));
-}
-
-#engrid
-  .en__field--donationAmt
-  .en__field__element--radio
-  .en__field__item
-  label {
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  height: 64px;
-  align-items: center;
 }
 
 #engrid {
+  h1 {
+    font-family: HarmoniaSansStd;
+    font-size: calc(0.05552em * 48);
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-align: center;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: HarmoniaSansStd;
+    font-size: calc(0.05552em * 24);
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+  h3 {
+    font-family: HarmoniaSansStd;
+    font-size: calc(0.05552em * 16);
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+  label.en__field__label {
+    font-family: HarmoniaSansStd;
+    font-size: calc(0.05552em * 12);
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.68px;
+    text-transform: uppercase;
+  }
+
+  .en__field__label--item {
+    font-family: HarmoniaSansStd;
+    font-size: calc(0.05552em * 18);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+  }
+
+  .en__field--donationAmt {
+    .en__field__label--item,
+    .en__field__item--other::before,
+    .en__field__item--other input {
+      font-family: HarmoniaSansStd;
+      font-size: calc(0.05552em * 24);
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+    }
+  }
+
+  .en__field--recurrpay label.en__field__label {
+    font-size: calc(0.05552em * 24);
+  }
+
+  .give-by-select .en__field--radio {
+    label {
+      justify-content: center;
+      margin-top: 0.83rem;
+      display: block;
+      width: 100%;
+      font-size: calc(0.05552em * 24);
+      font-weight: 900;
+      line-height: 1;
+      padding: 18px 0;
+    }
+  }
+
+  .highlight {
+    background-color: $client-highlight-background-color;
+    color: $client-highlight-font-color;
+    padding: 0.5rem;
+    font-weight: 500;
+    display: inline-block;
+    // margin-left: -0.5rem;
+    &.big {
+      font-size: 120%;
+    }
+  }
+
+  .en__field--donationAmt {
+    input[type="text"].en__field__input--other,
+    input[type="number"].en__field__input--other,
+    input[type="tel"].en__field__input--other {
+      padding-left: 33%;
+      // padding-right: 27%;
+      // text-align: center;
+      min-height: 64px;
+    }
+  }
+
+  .en__field--donationAmt .en__field__item--other::before {
+    display: block;
+    content: "$";
+    position: relative;
+    height: 0;
+    left: calc((100% / 3) - 1rem);
+    top: 1.1rem;
+    color: #ffffff;
+    width: 0;
+  }
+
+  .en__field--monthly_upsell_checkbox
+    .en__field__input--checkbox
+    + .en__field__label {
+    display: inline-block !important;
+  }
+
+  .en__field--monthly_upsell_checkbox
+    .en__field__input--checkbox
+    + .en__field__label::before {
+    margin-top: 0.25rem;
+  }
+
+  // .en__field--donationAmt .en__field__item--other::after{
+  //   opacity: .8;
+  //   font-size: 80%;
+  //   position: absolute;
+  //   font-family: inherit;
+  //   font-weight: 400;
+  //   line-height: 1.5;
+  //   bottom: 1.25rem;
+  //   display: inline-block;
+  //   height: 0;
+  //   margin-left: .5rem;
+  // }
+
+  // .en__field--donationAmt.monthly-giving .en__field__item--other::after {
+  //   content: "enter monthly amount";
+  // }
+
+  // .en__field--donationAmt:not(.monthly-giving) .en__field__item--other::after {
+  //   content: "enter amount";
+  // }
+
+  .en__field--recurrpay {
+    label.en__field__label {
+      // font-size: calc(0.05552em * 24) !important;
+      font-weight: 900 !important;
+      text-transform: none !important;
+      &::before {
+        top: 3px;
+      }
+    }
+
+    .en__field--recurrpay > label {
+      display: none;
+    }
+  }
+
+  .monthly-gift-upsell-tooltip {
+    text-align: center;
+  }
+
+  .monthly-gift-upsell-tooltip .highlight:after {
+    bottom: -12px;
+    left: 60%;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border: 20px solid transparent;
+    border-top-color: #f9f003;
+    margin-left: 30px;
+    z-index: 1;
+  }
+
+  .en__field__input--checkbox + .en__field__label,
+  .en__contactDetails__rows {
+    font-size: calc(0.05552em * 18);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.4px;
+    display: inline-block;
+    .highlight {
+      font-weight: 700;
+      margin-top: -0.5rem;
+      margin-left: -0.2rem;
+    }
+  }
+
+  .en__field--donationAmt .en__field__element--radio {
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-items: center;
+    margin: 0.9375rem auto;
+  }
+
+  .en__field--donationAmt .en__field__element--radio .en__field__item,
+  .en__component--formblock
+    .en__field--donationAmt
+    div.en__field__item:first-of-type,
+  .en__component--formblock
+    .en__field--donationAmt
+    div.en__field__item:last-of-type {
+    margin: 0 0.25rem 1rem 0.25rem !important;
+    margin-top: 0 !important;
+    margin-right: 0.25rem !important;
+    margin-bottom: 1rem !important;
+    margin-left: 0.25rem !important;
+  }
+
+  .en__field--donationAmt .en__field__element--radio .en__field__item {
+    width: calc((100% / 3) - (1rem / 2));
+  }
+
+  .en__field--donationAmt .en__field__element--radio .en__field__item label {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 64px;
+    align-items: center;
+  }
+
   .content-preFooter {
     background-color: #ffffff;
     background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/pre-footer-donation-background.png");
     background-position: bottom left;
     background-repeat: no-repeat;
-    // min-height: 1000px;
 
     h1 {
       flex-basis: 100%;
@@ -475,9 +457,6 @@ body
   select {
     width: 80px;
     z-index: 1;
-    // border-top-color: transparent;
-    // border-right-color: transparent;
-    // border-bottom-color: transparent;
     background-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -488,31 +467,19 @@ body
   }
 }
 
-// #endgrid:not(.legacy) .en__field--country {
-//   position: absolute;
-//   right: 0;
-//   z-index: 1;
-//   top: 1.7rem;
-//   text-align: right;
-//   margin: 0;
-// }
+#enModal {
+  .white-font {
+    color: $client-white;
+  }
+}
 
-// #endgrid:not(.legacy) .en__field--country::before {
-//   content: "";
-//   display: block;
-//   height: 60%;
-//   width: 1px;
-//   background-color: #cacaca;
-//   position: absolute;
-//   left: 0;
-//   top: 20%;
-// }
+/** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/
+/* prettier-ignore */
+#engrid .en__component--advrow:not(.show) :not(.pboAdvancedRow__preview) .hide.en__component--column {
+  display: none;
+}
 
-// #endgrid:not(.legacy) .en__field--country #en__field_supporter_country {
-//   border: none;
-//   background-color: transparent;
-//   text-align-last: center;
-//   width: 89px;
-//   -webkit-box-shadow: none;
-//   box-shadow: none;
-// }
+/** Hide CONTENT when viewed publicly, but not when viewed in page builder. **/
+body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
+  display: none !important;
+}

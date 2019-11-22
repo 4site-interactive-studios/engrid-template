@@ -9,7 +9,7 @@
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
-  "author": "Fernando Santos",
+  "author": "4Site Studios",
   "license": "Unlicense",
   "devDependencies": {
     "@babel/core": "^7.6.4",

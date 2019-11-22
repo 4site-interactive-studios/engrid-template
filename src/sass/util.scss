@@ -1,16 +1,4 @@
-// All Grid Related Items
-/** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/
-/* prettier-ignore */
-#engrid .en__component--advrow:not(.show) :not(.pboAdvancedRow__preview) .hide.en__component--column {
-  display: none;
-}
-
-/** Hide CONTENT when viewed publicly, but not when viewed in page builder. **/
-body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
-  display: none !important;
-}
-
-/* Utility Classes for General Purposes */
+/* General Purposes Utility Classes */
 .no-margin {
   margin: 0px;
 }
@@ -39,6 +27,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
   align-items: flex-end;
 }
 
+// Grid Related Utility Classes
 .i1-25 .en__field:nth-of-type(1),
 .i2-25 .en__field:nth-of-type(2),
 .i3-25 .en__field:nth-of-type(3),
@@ -47,18 +36,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i6-25 .en__field:nth-of-type(6),
 .i7-25 .en__field:nth-of-type(7),
 .i8-25 .en__field:nth-of-type(8),
-.i9-25 .en__field:nth-of-type(9),
-.i10-25 .en__field:nth-of-type(10),
-.i11-25 .en__field:nth-of-type(11),
-.i12-25 .en__field:nth-of-type(12),
-.i13-25 .en__field:nth-of-type(13),
-.i14-25 .en__field:nth-of-type(14),
-.i15-25 .en__field:nth-of-type(15),
-.i16-25 .en__field:nth-of-type(16),
-.i17-25 .en__field:nth-of-type(17),
-.i18-25 .en__field:nth-of-type(18),
-.i19-25 .en__field:nth-of-type(19),
-.i20-25 .en__field:nth-of-type(20) {
+.i9-25 .en__field:nth-of-type(9) {
   flex-basis: 25%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -72,18 +50,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i6-33 .en__field:nth-of-type(6),
 .i7-33 .en__field:nth-of-type(7),
 .i8-33 .en__field:nth-of-type(8),
-.i9-33 .en__field:nth-of-type(9),
-.i10-33 .en__field:nth-of-type(10),
-.i11-33 .en__field:nth-of-type(11),
-.i12-33 .en__field:nth-of-type(12),
-.i13-33 .en__field:nth-of-type(13),
-.i14-33 .en__field:nth-of-type(14),
-.i15-33 .en__field:nth-of-type(15),
-.i16-33 .en__field:nth-of-type(16),
-.i17-33 .en__field:nth-of-type(17),
-.i18-33 .en__field:nth-of-type(18),
-.i19-33 .en__field:nth-of-type(19),
-.i20-33 .en__field:nth-of-type(20) {
+.i9-33 .en__field:nth-of-type(9) {
   flex-basis: 33.33333%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -97,18 +64,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i6-50 .en__field:nth-of-type(6),
 .i7-50 .en__field:nth-of-type(7),
 .i8-50 .en__field:nth-of-type(8),
-.i9-50 .en__field:nth-of-type(9),
-.i10-50 .en__field:nth-of-type(10),
-.i11-50 .en__field:nth-of-type(11),
-.i12-50 .en__field:nth-of-type(12),
-.i13-50 .en__field:nth-of-type(13),
-.i14-50 .en__field:nth-of-type(14),
-.i15-50 .en__field:nth-of-type(15),
-.i16-50 .en__field:nth-of-type(16),
-.i17-50 .en__field:nth-of-type(17),
-.i18-50 .en__field:nth-of-type(18),
-.i19-50 .en__field:nth-of-type(19),
-.i20-50 .en__field:nth-of-type(20) {
+.i9-50 .en__field:nth-of-type(9) {
   flex-basis: 50%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -122,18 +78,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i6-66 .en__field:nth-of-type(6),
 .i7-66 .en__field:nth-of-type(7),
 .i8-66 .en__field:nth-of-type(8),
-.i9-66 .en__field:nth-of-type(9),
-.i10-66 .en__field:nth-of-type(10),
-.i11-66 .en__field:nth-of-type(11),
-.i12-66 .en__field:nth-of-type(12),
-.i13-66 .en__field:nth-of-type(13),
-.i14-66 .en__field:nth-of-type(14),
-.i15-66 .en__field:nth-of-type(15),
-.i16-66 .en__field:nth-of-type(16),
-.i17-66 .en__field:nth-of-type(17),
-.i18-66 .en__field:nth-of-type(18),
-.i19-66 .en__field:nth-of-type(19),
-.i20-66 .en__field:nth-of-type(20) {
+.i9-66 .en__field:nth-of-type(9) {
   flex-basis: 66.66666%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -147,18 +92,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i6-75 .en__field:nth-of-type(6),
 .i7-75 .en__field:nth-of-type(7),
 .i8-75 .en__field:nth-of-type(8),
-.i9-75 .en__field:nth-of-type(9),
-.i10-75 .en__field:nth-of-type(10),
-.i11-75 .en__field:nth-of-type(11),
-.i12-75 .en__field:nth-of-type(12),
-.i13-75 .en__field:nth-of-type(13),
-.i14-75 .en__field:nth-of-type(14),
-.i15-75 .en__field:nth-of-type(15),
-.i16-75 .en__field:nth-of-type(16),
-.i17-75 .en__field:nth-of-type(17),
-.i18-75 .en__field:nth-of-type(18),
-.i19-75 .en__field:nth-of-type(19),
-.i20-75 .en__field:nth-of-type(20) {
+.i9-75 .en__field:nth-of-type(9) {
   flex-basis: 75%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -173,18 +107,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i6-start .en__field:nth-of-type(6),
 .i7-start .en__field:nth-of-type(7),
 .i8-start .en__field:nth-of-type(8),
-.i9-start .en__field:nth-of-type(9),
-.i10-start .en__field:nth-of-type(10),
-.i11-start .en__field:nth-of-type(11),
-.i12-start .en__field:nth-of-type(12),
-.i13-start .en__field:nth-of-type(13),
-.i14-start .en__field:nth-of-type(14),
-.i15-start .en__field:nth-of-type(15),
-.i16-start .en__field:nth-of-type(16),
-.i17-start .en__field:nth-of-type(17),
-.i18-start .en__field:nth-of-type(18),
-.i19-start .en__field:nth-of-type(19),
-.i20-start .en__field:nth-of-type(20) {
+.i9-start .en__field:nth-of-type(9) {
   padding-left: 0;
 }
 
@@ -197,18 +120,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i6-end .en__field:nth-of-type(6),
 .i7-end .en__field:nth-of-type(7),
 .i8-end .en__field:nth-of-type(8),
-.i9-end .en__field:nth-of-type(9),
-.i10-end .en__field:nth-of-type(10),
-.i11-end .en__field:nth-of-type(11),
-.i12-end .en__field:nth-of-type(12),
-.i13-end .en__field:nth-of-type(13),
-.i14-end .en__field:nth-of-type(14),
-.i15-end .en__field:nth-of-type(15),
-.i16-end .en__field:nth-of-type(16),
-.i17-end .en__field:nth-of-type(17),
-.i18-end .en__field:nth-of-type(18),
-.i19-end .en__field:nth-of-type(19),
-.i20-end .en__field:nth-of-type(20) {
+.i9-end .en__field:nth-of-type(9) {
   padding-right: 0;
 }
 
@@ -220,18 +132,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i6-center .en__field:nth-of-type(6),
 .i7-center .en__field:nth-of-type(7),
 .i8-center .en__field:nth-of-type(8),
-.i9-center .en__field:nth-of-type(9),
-.i10-center .en__field:nth-of-type(10),
-.i11-center .en__field:nth-of-type(11),
-.i12-center .en__field:nth-of-type(12),
-.i13-center .en__field:nth-of-type(13),
-.i14-center .en__field:nth-of-type(14),
-.i15-center .en__field:nth-of-type(15),
-.i16-center .en__field:nth-of-type(16),
-.i17-center .en__field:nth-of-type(17),
-.i18-center .en__field:nth-of-type(18),
-.i19-center .en__field:nth-of-type(19),
-.i20-center .en__field:nth-of-type(20) {
+.i9-center .en__field:nth-of-type(9) {
   align-items: center;
 }
 
@@ -246,18 +147,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i6-show-hidden-radio-input .en__field:nth-of-type(6) .en__field__element--radio .en__field__item:nth-last-child(1),
 .i7-show-hidden-radio-input .en__field:nth-of-type(7) .en__field__element--radio .en__field__item:nth-last-child(1),
 .i8-show-hidden-radio-input .en__field:nth-of-type(8) .en__field__element--radio .en__field__item:nth-last-child(1),
-.i9-show-hidden-radio-input .en__field:nth-of-type(9) .en__field__element--radio .en__field__item:nth-last-child(1),
-.i10-show-hidden-radio-input .en__field:nth-of-type(10) .en__field__element--radio .en__field__item:nth-last-child(1),
-.i11-show-hidden-radio-input .en__field:nth-of-type(11) .en__field__element--radio .en__field__item:nth-last-child(1),
-.i12-show-hidden-radio-input .en__field:nth-of-type(12) .en__field__element--radio .en__field__item:nth-last-child(1),
-.i13-show-hidden-radio-input .en__field:nth-of-type(13) .en__field__element--radio .en__field__item:nth-last-child(1),
-.i14-show-hidden-radio-input .en__field:nth-of-type(14) .en__field__element--radio .en__field__item:nth-last-child(1),
-.i15-show-hidden-radio-input .en__field:nth-of-type(15) .en__field__element--radio .en__field__item:nth-last-child(1),
-.i16-show-hidden-radio-input .en__field:nth-of-type(16) .en__field__element--radio .en__field__item:nth-last-child(1),
-.i17-show-hidden-radio-input .en__field:nth-of-type(17) .en__field__element--radio .en__field__item:nth-last-child(1),
-.i18-show-hidden-radio-input .en__field:nth-of-type(18) .en__field__element--radio .en__field__item:nth-last-child(1),
-.i19-show-hidden-radio-input .en__field:nth-of-type(19) .en__field__element--radio .en__field__item:nth-last-child(1),
-.i20-show-hidden-radio-input .en__field:nth-of-type(20) .en__field__element--radio .en__field__item:nth-last-child(1) {
+.i9-show-hidden-radio-input .en__field:nth-of-type(9) .en__field__element--radio .en__field__item:nth-last-child(1){
   display: flex !important;
 }
 
@@ -271,18 +161,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i6-show-hidden-radio-input .en__field:nth-of-type(6) .en__field__element--radio .en__field__item:nth-last-child(2),
 .i7-show-hidden-radio-input .en__field:nth-of-type(7) .en__field__element--radio .en__field__item:nth-last-child(2),
 .i8-show-hidden-radio-input .en__field:nth-of-type(8) .en__field__element--radio .en__field__item:nth-last-child(2),
-.i9-show-hidden-radio-input .en__field:nth-of-type(9) .en__field__element--radio .en__field__item:nth-last-child(2),
-.i10-show-hidden-radio-input .en__field:nth-of-type(10) .en__field__element--radio .en__field__item:nth-last-child(2),
-.i11-show-hidden-radio-input .en__field:nth-of-type(11) .en__field__element--radio .en__field__item:nth-last-child(2),
-.i12-show-hidden-radio-input .en__field:nth-of-type(12) .en__field__element--radio .en__field__item:nth-last-child(2),
-.i13-show-hidden-radio-input .en__field:nth-of-type(13) .en__field__element--radio .en__field__item:nth-last-child(2),
-.i14-show-hidden-radio-input .en__field:nth-of-type(14) .en__field__element--radio .en__field__item:nth-last-child(2),
-.i15-show-hidden-radio-input .en__field:nth-of-type(15) .en__field__element--radio .en__field__item:nth-last-child(2),
-.i16-show-hidden-radio-input .en__field:nth-of-type(16) .en__field__element--radio .en__field__item:nth-last-child(2),
-.i17-show-hidden-radio-input .en__field:nth-of-type(17) .en__field__element--radio .en__field__item:nth-last-child(2),
-.i18-show-hidden-radio-input .en__field:nth-of-type(18) .en__field__element--radio .en__field__item:nth-last-child(2),
-.i19-show-hidden-radio-input .en__field:nth-of-type(19) .en__field__element--radio .en__field__item:nth-last-child(2),
-.i20-show-hidden-radio-input .en__field:nth-of-type(20) .en__field__element--radio .en__field__item:nth-last-child(2) {
+.i9-show-hidden-radio-input .en__field:nth-of-type(9) .en__field__element--radio .en__field__item:nth-last-child(2){
   display: none !important;
 }
 
@@ -296,18 +175,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i6-show-hidden-radio-input.i6-center .en__field:nth-of-type(6).en__field--validationFailed .en__field__element--radio,
 .i7-show-hidden-radio-input.i7-center .en__field:nth-of-type(7).en__field--validationFailed .en__field__element--radio,
 .i8-show-hidden-radio-input.i8-center .en__field:nth-of-type(8).en__field--validationFailed .en__field__element--radio,
-.i9-show-hidden-radio-input.i9-center .en__field:nth-of-type(9).en__field--validationFailed .en__field__element--radio,
-.i10-show-hidden-radio-input.i10-center .en__field:nth-of-type(10).en__field--validationFailed .en__field__element--radio,
-.i11-show-hidden-radio-input.i11-center .en__field:nth-of-type(11).en__field--validationFailed .en__field__element--radio,
-.i12-show-hidden-radio-input.i12-center .en__field:nth-of-type(12).en__field--validationFailed .en__field__element--radio,
-.i13-show-hidden-radio-input.i13-center .en__field:nth-of-type(13).en__field--validationFailed .en__field__element--radio,
-.i14-show-hidden-radio-input.i14-center .en__field:nth-of-type(14).en__field--validationFailed .en__field__element--radio,
-.i15-show-hidden-radio-input.i15-center .en__field:nth-of-type(15).en__field--validationFailed .en__field__element--radio,
-.i16-show-hidden-radio-input.i16-center .en__field:nth-of-type(16).en__field--validationFailed .en__field__element--radio,
-.i17-show-hidden-radio-input.i17-center .en__field:nth-of-type(17).en__field--validationFailed .en__field__element--radio,
-.i18-show-hidden-radio-input.i18-center .en__field:nth-of-type(18).en__field--validationFailed .en__field__element--radio,
-.i19-show-hidden-radio-input.i19-center .en__field:nth-of-type(19).en__field--validationFailed .en__field__element--radio,
-.i20-show-hidden-radio-input.i20-center .en__field:nth-of-type(20).en__field--validationFailed .en__field__element--radio {
+.i9-show-hidden-radio-input.i9-center .en__field:nth-of-type(9).en__field--validationFailed .en__field__element--radio{
   border-radius: 0.3rem !important;
   margin-bottom: 0.5rem;
 }
@@ -322,18 +190,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
 .i6-show-hidden-radio-input.i6-center .en__field:nth-of-type(6).en__field--validationFailed .en__field__error,
 .i7-show-hidden-radio-input.i7-center .en__field:nth-of-type(7).en__field--validationFailed .en__field__error,
 .i8-show-hidden-radio-input.i8-center .en__field:nth-of-type(8).en__field--validationFailed .en__field__error,
-.i9-show-hidden-radio-input.i9-center .en__field:nth-of-type(9).en__field--validationFailed .en__field__error,
-.i10-show-hidden-radio-input.i10-center .en__field:nth-of-type(10).en__field--validationFailed .en__field__error,
-.i11-show-hidden-radio-input.i11-center .en__field:nth-of-type(11).en__field--validationFailed .en__field__error,
-.i12-show-hidden-radio-input.i12-center .en__field:nth-of-type(12).en__field--validationFailed .en__field__error,
-.i13-show-hidden-radio-input.i13-center .en__field:nth-of-type(13).en__field--validationFailed .en__field__error,
-.i14-show-hidden-radio-input.i14-center .en__field:nth-of-type(14).en__field--validationFailed .en__field__error,
-.i15-show-hidden-radio-input.i15-center .en__field:nth-of-type(15).en__field--validationFailed .en__field__error,
-.i16-show-hidden-radio-input.i16-center .en__field:nth-of-type(16).en__field--validationFailed .en__field__error,
-.i17-show-hidden-radio-input.i17-center .en__field:nth-of-type(17).en__field--validationFailed .en__field__error,
-.i18-show-hidden-radio-input.i18-center .en__field:nth-of-type(18).en__field--validationFailed .en__field__error,
-.i19-show-hidden-radio-input.i19-center .en__field:nth-of-type(19).en__field--validationFailed .en__field__error,
-.i20-show-hidden-radio-input.i20-center .en__field:nth-of-type(20).en__field--validationFailed .en__field__error {
+.i9-show-hidden-radio-input.i9-center .en__field:nth-of-type(9).en__field--validationFailed .en__field__error{
   border-radius: 0.3rem !important;
 }
 
@@ -346,18 +203,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
   .i6-m50 .en__field:nth-of-type(6),
   .i7-m50 .en__field:nth-of-type(7),
   .i8-m50 .en__field:nth-of-type(8),
-  .i9-m50 .en__field:nth-of-type(9),
-  .i10-m50 .en__field:nth-of-type(10),
-  .i11-m50 .en__field:nth-of-type(11),
-  .i12-m50 .en__field:nth-of-type(12),
-  .i13-m50 .en__field:nth-of-type(13),
-  .i14-m50 .en__field:nth-of-type(14),
-  .i15-m50 .en__field:nth-of-type(15),
-  .i16-m50 .en__field:nth-of-type(16),
-  .i17-m50 .en__field:nth-of-type(17),
-  .i18-m50 .en__field:nth-of-type(18),
-  .i19-m50 .en__field:nth-of-type(19),
-  .i20-m50 .en__field:nth-of-type(20) {
+  .i9-m50 .en__field:nth-of-type(9) {
     flex-basis: 50%;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -372,18 +218,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
   .i6-mstart .en__field:nth-of-type(6),
   .i7-mstart .en__field:nth-of-type(7),
   .i8-mstart .en__field:nth-of-type(8),
-  .i9-mstart .en__field:nth-of-type(9),
-  .i10-mstart .en__field:nth-of-type(10),
-  .i11-mstart .en__field:nth-of-type(11),
-  .i12-mstart .en__field:nth-of-type(12),
-  .i13-mstart .en__field:nth-of-type(13),
-  .i14-mstart .en__field:nth-of-type(14),
-  .i15-mstart .en__field:nth-of-type(15),
-  .i16-mstart .en__field:nth-of-type(16),
-  .i17-mstart .en__field:nth-of-type(17),
-  .i18-mstart .en__field:nth-of-type(18),
-  .i19-mstart .en__field:nth-of-type(19),
-  .i20-mstart .en__field:nth-of-type(20) {
+  .i9-mstart .en__field:nth-of-type(9) {
     padding-left: 0;
   }
 
@@ -396,18 +231,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
   .i6-mend .en__field:nth-of-type(6),
   .i7-mend .en__field:nth-of-type(7),
   .i8-mend .en__field:nth-of-type(8),
-  .i9-mend .en__field:nth-of-type(9),
-  .i10-mend .en__field:nth-of-type(10),
-  .i11-mend .en__field:nth-of-type(11),
-  .i12-mend .en__field:nth-of-type(12),
-  .i13-mend .en__field:nth-of-type(13),
-  .i14-mend .en__field:nth-of-type(14),
-  .i15-mend .en__field:nth-of-type(15),
-  .i16-mend .en__field:nth-of-type(16),
-  .i17-mend .en__field:nth-of-type(17),
-  .i18-mend .en__field:nth-of-type(18),
-  .i19-mend .en__field:nth-of-type(19),
-  .i20-mend .en__field:nth-of-type(20) {
+  .i9-mend .en__field:nth-of-type(9) {
     padding-right: 0;
   }
 
@@ -419,121 +243,9 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow:not(.show) .hide {
   .i6-m100 .en__field:nth-of-type(6),
   .i7-m100 .en__field:nth-of-type(7),
   .i8-m100 .en__field:nth-of-type(8),
-  .i9-m100 .en__field:nth-of-type(9),
-  .i10-m100 .en__field:nth-of-type(10),
-  .i11-m100 .en__field:nth-of-type(11),
-  .i12-m100 .en__field:nth-of-type(12),
-  .i13-m100 .en__field:nth-of-type(13),
-  .i14-m100 .en__field:nth-of-type(14),
-  .i15-m100 .en__field:nth-of-type(15),
-  .i16-m100 .en__field:nth-of-type(16),
-  .i17-m100 .en__field:nth-of-type(17),
-  .i18-m100 .en__field:nth-of-type(18),
-  .i19-m100 .en__field:nth-of-type(19),
-  .i20-m100 .en__field:nth-of-type(20) {
+  .i9-m100 .en__field:nth-of-type(9) {
     flex-basis: 100%;
     padding-left: 0rem;
     padding-right: 0rem;
   }
-}
-
-/* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio input[type="radio"] + label,
-#engrid .give-by-select .en__field--radio input[type="radio"] + label,
-#engrid .en__field--donationAmt.en__field--radio input[type="radio"] + label {
-  border-radius: $client-button-border-radius;
-  // padding: 0.5rem 1.5rem;
-}
-
-/* TODO Possibly Trim */
-// #engrid .radio-to-buttons.fat-buttons .en__field--radio input[type="radio"] + label {
-//   padding: 0.625rem 1.5625rem !important;
-// }
-
-/* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio .en__field__input--radio + .en__field__label,
-#engrid .give-by-select .en__field--radio .en__field__input--radio + .en__field__label,
-#engrid .en__field--donationAmt.en__field--radio .en__field__input--radio + .en__field__label {
-  margin-left: 0rem !important;
-}
-
-/* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio .en__field__input--radio + .en__field__label::before,
-#engrid .give-by-select .en__field--radio .en__field__input--radio + .en__field__label::before,
-#engrid .en__field--donationAmt.en__field--radio .en__field__input--radio + .en__field__label::before {
-  display: none !important;
-}
-
-/* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio input[type="radio"] + label,
-#engrid .radio-to-buttons .en__field--radio .en__field__item--other input[type="text"],
-#engrid .give-by-select .en__field--radio input[type="radio"] + label,
-#engrid .give-by-select .en__field--radio .en__field__item--other input[type="text"],
-#engrid .en__field--donationAmt.en__field--radio input[type="radio"] + label,
-#engrid .en__field--donationAmt.en__field--radio .en__field__item--other input[type="text"],
-#engrid .en__field--donationAmt.en__field--radio .en__field__item--other input[type="tel"],
-#engrid .en__field--donationAmt.en__field--radio .en__field__item--other input[type="number"] {
-  background-color: $client-button-background-color;
-  color: $client-button-font-color;
-}
-
-/* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio input[type="radio"]:checked + label,
-#engrid .radio-to-buttons .en__field--radio .en__field__item--other.has-value input,
-#engrid .radio-to-buttons .en__field--radio .en__field__item--other:not(.en__field__item--hidden) input,
-#engrid .give-by-select .en__field--radio input[type="radio"]:checked + label,
-#engrid .give-by-select .en__field--radio .en__field__item--other.has-value input,
-#engrid .give-by-select .en__field--radio .en__field__item--other:not(.en__field__item--hidden) input,
-#engrid .en__field--donationAmt.en__field--radio input[type="radio"]:checked + label,
-#engrid .en__field--donationAmt.en__field--radio .en__field__item--other.has-value input,
-#engrid .en__field--donationAmt.en__field--radio .en__field__item--other:not(.en__field__item--hidden) input {
-  text-transform: none;
-  background-color: $client-button-background-color-active;
-  border-color: $client-button-border-color-active;
-  color: $client-button-font-color-active;
-}
-
-/* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio label.en__field__label.en__field__label--item,
-#engrid .give-by-select .en__field--radio label.en__field__label.en__field__label--item,
-#engrid .en__field--donationAmt.en__field--radio label.en__field__label.en__field__label--item {
-  border: 1px solid $client-button-border-color;
-  background-position-x: 40px;
-}
-
-/* TODO Possibly Trim */
-// #engrid .radio-to-buttons.dark .en__field--radio .en__field__element--radio .en__field__item label.en__field__label.en__field__label--item:hover,
-// #engrid .radio-to-buttons.dark .en__field--radio .en__field__element--radio .en__field__item input[type="radio"]:checked + label {
-//   background-color: $client-button-background-color-hover;
-//   border-color: $client-button-border-color-hover;
-// }
-
-/* TODO Possibly Trim */
-// #engrid .radio-to-buttons.dark .en__field--radio label.en__field__label.en__field__label--item:hover,
-// #engrid .radio-to-buttons.dark .en__field--radio input[type="radio"]:checked + label {
-//   background-color: $client-button-background-color;
-//   border-color: $client-button-border-color;
-// }
-
-/* prettier-ignore */
-#engrid .radio-to-buttons .en__field__input--other,
-#engrid .give-by-select .en__field__input--other,
-#engrid .en__field--donationAmt.en__field__input--other {
-  height: auto !important;
-}
-
-/* TODO Possibly Trim */
-// #engrid .radio-to-buttons.fat-buttons .en__field__input--other {
-//   padding: 0.625rem 1.5625rem !important;
-// }
-
-/* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio input[type="radio"]:focus + label,
-#engrid .give-by-select .en__field--radio input[type="radio"]:focus + label,
-#engrid .en__field--donationAmt.en__field--radio input[type="radio"]:focus + label {
-  outline: none !important;
-  border: 1px solid #666666 !important;
-  -webkit-box-shadow: 0 0 0.3125rem $client-light-gray !important;
-  box-shadow: 0 0 0.3125rem $client-light-gray !important;
-  transition: box-shadow 0.25s, border-color 0.125s ease-in-out, -webkit-box-shadow 0.25s !important;
 }

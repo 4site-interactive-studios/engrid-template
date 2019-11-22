@@ -39,37 +39,6 @@ body.debug #debug:hover {
   opacity: 1;
 }
 
-/*
-* ##########################################################
-* # DEBUG: VISUALIZE PAGE STRUCTURE
-* ##########################################################
-*/
-
-body.visualize-layout,
-body.visualize-layout #engrid-wrapper,
-body.visualize-layout #engrid,
-body.visualize-layout #engrid-inner,
-body.visualize-layout .en__component--row {
-  background: #ffffff !important;
-}
-
-body.visualize-layout .en__component--column {
-  background: #e3e3e3 !important;
-}
-
-body.visualize-layout .en__component--column > * {
-  visibility: hidden !important;
-}
-
-body.visualize-layout div {
-  border-color: #adaaaa !important;
-}
-
-/*
-* ##########################################################
-* # ENGRID - Debug Styling
-* ##########################################################
-*/
 #debug-bar {
   display: block;
   position: fixed;
@@ -94,109 +63,102 @@ body.visualize-layout div {
   cursor: pointer;
 }
 
-body:not(.debug-on) #engrid .en__component--advrow > div {
-  border-color: transparent;
-}
+/*
+* ##########################################################
+* # DEBUG: VISUALIZE PAGE STRUCTURE
+* ##########################################################
+*/
 
-.debug #engrid .en__component--advrow > div {
-  border-width: 0.1px;
-  border-style: dashed;
-  position: relative;
-}
-
-.debug-enabled.debug-on #engrid .en__component--advrow > div > * {
-  opacity: 0.5 !important;
-}
-
-.debug #engrid .en__component--advrow > div::before,
-.debug #engrid .en__component--advrow > div::after {
-  position: absolute;
-  z-index: 9999;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 1);
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 0.75rem;
-}
-
-// .page-alert::before,
-// .page-alert::after,
-// .content-header::before,
-// .content-header::after,
-// .body-headerOutside::before,
-// .body-headerOutside::after,
-// .body-header::before,
-// .body-header::after,
-// .body-banner::before,
-// .body-banner::after,
-// .body-bannerOverlay::before,
-// .body-bannerOverlay::after,
-// .body-top::before,
-// .body-top::after,
-// .body-side::before,
-// .body-side::after,
-// .body-main::before,
-// .body-main::after,
-// .body-bottom::before,
-// .body-bottom::after,
-// .body-footer::before,
-// .body-footer::after,
-// .body-footerOutside::before,
-// .body-footerOutside::after,
-// .content-footerSpacer::before,
-// .content-footerSpacer::after,
-// .content-preFooter::before,
-// .content-preFooter::after,
-// .content-footer::before,
-// .content-footer::after,
-// .page-customCode::before,
-// .page-customCode::after,
-// .page-backgroundImage::before,
-// .page-backgroundImage::after,
-// .page-backgroundImageOverlay::before,
-// .page-backgroundImageOverlay::after{
-//   background-color: #000000;
+// body.visualize-layout,
+// body.visualize-layout #engrid-wrapper,
+// body.visualize-layout #engrid,
+// body.visualize-layout #engrid-inner,
+// body.visualize-layout .en__component--row {
+//   background: #ffffff !important;
 // }
 
-.debug #engrid .en__component--advrow > div::before {
-  content: "#" attr(id);
-  left: 0px;
-}
+// body.visualize-layout .en__component--column {
+//   background: #e3e3e3 !important;
+// }
 
-.debug #engrid .en__component--advrow > div::after {
-  content: "." attr(class);
-  right: 0px;
-  bottom: 0px;
-}
+// body.visualize-layout .en__component--column > * {
+//   visibility: hidden !important;
+// }
 
-.debug .page-alert {
-  border-color: rgba(255, 0, 0, 0.5);
-}
+// body.visualize-layout div {
+//   border-color: #adaaaa !important;
+// }
 
-.debug .page-alert::before,
-.debug .page-alert::after {
-  background-color: rgba(255, 0, 0, 0.5);
-}
+/*
+* ##########################################################
+* # ENGRID - Debug Styling
+* ##########################################################
+*/
 
-.debug .content-header,
-.debug .content-footer {
-  border-color: rgba(0, 0, 255, 0.5);
-}
+// body:not(.debug-on) #engrid .en__component--advrow > div {
+//   border-color: transparent;
+// }
 
-.debug .content-header::before,
-.debug .content-header::after,
-.debug .content-footer::before,
-.debug .content-footer::after {
-  background-color: rgba(0, 0, 255, 0.5);
-}
+// .debug #engrid .en__component--advrow > div {
+//   border-width: 0.1px;
+//   border-style: dashed;
+//   position: relative;
+// }
 
-.debug .body-headerOutside,
-.debug .body-headerOutside {
-  border-color: rgba(0, 128, 0, 0.5);
-}
+// .debug-enabled.debug-on #engrid .en__component--advrow > div > * {
+//   opacity: 0.5 !important;
+// }
 
-.debug .body-headerOutside::before,
-.debug .body-headerOutside::after,
-.debug .body-footerOutside::before,
-.debug .body-footerOutside::after {
-  background-color: rgba(0, 128, 0, 0.5);
-}
+// .debug #engrid .en__component--advrow > div::before,
+// .debug #engrid .en__component--advrow > div::after {
+//   position: absolute;
+//   z-index: 9999;
+//   font-weight: bold;
+//   color: rgba(255, 255, 255, 1);
+//   font-family: "Lucida Console", Monaco, monospace;
+//   font-size: 0.75rem;
+// }
+
+// .debug #engrid .en__component--advrow > div::before {
+//   content: "#" attr(id);
+//   left: 0px;
+// }
+
+// .debug #engrid .en__component--advrow > div::after {
+//   content: "." attr(class);
+//   right: 0px;
+//   bottom: 0px;
+// }
+
+// .debug .page-alert {
+//   border-color: rgba(255, 0, 0, 0.5);
+// }
+
+// .debug .page-alert::before,
+// .debug .page-alert::after {
+//   background-color: rgba(255, 0, 0, 0.5);
+// }
+
+// .debug .content-header,
+// .debug .content-footer {
+//   border-color: rgba(0, 0, 255, 0.5);
+// }
+
+// .debug .content-header::before,
+// .debug .content-header::after,
+// .debug .content-footer::before,
+// .debug .content-footer::after {
+//   background-color: rgba(0, 0, 255, 0.5);
+// }
+
+// .debug .body-headerOutside,
+// .debug .body-headerOutside {
+//   border-color: rgba(0, 128, 0, 0.5);
+// }
+
+// .debug .body-headerOutside::before,
+// .debug .body-headerOutside::after,
+// .debug .body-footerOutside::before,
+// .debug .body-footerOutside::after {
+//   background-color: rgba(0, 128, 0, 0.5);
+// }
