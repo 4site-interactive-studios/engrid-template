@@ -534,10 +534,10 @@ export const watchRecurrpayField = () => {
     enFieldRecurrpayCurrentValue = document.querySelector(
       'input[name="transaction.recurrpay"]:checked'
     ) as HTMLInputElement;
-    if (enFieldRecurrpayCurrentValue.value == "Y") {
+    if (enFieldRecurrpayCurrentValue.value.toLowerCase() == "y") {
       enGrid.classList.remove("has-give-once");
       enGrid.classList.add("has-give-monthly");
-    } else if (enFieldRecurrpayCurrentValue.value == "N") {
+    } else if (enFieldRecurrpayCurrentValue.value.toLowerCase() == "n") {
       enGrid.classList.remove("has-give-monthly");
       enGrid.classList.add("has-give-once");
     }
@@ -548,10 +548,10 @@ export const watchRecurrpayField = () => {
     enFieldRecurrpayCurrentValue = document.querySelector(
       'input[name="transaction.recurrpay"]:checked'
     ) as HTMLInputElement;
-    if (enFieldRecurrpayCurrentValue.value == "Y") {
+    if (enFieldRecurrpayCurrentValue.value.toLowerCase() == "y") {
       enGrid.classList.remove("has-give-once");
       enGrid.classList.add("has-give-monthly");
-    } else if (enFieldRecurrpayCurrentValue.value == "N") {
+    } else if (enFieldRecurrpayCurrentValue.value.toLowerCase() == "n") {
       enGrid.classList.add("has-give-once");
       enGrid.classList.remove("has-give-monthly");
     }
@@ -589,16 +589,18 @@ export const watchGiveBySelectField = () => {
     enFieldGiveBySelectCurrentValue = document.querySelector(
       'input[name="transaction.giveBySelect"]:checked'
     ) as HTMLInputElement;
-    if (enFieldGiveBySelectCurrentValue.value == "card") {
+    if (enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card") {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-card");
       enFieldPaymentType.value = "card";
       handleCCUpdate();
-    } else if (enFieldGiveBySelectCurrentValue.value == "check") {
+    } else if (enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check") {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "check";
-    } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {
+    } else if (
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
+    ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.value = "paypal";
@@ -610,16 +612,18 @@ export const watchGiveBySelectField = () => {
     enFieldGiveBySelectCurrentValue = document.querySelector(
       'input[name="transaction.giveBySelect"]:checked'
     ) as HTMLInputElement;
-    if (enFieldGiveBySelectCurrentValue.value == "card") {
+    if (enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card") {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-card");
       enFieldPaymentType.value = "card";
       handleCCUpdate();
-    } else if (enFieldGiveBySelectCurrentValue.value == "check") {
+    } else if (enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check") {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "check";
-    } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {
+    } else if (
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
+    ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.value = "paypal";
@@ -651,10 +655,12 @@ export const watchLegacyGiveBySelectField = () => {
     enFieldGiveBySelectCurrentValue = document.querySelector(
       'input[name="supporter.questions.180165"]:checked'
     ) as HTMLInputElement;
-    if (enFieldGiveBySelectCurrentValue.value == "card") {
+    if (enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card") {
       enGrid.classList.add("has-give-by-card");
       enGrid.classList.remove("has-give-by-paypal");
-    } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {
+    } else if (
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
+    ) {
       enGrid.classList.remove("has-give-by-card");
       enGrid.classList.add("has-give-by-paypal");
     }
@@ -665,10 +671,12 @@ export const watchLegacyGiveBySelectField = () => {
     enFieldGiveBySelectCurrentValue = document.querySelector(
       'input[name="supporter.questions.180165"]:checked'
     ) as HTMLInputElement;
-    if (enFieldGiveBySelectCurrentValue.value == "card") {
+    if (enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card") {
       enGrid.classList.add("has-give-by-card");
       enGrid.classList.remove("has-give-by-paypal");
-    } else if (enFieldGiveBySelectCurrentValue.value == "paypal") {
+    } else if (
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
+    ) {
       enGrid.classList.remove("has-give-by-card");
       enGrid.classList.add("has-give-by-paypal");
     }
