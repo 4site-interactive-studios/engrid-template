@@ -1,3 +1,4 @@
+// @TODO Move the include of Normalize.css and Sanitize.css to Webpack Config
 /**
  * Minified by jsDelivr using clean-css v4.2.1.
  * Original file: /npm/normalize.css@8.0.1/normalize.css
@@ -21,7 +22,7 @@ h1 {
 }
 hr {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
@@ -36,7 +37,7 @@ abbr[title] {
   border-bottom: none;
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 b,
 strong {
@@ -109,7 +110,7 @@ fieldset {
 }
 legend {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -125,7 +126,7 @@ textarea {
 [type="checkbox"],
 [type="radio"] {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
 }
 [type="number"]::-webkit-inner-spin-button,
@@ -166,7 +167,7 @@ template {
 ::after,
 ::before {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 ::after,
 ::before {
@@ -178,7 +179,7 @@ html {
   line-height: 1.5;
   -moz-tab-size: 4;
   -o-tab-size: 4;
-     tab-size: 4;
+  tab-size: 4;
   -webkit-tap-highlight-color: transparent;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -226,7 +227,7 @@ a {
 abbr[title] {
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 b,
 strong {
