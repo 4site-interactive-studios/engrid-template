@@ -589,21 +589,27 @@ export const watchGiveBySelectField = () => {
     enFieldGiveBySelectCurrentValue = document.querySelector(
       'input[name="transaction.giveBySelect"]:checked'
     ) as HTMLInputElement;
+    console.log(
+      "enFieldGiveBySelectCurrentValue:",
+      enFieldGiveBySelectCurrentValue
+    );
     if (enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card") {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-card");
-      enFieldPaymentType.value = "card";
+      // enFieldPaymentType.value = "card";
       handleCCUpdate();
     } else if (enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check") {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "check";
+      enFieldPaymentType.value = "Check";
     } else if (
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.value = "paypal";
+      enFieldPaymentType.value = "Paypal";
     }
   };
 
@@ -615,18 +621,20 @@ export const watchGiveBySelectField = () => {
     if (enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card") {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-card");
-      enFieldPaymentType.value = "card";
+      // enFieldPaymentType.value = "card";
       handleCCUpdate();
     } else if (enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check") {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "check";
+      enFieldPaymentType.value = "Check";
     } else if (
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.value = "paypal";
+      enFieldPaymentType.value = "Paypal";
     }
   }
 

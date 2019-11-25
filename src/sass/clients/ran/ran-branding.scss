@@ -399,17 +399,17 @@ body:not(#en__pagebuilder) {
     }
   }
 
-  .give-by-select .en__field--radio input[value="card"] + label {
+  .give-by-select .en__field--radio input[value$="ard"] + label {
     background-size: 24px 18px;
     background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/card.png?v=1572545889000");
   }
 
-  .give-by-select .en__field--radio input[value="check"] + label {
+  .give-by-select .en__field--radio input[value$="heck"] + label {
     background-size: 18px 16px;
     background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/bank.png?v=1572545890000");
   }
 
-  .give-by-select .en__field--radio input[value="paypal"] + label {
+  .give-by-select .en__field--radio input[value$="aypal"] + label {
     background-size: 17px 20px;
     background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/paypal.png?v=1572545891000");
   }
