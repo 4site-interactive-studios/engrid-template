@@ -18,8 +18,9 @@ body#en__pagebuilder {
 body:not(#en__pagebuilder) {
   /* We need to set labels for error messages, but don't want them visually displayed outside page builder */
   /* en__field--153853 is In Memoriam */
-  .en__field--153853 label,
-  .en__field--donationAmt label {
+  .en__field--153853 > label,
+  .en__field--recurrpay > label,
+  .en__field--donationAmt > label {
     display: none;
   }
 }
