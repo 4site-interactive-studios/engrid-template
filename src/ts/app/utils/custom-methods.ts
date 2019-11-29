@@ -207,57 +207,21 @@ export const bindEvents = (e: Element) => {
 };
 
 export const debugBar = () => {
-  const debugStart = () => {
-    if (body.classList.contains("debug-enabled")) {
-      body.classList.remove("debug-off");
-      body.classList.add("debug-on");
-    }
-  };
-
-  const debugStop = () => {
-    if (body.classList.contains("debug-enabled")) {
-      body.classList.remove("debug-on");
-      body.classList.add("debug-off");
-      // const debugBar = (HTMLButtonElement) => document.getElementById("debug-toggle");
-      // if(debugBar){
-      //   debugBar.innerHTML = "Turn Debug On";
-      // }
-    }
-  };
-
   if (
     window.location.search.indexOf("mode=DEMO") > -1 ||
     window.location.href.indexOf("debug") != -1 ||
     location.hostname === "localhost" ||
     location.hostname === "127.0.0.1"
   ) {
-    body.classList.add("debug-disabled");
-    body.classList.add("debug-off");
-    // body.addEventListener("mouseenter", debugStart);
-    // body.addEventListener("mouseleave", debugStop);
+    body.classList.add("debug");
     if (enGrid) {
       enGrid.insertAdjacentHTML(
         "afterend",
         '<span id="debug-bar">' +
-          // '<button id="debug-toggle" type="button">Turn Debug On</button>' +
           '<button id="layout-toggle" type="button">Layout Toggle</button>' +
-          // '<button id="page-edit" type="button">Edit in EN (BETA)</button>' +
+          '<button id="page-edit" type="button">Edit in PageBuilder (BETA)</button>' +
           "</span>"
       );
-    } else {
-      body.classList.add("debug-disabled");
-    }
-    if (document.getElementById("debug-toggle")) {
-      const debugTemplateButton = document.getElementById("debug-toggle");
-      if (debugTemplateButton) {
-        debugTemplateButton.addEventListener(
-          "click",
-          function() {
-            debugToggle();
-          },
-          false
-        );
-      }
     }
 
     if (document.getElementById("layout-toggle")) {
@@ -288,26 +252,6 @@ export const debugBar = () => {
 
     const pageEdit = () => {
       window.location.href = window.location.href + "?edit";
-    };
-
-    const debugToggle = () => {
-      if (body) {
-        if (body.classList.contains("debug-enabled")) {
-          body.classList.remove("debug-enabled");
-          body.classList.remove("debug-on");
-          body.classList.add("debug-disabled");
-          body.classList.add("debug-off");
-        } else if (body.classList.contains("debug-disabled")) {
-          body.classList.remove("debug-disabled");
-          body.classList.remove("debug-off");
-          body.classList.add("debug-enabled");
-          body.classList.add("debug-on");
-        } else {
-          console.log(
-            "While trying to switch visualizations, something unexpected happen."
-          );
-        }
-      }
     };
 
     const layoutToggle = () => {

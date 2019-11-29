@@ -72,7 +72,7 @@ export default class Modal {
     // If we can't find modal, get out
     if (!modal) return;
     const hideModal = cookie.get("hide_upsellModal"); // Get cookie
-    // If we have a cooki AND no Debug, get out
+    // If we have a cookie AND no Debug, get out
     if (hideModal && !this.debug) return;
     const overlayContent = this.overlay.querySelector(
       "#enModalContent"

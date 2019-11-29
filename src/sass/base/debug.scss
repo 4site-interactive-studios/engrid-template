@@ -1,43 +1,8 @@
 /*
 * ##########################################################
-* # EN PAGE BUILDER
+* # DEBUG
 * ##########################################################
 */
-
-// #EN__RootElement .pboAdvancedRow__preview .en__component--column.ccpph:before {
-//   content: "Content Column - Page Pre-Header (ccpph)" !important;
-// }
-
-/*
-* ##########################################################
-* # DEBUG: DEBUG BAR and GLOBAL SETTINGS
-* ##########################################################
-*/
-
-#debug {
-  margin: 1rem;
-  button {
-    margin: 0 1rem;
-    cursor: pointer;
-  }
-}
-
-body.debug #debug {
-  display: block;
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 0.25rem;
-  z-index: 9999;
-  opacity: 0.75;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-body.debug #debug:hover {
-  opacity: 1;
-}
 
 #debug-bar {
   display: block;
@@ -45,120 +10,12 @@ body.debug #debug:hover {
   top: 20px;
   right: 20px;
   z-index: 9999;
-  opacity: 0;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+
+  button {
+    margin: 0rem 1rem;
+    padding: 0.25rem 1rem;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
 }
-
-.debug-on #debug-bar,
-.debug-disabled #debug-bar {
-  opacity: 1;
-}
-
-#debug-bar button {
-  margin: 0rem 1rem;
-  padding: 0.25rem 1rem;
-  border: 1px solid #000000;
-  background-color: #ffffff;
-  cursor: pointer;
-}
-
-/*
-* ##########################################################
-* # DEBUG: VISUALIZE PAGE STRUCTURE
-* ##########################################################
-*/
-
-// body.visualize-layout,
-// body.visualize-layout #engrid-wrapper,
-// body.visualize-layout #engrid,
-// body.visualize-layout #engrid-inner,
-// body.visualize-layout .en__component--row {
-//   background: #ffffff !important;
-// }
-
-// body.visualize-layout .en__component--column {
-//   background: #e3e3e3 !important;
-// }
-
-// body.visualize-layout .en__component--column > * {
-//   visibility: hidden !important;
-// }
-
-// body.visualize-layout div {
-//   border-color: #adaaaa !important;
-// }
-
-/*
-* ##########################################################
-* # ENGRID - Debug Styling
-* ##########################################################
-*/
-
-// body:not(.debug-on) #engrid .en__component--advrow > div {
-//   border-color: transparent;
-// }
-
-// .debug #engrid .en__component--advrow > div {
-//   border-width: 0.1px;
-//   border-style: dashed;
-//   position: relative;
-// }
-
-// .debug-enabled.debug-on #engrid .en__component--advrow > div > * {
-//   opacity: 0.5 !important;
-// }
-
-// .debug #engrid .en__component--advrow > div::before,
-// .debug #engrid .en__component--advrow > div::after {
-//   position: absolute;
-//   z-index: 9999;
-//   font-weight: bold;
-//   color: rgba(255, 255, 255, 1);
-//   font-family: "Lucida Console", Monaco, monospace;
-//   font-size: 0.75rem;
-// }
-
-// .debug #engrid .en__component--advrow > div::before {
-//   content: "#" attr(id);
-//   left: 0px;
-// }
-
-// .debug #engrid .en__component--advrow > div::after {
-//   content: "." attr(class);
-//   right: 0px;
-//   bottom: 0px;
-// }
-
-// .debug .page-alert {
-//   border-color: rgba(255, 0, 0, 0.5);
-// }
-
-// .debug .page-alert::before,
-// .debug .page-alert::after {
-//   background-color: rgba(255, 0, 0, 0.5);
-// }
-
-// .debug .content-header,
-// .debug .content-footer {
-//   border-color: rgba(0, 0, 255, 0.5);
-// }
-
-// .debug .content-header::before,
-// .debug .content-header::after,
-// .debug .content-footer::before,
-// .debug .content-footer::after {
-//   background-color: rgba(0, 0, 255, 0.5);
-// }
-
-// .debug .body-headerOutside,
-// .debug .body-headerOutside {
-//   border-color: rgba(0, 128, 0, 0.5);
-// }
-
-// .debug .body-headerOutside::before,
-// .debug .body-headerOutside::after,
-// .debug .body-footerOutside::before,
-// .debug .body-footerOutside::after {
-//   background-color: rgba(0, 128, 0, 0.5);
-// }
