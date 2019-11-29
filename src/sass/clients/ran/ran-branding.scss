@@ -424,44 +424,9 @@ body:not(#en__pagebuilder) {
   .en__field--donationAmt input.en__field__input--other::placeholder {
     opacity: 0.7;
   }
-
-  // All Styling Needed to visuall merge country with the Address Input
-  // .en__field--153552.en__field--country{
-  //   margin: 0;
-  //   padding: 0;
-  // }
-
-  // .en__field--153552.en__field--country label{
-  //   display: none;
-  // }
-
-  // .en__field--153552.en__field--country select{
-  //   width: 80px;
-  //   position: absolute;
-  //   top: 27px;
-  //   right: 1px;
-  //   z-index: 1;
-  //   text-align-last: right;
-  //   padding-right: 2rem;
-  //   border: none;
-  //   box-shadow: none;
-  // }
-
-  // .en__field--153552.en__field--country::before{
-  //   content: "";
-  //   position: absolute;
-  //   top: 27px;
-  //   right: 81px;
-  //   z-index: 1;
-  //   height: 32px;
-  //   width: 1px;
-  //   background: #cacaca;
-  //   margin-top: 5px;
-  //   margin-bottom: 5px;
-  // }
 }
 
-#engrid:not(.legacy) .en__field--country {
+#engrid:not(.legacy) .inline-country .en__field--country {
   position: absolute;
   right: 0;
   align-items: flex-end;
