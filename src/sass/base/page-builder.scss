@@ -4,13 +4,12 @@
 * ##########################################################
 * # ENGRID - Mobile First Styling
 * # LAYOUT - Page Builder Preview Layout
-* ##########################################################
+* #####################2#####################################
 */
 
 // Vertically center the labels
 #EN__RootElement .pboAdvancedRow__preview .en__component--column div {
   align-items: center;
-
   display: flex;
   justify-content: center;
 }
@@ -134,17 +133,6 @@
 
 /*
 * ##########################################################
-* # ENGRID - Content Column Breakpoint Styling
-* # LAYOUT - Page Builder Preview Layout
-* ##########################################################
-*/
-
-/* Sum of all MAX values of the Body Columns + 1px */
-@media screen and (min-width: 701px) {
-}
-
-/*
-* ##########################################################
 * # LAYOUT - Page Builder Custom Styles
 * ##########################################################
 */
@@ -158,23 +146,20 @@
   /* If the user accidentally deletes all content from the form, prevent it from completely collapsing in on itself and making it impossible for the user to add new content */
   form {
     min-height: 25px !important;
-    outline: solid 1px #999999;
   }
 
   /* Adjust the editable space in the Page Editor so that the content can occupy as much space as possible */
   .pboAdvancedRow__preview .en__container {
     margin-left: 1px !important;
     margin-right: 1px !important;
-    border: none !important;
     margin-bottom: 0px !important;
+    border: none !important;
   }
 
   /* Page builder adds a hidden div to the bottom of the layout, this can result in undesired spacing */
   .pboAdvancedRow__preview .en__component--row:nth-last-child(2) {
     padding-bottom: 0px;
   }
-
-  // #EN__RootElement .pboAdvancedRow__preview .en__component--column:before
 
   // @TODO Might need to be moved into main.pboAdvancedRow__preview css
   #engrid {
@@ -191,6 +176,12 @@
     }
   }
 
+  // Includes both upper and lower case scenarios for typical field values
+  .inmem-y,
+  .inmem-n,
+  .giveBySelect-card,
+  .giveBySelect-check,
+  .giveBySelect-paypal,
   .inmem-Y,
   .inmem-N,
   .giveBySelect-Card,
@@ -214,8 +205,8 @@
     }
   }
 
-  .pboAdvancedRow__preview .page-backgroundImage,
-  .pboAdvancedRow__preview .page-backgroundImageOverlay {
+  .pboAdvancedRow__preview
+    .en__component--column.page-backgroundImageOverlay::before {
     min-height: 350px !important;
   }
 

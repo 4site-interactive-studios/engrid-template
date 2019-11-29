@@ -1685,12 +1685,35 @@ body.error-jump-assist #engrid .en__component .en__field__error {
   transition: box-shadow 0.25s, border-color 0.125s ease-in-out, -webkit-box-shadow 0.25s !important;
 }
 
-/* Utility Class: No Margin */
+/* General Purposes Utility Classes */
 .no-margin {
   margin: 0px;
 }
 
-/* Utility Class: Small */
+.no-top-margin {
+  margin-top: 0px;
+}
+
+.no-bottom-margin {
+  margin-top: 0px;
+}
+
+.css-display_flex {
+  display: flex;
+}
+
+.css-flex-wrap_wrap {
+  flex-wrap: wrap;
+}
+
+.css-align-items_flex-start {
+  align-items: flex-start;
+}
+
+.css-align-items_flex-end {
+  align-items: flex-end;
+}
+
 .small {
   font-size: 90%;
 }
