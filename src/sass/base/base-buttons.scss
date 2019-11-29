@@ -1,0 +1,72 @@
+/* Buttons */
+#engrid button,
+#enModal button {
+  display: block;
+  margin: 0 0 1rem 0;
+  font-family: inherit;
+  padding: 0.85rem 1rem;
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  border-radius: $client-input-border-radius;
+  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: $client-button-background-color;
+  color: $client-white;
+}
+
+#engrid .en__submit button,
+#enModal button.cta.primary {
+  margin-top: 2rem;
+  background-color: $client-submit-button-background-color;
+  border-color: $client-submit-button-background-color;
+  color: $client-submit-button-font-color;
+  display: block;
+  font-size: calc(0.05552em * 24);
+  font-weight: 900;
+  line-height: 1;
+  padding: 18px 0;
+}
+
+#engrid .en__submit,
+#engrid .en__submit button {
+  width: 100%;
+}
+
+#engrid .en__submit button:hover,
+#engrid .en__submit button:focus,
+#enModal button.cta.primary:hover,
+#enModal button.cta.primary:focus {
+  background-color: $client-submit-button-background-color-hover;
+}
+
+#engrid .next-step .en__submit button {
+  width: initial;
+  margin-left: auto;
+}
+
+#engrid button:hover,
+#engrid button:focus,
+#enModal button.cta:hover,
+#enModal button.cta:focus {
+  background-color: $client-button-background-color-hover;
+}
+
+#engrid button[disabled],
+#engrid button[disabled]:hover,
+#engrid button[disabled]:focus,
+#enModal button[disabled].cta,
+#enModal button[disabled].cta:hover,
+#enModal button[disabled].cta:focus {
+  background-color: $client-button-background-color-disabled;
+  color: $client-button-font-color;
+  content: "Processing...";
+}
+
+#engrid button[disabled],
+#enModal button[disabled].cta {
+  opacity: 0.25;
+  cursor: not-allowed;
+}

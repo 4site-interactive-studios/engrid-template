@@ -1,0 +1,102 @@
+/*
+* ##########################################################
+* # FLOAT LABELS
+* ##########################################################
+*/
+
+#engrid.float-labels .en__field--text input[type="text"],
+#engrid.float-labels .en__field--email input[type="email"],
+#engrid.float-labels .en__field--telephone input[type="tel"],
+#engrid.float-labels .en__field--textarea textarea {
+  padding: 1rem 0.5rem 0rem 0.5rem;
+}
+
+#engrid.float-labels .en__field--select select {
+  padding: 1rem 1.5rem 0rem 0.5rem;
+  background-position: right -1rem top 0.25rem;
+}
+
+#engrid.float-labels .en__field--text label.en__field__label,
+#engrid.float-labels .en__field--email label.en__field__label,
+#engrid.float-labels .en__field--telephone label.en__field__label,
+#engrid.float-labels .en__field--textarea label.en__field__label,
+#engrid.float-labels .en__field--select label.en__field__label {
+  /* z-index: -1; */
+  position: absolute;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: translate(0.5rem, 4px) scale(1);
+  transform: translate(0.5rem, 4px) scale(1);
+  opacity: 0.5;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  cursor: text;
+}
+
+#engrid.float-labels .en__field--text.has-value label.en__field__label,
+#engrid.float-labels .en__field--text.has-focus label.en__field__label,
+#engrid.float-labels .en__field--email.has-value label.en__field__label,
+#engrid.float-labels .en__field--email.has-focus label.en__field__label,
+#engrid.float-labels .en__field--telephone.has-value label.en__field__label,
+#engrid.float-labels .en__field--telephone.has-focus label.en__field__label,
+#engrid.float-labels .en__field--textarea.has-value label.en__field__label,
+#engrid.float-labels .en__field--textarea.has-focus label.en__field__label,
+#engrid.float-labels .en__field--select label.en__field__label {
+  -webkit-transform: translate(0.5rem, 0px) scale(0.7);
+  transform: translate(0.5rem, 0px) scale(0.7);
+}
+
+#engrid.float-labels {
+  .en__field--text.en__field--validationFailed label,
+  .en__field--email.en__field--validationFailed label,
+  .en__field--telephone.en__field--validationFailed label,
+  .en__field--number.en__field--validationFailed label,
+  .en__field--textarea.en__field--validationFailed label,
+  .en__field--select.en__field--validationFailed label {
+    opacity: 1;
+  }
+}
+
+#engrid.float-labels
+  .en__field--text.en__field--validationNeeded
+  .en__field__error,
+#engrid.float-labels
+  .en__field--email.en__field--validationNeeded
+  .en__field__error,
+#engrid.float-labels
+  .en__field--telephone.en__field--validationNeeded
+  .en__field__error,
+#engrid.float-labels
+  .en__field--textarea.en__field--validationNeeded
+  .en__field__error,
+#engrid.float-labels
+  .en__field--select.en__field--validationNeeded
+  .en__field__error {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+#engrid.float-labels .en__field--text.en__field--validationNeeded input,
+#engrid.float-labels .en__field--email.en__field--validationNeeded input,
+#engrid.float-labels .en__field--telephone.en__field--validationNeeded input,
+#engrid.float-labels .en__field--textarea.en__field--validationNeeded textarea,
+#engrid.float-labels .en__field--select.en__field--validationNeeded select {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#endgrid:not(.legacy).float-labels div:not(.manual-form-layout) {
+  .en__field--country {
+    top: 0.1rem;
+  }
+
+  #endgrid:not(.legacy) .en__field--country #en__field_supporter_country {
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    background-position: right -1rem top 0.55rem;
+  }
+}
+
+// If Float Labels are enabled, we need to hide the Credit Card Expiration Fields otherwise this happens: https://d.pr/i/1AK8yM */
+.float-labels .en__field--ccexpire .en__field__label {
+  display: none;
+}

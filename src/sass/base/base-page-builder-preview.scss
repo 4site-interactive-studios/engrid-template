@@ -1,0 +1,8 @@
+/* Something in EN is causing outlines to overlap, this prevents the issue */
+#EN__RootElement .pboAdvancedRow__preview .en__component--column {
+  margin-bottom: 1px;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column:before {
+  padding: 0.5rem 0;
+}

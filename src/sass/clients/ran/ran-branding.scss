@@ -25,6 +25,20 @@ body:not(#en__pagebuilder) {
   }
 }
 
+/* RAN Named their EMAIl Opt-in `email` which causes it to get the generated class `en__field--email` that matches the auto assigned class `en__field--email` given to EMAIL type fields. This fixes that collision of styles. https://d.pr/i/ziiG76 */
+.en__field--102600 label {
+  position: relative !important;
+  -webkit-transform: initial !important;
+  transform: initial !important;
+  opacity: 1 !important;
+}
+
+/* Legacy Template Support */
+.en__component--row--1,
+.en__component--row--2 {
+  display: initial !important;
+}
+
 #engrid {
   h1 {
     font-family: HarmoniaSansStd;
@@ -400,16 +414,19 @@ body:not(#en__pagebuilder) {
     }
   }
 
+  // Case insensitive selector
   .give-by-select .en__field--radio input[value$="ard"] + label {
     background-size: 24px 18px;
     background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/card.png?v=1572545889000");
   }
 
+  // Case insensitive selector
   .give-by-select .en__field--radio input[value$="heck"] + label {
     background-size: 18px 16px;
     background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/bank.png?v=1572545890000");
   }
 
+  // Case insensitive selector
   .give-by-select .en__field--radio input[value$="aypal"] + label {
     background-size: 17px 20px;
     background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/paypal.png?v=1572545891000");
@@ -423,26 +440,6 @@ body:not(#en__pagebuilder) {
 
   .en__field--donationAmt input.en__field__input--other::placeholder {
     opacity: 0.7;
-  }
-}
-
-#engrid:not(.legacy) .inline-country .en__field--country {
-  position: absolute;
-  right: 0;
-  align-items: flex-end;
-  // label{
-  //   visibility: hidden;
-  // }
-  select {
-    width: 80px;
-    z-index: 1;
-    background-color: transparent;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    text-align-last: right;
-  }
-  .en__field__error {
-    z-index: 1;
   }
 }
 

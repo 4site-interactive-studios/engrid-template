@@ -3,6 +3,7 @@
 @import "breakpoint-slicer";
 $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
+/* @TODO Is there a way to move these into a client level SCSS file and then import them? */
 /* SASS VARIABLES */
 $background-color: #ffffff;
 $background-image-background-color: #487c0f;
@@ -52,17 +53,36 @@ $client-error-page-group-background: #f4ddda;
 $client-highlight-background-color: #f9f003;
 $client-highlight-font-color: #343432;
 
-/* BASE STYLING AND LAYOUTS*/
-@import "base/reset";
-@import "base/base";
-@import "base/engrid";
-@import "base/engrid-manual";
-@import "base/modal";
-@import "base/hack";
-@import "base/page-builder";
-@import "base/debug";
-// @import "base/layouts/centercenter1col";
-// @import "base/layouts/centerleft1col";
+/* BASE RESET */
+@import "base/base-reset";
+
+/* BASE STYLING */
+@import "base/base-autofill";
+@import "base/base-buttons";
+@import "base/base-columns";
+@import "base/base-ecard";
+@import "base/base-errors";
+@import "base/base-events";
+@import "base/base-fields";
+@import "base/base-images";
+@import "base/base-letter-to-target";
+@import "base/base-loading-animations";
+@import "base/base-page-builder-preview";
+@import "base/base-page-builder";
+@import "base/base-thermometer";
+@import "base/base-tweet-to-target";
+@import "base/base-utility";
+
+/* EN GRID LAYOUTS */
+@import "base/layouts/engrid-layout";
+@import "base/layouts/engrid-layout-manual";
+
+/* ADDON STYLING */
+@import "addons/addon-debug";
+@import "addons/addon-fancy-errors";
+@import "addons/addon-float-labels";
+@import "addons/addon-live-card-type";
+@import "addons/addon-modal";
 
 /* CLIENT STYLING AND LAYOTUS */
 @import "clients/ran/ran-font";

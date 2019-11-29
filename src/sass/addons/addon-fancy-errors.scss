@@ -1,0 +1,92 @@
+/*
+* ##########################################################
+* # Field Level Inline "Fancy Errors"
+* ##########################################################
+*/
+
+#engrid.fancy-errors .en__component .en__field__error {
+  padding: 0.25rem 0.5rem;
+  color: $client-white;
+  font-size: 0.75rem;
+  border-radius: $client-input-border-radius;
+  background-color: $client-error-red;
+  order: 3;
+}
+
+#engrid.fancy-errors {
+  .en__field--text.en__field--validationFailed input,
+  .en__field--email.en__field--validationFailed input,
+  .en__field--telephone.en__field--validationFailed input,
+  .en__field--number.en__field--validationFailed input,
+  .en__field--textarea.en__field--validationFailed textarea,
+  .en__field--select.en__field--validationFailed select {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
+
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--select.en__field--withOther.en__field--validationFailed
+  .en__field__element,
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--radio.en__field--validationFailed
+  .en__field__element,
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--checkbox.en__field--validationFailed
+  .en__field__element,
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--splittext.en__field--validationFailed
+  .en__field__element,
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--tripletext.en__field--validationFailed
+  .en__field__element,
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--splitselect.en__field--validationFailed
+  .en__field__element,
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--tripleselect.en__field--validationFailed
+  .en__field__element {
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--select.en__field--withOther.en__field--validationFailed.has-value
+  .en__field__element,
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--radio.en__field--validationFailed.has-value
+  .en__field__element,
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--checkbox.en__field--validationFailed.has-value
+  .en__field__element,
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--splittext.en__field--validationFailed.has-value
+  .en__field__element,
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--tripletext.en__field--validationFailed.has-value
+  .en__field__element,
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--splitselect.en__field--validationFailed.has-value
+  .en__field__element,
+#engrid.fancy-errors
+  .en__component
+  .en__field.en__field--tripleselect.en__field--validationFailed.has-value
+  .en__field__element,
+#engrid.fancy-errors .en__field--validationFailed.has-value .en__field__error {
+  border-color: $client-error-red-grayscale;
+  background-color: $client-error-red-grayscale;
+  color: $client-white;
+}
