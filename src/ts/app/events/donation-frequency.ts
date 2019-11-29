@@ -35,7 +35,7 @@ export default class DonationFrequency {
     const currentFrequencyField = document.querySelector(
       'input[name="' + this._radios + '"]:checked'
     ) as HTMLInputElement;
-    if (currentFrequencyField.value) {
+    if (currentFrequencyField && currentFrequencyField.value) {
       this.frequency = currentFrequencyField.value;
     }
   }

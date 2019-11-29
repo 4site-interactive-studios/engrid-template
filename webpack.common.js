@@ -28,6 +28,16 @@ module.exports = {
       }
     }),
     new HtmlWebpackPlugin({
+      title: "Engaging Networks Page - Sign Up",
+      filename: "page-sign-up.html",
+      template: "./src/templates/page-sign-up.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false
+      }
+    }),
+    new HtmlWebpackPlugin({
       title: "Engaging Networks Email - eCard",
       filename: "email-ecard.html",
       template: "./src/templates/email-ecard.html",

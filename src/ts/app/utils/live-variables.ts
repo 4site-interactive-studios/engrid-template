@@ -58,9 +58,12 @@ export default class LiveVariables {
     ) as HTMLButtonElement;
     const amount = this.getAmountTxt(this._amount.amount);
 
-    const frequency = this._frequency.frequency == "single" ? "" : " Monthly";
-    const label = amount != "" ? "Donate " + amount + frequency : "Donate Now";
-    submit.innerHTML = label;
+    if (amount) {
+      const frequency = this._frequency.frequency == "single" ? "" : " Monthly";
+      const label =
+        amount != "" ? "Donate " + amount + frequency : "Donate Now";
+      submit.innerHTML = label;
+    }
   }
   public loadingSubmitButton() {
     const submit = document.querySelector(

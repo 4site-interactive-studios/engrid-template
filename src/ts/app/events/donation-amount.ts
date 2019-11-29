@@ -37,15 +37,18 @@ export default class DonationAmount {
     const currentAmountField = document.querySelector(
       'input[name="' + this._radios + '"]:checked'
     ) as HTMLInputElement;
-    let currentAmountValue = parseFloat(currentAmountField.value);
-    if (currentAmountValue > 0) {
-      this.amount = parseFloat(currentAmountField.value);
-    } else {
-      const otherField = document.querySelector(
-        'input[name="' + this._other + '"]'
-      ) as HTMLInputElement;
-      currentAmountValue = parseFloat(otherField.value);
-      this.amount = parseFloat(otherField.value);
+    if (currentAmountField && currentAmountField.value) {
+      let currentAmountValue = parseFloat(currentAmountField.value);
+
+      if (currentAmountValue > 0) {
+        this.amount = parseFloat(currentAmountField.value);
+      } else {
+        const otherField = document.querySelector(
+          'input[name="' + this._other + '"]'
+        ) as HTMLInputElement;
+        currentAmountValue = parseFloat(otherField.value);
+        this.amount = parseFloat(otherField.value);
+      }
     }
   }
 }
