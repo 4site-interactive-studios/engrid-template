@@ -148,6 +148,10 @@
     min-height: 25px !important;
   }
 
+  .page-backgroundImage img:not([loading]) {
+    border: 5px solid red;
+  }
+
   /* Adjust the editable space in the Page Editor so that the content can occupy as much space as possible */
   .pboAdvancedRow__preview .en__container {
     margin-left: 1px !important;
