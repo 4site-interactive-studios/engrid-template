@@ -446,13 +446,6 @@ textarea:focus {
   margin: 0 !important;
 }
 
-.en__field--validationFailed.has-value input,
-.en__field--validationFailed.has-value textarea,
-.en__field--select.en__field--validationFailed.has-value select {
-  border-color: $client-error-red-grayscale;
-  background-color: initial;
-}
-
 .en__component--formblock.manual-form-layout {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
@@ -562,17 +555,6 @@ div:not(.manual-form-layout) {
     display: none !important;
   }
 
-  .en__field--donationAmt.en__field--withOther.en__field--validationFailed
-    .en__field__element--radio {
-    border-radius: 0.3rem !important;
-    margin-bottom: 0.5rem;
-  }
-
-  .en__field--donationAmt.en__field--withOther.en__field--validationFailed
-    .en__field__error {
-    border-radius: 0.3rem !important;
-  }
-
   .en__field--donationAmt.en__field--withOther {
     align-items: center;
   }
@@ -582,107 +564,7 @@ div:not(.manual-form-layout) {
 
 // @TODO Confirm the font-size styling is resetting the fonts https://act.ran.org/page/14333/event/1?mode=DEMO
 
-/* prettier-ignore */
-.radio-to-buttons .en__field--radio input[type="radio"] + label,
-  .give-by-select .en__field--radio input[type="radio"] + label,
-  .en__field--donationAmt.en__field--radio input[type="radio"] + label {
-    border-radius: $client-button-border-radius;
-    // padding: 0.5rem 1.5rem;
-  }
-
-/* TODO Possibly Trim */
-// .radio-to-buttons.fat-buttons .en__field--radio input[type="radio"] + label {
-//   padding: 0.625rem 1.5625rem !important;
-// }
-
-/* prettier-ignore */
-.radio-to-buttons .en__field--radio .en__field__input--radio + .en__field__label,
-  .give-by-select .en__field--radio .en__field__input--radio + .en__field__label,
-  .en__field--donationAmt.en__field--radio .en__field__input--radio + .en__field__label {
-    margin-left: 0rem !important;
-  }
-
-/* prettier-ignore */
-.radio-to-buttons .en__field--radio .en__field__input--radio + .en__field__label::before,
-  .give-by-select .en__field--radio .en__field__input--radio + .en__field__label::before,
-  .en__field--donationAmt.en__field--radio .en__field__input--radio + .en__field__label::before {
-    display: none !important;
-  }
-
-/* prettier-ignore */
-.radio-to-buttons .en__field--radio input[type="radio"] + label,
-  .radio-to-buttons .en__field--radio .en__field__item--other input[type="text"],
-  .give-by-select .en__field--radio input[type="radio"] + label,
-  .give-by-select .en__field--radio .en__field__item--other input[type="text"],
-  .en__field--donationAmt.en__field--radio input[type="radio"] + label,
-  .en__field--donationAmt.en__field--radio .en__field__item--other input[type="text"],
-  .en__field--donationAmt.en__field--radio .en__field__item--other input[type="tel"],
-  .en__field--donationAmt.en__field--radio .en__field__item--other input[type="number"] {
-    background-color: $client-button-background-color;
-    color: $client-button-font-color;
-  }
-
-/* prettier-ignore */
-.radio-to-buttons .en__field--radio input[type="radio"]:checked + label,
-  .radio-to-buttons .en__field--radio .en__field__item--other.has-value input,
-  .radio-to-buttons .en__field--radio .en__field__item--other:not(.en__field__item--hidden) input,
-  .give-by-select .en__field--radio input[type="radio"]:checked + label,
-  .give-by-select .en__field--radio .en__field__item--other.has-value input,
-  .give-by-select .en__field--radio .en__field__item--other:not(.en__field__item--hidden) input,
-  .en__field--donationAmt.en__field--radio input[type="radio"]:checked + label,
-  .en__field--donationAmt.en__field--radio .en__field__item--other.has-value input,
-  .en__field--donationAmt.en__field--radio .en__field__item--other:not(.en__field__item--hidden) input {
-    text-transform: none;
-    background-color: $client-button-background-color-active;
-    border-color: $client-button-border-color-active;
-    color: $client-button-font-color-active;
-  }
-
-/* prettier-ignore */
-.radio-to-buttons .en__field--radio label.en__field__label.en__field__label--item,
-  .give-by-select .en__field--radio label.en__field__label.en__field__label--item,
-  .en__field--donationAmt.en__field--radio label.en__field__label.en__field__label--item {
-    border: 1px solid $client-button-border-color;
-    background-position-x: 40px;
-  }
-
-/* TODO Possibly Trim */
-// .radio-to-buttons.dark .en__field--radio .en__field__element--radio .en__field__item label.en__field__label.en__field__label--item:hover,
-// .radio-to-buttons.dark .en__field--radio .en__field__element--radio .en__field__item input[type="radio"]:checked + label {
-//   background-color: $client-button-background-color-hover;
-//   border-color: $client-button-border-color-hover;
-// }
-
-/* TODO Possibly Trim */
-// .radio-to-buttons.dark .en__field--radio label.en__field__label.en__field__label--item:hover,
-// .radio-to-buttons.dark .en__field--radio input[type="radio"]:checked + label {
-//   background-color: $client-button-background-color;
-//   border-color: $client-button-border-color;
-// }
-
-/* prettier-ignore */
-.radio-to-buttons .en__field__input--other,
-  .give-by-select .en__field__input--other,
-  .en__field--donationAmt.en__field__input--other {
-    height: auto !important;
-  }
-
-/* TODO Possibly Trim */
-// .radio-to-buttons.fat-buttons .en__field__input--other {
-//   padding: 0.625rem 1.5625rem !important;
-// }
-
-/* prettier-ignore */
-.radio-to-buttons .en__field--radio input[type="radio"]:focus + label,
-  .give-by-select .en__field--radio input[type="radio"]:focus + label,
-  .en__field--donationAmt.en__field--radio input[type="radio"]:focus + label {
-    outline: none !important;
-    border: 1px solid #666666 !important;
-    -webkit-box-shadow: 0 0 0.3125rem $client-light-gray !important;
-    box-shadow: 0 0 0.3125rem $client-light-gray !important;
-    transition: box-shadow 0.25s, border-color 0.125s ease-in-out, -webkit-box-shadow 0.25s !important;
-  }
-
+// Inline Country Helper
 .inline-country .en__field--country {
   position: absolute;
   right: 0;
@@ -701,25 +583,4 @@ div:not(.manual-form-layout) {
   .en__field__error {
     z-index: 1;
   }
-}
-
-// Remove Number Input Spinners on Other Input Gift Amount field https://stackoverflow.com/a/4298216
-.en__field--donationAmt input[type="number"]::-webkit-inner-spin-button,
-.en__field--donationAmt input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-  -moz-appearance: textfield;
-}
-
-// Add "/mo" to giving amount labels
-.has-give-monthly
-  .en__field--donationAmt
-  div:not(.en__field__item--other)
-  .en__field__label--item::after {
-  content: "/mo";
-  line-height: 2;
-  font-size: 75%;
-  margin-left: 0.1875rem;
-  opacity: 0.5;
-  text-transform: lowercase;
 }
