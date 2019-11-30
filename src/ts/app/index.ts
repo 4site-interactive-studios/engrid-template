@@ -35,8 +35,10 @@ export const run = () => {
   app.debugBar();
 
   // Event Listener Examples
-  amount.onAmountChange.subscribe(s => console.log(`Amount: ${s}`));
-  frequency.onFrequencyChange.subscribe(s => console.log(`Frequency: ${s}`));
+  amount.onAmountChange.subscribe(s => console.log(`Live Amount: ${s}`));
+  frequency.onFrequencyChange.subscribe(s =>
+    console.log(`Live Frequency: ${s}`)
+  );
   form.onSubmit.subscribe(s => console.log(`Submit: ${s}`));
   form.onError.subscribe(s => console.log(`Error: ${s}`));
 

@@ -214,12 +214,28 @@ export const debugBar = () => {
     location.hostname === "127.0.0.1"
   ) {
     body.classList.add("debug");
+    // console.log(window.performance);
+    const now = new Date().getTime();
+    const initialPageLoad = (now - performance.timing.navigationStart) / 1000;
+    const domInteractive =
+      initialPageLoad + (now - performance.timing.domInteractive) / 1000;
     if (enGrid) {
       enGrid.insertAdjacentHTML(
-        "afterend",
+        "beforebegin",
         '<span id="debug-bar">' +
+          '<span id="info-wrapper">' +
+          "<span>DEBUG BAR</span>" +
+          "<span>Initial Load: " +
+          initialPageLoad +
+          "s</span>" +
+          "<span>DOM Interactive: " +
+          domInteractive +
+          "s</span>" +
+          "</span>" +
+          '<span id="buttons-wrapper">' +
           '<button id="layout-toggle" type="button">Layout Toggle</button>' +
           '<button id="page-edit" type="button">Edit in PageBuilder (BETA)</button>' +
+          "</span>" +
           "</span>"
       );
     }
@@ -853,11 +869,8 @@ export const contactDetailLabels = () => {
 export const easyEdit = () => {
   const liveURL = window.location.href as string;
   let editURL = "" as string;
-  console.log("easyEdit loaded: liveURL: " + liveURL);
   if (liveURL.search("edit") !== -1) {
-    console.log("easyEdit: liveURL: contains edit");
     if (liveURL.includes("https://act.ran.org/page/")) {
-      console.log("easyEdit: liveURL: contains https://act.ran.org/page/");
       editURL = liveURL.replace(
         "https://act.ran.org/page/",
         "https://us.e-activist.com/index.html#pages/"
@@ -866,7 +879,6 @@ export const easyEdit = () => {
       editURL = editURL.replace("/action/1", "/edit");
       editURL = editURL.replace("/data/1", "/edit");
       window.location.href = editURL;
-      console.log("easyEdit triggered: editURL: " + editURL);
     }
   }
 };

@@ -156,6 +156,9 @@ input[type="url"],
 input[type="week"],
 input[type="hidden"],
 select,
+select.en__field__input--select, // @TODO Required, otherwise EN's CSS wins out on Selects
+select.en__field__input--splitselect, // @TODO Required, otherwise EN's CSS wins out on Selects
+select.en__field__input--tripleselect, // @TODO Required, otherwise EN's CSS wins out on Selects
 textarea {
   max-width: 100%;
   width: 100%;
@@ -163,7 +166,6 @@ textarea {
   display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  /* height: 2.4375rem; */
   height: auto !important;
   margin: 0rem;
   padding: 0.5rem;
@@ -184,7 +186,10 @@ textarea {
   appearance: none;
 }
 
-select {
+select,
+select.en__field__input--select,
+select.en__field__input--splitselect,
+select.en__field__input--tripleselect {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
   background-origin: content-box;
   background-position: right -1rem center;

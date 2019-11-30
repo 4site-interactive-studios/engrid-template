@@ -6,17 +6,42 @@
 
 #debug-bar {
   display: flex;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
+  padding: 0.5rem;
+  border-bottom: 1px solid #cccccc;
+  justify-content: space-between;
+  background: #f5f5f5;
 
-  button {
-    margin: 0rem 1rem;
-    padding: 0.25rem 1rem;
-    border: 1px solid #000000;
-    background-color: #ffffff;
-    color: #000000;
+  #info-wrapper,
+  #buttons-wrapper {
+    display: flex;
+  }
+
+  #info-wrapper span {
+    margin: 0rem 1rem 0rem 0rem;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+  }
+
+  #buttons-wrapper button {
+    margin: 0rem 0rem 0rem 1rem;
+    padding: 9px;
+    border: none;
+    background-color: #3d9cd6;
+    color: #ffffff;
     cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+    border-radius: 6px;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #1c6d9e;
+    }
   }
 }
