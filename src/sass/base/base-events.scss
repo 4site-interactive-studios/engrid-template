@@ -1,18 +1,18 @@
 //Event styling
-#engrid .en__additional__amount,
-#engrid .en__additional__label,
-#engrid .en__ticket__currency,
-#engrid .en__ticket__name,
-#engrid .en__ticket__price {
+.en__additional__amount,
+.en__additional__label,
+.en__ticket__currency,
+.en__ticket__name,
+.en__ticket__price {
   font-size: inherit;
 }
 
-#engrid .en__ticket__selector {
+.en__ticket__selector {
   display: flex;
 }
 
-#engrid .en__additional__amount,
-#engrid .en__ticket__field--cost {
+.en__additional__amount,
+.en__ticket__field--cost {
   width: initial;
 }
 
@@ -20,14 +20,14 @@
   width: initial;
 }
 
-#engrid .en__ticket__minus,
-#engrid .en__ticket__plus {
+.en__ticket__minus,
+.en__ticket__plus {
   background-color: transparent;
 }
 
-#engrid .en__ticket__minus:hover,
-#engrid .en__ticket__minus:focus,
-#engrid .en__ticket__plus:hover,
-#engrid .en__ticket__plus:focus {
+.en__ticket__minus:hover,
+.en__ticket__minus:focus,
+.en__ticket__plus:hover,
+.en__ticket__plus:focus {
   background-color: #ffffff;
 }

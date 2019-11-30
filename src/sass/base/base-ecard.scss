@@ -1,23 +1,23 @@
-#engrid .en__ecarditems__thumb {
+.en__ecarditems__thumb {
   height: auto !important;
 }
 
-#engrid button.en__ecarditems__addrecipient {
+button.en__ecarditems__addrecipient {
   margin: 4px !important;
 }
 
-#engrid .en__ecardrecipients__name,
-#engrid .ecardrecipient__name {
+.en__ecardrecipients__name,
+.ecardrecipient__name {
   width: calc(50% - 1rem) !important;
 }
 
-#engrid .en__ecardrecipients__email,
-#engrid .ecardrecipient__email {
+.en__ecardrecipients__email,
+.ecardrecipient__email {
   width: calc(50% - 1rem) !important;
 }
 
-#engrid .ecardrecipient__name,
-#engrid .ecardrecipient__email {
+.ecardrecipient__name,
+.ecardrecipient__email {
   font-family: inherit;
   font-size: 1rem;
   font-weight: normal;
@@ -28,7 +28,7 @@
   padding-right: 10px;
 }
 
-#engrid .en__ecardrecipients__list:before {
+.en__ecardrecipients__list:before {
   /* content: "Recipient List"; */
   color: #323232;
   font-weight: bold;
@@ -39,17 +39,17 @@
   color: #323232;
 }
 
-#engrid .en__ecardrecipients__recipient {
+.en__ecardrecipients__recipient {
   padding: 0;
 }
 
-#engrid .en__ecardrecipients__list {
+.en__ecardrecipients__list {
   min-height: 50px;
   border: 0px;
   padding: 0px;
 }
 
-#engrid .ecardrecipient__remove button {
+.ecardrecipient__remove button {
   width: 30px;
   height: 30px;
   background-color: $client-error-red;
@@ -59,7 +59,7 @@
   right: 2px;
 }
 
-#engrid .en__ecarditems__thumb img {
+.en__ecarditems__thumb img {
   height: 150px !important;
   width: auto;
   border: 2px solid #009bc4;
@@ -67,31 +67,31 @@
   filter: brightness(75%);
 }
 
-#engrid .en__ecarditems__thumb:hover img {
+.en__ecarditems__thumb:hover img {
   -webkit-filter: brightness(87.5%);
   filter: brightness(87.5%);
   opacity: 0.75;
 }
 
-#engrid .en__ecarditems__thumb.thumb--active img {
+.en__ecarditems__thumb.thumb--active img {
   -webkit-filter: brightness(100%);
   filter: brightness(100%);
 }
 
-#engrid .en__ecarditems__thumb {
+.en__ecarditems__thumb {
   width: auto !important;
 }
 
-#engrid .en__ecarditems__thumb:last-child {
+.en__ecarditems__thumb:last-child {
   margin-right: 0px;
 }
 
-#engrid .en__ecardmessage__default {
+.en__ecardmessage__default {
   margin-bottom: 40px;
   height: 18rem;
 }
 
-#engrid button.en__ecarditems__prevclose {
+button.en__ecarditems__prevclose {
   background-color: transparent;
   top: 5px;
   right: -29px;
@@ -101,13 +101,13 @@
   border: none;
 }
 
-#engrid .en__ecarditems__showprev {
+.en__ecarditems__showprev {
   background-color: #323232;
   margin-bottom: 40px;
 }
 
 @media screen and (max-width: 700px) {
-  #engrid button.en__ecarditems__prevclose {
+  button.en__ecarditems__prevclose {
     right: 17px;
     color: #9e9e9e;
   }

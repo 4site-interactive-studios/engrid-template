@@ -5,7 +5,7 @@
 */
 
 #debug-bar {
-  display: block;
+  display: flex;
   position: fixed;
   top: 20px;
   right: 20px;
@@ -16,6 +16,7 @@
     padding: 0.25rem 1rem;
     border: 1px solid #000000;
     background-color: #ffffff;
+    color: #000000;
     cursor: pointer;
   }
 }

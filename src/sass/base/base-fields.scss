@@ -36,12 +36,12 @@
 
 /* In the event Theme CSS causes a hidden field to become displayed, force its display to remain hidden */
 /* This was an issue originally reported by EN staff, not sure if it still persists with recent styling updates */
-#engrid .en__hidden {
+.en__hidden {
   display: none !important;
 }
 
-#engrid .en__field,
-#engrid .en__captcha {
+.en__field,
+.en__captcha {
   padding-bottom: 0;
   margin-bottom: 1rem;
   display: flex;
@@ -51,42 +51,36 @@
 
 /* For inputs with multiple components, apply the bottom margin to the field items so that if they wrap they maintain vertical spacing between them */
 /*
-  #engrid .en__component .en__field.en__field--radio,
-  #engrid .en__component .en__field.en__field--checkbox,
-  #engrid .en__component .en__field.en__field--splittext,
-  #engrid .en__component .en__field.en__field--tripletext,
-  #engrid .en__component .en__field.en__field--splitselect,
-  #engrid .en__component .en__field.en__field--tripleselect{
+  .en__component .en__field.en__field--radio,
+  .en__component .en__field.en__field--checkbox,
+  .en__component .en__field.en__field--splittext,
+  .en__component .en__field.en__field--tripletext,
+  .en__component .en__field.en__field--splitselect,
+  .en__component .en__field.en__field--tripleselect{
   margin-bottom: 0;
   }*/
 
 /* Make the spacing between wrapping elements tighter so the user knows they're related */
-#engrid
-  .en__component
+
+.en__component
   .en__field.en__field--select
   .en__field__item:not(.en__field__item--other),
-#engrid
-  .en__component
+.en__component
   .en__field.en__field--radio
   .en__field__item:not(.en__field__item--other),
-#engrid
-  .en__component
+.en__component
   .en__field.en__field--checkbox
   .en__field__item:not(.en__field__item--other),
-#engrid
-  .en__component
+.en__component
   .en__field.en__field--splittext
   .en__field__item:not(.en__field__item--other),
-#engrid
-  .en__component
+.en__component
   .en__field.en__field--tripletext
   .en__field__item:not(.en__field__item--other),
-#engrid
-  .en__component
+.en__component
   .en__field.en__field--splitselect
   .en__field__item:not(.en__field__item--other),
-#engrid
-  .en__component
+.en__component
   .en__field.en__field--tripleselect
   .en__field__item:not(.en__field__item--other) {
   margin-bottom: 0.5rem;
@@ -95,57 +89,49 @@
   align-items: center;
 }
 
-#engrid .en__component div[class*="withOther"].en__field .en__field__item {
+.en__component div[class*="withOther"].en__field .en__field__item {
   margin-bottom: 0.5rem;
   margin-right: 1rem;
 }
 
-body #engrid .en__component--formblock .en__field:first-of-type,
-body
-  #engrid
-  .en__component--formblock
-  .en__field
-  div.en__field__item:first-of-type {
+body .en__component--formblock .en__field:first-of-type,
+body .en__component--formblock .en__field div.en__field__item:first-of-type {
   margin-left: 0rem !important;
 }
 
 /* Needs QA: ENs page builder adds a div to the formblock DOM on hover. This will cause a small right margin to appear as the expected input fields are no longer the last of their siblings */
-body #engrid .en__component--formblock .en__field:last-of-type,
-body
-  #engrid
-  .en__component--formblock
-  .en__field
-  div.en__field__item:last-of-type {
+body .en__component--formblock .en__field:last-of-type,
+body .en__component--formblock .en__field div.en__field__item:last-of-type {
   margin-right: 0rem !important;
 }
 
 /* If the form field has a hidden "other" field we need to remove the end of row spacing */
 /* NEED TO REVISIT FOR CODE CLEANUP */
-#engrid
-  .en__component--formblock
+
+.en__component--formblock
   .en__field--withOther
   div.en__field__item:nth-last-child(2) {
   margin-right: 0px;
 }
 
-#engrid .en__component--formblock .en__field:only-child,
-#engrid .en__component--formblock .en__field div.en__field__item:only-child {
+.en__component--formblock .en__field:only-child,
+.en__component--formblock .en__field div.en__field__item:only-child {
   margin-left: 0;
   margin-right: 0;
 }
 
-#engrid .en__component--formblock .row-wrap .en__field,
-#engrid .en__component--formblock .row-wrap .en__field div.en__field__item {
+.en__component--formblock .row-wrap .en__field,
+.en__component--formblock .row-wrap .en__field div.en__field__item {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
-#engrid .en__field__item {
+.en__field__item {
   padding: 0;
 }
 
 /* EN sets field labels to a fixed width of 180px, this makes them responsive */
-#engrid .en__field__label {
+.en__field__label {
   width: auto;
 }
 
@@ -154,23 +140,23 @@ body
      ***********************************/
 
 /* General */
-#engrid input[type="date"],
-#engrid input[type="datetime"],
-#engrid input[type="datetime-local"],
-#engrid input[type="email"],
-#engrid input[type="month"],
-#engrid input[type="number"],
-#engrid input[type="password"],
-#engrid input[type="range"],
-#engrid input[type="search"],
-#engrid input[type="tel"],
-#engrid input[type="text"],
-#engrid input[type="time"],
-#engrid input[type="url"],
-#engrid input[type="week"],
-#engrid input[type="hidden"],
-#engrid select,
-#engrid textarea {
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[type="hidden"],
+select,
+textarea {
   max-width: 100%;
   width: 100%;
   min-width: initial;
@@ -198,7 +184,7 @@ body
   appearance: none;
 }
 
-#engrid select {
+select {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
   background-origin: content-box;
   background-position: right -1rem center;
@@ -209,28 +195,28 @@ body
     -webkit-box-shadow 0.25s;
 }
 
-#engrid textarea {
+textarea {
   height: 7rem;
   resize: vertical;
 }
 
 /* Focus state */
-#engrid input[type="date"]:focus,
-#engrid input[type="datetime"]:focus,
-#engrid input[type="datetime-local"]:focus,
-#engrid input[type="email"]:focus,
-#engrid input[type="month"]:focus,
-#engrid input[type="number"]:focus,
-#engrid input[type="password"]:focus,
-#engrid input[type="range"]:focus,
-#engrid input[type="search"]:focus,
-#engrid input[type="tel"]:focus,
-#engrid input[type="text"]:focus,
-#engrid input[type="time"]:focus,
-#engrid input[type="url"]:focus,
-#engrid input[type="week"]:focus,
-#engrid select:focus,
-#engrid textarea:focus {
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="range"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+select:focus,
+textarea:focus {
   outline: none;
   border: 1px solid $client-gray;
   background-color: $client-button-font-color;
@@ -244,7 +230,7 @@ body
       * Form Block Component: Select Fields
       * Overrides EN Default Styling to ensure mobile friendly widths
       */
-#engrid .en__field__input--select {
+.en__field__input--select {
   min-width: initial !important;
 }
 
@@ -285,9 +271,9 @@ body
 }
 
 /* Custom Styling for Radio & Checkbox Inputs */
-#engrid .en__field__input--radio,
-#engrid .en__field__input--checkbox,
-#engrid .en__contactDetails__select {
+.en__field__input--radio,
+.en__field__input--checkbox,
+.en__contactDetails__select {
   border: 0;
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
@@ -301,9 +287,9 @@ body
   white-space: nowrap;
 }
 
-#engrid .en__field__input--radio + .en__field__label,
-#engrid .en__field__input--checkbox + .en__field__label,
-#engrid .en__contactDetails__rows {
+.en__field__input--radio + .en__field__label,
+.en__field__input--checkbox + .en__field__label,
+.en__contactDetails__rows {
   position: relative;
   margin-left: 2rem;
   cursor: pointer;
@@ -311,9 +297,9 @@ body
   align-items: center;
 }
 
-#engrid .en__field__input--radio + .en__field__label::before,
-#engrid .en__field__input--checkbox + .en__field__label::before,
-#engrid .en__contactDetails__rows::before {
+.en__field__input--radio + .en__field__label::before,
+.en__field__input--checkbox + .en__field__label::before,
+.en__contactDetails__rows::before {
   content: "";
   position: absolute;
   height: calc(1.4rem - 2px);
@@ -332,12 +318,12 @@ body
   transition-property: border-color, background-color;
 }
 
-#engrid .en__field__input--radio + .en__field__label::before {
+.en__field__input--radio + .en__field__label::before {
   border-radius: 50%;
 }
 
-#engrid .en__field__input--checkbox + .en__field__label::before,
-#engrid .en__contactDetails__rows::before {
+.en__field__input--checkbox + .en__field__label::before,
+.en__contactDetails__rows::before {
   border-radius: 0;
   border-width: 2px;
   -webkit-box-shadow: none;
@@ -345,29 +331,25 @@ body
 }
 
 // @TODO In addition to a "Checked" state, add a hover for checked and unchecked states
-// e.g. #engrid .en__contactDetails__select + .en__contactDetails__rows:hover:before
+// e.g. .en__contactDetails__select + .en__contactDetails__rows:hover:before
 // This might also include adding a cursor effect to show that the label is clickable
 
-#engrid .en__field__input--radio:checked + .en__field__label::before,
-#engrid .en__field__input--checkbox:checked + .en__field__label::before,
-#engrid
-  .en__contactDetails__select:checked
-  + .en__contactDetails__rows::before {
+.en__field__input--radio:checked + .en__field__label::before,
+.en__field__input--checkbox:checked + .en__field__label::before,
+.en__contactDetails__select:checked + .en__contactDetails__rows::before {
   background-color: $client-checkmark-background-color;
   -webkit-box-shadow: inset 0 0 0 2px #ffffff;
   box-shadow: inset 0 0 0 2px #ffffff;
   border-width: 2px;
 }
 
-#engrid .en__field__input--checkbox:checked + .en__field__label::before,
-#engrid
-  .en__contactDetails__select:checked
-  + .en__contactDetails__rows::before {
+.en__field__input--checkbox:checked + .en__field__label::before,
+.en__contactDetails__select:checked + .en__contactDetails__rows::before {
   color: $client-checkmark-background-color;
   background-color: transparent;
 }
-#engrid .en__field__input--checkbox:checked + .en__field__label::after,
-#engrid .en__contactDetails__select:checked + .en__contactDetails__rows::after {
+.en__field__input--checkbox:checked + .en__field__label::after,
+.en__contactDetails__select:checked + .en__contactDetails__rows::after {
   content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='16' viewBox='0 0 21 16'><path fill='%23F57E20' fill-rule='nonzero' d='M18.76.16L6.68 12.113l-4.44-4.392a.555.555 0 0 0-.779 0L.161 9.006a.541.541 0 0 0 0 .771L6.29 15.84a.555.555 0 0 0 .78 0l13.77-13.624a.541.541 0 0 0 0-.771L19.539.16a.555.555 0 0 0-.779 0z'/></svg>");
   position: absolute;
   left: -28px;
@@ -380,9 +362,9 @@ body
 }
 
 /* QA Needed: Would like to find a way so that radio input focus is round rather than square. May require re-writing how radio inputs are styled */
-#engrid .en__field__input--radio:focus + .en__field__label::before,
-#engrid .en__field__input--checkbox:focus + .en__field__label::before,
-#engrid .en__contactDetails__select:focus + .en__contactDetails__rows::before {
+.en__field__input--radio:focus + .en__field__label::before,
+.en__field__input--checkbox:focus + .en__field__label::before,
+.en__contactDetails__select:focus + .en__contactDetails__rows::before {
   outline: $client-gray auto 0.3125rem;
 }
 
@@ -459,9 +441,9 @@ body
   margin: 0 !important;
 }
 
-#engrid .en__field--validationFailed.has-value input,
-#engrid .en__field--validationFailed.has-value textarea,
-#engrid .en__field--select.en__field--validationFailed.has-value select {
+.en__field--validationFailed.has-value input,
+.en__field--validationFailed.has-value textarea,
+.en__field--select.en__field--validationFailed.has-value select {
   border-color: $client-error-red-grayscale;
   background-color: initial;
 }
@@ -471,20 +453,16 @@ body
   margin-right: -0.5rem;
 }
 
-#engrid .en__field {
+.en__field {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
-#engrid
-  .en__component--formblock:not(.manual-form-layout)
-  .en__field:first-child {
+.en__component--formblock:not(.manual-form-layout) .en__field:first-child {
   padding-left: 0;
 }
 
-#engrid
-  .en__component--formblock:not(.manual-form-layout)
-  .en__field:last-child {
+.en__component--formblock:not(.manual-form-layout) .en__field:last-child {
   padding-right: 0;
 }
 
@@ -500,7 +478,7 @@ body
 
 /* Default Stylings for Common Form Fields */
 /* Can be disabled by added manual-form-layout at the template or component level */
-#engrid div:not(.manual-form-layout) {
+div:not(.manual-form-layout) {
   .en__component--formblock {
     display: flex;
     flex-wrap: wrap;
@@ -600,55 +578,55 @@ body
 // @TODO Confirm the font-size styling is resetting the fonts https://act.ran.org/page/14333/event/1?mode=DEMO
 
 /* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio input[type="radio"] + label,
-  #engrid .give-by-select .en__field--radio input[type="radio"] + label,
-  #engrid .en__field--donationAmt.en__field--radio input[type="radio"] + label {
+.radio-to-buttons .en__field--radio input[type="radio"] + label,
+  .give-by-select .en__field--radio input[type="radio"] + label,
+  .en__field--donationAmt.en__field--radio input[type="radio"] + label {
     border-radius: $client-button-border-radius;
     // padding: 0.5rem 1.5rem;
   }
 
 /* TODO Possibly Trim */
-// #engrid .radio-to-buttons.fat-buttons .en__field--radio input[type="radio"] + label {
+// .radio-to-buttons.fat-buttons .en__field--radio input[type="radio"] + label {
 //   padding: 0.625rem 1.5625rem !important;
 // }
 
 /* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio .en__field__input--radio + .en__field__label,
-  #engrid .give-by-select .en__field--radio .en__field__input--radio + .en__field__label,
-  #engrid .en__field--donationAmt.en__field--radio .en__field__input--radio + .en__field__label {
+.radio-to-buttons .en__field--radio .en__field__input--radio + .en__field__label,
+  .give-by-select .en__field--radio .en__field__input--radio + .en__field__label,
+  .en__field--donationAmt.en__field--radio .en__field__input--radio + .en__field__label {
     margin-left: 0rem !important;
   }
 
 /* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio .en__field__input--radio + .en__field__label::before,
-  #engrid .give-by-select .en__field--radio .en__field__input--radio + .en__field__label::before,
-  #engrid .en__field--donationAmt.en__field--radio .en__field__input--radio + .en__field__label::before {
+.radio-to-buttons .en__field--radio .en__field__input--radio + .en__field__label::before,
+  .give-by-select .en__field--radio .en__field__input--radio + .en__field__label::before,
+  .en__field--donationAmt.en__field--radio .en__field__input--radio + .en__field__label::before {
     display: none !important;
   }
 
 /* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio input[type="radio"] + label,
-  #engrid .radio-to-buttons .en__field--radio .en__field__item--other input[type="text"],
-  #engrid .give-by-select .en__field--radio input[type="radio"] + label,
-  #engrid .give-by-select .en__field--radio .en__field__item--other input[type="text"],
-  #engrid .en__field--donationAmt.en__field--radio input[type="radio"] + label,
-  #engrid .en__field--donationAmt.en__field--radio .en__field__item--other input[type="text"],
-  #engrid .en__field--donationAmt.en__field--radio .en__field__item--other input[type="tel"],
-  #engrid .en__field--donationAmt.en__field--radio .en__field__item--other input[type="number"] {
+.radio-to-buttons .en__field--radio input[type="radio"] + label,
+  .radio-to-buttons .en__field--radio .en__field__item--other input[type="text"],
+  .give-by-select .en__field--radio input[type="radio"] + label,
+  .give-by-select .en__field--radio .en__field__item--other input[type="text"],
+  .en__field--donationAmt.en__field--radio input[type="radio"] + label,
+  .en__field--donationAmt.en__field--radio .en__field__item--other input[type="text"],
+  .en__field--donationAmt.en__field--radio .en__field__item--other input[type="tel"],
+  .en__field--donationAmt.en__field--radio .en__field__item--other input[type="number"] {
     background-color: $client-button-background-color;
     color: $client-button-font-color;
   }
 
 /* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio input[type="radio"]:checked + label,
-  #engrid .radio-to-buttons .en__field--radio .en__field__item--other.has-value input,
-  #engrid .radio-to-buttons .en__field--radio .en__field__item--other:not(.en__field__item--hidden) input,
-  #engrid .give-by-select .en__field--radio input[type="radio"]:checked + label,
-  #engrid .give-by-select .en__field--radio .en__field__item--other.has-value input,
-  #engrid .give-by-select .en__field--radio .en__field__item--other:not(.en__field__item--hidden) input,
-  #engrid .en__field--donationAmt.en__field--radio input[type="radio"]:checked + label,
-  #engrid .en__field--donationAmt.en__field--radio .en__field__item--other.has-value input,
-  #engrid .en__field--donationAmt.en__field--radio .en__field__item--other:not(.en__field__item--hidden) input {
+.radio-to-buttons .en__field--radio input[type="radio"]:checked + label,
+  .radio-to-buttons .en__field--radio .en__field__item--other.has-value input,
+  .radio-to-buttons .en__field--radio .en__field__item--other:not(.en__field__item--hidden) input,
+  .give-by-select .en__field--radio input[type="radio"]:checked + label,
+  .give-by-select .en__field--radio .en__field__item--other.has-value input,
+  .give-by-select .en__field--radio .en__field__item--other:not(.en__field__item--hidden) input,
+  .en__field--donationAmt.en__field--radio input[type="radio"]:checked + label,
+  .en__field--donationAmt.en__field--radio .en__field__item--other.has-value input,
+  .en__field--donationAmt.en__field--radio .en__field__item--other:not(.en__field__item--hidden) input {
     text-transform: none;
     background-color: $client-button-background-color-active;
     border-color: $client-button-border-color-active;
@@ -656,43 +634,43 @@ body
   }
 
 /* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio label.en__field__label.en__field__label--item,
-  #engrid .give-by-select .en__field--radio label.en__field__label.en__field__label--item,
-  #engrid .en__field--donationAmt.en__field--radio label.en__field__label.en__field__label--item {
+.radio-to-buttons .en__field--radio label.en__field__label.en__field__label--item,
+  .give-by-select .en__field--radio label.en__field__label.en__field__label--item,
+  .en__field--donationAmt.en__field--radio label.en__field__label.en__field__label--item {
     border: 1px solid $client-button-border-color;
     background-position-x: 40px;
   }
 
 /* TODO Possibly Trim */
-// #engrid .radio-to-buttons.dark .en__field--radio .en__field__element--radio .en__field__item label.en__field__label.en__field__label--item:hover,
-// #engrid .radio-to-buttons.dark .en__field--radio .en__field__element--radio .en__field__item input[type="radio"]:checked + label {
+// .radio-to-buttons.dark .en__field--radio .en__field__element--radio .en__field__item label.en__field__label.en__field__label--item:hover,
+// .radio-to-buttons.dark .en__field--radio .en__field__element--radio .en__field__item input[type="radio"]:checked + label {
 //   background-color: $client-button-background-color-hover;
 //   border-color: $client-button-border-color-hover;
 // }
 
 /* TODO Possibly Trim */
-// #engrid .radio-to-buttons.dark .en__field--radio label.en__field__label.en__field__label--item:hover,
-// #engrid .radio-to-buttons.dark .en__field--radio input[type="radio"]:checked + label {
+// .radio-to-buttons.dark .en__field--radio label.en__field__label.en__field__label--item:hover,
+// .radio-to-buttons.dark .en__field--radio input[type="radio"]:checked + label {
 //   background-color: $client-button-background-color;
 //   border-color: $client-button-border-color;
 // }
 
 /* prettier-ignore */
-#engrid .radio-to-buttons .en__field__input--other,
-  #engrid .give-by-select .en__field__input--other,
-  #engrid .en__field--donationAmt.en__field__input--other {
+.radio-to-buttons .en__field__input--other,
+  .give-by-select .en__field__input--other,
+  .en__field--donationAmt.en__field__input--other {
     height: auto !important;
   }
 
 /* TODO Possibly Trim */
-// #engrid .radio-to-buttons.fat-buttons .en__field__input--other {
+// .radio-to-buttons.fat-buttons .en__field__input--other {
 //   padding: 0.625rem 1.5625rem !important;
 // }
 
 /* prettier-ignore */
-#engrid .radio-to-buttons .en__field--radio input[type="radio"]:focus + label,
-  #engrid .give-by-select .en__field--radio input[type="radio"]:focus + label,
-  #engrid .en__field--donationAmt.en__field--radio input[type="radio"]:focus + label {
+.radio-to-buttons .en__field--radio input[type="radio"]:focus + label,
+  .give-by-select .en__field--radio input[type="radio"]:focus + label,
+  .en__field--donationAmt.en__field--radio input[type="radio"]:focus + label {
     outline: none !important;
     border: 1px solid #666666 !important;
     -webkit-box-shadow: 0 0 0.3125rem $client-light-gray !important;
@@ -700,7 +678,7 @@ body
     transition: box-shadow 0.25s, border-color 0.125s ease-in-out, -webkit-box-shadow 0.25s !important;
   }
 
-#engrid .inline-country .en__field--country {
+.inline-country .en__field--country {
   position: absolute;
   right: 0;
   align-items: flex-end;
@@ -729,7 +707,7 @@ body
 }
 
 // Add "/mo" to giving amount labels
-#engrid.has-give-monthly
+.has-give-monthly
   .en__field--donationAmt
   div:not(.en__field__item--other)
   .en__field__label--item::after {
