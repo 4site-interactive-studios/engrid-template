@@ -2,10 +2,13 @@
 @import "breakpoint-sass";
 @import "breakpoint-slicer";
 
+/* 4SITE BASE NORMALIZE AND SANITIZE */
+@import "base/base-reset";
+
 /* CLIENT VARIABLES */
 @import "clients/ran/ran-variables";
 
-/* 4SITE BASE RESET AND STYLING */
+/* 4SITE BASE STYLING */
 @import "base/base-autofill";
 @import "base/base-buttons";
 @import "base/base-columns";
@@ -15,7 +18,6 @@
 @import "base/base-loading-animations";
 @import "base/base-page-builder-preview";
 @import "base/base-page-builder";
-@import "base/base-reset";
 @import "base/base-thermometer";
 @import "base/base-utility";
 
