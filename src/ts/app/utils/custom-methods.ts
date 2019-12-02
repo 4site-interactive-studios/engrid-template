@@ -214,30 +214,96 @@ export const debugBar = () => {
     location.hostname === "127.0.0.1"
   ) {
     body.classList.add("debug");
-    // console.log(window.performance);
-    const now = new Date().getTime();
-    const initialPageLoad = (now - performance.timing.navigationStart) / 1000;
-    const domInteractive =
-      initialPageLoad + (now - performance.timing.domInteractive) / 1000;
     if (enGrid) {
       enGrid.insertAdjacentHTML(
         "beforebegin",
         '<span id="debug-bar">' +
           '<span id="info-wrapper">' +
           "<span>DEBUG BAR</span>" +
-          "<span>Initial Load: " +
-          initialPageLoad +
-          "s</span>" +
-          "<span>DOM Interactive: " +
-          domInteractive +
-          "s</span>" +
           "</span>" +
           '<span id="buttons-wrapper">' +
-          '<button id="layout-toggle" type="button">Layout Toggle</button>' +
-          '<button id="page-edit" type="button">Edit in PageBuilder (BETA)</button>' +
+          '<span id="debug-close">X</span>' +
           "</span>" +
           "</span>"
       );
+    }
+
+    if (window.location.search.indexOf("mode=DEMO") > -1) {
+      const infoWrapper = document.getElementById("info-wrapper");
+      const buttonsWrapper = document.getElementById("buttons-wrapper");
+
+      if (infoWrapper) {
+        // console.log(window.performance);
+        const now = new Date().getTime();
+        const initialPageLoad =
+          (now - performance.timing.navigationStart) / 1000;
+        const domInteractive =
+          initialPageLoad + (now - performance.timing.domInteractive) / 1000;
+
+        infoWrapper.insertAdjacentHTML(
+          "beforeend",
+          "<span>Initial Load: " +
+            initialPageLoad +
+            "s</span>" +
+            "<span>DOM Interactive: " +
+            domInteractive +
+            "s</span>"
+        );
+
+        if (buttonsWrapper) {
+          buttonsWrapper.insertAdjacentHTML(
+            "afterbegin",
+            '<button id="layout-toggle" type="button">Layout Toggle</button>' +
+              '<button id="page-edit" type="button">Edit in PageBuilder (BETA)</button>'
+          );
+        }
+      }
+    }
+
+    if (
+      window.location.href.indexOf("debug") != -1 ||
+      location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1"
+    ) {
+      const buttonsWrapper = document.getElementById("buttons-wrapper");
+      if (buttonsWrapper) {
+        buttonsWrapper.insertAdjacentHTML(
+          "afterbegin",
+          '<button id="layout-toggle" type="button">Layout Toggle</button>' +
+            '<button id="fancy-errors-toggle" type="button">Toggle Fancy Errors</button>' +
+            '<button id="float-labels-toggle" type="button">Toggle Float Lables</button>'
+        );
+      }
+    }
+
+    if (document.getElementById("fancy-errors-toggle")) {
+      const debugTemplateButton = document.getElementById(
+        "fancy-errors-toggle"
+      );
+      if (debugTemplateButton) {
+        debugTemplateButton.addEventListener(
+          "click",
+          function() {
+            fancyErrorsToggle();
+          },
+          false
+        );
+      }
+    }
+
+    if (document.getElementById("float-labels-toggle")) {
+      const debugTemplateButton = document.getElementById(
+        "float-labels-toggle"
+      );
+      if (debugTemplateButton) {
+        debugTemplateButton.addEventListener(
+          "click",
+          function() {
+            floatLabelsToggle();
+          },
+          false
+        );
+      }
     }
 
     if (document.getElementById("layout-toggle")) {
@@ -266,6 +332,27 @@ export const debugBar = () => {
       }
     }
 
+    if (document.getElementById("debug-close")) {
+      const debugTemplateButton = document.getElementById("debug-close");
+      if (debugTemplateButton) {
+        debugTemplateButton.addEventListener(
+          "click",
+          function() {
+            debugClose();
+          },
+          false
+        );
+      }
+    }
+
+    const fancyErrorsToggle = () => {
+      enGrid.classList.toggle("fancy-errors");
+    };
+
+    const floatLabelsToggle = () => {
+      enGrid.classList.toggle("float-labels");
+    };
+
     const pageEdit = () => {
       window.location.href = window.location.href + "?edit";
     };
@@ -289,6 +376,14 @@ export const debugBar = () => {
             "While trying to switch layouts, something unexpected happen."
           );
         }
+      }
+    };
+
+    const debugClose = () => {
+      body.classList.remove("debug");
+      const debugBar = document.getElementById("debug-bar");
+      if (debugBar) {
+        debugBar.style.display = "none";
       }
     };
 

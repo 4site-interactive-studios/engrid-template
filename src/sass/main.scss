@@ -1,89 +1,39 @@
-/* BREAKPOINTS */
+/* SASS BREAKPOINT SLICER */
 @import "breakpoint-sass";
 @import "breakpoint-slicer";
-$slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
-/* @TODO Is there a way to move these into a client level SCSS file and then import them? */
-/* SASS VARIABLES */
-$background-color: #ffffff;
-$background-image-background-color: #487c0f;
+/* CLIENT VARIABLES */
+@import "clients/ran/ran-variables";
 
-$client-white: #ffffff;
-$client-black: #000000;
-$client-gray: #8a8a8a;
-$client-light-gray: #cacaca;
-$client-orange: #f1700b;
-
-$client-body-background-color: #ffffff; //@TODO Not yet used anywhere
-$client-body-border-radius: 0px;
-$body-padding-sm: 0.8652rem; //@TODO Revisit
-$body-padding: calc(0.8652rem * 0.75); //@TODO Revisit
-$body-padding-lg: calc(0.8652rem * 2.5); //@TODO Revisit
-$body-padding-xlg: calc(0.8652rem * 5); //@TODO Revisit
-
-$client-input-border-radius: 0px;
-$client-input-border-color: #000000;
-$client-input-background-color: transparent;
-
-$client-button-background-color: #000000;
-$client-button-background-color-hover: #f1700b;
-$client-button-background-color-active: #f1700b;
-$client-button-background-color-disabled: #949494;
-$client-button-border-color: #000000;
-$client-button-border-color-active: #f1700b;
-$client-button-border-color-hover: #f1700b;
-$client-button-border-radius: 0px;
-$client-button-font-color: #ffffff;
-$client-button-font-color-active: #ffffff;
-
-$client-submit-button-background-color: #f1700b;
-$client-submit-button-background-color-hover: #f1700b;
-$client-submit-button-border-color: #f1700b;
-$client-submit-button-font-color: #ffffff;
-
-$client-checkmark-background-color: #f1700b;
-$client-checkmark-border-color: #f1700b;
-$client-checkmark-font-color: #ffffff;
-
-$client-error-red: #e74b3c;
-$client-error-red-grayscale: #949494;
-$client-error-red-faded: #fef6f5;
-$client-error-page-group-background: #f4ddda;
-
-$client-highlight-background-color: #f9f003;
-$client-highlight-font-color: #343432;
-
-/* BASE RESET */
-@import "base/base-reset";
-
-/* BASE STYLING */
+/* 4SITE BASE RESET AND STYLING */
 @import "base/base-autofill";
 @import "base/base-buttons";
 @import "base/base-columns";
-@import "base/base-donations";
-@import "base/base-ecard";
 @import "base/base-errors";
-@import "base/base-events";
 @import "base/base-fields";
 @import "base/base-images";
-@import "base/base-letter-to-target";
 @import "base/base-loading-animations";
 @import "base/base-page-builder-preview";
 @import "base/base-page-builder";
+@import "base/base-reset";
 @import "base/base-thermometer";
-@import "base/base-tweet-to-target";
 @import "base/base-utility";
 
-/* EN GRID LAYOUTS */
+/* 4SITE BASE LAYOUTS */
 @import "base/layouts/engrid-layout";
 @import "base/layouts/engrid-layout-manual";
 
-/* ADDON STYLING */
+/* 4SITE ADDON STYLING */
 @import "addons/addon-debug";
+@import "addons/addon-donations";
+@import "addons/addon-ecard";
+@import "addons/addon-events";
 @import "addons/addon-fancy-errors";
 @import "addons/addon-float-labels";
+@import "addons/addon-letter-to-target";
 @import "addons/addon-live-card-type";
 @import "addons/addon-modal";
+@import "addons/addon-tweet-to-target";
 
 /* CLIENT STYLING AND LAYOTUS */
 @import "clients/ran/ran-font";
