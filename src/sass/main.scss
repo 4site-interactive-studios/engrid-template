@@ -41,23 +41,3 @@
 @import "clients/ran/ran-font";
 @import "clients/ran/ran-branding";
 @import "clients/ran/layouts/ran-center1col";
-
-/* MEDIA QUERY TESTING */
-/* https://github.com/lolmaus/breakpoint-slicer */
-// @include to(2) {
-//   body {
-//     background-color: #eb007d;
-//   }
-// }
-// @include from(3) {
-//   body {
-//     background-color: peru;
-//   }
-// }
-// @include between(2, 4) {
-//   body {
-//     background-color: purple;
-//   }
-// }
-
-// @TODO Look into https://www.npmjs.com/package/doiuse
