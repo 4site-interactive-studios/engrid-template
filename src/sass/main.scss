@@ -1,9 +1,10 @@
-/* SASS BREAKPOINT SLICER */
+/* 4SITE BASE SASS BREAKPOINT SLICER */
 @import "breakpoint-sass";
 @import "breakpoint-slicer";
 
 /* 4SITE BASE NORMALIZE AND SANITIZE */
-@import "base/base-reset";
+@import "base/base-normalize";
+@import "base/base-sanitize";
 
 /* CLIENT VARIABLES */
 @import "clients/ran/ran-variables";
