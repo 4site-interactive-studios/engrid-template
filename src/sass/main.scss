@@ -3,8 +3,8 @@
 @import "breakpoint-slicer";
 
 /* 4SITE BASE NORMALIZE AND SANITIZE */
-@import "base/base-normalize";
-@import "base/base-sanitize";
+@import "~normalize.css";
+@import "~sanitize.css";
 
 /* CLIENT VARIABLES */
 @import "clients/ran/ran-variables";
