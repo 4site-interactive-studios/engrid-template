@@ -4,6 +4,7 @@ import DonationAmount from "./events/donation-amount";
 import DonationFrequency from "./events/donation-frequency";
 import EnForm from "./events/en-form";
 import LiveVariables from "./utils/live-variables";
+import ProcessingFees from "./utils/processing-fees";
 import Modal from "./utils/modal";
 
 export const amount = new DonationAmount(
@@ -52,6 +53,9 @@ export const run = () => {
 
   // Live Variables
   new LiveVariables();
+
+  // Processing Fees
+  new ProcessingFees();
 
   // Modal
   const modal = new Modal();
