@@ -51,4 +51,37 @@ export default class DonationAmount {
       }
     }
   }
+  // Force a new amount
+  public setAmount(amount: number) {
+    // Search for the current amount on radio boxes
+    let found = Array.from(
+      document.querySelectorAll('input[name="' + this._radios + '"]')
+    ).filter(
+      el => el instanceof HTMLInputElement && parseInt(el.value) == amount
+    );
+    // We found the amount on the radio boxes, so check it
+    if (found.length) {
+      const amountField = found[0] as HTMLInputElement;
+      amountField.checked = true;
+      // Clear OTHER text field
+      this.clearOther();
+    } else {
+      const otherField = document.querySelector(
+        'input[name="' + this._other + '"]'
+      ) as HTMLInputElement;
+      otherField.focus();
+      otherField.value = amount.toString();
+    }
+    // Set the new amount and trigger all live variables
+    this.amount = amount;
+  }
+  // Clear Other Field
+  public clearOther() {
+    const otherField = document.querySelector(
+      'input[name="' + this._other + '"]'
+    ) as HTMLInputElement;
+    otherField.value = "";
+    const otherWrapper = otherField.parentNode as HTMLElement;
+    otherWrapper.classList.add("en__field__item--hidden");
+  }
 }

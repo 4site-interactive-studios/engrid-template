@@ -4,7 +4,6 @@ import DonationFrequency from "../events/donation-frequency";
 import { amount } from "../index";
 import { frequency } from "../index";
 import { form } from "../index";
-import { fromStringWithSourceMap } from "source-list-map";
 
 export default class LiveVariables {
   public _amount: DonationAmount;
