@@ -7,24 +7,30 @@ export default class EnForm {
 
   public dispatchSubmit() {
     this._onSubmit.dispatch();
+    console.log("dispatchSubmit");
   }
 
   public dispatchError() {
     this._onError.dispatch();
+    console.log("dispatchError");
   }
 
   public submitForm() {
     const enForm = document.querySelector("form");
     if (enForm) {
       enForm.submit();
+      console.log("submitForm");
     }
   }
 
   public get onSubmit() {
+    console.log("onSubmit");
     return this._onSubmit.asEvent();
+
   }
 
   public get onError() {
+    console.log("onError");
     return this._onError.asEvent();
   }
 }

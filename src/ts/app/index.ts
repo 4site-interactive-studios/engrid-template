@@ -23,6 +23,7 @@ export const run = () => {
   app.watchRecurrpayField();
   app.watchGiveBySelectField();
   app.watchLegacyGiveBySelectField();
+  app.SetEnFieldOtherAmountRadioStepValue();
 
   app.contactDetailLabels();
   app.easyEdit();
