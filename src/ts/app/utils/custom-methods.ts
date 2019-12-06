@@ -772,6 +772,15 @@ const field_country = document.getElementById(
 let field_expiration_month = field_expiration_parts[0] as HTMLSelectElement;
 let field_expiration_year = field_expiration_parts[1] as HTMLSelectElement;
 
+/* The Donation Other Giving Amount is a "Number" type input field. This restricts valid inputs to integers unless a step value is defined. Be defining a step value of .01 any valid 2 digit decimal can be entered */
+export const SetEnFieldOtherAmountRadioStepValue = () => {
+  const enFieldOtherAmountRadio = document.querySelector(".en__field--donationAmt .en__field__input--other") as HTMLInputElement;
+  if (enFieldOtherAmountRadio){
+    enFieldOtherAmountRadio.setAttribute("step", ".01");
+  }
+}
+
+
 /*
  * Helpers
  */
