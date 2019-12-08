@@ -11,3 +11,4 @@ Engaging Networks Grid Themes
 6: Audit for comments
 7: Audit for TODO'S
 8: Look into https://www.npmjs.com/package/doiuse
+9: Install Stylelint, vis PostCSS plugin? https://stylelint.io/user-guide/postcss-plugin
