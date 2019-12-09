@@ -12,3 +12,4 @@ Engaging Networks Grid Themes
 7: Audit for TODO'S
 8: Look into https://www.npmjs.com/package/doiuse
 9: Look into https://medium.com/eightshapes-llc/cropping-away-negative-impacts-of-line-height-84d744e016ce
+10: Install Stylelint, vis PostCSS plugin? https://stylelint.io/user-guide/postcss-plugin
