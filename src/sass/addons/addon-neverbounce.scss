@@ -1,0 +1,60 @@
+/* Utilizes the standard NeverBounce Implimentation but styles it to match the client brand */
+/* Note, we add "async" to the javascript file call */
+/* @TODO Check support for "fancyerrors" and float labels, as well as input fields with rounded borders
+/*
+    <script type="text/javascript">
+        _NBSettings = {
+            apiKey: 'CLIENT-API-KEY'
+        };
+    </script>
+    <script async type="text/javascript" src="https://cdn.neverbounce.com/widget/dist/NeverBounce.js"></script>
+*/
+
+#engrid div[id^=nb-field-]{
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+#engrid div[id^=nb-field-] div.nb-feedback{
+    display: block !important;
+    margin-top: 0px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    position: absolute !important;
+    left: -99999px !important;
+    padding: .25rem .5rem !important;
+    font-size: 1.125em !important;
+    font-size: .75rem !important;
+    font-family: HarmoniaSansStd !important;
+    font-weight: 400 !important;
+    font-stretch: normal !important;
+    font-style: normal !important;
+    line-height: 1.44 !important;
+    letter-spacing: normal !important;
+    transition-timing-function: cubic-bezier(0,1,0,1) !important;
+}
+
+#engrid div[id^=nb-field-] div.nb-feedback .nb-poweredby{
+    display: none !important;
+}
+
+#engrid div[id^=nb-field-].nb-error input{
+    border-color: $client-error-red !important;
+    background-color: $client-error-red-faded !important;
+}
+
+#engrid div[id^=nb-field-].nb-error .nb-feedback{
+    position: initial !important;
+    border: none !important;
+    background-color: $client-error-red !important;
+    color: #ffffff !important;
+
+}
+
+#engrid div[id^=nb-field-].nb-error .nb-feedback .nb-icon-cancel{
+    display: none !important;
+}
+
+#engrid div[id^=nb-field-].nb-success input{
+    border-color: initial !important;
+}
