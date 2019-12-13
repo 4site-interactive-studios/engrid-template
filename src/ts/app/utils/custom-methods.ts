@@ -121,7 +121,7 @@ export const setBackgroundImages = () => {
   }
 
   // Set the background image
-  if (pageBackgroundImgSrc) {
+  if (pageBackground && pageBackgroundImgSrc) {
     pageBackground.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
   }
 };
@@ -1019,3 +1019,43 @@ export const easyEdit = () => {
     }
   }
 };
+
+// If you go to and Engaging Networks Unsubscribe page anonymously
+// then the fields are in their default states. If you go to it via an email
+// link that authenticates who you are, it then populates the fields with corresponding
+// values from your account. This means to unsubscribe the user has to uncheck the
+// newsletter checkbox(s) before submitting.
+
+export const simpleUnsubscribe = () => {
+  // console.log("simpleUnsubscribe fired");
+
+  // Check if we're on an Unsubscribe / Manage Subscriptions page
+  if (window.location.href.indexOf("/subscriptions") != -1){
+    // console.log("On an subscription management page");
+
+    // Check if any form elements on this page have the "forceUncheck" class
+    const forceUncheck = document.querySelectorAll(".forceUncheck");
+    if(forceUncheck){
+      // console.log("Found forceUnchecl dom elements", forceUncheck);
+
+      // Step through each DOM element with forceUncheck looking for checkboxes
+      Array.from(forceUncheck).forEach(e => {
+        let element = e as HTMLElement;
+        // console.log("Checking this formComponent for checkboxes", element);
+
+        // In the forceUncheck form component, find any checboxes 
+        let uncheckCheckbox = element.querySelectorAll("input[type='checkbox']");
+        if(uncheckCheckbox){
+
+          // Step through each Checkbox in the forceUncheck form component
+          Array.from(uncheckCheckbox).forEach(f => {
+            let checkbox = f as HTMLInputElement;
+            // console.log("Unchecking this checkbox", checkbox);
+            // Uncheck the checbox
+            checkbox.checked = false;
+          });
+        }
+      });
+    }
+  }
+}

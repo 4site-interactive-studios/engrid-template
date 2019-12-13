@@ -24,13 +24,13 @@ export default class EnForm {
   }
 
   public get onSubmit() {
-    console.log("onSubmit");
+    // console.log("onSubmit");
     return this._onSubmit.asEvent();
 
   }
 
   public get onError() {
-    console.log("onError");
+    // console.log("onError");
     return this._onError.asEvent();
   }
 }

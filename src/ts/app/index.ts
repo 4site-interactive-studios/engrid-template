@@ -24,6 +24,7 @@ export const run = () => {
   app.watchGiveBySelectField();
   app.watchLegacyGiveBySelectField();
   app.SetEnFieldOtherAmountRadioStepValue();
+  app.simpleUnsubscribe();
 
   app.contactDetailLabels();
   app.easyEdit();
