@@ -41,7 +41,6 @@
   },
   "dependencies": {
     "clean-webpack-plugin": "^3.0.0",
-    "normalize.css": "^8.0.1",
     "sanitize.css": "^11.0.0",
     "strongly-typed-events": "^1.6.3"
   }
