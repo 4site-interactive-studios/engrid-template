@@ -1,15 +1,48 @@
 # engrid
 
-Engaging Networks Grid Themes
+Engaging Networks Grid (EN GRID) by 4Site Studios
 
-@TODO (In no specific order)
-1: Audit client ran-branding.scss for code that can be moved into Base
-2: Move Normalize.css and Sanitize.css to be dependencies rather than a merged static CSS file. Then remove '@import "base/base-reset" from 'main.scss'
-3: Break down JS into more components
-4: Create additional page types, and is there a way to match the Template pattern (wrapper + page inner) used by EN?
-5: Audit SCSS files to migrate code from CSS to SCSS
-6: Audit for comments
-7: Audit for TODO'S
-8: Look into https://www.npmjs.com/package/doiuse
-9: Look into https://medium.com/eightshapes-llc/cropping-away-negative-impacts-of-line-height-84d744e016ce
-10: Install Stylelint, vis PostCSS plugin? https://stylelint.io/user-guide/postcss-plugin
+@TODO In no specific order
+
+Documentation
+Create Generic Documentation
+Create Feature Roadmap
+
+Defaults
+Audit client ran-branding.scss for code that can be moved into Base
+Audit SCSS Variables
+
+Localization
+Move over address localization from IFAW project
+Set up optional localization for Common Form Fields, matching Stripe's supported languages
+Danish (da)
+Dutch (nl)
+English (en)
+Finnish (fi)
+French (fr)
+German (de)
+Italian (it)
+Japanese (ja)
+Norwegian Bokmål (nb)
+Polish (pl)
+Portuguese (pt)
+Simplified Chinese (zh)
+Spanish (es)
+Swedish (sv)
+
+ENGrid Layouts
+Create a way to match the Template pattern (wrapper + page inner) used by EN
+Create additional generic page types
+
+
+CSS
+Audit SCSS files to migrate code from CSS to SCSS
+
+JS
+Break down JS into more components
+
+Webpack
+Look into DoIUse https://www.npmjs.com/package/doiuse
+Look into Stylelint
+Look into Prettier
+Look into https://medium.com/eightshapes-llc/cropping-away-negative-impacts-of-line-height-84d744e016ce
