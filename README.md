@@ -1,6 +1,6 @@
 
 # 4Site's ENGrid Page Template Framework
-
+<img align="right" width="250" height="250" src="https://engagingnetworks.academy/wp-content/uploads/2019/09/D-D-Partner.png"> . 
 This project started as a labor of love for our clients and ourselves. Originating in 2017 as a partnership between Engaging Networks and 4Site studios to create the first freely available page templates for their platform; we created [Engaging Networks Page Template](https://github.com/4site-interactive-studios/Engaging-Networks-Page-Template). That project was incredibly successful, and those templates are still used today for all new Engaging Networks clients. They're easy for junior developers and code dabblers to ease into, and they include Internet Explorer 11 support.
 
 Since then, we've continued to enhance and refine our work, culminating in a complete re-write in late 2019 that was named "ENGrid". Making use of today's latest web technologies Webpack, Typescript, SCSS, CSS Grids, we've created a new framework for marketers, fundraisers, and everyone in between that will ensure your pages stand out and deliver the performance you're looking for.
