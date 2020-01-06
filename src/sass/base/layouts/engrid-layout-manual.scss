@@ -121,6 +121,34 @@
   align-items: center;
 }
 
+#en__pagebuilder {
+  .i1-hide .en__field:nth-of-type(1),
+  .i2-hide .en__field:nth-of-type(2),
+  .i3-hide .en__field:nth-of-type(3),
+  .i4-hide .en__field:nth-of-type(4),
+  .i5-hide .en__field:nth-of-type(5),
+  .i6-hide .en__field:nth-of-type(6),
+  .i7-hide .en__field:nth-of-type(7),
+  .i8-hide .en__field:nth-of-type(8),
+  .i9-hide .en__field:nth-of-type(9) {
+    background-color: #ff00001a !important;
+  }
+}
+
+body:not(#en__pagebuilder){
+  .i1-hide .en__field:nth-of-type(1),
+  .i2-hide .en__field:nth-of-type(2),
+  .i3-hide .en__field:nth-of-type(3),
+  .i4-hide .en__field:nth-of-type(4),
+  .i5-hide .en__field:nth-of-type(5),
+  .i6-hide .en__field:nth-of-type(6),
+  .i7-hide .en__field:nth-of-type(7),
+  .i8-hide .en__field:nth-of-type(8),
+  .i9-hide .en__field:nth-of-type(9) {
+    display: none;
+  }
+}
+
 /* Force input visibility */
 /* Still needs JS to auto select last radio on input */
 /* prettier-ignore */
