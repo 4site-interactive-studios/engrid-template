@@ -4,7 +4,7 @@ import DonationAmount from "./events/donation-amount";
 import DonationFrequency from "./events/donation-frequency";
 import EnForm from "./events/en-form";
 import LiveVariables from "./utils/live-variables";
-import ProcessingFees from "./utils/processing-fees";
+import ProcessingFees from "./events/processing-fees";
 import Modal from "./utils/modal";
 
 export const amount = new DonationAmount(
@@ -14,9 +14,16 @@ export const amount = new DonationAmount(
 export const frequency = new DonationFrequency("transaction.recurrpay");
 export const form = new EnForm();
 
-export const run = () => {
+export const run = (opts: Object) => {
+  const options = {
+    ...{
+      backgroundImage: "auto",
+      submitLabel: "Donate"
+    },
+    ...opts
+  };
   // The entire App
-  app.setBackgroundImages();
+  app.setBackgroundImages(options.backgroundImage);
 
   app.inputPlaceholder();
   app.watchInmemField();
@@ -54,10 +61,7 @@ export const run = () => {
   };
 
   // Live Variables
-  new LiveVariables();
-
-  // Processing Fees
-  new ProcessingFees();
+  new LiveVariables(options.submitLabel);
 
   // Modal
   const modal = new Modal();
@@ -67,3 +71,6 @@ export const run = () => {
   amount.load();
   frequency.load();
 };
+
+// Last thing ever
+export const fees = new ProcessingFees();

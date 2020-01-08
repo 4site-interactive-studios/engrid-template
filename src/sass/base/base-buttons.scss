@@ -25,6 +25,7 @@ button {
   background-color: $client-submit-button-background-color;
   border-color: $client-submit-button-background-color;
   color: $client-submit-button-font-color;
+  border-radius: $client-button-border-radius;
   display: block;
   font-size: calc(0.05552em * 24);
   font-weight: 900;
