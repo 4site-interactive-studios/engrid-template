@@ -1,10 +1,12 @@
-import { run } from "./ts/app";
+import { run } from "../../ts/app";
 import "./sass/main.scss";
 
+const options = {};
+
 if (document.readyState !== "loading") {
-  run();
+  run(options);
 } else {
   document.addEventListener("DOMContentLoaded", function() {
-    run();
+    run(options);
   });
 }

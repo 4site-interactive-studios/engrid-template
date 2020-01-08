@@ -1,7 +1,7 @@
-@import "../../../addons/layouts/engrid-layout-centerleft1col";
-@import "../../../base/layouts/engrid-layout-centercenter1col";
-@import "../../../addons/layouts/engrid-layout-centercenter1col-wide";
-@import "../../../addons/layouts/engrid-layout-centerright1col";
+@import "../../../../sass/addons/layouts/engrid-layout-centerleft1col";
+@import "../../../../sass/base/layouts/engrid-layout-centercenter1col";
+@import "../../../../sass/addons/layouts/engrid-layout-centercenter1col-wide";
+@import "../../../../sass/addons/layouts/engrid-layout-centerright1col";
 
 /*
 * ####################################################################################################################
@@ -140,11 +140,6 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col,
 body:not(#en__pagebuilder) #engrid.layout-centercenter1col,
 body:not(#en__pagebuilder) #engrid.layout-centercenter1col-wide,
 body:not(#en__pagebuilder) #engrid.layout-centerright1col {
-  // Specified on child dom elements so that if there are none, then the parent div collapses its vertical height.
-  .content-preFooter > div {
-    min-height: 710px;
-  }
-
   /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
   .page-backgroundImage::before {
     content: "";
@@ -258,16 +253,6 @@ body#en__pagebuilder #engrid.layout-centerright1col {
   #engrid.layout-centerright1col {
     .content-preFooter {
       background-size: cover;
-    }
-  }
-
-  body:not(#en__pagebuilder) #engrid.layout-centerleft1col,
-  body:not(#en__pagebuilder) #engrid.layout-centercenter1col,
-  body:not(#en__pagebuilder) #engrid.layout-centercenter1col-wide,
-  body:not(#en__pagebuilder) #engrid.layout-centerright1col {
-    // Specified on child dom elements so that if there are none, then the parent div collapses its vertical height.
-    .content-preFooter > div {
-      min-height: 1010px;
     }
   }
 }
