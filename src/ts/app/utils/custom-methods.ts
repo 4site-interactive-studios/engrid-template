@@ -100,7 +100,8 @@ export const setBackgroundImages = (bg: string | Array<String>) => {
     );
   };
 
-  if (bg == "auto") {
+  // If we find a image on the page, we don't care about the hardcoded options
+  if (pageBackgroundImg) {
     //@TODO consider moving JS into page template as it's critical to initial render
     //Measure page layout to see if it's a short or tall page before applying the background image
     if (contentFooter && isInViewport(contentFooter)) {
@@ -122,11 +123,9 @@ export const setBackgroundImages = (bg: string | Array<String>) => {
       pageBackgroundImgSrc =
         "https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/IMG-3019_Greenpeace_Victor_Moriyama-BACKGROUND.jpg?v=1572910092000";
     }
-  } else {
+  } else if (Array.isArray(bg)) {
     pageBackgroundImgSrc = bg[Math.floor(Math.random() * bg.length)] as string;
-    if (pageBackgroundImg) {
-      pageBackgroundImg.style.display = "none";
-    } else if (pageBackgroundLegacyImg) {
+    if (pageBackgroundLegacyImg) {
       pageBackgroundLegacyImg.style.display = "none";
     }
   }

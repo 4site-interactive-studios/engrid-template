@@ -25,6 +25,8 @@
   }
   .page-backgroundImage {
     background-attachment: fixed;
+    height: auto !important;
+    clip-path: none !important;
     &::before {
       background-color: rgba(0, 0, 0, 0.5);
       position: fixed;
@@ -93,29 +95,29 @@ h1 {
 
 h2 {
   color: $client-black;
-  font-family: OxfamHeadline;
-  font-size: calc(0.05552em * 24);
+  font-family: "Oxfam TSTAR PRO", Arial, Helvetica, sans-serif;
+  font-size: 32px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  line-height: 36px;
   letter-spacing: normal;
 }
 
 h3 {
   color: $client-black;
-  font-family: OxfamHeadline;
-  font-size: calc(0.05552em * 16);
+  font-family: "Oxfam TSTAR PRO", Arial, Helvetica, sans-serif;
+  font-size: 32px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  line-height: 36px;
   letter-spacing: normal;
 }
 
 label.en__field__label {
   font-family: "Oxfam TSTAR PRO", Arial, Helvetica, sans-serif;
-  font-size: calc(0.05552em * 12);
+  font-size: 14px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -273,6 +275,7 @@ label.en__field__label {
   text-transform: none;
   letter-spacing: 0.4px;
   display: inline-block;
+  line-height: 1.4;
   .highlight {
     font-weight: 700;
     margin-top: -0.5rem;
