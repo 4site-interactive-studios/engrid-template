@@ -897,7 +897,7 @@ const getCardType = (cc_partial: string) => {
     case "6":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-discover");
-      return "Diners";
+      return "Discover";
     case "7":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
