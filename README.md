@@ -18,8 +18,9 @@ Since then, we've continued to enhance and refine our work, culminating in a com
   - Polaris Project
   - Rainforest Action Network
   - Save Tibet via Schultz and Williams
-- Github Repo: https://github.com/4site-interactive-studios/engrid/
-- Documentation: https://tinyurl.com/engriddocumentation
+- EN Grid Github Repo: https://github.com/4site-interactive-studios/engrid/
+- EN Grid Documentation: https://tinyurl.com/engriddocumentation
+- Community Run EN Slack Channel: [https://join.slack.com/t/endevelopers/](https://join.slack.com/t/endevelopers/shared_invite/enQtNTgyMDU5NDEzOTQxLWM1YjkwYmM2NjcxODdhNjI4MmRhMjI1ZTJlNzZlYTM5MmI4OTg3NTlhZTljMDMyMjczZmYyNTBjZmM4ZDY4MTA)
 
 ## Helpful Links
 - EN Supportal: https://engagingnetworks.support/
