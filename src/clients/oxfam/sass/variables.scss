@@ -26,18 +26,18 @@ $client-input-border-color: $client-black;
 $client-input-background-color: transparent;
 
 $client-button-background-color: $client-black;
-$client-button-background-color-hover: $client-orange;
+$client-button-background-color-hover: #f05523;
 $client-button-background-color-active: $client-orange;
 $client-button-background-color-disabled: #949494;
 $client-button-border-color: $client-black;
 $client-button-border-color-active: $client-orange;
-$client-button-border-color-hover: $client-orange;
+$client-button-border-color-hover: #f05523;
 $client-button-border-radius: 0px;
 $client-button-font-color: $client-white;
 $client-button-font-color-active: $client-white;
 
 $client-submit-button-background-color: $client-orange;
-$client-submit-button-background-color-hover: $client-orange;
+$client-submit-button-background-color-hover: #f05523;
 $client-submit-button-border-color: $client-orange;
 $client-submit-button-font-color: $client-white;
 
@@ -45,9 +45,9 @@ $client-checkmark-background-color: $client-orange;
 $client-checkmark-border-color: $client-orange;
 $client-checkmark-font-color: $client-white;
 
-$client-error-red: #e74b3c;
+$client-error-red: #f12222;
 $client-error-red-grayscale: #949494;
-$client-error-red-faded: #fef6f5;
+$client-error-red-faded: #ffeae9;
 $client-error-page-group-background: #f4ddda;
 
 $client-highlight-background-color: #f9f003;
