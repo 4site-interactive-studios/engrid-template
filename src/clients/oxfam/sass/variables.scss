@@ -1,0 +1,54 @@
+$slicer-breakpoints: 0 400px 600px 1024px 1200px;
+
+$client-white: #ffffff;
+$client-black: #3b3b3b;
+$client-gray: #8a8a8a;
+$client-light-gray: #cacaca;
+$client-orange: #f16e22;
+
+$background-color: $client-white;
+$background-image-background-color: #333333;
+
+/* @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand
+ * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
+ */
+
+$client-body-background-color: $client-white; //@TODO Not yet used anywhere
+$client-body-border-radius: 0px;
+$body-padding-sm: 0.8652rem; //@TODO Revisit
+$body-padding: calc(0.8652rem * 0.75); //@TODO Revisit
+$body-padding-lg: calc(0.8652rem * 2.5); //@TODO Revisit
+$body-padding-xlg: calc(0.8652rem * 5); //@TODO Revisit
+
+$client-input-border-radius: 5px;
+$client-input-border-width: 2px;
+$client-input-border-color: $client-black;
+$client-input-background-color: transparent;
+
+$client-button-background-color: $client-black;
+$client-button-background-color-hover: $client-orange;
+$client-button-background-color-active: $client-orange;
+$client-button-background-color-disabled: #949494;
+$client-button-border-color: $client-black;
+$client-button-border-color-active: $client-orange;
+$client-button-border-color-hover: $client-orange;
+$client-button-border-radius: 0px;
+$client-button-font-color: $client-white;
+$client-button-font-color-active: $client-white;
+
+$client-submit-button-background-color: $client-orange;
+$client-submit-button-background-color-hover: $client-orange;
+$client-submit-button-border-color: $client-orange;
+$client-submit-button-font-color: $client-white;
+
+$client-checkmark-background-color: $client-orange;
+$client-checkmark-border-color: $client-orange;
+$client-checkmark-font-color: $client-white;
+
+$client-error-red: #e74b3c;
+$client-error-red-grayscale: #949494;
+$client-error-red-faded: #fef6f5;
+$client-error-page-group-background: #f4ddda;
+
+$client-highlight-background-color: #f9f003;
+$client-highlight-font-color: #343432;

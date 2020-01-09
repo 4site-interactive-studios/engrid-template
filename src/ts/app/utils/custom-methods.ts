@@ -64,7 +64,9 @@ export const enInput = (() => {
   };
 })();
 
-export const setBackgroundImages = () => {
+export const setBackgroundImages = (bg: string | Array<String>) => {
+  console.log("Backgroud", bg);
+
   // Find Inline Background Image, hide it, and set it as the background image.
   const pageBackground = document.querySelector(
     ".page-backgroundImage"
@@ -98,26 +100,35 @@ export const setBackgroundImages = () => {
     );
   };
 
-  //@TODO consider moving JS into page template as it's critical to initial render
-  //Measure page layout to see if it's a short or tall page before applying the background image
-  if (contentFooter && isInViewport(contentFooter)) {
-    body.classList.add("footer-above-fold");
-  } else {
-    body.classList.add("footer-below-fold");
-  }
+  if (bg == "auto") {
+    //@TODO consider moving JS into page template as it's critical to initial render
+    //Measure page layout to see if it's a short or tall page before applying the background image
+    if (contentFooter && isInViewport(contentFooter)) {
+      body.classList.add("footer-above-fold");
+    } else {
+      body.classList.add("footer-below-fold");
+    }
 
-  // Find the background image
-  if (pageBackgroundImg) {
-    pageBackgroundImgSrc = pageBackgroundImg.src;
-    pageBackgroundImg.style.display = "none";
-  } else if (pageBackgroundLegacyImg) {
-    // Support for legacy pages
-    pageBackgroundImgSrc = pageBackgroundLegacyImg.innerHTML;
-    pageBackgroundLegacyImg.style.display = "none";
+    // Find the background image
+    if (pageBackgroundImg) {
+      pageBackgroundImgSrc = pageBackgroundImg.src;
+      pageBackgroundImg.style.display = "none";
+    } else if (pageBackgroundLegacyImg) {
+      // Support for legacy pages
+      pageBackgroundImgSrc = pageBackgroundLegacyImg.innerHTML;
+      pageBackgroundLegacyImg.style.display = "none";
+    } else {
+      // Fallback Image
+      pageBackgroundImgSrc =
+        "https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/IMG-3019_Greenpeace_Victor_Moriyama-BACKGROUND.jpg?v=1572910092000";
+    }
   } else {
-    // Fallback Image
-    pageBackgroundImgSrc =
-      "https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/IMG-3019_Greenpeace_Victor_Moriyama-BACKGROUND.jpg?v=1572910092000";
+    pageBackgroundImgSrc = bg[Math.floor(Math.random() * bg.length)] as string;
+    if (pageBackgroundImg) {
+      pageBackgroundImg.style.display = "none";
+    } else if (pageBackgroundLegacyImg) {
+      pageBackgroundLegacyImg.style.display = "none";
+    }
   }
 
   // Set the background image
@@ -648,18 +659,25 @@ export const watchGiveBySelectField = () => {
       "enFieldGiveBySelectCurrentValue:",
       enFieldGiveBySelectCurrentValue
     );
-    if (enFieldGiveBySelectCurrentValue && enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card") {
+    if (
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
+    ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-card");
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
-    } else if (enFieldGiveBySelectCurrentValue && enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check") {
+    } else if (
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
+    ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "check";
       enFieldPaymentType.value = "Check";
     } else if (
-      enFieldGiveBySelectCurrentValue && enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-paypal");
@@ -673,18 +691,25 @@ export const watchGiveBySelectField = () => {
     enFieldGiveBySelectCurrentValue = document.querySelector(
       'input[name="transaction.giveBySelect"]:checked'
     ) as HTMLInputElement;
-    if (enFieldGiveBySelectCurrentValue && enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card") {
+    if (
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
+    ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-card");
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
-    } else if (enFieldGiveBySelectCurrentValue && enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check") {
+    } else if (
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
+    ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "check";
       enFieldPaymentType.value = "Check";
     } else if (
-      enFieldGiveBySelectCurrentValue && enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-paypal");
@@ -716,7 +741,7 @@ export const watchLegacyGiveBySelectField = () => {
   let enFieldGiveBySelectCurrentValue = document.querySelector(
     'input[name="supporter.questions.180165"]:checked'
   ) as HTMLInputElement;
-  let paypalOption = new Option('paypal');
+  let paypalOption = new Option("paypal");
   const prefix = "has-give-by-";
   const enGrid_classes = enGrid.className
     .split(" ")
@@ -730,24 +755,30 @@ export const watchLegacyGiveBySelectField = () => {
       "enFieldGiveBySelectCurrentValue:",
       enFieldGiveBySelectCurrentValue
     );
-    if (enFieldGiveBySelectCurrentValue && enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card") {
+    if (
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
+    ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-card");
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
-    } else if (enFieldGiveBySelectCurrentValue && enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check") {
+    } else if (
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
+    ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-check");
-      enFieldPaymentType.value = "Check";     
+      enFieldPaymentType.value = "Check";
       enFieldPaymentType.value = "check";
-
     } else if (
-      enFieldGiveBySelectCurrentValue && enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.add(paypalOption);
-      enFieldPaymentType.value = "Paypal";     
+      enFieldPaymentType.value = "Paypal";
       enFieldPaymentType.value = "paypal";
     }
   };
@@ -757,23 +788,30 @@ export const watchLegacyGiveBySelectField = () => {
     enFieldGiveBySelectCurrentValue = document.querySelector(
       'input[name="supporter.questions.180165"]:checked'
     ) as HTMLInputElement;
-    if (enFieldGiveBySelectCurrentValue && enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card") {
+    if (
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
+    ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-card");
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
-    } else if (enFieldGiveBySelectCurrentValue && enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check") {
+    } else if (
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
+    ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-check");
-      enFieldPaymentType.value = "Check";      
+      enFieldPaymentType.value = "Check";
       enFieldPaymentType.value = "check";
     } else if (
-      enFieldGiveBySelectCurrentValue && enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
       enGrid.className = enGrid_classes.join(" ").trim();
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.add(paypalOption);
-      enFieldPaymentType.value = "Paypal";      
+      enFieldPaymentType.value = "Paypal";
       enFieldPaymentType.value = "paypal";
     }
   }
@@ -807,12 +845,13 @@ let field_expiration_year = field_expiration_parts[1] as HTMLSelectElement;
 
 /* The Donation Other Giving Amount is a "Number" type input field. This restricts valid inputs to integers unless a step value is defined. Be defining a step value of .01 any valid 2 digit decimal can be entered */
 export const SetEnFieldOtherAmountRadioStepValue = () => {
-  const enFieldOtherAmountRadio = document.querySelector(".en__field--donationAmt .en__field__input--other") as HTMLInputElement;
-  if (enFieldOtherAmountRadio){
+  const enFieldOtherAmountRadio = document.querySelector(
+    ".en__field--donationAmt .en__field__input--other"
+  ) as HTMLInputElement;
+  if (enFieldOtherAmountRadio) {
     enFieldOtherAmountRadio.setAttribute("step", ".01");
   }
-}
-
+};
 
 /*
  * Helpers
@@ -835,47 +874,47 @@ const getCardType = (cc_partial: string) => {
     case "0":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "na";
+      return "N/A";
     case "1":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "na";
+      return "N/A";
     case "2":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "na";
+      return "N/A";
     case "3":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-amex");
-      return "AX";
+      return "American Express";
     case "4":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-visa");
-      return "VI";
+      return "Visa";
     case "5":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-mastercard");
-      return "MC";
+      return "Mastercard";
     case "6":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-discover");
-      return "DI";
+      return "Diners";
     case "7":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "na";
+      return "N/A";
     case "8":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "na";
+      return "N/A";
     case "9":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "na";
+      return "N/A";
     default:
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-na");
-      return "na";
+      return "N/A";
   }
 };
 
@@ -883,9 +922,14 @@ const getCardType = (cc_partial: string) => {
  * Handlers
  */
 const handleCCUpdate = () => {
-  let card_type = getCardType(field_credit_card.value);
-  if (card_type && field_payment_type.value != card_type) {
-    field_payment_type.value = card_type;
+  const card_type = getCardType(field_credit_card.value);
+  const payment_text =
+    field_payment_type.options[field_payment_type.selectedIndex].text;
+
+  if (card_type && payment_text != card_type) {
+    field_payment_type.value = Array.from(field_payment_type.options).filter(
+      d => d.text === card_type
+    )[0].value;
   }
 };
 
@@ -1030,12 +1074,12 @@ export const simpleUnsubscribe = () => {
   // console.log("simpleUnsubscribe fired");
 
   // Check if we're on an Unsubscribe / Manage Subscriptions page
-  if (window.location.href.indexOf("/subscriptions") != -1){
+  if (window.location.href.indexOf("/subscriptions") != -1) {
     // console.log("On an subscription management page");
 
     // Check if any form elements on this page have the "forceUncheck" class
     const forceUncheck = document.querySelectorAll(".forceUncheck");
-    if(forceUncheck){
+    if (forceUncheck) {
       // console.log("Found forceUnchecl dom elements", forceUncheck);
 
       // Step through each DOM element with forceUncheck looking for checkboxes
@@ -1043,10 +1087,11 @@ export const simpleUnsubscribe = () => {
         let element = e as HTMLElement;
         // console.log("Checking this formComponent for checkboxes", element);
 
-        // In the forceUncheck form component, find any checboxes 
-        let uncheckCheckbox = element.querySelectorAll("input[type='checkbox']");
-        if(uncheckCheckbox){
-
+        // In the forceUncheck form component, find any checboxes
+        let uncheckCheckbox = element.querySelectorAll(
+          "input[type='checkbox']"
+        );
+        if (uncheckCheckbox) {
           // Step through each Checkbox in the forceUncheck form component
           Array.from(uncheckCheckbox).forEach(f => {
             let checkbox = f as HTMLInputElement;
@@ -1058,4 +1103,26 @@ export const simpleUnsubscribe = () => {
       });
     }
   }
+};
+
+// Watch the Region Field for changes. If there is only one option, hide it.
+const country_select = document.getElementById(
+  "en__field_supporter_country"
+) as HTMLSelectElement;
+const region_select = document.getElementById(
+  "en__field_supporter_region"
+) as HTMLSelectElement;
+if (country_select) {
+  country_select.addEventListener("change", () => {
+    setTimeout(() => {
+      if (
+        region_select.options.length == 1 &&
+        region_select.options[0].value == "other"
+      ) {
+        region_select.classList.add("hide");
+      } else {
+        region_select.classList.remove("hide");
+      }
+    }, 100);
+  });
 }

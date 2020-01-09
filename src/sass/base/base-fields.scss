@@ -169,20 +169,16 @@ textarea {
   height: auto !important;
   margin: 0rem;
   padding: 0.5rem;
-  border: 1px solid $client-input-border-color;
+  border: $client-input-border-width solid $client-input-border-color;
   border-radius: $client-input-border-radius;
   background-color: $client-input-background-color;
-  -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   font-family: inherit;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
   color: $client-black;
-  transition: box-shadow 0.25s, border-color 0.25s ease-in-out,
-    -webkit-box-shadow 0.25s;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
   appearance: none;
 }
 
@@ -223,12 +219,10 @@ input[type="week"]:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border: 1px solid $client-gray;
+  border: $client-input-border-width solid $client-gray;
   background-color: $client-button-font-color;
-  -webkit-box-shadow: 0 0 0.3125rem $client-light-gray;
   box-shadow: 0 0 0.3125rem $client-light-gray;
-  transition: box-shadow 0.25s, border-color 0.25s ease-in-out,
-    -webkit-box-shadow 0.25s;
+  transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
 }
 
 /**
@@ -466,10 +460,6 @@ textarea:focus {
 
 .en__field--withOther .en__field__element--select .en__field__item:first-child {
   margin-right: 0 !important;
-}
-
-.en__field--withOther .en__field__element--select .en__field__item--other {
-  margin-left: 1rem !important;
 }
 
 /* Custom Styles */

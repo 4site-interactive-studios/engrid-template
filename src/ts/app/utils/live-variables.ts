@@ -1,25 +1,34 @@
 import DonationAmount from "../events/donation-amount";
 import DonationFrequency from "../events/donation-frequency";
+import ProcessingFees from "../events/processing-fees";
 
 import { amount } from "../index";
 import { frequency } from "../index";
+import { fees } from "../index";
 import { form } from "../index";
 
 export default class LiveVariables {
   public _amount: DonationAmount;
+  public _fees: ProcessingFees;
   private _frequency: DonationFrequency;
   private multiplier: number = 1 / 12;
 
-  constructor() {
+  constructor(submitLabel: string) {
     this._amount = amount;
     this._frequency = frequency;
-    amount.onAmountChange.subscribe(() => this.changeSubmitButton());
+    this._fees = fees;
+    amount.onAmountChange.subscribe(() => this.changeSubmitButton(submitLabel));
     amount.onAmountChange.subscribe(() => this.changeLiveAmount());
     amount.onAmountChange.subscribe(() => this.changeLiveUpsellAmount());
+    fees.onFeeChange.subscribe(() => this.changeLiveAmount());
+    fees.onFeeChange.subscribe(() => this.changeLiveUpsellAmount());
+    fees.onFeeChange.subscribe(() => this.changeSubmitButton(submitLabel));
     frequency.onFrequencyChange.subscribe(() => this.changeLiveFrequency());
-    frequency.onFrequencyChange.subscribe(() => this.changeSubmitButton());
+    frequency.onFrequencyChange.subscribe(() =>
+      this.changeSubmitButton(submitLabel)
+    );
     form.onSubmit.subscribe(() => this.loadingSubmitButton());
-    form.onError.subscribe(() => this.changeSubmitButton());
+    form.onError.subscribe(() => this.changeSubmitButton(submitLabel));
 
     // Watch the monthly-upsell links
     document.addEventListener("click", (e: Event) => {
@@ -51,16 +60,18 @@ export default class LiveVariables {
     return amount > 0 ? amountRaw.toString() : "";
   }
 
-  public changeSubmitButton() {
+  public changeSubmitButton(submitLabel: string) {
     const submit = document.querySelector(
-      ".en__submit button"
+      ".dynamic-giving-button button"
     ) as HTMLButtonElement;
-    const amount = this.getAmountTxt(this._amount.amount);
+    const amount = this.getAmountTxt(this._amount.amount + this._fees.fee);
 
     if (amount) {
       const frequency = this._frequency.frequency == "single" ? "" : " Monthly";
       const label =
-        amount != "" ? "Donate " + amount + frequency : "Donate Now";
+        amount != ""
+          ? submitLabel + " " + amount + frequency
+          : submitLabel + " Now";
       submit.innerHTML = label;
     }
   }
@@ -79,32 +90,26 @@ export default class LiveVariables {
   }
 
   public changeLiveAmount() {
+    const value = this._amount.amount + this._fees.fee;
     const live_amount = document.querySelectorAll(".live-giving-amount");
-    live_amount.forEach(
-      elem => (elem.innerHTML = this.getAmountTxt(this._amount.amount))
-    );
+    live_amount.forEach(elem => (elem.innerHTML = this.getAmountTxt(value)));
   }
 
   public changeLiveUpsellAmount() {
+    const value = (this._amount.amount + this._fees.fee) * this.multiplier;
     const live_upsell_amount = document.querySelectorAll(
       ".live-giving-upsell-amount"
     );
 
     live_upsell_amount.forEach(
-      elem =>
-        (elem.innerHTML = this.getUpsellAmountTxt(
-          this._amount.amount * this.multiplier
-        ))
+      elem => (elem.innerHTML = this.getUpsellAmountTxt(value))
     );
 
     const live_upsell_amount_raw = document.querySelectorAll(
       ".live-giving-upsell-amount-raw"
     );
     live_upsell_amount_raw.forEach(
-      elem =>
-        (elem.innerHTML = this.getUpsellAmountRaw(
-          this._amount.amount * this.multiplier
-        ))
+      elem => (elem.innerHTML = this.getUpsellAmountRaw(value))
     );
   }
 

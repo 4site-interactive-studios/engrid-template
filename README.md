@@ -1,53 +1,37 @@
-# ENGrid by 4Site Studios
 
-@TODO
+# 4Site's ENGrid Page Template Framework
+<img align="right" width="250" height="250" src="https://engagingnetworks.academy/wp-content/uploads/2019/09/D-D-Partner.png">   
 
-**Documentation**
+This project started as a labor of love for our clients and ourselves. Originating in 2017 as a partnership between Engaging Networks and 4Site Studios to create the first freely available page templates for their platform; we created [Engaging Networks Page Template](https://github.com/4site-interactive-studios/Engaging-Networks-Page-Template). That project was incredibly successful, and those templates are still used today for all new Engaging Networks clients. They're easy for junior developers and code dabblers to ease into, and they include Internet Explorer 11 support.
 
- - Create generic documentation
- - Create feature roadmap
- - Move this TODO list and create a proper Readme
- - Link to example Sandbox pages
+Since then, we've continued to enhance and refine our work, culminating in a complete re-write in late 2019 that was named "ENGrid". Making use of today's latest web technologies Webpack, Typescript, ES6, SCSS, CSS Grids, we've created a new framework for marketers, fundraisers, and everyone in between that will ensure your pages stand out and deliver the performance you're looking for.
 
-**Defaults**
+- Designed and Developed by [4Site Studios](http://4sitestudios.com/en) while working with:
+  - Human Rights Campaign via Lautman Maska Neill & Company
+  - International Fund for Animal Welfare
+  - Mercy for Animals
+  - National Trust for Historic Preservation
+  - National Wildlife Federation
+  - Ocean Conservancy
+  - Organic Consumers
+  - Oxfam Canada
+  - Polaris Project
+  - Rainforest Action Network
+  - Save Tibet via Schultz and Williams
+- Github Repo: https://github.com/4site-interactive-studios/engrid/
+- Documentation: https://tinyurl.com/engriddocumentation
 
- - Audit client ran-branding.scss for code that can be moved into Base
- - Audit SCSS Variables
+## Helpful Links
+- EN Supportal: https://engagingnetworks.support/
+- EN Acadmey: https://engagingnetworks.academy/
+- EN Maintained Example Code Blocks: https://github.com/EngagingNetworks/page-builder-code-blocks
+- EN Maintained Example Page Styles: https://github.com/EngagingNetworks/page-builder-css-styles
 
-**Localization**
+# Interested in a project or have questions?
+We would love to hear from you.
 
- - Move over address localization from IFAW project
- - Set up optional localization for Common Form Fields, matching Stripe's supported languages
- - Danish (da)
- - Dutch (nl)
- - English (en)
- - Finnish (fi)
- - French (fr)
- - German (de)
- - Italian (it)
- - Japanese (ja) 
- - Norwegian Bokmål (nb)
- - Polish (pl)
- - Portuguese (pt)
- - Simplified Chinese (zh)
- - Spanish (es)
- - Swedish (sv)
-
-**ENGrid Layouts**
-
- - Create a way to match the Template pattern (wrapper + page inner)
-   used by EN
-   Create additional generic page types
-
-**CSS**
- - Audit SCSS files to migrate code from CSS to SCSS
-
-**JS**
- - Break down JS into more components
-
-**Webpack**
-
- - Look into DoIUse https://www.npmjs.com/package/doiuse
- - Look into Stylelint
- - Look into Prettier
- - Look into https://medium.com/eightshapes-llc/cropping-away-negative-impacts-of-line-height-84d744e016ce
+Bryan Casler  
+Director of Digital Strategy  
+4Site Interactive Studios  
+Cell: (315) 877-3420  
+Email: bryan@4sitestudios.com
