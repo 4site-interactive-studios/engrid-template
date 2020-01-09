@@ -8,7 +8,8 @@
   padding: 0.25rem 0.5rem;
   color: $client-white;
   font-size: 0.75rem;
-  border-radius: $client-input-border-radius;
+  border-bottom-left-radius: $client-input-border-radius;
+  border-bottom-right-radius: $client-input-border-radius;
   background-color: $client-error-red;
   order: 3;
 }
