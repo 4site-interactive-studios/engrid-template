@@ -25,6 +25,8 @@
   }
   .page-backgroundImage {
     background-attachment: fixed;
+    height: auto !important;
+    clip-path: none !important;
     &::before {
       background-color: rgba(0, 0, 0, 0.5);
       position: fixed;
