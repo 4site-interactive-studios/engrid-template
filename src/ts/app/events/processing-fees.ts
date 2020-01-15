@@ -12,16 +12,24 @@ export default class ProcessingFees {
     'input[name="supporter.processing_fees"]'
   );
 
+  private _subscribe?: () => void;
+
   constructor() {
     // Watch the Radios for Changes
     if (this._field instanceof HTMLInputElement) {
       this._field.addEventListener("change", (e: Event) => {
+        if (
+          this._field instanceof HTMLInputElement &&
+          this._field.checked &&
+          !this._subscribe
+        ) {
+          this._subscribe = form.onSubmit.subscribe(() => this.addFees());
+        }
         this._onFeeChange.dispatch(this.fee);
       });
     }
 
     // this._amount = amount;
-    form.onSubmit.subscribe(() => this.addFees());
   }
   public get onFeeChange() {
     return this._onFeeChange.asEvent();

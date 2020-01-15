@@ -16,9 +16,11 @@ export default class EnForm {
   }
 
   public submitForm() {
-    const enForm = document.querySelector("form");
+    const enForm = document.querySelector(
+      "form .en__submit button"
+    ) as HTMLButtonElement;
     if (enForm) {
-      enForm.submit();
+      enForm.click();
       console.log("submitForm");
     }
   }
