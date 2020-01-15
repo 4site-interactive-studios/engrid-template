@@ -24,10 +24,10 @@ Since then, we've continued to enhance and refine our work, culminating in a com
 
 ## Helpful Links
 - [ENGrid Installation Instructions](https://github.com/4site-interactive-studios/engrid/wiki/ENGrid-Installation-Instructions)
-- [EN Supportal](https://engagingnetworks.support/)
-- [EN Acadmey](https://engagingnetworks.academy/)
-- [EN Maintained Example Code Blocks](https://github.com/EngagingNetworks/page-builder-code-blocks)
-- [EN Maintained Example Page Styles](https://github.com/EngagingNetworks/page-builder-css-styles)
+- [Engaging Networks Supportal](https://engagingnetworks.support/)
+- [Engaging Networks Acadmey](https://engagingnetworks.academy/)
+- [Engaging Networks Maintained Example Code Blocks](https://github.com/EngagingNetworks/page-builder-code-blocks)
+- [Engaging Networks Maintained Example Page Styles](https://github.com/EngagingNetworks/page-builder-css-styles)
 
 # Interested in a project or have questions?
 We would love to hear from you.
