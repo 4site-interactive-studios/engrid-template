@@ -18,12 +18,14 @@ Since then, we've continued to enhance and refine our work, culminating in a com
   - Polaris Project
   - Rainforest Action Network
   - Save Tibet via Schultz and Williams
-- EN Grid Github Repo: https://github.com/4site-interactive-studios/engrid/
-- EN Grid Documentation: https://tinyurl.com/engriddocumentation
-- Community Run EN Slack Channel: [https://join.slack.com/t/endevelopers/](https://join.slack.com/t/endevelopers/shared_invite/enQtNTgyMDU5NDEzOTQxLWM1YjkwYmM2NjcxODdhNjI4MmRhMjI1ZTJlNzZlYTM5MmI4OTg3NTlhZTljMDMyMjczZmYyNTBjZmM4ZDY4MTA)
 
-## Helpful Links
+## Helpful ENGrid Resources
+- [ENGrid Github Repository](https://github.com/4site-interactive-studios/engrid/)
+- [ENGrid Documentation](https://tinyurl.com/engriddocumentation)
 - [ENGrid Installation Instructions](https://github.com/4site-interactive-studios/engrid/wiki/ENGrid-Installation-Instructions)
+- [Community Run EN Slack Channel](https://join.slack.com/t/endevelopers/shared_invite/enQtNTgyMDU5NDEzOTQxLWM1YjkwYmM2NjcxODdhNjI4MmRhMjI1ZTJlNzZlYTM5MmI4OTg3NTlhZTljMDMyMjczZmYyNTBjZmM4ZDY4MTA)
+
+## Helpful Engaging Networks Resources
 - [Engaging Networks Supportal](https://engagingnetworks.support/)
 - [Engaging Networks Acadmey](https://engagingnetworks.academy/)
 - [Engaging Networks Maintained Example Code Blocks](https://github.com/EngagingNetworks/page-builder-code-blocks)
