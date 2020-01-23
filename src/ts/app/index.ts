@@ -14,6 +14,9 @@ export const amount = new DonationAmount(
 export const frequency = new DonationFrequency("transaction.recurrpay");
 export const form = new EnForm();
 
+// Processing Fees Event
+export const fees = new ProcessingFees();
+
 export const run = (opts: Object) => {
   const options = {
     ...{
@@ -71,6 +74,3 @@ export const run = (opts: Object) => {
   amount.load();
   frequency.load();
 };
-
-// Last thing ever
-export const fees = new ProcessingFees();

@@ -43,6 +43,6 @@
   "dependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "sanitize.css": "^11.0.0",
-    "strongly-typed-events": "^1.6.3"
+    "strongly-typed-events": "^1.6.4"
   }
 }
