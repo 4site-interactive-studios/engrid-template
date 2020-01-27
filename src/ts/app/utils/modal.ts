@@ -44,6 +44,7 @@ export default class Modal {
           evt.toElement === null &&
           evt.relatedTarget === null &&
           !this.overlay.classList.contains("is-hidden") &&
+          !this.overlay.classList.contains("is-submitting") &&
           this.overlay.classList.contains("upsellModal")
         ) {
           // An intent to exit has happend

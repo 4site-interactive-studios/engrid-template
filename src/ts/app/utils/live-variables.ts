@@ -37,6 +37,7 @@ export default class LiveVariables {
         if (element.classList.contains("monthly-upsell")) {
           this.upsold(e);
         } else if (element.classList.contains("form-submit")) {
+          e.preventDefault();
           form.submitForm();
         }
       }
@@ -161,6 +162,7 @@ export default class LiveVariables {
 
     const target = e.target as HTMLLinkElement;
     if (target && target.classList.contains("form-submit")) {
+      e.preventDefault();
       // Form submit
       form.submitForm();
     }
