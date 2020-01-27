@@ -69,7 +69,7 @@ export default class ProcessingFees {
   // Add Fees to Amount
   private addFees() {
     if (form.submit) {
-      this._amount.setAmount(this._amount.amount + this.fee);
+      this._amount.setAmount(this._amount.amount + this.fee, false);
     }
   }
   // Remove Fees From Amount

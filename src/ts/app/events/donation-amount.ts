@@ -5,6 +5,7 @@ export default class DonationAmount {
   private _amount: number = 0;
   private _radios: string = "";
   private _other: string = "";
+  private _dispatch: boolean = true;
 
   constructor(radios: string, other: string) {
     this._other = other;
@@ -25,7 +26,7 @@ export default class DonationAmount {
   // Every time we set an amount, trigger the onAmountChange event
   set amount(value: number) {
     this._amount = value || 0;
-    this._onAmountChange.dispatch(this._amount);
+    if (this._dispatch) this._onAmountChange.dispatch(this._amount);
   }
 
   public get onAmountChange() {
@@ -52,7 +53,9 @@ export default class DonationAmount {
     }
   }
   // Force a new amount
-  public setAmount(amount: number) {
+  public setAmount(amount: number, dispatch: boolean = true) {
+    // Set dispatch to be checked by the SET method
+    this._dispatch = dispatch;
     // Search for the current amount on radio boxes
     let found = Array.from(
       document.querySelectorAll('input[name="' + this._radios + '"]')
@@ -74,6 +77,8 @@ export default class DonationAmount {
     }
     // Set the new amount and trigger all live variables
     this.amount = amount;
+    // Revert dispatch to default value (true)
+    this._dispatch = true;
   }
   // Clear Other Field
   public clearOther() {

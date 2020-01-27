@@ -20,6 +20,9 @@ export default class EnForm {
       "form .en__submit button"
     ) as HTMLButtonElement;
     if (enForm) {
+      // Add submitting class to modal
+      const enModal = document.getElementById("enModal");
+      if (enModal) enModal.classList.add("is-submitting");
       enForm.click();
       console.log("submitForm");
     }
