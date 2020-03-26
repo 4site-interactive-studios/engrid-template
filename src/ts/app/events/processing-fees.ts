@@ -15,6 +15,10 @@ export default class ProcessingFees {
   private _subscribe?: () => void;
 
   constructor() {
+    // Run only if it is a Donation Page with a Donation Amount field
+    if (document.getElementsByName("transaction.donationAmt").length) {
+      return;
+    }
     // Watch the Radios for Changes
     if (this._field instanceof HTMLInputElement) {
       this._field.addEventListener("change", (e: Event) => {

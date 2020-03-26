@@ -54,6 +54,10 @@ export default class DonationAmount {
   }
   // Force a new amount
   public setAmount(amount: number, dispatch: boolean = true) {
+    // Run only if it is a Donation Page with a Donation Amount field
+    if (document.getElementsByName("transaction.donationAmt").length) {
+      return;
+    }
     // Set dispatch to be checked by the SET method
     this._dispatch = dispatch;
     // Search for the current amount on radio boxes
