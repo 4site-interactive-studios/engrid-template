@@ -123,10 +123,6 @@ export const setBackgroundImages = (bg: string | Array<String>) => {
       // Fallback Image
       if (Array.isArray(bg)) {
         pageBackgroundImgSrc = bg[Math.floor(Math.random() * bg.length)] as string;
-        if (pageBackgroundLegacyImg) {
-          // @TODO the below is throwing the error "Property 'style' does not exist on type 'never'.ts(2339)"
-          // pageBackgroundLegacyImg.style.display = "none";
-        }
       }
     }
 
