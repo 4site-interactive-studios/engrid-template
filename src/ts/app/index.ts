@@ -74,7 +74,16 @@ export const run = (opts: Object) => {
     }
   };
   if (inIframe()) {
-    window.onload = () => sendIframeHeight();
+    window.onload = () => {
+      sendIframeHeight();
+      // Scroll to top of iFrame
+      window.parent.postMessage(
+        {
+          scroll: document.getElementsByName("transaction.donationAmt").length,
+        },
+        "*"
+      );
+    };
     window.onresize = () => sendIframeHeight();
     // Change the layout class to embedded
     const gridElement = document.getElementById("engrid") as HTMLElement;
@@ -83,6 +92,7 @@ export const run = (opts: Object) => {
     gridElement.classList.remove("layout-centercenter1col");
     gridElement.classList.remove("layout-centerright1col");
     gridElement.classList.remove("layout-centercenter1col-wide");
+
   }
   // Iframe Code End
 
