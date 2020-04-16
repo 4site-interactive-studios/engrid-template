@@ -369,7 +369,7 @@ export const debugBar = () => {
 
     const layoutToggle = () => {
       if (enGrid) {
-        if (enGrid.classList.contains("layout-embedded")) {
+        if (enGrid.classList.contains("layout-ie11override")) {
           removeClassesByPrefix(enGrid, "layout-");
           enGrid.classList.add("layout-centercenter1col");
         } else if (enGrid.classList.contains("layout-centercenter1col")) {
@@ -384,6 +384,9 @@ export const debugBar = () => {
         } else if (enGrid.classList.contains("layout-centerleft1col")) {
           removeClassesByPrefix(enGrid, "layout-");
           enGrid.classList.add("layout-embedded");
+        } else if (enGrid.classList.contains("layout-embedded")) {
+          removeClassesByPrefix(enGrid, "layout-");
+          enGrid.classList.add("layout-ie11override");
         } else {
           console.log(
             "While trying to switch layouts, something unexpected happen."

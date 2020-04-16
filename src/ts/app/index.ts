@@ -78,6 +78,7 @@ export const run = (opts: Object) => {
     window.onresize = () => sendIframeHeight();
     // Change the layout class to embedded
     const gridElement = document.getElementById("engrid") as HTMLElement;
+    // @TODO We need to write a better way of stripping layout classes 
     gridElement.classList.add("layout-embedded");
     gridElement.classList.remove("layout-centerleft1col");
     gridElement.classList.remove("layout-centercenter1col");
