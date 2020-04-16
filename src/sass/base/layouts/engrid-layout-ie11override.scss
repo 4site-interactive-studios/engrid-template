@@ -1,0 +1,48 @@
+/*
+* ####################################################################################################################
+* # ENGRID CLIENT LAYOUT
+* # Force a Layout override for IE11 that stacks everything in a column using Flexbox
+* # @TODO Can this be moved to line 200 of engrid-layout.scss and not have to be its own file?
+* ####################################################################################################################
+*/
+
+/*
+* ##########################################################
+* # MOBILE FIRST BREAKPOINT
+* ##########################################################
+*/
+
+#engrid.layout-ie11override {
+  .en__component--advrow,
+  .en__component--advrow .pseudo-subgrid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+body:not(#en__pagebuilder) #engrid.layout-ie11override {
+  form > .en__component--advrow{
+    .body-headerOutside,
+    .body-header,
+    .body-banner,
+    .body-bannerOverlay,
+    .body-top,
+    .body-side,
+    .body-main,
+    .body-bottom,
+    .body-footer,
+    .body-footerOutside,
+    .page-backgroundImage,
+    .page-backgroundImageOverlay
+    .page-customCode{
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      max-width: 750px !important;
+    }
+  }
+  
+  .page-backgroundImage {
+    display: none !important;
+  }
+}

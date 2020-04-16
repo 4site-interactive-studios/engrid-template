@@ -2,7 +2,6 @@
 @import "../../../../sass/base/layouts/engrid-layout-centercenter1col";
 @import "../../../../sass/addons/layouts/engrid-layout-centercenter1col-wide";
 @import "../../../../sass/addons/layouts/engrid-layout-centerright1col";
-@import "../../../../sass/base/layouts/engrid-layout-embedded";
 
 /*
 * ####################################################################################################################
@@ -256,4 +255,13 @@ body#en__pagebuilder #engrid.layout-centerright1col {
       background-size: cover;
     }
   }
+}
+
+/*
+* ##########################################################
+* # ENGRID - IE 11 Override Background Styling
+* ##########################################################
+*/
+body:not(#en__pagebuilder) #engrid.layout-ie11override:not(.layout-embedded){
+  background-color: #0a8848;
 }
