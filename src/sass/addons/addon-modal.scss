@@ -35,6 +35,7 @@
 
   &.is-hidden {
     top: -100vh;
+    transition: none; /* When the modal gains the "is-hidden" class it will dissapear instantly */
   }
 
   .button-close {
