@@ -74,12 +74,25 @@ export const run = (opts: Object) => {
     }
   };
   if (inIframe()) {
+
+    const shouldScroll = () => {
+      // If you find a error, scroll
+      if (document.querySelector('.en__errorHeader')) {
+        return true;
+      }
+      // If you find a donation amount field, don't scroll
+      if (document.getElementsByName("transaction.donationAmt").length) {
+        return false;
+      }
+      // Otherwise scroll
+      return true;
+    }
     window.onload = () => {
       sendIframeHeight();
       // Scroll to top of iFrame
       window.parent.postMessage(
         {
-          scroll: document.getElementsByName("transaction.donationAmt").length,
+          scroll: shouldScroll(),
         },
         "*"
       );
