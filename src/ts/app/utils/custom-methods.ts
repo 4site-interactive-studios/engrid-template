@@ -212,6 +212,14 @@ export const bindEvents = (e: Element) => {
   }
 };
 
+export const removeClassesByPrefix = (el: HTMLElement, prefix: string) => {
+  for (var i = el.classList.length - 1; i >= 0; i--) {
+    if (el.classList[i].startsWith(prefix)) {
+      el.classList.remove(el.classList[i]);
+    }
+  }
+};
+
 export const debugBar = () => {
   if (
     window.location.search.indexOf("mode=DEMO") > -1 ||
@@ -396,14 +404,6 @@ export const debugBar = () => {
       const debugBar = document.getElementById("debug-bar");
       if (debugBar) {
         debugBar.style.display = "none";
-      }
-    };
-
-    const removeClassesByPrefix = (el: HTMLElement, prefix: string) => {
-      for (var i = el.classList.length - 1; i >= 0; i--) {
-        if (el.classList[i].startsWith(prefix)) {
-          el.classList.remove(el.classList[i]);
-        }
       }
     };
   }
@@ -648,9 +648,6 @@ export const watchGiveBySelectField = () => {
     'input[name="transaction.giveBySelect"]:checked'
   ) as HTMLInputElement;
   const prefix = "has-give-by-";
-  const enGrid_classes = enGrid.className
-    .split(" ")
-    .filter(c => !c.startsWith(prefix));
 
   const handleEnFieldGiveBySelect = (e: Event) => {
     enFieldGiveBySelectCurrentValue = document.querySelector(
@@ -664,7 +661,7 @@ export const watchGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-card");
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
@@ -672,7 +669,7 @@ export const watchGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "check";
       enFieldPaymentType.value = "Check";
@@ -680,7 +677,7 @@ export const watchGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.value = "paypal";
       enFieldPaymentType.value = "Paypal";
@@ -696,7 +693,7 @@ export const watchGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-card");
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
@@ -704,7 +701,7 @@ export const watchGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "check";
       enFieldPaymentType.value = "Check";
@@ -712,7 +709,7 @@ export const watchGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.value = "paypal";
       enFieldPaymentType.value = "Paypal";
@@ -744,9 +741,6 @@ export const watchLegacyGiveBySelectField = () => {
   ) as HTMLInputElement;
   let paypalOption = new Option("paypal");
   const prefix = "has-give-by-";
-  const enGrid_classes = enGrid.className
-    .split(" ")
-    .filter(c => !c.startsWith(prefix));
 
   const handleEnFieldGiveBySelect = (e: Event) => {
     enFieldGiveBySelectCurrentValue = document.querySelector(
@@ -760,7 +754,7 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-card");
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
@@ -768,7 +762,7 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "Check";
       enFieldPaymentType.value = "check";
@@ -776,7 +770,7 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.add(paypalOption);
       enFieldPaymentType.value = "Paypal";
@@ -793,7 +787,7 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-card");
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
@@ -801,7 +795,7 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "Check";
       enFieldPaymentType.value = "check";
@@ -809,7 +803,7 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.add(paypalOption);
       enFieldPaymentType.value = "Paypal";

@@ -83,6 +83,11 @@ export const run = (opts: Object) => {
         },
         "*"
       );
+      document.addEventListener("click", (e: Event) => {
+        setTimeout(() => {
+          sendIframeHeight();
+        }, 100);
+      });
     };
     window.onresize = () => sendIframeHeight();
     // Change the layout class to embedded
