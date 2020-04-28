@@ -467,7 +467,7 @@ export const inputPlaceholder = () => {
 
     if (enFieldDonationAmt) {
       enFieldDonationAmt.placeholder = "Other";
-      enFieldDonationAmt.setAttribute("type", "number");
+      enFieldDonationAmt.setAttribute("inputmode", "numeric");
     }
     // if (enFieldFirstName) {
     //   enFieldFirstName.placeholder = "First name";
