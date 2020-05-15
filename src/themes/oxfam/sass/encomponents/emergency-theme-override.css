@@ -1,0 +1,73 @@
+/* Overrides the base styles to create an "Emergency Theme" */
+
+.en__submit button {
+    background-color: #FF1D34 !important;
+    border-color: #FF1D34 !important;
+}
+
+.en__submit button:focus,.en__submit button:hover,
+button.cta.primary:focus,button.cta.primary:hover {
+    background-color: #b4243f !important;
+}
+
+button:focus,button:hover {
+    background-color: #b4243f !important;
+}
+
+.en__contactDetails__select:checked+.en__contactDetails__rows:after,
+.en__field__input--checkbox:checked+.en__field__label:after{
+    content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='16' viewBox='0 0 21 16'><path fill='%23FF1D34' fill-rule='nonzero' d='M18.76.16L6.68 12.113l-4.44-4.392a.555.555 0 0 0-.779 0L.161 9.006a.541.541 0 0 0 0 .771L6.29 15.84a.555.555 0 0 0 .78 0l13.77-13.624a.541.541 0 0 0 0-.771L19.539.16a.555.555 0 0 0-.779 0z'/></svg>") !important;
+}
+
+.en__field__input--radio:checked+.en__field__label:before {
+    background-color: #FF1D34 !important;
+}
+
+.en__contactDetails__select:checked+.en__contactDetails__rows:before,
+.en__field__input--checkbox:checked+.en__field__label:before {
+    color: #FF1D34 !important;
+}
+
+.en__contactDetails__select:checked+.en__contactDetails__rows:after,
+.en__field__input--checkbox:checked+.en__field__label:after {
+    color: #FF1D34 !important;
+}
+
+.en__field--donationAmt.en__field--radio .en__field__item--other.has-value input,
+.en__field--donationAmt.en__field--radio .en__field__item--other:not(.en__field__item--hidden) input,
+.en__field--donationAmt.en__field--radio input[type=radio]:checked+label,
+.give-by-select .en__field--radio .en__field__item--other.has-value input,
+.give-by-select .en__field--radio .en__field__item--other:not(.en__field__item--hidden) input,
+.give-by-select .en__field--radio input[type=radio]:checked+label,
+.radio-to-buttons .en__field--radio .en__field__item--other.has-value input,
+.radio-to-buttons .en__field--radio .en__field__item--other:not(.en__field__item--hidden) input,
+.radio-to-buttons .en__field--radio input[type=radio]:checked+label {
+    background-color: #FF1D34 !important;
+    border-color: #FF1D34 !important;
+}
+
+.en__tweetButton__send,
+.en__tweetButton__sent{
+    background-color: #FF1D34 !important;
+}
+
+#enModal .enModal-container .accent {
+    color: #FF1D34 !important;
+}
+
+#engrid:before {
+    background: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2110/strip-emergency-desktop.png?v=1520436486000") !important;
+}
+
+#engrid .body-header:before {
+    background: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2110/strip-emergency-desktop.png?v=1520436486000") !important;
+}
+
+#engrid .footer-block-three{
+    background: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2110/strip-emergency-desktop.png?v=1520436486000") !important;
+}
+
+body,
+.footer-block-two {
+    background-color: #000000 !important;
+}
