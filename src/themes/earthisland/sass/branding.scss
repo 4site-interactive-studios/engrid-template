@@ -577,3 +577,14 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
 .ft-link-wrapper a:hover {
   text-decoration: underline;
 }
+
+.footer-badges {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  img {
+    display: block;
+    margin-left: 1rem;
+    margin-right: 1rem
+  }
+}
