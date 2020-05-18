@@ -68,6 +68,8 @@ input:not(:-webkit-autofill) {
 
 /* A fix for tiny font sizes on autofill: https://stackoverflow.com/a/60379185/815683 */
 /* Might be able to remove the other work arounds */
-input:-webkit-autofill::first-line {
+input:-webkit-autofill::first-line,
+textarea:-webkit-autofill::first-line,
+select:-webkit-autofill::first-line{
   font-size: 1rem;
 }
