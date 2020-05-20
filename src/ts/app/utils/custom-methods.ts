@@ -128,7 +128,14 @@ export const setBackgroundImages = (bg: string | Array<String>) => {
 
   // Set the background image
   if (pageBackground && pageBackgroundImgSrc) {
-    pageBackground.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
+
+    if(navigator.appName.indexOf("Internet Explorer")!=-1 || navigator.userAgent.match(/Trident.*rv[ :]*11\./)){
+      // IF IE11, set background image on body
+      // document.body.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
+    } else {
+      // IF not IE11, set background image on the appropriate Backgorund Image grid component
+      pageBackground.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
+    }
   }
 };
 
@@ -1120,4 +1127,15 @@ if (country_select) {
       }
     }, 100);
   });
+}
+
+// Detect Internet Explorer 11 (IE11) and set legacy mode
+export const detectIE11 = () => {
+  if(navigator.appName.indexOf("Internet Explorer")!=-1 || navigator.userAgent.match(/Trident.*rv[ :]*11\./)){
+      // @TODO We should also find a way to let each client right a "Legacy Support" message that gets inserted at the top of IE 11 pages
+      if (!enGrid.classList.contains("layout-embedded")) {
+          enGrid.classList.add("layout-ie11override");
+          console.log("IE11 Detected, reverted to legacy mode.")
+      }
+  }
 }
