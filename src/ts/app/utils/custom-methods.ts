@@ -94,37 +94,37 @@ export const setBackgroundImages = (bg: string | Array<String>) => {
       distance.top >= 0 &&
       distance.left >= 0 &&
       distance.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
+      (window.innerHeight || document.documentElement.clientHeight) &&
       distance.right <=
-        (window.innerWidth || document.documentElement.clientWidth)
+      (window.innerWidth || document.documentElement.clientWidth)
     );
   };
 
   // If we find a image on the page, we don't care about the hardcoded options
-  
-    
 
-    // Find the background image
-    if (pageBackgroundImg) {
-      //@TODO consider moving JS into page template as it's critical to initial render
+
+
+  // Find the background image
+  if (pageBackgroundImg) {
+    //@TODO consider moving JS into page template as it's critical to initial render
     //Measure page layout to see if it's a short or tall page before applying the background image
     if (contentFooter && isInViewport(contentFooter)) {
       body.classList.add("footer-above-fold");
     } else {
       body.classList.add("footer-below-fold");
     }
-      pageBackgroundImgSrc = pageBackgroundImg.src;
-      pageBackgroundImg.style.display = "none";
-    } else if (pageBackgroundLegacyImg) {
-      // Support for legacy pages
-      pageBackgroundImgSrc = pageBackgroundLegacyImg.innerHTML;
-      pageBackgroundLegacyImg.style.display = "none";
-    } else {
-      // Fallback Image
-      if (Array.isArray(bg)) {
-        pageBackgroundImgSrc = bg[Math.floor(Math.random() * bg.length)] as string;
-      }
+    pageBackgroundImgSrc = pageBackgroundImg.src;
+    pageBackgroundImg.style.display = "none";
+  } else if (pageBackgroundLegacyImg) {
+    // Support for legacy pages
+    pageBackgroundImgSrc = pageBackgroundLegacyImg.innerHTML;
+    pageBackgroundLegacyImg.style.display = "none";
+  } else {
+    // Fallback Image
+    if (Array.isArray(bg)) {
+      pageBackgroundImgSrc = bg[Math.floor(Math.random() * bg.length)] as string;
     }
+  }
 
   // Set the background image
   if (pageBackground && pageBackgroundImgSrc) {
@@ -232,13 +232,13 @@ export const debugBar = () => {
       enGrid.insertAdjacentHTML(
         "beforebegin",
         '<span id="debug-bar">' +
-          '<span id="info-wrapper">' +
-          "<span>DEBUG BAR</span>" +
-          "</span>" +
-          '<span id="buttons-wrapper">' +
-          '<span id="debug-close">X</span>' +
-          "</span>" +
-          "</span>"
+        '<span id="info-wrapper">' +
+        "<span>DEBUG BAR</span>" +
+        "</span>" +
+        '<span id="buttons-wrapper">' +
+        '<span id="debug-close">X</span>' +
+        "</span>" +
+        "</span>"
       );
     }
 
@@ -257,18 +257,18 @@ export const debugBar = () => {
         infoWrapper.insertAdjacentHTML(
           "beforeend",
           "<span>Initial Load: " +
-            initialPageLoad +
-            "s</span>" +
-            "<span>DOM Interactive: " +
-            domInteractive +
-            "s</span>"
+          initialPageLoad +
+          "s</span>" +
+          "<span>DOM Interactive: " +
+          domInteractive +
+          "s</span>"
         );
 
         if (buttonsWrapper) {
           buttonsWrapper.insertAdjacentHTML(
             "afterbegin",
             '<button id="layout-toggle" type="button">Layout Toggle</button>' +
-              '<button id="page-edit" type="button">Edit in PageBuilder (BETA)</button>'
+            '<button id="page-edit" type="button">Edit in PageBuilder (BETA)</button>'
           );
         }
       }
@@ -284,8 +284,8 @@ export const debugBar = () => {
         buttonsWrapper.insertAdjacentHTML(
           "afterbegin",
           '<button id="layout-toggle" type="button">Layout Toggle</button>' +
-            '<button id="fancy-errors-toggle" type="button">Toggle Fancy Errors</button>' +
-            '<button id="float-labels-toggle" type="button">Toggle Float Lables</button>'
+          '<button id="fancy-errors-toggle" type="button">Toggle Fancy Errors</button>' +
+          '<button id="float-labels-toggle" type="button">Toggle Float Lables</button>'
         );
       }
     }
@@ -297,7 +297,7 @@ export const debugBar = () => {
       if (debugTemplateButton) {
         debugTemplateButton.addEventListener(
           "click",
-          function() {
+          function () {
             fancyErrorsToggle();
           },
           false
@@ -312,7 +312,7 @@ export const debugBar = () => {
       if (debugTemplateButton) {
         debugTemplateButton.addEventListener(
           "click",
-          function() {
+          function () {
             floatLabelsToggle();
           },
           false
@@ -325,7 +325,7 @@ export const debugBar = () => {
       if (debugTemplateButton) {
         debugTemplateButton.addEventListener(
           "click",
-          function() {
+          function () {
             layoutToggle();
           },
           false
@@ -338,7 +338,7 @@ export const debugBar = () => {
       if (debugTemplateButton) {
         debugTemplateButton.addEventListener(
           "click",
-          function() {
+          function () {
             pageEdit();
           },
           false
@@ -351,7 +351,7 @@ export const debugBar = () => {
       if (debugTemplateButton) {
         debugTemplateButton.addEventListener(
           "click",
-          function() {
+          function () {
             debugClose();
           },
           false
@@ -869,15 +869,15 @@ const getCardType = (cc_partial: string) => {
     case "0":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "N/A";
+      return false;
     case "1":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "N/A";
+      return false;
     case "2":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "N/A";
+      return false;
     case "3":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-amex");
@@ -889,7 +889,7 @@ const getCardType = (cc_partial: string) => {
     case "5":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-mastercard");
-      return "Mastercard";
+      return "MasterCard";
     case "6":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-discover");
@@ -897,19 +897,19 @@ const getCardType = (cc_partial: string) => {
     case "7":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "N/A";
+      return false;
     case "8":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "N/A";
+      return false;
     case "9":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "N/A";
+      return false;
     default:
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-na");
-      return "N/A";
+      return false;
   }
 };
 
@@ -983,23 +983,23 @@ const handleExpUpdate = (e: string) => {
  * Event Listeners
  */
 if (field_credit_card) {
-  field_credit_card.addEventListener("keyup", function() {
+  field_credit_card.addEventListener("keyup", function () {
     handleCCUpdate();
   });
-  field_credit_card.addEventListener("paste", function() {
+  field_credit_card.addEventListener("paste", function () {
     handleCCUpdate();
   });
-  field_credit_card.addEventListener("blur", function() {
+  field_credit_card.addEventListener("blur", function () {
     handleCCUpdate();
   });
 }
 
 if (field_expiration_month && field_expiration_year) {
-  field_expiration_month.addEventListener("change", function() {
+  field_expiration_month.addEventListener("change", function () {
     handleExpUpdate("month");
   });
 
-  field_expiration_year.addEventListener("change", function() {
+  field_expiration_year.addEventListener("change", function () {
     handleExpUpdate("year");
   });
 }

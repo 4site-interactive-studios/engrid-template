@@ -6,6 +6,10 @@ import EnForm from "./events/en-form";
 import LiveVariables from "./utils/live-variables";
 import ProcessingFees from "./events/processing-fees";
 import Modal from "./utils/modal";
+import IE from "./utils/ie";
+
+// IE Warning
+const ie = new IE();
 
 import sendIframeHeight from "./utils/iframe";
 
