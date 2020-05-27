@@ -135,14 +135,14 @@
       color: $client-black;
     }
     .accent {
-      color: $client-orange;
+      color: $client-cta;
     }
     .cta {
       cursor: pointer;
       // // font-weight: 700;
       // padding: 12px 25px;
       // background-color: $client-black;
-      // color: $client-orange;
+      // color: $client-cta;
       // display: block;
       // max-width: 250px;
       // // font-size: 26px;
@@ -174,7 +174,7 @@
         // max-width: 200px;
       }
       // &:hover {
-      //   background-color: $client-orange;
+      //   background-color: $client-cta;
       //   color: $client-black;
       // }
     }

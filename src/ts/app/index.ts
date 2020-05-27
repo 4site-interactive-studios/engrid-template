@@ -41,6 +41,7 @@ export const run = (opts: Object) => {
   app.watchLegacyGiveBySelectField();
   app.SetEnFieldOtherAmountRadioStepValue();
   app.simpleUnsubscribe();
+  app.detectIE11(); //TODO I don't think this is firing
 
   app.contactDetailLabels();
   app.easyEdit();

@@ -1,7 +1,7 @@
 /*
 * ####################################################################################################################
 * # ENGRID CLIENT LAYOUT
-* # Force a Layout override for IE11 that stacks everything in a column using Flexbox
+* # Forces a Layout override for IE11 that stacks everything in a column using Flexbox
 * # @TODO Can this be moved to line 200 of engrid-layout.scss and not have to be its own file?
 * ####################################################################################################################
 */
@@ -42,7 +42,15 @@ body:not(#en__pagebuilder) #engrid.layout-ie11override {
     }
   }
   
-  .page-backgroundImage {
-    display: none !important;
+}
+
+body:not(#en__pagebuilder) #engrid.layout-ie11override:not(.layout-embedded){
+  .content-footer{
+    margin-top: 1rem !important;
+  }
+
+  .body-headerOutside img{
+    margin-top: 3rem !important;
+    margin-bottom: 2rem !important;
   }
 }
