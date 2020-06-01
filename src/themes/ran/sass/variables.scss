@@ -1,19 +1,19 @@
 $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
-$background-color: #ffffff;
-$background-image-background-color: #487c0f;
-
 $client-white: #ffffff;
 $client-black: #000000;
 $client-gray: #8a8a8a;
 $client-light-gray: #cacaca;
-$client-orange: #f1700b;
+$client-cta: #f1700b;
+$client-cta-hover: #f1700b;
+$background-color: #ffffff;
+$background-image-background-color: #487c0f;
 
 /* @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand
  * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
  */
 
-$client-body-background-color: #ffffff; //@TODO Not yet used anywhere
+$client-body-background-color: $client-white; //@TODO Not yet used anywhere
 $client-body-border-radius: 0px;
 $body-padding-sm: 0.8652rem; //@TODO Revisit
 $body-padding: calc(0.8652rem * 0.75); //@TODO Revisit
@@ -22,28 +22,28 @@ $body-padding-xlg: calc(0.8652rem * 5); //@TODO Revisit
 
 $client-input-border-radius: 0px;
 $client-input-border-width: 1px;
-$client-input-border-color: #000000;
+$client-input-border-color: $client-black;
 $client-input-background-color: transparent;
 
-$client-button-background-color: #000000;
-$client-button-background-color-hover: #f1700b;
-$client-button-background-color-active: #f1700b;
+$client-button-background-color: $client-black;
+$client-button-background-color-hover: $client-cta-hover;
+$client-button-background-color-active: $client-cta;
 $client-button-background-color-disabled: #949494;
-$client-button-border-color: #000000;
-$client-button-border-color-active: #f1700b;
-$client-button-border-color-hover: #f1700b;
+$client-button-border-color: $client-black;
+$client-button-border-color-active: $client-cta;
+$client-button-border-color-hover: $client-cta-hover;
 $client-button-border-radius: 0px;
-$client-button-font-color: #ffffff;
-$client-button-font-color-active: #ffffff;
+$client-button-font-color: $client-white;
+$client-button-font-color-active: $client-white;
 
-$client-submit-button-background-color: #f1700b;
-$client-submit-button-background-color-hover: #f1700b;
-$client-submit-button-border-color: #f1700b;
-$client-submit-button-font-color: #ffffff;
+$client-submit-button-background-color: $client-cta;
+$client-submit-button-background-color-hover: $client-cta-hover;
+$client-submit-button-border-color: $client-cta;
+$client-submit-button-font-color: $client-white;
 
-$client-checkmark-background-color: #f1700b;
-$client-checkmark-border-color: #f1700b;
-$client-checkmark-font-color: #ffffff;
+$client-checkmark-background-color: $client-cta;
+$client-checkmark-border-color: $client-cta;
+$client-checkmark-font-color: $client-white;
 
 $client-error-red: #e74b3c;
 $client-error-red-grayscale: #949494;

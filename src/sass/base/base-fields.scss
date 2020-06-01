@@ -87,6 +87,7 @@
   margin-bottom: 0.5rem;
   margin-right: 1rem;
   display: flex;
+  flex-grow: 1; /* Fields should expand to fill their flexbox container */
   align-items: center;
 }
 
@@ -167,7 +168,7 @@ textarea {
   display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  height: auto !important;
+  height: auto;// @TODO Removed !important, hopefully that didn't break anything
   margin: 0rem;
   padding: 0.5rem;
   border: $client-input-border-width solid $client-input-border-color;
