@@ -94,7 +94,7 @@ h1 {
 }
 
 h2 {
-  color: $client-black;
+  color: var(--client-black,$client-black);
   font-family: "Proxima Nova Bold",sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -105,7 +105,7 @@ h2 {
 }
 
 h3 {
-  color: $client-black;
+  color: var(--client-black,$client-black);
   font-family: "Proxima Nova Bold",sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -169,8 +169,8 @@ label.en__field__label {
 }
 
 .highlight {
-  background-color: $client-highlight-background-color;
-  color: $client-highlight-font-color;
+  background-color: var(--client-highlight-background-color,$client-highlight-background-color);
+  color: var(--client-highlight-font-color,$client-highlight-font-color);
   padding: 0.5rem;
   font-weight: 500;
   display: inline-block;
@@ -373,7 +373,7 @@ label.en__field__label {
 }
 
 .content-footer {
-  background-color: $client-footer-background-color;
+  background-color: var(--client-footer-background-color,$client-footer-background-color);
 }
 
 .footer-wrapper {

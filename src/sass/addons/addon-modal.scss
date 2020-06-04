@@ -5,7 +5,7 @@
   left: 0;
   bottom: 0;
   z-index: 2147483645;
-  background-color: rgba($client-black, 0.85);
+  background-color: rgba(var(--client-black,$client-black), 0.85);
   width: 100vw;
   height: 100%;
   -webkit-transition: top 0.4s ease-in-out;
@@ -16,8 +16,8 @@
   align-items: center;
   overflow: hidden;
   &.exitModal {
-    background-color: rgba($client-error-red, 0.85);
-    color: $client-white;
+    background-color: rgba(var(--client-error-red,$client-error-red), 0.85);
+    color: var(--client-white,$client-white);
   }
 
   &.upsellModal .button-close {
@@ -82,9 +82,9 @@
   .ieModal-container {
     max-width: 820px;
     // padding: 90px;
-    border-radius: $client-input-border-radius;
-    background-color: $client-body-background-color;
-    color: $client-black;
+    border-radius: var(--client-input-border-radius,$client-input-border-radius);
+    background-color: var(--client-body-background-color,$client-body-background-color);
+    color: var(--client-black,$client-black);
     //font-family: graphik, sans-serif;
     // font-size: 70px;
     // line-height: 1;
@@ -109,8 +109,8 @@
     }
 
     .highlight {
-      background-color: $client-highlight-background-color;
-      color: $client-highlight-font-color;
+      background-color: var(--client-highlight-background-color,$client-highlight-background-color);
+      color: var(--client-highlight-font-color,$client-highlight-font-color);
       padding: 0.15em;
       display: inline-block;
     }
@@ -132,10 +132,10 @@
     }
 
     .title {
-      color: $client-black;
+      color: var(--client-black,$client-black);
     }
     .accent {
-      color: $client-cta;
+      color: var(--client-ct,$client-ct);
     }
     .cta {
       cursor: pointer;
@@ -243,7 +243,7 @@
     .modal-right-column {
       background-color: #2e2e2c;
       flex-basis: 50%;
-      padding: $body-padding-lg;
+      padding: var(--body-padding-lg,$body-padding-lg);
       text-align: center;
       .cta-groups .group {
         flex-direction: column;
