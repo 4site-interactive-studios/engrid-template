@@ -678,7 +678,6 @@ export const watchGiveBySelectField = () => {
       removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "check";
-      enFieldPaymentType.value = "Check";
     } else if (
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
@@ -686,7 +685,6 @@ export const watchGiveBySelectField = () => {
       removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.value = "paypal";
-      enFieldPaymentType.value = "Paypal";
     }
   };
 

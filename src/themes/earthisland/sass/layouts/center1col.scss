@@ -140,6 +140,11 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col,
 body:not(#en__pagebuilder) #engrid.layout-centercenter1col,
 body:not(#en__pagebuilder) #engrid.layout-centercenter1col-wide,
 body:not(#en__pagebuilder) #engrid.layout-centerright1col {
+
+  .page-backgroundImage {
+    grid-row: page-start / content-preFooter-end;
+  }
+  
   /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
   .page-backgroundImage::before {
     content: "";
