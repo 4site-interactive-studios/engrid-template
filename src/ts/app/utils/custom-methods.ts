@@ -229,7 +229,6 @@ export const removeClassesByPrefix = (el: HTMLElement, prefix: string) => {
 
 export const debugBar = () => {
   if (
-    window.location.search.indexOf("mode=DEMO") > -1 ||
     window.location.href.indexOf("debug") != -1 ||
     location.hostname === "localhost" ||
     location.hostname === "127.0.0.1"
@@ -896,7 +895,7 @@ const getCardType = (cc_partial: string) => {
     case "5":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-mastercard");
-      return "MasterCard";
+      return "Mastercard";
     case "6":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-discover");
