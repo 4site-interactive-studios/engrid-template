@@ -17,7 +17,7 @@ button {
   text-align: center;
   cursor: pointer;
   background-color: var(--client-button-background-color,$client-button-background-color);
-  color: var(--$client-white,$client-white);
+  color: var(--client-white,$client-white);
 }
 
 .en__submit button {

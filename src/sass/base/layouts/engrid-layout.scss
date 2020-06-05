@@ -477,6 +477,8 @@ body:not(#en__pagebuilder)
   background-repeat: no-repeat;
   z-index: -3;
   background-size: cover;
+  // background-image: var(--background-image,#{$background-image});
+  background-image: var(--background-image); //@TODO Get SCSS variable working
 }
 
 // @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
