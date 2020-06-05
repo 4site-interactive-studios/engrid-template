@@ -602,3 +602,8 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
     margin-bottom: 1rem;
   }
 }
+
+/* This input field is pretending to be a button, so let's mirror the border color of its neighboring buttons */
+input[name="transaction.donationAmt.other"]{
+  border-color: var(--client-button-border-color,$client-button-border-color)
+}

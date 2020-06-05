@@ -1,5 +1,6 @@
 $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
+/* Client Theme */
 $client-white: #ffffff;
 $client-black: #4D4D4D;
 $client-gray: #8a8a8a;
@@ -58,3 +59,61 @@ $client-error-input-border-width: $client-input-border-width;
 
 $client-highlight-background-color: #227f9e;
 $client-highlight-font-color: #ffffff;
+
+/* IMMP Sub-theme */
+#engrid.subtheme-immp{
+    --client-white: #ffffff;
+    --client-black: #3c4d64;
+    --client-gray: #8a8a8a;
+    --client-light-gray: #cacaca;
+    --client-cta: #208096;
+    --client-cta-hover: #22A3CB;
+    
+    --client-prefooter-background-color: #d0e2e7;
+    --client-footer-background-color: #3c4d64;
+    
+    --background-color: #ffffff;
+    --background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10069/IMPP-background.jpeg?v=1591316765000");
+    --background-image-background-color: #333333;
+    
+    --client-body-background-color: #ffffff; //@TODO Not yet used anywhere
+    --client-body-border-radius: 0px;
+    --body-padding-sm: 0.8652rem; //@TODO Revisit
+    --body-padding: calc(0.8652rem * 0.75); //@TODO Revisit
+    --body-padding-lg: calc(0.8652rem * 2.5); //@TODO Revisit
+    --body-padding-xlg: calc(0.8652rem * 5); //@TODO Revisit
+    
+    --client-input-border-radius: 5px;
+    --client-input-border-width: 2px;
+    --client-input-border-color: #3c4d64;
+    --client-input-background-color: #ffffff;
+    
+    --client-button-background-color: #208096;
+    --client-button-background-color-hover: #22A3CB;
+    --client-button-background-color-active: #3c4d64;
+    --client-button-background-color-disabled: #949494;
+    --client-button-border-color: #208096;
+    --client-button-border-color-active: #3c4d64;
+    --client-button-border-color-hover: #22A3CB;
+    --client-button-border-radius: 0px;
+    --client-button-font-color: #ffffff;
+    --client-button-font-color-active: #ffffff;
+    
+    --client-submit-button-background-color: #3c4d64;
+    --client-submit-button-background-color-hover: #22A3CB;
+    --client-submit-button-border-color: #3c4d64;
+    --client-submit-button-font-color: #ffffff;
+    
+    --client-checkmark-background-color: #208096;
+    --client-checkmark-border-color: #208096;
+    --client-checkmark-font-color: #ffffff;
+    
+    --client-error-red: #f12222;
+    --client-error-red-grayscale: #949494;
+    --client-error-red-faded: #ffeae9;
+    --client-error-page-group-background: #f4ddda;
+    --client-error-input-border-width: 2px;
+    
+    --client-highlight-background-color: #227f9e;
+    --client-highlight-font-color: #ffffff;
+}
