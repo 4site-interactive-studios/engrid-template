@@ -1,0 +1,56 @@
+/*
+* ####################################################################################################################
+* # ENGRID CLIENT LAYOUT
+* # Forces a Layout override for IE11 that stacks everything in a column using Flexbox
+* # @TODO Can this be moved to line 200 of engrid-layout.scss and not have to be its own file?
+* ####################################################################################################################
+*/
+
+/*
+* ##########################################################
+* # MOBILE FIRST BREAKPOINT
+* ##########################################################
+*/
+
+#engrid.layout-ie11override {
+  .en__component--advrow,
+  .en__component--advrow .pseudo-subgrid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+body:not(#en__pagebuilder) #engrid.layout-ie11override {
+  form > .en__component--advrow{
+    .body-headerOutside,
+    .body-header,
+    .body-banner,
+    .body-bannerOverlay,
+    .body-top,
+    .body-side,
+    .body-main,
+    .body-bottom,
+    .body-footer,
+    .body-footerOutside,
+    .page-backgroundImage,
+    .page-backgroundImageOverlay
+    .page-customCode{
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      max-width: 750px !important;
+    }
+  }
+  
+}
+
+body:not(#en__pagebuilder) #engrid.layout-ie11override:not(.layout-embedded){
+  .content-footer{
+    margin-top: 1rem !important;
+  }
+
+  .body-headerOutside img{
+    margin-top: 3rem !important;
+    margin-bottom: 2rem !important;
+  }
+}

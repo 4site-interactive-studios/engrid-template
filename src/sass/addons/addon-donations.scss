@@ -2,7 +2,7 @@
 .radio-to-buttons .en__field--radio input[type="radio"] + label,
   .give-by-select .en__field--radio input[type="radio"] + label,
   .en__field--donationAmt.en__field--radio input[type="radio"] + label {
-    border-radius: $client-button-border-radius;
+    border-radius: var(--client-button-border-radius,$client-button-border-radius);
     // padding: 0.5rem 1.5rem;
   }
 
@@ -34,8 +34,8 @@
   .en__field--donationAmt.en__field--radio .en__field__item--other input[type="text"],
   .en__field--donationAmt.en__field--radio .en__field__item--other input[type="tel"],
   .en__field--donationAmt.en__field--radio .en__field__item--other input[type="number"] {
-    background-color: $client-button-background-color;
-    color: $client-button-font-color;
+    background-color: var(--client-button-background-color,$client-button-background-color);
+    color: var(--client-button-font-color,$client-button-font-color);
   }
 
 /* prettier-ignore */
@@ -49,16 +49,16 @@
   .en__field--donationAmt.en__field--radio .en__field__item--other.has-value input,
   .en__field--donationAmt.en__field--radio .en__field__item--other:not(.en__field__item--hidden) input {
     text-transform: none;
-    background-color: $client-button-background-color-active;
-    border-color: $client-button-border-color-active;
-    color: $client-button-font-color-active;
+    background-color: var(--client-button-background-color-active,$client-button-background-color-active);
+    border-color: var(--client-button-border-color-active,$client-button-border-color-active);
+    color: var(--client-button-font-color-active,$client-button-font-color-active);
   }
 
 /* prettier-ignore */
 .radio-to-buttons .en__field--radio label.en__field__label.en__field__label--item,
   .give-by-select .en__field--radio label.en__field__label.en__field__label--item,
   .en__field--donationAmt.en__field--radio label.en__field__label.en__field__label--item {
-    border: 1px solid $client-button-border-color;
+    border: 1px solid var(--client-button-border-color,$client-button-border-color);
     background-position-x: 40px;
   }
 
@@ -94,8 +94,8 @@
   .en__field--donationAmt.en__field--radio input[type="radio"]:focus + label {
     outline: none !important;
     border: 1px solid #666666 !important;
-    -webkit-box-shadow: 0 0 0.3125rem $client-light-gray !important;
-    box-shadow: 0 0 0.3125rem $client-light-gray !important;
+    -webkit-box-shadow: 0 0 0.3125rem var(--client-light-gray,$client-light-gray) !important;
+    box-shadow: 0 0 0.3125rem var(--client-light-gray,$client-light-gray) !important;
     transition: box-shadow 0.25s, border-color 0.125s ease-in-out, -webkit-box-shadow 0.25s !important;
   }
 

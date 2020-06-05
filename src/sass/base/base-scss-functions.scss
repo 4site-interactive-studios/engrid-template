@@ -1,0 +1,3 @@
+@function svg-friendly-color($color) {
+    @return '%23' + str-slice('#{$color}', 2, -1);
+}

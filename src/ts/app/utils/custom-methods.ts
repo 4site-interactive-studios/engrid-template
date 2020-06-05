@@ -94,44 +94,48 @@ export const setBackgroundImages = (bg: string | Array<String>) => {
       distance.top >= 0 &&
       distance.left >= 0 &&
       distance.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
+      (window.innerHeight || document.documentElement.clientHeight) &&
       distance.right <=
-        (window.innerWidth || document.documentElement.clientWidth)
+      (window.innerWidth || document.documentElement.clientWidth)
     );
   };
 
   // If we find a image on the page, we don't care about the hardcoded options
-  
-    
 
-    // Find the background image
-    if (pageBackgroundImg) {
-      //@TODO consider moving JS into page template as it's critical to initial render
+
+
+  // Find the background image
+  if (pageBackgroundImg) {
+    //@TODO consider moving JS into page template as it's critical to initial render
     //Measure page layout to see if it's a short or tall page before applying the background image
     if (contentFooter && isInViewport(contentFooter)) {
       body.classList.add("footer-above-fold");
     } else {
       body.classList.add("footer-below-fold");
     }
-      pageBackgroundImgSrc = pageBackgroundImg.src;
-      pageBackgroundImg.style.display = "none";
-    } else if (pageBackgroundLegacyImg) {
-      // Support for legacy pages
-      pageBackgroundImgSrc = pageBackgroundLegacyImg.innerHTML;
-      pageBackgroundLegacyImg.style.display = "none";
-    } else {
-      // Fallback Image
-      if (Array.isArray(bg)) {
-        pageBackgroundImgSrc = bg[Math.floor(Math.random() * bg.length)] as string;
-        if (pageBackgroundLegacyImg) {
-          pageBackgroundLegacyImg.style.display = "none";
-        }
-      }
+    pageBackgroundImgSrc = pageBackgroundImg.src;
+    pageBackgroundImg.style.display = "none";
+  } else if (pageBackgroundLegacyImg) {
+    // Support for legacy pages
+    pageBackgroundImgSrc = pageBackgroundLegacyImg.innerHTML;
+    pageBackgroundLegacyImg.style.display = "none";
+  } else {
+    // Fallback Image
+    if (Array.isArray(bg)) {
+      pageBackgroundImgSrc = bg[Math.floor(Math.random() * bg.length)] as string;
     }
+  }
 
   // Set the background image
   if (pageBackground && pageBackgroundImgSrc) {
-    pageBackground.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
+
+    if (navigator.appName.indexOf("Internet Explorer") != -1 || navigator.userAgent.match(/Trident.*rv[ :]*11\./)) {
+      // IF IE11, set background image on body
+      // document.body.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
+    } else {
+      // IF not IE11, set background image on the appropriate Backgorund Image grid component
+      pageBackground.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
+    }
   }
 };
 
@@ -215,9 +219,16 @@ export const bindEvents = (e: Element) => {
   }
 };
 
+export const removeClassesByPrefix = (el: HTMLElement, prefix: string) => {
+  for (var i = el.classList.length - 1; i >= 0; i--) {
+    if (el.classList[i].startsWith(prefix)) {
+      el.classList.remove(el.classList[i]);
+    }
+  }
+};
+
 export const debugBar = () => {
   if (
-    window.location.search.indexOf("mode=DEMO") > -1 ||
     window.location.href.indexOf("debug") != -1 ||
     location.hostname === "localhost" ||
     location.hostname === "127.0.0.1"
@@ -227,13 +238,13 @@ export const debugBar = () => {
       enGrid.insertAdjacentHTML(
         "beforebegin",
         '<span id="debug-bar">' +
-          '<span id="info-wrapper">' +
-          "<span>DEBUG BAR</span>" +
-          "</span>" +
-          '<span id="buttons-wrapper">' +
-          '<span id="debug-close">X</span>' +
-          "</span>" +
-          "</span>"
+        '<span id="info-wrapper">' +
+        "<span>DEBUG BAR</span>" +
+        "</span>" +
+        '<span id="buttons-wrapper">' +
+        '<span id="debug-close">X</span>' +
+        "</span>" +
+        "</span>"
       );
     }
 
@@ -252,18 +263,18 @@ export const debugBar = () => {
         infoWrapper.insertAdjacentHTML(
           "beforeend",
           "<span>Initial Load: " +
-            initialPageLoad +
-            "s</span>" +
-            "<span>DOM Interactive: " +
-            domInteractive +
-            "s</span>"
+          initialPageLoad +
+          "s</span>" +
+          "<span>DOM Interactive: " +
+          domInteractive +
+          "s</span>"
         );
 
         if (buttonsWrapper) {
           buttonsWrapper.insertAdjacentHTML(
             "afterbegin",
             '<button id="layout-toggle" type="button">Layout Toggle</button>' +
-              '<button id="page-edit" type="button">Edit in PageBuilder (BETA)</button>'
+            '<button id="page-edit" type="button">Edit in PageBuilder (BETA)</button>'
           );
         }
       }
@@ -279,8 +290,8 @@ export const debugBar = () => {
         buttonsWrapper.insertAdjacentHTML(
           "afterbegin",
           '<button id="layout-toggle" type="button">Layout Toggle</button>' +
-            '<button id="fancy-errors-toggle" type="button">Toggle Fancy Errors</button>' +
-            '<button id="float-labels-toggle" type="button">Toggle Float Lables</button>'
+          '<button id="fancy-errors-toggle" type="button">Toggle Fancy Errors</button>' +
+          '<button id="float-labels-toggle" type="button">Toggle Float Lables</button>'
         );
       }
     }
@@ -292,7 +303,7 @@ export const debugBar = () => {
       if (debugTemplateButton) {
         debugTemplateButton.addEventListener(
           "click",
-          function() {
+          function () {
             fancyErrorsToggle();
           },
           false
@@ -307,7 +318,7 @@ export const debugBar = () => {
       if (debugTemplateButton) {
         debugTemplateButton.addEventListener(
           "click",
-          function() {
+          function () {
             floatLabelsToggle();
           },
           false
@@ -320,7 +331,7 @@ export const debugBar = () => {
       if (debugTemplateButton) {
         debugTemplateButton.addEventListener(
           "click",
-          function() {
+          function () {
             layoutToggle();
           },
           false
@@ -333,7 +344,7 @@ export const debugBar = () => {
       if (debugTemplateButton) {
         debugTemplateButton.addEventListener(
           "click",
-          function() {
+          function () {
             pageEdit();
           },
           false
@@ -346,7 +357,7 @@ export const debugBar = () => {
       if (debugTemplateButton) {
         debugTemplateButton.addEventListener(
           "click",
-          function() {
+          function () {
             debugClose();
           },
           false
@@ -368,7 +379,7 @@ export const debugBar = () => {
 
     const layoutToggle = () => {
       if (enGrid) {
-        if (enGrid.classList.contains("layout-centerleft1col")) {
+        if (enGrid.classList.contains("layout-ie11override")) {
           removeClassesByPrefix(enGrid, "layout-");
           enGrid.classList.add("layout-centercenter1col");
         } else if (enGrid.classList.contains("layout-centercenter1col")) {
@@ -380,6 +391,12 @@ export const debugBar = () => {
         } else if (enGrid.classList.contains("layout-centerright1col")) {
           removeClassesByPrefix(enGrid, "layout-");
           enGrid.classList.add("layout-centerleft1col");
+        } else if (enGrid.classList.contains("layout-centerleft1col")) {
+          removeClassesByPrefix(enGrid, "layout-");
+          enGrid.classList.add("layout-embedded");
+        } else if (enGrid.classList.contains("layout-embedded")) {
+          removeClassesByPrefix(enGrid, "layout-");
+          enGrid.classList.add("layout-ie11override");
         } else {
           console.log(
             "While trying to switch layouts, something unexpected happen."
@@ -393,14 +410,6 @@ export const debugBar = () => {
       const debugBar = document.getElementById("debug-bar");
       if (debugBar) {
         debugBar.style.display = "none";
-      }
-    };
-
-    const removeClassesByPrefix = (el: HTMLElement, prefix: string) => {
-      for (var i = el.classList.length - 1; i >= 0; i--) {
-        if (el.classList[i].startsWith(prefix)) {
-          el.classList.remove(el.classList[i]);
-        }
       }
     };
   }
@@ -464,7 +473,7 @@ export const inputPlaceholder = () => {
 
     if (enFieldDonationAmt) {
       enFieldDonationAmt.placeholder = "Other";
-      enFieldDonationAmt.setAttribute("type", "number");
+      enFieldDonationAmt.setAttribute("inputmode", "numeric");
     }
     // if (enFieldFirstName) {
     //   enFieldFirstName.placeholder = "First name";
@@ -645,9 +654,6 @@ export const watchGiveBySelectField = () => {
     'input[name="transaction.giveBySelect"]:checked'
   ) as HTMLInputElement;
   const prefix = "has-give-by-";
-  const enGrid_classes = enGrid.className
-    .split(" ")
-    .filter(c => !c.startsWith(prefix));
 
   const handleEnFieldGiveBySelect = (e: Event) => {
     enFieldGiveBySelectCurrentValue = document.querySelector(
@@ -661,7 +667,7 @@ export const watchGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-card");
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
@@ -669,18 +675,16 @@ export const watchGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "check";
-      enFieldPaymentType.value = "Check";
     } else if (
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.value = "paypal";
-      enFieldPaymentType.value = "Paypal";
     }
   };
 
@@ -693,7 +697,7 @@ export const watchGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-card");
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
@@ -701,7 +705,7 @@ export const watchGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "check";
       enFieldPaymentType.value = "Check";
@@ -709,7 +713,7 @@ export const watchGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.value = "paypal";
       enFieldPaymentType.value = "Paypal";
@@ -741,9 +745,6 @@ export const watchLegacyGiveBySelectField = () => {
   ) as HTMLInputElement;
   let paypalOption = new Option("paypal");
   const prefix = "has-give-by-";
-  const enGrid_classes = enGrid.className
-    .split(" ")
-    .filter(c => !c.startsWith(prefix));
 
   const handleEnFieldGiveBySelect = (e: Event) => {
     enFieldGiveBySelectCurrentValue = document.querySelector(
@@ -757,7 +758,7 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-card");
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
@@ -765,7 +766,7 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "Check";
       enFieldPaymentType.value = "check";
@@ -773,7 +774,7 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.add(paypalOption);
       enFieldPaymentType.value = "Paypal";
@@ -790,7 +791,7 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-card");
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
@@ -798,7 +799,7 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-check");
       enFieldPaymentType.value = "Check";
       enFieldPaymentType.value = "check";
@@ -806,7 +807,7 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
-      enGrid.className = enGrid_classes.join(" ").trim();
+      removeClassesByPrefix(enGrid, prefix);
       enGrid.classList.add("has-give-by-paypal");
       enFieldPaymentType.add(paypalOption);
       enFieldPaymentType.value = "Paypal";
@@ -872,15 +873,15 @@ const getCardType = (cc_partial: string) => {
     case "0":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "N/A";
+      return false;
     case "1":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "N/A";
+      return false;
     case "2":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "N/A";
+      return false;
     case "3":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-amex");
@@ -900,19 +901,19 @@ const getCardType = (cc_partial: string) => {
     case "7":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "N/A";
+      return false;
     case "8":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "N/A";
+      return false;
     case "9":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-invalid");
-      return "N/A";
+      return false;
     default:
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-na");
-      return "N/A";
+      return false;
   }
 };
 
@@ -986,23 +987,23 @@ const handleExpUpdate = (e: string) => {
  * Event Listeners
  */
 if (field_credit_card) {
-  field_credit_card.addEventListener("keyup", function() {
+  field_credit_card.addEventListener("keyup", function () {
     handleCCUpdate();
   });
-  field_credit_card.addEventListener("paste", function() {
+  field_credit_card.addEventListener("paste", function () {
     handleCCUpdate();
   });
-  field_credit_card.addEventListener("blur", function() {
+  field_credit_card.addEventListener("blur", function () {
     handleCCUpdate();
   });
 }
 
 if (field_expiration_month && field_expiration_year) {
-  field_expiration_month.addEventListener("change", function() {
+  field_expiration_month.addEventListener("change", function () {
     handleExpUpdate("month");
   });
 
-  field_expiration_year.addEventListener("change", function() {
+  field_expiration_year.addEventListener("change", function () {
     handleExpUpdate("year");
   });
 }

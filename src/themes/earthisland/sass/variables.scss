@@ -1,0 +1,60 @@
+$slicer-breakpoints: 0 400px 600px 1024px 1200px;
+
+$client-white: #ffffff;
+$client-black: #4D4D4D;
+$client-gray: #8a8a8a;
+$client-light-gray: #cacaca;
+$client-cta: #208096;
+$client-cta-hover: #22A3CB;
+
+$client-prefooter-background-color: #d0e2e7;
+$client-footer-background-color: #20809e;
+
+$background-color: $client-white;
+// $background-image: "url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)";
+$background-image-background-color: #333333;
+
+/* @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand
+ * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
+ */
+
+$client-body-background-color: $client-white; //@TODO Not yet used anywhere
+$client-body-border-radius: 0px;
+$body-padding-sm: 0.8652rem; //@TODO Revisit
+$body-padding: calc(0.8652rem * 0.75); //@TODO Revisit
+$body-padding-lg: calc(0.8652rem * 2.5); //@TODO Revisit
+$body-padding-xlg: calc(0.8652rem * 5); //@TODO Revisit
+
+$client-input-border-radius: 5px;
+$client-input-border-width: 2px;
+$client-input-border-color: $client-black;
+$client-input-background-color: $client-white;
+
+$client-button-background-color: $client-black;
+$client-button-background-color-hover: $client-cta-hover;
+$client-button-background-color-active: $client-cta;
+$client-button-background-color-disabled: #949494;
+$client-button-border-color: $client-black;
+$client-button-border-color-active: $client-cta;
+$client-button-border-color-hover: $client-cta-hover;
+$client-button-border-radius: 0px;
+$client-button-font-color: $client-white;
+$client-button-font-color-active: $client-white;
+
+$client-submit-button-background-color: $client-cta;
+$client-submit-button-background-color-hover: $client-cta-hover;
+$client-submit-button-border-color: $client-cta;
+$client-submit-button-font-color: $client-white;
+
+$client-checkmark-background-color: $client-cta;
+$client-checkmark-border-color: $client-cta;
+$client-checkmark-font-color: $client-white;
+
+$client-error-red: #f12222;
+$client-error-red-grayscale: #949494;
+$client-error-red-faded: #ffeae9;
+$client-error-page-group-background: #f4ddda;
+$client-error-input-border-width: $client-input-border-width;
+
+$client-highlight-background-color: #227f9e;
+$client-highlight-font-color: #ffffff;

@@ -178,7 +178,7 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
 * ##########################################################
 */
 
-#engrid:not(.legacy) .en__component--advrow {
+#engrid:not(.legacy):not(.layout-embedded) .en__component--advrow {
   min-height: 100vh;
 }
 
@@ -197,7 +197,7 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
   ];
 }
 
-//IE 11 Fallback for ENGRID's CSS Grid
+//@TODO IE 11 Fallback for ENGRID's CSS Grid
 @supports not (display: grid) {
   // #engrid .en__component--advrow,
   // #EN__RootElement .en__component--advrow,
@@ -430,15 +430,15 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
 
 #engrid .en__component--advrow .body-header {
   padding-top: 1.75rem;
-  min-height: $client-body-border-radius;
-  border-top-left-radius: $client-body-border-radius;
-  border-top-right-radius: $client-body-border-radius;
+  min-height: var(--client-body-border-radius,$client-body-border-radius);
+  border-top-left-radius: var(--client-body-border-radius,$client-body-border-radius);
+  border-top-right-radius: var(--client-body-border-radius,$client-body-border-radius);
 }
 #engrid .en__component--advrow .body-footer {
   padding-bottom: 1.75rem;
-  min-height: $client-body-border-radius;
-  border-bottom-left-radius: $client-body-border-radius;
-  border-bottom-right-radius: $client-body-border-radius;
+  min-height: var(--client-body-border-radius,$client-body-border-radius);
+  border-bottom-left-radius: var(--client-body-border-radius,$client-body-border-radius);
+  border-bottom-right-radius: var(--client-body-border-radius,$client-body-border-radius);
 }
 
 #engrid .en__component--advrow .body-header::before,
@@ -477,6 +477,8 @@ body:not(#en__pagebuilder)
   background-repeat: no-repeat;
   z-index: -3;
   background-size: cover;
+  // background-image: var(--background-image,#{$background-image});
+  background-image: var(--background-image); //@TODO Get SCSS variable working
 }
 
 // @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
@@ -487,7 +489,7 @@ body:not(#en__pagebuilder).footer-below-fold
   -webkit-clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   height: 120vh;
-  background-color: $background-image-background-color;
+  background-color: var(--background-image-background-color,$background-image-background-color);
 }
 
 // body:not(#en__pagebuilder)

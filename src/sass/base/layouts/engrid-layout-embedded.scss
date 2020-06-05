@@ -1,0 +1,94 @@
+/*
+* ####################################################################################################################
+* # ENGRID CLIENT LAYOUT
+* # Embedded Layout for Seamless Embedding
+* ####################################################################################################################
+*/
+
+/*
+* ##########################################################
+* # MOBILE FIRST BREAKPOINT
+* ##########################################################
+*/
+
+#engrid.layout-embedded {
+    /* prettier-ignore */
+    .en__component--advrow,
+    .en__component--advrow .pseudo-subgrid {
+      /* autoprefixer grid: off */
+      grid-template-columns:
+      [
+        pc-start lpc-start]  minmax(0px, 0px)    [lpc-end
+        cc-start lcc-start]  minmax(0px, 0px)    [lcc-end
+        bc-start lbc-start]  minmax(calc(50vw))  [lbc-end
+        rbc-start]           minmax(calc(50vw))  [rbc-end bc-end
+        rcc-start]           minmax(0px, 0px)    [rcc-end cc-end
+        rpc-start]           minmax(0px, 0px)    [rpc-end pc-end               
+      ];
+    }
+
+    .en__component--advrow .body-main,
+    #EN__RootElement .en__component--advrow .body-main {
+      grid-column: bc;
+      padding: 0;
+      margin: 0;
+      background: transparent;
+    } 
+
+    .en__component--advrow .body-banner::before,
+    .en__component--advrow .body-bannerOverlay::before,
+    .en__component--advrow .body-top::before,
+    .en__component--advrow .body-side::before,
+    .en__component--advrow .body-main::before,
+    .en__component--advrow .body-bottom::before,
+    .en__component--advrow .body-footer::before,
+    .en__component--advrow .body-footerOutside::before{
+      display: none;
+      box-shadow: none;
+    }
+  } 
+  
+  body:not(#en__pagebuilder) #engrid.layout-embedded {
+    .page-backgroundImage {
+      grid-row: page-start / content-footerSpacer-end;
+    }
+  }
+
+/* prettier-ignore */
+body:not(#en__pagebuilder) #engrid.layout-embedded .page-alert { display: none; }
+/* prettier-ignore */
+body:not(#en__pagebuilder) #engrid.layout-embedded .content-header { display: none; }
+// /* prettier-ignore */
+body:not(#en__pagebuilder) #engrid.layout-embedded .body-headerOutside { display: none; }
+// /* prettier-ignore */
+body:not(#en__pagebuilder) #engrid.layout-embedded .body-header { display: none; }
+// /* prettier-ignore */
+body:not(#en__pagebuilder) #engrid.layout-embedded .body-banner { display: none; }
+// /* prettier-ignore */
+body:not(#en__pagebuilder) #engrid.layout-embedded .body-bannerOverlay { display: none; }
+// /* prettier-ignore */
+// body:not(#en__pagebuilder) #engrid.layout-embedded .body-top { display: none; }
+// /* prettier-ignore */
+// body:not(#en__pagebuilder) #engrid.layout-embedded .body-side { display: none; }
+// /* prettier-ignore */
+// body:not(#en__pagebuilder) #engrid.layout-embedded .body-main { display: none; }
+// /* prettier-ignore */
+// body:not(#en__pagebuilder) #engrid.layout-embedded .body-bottom { display: none; }
+// /* prettier-ignore */
+// body:not(#en__pagebuilder) #engrid.layout-embedded .body-footer { display: none; }
+// /* prettier-ignore */
+// body:not(#en__pagebuilder) #engrid.layout-embedded .body-footerOutside { display: none; }
+// /* prettier-ignore */
+// body:not(#en__pagebuilder) #engrid.layout-embedded .content-footerSpacer { display: none; }
+// /* prettier-ignore */
+body:not(#en__pagebuilder) #engrid.layout-embedded .content-preFooter { display: none; }
+/* prettier-ignore */
+body:not(#en__pagebuilder) #engrid.layout-embedded .content-footer { display: none; }
+/* prettier-ignore */
+body:not(#en__pagebuilder) #engrid.layout-embedded .page-customCode { display: none; }
+/* prettier-ignore */
+body:not(#en__pagebuilder) #engrid.layout-embedded .page-backgroundImage { display: none; }
+/* prettier-ignore */
+body:not(#en__pagebuilder) #engrid.layout-embedded .page-backgroundImageOverlay { display: none; }
+
+#engrid.layout-embedded::before { display: none; }

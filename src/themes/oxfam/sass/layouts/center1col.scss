@@ -256,3 +256,12 @@ body#en__pagebuilder #engrid.layout-centerright1col {
     }
   }
 }
+
+/*
+* ##########################################################
+* # ENGRID - IE 11 Override Background Styling
+* ##########################################################
+*/
+body:not(#en__pagebuilder) #engrid.layout-ie11override:not(.layout-embedded){
+  background-color: #0a8848;
+}

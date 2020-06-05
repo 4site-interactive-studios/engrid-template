@@ -10,22 +10,22 @@ button {
   padding: 0.85rem 1rem;
   -webkit-appearance: none;
   border: 1px solid transparent;
-  border-radius: $client-input-border-radius;
+  border-radius: var(--client-input-border-radius,$client-input-border-radius);
   -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   font-size: 1rem;
   text-align: center;
   cursor: pointer;
-  background-color: $client-button-background-color;
-  color: $client-white;
+  background-color: var(--client-button-background-color,$client-button-background-color);
+  color: var(--client-white,$client-white);
 }
 
 .en__submit button {
   margin-top: 2rem;
-  background-color: $client-submit-button-background-color;
-  border-color: $client-submit-button-background-color;
-  color: $client-submit-button-font-color;
-  border-radius: $client-button-border-radius;
+  background-color: var(--client-submit-button-background-color,$client-submit-button-background-color);
+  border-color: var(--client-submit-button-background-color,$client-submit-button-background-color);
+  color: var(--client-submit-button-font-color,$client-submit-button-font-color);
+  border-radius: var(--client-button-border-radius,$client-button-border-radius);
   display: block;
   font-size: calc(0.05552em * 24);
   font-weight: 900;
@@ -42,7 +42,7 @@ button {
 .en__submit button:focus,
 button.cta.primary:hover,
 button.cta.primary:focus {
-  background-color: $client-submit-button-background-color-hover;
+  background-color: var(--client-submit-button-background-color-hover,$client-submit-button-background-color-hover);
 }
 
 .next-step .en__submit button {
@@ -52,14 +52,14 @@ button.cta.primary:focus {
 
 button:hover,
 button:focus {
-  background-color: $client-button-background-color-hover;
+  background-color: var(--client-button-background-color-hover,$client-button-background-color-hover);
 }
 
 button[disabled],
 button[disabled]:hover,
 button[disabled]:focus {
-  background-color: $client-button-background-color-disabled;
-  color: $client-button-font-color;
+  background-color: var(--client-button-background-color-disabled,$client-button-background-color-disabled);
+  color: var(--client-button-font-color,$client-button-font-color);
   content: "Processing...";
 }
 

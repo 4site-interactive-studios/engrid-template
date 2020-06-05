@@ -4,8 +4,8 @@ $client-white: #ffffff;
 $client-black: #3b3b3b;
 $client-gray: #8a8a8a;
 $client-light-gray: #cacaca;
-$client-orange: #f16e22;
-
+$client-cta: #f16e22;
+$client-cta-hover: #f05523;
 $background-color: $client-white;
 $background-image-background-color: #333333;
 
@@ -26,23 +26,23 @@ $client-input-border-color: $client-black;
 $client-input-background-color: transparent;
 
 $client-button-background-color: $client-black;
-$client-button-background-color-hover: #f05523;
-$client-button-background-color-active: $client-orange;
+$client-button-background-color-hover: $client-cta-hover;
+$client-button-background-color-active: $client-cta;
 $client-button-background-color-disabled: #949494;
 $client-button-border-color: $client-black;
-$client-button-border-color-active: $client-orange;
-$client-button-border-color-hover: #f05523;
+$client-button-border-color-active: $client-cta;
+$client-button-border-color-hover: $client-cta-hover;
 $client-button-border-radius: 0px;
 $client-button-font-color: $client-white;
 $client-button-font-color-active: $client-white;
 
-$client-submit-button-background-color: $client-orange;
-$client-submit-button-background-color-hover: #f05523;
-$client-submit-button-border-color: $client-orange;
+$client-submit-button-background-color: $client-cta;
+$client-submit-button-background-color-hover: $client-cta-hover;
+$client-submit-button-border-color: $client-cta;
 $client-submit-button-font-color: $client-white;
 
-$client-checkmark-background-color: $client-orange;
-$client-checkmark-border-color: $client-orange;
+$client-checkmark-background-color: $client-cta;
+$client-checkmark-border-color: $client-cta;
 $client-checkmark-font-color: $client-white;
 
 $client-error-red: #f12222;

@@ -52,7 +52,7 @@ button.en__ecarditems__addrecipient {
 .ecardrecipient__remove button {
   width: 30px;
   height: 30px;
-  background-color: $client-error-red;
+  background-color: var(--client-error-red,$client-error-red);
   padding: 0 !important;
   font-size: 12px !important;
   position: relative;
@@ -62,7 +62,7 @@ button.en__ecarditems__addrecipient {
 .en__ecarditems__thumb img {
   height: 150px !important;
   width: auto;
-  border: 2px solid #009bc4;
+  border: 2px solid var(--client-cta,$client-cta);
   -webkit-filter: brightness(75%);
   filter: brightness(75%);
 }

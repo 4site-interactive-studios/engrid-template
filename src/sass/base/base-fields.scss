@@ -28,6 +28,7 @@
 /* Reset height */
 .en__field__input--textarea {
   height: initial !important;
+  width: 100%;
 }
 
 /************************************
@@ -86,6 +87,7 @@
   margin-bottom: 0.5rem;
   margin-right: 1rem;
   display: flex;
+  flex-grow: 1; /* Fields should expand to fill their flexbox container */
   align-items: center;
 }
 
@@ -166,18 +168,18 @@ textarea {
   display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  height: auto !important;
+  height: auto;// @TODO Removed !important, hopefully that didn't break anything
   margin: 0rem;
   padding: 0.5rem;
-  border: $client-input-border-width solid $client-input-border-color;
-  border-radius: $client-input-border-radius;
-  background-color: $client-input-background-color;
+  border: var(--client-input-border-width,$client-input-border-width) solid var(--client-input-border-color,$client-input-border-color);
+  border-radius: var(--client-input-border-radius,$client-input-border-radius);
+  background-color: var(--client-input-background-color,$client-input-background-color);
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   font-family: inherit;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
-  color: $client-black;
+  color: var(--client-black,$client-black);
   transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
   appearance: none;
 }
@@ -219,9 +221,9 @@ input[type="week"]:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border: $client-input-border-width solid $client-gray;
-  background-color: $client-button-font-color;
-  box-shadow: 0 0 0.3125rem $client-light-gray;
+  border: var(--client-input-border-width,$client-input-border-width) solid var(--client-gray,$client-gray);
+  background-color: var(--client-button-font-color,$client-button-font-color);
+  box-shadow: 0 0 0.3125rem var(--client-light-gray,$client-light-gray);
   transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
 }
 
@@ -236,37 +238,37 @@ textarea:focus {
 /* Placeholder styling */
 /* Chrome, Firefox, Opera, Safari 10.1+ */
 ::-webkit-input-placeholder {
-  color: $client-light-gray;
+  color: var(--client-light-gray,$client-light-gray);
   opacity: 1;
   /* Firefox */
 }
 
 :-ms-input-placeholder {
-  color: $client-light-gray;
+  color: var(--client-light-gray,$client-light-gray);
   opacity: 1;
   /* Firefox */
 }
 
 ::-ms-input-placeholder {
-  color: $client-light-gray;
+  color: var(--client-light-gray,$client-light-gray);
   opacity: 1;
   /* Firefox */
 }
 
 ::placeholder {
-  color: $client-light-gray;
+  color: var(--client-light-gray,$client-light-gray);
   opacity: 1;
   /* Firefox */
 }
 
 /* Internet Explorer 10-11 */
 :-ms-input-placeholder {
-  color: $client-light-gray;
+  color: var(--client-light-gray,$client-light-gray);
 }
 
 /* Microsoft Edge */
 ::-ms-input-placeholder {
-  color: $client-light-gray;
+  color: var(--client-light-gray,$client-light-gray);
 }
 
 /* Custom Styling for Radio & Checkbox Inputs */
@@ -306,10 +308,10 @@ textarea:focus {
   left: -2rem;
   display: inline-block;
   vertical-align: middle;
-  border: 4px solid $client-black;
-  -webkit-box-shadow: inset 0 0 0 5px $client-white;
-  box-shadow: inset 0 0 0 5px $client-white;
-  background-color: $client-white;
+  border: 4px solid var(--client-black,$client-black);
+  -webkit-box-shadow: inset 0 0 0 5px var(--client-white,$client-white);
+  box-shadow: inset 0 0 0 5px var(--client-white,$client-white);
+  background-color: var(--client-white,$client-white);
   cursor: pointer;
   -webkit-transition-duration: 0.25s;
   transition-duration: 0.25s;
@@ -336,7 +338,7 @@ textarea:focus {
 .en__field__input--radio:checked + .en__field__label::before,
 .en__field__input--checkbox:checked + .en__field__label::before,
 .en__contactDetails__select:checked + .en__contactDetails__rows::before {
-  background-color: $client-checkmark-background-color;
+  background-color: var(--client-checkmark-background-color,$client-checkmark-background-color);
   -webkit-box-shadow: inset 0 0 0 2px #ffffff;
   box-shadow: inset 0 0 0 2px #ffffff;
   border-width: 2px;
@@ -344,18 +346,21 @@ textarea:focus {
 
 .en__field__input--checkbox:checked + .en__field__label::before,
 .en__contactDetails__select:checked + .en__contactDetails__rows::before {
-  color: $client-checkmark-background-color;
+  color: var(--client-checkmark-background-color,$client-checkmark-background-color);
   background-color: transparent;
 }
+
+/* TODO This needs to pull in $clinet-cta instead of being hard coded to #F57E20 */
+/* REF: https://stackoverflow.com/questions/25477819/scss-variable-in-background-image-with-svg-image-data-uri */
 .en__field__input--checkbox:checked + .en__field__label::after,
 .en__contactDetails__select:checked + .en__contactDetails__rows::after {
-  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='16' viewBox='0 0 21 16'><path fill='%23F57E20' fill-rule='nonzero' d='M18.76.16L6.68 12.113l-4.44-4.392a.555.555 0 0 0-.779 0L.161 9.006a.541.541 0 0 0 0 .771L6.29 15.84a.555.555 0 0 0 .78 0l13.77-13.624a.541.541 0 0 0 0-.771L19.539.16a.555.555 0 0 0-.779 0z'/></svg>");
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='16' viewBox='0 0 21 16'><path fill='#{svg-friendly-color($client-cta)}' fill-rule='nonzero' d='M18.76.16L6.68 12.113l-4.44-4.392a.555.555 0 0 0-.779 0L.161 9.006a.541.541 0 0 0 0 .771L6.29 15.84a.555.555 0 0 0 .78 0l13.77-13.624a.541.541 0 0 0 0-.771L19.539.16a.555.555 0 0 0-.779 0z'/></svg>");
   position: absolute;
   left: -28px;
   top: 0;
   width: 21px;
   height: 16px;
-  color: $client-checkmark-background-color;
+  color: var(--client-checkmark-background-color,$client-checkmark-background-color);
   background-color: transparent;
   font-size: calc(0.05552em * 18);
 }
@@ -364,7 +369,7 @@ textarea:focus {
 .en__field__input--radio:focus + .en__field__label::before,
 .en__field__input--checkbox:focus + .en__field__label::before,
 .en__contactDetails__select:focus + .en__contactDetails__rows::before {
-  outline: $client-gray auto 0.3125rem;
+  outline: var(--client-gray,$client-gray) auto 0.3125rem;
 }
 
 /* QA Needed: EN's hidden input field */

@@ -8,9 +8,9 @@
   padding: 0.25rem 0.5rem;
   color: $client-white;
   font-size: 0.75rem;
-  border-bottom-left-radius: $client-input-border-radius;
-  border-bottom-right-radius: $client-input-border-radius;
-  background-color: $client-error-red;
+  border-bottom-left-radius: var(--client-input-border-radius,$client-input-border-radius);
+  border-bottom-right-radius: var(--client-input-border-radius,$client-input-border-radius);
+  background-color: var(--client-error-red,$client-error-red);
   order: 3;
 }
 
@@ -87,7 +87,7 @@
   .en__field.en__field--tripleselect.en__field--validationFailed.has-value
   .en__field__element,
 #engrid.fancy-errors .en__field--validationFailed.has-value .en__field__error {
-  border-color: $client-error-red-grayscale;
-  background-color: $client-error-red-grayscale;
-  color: $client-white;
+  border-color: var(--client-error-red-grayscale,$client-error-red-grayscale);
+  background-color: var(--client-error-red-grayscale,$client-error-red-grayscale);
+  color: var(--client-white,$client-white);
 }

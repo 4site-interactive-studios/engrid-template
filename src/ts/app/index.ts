@@ -6,6 +6,12 @@ import EnForm from "./events/en-form";
 import LiveVariables from "./utils/live-variables";
 import ProcessingFees from "./events/processing-fees";
 import Modal from "./utils/modal";
+import IE from "./utils/ie";
+
+// IE Warning
+const ie = new IE();
+
+import sendIframeHeight from "./utils/iframe";
 
 export const amount = new DonationAmount(
   "transaction.donationAmt",
@@ -21,9 +27,9 @@ export const run = (opts: Object) => {
   const options = {
     ...{
       backgroundImage: "auto",
-      submitLabel: "Donate"
+      submitLabel: "Donate",
     },
-    ...opts
+    ...opts,
   };
   // The entire App
   app.setBackgroundImages(options.backgroundImage);
@@ -48,20 +54,70 @@ export const run = (opts: Object) => {
   app.debugBar();
 
   // Event Listener Examples
-  amount.onAmountChange.subscribe(s => console.log(`Live Amount: ${s}`));
-  frequency.onFrequencyChange.subscribe(s =>
+  amount.onAmountChange.subscribe((s) => console.log(`Live Amount: ${s}`));
+  frequency.onFrequencyChange.subscribe((s) =>
     console.log(`Live Frequency: ${s}`)
   );
-  form.onSubmit.subscribe(s => console.log(`Submit: ${s}`));
-  form.onError.subscribe(s => console.log(`Error: ${s}`));
+  form.onSubmit.subscribe((s) => console.log(`Submit: ${s}`));
+  form.onError.subscribe((s) => console.log(`Error: ${s}`));
 
-  window.enOnSubmit = function() {
+  window.enOnSubmit = function () {
     form.dispatchSubmit();
     return form.submit;
   };
-  window.enOnError = function() {
+  window.enOnError = function () {
     form.dispatchError();
   };
+
+  // Iframe Code Start
+  const inIframe = () => {
+    try {
+      return window.self !== window.top;
+    } catch (e) {
+      return true;
+    }
+  };
+  if (inIframe()) {
+
+    const shouldScroll = () => {
+      // If you find a error, scroll
+      if (document.querySelector('.en__errorHeader')) {
+        return true;
+      }
+      // If you find a donation amount field, don't scroll
+      if (document.getElementsByName("transaction.donationAmt").length) {
+        return false;
+      }
+      // Otherwise scroll
+      return true;
+    }
+    window.onload = () => {
+      sendIframeHeight();
+      // Scroll to top of iFrame
+      window.parent.postMessage(
+        {
+          scroll: shouldScroll(),
+        },
+        "*"
+      );
+      document.addEventListener("click", (e: Event) => {
+        setTimeout(() => {
+          sendIframeHeight();
+        }, 100);
+      });
+    };
+    window.onresize = () => sendIframeHeight();
+    // Change the layout class to embedded
+    const gridElement = document.getElementById("engrid") as HTMLElement;
+    // @TODO We need to write a better way of stripping layout classes 
+    gridElement.classList.add("layout-embedded");
+    gridElement.classList.remove("layout-centerleft1col");
+    gridElement.classList.remove("layout-centercenter1col");
+    gridElement.classList.remove("layout-centerright1col");
+    gridElement.classList.remove("layout-centercenter1col-wide");
+
+  }
+  // Iframe Code End
 
   // Live Variables
   new LiveVariables(options.submitLabel);
