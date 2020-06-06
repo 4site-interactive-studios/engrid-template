@@ -96,8 +96,7 @@
   .body-banner,
   .body-bannerOverlay,
   .body-side,
-  .body-footerOutside,
-  .page-backgroundImageOverlay {
+  .body-footerOutside{
     // display: none;
     position: absolute;
     width: 1px;
@@ -148,28 +147,22 @@ body:not(#en__pagebuilder) #engrid.layout-centerright1col {
   /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
   .page-backgroundImage::before {
     content: "";
-    background-image: radial-gradient(
-      circle at 50% 0,
-      rgba(0, 0, 0, 0.3),
-      transparent 53%
-    );
+    // background-image: radial-gradient(
+    //   circle at 50% 0,
+    //   rgba(0, 0, 0, 0.3),
+    //   transparent 53%
+    // );
     z-index: -3;
     grid-column: pc;
   }
   .page-backgroundImageOverlay {
-    grid-row: page-start / body-main-end;
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(0, 0, 0, 0.3)),
-      color-stop(30%, transparent)
-    );
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.3) 0%,
-      transparent 30%
-    );
+    grid-row: page-start / content-preFooter-end;
+    // background-image: linear-gradient(
+    //   to bottom,
+    //   rgba(0, 0, 0, 0.3) 0%,
+    //   transparent 30%
+    // );
+    background-color: rgba(0,0,0,0.3);
   }
 }
 

@@ -472,20 +472,29 @@ body:not(#en__pagebuilder) #engrid .page-customCode {
 body:not(#en__pagebuilder)
   #engrid
   .en__component--advrow
-  .page-backgroundImage {
+  .page-backgroundImage{
+    overflow: hidden; // added for before pseudo-element to help improve page redraw and subsequent page scroll FPS
+    position: relative; // added for before pseudo-element to help improve page redraw and subsequent page scroll FPS
+  }
+
+body:not(#en__pagebuilder)
+  #engrid
+  .en__component--advrow
+  .page-backgroundImage::before {
   background-position: top left;
   background-repeat: no-repeat;
   z-index: -3;
   background-size: cover;
   // background-image: var(--background-image,#{$background-image});
   background-image: var(--background-image); //@TODO Get SCSS variable working
+  will-change: transform; // creates a new paint layer
 }
 
 // @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
 body:not(#en__pagebuilder).footer-below-fold
   #engrid
   .en__component--advrow
-  .page-backgroundImage {
+  .page-backgroundImage::before {
   -webkit-clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   height: 120vh;
