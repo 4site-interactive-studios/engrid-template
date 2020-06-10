@@ -84,12 +84,12 @@ export const run = (opts: Object) => {
       if (document.querySelector('.en__errorHeader')) {
         return true;
       }
-      // If you find a donation amount field, don't scroll
-      if (document.getElementsByName("transaction.donationAmt").length) {
-        return false;
-      }
-      // Otherwise scroll
-      return true;
+      // Try to match the iframe referrer URL by testing valid EN Page URLs
+      let referrer = document.referrer;
+      let enURLPattern = new RegExp(/^(.*)\/(page)\/(\d+.*)/);
+
+      // Scroll if the Regex matches, don't scroll otherwise
+      return enURLPattern.test(referrer);
     }
     window.onload = () => {
       sendIframeHeight();
@@ -108,7 +108,7 @@ export const run = (opts: Object) => {
     };
     window.onresize = () => sendIframeHeight();
     // Change the layout class to embedded
-    const gridElement = document.getElementById("engrid") as HTMLElement;
+    const gridElement = document.getElementById("engrid") || document.body as HTMLElement;
     // @TODO We need to write a better way of stripping layout classes 
     gridElement.classList.add("layout-embedded");
     gridElement.classList.remove("layout-centerleft1col");
