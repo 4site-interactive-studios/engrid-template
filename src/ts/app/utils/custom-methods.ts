@@ -77,7 +77,7 @@ export const setBackgroundImages = (bg: string | Array<String>) => {
   const pageBackgroundLegacyImg = document.querySelector(
     ".background-image p"
   ) as HTMLElement;
-  let pageBackgroundImgSrc = "" as string;
+  let pageBackgroundImgSrc = "https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10069/home_hero_turtle.png?v=1594057571000" as string;
   // let pageBackgroundImgSrc: any = null;
   const contentFooter = document.querySelector(".content-footer");
 
