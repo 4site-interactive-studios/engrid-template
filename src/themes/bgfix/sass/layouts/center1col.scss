@@ -1,0 +1,267 @@
+@import "../../../../sass/addons/layouts/engrid-layout-centerleft1col";
+@import "../../../../sass/base/layouts/engrid-layout-centercenter1col";
+@import "../../../../sass/addons/layouts/engrid-layout-centercenter1col-wide";
+@import "../../../../sass/addons/layouts/engrid-layout-centerright1col";
+
+/*
+* ####################################################################################################################
+* Layout - Center ANY
+* ####################################################################################################################
+*/
+
+/*
+* ##########################################################
+* # ENGRID - Mobile First Styling
+* # LAYOUT - Center ANY
+* ##########################################################
+*/
+
+@media screen and (max-width: 360px) {
+  // Remove down arrow when giving frequency wraps
+  #engrid .monthly-gift-upsell-tooltip .highlight:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  // Remove "Give By Select" icons on small screens
+  #engrid
+    .give-by-select
+    .en__field--radio
+    .en__field__item
+    input[type="radio"]
+    + label {
+    background-image: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #engrid h1 {
+    font-size: calc((0.05552em * 48) * 0.85);
+  }
+  #engrid h2,
+  #engrid .en__field--donationAmt .en__field__label--item,
+  #engrid .en__field--donationAmt .en__field__item--other::before,
+  #engrid .en__field--donationAmt .en__field__item--other input,
+  #engrid .give-by-select .en__field--radio label,
+  #engrid .en__field--recurrpay label.en__field__label,
+  #engrid .highlight.big {
+    font-size: calc((0.05552em * 24) * 0.9);
+  }
+  body #engrid h3,
+  #engrid .pre-footer-card p,
+  #engrid .pre-footer-card.footer-wrapper .footer-menu a {
+    font-size: calc((0.05552em * 16) * 1);
+  }
+  #engrid label.en__field__label {
+    font-size: calc((0.05552em * 12) * 0.95);
+  }
+
+  #engrid
+    .en__field__label--item
+    #engrid
+    .en__field__input--checkbox
+    + .en__field__label,
+  #engrid .en__contactDetails__rows,
+  #engrid
+    .give-by-select
+    .en__field--radio
+    .en__field__item
+    input[type="radio"]
+    + label {
+    font-size: calc((0.05552em * 18) * 1);
+  }
+}
+
+@media screen and (max-width: 599px) {
+  body #engrid {
+    font-size: 94%;
+  }
+
+  #engrid .en__field--donationAmt .en__field__element--radio .en__field__item {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+#engrid h1 {
+  margin-top: 5px;
+}
+
+#engrid.layout-centerleft1col,
+#engrid.layout-centercenter1col,
+#engrid.layout-centercenter1col-wide,
+#engrid.layout-centerright1col {
+  .page-alert,
+  .content-header,
+  .body-banner,
+  .body-bannerOverlay,
+  .body-side,
+  .body-footerOutside,
+  .page-backgroundImageOverlay {
+    // display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .body-headerOutside {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    grid-column: bc;
+  }
+
+  .content-preFooter {
+    grid-column: pc;
+    background-size: contain;
+  }
+
+  .content-preFooter.pseudo-subgrid > div {
+    grid-column: bc;
+  }
+
+  .body-footer {
+    margin-bottom: 5rem;
+  }
+
+  .content-footer.pseudo-subgrid > div {
+    grid-column: bc;
+  }
+}
+
+body:not(#en__pagebuilder) #engrid.layout-centerleft1col,
+body:not(#en__pagebuilder) #engrid.layout-centercenter1col,
+body:not(#en__pagebuilder) #engrid.layout-centercenter1col-wide,
+body:not(#en__pagebuilder) #engrid.layout-centerright1col {
+  /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
+  .page-backgroundImage::before {
+    content: "";
+    background-image: radial-gradient(
+      circle at 50% 0,
+      rgba(0, 0, 0, 0.3),
+      transparent 53%
+    );
+    z-index: -3;
+    grid-column: pc;
+  }
+  .page-backgroundImageOverlay {
+    grid-row: page-start / body-main-end;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.3)),
+      color-stop(30%, transparent)
+    );
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      transparent 30%
+    );
+  }
+}
+
+body#en__pagebuilder #engrid.layout-centerleft1col,
+body#en__pagebuilder #engrid.layout-centercenter1col,
+body#en__pagebuilder #engrid.layout-centercenter1col-wide,
+body#en__pagebuilder #engrid.layout-centerright1col {
+  .page-backgroundImage > div,
+  .page-backgroundImageOverlay > div {
+    grid-column: bc;
+  }
+}
+
+/*
+* ##########################################################
+* # ENGRID - BODY Column Breakpoint Styling
+* # LAYOUT - Center ANY - [class^="layout-center"][class$="1col"]
+* ##########################################################
+*/
+
+/* Sum of all MIN values of the Body Columns */
+@media screen and (min-width: 600px) {
+  #engrid.layout-centerleft1col,
+  #engrid.layout-centercenter1col,
+  #engrid.layout-centercenter1col-wide,
+  #engrid.layout-centerright1col {
+    .en__component--advrow .body-header,
+    .en__component--advrow .body-banner,
+    .en__component--advrow .body-bannerOverlay,
+    .en__component--advrow .body-top,
+    .en__component--advrow .body-side,
+    .en__component--advrow .body-main,
+    .en__component--advrow .body-bottom,
+    .en__component--advrow .body-footer {
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+    }
+
+    .en__component--advrow .body-header {
+      padding-top: 4rem;
+    }
+
+    .en__component--advrow .body-footer {
+      padding-bottom: 4rem;
+    }
+
+    .body-headerOutside {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    [class^="body-"] {
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    .body-header {
+      margin-top: 1rem;
+      border-top: 1px solid black;
+      border-top-left-radius: $client-input-border-radius;
+      border-top-right-radius: $client-input-border-radius;
+    }
+
+    .content-preFooter.pseudo-subgrid > div {
+      grid-column: cc;
+    }
+
+    .content-footer.pseudo-subgrid > div {
+      grid-column: cc;
+    }
+  }
+}
+
+/*
+* ##########################################################
+* # ENGRID - Content Column Breakpoint Styling
+* # LAYOUT - Center ANY - [class^="layout-center"][class$="1col"]
+* ##########################################################
+*/
+
+/* Sum of all MAX values of the Body Columns + 1px */
+@media screen and (min-width: 1231px) {
+  #engrid.layout-centerleft1col,
+  #engrid.layout-centercenter1col,
+  #engrid.layout-centercenter1col-wide,
+  #engrid.layout-centerright1col {
+    .content-preFooter {
+      background-size: cover;
+    }
+  }
+}
+
+/*
+* ##########################################################
+* # ENGRID - IE 11 Override Background Styling
+* ##########################################################
+*/
+body:not(#en__pagebuilder) #engrid.layout-ie11override:not(.layout-embedded){
+  background-color: #ffffff;
+}
