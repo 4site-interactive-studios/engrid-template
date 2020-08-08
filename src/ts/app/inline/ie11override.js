@@ -2,6 +2,9 @@
 if(navigator.appName.indexOf("Internet Explorer")!=-1 || navigator.userAgent.match(/Trident.*rv[ :]*11\./)){
     const enGrid = document.getElementById("engrid");
 
+    //@TODO Needs code to strip any non "layout-embedded" class from the page
+    // ....
+
     // Add "layout-ie11override" class to the page
     enGrid.classList.add("layout-ie11override");
 
