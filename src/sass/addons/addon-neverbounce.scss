@@ -1,5 +1,6 @@
 /* Utilizes the standard NeverBounce Implimentation but styles it to match the client brand */
 /* Note, we add "async" to the javascript file call */
+/* Note, NeverBounce's CDN uses HTTP 1. You can self host the file to get around this */
 /* @TODO Check support for "fancyerrors" and float labels, as well as input fields with rounded borders
 /*
     <script type="text/javascript">
