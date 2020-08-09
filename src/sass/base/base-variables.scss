@@ -18,12 +18,12 @@ $background-image-background-color: #333333;
  * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
  */
 
-$client-body-background-color: $client-white; //@TODO Not yet used anywhere
+$client-body-background-color: $client-white; // @TODO Not yet used anywhere
 $client-body-border-radius: 0px;
-$body-padding-sm: 0.8652rem; //@TODO Revisit
-$body-padding: calc(0.8652rem * 0.75); //@TODO Revisit
-$body-padding-lg: calc(0.8652rem * 2.5); //@TODO Revisit
-$body-padding-xlg: calc(0.8652rem * 5); //@TODO Revisit
+$body-padding-sm: 0.8652rem; // @TODO Revisit
+$body-padding: calc(0.8652rem * 0.75); // @TODO Revisit
+$body-padding-lg: calc(0.8652rem * 2.5); // @TODO Revisit
+$body-padding-xlg: calc(0.8652rem * 5); // @TODO Revisit
 
 $client-input-border-radius: 5px;
 $client-input-border-width: 2px;
