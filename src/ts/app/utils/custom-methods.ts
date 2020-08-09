@@ -32,7 +32,7 @@ export const enInput = (() => {
       bindEvents(e);
     });
 
-    /* @TODO */
+    /* @TODO Review Engaging Networks to see if this is still needed */
     /************************************
      * Automatically select other radio input when an amount is entered into it.
      ***********************************/
@@ -67,6 +67,7 @@ export const enInput = (() => {
 export const setBackgroundImages = (bg: string | Array<String>) => {
   console.log("Backgroud", bg);
 
+  // @TODO This whole section might be overkill. This should 
   // Find Inline Background Image, hide it, and set it as the background image.
   const pageBackground = document.querySelector(
     ".page-backgroundImage"
@@ -78,49 +79,30 @@ export const setBackgroundImages = (bg: string | Array<String>) => {
     ".background-image p"
   ) as HTMLElement;
   let pageBackgroundImgSrc = "" as string;
-  // let pageBackgroundImgSrc: any = null;
-  const contentFooter = document.querySelector(".content-footer");
 
-  /*!
-   * Determine if an element is in the viewport
-   * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
-   * @param  {Node}    elem The element
-   * @return {Boolean}      Returns true if element is in the viewport
-   */
-  const isInViewport = (e: any) => {
-    const distance = e.getBoundingClientRect();
-    // console.log("Footer: ", distance);
-    return (
-      distance.top >= 0 &&
-      distance.left >= 0 &&
-      distance.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-      distance.right <=
-      (window.innerWidth || document.documentElement.clientWidth)
-    );
-  };
-
-  // If we find a image on the page, we don't care about the hardcoded options
-
-
-
-  // Find the background image
+  // @TODO Consider moving JS that sets background image into the page template as it's critical to initial page render
+  // If a an <img> is added to the Background Image section
   if (pageBackgroundImg) {
-    //@TODO consider moving JS into page template as it's critical to initial render
-    //Measure page layout to see if it's a short or tall page before applying the background image
-    if (contentFooter && isInViewport(contentFooter)) {
-      body.classList.add("footer-above-fold");
-    } else {
-      body.classList.add("footer-below-fold");
-    }
+
+    // Get the source of the <img> added to the Background Image section.
     pageBackgroundImgSrc = pageBackgroundImg.src;
+
+    // @TODO Review this as it may be obsolete
+    // Hide the background image
     pageBackgroundImg.style.display = "none";
+
   } else if (pageBackgroundLegacyImg) {
-    // Support for legacy pages
+    // This was added for RAN and helos support legacy pages and how they had their background image defined
+    // "pageBackgroundLegacyImg" can be changed for each client needing legacy image support
+    // @TODO "pageBackgroundLegacyImg" should be defined in the cline theme folder otherwise we lose it everytime a new client needs it changed
     pageBackgroundImgSrc = pageBackgroundLegacyImg.innerHTML;
+
+    // Hide the background image
     pageBackgroundLegacyImg.style.display = "none";
   } else {
-    // Fallback Image
+    // @TODO Having multiple fallback/default images is a cool idea but a non-use case anyone has asked for.
+    // @BODY Replace this section with something that grabs the single hard coded fallback image from the theme
+    // If no in-page image is defined, set a fallback/default image by randomly selecting from any defined option
     if (Array.isArray(bg)) {
       pageBackgroundImgSrc = bg[Math.floor(Math.random() * bg.length)] as string;
     }
@@ -129,12 +111,17 @@ export const setBackgroundImages = (bg: string | Array<String>) => {
   // Set the background image
   if (pageBackground && pageBackgroundImgSrc) {
 
+    // @TODO Gut IE11 background image support?
+    // Check if IE11, because IE11 does not support our CSS Grid layout and we need to set it elsewhere
     if (navigator.appName.indexOf("Internet Explorer") != -1 || navigator.userAgent.match(/Trident.*rv[ :]*11\./)) {
-      // IF IE11, set background image on body
+      // If IE11, set background image on body
       // document.body.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
     } else {
-      // IF not IE11, set background image on the appropriate Backgorund Image grid component
-      pageBackground.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
+      // If not IE11, set background image on the appropriate Background Image grid component
+      //pageBackground.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
+      var pageBackgroundImgSrcUrl = "url(" + pageBackgroundImgSrc + ")";
+      // Add support for the background image to be defined using CSS Custom Properties
+      pageBackground.style.setProperty('--background-image', pageBackgroundImgSrcUrl);
     }
   }
 };
@@ -1124,4 +1111,34 @@ if (country_select) {
       }
     }, 100);
   });
+}
+
+// @TODO "Footer in Viewport Check" should be made its own TS file
+// @TODO "Footer in Viewport Check" should be inlined in <head> because it is render critical
+const contentFooter = document.querySelector(".content-footer");
+
+/*!
+* Determine if an element is in the viewport
+* (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+* @param  {Node}    elem The element
+* @return {Boolean}      Returns true if element is in the viewport
+*/
+const isInViewport = (e: any) => {
+    const distance = e.getBoundingClientRect();
+    // console.log("Footer: ", distance);
+    return (
+        distance.top >= 0 &&
+        distance.left >= 0 &&
+        distance.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+        distance.right <=
+        (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
+
+// Checks to see if the page is so short, the footer is above the fold. If the footer is above the folde we'll use this class to ensure at a minimum the page fills the full viewport height.
+if (contentFooter && isInViewport(contentFooter)) {
+    body.classList.add("footer-above-fold");
+} else {
+    body.classList.add("footer-below-fold");
 }
