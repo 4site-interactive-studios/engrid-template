@@ -1,0 +1,609 @@
+#engrid {
+  // &::before {
+  //   content: "";
+  //   display: block;
+  //   height: 12px;
+  //   width: 100%;
+  //   background: url("https://www.oxfam.ca/wp-content/uploads/2018/08/toptop.jpg")
+  //     center center no-repeat;
+  //   background-size: cover;
+  // }
+  // .body-header {
+  //   border-top: 0 !important;
+  //   &::before {
+  //     content: "";
+  //     display: block;
+  //     height: 12px;
+  //     width: 100%;
+  //     background: url("https://www.oxfam.ca/wp-content/uploads/2018/08/toptop.jpg")
+  //       center center no-repeat;
+  //     background-size: cover;
+  //     background-position: left;
+  //     z-index: 0 !important;
+  //     box-shadow: none !important;
+  //   }
+  // }
+  .page-backgroundImage {
+    background-attachment: fixed;
+    height: auto !important;
+    clip-path: none !important;
+    &::before {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: -12px;
+      width: 100vw;
+      height: calc(100vh + 12px);
+    }
+  }
+}
+
+// @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
+body {
+  color: var(--client-black,$client-black);
+  background-color: var(--background-color,$background-color);
+}
+
+body,
+body#en__pagebuilder {
+  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Proxima Nova Regular",sans-serif;
+  font-size: 1.125em;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+}
+
+body:not(#en__pagebuilder) {
+  /* We need to set labels for error messages, but don't want them visually displayed outside page builder */
+  /* en__field--inmem is In Memoriam */
+  .en__field--inmem > label,
+  .en__field--recurrpay > label,
+  .en__field--donationAmt > label {
+    display: none;
+  }
+}
+
+/* RAN Named their EMAIl Opt-in `email` which causes it to get the generated class `en__field--email` that matches the auto assigned class `en__field--email` given to EMAIL type fields. This fixes that collision of styles. https://d.pr/i/ziiG76 */
+.en__field--102600 label {
+  position: relative !important;
+  -webkit-transform: initial !important;
+  transform: initial !important;
+  opacity: 1 !important;
+}
+
+/* Legacy Template Support */
+.legacy .en__component--row--1,
+.legacy .en__component--row--2 {
+  display: initial !important;
+}
+
+h1 {
+  color: var(--client-black,$client-black);
+  font-family:"Proxima Nova Bold",sans-serif;
+  font-size: calc(0.05552em * 48);
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-align: center;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: var(--client-black,$client-black);
+  font-family: "Proxima Nova Bold",sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 36px;
+  letter-spacing: normal;
+}
+
+h3 {
+  color: var(--client-black,$client-black);
+  font-family: "Proxima Nova Bold",sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 36px;
+  letter-spacing: normal;
+}
+
+label.en__field__label {
+  font-family: "Proxima Nova Regular",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.68px;
+  text-transform: uppercase;
+}
+
+.en__field__label--item {
+  font-family: "Proxima Nova Regular",sans-serif;
+  font-size: calc(0.05552em * 18);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+}
+
+.en__field--donationAmt {
+  .en__field__label--item,
+  .en__field__item--other::before,
+  .en__field__item--other input {
+    font-family: "Proxima Nova Regular",sans-serif;
+    font-size: calc(0.05552em * 24);
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    border-radius: 0px;
+  }
+}
+
+.en__field--recurrpay label.en__field__label {
+  font-size: calc(0.05552em * 24);
+}
+
+.give-by-select .en__field--radio {
+  label {
+    justify-content: center;
+    margin-top: 0.83rem;
+    display: block;
+    width: 100%;
+    font-size: calc(0.05552em * 24);
+    font-weight: 900;
+    line-height: 1;
+    padding: 18px 0;
+  }
+}
+
+.highlight {
+  background-color: var(--client-highlight-background-color,$client-highlight-background-color);
+  color: var(--client-highlight-font-color,$client-highlight-font-color);
+  padding: 0.5rem;
+  font-weight: 500;
+  display: inline-block;
+  // margin-left: -0.5rem;
+  &.big {
+    font-size: 120%;
+  }
+}
+
+.en__field--donationAmt {
+  input[type="text"].en__field__input--other,
+  input[type="number"].en__field__input--other,
+  input[type="tel"].en__field__input--other {
+    padding-left: 33%;
+    // padding-right: 27%;
+    // text-align: center;
+    min-height: 64px;
+  }
+}
+
+.en__field--donationAmt .en__field__item--other::before {
+  display: block;
+  content: "$";
+  position: relative;
+  height: 0;
+  left: calc((100% / 3) - 1rem);
+  top: 1.1rem;
+  color: #ffffff;
+  width: 0;
+}
+
+.en__field--monthly_upsell_checkbox
+  .en__field__input--checkbox
+  + .en__field__label {
+  display: inline-block !important;
+}
+
+.en__field--monthly_upsell_checkbox
+  .en__field__input--checkbox
+  + .en__field__label::before {
+  margin-top: 0.25rem;
+}
+
+// .en__field--donationAmt .en__field__item--other::after{
+//   opacity: .8;
+//   font-size: 80%;
+//   position: absolute;
+//   font-family: inherit;
+//   font-weight: 400;
+//   line-height: 1.5;
+//   bottom: 1.25rem;
+//   display: inline-block;
+//   height: 0;
+//   margin-left: .5rem;
+// }
+
+// .en__field--donationAmt.monthly-giving .en__field__item--other::after {
+//   content: "enter monthly amount";
+// }
+
+// .en__field--donationAmt:not(.monthly-giving) .en__field__item--other::after {
+//   content: "enter amount";
+// }
+
+.en__field--recurrpay {
+  label.en__field__label {
+    // font-size: calc(0.05552em * 24) !important;
+    font-weight: 900 !important;
+    text-transform: none !important;
+    &::before {
+      top: 3px;
+    }
+  }
+
+  .en__field--recurrpay > label {
+    display: none;
+  }
+}
+
+.monthly-gift-upsell-tooltip {
+  text-align: center;
+}
+
+.monthly-gift-upsell-tooltip .highlight:after {
+  bottom: -12px;
+  left: 60%;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border: 20px solid transparent;
+  border-top-color: #f9f003;
+  margin-left: 30px;
+  z-index: 1;
+}
+
+.en__field__input--checkbox + .en__field__label,
+.en__contactDetails__rows {
+  font-size: calc(0.05552em * 18);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.4px;
+  display: inline-block;
+  line-height: 1.4;
+  .highlight {
+    font-weight: 700;
+    margin-top: -0.5rem;
+    margin-left: -0.2rem;
+  }
+}
+
+.en__field--donationAmt .en__field__element--radio {
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-items: center;
+  margin: 0.9375rem auto;
+}
+
+.en__field--donationAmt .en__field__element--radio .en__field__item,
+.en__component--formblock
+  .en__field--donationAmt
+  div.en__field__item:first-of-type,
+.en__component--formblock
+  .en__field--donationAmt
+  div.en__field__item:last-of-type {
+  margin: 0 0.25rem 1rem 0.25rem !important;
+  margin-top: 0 !important;
+  margin-right: 0.25rem !important;
+  margin-bottom: 1rem !important;
+  margin-left: 0.25rem !important;
+}
+
+.en__field--donationAmt .en__field__element--radio .en__field__item {
+  width: calc((100% / 3) - (1rem / 2));
+}
+
+.en__field--donationAmt .en__field__element--radio .en__field__item label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 64px;
+  align-items: center;
+}
+
+.pre-footer-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.pre-footer-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  padding: 0rem 1rem 2rem 1rem;
+  img {
+    display: block;
+    margin-bottom: 35px;
+  }
+  .header-wrapper {
+    h2 {
+      margin: 0;
+      // font-size: calc(0.05552em * 32);
+      // font-weight: 900;
+      // letter-spacing: 1px;
+      // color: $client-black;
+      text-transform: uppercase;
+      // line-height: 1;
+      padding: 1rem 1rem 0.5rem 1rem; // Corrects for the fact the font is vertically off center
+    }
+  }
+  // p {
+  //   font-size: calc(0.05552em * 16);
+  //   line-height: 1.58;
+  //   letter-spacing: 0.2px;
+  //   text-align: center;
+  // }
+}
+
+.content-preFooter {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  // background-color: $client-prefooter-background-color;
+
+  h1{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    color: #ffffff;
+  }
+
+  p{
+    color: #ffffff;
+  }
+
+}
+
+.content-footer {
+  background-color: var(--client-footer-background-color,$client-footer-background-color);
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 30px 0px;
+  flex-wrap: wrap;
+  .footer-logo {
+    padding: 1rem;
+    img {
+      width: auto;
+      height: 50px;
+    }
+  }
+  .footer-menu {
+    padding: 1rem;
+    a {
+      display: block;
+      color: #ffffff;
+      font-size: calc(0.05552em * 16);
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .footer-copy {
+    padding: 1rem;
+    max-width: 452px;
+
+    p {
+      font-size: calc(0.05552em * 14);
+      font-weight: 400;
+      line-height: 1.57;
+      letter-spacing: 0.6px;
+      color: #ffffff;
+    }
+  }
+  .address {
+    font-size: calc(0.05552em * 14);
+    font-weight: 400;
+    line-height: 1.57;
+    letter-spacing: 0.6px;
+    color: #ffffff;
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding-top: 30px;
+    border-top: 2px solid rgba(#ffffff, 0.8);
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 970px) {
+  .footer-wrapper .footer-copy p {
+    border-left: 1px solid #ffffff;
+    padding-left: 65px;
+  }
+}
+
+@media screen and (max-width: 497px) {
+  .footer-wrapper {
+    text-align: center;
+  }
+}
+
+.give-by-select .en__field--radio .en__field__item {
+  flex-grow: 1;
+
+  input[type="radio"] + label {
+    flex-grow: 1;
+    padding: 1rem 0 1rem 2.25rem;
+    background-position-x: calc(50% - 25px);
+    background-position-y: calc(50% - 2px);
+    background-repeat: no-repeat;
+    font-size: calc(0.05552em * 18);
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #ffffff;
+    // line-height: 1;
+    text-transform: none;
+  }
+}
+
+// Case insensitive selector
+.give-by-select .en__field--radio input[value$="ard"] + label {
+  background-size: 24px 18px;
+  background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/card.png?v=1572545889000");
+}
+
+// Case insensitive selector
+.give-by-select .en__field--radio input[value$="heck"] + label {
+  background-size: 18px 16px;
+  background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/bank.png?v=1572545890000");
+}
+
+// Case insensitive selector
+.give-by-select .en__field--radio input[value$="aypal"] + label {
+  background-size: 17px 20px;
+  background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10042/paypal.png?v=1572545891000");
+}
+
+// This field had a highlight applied to it that causes the checbox to show up off center
+#en__field_supporter_monthly_upsell_checkbox:checked + .en__field__label:after {
+  top: 0.25rem;
+}
+
+.en__field--donationAmt input.en__field__input--other::placeholder {
+  opacity: 0.7;
+}
+
+.white-font {
+  color: $client-white;
+}
+
+/** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/
+/* prettier-ignore */
+.en__component--advrow:not(.show) :not(.pboAdvancedRow__preview) .hide.en__component--column {
+  display: none;
+}
+
+/** Hide CONTENT when viewed publicly, but not when viewed in page builder. **/
+body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
+  display: none !important;
+}
+
+// Client specific CSS
+.content-footer > div {
+  grid-column: pc !important;
+}
+.footer-block-three {
+  height: 14px;
+  background: url("https://oxfam.ca/wp-content/uploads/2018/06/footer-bg.png");
+  background-size: cover;
+  clear: both;
+  font-size: 0;
+  line-height: 0;
+}
+
+.footer-block-two {
+  background-color: rgba(12, 136, 74, 1);
+}
+
+.footer-wrapper {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-block-two .yd-col.yd-ft-left p {
+  color: #ffffff;
+  font-size: 14px;
+  display: inline-block;
+  font-family: "Proxima Nova Regular",sans-serif;
+  font-weight: normal;
+  line-height: 26px;
+  /* margin-left: 0px; */
+  margin: 20px 20px 20px 0;
+}
+
+.footer-block-two .yd-col.yd-ft-right p {
+  color: #ffffff;
+  font-size: 14px;
+  display: inline-block;
+  font-family: "Proxima Nova Regular",sans-serif;
+  margin-right: 10px;
+  /* margin-left: 0px; */
+  margin: 20px 20px 20px 0;
+}
+
+.yd-col {
+  /* float: left;
+    min-height: 1px; */
+  display: inline-block;
+}
+
+/* .yd-col:after {
+    clear: both;
+} */
+
+.yd-ft-left {
+  width: 36.51%;
+}
+
+.yd-ft-middle {
+  width: 42.16%;
+}
+
+.yd-ft-right {
+  width: 19.33%;
+  text-align: right;
+}
+
+.ft-link-wrapper {
+  margin: 20px;
+}
+
+.ft-link-wrapper a {
+  margin-right: 25px !important;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  display: inline-block;
+  font-family: "Proxima Nova Regular",sans-serif;
+  font-weight: normal;
+  line-height: 26px;
+}
+
+.ft-link-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.footer-badges {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  img {
+    display: block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* This input field is pretending to be a button, so let's mirror the border color of its neighboring buttons */
+input[name="transaction.donationAmt.other"]{
+  border-color: var(--client-button-border-color,$client-button-border-color)
+}

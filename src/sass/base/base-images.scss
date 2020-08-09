@@ -1,7 +1,6 @@
-/* Needs QA: Makes images responsive. Look into not using !important. */
+/* Makes images responsive */
 img {
   max-width: 100%;
-  // height: auto !important;
   margin: 0 auto;
   display: inherit;
 }
