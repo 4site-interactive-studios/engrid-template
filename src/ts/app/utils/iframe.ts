@@ -1,8 +1,9 @@
-const sendIframeHeight = () => {
+const sendIframeHeight = (frameId: string) => {
   let height = document.body.offsetHeight;
   window.parent.postMessage(
     {
       frameHeight: height,
+      enID: frameId
     },
     "*"
   );

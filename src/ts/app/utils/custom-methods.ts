@@ -353,11 +353,15 @@ export const debugBar = () => {
     }
 
     const fancyErrorsToggle = () => {
-      enGrid.classList.toggle("fancy-errors");
+      if(enGrid) {
+        enGrid.classList.toggle("fancy-errors");
+      }
     };
 
     const floatLabelsToggle = () => {
-      enGrid.classList.toggle("float-labels");
+      if(enGrid) {
+        enGrid.classList.toggle("float-labels");
+      }
     };
 
     const pageEdit = () => {
@@ -552,15 +556,17 @@ export const watchInmemField = () => {
   ) as HTMLInputElement;
 
   const handleEnFieldTransactionInmemChange = (e: Event) => {
-    if (enFieldTransactionInmem.checked) {
-      enGrid.classList.add("has-give-in-honor");
-    } else {
-      enGrid.classList.remove("has-give-in-honor");
+    if (enGrid) {
+      if (enFieldTransactionInmem.checked) {
+        enGrid.classList.add("has-give-in-honor");
+      } else {
+        enGrid.classList.remove("has-give-in-honor");
+      }
     }
   };
 
   // Check Give In Honor State on Page Load
-  if (enFieldTransactionInmem) {
+  if (enFieldTransactionInmem && enGrid) {
     // Run on page load
     if (enFieldTransactionInmem.checked) {
       enGrid.classList.add("has-give-in-honor");
@@ -594,10 +600,10 @@ export const watchRecurrpayField = () => {
     enFieldRecurrpayCurrentValue = document.querySelector(
       'input[name="transaction.recurrpay"]:checked'
     ) as HTMLInputElement;
-    if (enFieldRecurrpayCurrentValue.value.toLowerCase() == "y") {
+    if (enFieldRecurrpayCurrentValue.value.toLowerCase() == "y" && enGrid) {
       enGrid.classList.remove("has-give-once");
       enGrid.classList.add("has-give-monthly");
-    } else if (enFieldRecurrpayCurrentValue.value.toLowerCase() == "n") {
+    } else if (enFieldRecurrpayCurrentValue.value.toLowerCase() == "n" && enGrid) {
       enGrid.classList.remove("has-give-monthly");
       enGrid.classList.add("has-give-once");
     }
@@ -608,10 +614,10 @@ export const watchRecurrpayField = () => {
     enFieldRecurrpayCurrentValue = document.querySelector(
       'input[name="transaction.recurrpay"]:checked'
     ) as HTMLInputElement;
-    if (enFieldRecurrpayCurrentValue.value.toLowerCase() == "y") {
+    if (enFieldRecurrpayCurrentValue.value.toLowerCase() == "y" && enGrid) {
       enGrid.classList.remove("has-give-once");
       enGrid.classList.add("has-give-monthly");
-    } else if (enFieldRecurrpayCurrentValue.value.toLowerCase() == "n") {
+    } else if (enFieldRecurrpayCurrentValue.value.toLowerCase() == "n" && enGrid) {
       enGrid.classList.add("has-give-once");
       enGrid.classList.remove("has-give-monthly");
     }
@@ -654,23 +660,29 @@ export const watchGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
     ) {
-      removeClassesByPrefix(enGrid, prefix);
-      enGrid.classList.add("has-give-by-card");
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-card");
+      }
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
     } else if (
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
     ) {
-      removeClassesByPrefix(enGrid, prefix);
-      enGrid.classList.add("has-give-by-check");
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-check");
+      }
       enFieldPaymentType.value = "check";
     } else if (
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
-      removeClassesByPrefix(enGrid, prefix);
-      enGrid.classList.add("has-give-by-paypal");
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-paypal");      
+      }
       enFieldPaymentType.value = "paypal";
     }
   };
@@ -684,24 +696,30 @@ export const watchGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
     ) {
-      removeClassesByPrefix(enGrid, prefix);
-      enGrid.classList.add("has-give-by-card");
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-card");      
+      }
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
     } else if (
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
     ) {
-      removeClassesByPrefix(enGrid, prefix);
-      enGrid.classList.add("has-give-by-check");
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-check");
+      }
       enFieldPaymentType.value = "check";
       enFieldPaymentType.value = "Check";
     } else if (
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
-      removeClassesByPrefix(enGrid, prefix);
-      enGrid.classList.add("has-give-by-paypal");
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-paypal");
+      }
       enFieldPaymentType.value = "paypal";
       enFieldPaymentType.value = "Paypal";
     }
@@ -745,24 +763,30 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
     ) {
-      removeClassesByPrefix(enGrid, prefix);
-      enGrid.classList.add("has-give-by-card");
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-card");
+      }
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
     } else if (
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
     ) {
-      removeClassesByPrefix(enGrid, prefix);
-      enGrid.classList.add("has-give-by-check");
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-check");      
+      }
       enFieldPaymentType.value = "Check";
       enFieldPaymentType.value = "check";
     } else if (
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
-      removeClassesByPrefix(enGrid, prefix);
-      enGrid.classList.add("has-give-by-paypal");
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-paypal");      
+      }
       enFieldPaymentType.add(paypalOption);
       enFieldPaymentType.value = "Paypal";
       enFieldPaymentType.value = "paypal";
@@ -778,24 +802,30 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "card"
     ) {
-      removeClassesByPrefix(enGrid, prefix);
-      enGrid.classList.add("has-give-by-card");
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-card");      
+      }
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
     } else if (
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "check"
     ) {
-      removeClassesByPrefix(enGrid, prefix);
-      enGrid.classList.add("has-give-by-check");
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-check");      
+      }
       enFieldPaymentType.value = "Check";
       enFieldPaymentType.value = "check";
     } else if (
       enFieldGiveBySelectCurrentValue &&
       enFieldGiveBySelectCurrentValue.value.toLowerCase() == "paypal"
     ) {
-      removeClassesByPrefix(enGrid, prefix);
-      enGrid.classList.add("has-give-by-paypal");
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-paypal");      
+      }
       enFieldPaymentType.add(paypalOption);
       enFieldPaymentType.value = "Paypal";
       enFieldPaymentType.value = "paypal";

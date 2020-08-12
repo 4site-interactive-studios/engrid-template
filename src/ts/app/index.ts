@@ -7,6 +7,7 @@ import LiveVariables from "./utils/live-variables";
 import ProcessingFees from "./events/processing-fees";
 import Modal from "./utils/modal";
 import IE from "./utils/ie";
+import getUrlParameter from "./utils/query-string";
 
 // IE Warning
 const ie = new IE();
@@ -78,7 +79,7 @@ export const run = (opts: Object) => {
     }
   };
   if (inIframe()) {
-
+    var enID = getUrlParameter('en_id');
     const shouldScroll = () => {
       // If you find a error, scroll
       if (document.querySelector('.en__errorHeader')) {
@@ -91,22 +92,23 @@ export const run = (opts: Object) => {
       // Scroll if the Regex matches, don't scroll otherwise
       return enURLPattern.test(referrer);
     }
-    window.onload = () => {
-      sendIframeHeight();
+    window.onload = () => {      
+      sendIframeHeight(enID);
       // Scroll to top of iFrame
       window.parent.postMessage(
         {
           scroll: shouldScroll(),
+          enID: enID
         },
         "*"
       );
       document.addEventListener("click", (e: Event) => {
         setTimeout(() => {
-          sendIframeHeight();
+          sendIframeHeight(enID);
         }, 100);
       });
     };
-    window.onresize = () => sendIframeHeight();
+    window.onresize = () => sendIframeHeight(enID);
     // Change the layout class to embedded
     const gridElement = document.getElementById("engrid") || document.body as HTMLElement;
     // @TODO We need to write a better way of stripping layout classes 
