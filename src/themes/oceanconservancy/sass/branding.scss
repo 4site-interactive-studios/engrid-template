@@ -1,32 +1,7 @@
 #engrid {
-  // &::before {
-  //   content: "";
-  //   display: block;
-  //   height: 12px;
-  //   width: 100%;
-  //   background: url("https://www.oxfam.ca/wp-content/uploads/2018/08/toptop.jpg")
-  //     center center no-repeat;
-  //   background-size: cover;
-  // }
-  // .body-header {
-  //   border-top: 0 !important;
-  //   &::before {
-  //     content: "";
-  //     display: block;
-  //     height: 12px;
-  //     width: 100%;
-  //     background: url("https://www.oxfam.ca/wp-content/uploads/2018/08/toptop.jpg")
-  //       center center no-repeat;
-  //     background-size: cover;
-  //     background-position: left;
-  //     z-index: 0 !important;
-  //     box-shadow: none !important;
-  //   }
-  // }
   .page-backgroundImage {
     background-attachment: fixed;
     height: auto !important;
-    clip-path: none !important;
     &::before {
       background-color: rgba(0, 0, 0, 0.5);
       position: fixed;
@@ -39,14 +14,14 @@
 
 // @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
 body {
-  color: var(--client-black,$client-black);
-  background-color: var(--background-color,$background-color);
+  color: var(--client-black, $client-black);
+  background-color: var(--background-color, $background-color);
 }
 
 body,
 body#en__pagebuilder {
   // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-family: "Proxima Nova Regular",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.125em;
   font-weight: normal;
   font-stretch: normal;
@@ -80,8 +55,8 @@ body:not(#en__pagebuilder) {
 }
 
 h1 {
-  color: var(--client-black,$client-black);
-  font-family:"Proxima Nova Bold",sans-serif;
+  color: var(--client-black, $client-black);
+  font-family: "Roboto", sans-serif;
   font-size: calc(0.05552em * 48);
   font-weight: 900;
   font-stretch: normal;
@@ -94,8 +69,8 @@ h1 {
 }
 
 h2 {
-  color: var(--client-black,$client-black);
-  font-family: "Proxima Nova Bold",sans-serif;
+  color: var(--client-black, $client-black);
+  font-family: "Roboto", sans-serif;
   font-size: 32px;
   font-weight: bold;
   font-stretch: normal;
@@ -105,8 +80,8 @@ h2 {
 }
 
 h3 {
-  color: var(--client-black,$client-black);
-  font-family: "Proxima Nova Bold",sans-serif;
+  color: var(--client-black, $client-black);
+  font-family: "Roboto", sans-serif;
   font-size: 32px;
   font-weight: bold;
   font-stretch: normal;
@@ -116,7 +91,7 @@ h3 {
 }
 
 label.en__field__label {
-  font-family: "Proxima Nova Regular",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
   font-stretch: normal;
@@ -127,7 +102,7 @@ label.en__field__label {
 }
 
 .en__field__label--item {
-  font-family: "Proxima Nova Regular",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: calc(0.05552em * 18);
   font-weight: normal;
   font-stretch: normal;
@@ -140,14 +115,13 @@ label.en__field__label {
   .en__field__label--item,
   .en__field__item--other::before,
   .en__field__item--other input {
-    font-family: "Proxima Nova Regular",sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: calc(0.05552em * 24);
     font-weight: 900;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    border-radius: 0px;
   }
 }
 
@@ -169,8 +143,11 @@ label.en__field__label {
 }
 
 .highlight {
-  background-color: var(--client-highlight-background-color,$client-highlight-background-color);
-  color: var(--client-highlight-font-color,$client-highlight-font-color);
+  background-color: var(
+    --client-highlight-background-color,
+    $client-highlight-background-color
+  );
+  color: var(--client-highlight-font-color, $client-highlight-font-color);
   padding: 0.5rem;
   font-weight: 500;
   display: inline-block;
@@ -360,20 +337,22 @@ label.en__field__label {
   padding-bottom: 4rem;
   // background-color: $client-prefooter-background-color;
 
-  h1{
+  h1 {
     padding-top: 1rem;
     padding-bottom: 2rem;
     color: #ffffff;
   }
 
-  p{
+  p {
     color: #ffffff;
   }
-
 }
 
 .content-footer {
-  background-color: var(--client-footer-background-color,$client-footer-background-color);
+  background-color: var(
+    --client-footer-background-color,
+    $client-footer-background-color
+  );
 }
 
 .footer-wrapper {
@@ -531,7 +510,7 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
   color: #ffffff;
   font-size: 14px;
   display: inline-block;
-  font-family: "Proxima Nova Regular",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   line-height: 26px;
   /* margin-left: 0px; */
@@ -542,7 +521,7 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
   color: #ffffff;
   font-size: 14px;
   display: inline-block;
-  font-family: "Proxima Nova Regular",sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-right: 10px;
   /* margin-left: 0px; */
   margin: 20px 20px 20px 0;
@@ -581,7 +560,7 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
   color: #ffffff !important;
   font-size: 14px !important;
   display: inline-block;
-  font-family: "Proxima Nova Regular",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   line-height: 26px;
 }
@@ -604,6 +583,91 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
 }
 
 /* This input field is pretending to be a button, so let's mirror the border color of its neighboring buttons */
-input[name="transaction.donationAmt.other"]{
-  border-color: var(--client-button-border-color,$client-button-border-color)
+input[name="transaction.donationAmt.other"] {
+  border-color: var(--client-button-border-color, $client-button-border-color);
+}
+
+#engrid.layout-centercenter1col .en__component--advrow .body-footer {
+  padding-top: 4rem;
+  background-color: var(--client-black);
+  box-shadow: none;
+  color: var(--client-white);
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  overflow: hidden;
+  font-size: 14px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: 0.6px;
+  text-align: center;
+  a {
+    color: var(--client-white);
+    text-decoration: none;
+  }
+}
+
+#engrid .en__component--advrow .body-header::before,
+#engrid .en__component--advrow .body-banner::before,
+#engrid .en__component--advrow .body-top::before,
+#engrid .en__component--advrow .body-side::before,
+#engrid .en__component--advrow .body-main::before,
+#engrid .en__component--advrow .body-bottom::before,
+#engrid .en__component--advrow .body-footer::before {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+#engrid.layout-centercenter1col .en__component--advrow .body-bottom {
+  padding-top: 2rem;
+  text-align: center;
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: center;
+    color: #828282;
+  }
+}
+
+#designed-by-4site {
+  text-align: center;
+  font-size: 80%;
+  margin: 2.5rem 0.5rem 0rem 0.5rem;
+}
+
+#designed-by-4site .text-fade {
+  opacity: 0.9;
+}
+
+#made-with-love {
+  color: #1294bf;
+  display: inline-block;
+}
+
+#designed-by-4site a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#designed-by-4site.light-font a {
+  color: #ffffff;
+  text-shadow: 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+img.oc-bbb-logo,
+img.oc-cna-logo {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  opacity: 0.5;
+  display: inline-block;
+}
+
+img.oc-gs-logo {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  opacity: 1;
+  display: inline-block;
 }

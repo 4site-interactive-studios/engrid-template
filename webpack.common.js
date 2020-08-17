@@ -4,7 +4,7 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/themes/" + process.env.npm_package_client + "/index.ts"
+    main: "./src/themes/" + process.env.npm_package_client + "/index.ts",
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
@@ -14,8 +14,8 @@ module.exports = {
       inject: true,
       minify: {
         removeComments: true,
-        collapseWhitespace: false
-      }
+        collapseWhitespace: false,
+      },
     }),
     new HtmlWebpackPlugin({
       title: "Engaging Networks Page - Donation",
@@ -24,8 +24,18 @@ module.exports = {
       inject: true,
       minify: {
         removeComments: true,
-        collapseWhitespace: false
-      }
+        collapseWhitespace: false,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      title: "Ocean Conservancy - Engaging Networks Page - Donation",
+      filename: "page-donation-oc.html",
+      template: "./src/templates/page-donation-oc.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
     }),
     new HtmlWebpackPlugin({
       title: "Engaging Networks Page - Sign Up",
@@ -34,8 +44,8 @@ module.exports = {
       inject: true,
       minify: {
         removeComments: true,
-        collapseWhitespace: false
-      }
+        collapseWhitespace: false,
+      },
     }),
     new HtmlWebpackPlugin({
       title: "Engaging Networks Email - eCard",
@@ -44,9 +54,9 @@ module.exports = {
       inject: true,
       minify: {
         removeComments: true,
-        collapseWhitespace: false
-      }
-    })
+        collapseWhitespace: false,
+      },
+    }),
   ],
   module: {
     rules: [
@@ -56,9 +66,9 @@ module.exports = {
           loader: "file-loader",
           options: {
             name: "[name].[hash].[ext]",
-            outputPath: "imgs"
-          }
-        }
+            outputPath: "imgs",
+          },
+        },
       },
       {
         test: /\.(ts|js)x?$/,
@@ -69,20 +79,20 @@ module.exports = {
             presets: ["@babel/env", "@babel/preset-typescript"],
             plugins: [
               "@babel/proposal-class-properties",
-              "@babel/proposal-object-rest-spread"
-            ]
-          }
-        }
+              "@babel/proposal-object-rest-spread",
+            ],
+          },
+        },
       },
       {
         test: /\.(html)$/,
         use: {
-          loader: "html-loader"
-        }
-      }
-    ]
+          loader: "html-loader",
+        },
+      },
+    ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
-  }
+    extensions: [".tsx", ".ts", ".js"],
+  },
 };

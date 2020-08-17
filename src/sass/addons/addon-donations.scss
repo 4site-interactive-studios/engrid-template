@@ -1,7 +1,9 @@
 /* prettier-ignore */
 .radio-to-buttons .en__field--radio input[type="radio"] + label,
   .give-by-select .en__field--radio input[type="radio"] + label,
-  .en__field--donationAmt.en__field--radio input[type="radio"] + label {
+  .en__field--donationAmt.en__field--radio input[type="radio"] + label,
+  .en__field--donationAmt .en__field__item--other input
+  {
     border-radius: var(--client-button-border-radius,$client-button-border-radius);
     // padding: 0.5rem 1.5rem;
   }

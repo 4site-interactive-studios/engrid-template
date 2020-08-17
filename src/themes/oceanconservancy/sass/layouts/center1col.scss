@@ -96,7 +96,7 @@
   .body-banner,
   .body-bannerOverlay,
   .body-side,
-  .body-footerOutside{
+  .body-footerOutside {
     // display: none;
     position: absolute;
     width: 1px;
@@ -139,11 +139,10 @@ body:not(#en__pagebuilder) #engrid.layout-centerleft1col,
 body:not(#en__pagebuilder) #engrid.layout-centercenter1col,
 body:not(#en__pagebuilder) #engrid.layout-centercenter1col-wide,
 body:not(#en__pagebuilder) #engrid.layout-centerright1col {
-
   .page-backgroundImage {
     grid-row: page-start / content-preFooter-end;
   }
-  
+
   /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
   .page-backgroundImage::before {
     content: "";
@@ -157,12 +156,6 @@ body:not(#en__pagebuilder) #engrid.layout-centerright1col {
   }
   .page-backgroundImageOverlay {
     grid-row: page-start / content-preFooter-end;
-    // background-image: linear-gradient(
-    //   to bottom,
-    //   rgba(0, 0, 0, 0.3) 0%,
-    //   transparent 30%
-    // );
-    background-color: rgba(0,0,0,0.3);
   }
 }
 
@@ -221,9 +214,14 @@ body#en__pagebuilder #engrid.layout-centerright1col {
 
     .body-header {
       margin-top: 1rem;
-      border-top: 1px solid black;
-      border-top-left-radius: var(--client-input-border-radius,$client-input-border-radius);
-      border-top-right-radius: var(--client-input-border-radius,$client-input-border-radius);
+      border-top-left-radius: var(
+        --client-input-border-radius,
+        $client-input-border-radius
+      );
+      border-top-right-radius: var(
+        --client-input-border-radius,
+        $client-input-border-radius
+      );
     }
 
     .content-preFooter.pseudo-subgrid > div {
@@ -253,4 +251,31 @@ body#en__pagebuilder #engrid.layout-centerright1col {
       background-size: cover;
     }
   }
+}
+
+body:not(#en__pagebuilder)
+  #engrid
+  .en__component--advrow
+  .page-backgroundImage::before {
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: initial;
+  // background-image: var(--background-image,#{$background-image});
+  background-image: var(--background-image); //@TODO Get SCSS variable working
+  will-change: transform; // creates a new paint layer
+}
+
+// @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
+body:not(#en__pagebuilder).footer-below-fold
+  #engrid
+  .en__component--advrow
+  .page-backgroundImage::before {
+  -webkit-clip-path: none;
+  clip-path: none;
+  height: 100%;
+  top: 0;
+  background-color: var(
+    --background-image-background-color,
+    $background-image-background-color
+  );
 }
