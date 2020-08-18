@@ -51,7 +51,8 @@ export const run = (opts: Object) => {
   new ShowHideRadioCheckboxes("transaction.inmem", "inmem-");
   new ShowHideRadioCheckboxes("transaction.recurrpay", "recurrpay-");
 
-  app.debugBar();
+  // Controls if the Theme has a the "Debug Bar"
+  // app.debugBar();
 
   // Event Listener Examples
   amount.onAmountChange.subscribe((s) => console.log(`Live Amount: ${s}`));

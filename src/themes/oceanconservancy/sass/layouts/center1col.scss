@@ -93,8 +93,6 @@
 #engrid.layout-centerright1col {
   .page-alert,
   .content-header,
-  .body-banner,
-  .body-bannerOverlay,
   .body-side,
   .body-footerOutside {
     // display: none;
@@ -117,6 +115,64 @@
     grid-column: bc;
   }
 
+  .body-banner,
+  .body-bannerOverlay{
+    padding-left: 0;
+    padding-right: 0;
+  }  
+
+  .body-bannerOverlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .banner-text p {
+      font-size: 34px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      padding: 0 0.9em;
+      color: #323232;
+      box-decoration-break: clone;
+      /* margin: .4em; */
+    }
+
+    .banner-text.blue p {
+      color: #ffffff;
+      background-color: #2ba8dd;
+      padding: 0.4em 0;
+      box-shadow: 1em 0 0 0 #2ba8dd, -1em 0 0 0 #2ba8dd;
+    }
+    
+    .banner-text.red p {
+      color: #ffffff;
+      background-color: #e74b3c;
+      padding: 0.4em 0;
+      box-shadow: 1em 0 0 0 #e74b3c, -1em 0 0 0 #e74b3c;
+    }
+    
+    .banner-text.black p {
+      color: #ffffff;
+      background-color: #323232;
+      padding: 0.4em 0;
+      box-shadow: 1em 0 0 0 #323232, -1em 0 0 0 #323232;
+    }
+  }
+
+  // .body-footer {
+  //   margin-bottom: 5rem;
+  //   grid-row: body-footer;
+  // }
+
+  .content-footer{
+    grid-column: bc;
+    grid-row: body-footer;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .content-preFooter {
     grid-column: pc;
     background-size: contain;
@@ -124,10 +180,6 @@
 
   .content-preFooter.pseudo-subgrid > div {
     grid-column: bc;
-  }
-
-  .body-footer {
-    margin-bottom: 5rem;
   }
 
   .content-footer.pseudo-subgrid > div {
@@ -183,8 +235,6 @@ body#en__pagebuilder #engrid.layout-centerright1col {
   #engrid.layout-centercenter1col-wide,
   #engrid.layout-centerright1col {
     .en__component--advrow .body-header,
-    .en__component--advrow .body-banner,
-    .en__component--advrow .body-bannerOverlay,
     .en__component--advrow .body-top,
     .en__component--advrow .body-side,
     .en__component--advrow .body-main,
