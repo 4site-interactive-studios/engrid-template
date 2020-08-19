@@ -1,6 +1,6 @@
-@import "../../../../sass/addons/layouts/engrid-layout-centerleft1col";
 @import "../../../../sass/base/layouts/engrid-layout-centercenter1col";
 @import "../../../../sass/addons/layouts/engrid-layout-centercenter1col-wide";
+@import "../../../../sass/addons/layouts/engrid-layout-centerleft1col";
 @import "../../../../sass/addons/layouts/engrid-layout-centerright1col";
 
 /*
@@ -74,9 +74,9 @@
 }
 
 @media screen and (max-width: 599px) {
-  body #engrid {
-    font-size: 94%;
-  }
+  // body #engrid {
+  //   font-size: 94%;
+  // }
 
   #engrid .en__field--donationAmt .en__field__element--radio .en__field__item {
     width: calc(50% - 0.5rem);
@@ -93,6 +93,7 @@
 #engrid.layout-centerright1col {
   .page-alert,
   .content-header,
+  .body-headerOutside,
   .body-side,
   .body-footerOutside {
     // display: none;
@@ -115,11 +116,85 @@
     grid-column: bc;
   }
 
+  .body-header{
+    margin-top: 2.1875rem;
+    padding-top: 0;
+    padding-right: 1.875rem;
+    padding-left: 1.875rem;
+    display: flex;
+    justify-content: space-between;
+
+    :first-child,
+    :last-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    :first-child {
+        justify-content: flex-start;
+    
+      img {
+          height: 52px !important;
+          width: auto !important;
+          display: block;
+      }
+      
+      a {
+          cursor: default;
+      }
+      
+   }
+    
+    :last-child {
+        justify-content: flex-end;
+    }
+    
+    :first-child img,
+    :last-child img {
+        display: block;
+    }
+
+    .have-questions-call-line{
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+
+      p:first-of-type{
+        font-size: 14px;
+        letter-spacing: .7px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      p:last-of-type {
+        font-size: 12px;
+        letter-spacing: .6px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }      
+
+      a {
+        cursor: pointer;
+        color: #323232;
+        text-decoration: none;
+      }
+
+    }
+  }
+
   .body-banner,
   .body-bannerOverlay{
     padding-left: 0;
     padding-right: 0;
-  }  
+  }
+  
+  .body-banner p{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
 
   .body-bannerOverlay{
     display: flex;
@@ -165,12 +240,24 @@
   //   margin-bottom: 5rem;
   //   grid-row: body-footer;
   // }
-
+  .body-bottom{
+    display: flex;
+    justify-content: center;
+    
+    .en__component {
+      max-width: 410px;
+    }
+  }
+  
   .content-footer{
     grid-column: bc;
     grid-row: body-footer;
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .content-footer > div{
+    grid-column: bc;
   }
 
   .content-preFooter {
@@ -234,7 +321,6 @@ body#en__pagebuilder #engrid.layout-centerright1col {
   #engrid.layout-centercenter1col,
   #engrid.layout-centercenter1col-wide,
   #engrid.layout-centerright1col {
-    .en__component--advrow .body-header,
     .en__component--advrow .body-top,
     .en__component--advrow .body-side,
     .en__component--advrow .body-main,
@@ -242,10 +328,6 @@ body#en__pagebuilder #engrid.layout-centerright1col {
     .en__component--advrow .body-footer {
       padding-left: 3.5rem;
       padding-right: 3.5rem;
-    }
-
-    .en__component--advrow .body-header {
-      padding-top: 4rem;
     }
 
     .en__component--advrow .body-footer {
@@ -263,7 +345,6 @@ body#en__pagebuilder #engrid.layout-centerright1col {
     }
 
     .body-header {
-      margin-top: 1rem;
       border-top-left-radius: var(
         --client-input-border-radius,
         $client-input-border-radius

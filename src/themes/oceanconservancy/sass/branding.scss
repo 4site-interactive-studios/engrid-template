@@ -483,10 +483,10 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
   display: none !important;
 }
 
-// Client specific CSS
-.content-footer > div {
-  grid-column: pc !important;
-}
+// // Client specific CSS
+// .content-footer > div {
+//   grid-column: pc !important;
+// }
 .footer-block-three {
   height: 14px;
   background: url("https://oxfam.ca/wp-content/uploads/2018/06/footer-bg.png");
@@ -588,9 +588,8 @@ input[name="transaction.donationAmt.other"] {
 }
 
 #engrid.layout-centercenter1col .en__component--advrow .content-footer {
-  padding-top: 4rem;
   background-color: var(--client-black);
-  box-shadow: none;
+  // box-shadow: none;
   color: var(--client-white);
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
