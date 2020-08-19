@@ -95,17 +95,6 @@
   margin-right: 1rem;
 }
 
-body .en__component--formblock .en__field:first-of-type,
-body .en__component--formblock .en__field div.en__field__item:first-of-type {
-  margin-left: 0rem !important;
-}
-
-/* Needs QA: ENs page builder adds a div to the formblock DOM on hover. This will cause a small right margin to appear as the expected input fields are no longer the last of their siblings */
-body .en__component--formblock .en__field:last-of-type,
-body .en__component--formblock .en__field div.en__field__item:last-of-type {
-  margin-right: 0rem !important;
-}
-
 /* If the form field has a hidden "other" field we need to remove the end of row spacing */
 /* NEED TO REVISIT FOR CODE CLEANUP */
 
@@ -167,18 +156,22 @@ textarea {
   display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  height: auto;// @TODO Removed !important, hopefully that didn't break anything
+  height: auto; // @TODO Removed !important, hopefully that didn't break anything
   margin: 0rem;
   padding: 0.5rem;
-  border: var(--client-input-border-width,$client-input-border-width) solid var(--client-input-border-color,$client-input-border-color);
-  border-radius: var(--client-input-border-radius,$client-input-border-radius);
-  background-color: var(--client-input-background-color,$client-input-background-color);
+  border: var(--client-input-border-width, $client-input-border-width) solid
+    var(--client-input-border-color, $client-input-border-color);
+  border-radius: var(--client-input-border-radius, $client-input-border-radius);
+  background-color: var(
+    --client-input-background-color,
+    $client-input-background-color
+  );
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   font-family: inherit;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
-  color: var(--client-black,$client-black);
+  color: var(--client-black, $client-black);
   transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
   appearance: none;
 }
@@ -220,9 +213,13 @@ input[type="week"]:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border: var(--client-input-border-width,$client-input-border-width) solid var(--client-gray,$client-gray);
-  background-color: var(--client-button-font-color,$client-button-font-color);
-  box-shadow: 0 0 0.3125rem var(--client-light-gray,$client-light-gray);
+  border: var(--client-input-border-width, $client-input-border-width) solid
+    var(--client-input-border-color-focus, $client-input-border-color-focus);
+  background-color: var(
+    --client-input-background-color-hover,
+    $client-input-background-color-hover
+  );
+  box-shadow: 0 0 0.3125rem var(--client-light-gray, $client-light-gray);
   transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
 }
 
@@ -237,37 +234,37 @@ textarea:focus {
 /* Placeholder styling */
 /* Chrome, Firefox, Opera, Safari 10.1+ */
 ::-webkit-input-placeholder {
-  color: var(--client-light-gray,$client-light-gray);
+  color: var(--client-light-gray, $client-light-gray);
   opacity: 1;
   /* Firefox */
 }
 
 :-ms-input-placeholder {
-  color: var(--client-light-gray,$client-light-gray);
+  color: var(--client-light-gray, $client-light-gray);
   opacity: 1;
   /* Firefox */
 }
 
 ::-ms-input-placeholder {
-  color: var(--client-light-gray,$client-light-gray);
+  color: var(--client-light-gray, $client-light-gray);
   opacity: 1;
   /* Firefox */
 }
 
 ::placeholder {
-  color: var(--client-light-gray,$client-light-gray);
+  color: var(--client-light-gray, $client-light-gray);
   opacity: 1;
   /* Firefox */
 }
 
 /* Internet Explorer 10-11 */
 :-ms-input-placeholder {
-  color: var(--client-light-gray,$client-light-gray);
+  color: var(--client-light-gray, $client-light-gray);
 }
 
 /* Microsoft Edge */
 ::-ms-input-placeholder {
-  color: var(--client-light-gray,$client-light-gray);
+  color: var(--client-light-gray, $client-light-gray);
 }
 
 /* Custom Styling for Radio & Checkbox Inputs */
@@ -307,10 +304,10 @@ textarea:focus {
   left: -2rem;
   display: inline-block;
   vertical-align: middle;
-  border: 4px solid var(--client-black,$client-black);
-  -webkit-box-shadow: inset 0 0 0 5px var(--client-white,$client-white);
-  box-shadow: inset 0 0 0 5px var(--client-white,$client-white);
-  background-color: var(--client-white,$client-white);
+  border: 4px solid var(--client-black, $client-black);
+  -webkit-box-shadow: inset 0 0 0 5px var(--client-white, $client-white);
+  box-shadow: inset 0 0 0 5px var(--client-white, $client-white);
+  background-color: var(--client-white, $client-white);
   cursor: pointer;
   -webkit-transition-duration: 0.25s;
   transition-duration: 0.25s;
@@ -337,7 +334,10 @@ textarea:focus {
 .en__field__input--radio:checked + .en__field__label::before,
 .en__field__input--checkbox:checked + .en__field__label::before,
 .en__contactDetails__select:checked + .en__contactDetails__rows::before {
-  background-color: var(--client-checkmark-background-color,$client-checkmark-background-color);
+  background-color: var(
+    --client-checkmark-background-color,
+    $client-checkmark-background-color
+  );
   -webkit-box-shadow: inset 0 0 0 2px #ffffff;
   box-shadow: inset 0 0 0 2px #ffffff;
   border-width: 2px;
@@ -345,7 +345,10 @@ textarea:focus {
 
 .en__field__input--checkbox:checked + .en__field__label::before,
 .en__contactDetails__select:checked + .en__contactDetails__rows::before {
-  color: var(--client-checkmark-background-color,$client-checkmark-background-color);
+  color: var(
+    --client-checkmark-background-color,
+    $client-checkmark-background-color
+  );
   background-color: transparent;
 }
 
@@ -359,7 +362,10 @@ textarea:focus {
   top: 0;
   width: 21px;
   height: 16px;
-  color: var(--client-checkmark-background-color,$client-checkmark-background-color);
+  color: var(
+    --client-checkmark-background-color,
+    $client-checkmark-background-color
+  );
   background-color: transparent;
   font-size: calc(0.05552em * 18);
 }
@@ -368,7 +374,7 @@ textarea:focus {
 .en__field__input--radio:focus + .en__field__label::before,
 .en__field__input--checkbox:focus + .en__field__label::before,
 .en__contactDetails__select:focus + .en__contactDetails__rows::before {
-  outline: var(--client-gray,$client-gray) auto 0.3125rem;
+  outline: var(--client-gray, $client-gray) auto 0.3125rem;
 }
 
 /* QA Needed: EN's hidden input field */

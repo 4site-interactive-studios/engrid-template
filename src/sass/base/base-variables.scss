@@ -1,11 +1,11 @@
 $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
 $client-white: #ffffff;
-$client-black: #4D4D4D;
+$client-black: #4d4d4d;
 $client-gray: #8a8a8a;
 $client-light-gray: #cacaca;
 $client-cta: #208096;
-$client-cta-hover: #22A3CB;
+$client-cta-hover: #22a3cb;
 
 $client-prefooter-background-color: #d0e2e7;
 $client-footer-background-color: #20809e;
@@ -28,7 +28,9 @@ $body-padding-xlg: calc(0.8652rem * 5); // @TODO Revisit
 $client-input-border-radius: 5px;
 $client-input-border-width: 2px;
 $client-input-border-color: $client-black;
+$client-input-border-color-focus: $client-black;
 $client-input-background-color: $client-white;
+$client-input-background-color-hover: $client-white;
 
 $client-button-background-color: $client-black;
 $client-button-background-color-hover: $client-cta-hover;

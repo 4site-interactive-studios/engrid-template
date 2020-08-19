@@ -26,18 +26,20 @@
 
   --client-input-border-radius: 5px;
   --client-input-border-width: 1px;
-  // --client-input-border-color: --client-black;
-  // --client-input-background-color: --client-white;
+  --client-input-border-color: var(--client-black);
+  --client-input-border-color-focus: var(--client-cta);
+  --client-input-background-color: var(--client-white);
+  --client-input-background-color-hover: var(--client-white);
 
-  --client-button-background-color: var(--client-black);
-  --client-button-background-color-hover: var(--client-cta-hover);
-  --client-button-background-color-active: var(--client-cta);
+  --client-button-background-color: var(--client-white);
+  --client-button-background-color-hover: var(--client-black);
+  --client-button-background-color-active: var(--client-black);
   --client-button-background-color-disabled: #949494;
   --client-button-border-color: var(--client-black);
-  --client-button-border-color-active: var(--client-cta);
-  --client-button-border-color-hover: var(--client-cta-hover);
+  --client-button-border-color-active: var(--client-black);
+  --client-button-border-color-hover: var(--client-black);
   --client-button-border-radius: 50px;
-  --client-button-font-color: var(--client-white);
+  --client-button-font-color: var(--client-black);
   --client-button-font-color-active: var(--client-white);
 
   --client-submit-button-background-color: var(--client-cta);
@@ -45,7 +47,7 @@
   --client-submit-button-border-color: var(--client-cta);
   --client-submit-button-font-color: var(--client-white);
 
-  --client-checkmark-background-color: var(--client-cta);
+  --client-checkmark-background-color: var(--client-black);
   --client-checkmark-border-color: var(--client-cta);
   --client-checkmark-font-color: var(--client-white);
 
