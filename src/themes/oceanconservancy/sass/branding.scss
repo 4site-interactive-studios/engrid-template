@@ -937,3 +937,21 @@ img.oc-gs-logo {
     font-size: 20px;
   }
 }
+
+#engrid div[id^=nb-field-] div.nb-feedback{
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+  border-radius: var(--client-input-border-radius,5px) !important;
+  font-size: 1.125em !important;
+
+  span.nb-result{
+    font-family: Roboto,sans-serif !important;
+    font-size: 0.75rem !important;
+    font-weight: 400 !important;
+    font-stretch: normal !important;
+    font-style: normal !important;
+    line-height: 1.44 !important;
+    letter-spacing: normal !important;
+    
+  }
+}
