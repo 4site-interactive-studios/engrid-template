@@ -255,13 +255,21 @@ label.en__field__label {
    * Assumes items are in order of Card, PayPal, Check
    * .give-by-select
    ***********************************/
+.give-by-select .en__field__element--radio{
+   justify-content: space-between;
+}
+
+.give-by-select .en__field__element--radio .en__field__item{
+  margin-right: 0 !important;
+  max-width: calc((100% - 2rem) / 3);
+}
 
 /* Card */
 .give-by-select .en__field__element--radio .en__field__item:nth-child(1) label {
   background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/icon-card-black.svg);
-  padding-left: 20px !important;
+  padding-left: 27px !important;
   background-size: 20px 16px;
-  background-position-x: calc(50% - 30px);
+  background-position-x: calc(50% - 23px);
   background-position-y: calc(50% - 1px);
 }
 
@@ -270,9 +278,9 @@ label.en__field__label {
   background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/icon-paypal-black.svg);
   // background-position: left center;
   // background-repeat: no-repeat;
-  padding-left: 17px !important;
+  padding-left: 23px !important;
   background-size: 14px 17px;
-  background-position-x: calc(50% - 35px);
+  background-position-x: calc(50% - 29px);
   background-position-y: calc(50% + 1px);
 }
 
@@ -281,9 +289,9 @@ label.en__field__label {
   background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/icon-check-black.svg);
   // background-position: left center;
   // background-repeat: no-repeat;
-  padding-left: 20px !important;
+  padding-left: 27px !important;
   background-size: 20px 16px;
-  background-position-x: calc(50% - 34px);
+  background-position-x: calc(50% - 27px);
   background-position-y: calc(50% - 1px);
 }
 
