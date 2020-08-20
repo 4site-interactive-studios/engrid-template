@@ -160,7 +160,7 @@
           ref.parentNode.insertBefore( script_neverbounce, ref );
           ref.parentNode.insertBefore( script_threatMetrix, ref );
         
-          <!-- GA Conversion Tracking Start -->
+          //  GA Conversion Tracking Start
           // window.dataLayer = window.dataLayer || [];
           window.addEventListener('DOMContentLoaded', (event) => {
               console.log('DOM fully loaded and parsed');
@@ -186,12 +186,12 @@
                   }
               }
           });
-          <!-- GA Conversion Tracking End -->  
+          // GA Conversion Tracking End
       
-          <!-- 4Site Template JS: Render Critical: Tracking JS -->
+          // 4Site Template JS: Render Critical: Tracking JS
               window.addEventListener("load",function(){var e=window.receipt_amount_data,a=pageJson.pageName.toLowerCase();if(a.indexOf("honor")>=0)var n="Honor";else n=a.indexOf("memorial")>=0?"Memorial":a.indexOf("premium")>=0?"Premium":a.indexOf("monthly")>=0?"Monthly":"Standard Donation";var i,o=window.receipt_recurring_frequency;i=o||"OneTime";var r=e.replace(/\$/g,"");parseFloat(r)>0&&"{receipt_data~amount}"!=r&&dataLayer.push({event:"BFREDtransaction",ecommerce:{purchase:{actionField:{id:window.receipt_tx_id,affiliation:"Engaging Networks Donation Form",revenue:r,tax:"0.00",shipping:"0.00"},products:[{name:pageJson.pageName+" - "+pageJson.campaignPageId,brand:n,id:pageJson.campaignPageId+" - "+r+" - "+i,price:r,variant:i,quantity:1}]}}})});
        
-          <!-- Upland / Mobilecommons Script -->
+          // Upland / Mobilecommons Script
           function getFieldValue(id){
               let field = document.getElementById(id);
               return (field && "value" in field) ? field.value : "";
@@ -351,32 +351,22 @@
         <div class="en__component en__component--row en__component--advrow">
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-alert"
-            style=""
+           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-header pseudo-subgrid"
-            style=""
+           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-headerOutside"
-            style=""
+           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-header"
-            style=""
+           
           >
             <div
-              class="en__component en__component--copyblock"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock">
               <!-- Source: https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/logo-black-large.png?v=1522954644000 -->
               <p>
                 <a href="https://oceanconservancy.org/" target="_blank"
@@ -391,17 +381,7 @@
               </p>
             </div>
             <div
-              class="en__component en__component--copyblock have-questions-call-line"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock have-questions-call-line">
               <p>HAVE QUESTIONS?</p>
 
               <p><a href="tel:1-800-519-1541">800-519-1541</a></p>
@@ -409,20 +389,10 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-banner"
-            style=""
+           
           >
             <div
-              class="en__component en__component--copyblock"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock">
               <p>
                 <img
                   alt=""
@@ -437,39 +407,19 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-bannerOverlay"
-            style=""
+           
           >
             <div
-              class="en__component en__component--copyblock banner-text blue lead"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock banner-text blue lead">
               <p>Donate Today</p>
             </div>
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-top"
-            style=""
+           
           >
             <div
-              class="en__component en__component--copyblock"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock">
             <h2 style="text-align: center; margin: 1.5rem 0 1rem 0;"><span style="color:#039BC4;"><span style="font-size:26px;"><strong>Donate Today to Ocean Conservancy</strong></span></span></h2>
               <h2 style="text-align: center;">
                 Your Gift Today Can Help Save Our Ocean and its Wildilfe!
@@ -491,20 +441,20 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-side"
-            style=""
+           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-main"
-            style=""
+           
           >
-            <div class="en__component en__component--formblock" style="">
+            <div class="en__component en__component--formblock">
               <div
                 class="en__field en__field--radio en__field--741941 en__field--recurrpay en__mandatory"
               >
                 <label
                   for="en__field_transaction_recurrpay"
                   class="en__field__label en__field__label--positionabove"
-                  style=""
+                 
                   >Recurring Payment</label
                 >
                 <div
@@ -547,7 +497,7 @@
               >
                 <label
                   class="en__field__label en__field__label--positionabove"
-                  style=""
+                 
                   >Giving Amount</label
                 >
                 <div
@@ -660,7 +610,7 @@
                 <label
                   for="en__field_transaction_recurrday"
                   class="en__field__label en__field__label--positionabove"
-                  style=""
+                 
                   >Recurring Day</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -679,7 +629,7 @@
                 <label
                   for="en__field_transaction_paycurrency"
                   class="en__field__label en__field__label--positionabove"
-                  style=""
+                 
                   >Payment Currency</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -698,7 +648,7 @@
                 <label
                   for="en__field_transaction_recurrfreq"
                   class="en__field__label en__field__label--positionabove"
-                  style=""
+                 
                   >Recurring Frequency</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -713,17 +663,7 @@
               </div>
             </div>
             <div
-              class="en__component en__component--copyblock form-section-header"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock form-section-header">
               <h2
                 id="personal-information-section-header"
                 data-gtm-vis-first-on-screen-6831151_158="763"
@@ -733,14 +673,14 @@
                 Personal Information
               </h2>
             </div>
-            <div class="en__component en__component--formblock i4-100" style="">
+            <div class="en__component en__component--formblock i4-100">
               <div
                 class="en__field en__field--text en__field--741988 en__field--firstName en__mandatory"
               >
                 <label
                   for="en__field_supporter_firstName"
                   class="en__field__label"
-                  style=""
+                 
                   >First Name</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -759,7 +699,7 @@
                 <label
                   for="en__field_supporter_lastName"
                   class="en__field__label"
-                  style=""
+                 
                   >Last Name</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -778,7 +718,7 @@
                 <label
                   for="en__field_supporter_emailAddress"
                   class="en__field__label"
-                  style=""
+                 
                   >Email</label
                 >
                 <div class="en__field__element en__field__element--email">
@@ -798,7 +738,7 @@
                 <label
                   for="en__field_supporter_NOT_TAGGED_9"
                   class="en__field__label"
-                  style=""
+                 
                   >Mobile Phone</label
                 >
                 <div class="en__field__element en__field__element--telephone">
@@ -815,7 +755,7 @@
             </div>
             <div
               class="en__component en__component--formblock i2-50 i2-start i3-50 i3-end"
-              style=""
+             
             >
               <div
                 class="en__field en__field--select en__field--741984 en__field--country en__mandatory has-value"
@@ -823,7 +763,7 @@
                 <label
                   for="en__field_supporter_country"
                   class="en__field__label"
-                  style=""
+                 
                   >Country</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1108,7 +1048,7 @@
                 <label
                   for="en__field_transaction_shipadd1"
                   class="en__field__label"
-                  style=""
+                 
                   >Address</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1128,7 +1068,7 @@
                 <label
                   for="en__field_transaction_shipadd2"
                   class="en__field__label"
-                  style=""
+                 
                   >Apt., ste., bldg.</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1148,7 +1088,7 @@
                 <label
                   for="en__field_supporter_city"
                   class="en__field__label"
-                  style=""
+                 
                   >City</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1167,7 +1107,7 @@
                 <label
                   for="en__field_supporter_region"
                   class="en__field__label"
-                  style=""
+                 
                   >State</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1237,7 +1177,7 @@
                 <label
                   for="en__field_supporter_postcode"
                   class="en__field__label"
-                  style=""
+                 
                   >ZIP Code</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1251,11 +1191,11 @@
                 </div>
               </div>
             </div>
-            <div class="en__component en__component--formblock" style="">
+            <div class="en__component en__component--formblock">
               <div
                 class="en__field en__field--checkbox en__field--question en__field--20087 en__field--opt-in has-value"
               >
-                <label class="en__field__label" style="">Email Opt-in</label>
+                <label class="en__field__label">Email Opt-in</label>
                 <div
                   class="en__field__element en__field__element--checkbox
 	"
@@ -1281,7 +1221,7 @@
               <div
                 class="en__field en__field--checkbox en__field--question en__field--178688 en__field--sms-opt-in has-value"
               >
-                <label class="en__field__label" style="">SMS Opt-in</label>
+                <label class="en__field__label">SMS Opt-in</label>
                 <div
                   class="en__field__element en__field__element--checkbox
 	"
@@ -1306,17 +1246,7 @@
               </div>
             </div>
             <div
-              class="en__component en__component--copyblock form-section-header"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock form-section-header">
               <h2
                 id="payment-information-section-header"
                 data-gtm-vis-recent-on-screen-6831151_159="5096"
@@ -1328,17 +1258,7 @@
               </h2>
             </div>
             <div
-              class="en__component en__component--copyblock"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock">
               <!-- Custom Radio Buttons using the same markup as Engaging Networks -->
               <div
                 class="en__component en__component--formblock give-by-select"
@@ -1387,7 +1307,7 @@
             </div>
             <div
               class="en__component en__component--formblock i1-hideSTOP i2-hideSTOP i2-100 giveBySelect-Card"
-              style=""
+             
             >
               <div
                 class="en__field en__field--select en__field--741963 en__field--paymenttype en__mandatory has-value"
@@ -1395,7 +1315,7 @@
                 <label
                   for="en__field_transaction_paymenttype"
                   class="en__field__label"
-                  style=""
+                 
                   >Payment Type</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1418,7 +1338,7 @@
                 <label
                   for="en__field_supporter_NOT_TAGGED_33"
                   class="en__field__label"
-                  style=""
+                 
                   >PayPal Billing Agreement</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1438,7 +1358,7 @@
                 <label
                   for="en__field_transaction_ccnumber"
                   class="en__field__label"
-                  style=""
+                 
                   >Credit Card Number</label
                 >
                 <div class="en__field__element en__field__element--telephone">
@@ -1459,7 +1379,7 @@
                 <label
                   for="en__field_transaction_ccexpire"
                   class="en__field__label"
-                  style=""
+                 
                   >Credit Card Expiration</label
                 >
                 <div class="en__field__element en__field__element--splitselect">
@@ -1514,7 +1434,7 @@
                 <label
                   for="en__field_transaction_ccvv"
                   class="en__field__label"
-                  style=""
+                 
                   >Credit Card CVV</label
                 >
                 <div class="en__field__element en__field__element--telephone">
@@ -1530,17 +1450,17 @@
               </div>
             </div>
 
-            <div class="en__component en__component--formblock giveBySelect-Check" style="">
+            <div class="en__component en__component--formblock giveBySelect-Check">
 	
 	
               <div class="en__field en__field--number en__field--407138 en__field--bankAccountNumber">
-          <label for="en__field_supporter_bankAccountNumber" class="en__field__label" style="">Account Number</label>
+          <label for="en__field_supporter_bankAccountNumber" class="en__field__label">Account Number</label>
           <div class="en__field__element en__field__element--number">
             <input id="en__field_supporter_bankAccountNumber" type="number" class="en__field__input en__field__input--number" name="supporter.bankAccountNumber" value="">
            </div>
         </div>
               <div class="en__field en__field--number en__field--407140 en__field--bankRoutingNumber">
-          <label for="en__field_supporter_bankRoutingNumber" class="en__field__label" style="">Routing Number</label>
+          <label for="en__field_supporter_bankRoutingNumber" class="en__field__label">Routing Number</label>
           <div class="en__field__element en__field__element--number">
             <input id="en__field_supporter_bankRoutingNumber" type="number" class="en__field__input en__field__input--number" name="supporter.bankRoutingNumber" value="">
            </div>
@@ -1550,22 +1470,12 @@
           
         </div>           
             <div
-              class="en__component en__component--copyblock"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock">
               <!-- Custom Checkbox using the same markup as Engaging Networks --><!-- The value of the checbox is usd as a % to calculate the processing fee -->
               <div
                 class="en__field en__field--checkbox en__field--000000 en__field--processing_fees pseudo-en-field has-value"
               >
-                <!--<label class="en__field__label en__field__label--positionabove" style="">Processing Fees</label>-->
+                <!--<label class="en__field__label en__field__label--positionabove">Processing Fees</label>-->
                 <div class="en__field__element en__field__element--checkbox">
                   <div class="en__field__item">
                     <input
@@ -1586,23 +1496,13 @@
               </div>
             </div>
             <div
-              class="en__component en__component--copyblock"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock">
               <!-- Custom Checkbox using the same markup as Engaging Networks -->
               <div
                 class="en__field en__field--checkbox en__field--000000 en__field--monthly_upsell_checkbox pseudo-en-field recurrpay-N has-value"
                 style="display: none;"
               >
-                <!--<label class="en__field__label en__field__label--positionabove" style=""></label>-->
+                <!--<label class="en__field__label en__field__label--positionabove"></label>-->
                 <div class="en__field__element en__field__element--checkbox">
                   <div class="en__field__item">
                     <input
@@ -1625,11 +1525,11 @@
                 </div>
               </div>
             </div>
-            <div class="en__component en__component--formblock" style="">
+            <div class="en__component en__component--formblock">
               <div
                 class="en__field en__field--checkbox en__field--742960 en__field--inmem has-value"
               >
-                <label class="en__field__label" style=""
+                <label class="en__field__label"
                   >Would you like to dedicate this gift?</label
                 >
                 <div
@@ -1670,7 +1570,7 @@
                 <label
                   for="en__field_transaction_honname"
                   class="en__field__label"
-                  style=""
+                 
                   >Name of Friend or Loved One</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1690,7 +1590,7 @@
                 <label
                   for="en__field_transaction_infname"
                   class="en__field__label"
-                  style=""
+                 
                   >Recipient Name</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1710,7 +1610,7 @@
                 <label
                   for="en__field_transaction_trbopts"
                   class="en__field__label"
-                  style=""
+                 
                   >Honoree Message</label
                 >
                 <div class="en__field__element en__field__element--textarea">
@@ -1728,7 +1628,7 @@
                 <label
                   for="en__field_transaction_infadd1"
                   class="en__field__label"
-                  style=""
+                 
                   >Address</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1748,7 +1648,7 @@
                 <label
                   for="en__field_transaction_infadd2"
                   class="en__field__label"
-                  style=""
+                 
                   >Apt., ste., bldg.</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1768,7 +1668,7 @@
                 <label
                   for="en__field_transaction_infcity"
                   class="en__field__label"
-                  style=""
+                 
                   >City</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1788,7 +1688,7 @@
                 <label
                   for="en__field_transaction_infreg"
                   class="en__field__label"
-                  style=""
+                 
                   >State</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1858,7 +1758,7 @@
                 <label
                   for="en__field_transaction_infpostcd"
                   class="en__field__label"
-                  style=""
+                 
                   >ZIP Code</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1881,7 +1781,7 @@
             </div>
             <div
               class="en__component en__component--formblock dynamic-giving-button"
-              style=""
+             
             >
               <div class="en__captcha">
                 <div
@@ -1913,21 +1813,11 @@
               </div>
 
               <div class="en__submit">
-                <button style="">Donate $22 Monthly</button>
+                <button>Donate $22 Monthly</button>
               </div>
             </div>
             <div
-              class="en__component en__component--copyblock"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock">
               <ul>
                 <li>
                   Live Giving Amount:
@@ -1960,20 +1850,10 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-bottom"
-            style=""
+           
           >
             <div
-              class="en__component en__component--copyblock"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock">
               <div style="text-align: center;">
                 <img
                   alt=""
@@ -2010,36 +1890,26 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-footer"
-            style=""
+           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-footerOutside"
-            style=""
+           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-footerSpacer"
-            style=""
+           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-preFooter pseudo-subgrid"
-            style=""
+           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-footer pseudo-subgrid"
-            style=""
+           
           >
             <div
-              class="en__component en__component--copyblock"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock">
               <p>
                 1300 19th Street NW - 8th Floor - Washington, DC 20036<br />
                 <strong>webmaster@oceanconservancy.org</strong><br />
@@ -2063,46 +1933,16 @@
               </p>
             </div>
             <div
-              class="en__component en__component--copyblock"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock">
               <p>Photo Credit: Photographer (Foreground) Photographer
                   (Background)</p>
             </div>
             <div
-              class="en__component en__component--copyblock"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock">
               <p>© 2020&nbsp;Ocean Conservancy</p>
             </div>
             <div
-              class="en__component en__component--copyblock"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock">
               <!-- Thank you for supporting 4Site Studios -->
               <div class="light-font" id="designed-by-4site">
                 <a
@@ -2120,17 +1960,7 @@
             class="en__component en__component en__component--column en__component--advcolumn page-backgroundImage pseudo-subgrid"
           >
             <!-- <div
-              class="en__component en__component--copyblock"
-              style="
-
-
-
-
-
-
-
-"
-            >
+              class="en__component en__component--copyblock">
               <p>
                 <img
                   alt=""
@@ -2148,12 +1978,43 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-backgroundImageOverlay pseudo-subgrid"
-            style=""
+           
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-customCode"
-            style=""
+           
           >
+          <div class="en__component en__component--codeblock"><!-- Modals -->
+            <template id="upsellModal">
+              <div class="modal-left-column" style="background-image: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/QuittheCutlery_CarolinePowers_Landing_photo.jpg?v=1568312213000')"></div>
+              <div class="modal-right-column dark-background">
+              <h1>Make your gift <span class="highlight">do more</span></h1>
+              <p>A regular gift ensures that we can launch urgent, effective campaigns right when they we’re needed most</p>
+              <p class="small">Select <strong>“Yes”</strong> to modify your gift to repeat monthly.</p>
+              <div class="cta-groups column center">
+                <div class="group column primary">
+                  <button type="button" class="cta primary monthly-upsell form-submit">YES!!!</button>
+                  <p class="small">Upgrade my gift to <span class="live-giving-upsell-amount">how much&#8203;</span> monthly</p>
+                </div>
+                <div class="group column secondary">
+                  <a class="small cta secondary form-submit" href="##">Not today – complete my one-time <span class="live-giving-amount">how much</span> gift.</a>
+                </div>
+              </div>
+              </div>  
+            </template>
+            <template id="exitModal">
+              <h1>STOP!</h1>
+              <p>Your gift of <span class="live-giving-amount">how much</span> has not yet been completed. Please complete your gift before leaving.</p>
+              <div class="cta-groups row">
+                <div class="group row primary">
+                  <button type="button" class="cta primary monthly-upsell form-submit">Give <span class="live-giving-upsell-amount">how much&#8203;</span> Monthly</button>
+                </div>
+                <div class="group row secondary">
+                  <a class="cta secondary form-submit" href="##">Give <span class="live-giving-amount">how much</span> One-Time</a>
+                </div>
+              </div>
+            </template>
+            <!-- /Modals --></div>
             <div class="en__component en__component--codeblock">
               <script src="https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/child-theme/js/oc-en-tracking-id-swap.js"></script>
             </div>
