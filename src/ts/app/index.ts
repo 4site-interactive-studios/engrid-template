@@ -60,8 +60,8 @@ export const run = (opts: Object) => {
   frequency.onFrequencyChange.subscribe((s) =>
     console.log(`Live Frequency: ${s}`)
   );
-  form.onSubmit.subscribe((s) => console.log(`Submit: ${s}`));
-  form.onError.subscribe((s) => console.log(`Error: ${s}`));
+  form.onSubmit.subscribe((s) => console.log('Submit: ', s));
+  form.onError.subscribe((s) => console.log('Error:', s));
 
   window.enOnSubmit = function () {
     form.dispatchSubmit();
@@ -93,7 +93,7 @@ export const run = (opts: Object) => {
       // Scroll if the Regex matches, don't scroll otherwise
       return enURLPattern.test(referrer);
     }
-    window.onload = () => {      
+    window.onload = () => {
       sendIframeHeight(enID);
       // Scroll to top of iFrame
       window.parent.postMessage(
