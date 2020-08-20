@@ -480,3 +480,23 @@ body:not(#en__pagebuilder).footer-below-fold
     
   }
 }
+
+@media screen and (min-width: 600px) {
+  #engrid.layout-centerleft1col {
+    /* prettier-ignore */
+    .en__component--advrow,
+    .en__component--advrow .pseudo-subgrid {
+      /* autoprefixer grid: off */
+      grid-template-columns:
+      [
+        pc-start lpc-start]  minmax(25px, 25px)     [lpc-end
+        cc-start lcc-start]  minmax(25px, 25px)    [lcc-end
+        bc-start lbc-start]  minmax(250px, 340px)  [lbc-end
+        rbc-start]           minmax(250px, 340px)  [rbc-end bc-end
+        rcc-start]           minmax(25px, 25px)   [rcc-end cc-end
+        rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end            
+      ]; 
+    }
+    
+  }
+}
