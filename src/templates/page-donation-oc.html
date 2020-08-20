@@ -113,167 +113,248 @@
     <script>
       function isIframe() {
         try {
-          return window.self !== window.top
+          return window.self !== window.top;
         } catch (e) {
-          return true
+          return true;
         }
-      };
-      
-      function load_scripts_fast() {
-          // Get the first script element on the page
-          var ref = document.getElementsByTagName( 'body' )[ 0 ];
-      
-          // Create a new script element
-          var script_jQuery = document.createElement( 'script' );
-      
-          // Set the script element `src`
-          script_jQuery.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
-      
-          // Inject the script-jQuery into the DOM
-          ref.parentNode.insertBefore( script_jQuery, ref );
-      
-        /* START: Your Analytics Scripts */
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-P99B2PT');
       }
-      
+
+      function load_scripts_fast() {
+        // Get the first script element on the page
+        var ref = document.getElementsByTagName("body")[0];
+
+        // Create a new script element
+        var script_jQuery = document.createElement("script");
+
+        // Set the script element `src`
+        script_jQuery.src =
+          "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js";
+
+        // Inject the script-jQuery into the DOM
+        ref.parentNode.insertBefore(script_jQuery, ref);
+
+        /* START: Your Analytics Scripts */
+        (function(w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-P99B2PT");
+      }
+
       function load_scripts_slow() {
-      
-          // Get the first script element on the page
-          var ref = document.getElementsByTagName( 'body' )[ 0 ];
-      
-          // Create a new script element
-          var script_oc_en_upland_sms_signup = document.createElement( 'script' );
-          var script_neverbounce = document.createElement( 'script' );
-          var script_threatMetrix = document.createElement( 'script' );
-      
-          // Set the script element `src`
-          script_oc_en_upland_sms_signup.src ='https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/oc-en-upland-sms-signup.js?v=1583861134000';
-          script_neverbounce.src = 'https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/child-theme/js/NeverBounce.js';
-          script_threatMetrix.src = 'https://h.online-metrix.net/fp/tags.js?org_id=7nrfulxi&session_id=e1991-${page~sessionId}&page_id=1';
-      
-          // Inject the script-jQuery into the DOM
-          ref.parentNode.insertBefore( script_oc_en_upland_sms_signup, ref );
-          ref.parentNode.insertBefore( script_neverbounce, ref );
-          ref.parentNode.insertBefore( script_threatMetrix, ref );
-        
-          //  GA Conversion Tracking Start
-          // window.dataLayer = window.dataLayer || [];
-          window.addEventListener('DOMContentLoaded', (event) => {
-              console.log('DOM fully loaded and parsed');
-              const giftProcess = pageJson.giftProcess; 
-              const pageNumber = pageJson.pageNumber;
-              const pageCount = pageJson.pageCount;
-              console.log("giftProcess: ", giftProcess);
-              console.log("pageNumber: ", pageNumber);
-              console.log("pageCount: ", pageCount);
-      
-              if (giftProcess === true && pageNumber == pageCount) {
-                  window.receipt_amount_data = '{receipt_data~amount}';
-                  window.receipt_recurring_frequency = '{receipt_data~recurringFrequency}';
-                  window.receipt_tx_id = '{receipt_data~txId}';
-      
-                  let rti = window.sessionStorage.getItem('receipt_tx_id');
-                  if(!rti || window.receipt_tx_id != rti) {
-                      window.sessionStorage.setItem('receipt_tx_id', window.receipt_tx_id);
-                      var initialAmount = "{receipt_data~amount}",
-                      prettyAmount = initialAmount.replace(/\$/g, '');
-                      dataLayer.push({'adRevenue': prettyAmount });
-                      console.log("A gift has been made and recorded to Google Analytics " + '{receipt_data~amount}');
-                  }
-              }
-          });
-          // GA Conversion Tracking End
-      
-          // 4Site Template JS: Render Critical: Tracking JS
-              window.addEventListener("load",function(){var e=window.receipt_amount_data,a=pageJson.pageName.toLowerCase();if(a.indexOf("honor")>=0)var n="Honor";else n=a.indexOf("memorial")>=0?"Memorial":a.indexOf("premium")>=0?"Premium":a.indexOf("monthly")>=0?"Monthly":"Standard Donation";var i,o=window.receipt_recurring_frequency;i=o||"OneTime";var r=e.replace(/\$/g,"");parseFloat(r)>0&&"{receipt_data~amount}"!=r&&dataLayer.push({event:"BFREDtransaction",ecommerce:{purchase:{actionField:{id:window.receipt_tx_id,affiliation:"Engaging Networks Donation Form",revenue:r,tax:"0.00",shipping:"0.00"},products:[{name:pageJson.pageName+" - "+pageJson.campaignPageId,brand:n,id:pageJson.campaignPageId+" - "+r+" - "+i,price:r,variant:i,quantity:1}]}}})});
-       
-          // Upland / Mobilecommons Script
-          function getFieldValue(id){
-              let field = document.getElementById(id);
-              return (field && "value" in field) ? field.value : "";
+        // Get the first script element on the page
+        var ref = document.getElementsByTagName("body")[0];
+
+        // Create a new script element
+        var script_oc_en_upland_sms_signup = document.createElement("script");
+        var script_neverbounce = document.createElement("script");
+        var script_threatMetrix = document.createElement("script");
+
+        // Set the script element `src`
+        script_oc_en_upland_sms_signup.src =
+          "https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/oc-en-upland-sms-signup.js?v=1583861134000";
+        script_neverbounce.src =
+          "https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/child-theme/js/NeverBounce.js";
+        script_threatMetrix.src =
+          "https://h.online-metrix.net/fp/tags.js?org_id=7nrfulxi&session_id=e1991-${page~sessionId}&page_id=1";
+
+        // Inject the script-jQuery into the DOM
+        ref.parentNode.insertBefore(script_oc_en_upland_sms_signup, ref);
+        ref.parentNode.insertBefore(script_neverbounce, ref);
+        ref.parentNode.insertBefore(script_threatMetrix, ref);
+
+        //  GA Conversion Tracking Start
+        // window.dataLayer = window.dataLayer || [];
+        window.addEventListener("DOMContentLoaded", (event) => {
+          console.log("DOM fully loaded and parsed");
+          const giftProcess = pageJson.giftProcess;
+          const pageNumber = pageJson.pageNumber;
+          const pageCount = pageJson.pageCount;
+          console.log("giftProcess: ", giftProcess);
+          console.log("pageNumber: ", pageNumber);
+          console.log("pageCount: ", pageCount);
+
+          if (giftProcess === true && pageNumber == pageCount) {
+            window.receipt_amount_data = "{receipt_data~amount}";
+            window.receipt_recurring_frequency =
+              "{receipt_data~recurringFrequency}";
+            window.receipt_tx_id = "{receipt_data~txId}";
+
+            let rti = window.sessionStorage.getItem("receipt_tx_id");
+            if (!rti || window.receipt_tx_id != rti) {
+              window.sessionStorage.setItem(
+                "receipt_tx_id",
+                window.receipt_tx_id
+              );
+              var initialAmount = "{receipt_data~amount}",
+                prettyAmount = initialAmount.replace(/\$/g, "");
+              dataLayer.push({ adRevenue: prettyAmount });
+              console.log(
+                "A gift has been made and recorded to Google Analytics " +
+                  "{receipt_data~amount}"
+              );
+            }
           }
-          function getUserData(){
+        });
+        // GA Conversion Tracking End
+
+        // 4Site Template JS: Render Critical: Tracking JS
+        window.addEventListener("load", function() {
+          var e = window.receipt_amount_data,
+            a = pageJson.pageName.toLowerCase();
+          if (a.indexOf("honor") >= 0) var n = "Honor";
+          else
+            n =
+              a.indexOf("memorial") >= 0
+                ? "Memorial"
+                : a.indexOf("premium") >= 0
+                ? "Premium"
+                : a.indexOf("monthly") >= 0
+                ? "Monthly"
+                : "Standard Donation";
+          var i,
+            o = window.receipt_recurring_frequency;
+          i = o || "OneTime";
+          var r = e.replace(/\$/g, "");
+          parseFloat(r) > 0 &&
+            "{receipt_data~amount}" != r &&
+            dataLayer.push({
+              event: "BFREDtransaction",
+              ecommerce: {
+                purchase: {
+                  actionField: {
+                    id: window.receipt_tx_id,
+                    affiliation: "Engaging Networks Donation Form",
+                    revenue: r,
+                    tax: "0.00",
+                    shipping: "0.00",
+                  },
+                  products: [
+                    {
+                      name: pageJson.pageName + " - " + pageJson.campaignPageId,
+                      brand: n,
+                      id: pageJson.campaignPageId + " - " + r + " - " + i,
+                      price: r,
+                      variant: i,
+                      quantity: 1,
+                    },
+                  ],
+                },
+              },
+            });
+        });
+
+        // Upland / Mobilecommons Script
+        function getFieldValue(id) {
+          let field = document.getElementById(id);
+          return field && "value" in field ? field.value : "";
+        }
+        function getUserData() {
           let phone = getFieldValue("en__field_supporter_phoneNumber");
-          let sms_message_opt_in = document.getElementById('en__field_supporter_questions_178688');
-          if(!phone || !sms_message_opt_in || !sms_message_opt_in.checked) return false;
+          let sms_message_opt_in = document.getElementById(
+            "en__field_supporter_questions_178688"
+          );
+          if (!phone || !sms_message_opt_in || !sms_message_opt_in.checked)
+            return false;
           return {
-              firstname: getFieldValue('en__field_supporter_firstName'),
-              lastname: getFieldValue('en__field_supporter_lastName'),
-              address1: getFieldValue('en__field_supporter_address1'),
-              address2:getFieldValue('en__field_supporter_address2'),
-              city: getFieldValue('en__field_supporter_city'),
-              state: getFieldValue('en__field_supporter_region'),
-              country: getFieldValue('en__field_supporter_country'),
-              postal_code: getFieldValue('en__field_supporter_postcode'),
-              msisdn: phone,
-              email: getFieldValue('en__field_supporter_emailAddress'),
-              phone: phone.replace(/\D/g,''),
-              optin_path_key: 'OP1AF618AA53A977C5E6EE7A033BA8BDDB',
-              donor: document.getElementsByName('transaction.donationAmt.other').length,
-              tags: 'OC_EN_Form'
-          }
-          }
-          function postAjax(url, data, success) {
-          var params = typeof data == 'string' ? data : Object.keys(data).map(
-              function(k){ return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) }
-            ).join('&');
-          
-          var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-          xhr.open('POST', url);
+            firstname: getFieldValue("en__field_supporter_firstName"),
+            lastname: getFieldValue("en__field_supporter_lastName"),
+            address1: getFieldValue("en__field_supporter_address1"),
+            address2: getFieldValue("en__field_supporter_address2"),
+            city: getFieldValue("en__field_supporter_city"),
+            state: getFieldValue("en__field_supporter_region"),
+            country: getFieldValue("en__field_supporter_country"),
+            postal_code: getFieldValue("en__field_supporter_postcode"),
+            msisdn: phone,
+            email: getFieldValue("en__field_supporter_emailAddress"),
+            phone: phone.replace(/\D/g, ""),
+            optin_path_key: "OP1AF618AA53A977C5E6EE7A033BA8BDDB",
+            donor: document.getElementsByName("transaction.donationAmt.other")
+              .length,
+            tags: "OC_EN_Form",
+          };
+        }
+        function postAjax(url, data, success) {
+          var params =
+            typeof data == "string"
+              ? data
+              : Object.keys(data)
+                  .map(function(k) {
+                    return (
+                      encodeURIComponent(k) + "=" + encodeURIComponent(data[k])
+                    );
+                  })
+                  .join("&");
+
+          var xhr = window.XMLHttpRequest
+            ? new XMLHttpRequest()
+            : new ActiveXObject("Microsoft.XMLHTTP");
+          xhr.open("POST", url);
           xhr.onreadystatechange = function() {
-            if(xhr.readyState > 3 && (xhr.status == 200 || xhr.status == 202)) {
-              success(xhr.responseText); 
+            if (
+              xhr.readyState > 3 &&
+              (xhr.status == 200 || xhr.status == 202)
+            ) {
+              success(xhr.responseText);
             }
           };
-          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          xhr.setRequestHeader(
+            "Content-Type",
+            "application/x-www-form-urlencoded"
+          );
           xhr.send(params);
           return xhr;
-          }
-          window.enOnSubmit = function(){
+        }
+        window.enOnSubmit = function() {
           // handle async code with promises
-          return new Promise(function(resolve, reject){
-            console.log('Submit Start');
+          return new Promise(function(resolve, reject) {
+            console.log("Submit Start");
             let userData = getUserData();
-            console.log('User Data', userData);
-            if(!userData) return resolve();
-            postAjax('https://oceanconservancy.org/wp-admin/admin-ajax.php?action=upland_sms_signup', userData, function(data) {
-              console.log('Response Data', data);
-              var response = JSON.parse(data);
-              if(response.error) console.log('error adding contact');
-              else console.log(response.message);
-              resolve();
-            });
-          })
-          }
-      
+            console.log("User Data", userData);
+            if (!userData) return resolve();
+            postAjax(
+              "https://oceanconservancy.org/wp-admin/admin-ajax.php?action=upland_sms_signup",
+              userData,
+              function(data) {
+                console.log("Response Data", data);
+                var response = JSON.parse(data);
+                if (response.error) console.log("error adding contact");
+                else console.log(response.message);
+                resolve();
+              }
+            );
+          });
+        };
+
         /* END: Your Analytics Scripts */
-        console.log("Scripts Loaded")
+        console.log("Scripts Loaded");
       }
       if (isIframe()) {
         var loaded_once;
         window.onfocus = function() {
           if (!loaded_once) {
             load_scripts_fast();
-                  load_scripts_slow();
-            loaded_once = true
+            load_scripts_slow();
+            loaded_once = true;
           }
-        }
+        };
       } else {
-          window.addEventListener('DOMContentLoaded', (event) => {
-              console.log('DOM fully loaded and parsed');
-              load_scripts_fast()
-          });
-      
-          window.addEventListener('load', (event) => {
-              console.log('page is fully loaded');
-              load_scripts_slow()
-          });    
+        window.addEventListener("DOMContentLoaded", (event) => {
+          console.log("DOM fully loaded and parsed");
+          load_scripts_fast();
+        });
+
+        window.addEventListener("load", (event) => {
+          console.log("page is fully loaded");
+          load_scripts_slow();
+        });
       }
-      </script>
+    </script>
 
     <meta name="title" content="" />
     <meta property="og:title" content="" />
@@ -331,16 +412,11 @@
         action="/page/66034/donate/2"
         class="en__component en__component--page"
       >
-        <input
-          type="hidden"
-          name="hidden"
-          class="en__hiddenFields"
-          value="transaction.shipadd1,transaction.shipadd2"
-        />
+        <input type="hidden" name="hidden" class="en__hiddenFields" value="" />
         <input
           type="hidden"
           name="sessionId"
-          value="824243c79196435fa7843587b275818c-server9796"
+          value="0d4faa05fe0e44c1acd8909a96725c72-server10228"
         />
         <input type="hidden" name="gatewaykey" value="" />
         <input type="hidden" name="gatewayaccountid" value="" />
@@ -351,22 +427,32 @@
         <div class="en__component en__component--row en__component--advrow">
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-alert"
-           
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-header pseudo-subgrid"
-           
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-headerOutside"
-           
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-header"
-           
+            style=""
           >
             <div
-              class="en__component en__component--copyblock">
+              class="en__component en__component--copyblock"
+              style="
+
+
+
+
+
+
+
+"
+            >
               <!-- Source: https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/logo-black-large.png?v=1522954644000 -->
               <p>
                 <a href="https://oceanconservancy.org/" target="_blank"
@@ -381,7 +467,17 @@
               </p>
             </div>
             <div
-              class="en__component en__component--copyblock have-questions-call-line">
+              class="en__component en__component--copyblock have-questions-call-line"
+              style="
+
+
+
+
+
+
+
+"
+            >
               <p>HAVE QUESTIONS?</p>
 
               <p><a href="tel:1-800-519-1541">800-519-1541</a></p>
@@ -389,10 +485,20 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-banner"
-           
+            style=""
           >
             <div
-              class="en__component en__component--copyblock">
+              class="en__component en__component--copyblock"
+              style="
+
+
+
+
+
+
+
+"
+            >
               <p>
                 <img
                   alt=""
@@ -407,20 +513,47 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-bannerOverlay"
-           
+            style=""
           >
             <div
-              class="en__component en__component--copyblock banner-text blue lead">
+              class="en__component en__component--copyblock banner-text blue lead"
+              style="
+
+
+
+
+
+
+
+"
+            >
               <p>Donate Today</p>
             </div>
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-top"
-           
+            style=""
           >
             <div
-              class="en__component en__component--copyblock">
-            <h2 style="text-align: center; margin: 1.5rem 0 1rem 0;"><span style="color:#039BC4;"><span style="font-size:26px;"><strong>Donate Today to Ocean Conservancy</strong></span></span></h2>
+              class="en__component en__component--copyblock"
+              style="
+
+
+
+
+
+
+
+"
+            >
+              <h2 style="text-align: center;">
+                <span style="color:#039BC4;"
+                  ><span style="font-size:26px;"
+                    ><strong>Donate Today to Ocean Conservancy</strong></span
+                  ></span
+                >
+              </h2>
+
               <h2 style="text-align: center;">
                 Your Gift Today Can Help Save Our Ocean and its Wildilfe!
               </h2>
@@ -434,27 +567,29 @@
               </p>
 
               <p style="text-align: center;">
-                Give today and make a difference for the future of our
-                  ocean!
+                <strong
+                  >Give today and make a difference for the future of our
+                  ocean!</strong
+                >
               </p>
             </div>
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-side"
-           
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-main"
-           
+            style=""
           >
-            <div class="en__component en__component--formblock">
+            <div class="en__component en__component--formblock" style="">
               <div
                 class="en__field en__field--radio en__field--741941 en__field--recurrpay en__mandatory"
               >
                 <label
                   for="en__field_transaction_recurrpay"
                   class="en__field__label en__field__label--positionabove"
-                 
+                  style=""
                   >Recurring Payment</label
                 >
                 <div
@@ -497,7 +632,7 @@
               >
                 <label
                   class="en__field__label en__field__label--positionabove"
-                 
+                  style=""
                   >Giving Amount</label
                 >
                 <div
@@ -600,87 +735,62 @@
                       placeholder="Other"
                       inputmode="numeric"
                       step=".01"
+                      style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg=="); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;'
                     />
                   </div>
                 </div>
               </div>
-              <div
-                class="en__field en__field--text en__field--741979 en__field--recurrday"
-              >
-                <label
-                  for="en__field_transaction_recurrday"
-                  class="en__field__label en__field__label--positionabove"
-                 
-                  >Recurring Day</label
-                >
-                <div class="en__field__element en__field__element--text">
-                  <input
-                    id="en__field_transaction_recurrday"
-                    type="text"
-                    class="en__field__input en__field__input--text"
-                    name="transaction.recurrday"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                class="en__field en__field--text en__field--741980 en__field--paycurrency en__mandatory has-value"
-              >
-                <label
-                  for="en__field_transaction_paycurrency"
-                  class="en__field__label en__field__label--positionabove"
-                 
-                  >Payment Currency</label
-                >
-                <div class="en__field__element en__field__element--text">
-                  <input
-                    id="en__field_transaction_paycurrency"
-                    type="text"
-                    class="en__field__input en__field__input--text"
-                    name="transaction.paycurrency"
-                    value="USD"
-                  />
-                </div>
-              </div>
-              <div
-                class="en__field en__field--text en__field--741981 en__field--recurrfreq has-value"
-              >
-                <label
-                  for="en__field_transaction_recurrfreq"
-                  class="en__field__label en__field__label--positionabove"
-                 
-                  >Recurring Frequency</label
-                >
-                <div class="en__field__element en__field__element--text">
-                  <input
-                    id="en__field_transaction_recurrfreq"
-                    type="text"
-                    class="en__field__input en__field__input--text"
-                    name="transaction.recurrfreq"
-                    value="MONTHLY"
-                  />
-                </div>
-              </div>
+              <input
+                type="hidden"
+                class="en__field__input en__field__input--hidden"
+                name="transaction.recurrday"
+                value=""
+              />
+
+              <input
+                type="hidden"
+                class="en__field__input en__field__input--hidden"
+                name="transaction.paycurrency"
+                value="USD"
+              />
+
+              <input
+                type="hidden"
+                class="en__field__input en__field__input--hidden"
+                name="transaction.recurrfreq"
+                value="MONTHLY"
+              />
             </div>
             <div
-              class="en__component en__component--copyblock form-section-header">
+              class="en__component en__component--copyblock form-section-header"
+              style="
+
+
+
+
+
+
+
+"
+            >
               <h2
                 id="personal-information-section-header"
-                data-gtm-vis-first-on-screen-6831151_158="763"
+                data-gtm-vis-recent-on-screen-6831151_158="1027568"
+                data-gtm-vis-first-on-screen-6831151_158="1027568"
                 data-gtm-vis-total-visible-time-6831151_158="100"
                 data-gtm-vis-has-fired-6831151_158="1"
               >
                 Personal Information
               </h2>
             </div>
-            <div class="en__component en__component--formblock i4-100">
+            <div class="en__component en__component--formblock i4-100" style="">
               <div
                 class="en__field en__field--text en__field--741988 en__field--firstName en__mandatory"
               >
                 <label
                   for="en__field_supporter_firstName"
                   class="en__field__label"
-                 
+                  style=""
                   >First Name</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -699,7 +809,7 @@
                 <label
                   for="en__field_supporter_lastName"
                   class="en__field__label"
-                 
+                  style=""
                   >Last Name</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -718,7 +828,7 @@
                 <label
                   for="en__field_supporter_emailAddress"
                   class="en__field__label"
-                 
+                  style=""
                   >Email</label
                 >
                 <div class="en__field__element en__field__element--email">
@@ -738,7 +848,7 @@
                 <label
                   for="en__field_supporter_NOT_TAGGED_9"
                   class="en__field__label"
-                 
+                  style=""
                   >Mobile Phone</label
                 >
                 <div class="en__field__element en__field__element--telephone">
@@ -755,7 +865,7 @@
             </div>
             <div
               class="en__component en__component--formblock i2-50 i2-start i3-50 i3-end"
-             
+              style=""
             >
               <div
                 class="en__field en__field--select en__field--741984 en__field--country en__mandatory has-value"
@@ -763,7 +873,7 @@
                 <label
                   for="en__field_supporter_country"
                   class="en__field__label"
-                 
+                  style=""
                   >Country</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1043,42 +1153,40 @@
                 </div>
               </div>
               <div
-                class="en__field en__field--text en__field--741983 en__field--shipadd1 en__mandatory en__hidden"
+                class="en__field en__field--text en__field--743364 en__field--address1 en__mandatory"
               >
                 <label
-                  for="en__field_transaction_shipadd1"
+                  for="en__field_supporter_address1"
                   class="en__field__label"
-                 
+                  style=""
                   >Address</label
                 >
                 <div class="en__field__element en__field__element--text">
                   <input
-                    id="en__field_transaction_shipadd1"
+                    id="en__field_supporter_address1"
                     type="text"
                     class="en__field__input en__field__input--text"
-                    name="transaction.shipadd1"
+                    name="supporter.address1"
                     value=""
-                    disabled=""
                   />
                 </div>
               </div>
               <div
-                class="en__field en__field--text en__field--741950 en__field--shipadd2 en__mandatory en__hidden"
+                class="en__field en__field--text en__field--743365 en__field--address2"
               >
                 <label
-                  for="en__field_transaction_shipadd2"
+                  for="en__field_supporter_address2"
                   class="en__field__label"
-                 
+                  style=""
                   >Apt., ste., bldg.</label
                 >
                 <div class="en__field__element en__field__element--text">
                   <input
-                    id="en__field_transaction_shipadd2"
+                    id="en__field_supporter_address2"
                     type="text"
                     class="en__field__input en__field__input--text"
-                    name="transaction.shipadd2"
+                    name="supporter.address2"
                     value=""
-                    disabled=""
                   />
                 </div>
               </div>
@@ -1088,7 +1196,7 @@
                 <label
                   for="en__field_supporter_city"
                   class="en__field__label"
-                 
+                  style=""
                   >City</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1107,7 +1215,7 @@
                 <label
                   for="en__field_supporter_region"
                   class="en__field__label"
-                 
+                  style=""
                   >State</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1177,7 +1285,7 @@
                 <label
                   for="en__field_supporter_postcode"
                   class="en__field__label"
-                 
+                  style=""
                   >ZIP Code</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1191,11 +1299,11 @@
                 </div>
               </div>
             </div>
-            <div class="en__component en__component--formblock">
+            <div class="en__component en__component--formblock" style="">
               <div
                 class="en__field en__field--checkbox en__field--question en__field--20087 en__field--opt-in has-value"
               >
-                <label class="en__field__label">Email Opt-in</label>
+                <label class="en__field__label" style="">Email Opt-in</label>
                 <div
                   class="en__field__element en__field__element--checkbox
 	"
@@ -1221,7 +1329,7 @@
               <div
                 class="en__field en__field--checkbox en__field--question en__field--178688 en__field--sms-opt-in has-value"
               >
-                <label class="en__field__label">SMS Opt-in</label>
+                <label class="en__field__label" style="">SMS Opt-in</label>
                 <div
                   class="en__field__element en__field__element--checkbox
 	"
@@ -1246,11 +1354,21 @@
               </div>
             </div>
             <div
-              class="en__component en__component--copyblock form-section-header">
+              class="en__component en__component--copyblock form-section-header"
+              style="
+
+
+
+
+
+
+
+"
+            >
               <h2
                 id="payment-information-section-header"
-                data-gtm-vis-recent-on-screen-6831151_159="5096"
-                data-gtm-vis-first-on-screen-6831151_159="5096"
+                data-gtm-vis-recent-on-screen-6831151_159="1718452"
+                data-gtm-vis-first-on-screen-6831151_159="1718452"
                 data-gtm-vis-total-visible-time-6831151_159="100"
                 data-gtm-vis-has-fired-6831151_159="1"
               >
@@ -1258,7 +1376,17 @@
               </h2>
             </div>
             <div
-              class="en__component en__component--copyblock">
+              class="en__component en__component--copyblock"
+              style="
+
+
+
+
+
+
+
+"
+            >
               <!-- Custom Radio Buttons using the same markup as Engaging Networks -->
               <div
                 class="en__component en__component--formblock give-by-select"
@@ -1266,7 +1394,6 @@
                 <div
                   class="en__field en__field--radio en__field--000000 en__field--giveBySelect en__mandatory pseudo-en-field"
                 >
-                  <!--<label class="en__field__label en__field__label==positionabove">Give by Select</label>-->
                   <div class="en__field__element en__field__element--radio">
                     <div class="en__field__item">
                       <input
@@ -1299,15 +1426,27 @@
                       >
                     </div>
 
-                    <div class="en__field__item"><input class="en__field__input en__field__input--radio" id="en__field_transaction_giveBySelect2" name="transaction.giveBySelect" type="radio" value="Check" /> <label class="en__field__label en__field__label--item" for="en__field_transaction_giveBySelect2">Check</label></div>
-
+                    <div class="en__field__item">
+                      <input
+                        class="en__field__input en__field__input--radio"
+                        id="en__field_transaction_giveBySelect2"
+                        name="transaction.giveBySelect"
+                        type="radio"
+                        value="Check"
+                      />
+                      <label
+                        class="en__field__label en__field__label--item"
+                        for="en__field_transaction_giveBySelect2"
+                        >Check</label
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div
-              class="en__component en__component--formblock i1-hideSTOP i2-hideSTOP i2-100 giveBySelect-Card"
-             
+              class="en__component en__component--formblock i1-hide i2-hide i2-100 giveBySelect-Card"
+              style=""
             >
               <div
                 class="en__field en__field--select en__field--741963 en__field--paymenttype en__mandatory has-value"
@@ -1315,7 +1454,7 @@
                 <label
                   for="en__field_transaction_paymenttype"
                   class="en__field__label"
-                 
+                  style=""
                   >Payment Type</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1338,7 +1477,7 @@
                 <label
                   for="en__field_supporter_NOT_TAGGED_33"
                   class="en__field__label"
-                 
+                  style=""
                   >PayPal Billing Agreement</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1358,7 +1497,7 @@
                 <label
                   for="en__field_transaction_ccnumber"
                   class="en__field__label"
-                 
+                  style=""
                   >Credit Card Number</label
                 >
                 <div class="en__field__element en__field__element--telephone">
@@ -1379,7 +1518,7 @@
                 <label
                   for="en__field_transaction_ccexpire"
                   class="en__field__label"
-                 
+                  style=""
                   >Credit Card Expiration</label
                 >
                 <div class="en__field__element en__field__element--splitselect">
@@ -1394,6 +1533,7 @@
                       class="en__field__input en__field__input--splitselect"
                       name="transaction.ccexpire"
                     >
+                      <option selected="selected" value="">Month</option>
                       <option value="01">01</option>
                       <option value="02">02</option>
                       <option value="03">03</option>
@@ -1413,6 +1553,7 @@
                       class="en__field__input en__field__input--splitselect"
                       name="transaction.ccexpire"
                     >
+                      <option selected="selected" value="">Year</option>
                       <option value="20">2020</option>
                       <option value="21">2021</option>
                       <option value="22">2022</option>
@@ -1434,7 +1575,7 @@
                 <label
                   for="en__field_transaction_ccvv"
                   class="en__field__label"
-                 
+                  style=""
                   >Credit Card CVV</label
                 >
                 <div class="en__field__element en__field__element--telephone">
@@ -1449,33 +1590,99 @@
                 </div>
               </div>
             </div>
-
-            <div class="en__component en__component--formblock giveBySelect-Check">
-	
-	
-              <div class="en__field en__field--number en__field--407138 en__field--bankAccountNumber">
-          <label for="en__field_supporter_bankAccountNumber" class="en__field__label">Account Number</label>
-          <div class="en__field__element en__field__element--number">
-            <input id="en__field_supporter_bankAccountNumber" type="number" class="en__field__input en__field__input--number" name="supporter.bankAccountNumber" value="">
-           </div>
-        </div>
-              <div class="en__field en__field--number en__field--407140 en__field--bankRoutingNumber">
-          <label for="en__field_supporter_bankRoutingNumber" class="en__field__label">Routing Number</label>
-          <div class="en__field__element en__field__element--number">
-            <input id="en__field_supporter_bankRoutingNumber" type="number" class="en__field__input en__field__input--number" name="supporter.bankRoutingNumber" value="">
-           </div>
-        </div>
-          
-          
-          
-        </div>           
             <div
-              class="en__component en__component--copyblock">
+              class="en__component en__component--formblock i1-hide i2-start i2-50 i3-50 i3-end giveBySelect-Check"
+              style="display: none;"
+            >
+              <div
+                class="en__field en__field--select en__field--743412 en__field--bankAccountType has-value"
+              >
+                <label
+                  for="en__field_supporter_bankAccountType"
+                  class="en__field__label"
+                  style=""
+                  >Bank Account Type</label
+                >
+                <div class="en__field__element en__field__element--select">
+                  <select
+                    id="en__field_supporter_bankAccountType"
+                    class="en__field__input en__field__input--select"
+                    name="supporter.bankAccountType"
+                  >
+                    <option selected="selected" value="checking"
+                      >Checking</option
+                    >
+                    <option value="saving">Saving</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="en__field en__field--number en__field--743411 en__field--bankAccountNumber"
+              >
+                <label
+                  for="en__field_supporter_bankAccountNumber"
+                  class="en__field__label"
+                  style=""
+                  >Account Number</label
+                >
+                <div class="en__field__element en__field__element--number">
+                  <input
+                    id="en__field_supporter_bankAccountNumber"
+                    type="number"
+                    class="en__field__input en__field__input--number"
+                    name="supporter.bankAccountNumber"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="en__field en__field--number en__field--743410 en__field--bankRoutingNumber"
+              >
+                <label
+                  for="en__field_supporter_bankRoutingNumber"
+                  class="en__field__label"
+                  style=""
+                  >Routing Number</label
+                >
+                <div class="en__field__element en__field__element--number">
+                  <input
+                    id="en__field_supporter_bankRoutingNumber"
+                    type="number"
+                    class="en__field__input en__field__input--number"
+                    name="supporter.bankRoutingNumber"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="en__component en__component--copyblock giveBySelect-Paypal"
+              style="display: none;"
+            >
+              <p style="margin-top: 0 !important;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+                amet ex tempor, pretium quam quis, mollis urna. Nulla malesuada
+                lorem vel libero viverra, vitae pellentesque erat gravida.
+                Aliquam tincidunt semper dolor, vel congue nisl dapibus ac.
+              </p>
+            </div>
+            <div
+              class="en__component en__component--copyblock"
+              style="
+
+
+
+
+
+
+
+"
+            >
               <!-- Custom Checkbox using the same markup as Engaging Networks --><!-- The value of the checbox is usd as a % to calculate the processing fee -->
               <div
                 class="en__field en__field--checkbox en__field--000000 en__field--processing_fees pseudo-en-field has-value"
               >
-                <!--<label class="en__field__label en__field__label--positionabove">Processing Fees</label>-->
+                <!--<label class="en__field__label en__field__label--positionabove" style="">Processing Fees</label>-->
                 <div class="en__field__element en__field__element--checkbox">
                   <div class="en__field__item">
                     <input
@@ -1496,13 +1703,23 @@
               </div>
             </div>
             <div
-              class="en__component en__component--copyblock">
+              class="en__component en__component--copyblock"
+              style="
+
+
+
+
+
+
+
+"
+            >
               <!-- Custom Checkbox using the same markup as Engaging Networks -->
               <div
                 class="en__field en__field--checkbox en__field--000000 en__field--monthly_upsell_checkbox pseudo-en-field recurrpay-N has-value"
                 style="display: none;"
               >
-                <!--<label class="en__field__label en__field__label--positionabove"></label>-->
+                <!--<label class="en__field__label en__field__label--positionabove" style=""></label>-->
                 <div class="en__field__element en__field__element--checkbox">
                   <div class="en__field__item">
                     <input
@@ -1525,11 +1742,11 @@
                 </div>
               </div>
             </div>
-            <div class="en__component en__component--formblock">
+            <div class="en__component en__component--formblock" style="">
               <div
                 class="en__field en__field--checkbox en__field--742960 en__field--inmem has-value"
               >
-                <label class="en__field__label"
+                <label class="en__field__label" style=""
                   >Would you like to dedicate this gift?</label
                 >
                 <div
@@ -1570,7 +1787,7 @@
                 <label
                   for="en__field_transaction_honname"
                   class="en__field__label"
-                 
+                  style=""
                   >Name of Friend or Loved One</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1590,7 +1807,7 @@
                 <label
                   for="en__field_transaction_infname"
                   class="en__field__label"
-                 
+                  style=""
                   >Recipient Name</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1610,7 +1827,7 @@
                 <label
                   for="en__field_transaction_trbopts"
                   class="en__field__label"
-                 
+                  style=""
                   >Honoree Message</label
                 >
                 <div class="en__field__element en__field__element--textarea">
@@ -1628,7 +1845,7 @@
                 <label
                   for="en__field_transaction_infadd1"
                   class="en__field__label"
-                 
+                  style=""
                   >Address</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1648,7 +1865,7 @@
                 <label
                   for="en__field_transaction_infadd2"
                   class="en__field__label"
-                 
+                  style=""
                   >Apt., ste., bldg.</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1668,7 +1885,7 @@
                 <label
                   for="en__field_transaction_infcity"
                   class="en__field__label"
-                 
+                  style=""
                   >City</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1688,7 +1905,7 @@
                 <label
                   for="en__field_transaction_infreg"
                   class="en__field__label"
-                 
+                  style=""
                   >State</label
                 >
                 <div class="en__field__element en__field__element--select">
@@ -1758,7 +1975,7 @@
                 <label
                   for="en__field_transaction_infpostcd"
                   class="en__field__label"
-                 
+                  style=""
                   >ZIP Code</label
                 >
                 <div class="en__field__element en__field__element--text">
@@ -1781,7 +1998,7 @@
             </div>
             <div
               class="en__component en__component--formblock dynamic-giving-button"
-             
+              style=""
             >
               <div class="en__captcha">
                 <div
@@ -1791,11 +2008,11 @@
                   <div style="width: 304px; height: 78px;">
                     <div>
                       <iframe
-                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdjFAUTAAAAAOR0XkVp_ORlGPrlOB_WMer01f2H&amp;co=aHR0cHM6Ly9kb25hdGUub2NlYW5jb25zZXJ2YW5jeS5vcmc6NDQz&amp;hl=en&amp;v=TPiWapjoyMdQOtxLT9_b4n2W&amp;size=normal&amp;cb=s7hbh64h6t08"
+                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdjFAUTAAAAAOR0XkVp_ORlGPrlOB_WMer01f2H&amp;co=aHR0cHM6Ly9kb25hdGUub2NlYW5jb25zZXJ2YW5jeS5vcmc6NDQz&amp;hl=en&amp;v=TPiWapjoyMdQOtxLT9_b4n2W&amp;size=normal&amp;cb=75bkl3hjihl4"
                         width="304"
                         height="78"
                         role="presentation"
-                        name="a-9putd5ri77c0"
+                        name="a-x5f1oz703ltv"
                         frameborder="0"
                         scrolling="no"
                         sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
@@ -1813,11 +2030,21 @@
               </div>
 
               <div class="en__submit">
-                <button>Donate $22 Monthly</button>
+                <button style="">Donate $22 Monthly</button>
               </div>
             </div>
             <div
-              class="en__component en__component--copyblock">
+              class="en__component en__component--copyblock"
+              style="
+
+
+
+
+
+
+
+"
+            >
               <ul>
                 <li>
                   Live Giving Amount:
@@ -1850,10 +2077,20 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-bottom"
-           
+            style=""
           >
             <div
-              class="en__component en__component--copyblock">
+              class="en__component en__component--copyblock"
+              style="
+
+
+
+
+
+
+
+"
+            >
               <div style="text-align: center;">
                 <img
                   alt=""
@@ -1890,27 +2127,37 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-footer"
-           
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn body-footerOutside"
-           
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-footerSpacer"
-           
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-preFooter pseudo-subgrid"
-           
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn content-footer pseudo-subgrid"
-           
+            style=""
           >
             <div
-              class="en__component en__component--copyblock">
-              <p>
+              class="en__component en__component--copyblock"
+              style="
+
+
+
+
+
+
+
+"
+            >
+              <p style="text-align: center;">
                 1300 19th Street NW - 8th Floor - Washington, DC 20036<br />
                 <strong>webmaster@oceanconservancy.org</strong><br />
                 800-519-1541 -
@@ -1924,25 +2171,61 @@
                   ><a href="http://oceanconservancy.org/legal-statement/"
                     >Legal Information</a
                   >&nbsp;</strong
-                >-
+                ><span style="text-align: center;"
+                  >-
                   <a
                     href="https://oceanconservancy.org/cookie-policy/"
                     target="_blank"
                     ><b>Cookie Policy</b></a
-                  >
+                  ></span
+                >
               </p>
             </div>
             <div
-              class="en__component en__component--copyblock">
-              <p>Photo Credit: Photographer (Foreground) Photographer
-                  (Background)</p>
+              class="en__component en__component--copyblock"
+              style="
+
+
+
+
+
+
+
+"
+            >
+              <p>
+                <span style="font-size: 13px;"
+                  >Photo Credit: Photographer (Foreground) Photographer
+                  (Background)</span
+                >
+              </p>
             </div>
             <div
-              class="en__component en__component--copyblock">
+              class="en__component en__component--copyblock"
+              style="
+
+
+
+
+
+
+
+"
+            >
               <p>© 2020&nbsp;Ocean Conservancy</p>
             </div>
             <div
-              class="en__component en__component--copyblock">
+              class="en__component en__component--copyblock"
+              style="
+
+
+
+
+
+
+
+"
+            >
               <!-- Thank you for supporting 4Site Studios -->
               <div class="light-font" id="designed-by-4site">
                 <a
@@ -1958,90 +2241,129 @@
           </div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-backgroundImage pseudo-subgrid"
-          >
-            <!-- <div
-              class="en__component en__component--copyblock">
-              <p>
-                <img
-                  alt=""
-                  class="emailImage"
-                  data-ratio-lock="true"
-                  data-unit="px"
-                  height="600px"
-                  loading="lazy"
-                  src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/346-Styrofoam+Apocalypse.jpg?v=1597876260000"
-                  style="height: 600px; width: 1200px; display: none;"
-                  width="1200px"
-                />
-              </p>
-            </div> -->
-          </div>
+            style=""
+          ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-backgroundImageOverlay pseudo-subgrid"
-           
+            style=""
           ></div>
           <div
             class="en__component en__component en__component--column en__component--advcolumn page-customCode"
-           
+            style=""
           >
-          <div class="en__component en__component--codeblock"><!-- Modals -->
-            <template id="upsellModal">
-              <div class="modal-left-column" style="background-image: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/QuittheCutlery_CarolinePowers_Landing_photo.jpg?v=1568312213000')"></div>
-              <div class="modal-right-column dark-background">
-              <h1>Make your gift <span class="highlight">do more</span></h1>
-              <p>A regular gift ensures that we can launch urgent, effective campaigns right when they we’re needed most</p>
-              <p class="small">Select <strong>“Yes”</strong> to modify your gift to repeat monthly.</p>
-              <div class="cta-groups column center">
-                <div class="group column primary">
-                  <button type="button" class="cta primary monthly-upsell form-submit">YES!!!</button>
-                  <p class="small">Upgrade my gift to <span class="live-giving-upsell-amount">how much&#8203;</span> monthly</p>
+            <div class="en__component en__component--codeblock">
+              <!-- Modals -->
+              <template id="upsellModal">
+                <div
+                  class="modal-left-column"
+                  style="background-image: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/QuittheCutlery_CarolinePowers_Landing_photo.jpg?v=1568312213000')"
+                ></div>
+                <div class="modal-right-column dark-background">
+                  <h1>Make your gift <span class="highlight">do more</span></h1>
+                  <p>
+                    A regular gift ensures that we can launch urgent, effective
+                    campaigns right when they we’re needed most
+                  </p>
+                  <p class="small">
+                    Select <strong>“Yes”</strong> to modify your gift to repeat
+                    monthly.
+                  </p>
+                  <div class="cta-groups column center">
+                    <div class="group column primary">
+                      <button
+                        type="button"
+                        class="cta primary monthly-upsell form-submit"
+                      >
+                        YES!!!
+                      </button>
+                      <p class="small">
+                        Upgrade my gift to
+                        <span class="live-giving-upsell-amount">how much​</span>
+                        monthly
+                      </p>
+                    </div>
+                    <div class="group column secondary">
+                      <a class="small cta secondary form-submit" href="##"
+                        >Not today – complete my one-time
+                        <span class="live-giving-amount">how much</span>
+                        gift.</a
+                      >
+                    </div>
+                  </div>
                 </div>
-                <div class="group column secondary">
-                  <a class="small cta secondary form-submit" href="##">Not today – complete my one-time <span class="live-giving-amount">how much</span> gift.</a>
+              </template>
+              <template id="exitModal">
+                <h1>STOP!</h1>
+                <p>
+                  Your gift of
+                  <span class="live-giving-amount">how much</span> has not yet
+                  been completed. Please complete your gift before leaving.
+                </p>
+                <div class="cta-groups row">
+                  <div class="group row primary">
+                    <button
+                      type="button"
+                      class="cta primary monthly-upsell form-submit"
+                    >
+                      Give
+                      <span class="live-giving-upsell-amount">how much​</span>
+                      Monthly
+                    </button>
+                  </div>
+                  <div class="group row secondary">
+                    <a class="cta secondary form-submit" href="##"
+                      >Give
+                      <span class="live-giving-amount">how much</span>
+                      One-Time</a
+                    >
+                  </div>
                 </div>
-              </div>
-              </div>  
-            </template>
-            <template id="exitModal">
-              <h1>STOP!</h1>
-              <p>Your gift of <span class="live-giving-amount">how much</span> has not yet been completed. Please complete your gift before leaving.</p>
-              <div class="cta-groups row">
-                <div class="group row primary">
-                  <button type="button" class="cta primary monthly-upsell form-submit">Give <span class="live-giving-upsell-amount">how much&#8203;</span> Monthly</button>
-                </div>
-                <div class="group row secondary">
-                  <a class="cta secondary form-submit" href="##">Give <span class="live-giving-amount">how much</span> One-Time</a>
-                </div>
-              </div>
-            </template>
-            <!-- /Modals --></div>
+              </template>
+              <!-- /Modals -->
+            </div>
             <div class="en__component en__component--codeblock">
               <script src="https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/child-theme/js/oc-en-tracking-id-swap.js"></script>
             </div>
           </div>
         </div>
       </form>
-<!-- End EN Page Builder -->
-</div>
-     
-<!-- Default and Fallback Meta Tags: Placed at the bottom so any previously defined meta tags in the page take precedence -->
-<meta property="og:description" content="We use the best in science-based solutions to tackle the biggest threats to our ocean. Join the Fight for a Healthy Ocean.">  
-<meta name="description" content="We use the best in science-based solutions to tackle the biggest threats to our ocean. Join the Fight for a Healthy Ocean.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:description" content="We use the best in science-based solutions to tackle the biggest threats to our ocean. Join the Fight for a Healthy Ocean.">
-<meta name="twitter:title" content="Ocean Conservancy">
-<meta name="twitter:site" content="@OurOcean">
-<meta name="twitter:image" content="https://oceanconservancy.org/wp-content/uploads/2017/02/fb-share.png">
-<meta name="twitter:creator" content="@OurOcean">
+      <!-- End EN Page Builder -->
+    </div>
 
-<script async src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/main.js?v=15978025300"></script>     
+    <!-- Default and Fallback Meta Tags: Placed at the bottom so any previously defined meta tags in the page take precedence -->
+    <meta
+      property="og:description"
+      content="We use the best in science-based solutions to tackle the biggest threats to our ocean. Join the Fight for a Healthy Ocean."
+    />
+    <meta
+      name="description"
+      content="We use the best in science-based solutions to tackle the biggest threats to our ocean. Join the Fight for a Healthy Ocean."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:description"
+      content="We use the best in science-based solutions to tackle the biggest threats to our ocean. Join the Fight for a Healthy Ocean."
+    />
+    <meta name="twitter:title" content="Ocean Conservancy" />
+    <meta name="twitter:site" content="@OurOcean" />
+    <meta
+      name="twitter:image"
+      content="https://oceanconservancy.org/wp-content/uploads/2017/02/fb-share.png"
+    />
+    <meta name="twitter:creator" content="@OurOcean" />
 
-<!-- Begin ThreatMetric profiling tags below -->    
-<noscript>
-<iframe style="width: 100px; height: 100px; border: 0; position: absolute; top: -5000px;"
-src="https://h.online-metrix.net/fp/tags.js?org_id=7nrfulxi&session_id=e1991-${page~sessionId}&page_id=1"></iframe>
-</noscript>
-<!-- End profiling tags -->        
+    <script
+      async
+      src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/main.js?v=15978025300"
+    ></script>
 
-</body>
+    <!-- Begin ThreatMetric profiling tags below -->
+    <noscript>
+      <iframe
+        style="width: 100px; height: 100px; border: 0; position: absolute; top: -5000px;"
+        src="https://h.online-metrix.net/fp/tags.js?org_id=7nrfulxi&session_id=e1991-${page~sessionId}&page_id=1"
+      ></iframe>
+    </noscript>
+    <!-- End profiling tags -->
+  </body>
 </html>

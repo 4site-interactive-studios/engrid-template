@@ -15,12 +15,14 @@ export default class ProcessingFees {
   private _subscribe?: () => void;
 
   constructor() {
+    // console.log('%c Processing Fees Constructor', 'font-size: 30px; background-color: #000; color: #FF0');
     // Run only if it is a Donation Page with a Donation Amount field
-    if (document.getElementsByName("transaction.donationAmt").length) {
+    if (!document.getElementsByName("transaction.donationAmt").length) {
       return;
     }
     // Watch the Radios for Changes
     if (this._field instanceof HTMLInputElement) {
+      // console.log('%c Processing Fees Start', 'font-size: 30px; background-color: #000; color: #FF0');
       this._field.addEventListener("change", (e: Event) => {
         if (
           this._field instanceof HTMLInputElement &&
@@ -30,6 +32,7 @@ export default class ProcessingFees {
           this._subscribe = form.onSubmit.subscribe(() => this.addFees());
         }
         this._onFeeChange.dispatch(this.fee);
+        // // console.log('%c Processing Fees Script Applied', 'font-size: 30px; background-color: #000; color: #FF0');
       });
     }
 
@@ -63,7 +66,7 @@ export default class ProcessingFees {
       };
       const processing_fee =
         (parseFloat(fees.processingFeePercentAdded) / 100) *
-          this._amount.amount +
+        this._amount.amount +
         parseFloat(fees.processingFeeFixedAmountAdded);
       return Math.round(processing_fee * 100) / 100;
     }
