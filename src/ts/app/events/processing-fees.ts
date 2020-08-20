@@ -59,15 +59,15 @@ export default class ProcessingFees {
     ) {
       const fees = {
         ...{
-          processingFeePercentAdded: "0",
-          processingFeeFixedAmountAdded: "0"
+          processingfeepercentadded: "0",
+          processingfeefixedamountadded: "0"
         },
         ...this._field.dataset
       };
       const processing_fee =
-        (parseFloat(fees.processingFeePercentAdded) / 100) *
+        (parseFloat(fees.processingfeepercentadded) / 100) *
         this._amount.amount +
-        parseFloat(fees.processingFeeFixedAmountAdded);
+        parseFloat(fees.processingfeefixedamountadded);
       return Math.round(processing_fee * 100) / 100;
     }
     return 0;
