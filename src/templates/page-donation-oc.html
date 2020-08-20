@@ -124,14 +124,16 @@
         var ref = document.getElementsByTagName("body")[0];
 
         // Create a new script element
-        var script_jQuery = document.createElement("script");
-
+        var script_international_country_select = document.createElement( 'script' );
+        var script_jQuery = document.createElement( 'script' );
+    
         // Set the script element `src`
-        script_jQuery.src =
-          "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js";
-
+        script_international_country_select.src='https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-international-country-select.js';
+        script_jQuery.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
+    
         // Inject the script-jQuery into the DOM
-        ref.parentNode.insertBefore(script_jQuery, ref);
+        ref.parentNode.insertBefore( international_country_select, ref );
+        ref.parentNode.insertBefore( script_jQuery, ref );
 
         /* START: Your Analytics Scripts */
         (function(w, d, s, l, i) {
@@ -868,7 +870,7 @@
               style=""
             >
               <div
-                class="en__field en__field--select en__field--741984 en__field--country en__mandatory has-value"
+                class="en__field en__field--select en__field--741984 en__field--country simple_country_select en__mandatory has-value"
               >
                 <label
                   for="en__field_supporter_country"

@@ -840,7 +840,6 @@ input[name="transaction.donationAmt.other"] {
 
 #engrid .en__component--advrow .body-header::before,
 #engrid .en__component--advrow .body-banner::before,
-#engrid .en__component--advrow .body-bannerOverlay::before,
 #engrid .en__component--advrow .body-top::before,
 #engrid .en__component--advrow .body-side::before,
 #engrid .en__component--advrow .body-main::before,
@@ -856,6 +855,19 @@ input[name="transaction.donationAmt.other"] {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
+
+#en__pagebuilder #engrid .en__component--advrow .body-bannerOverlay::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
 #engrid.layout-centercenter1col .en__component--advrow .body-bottom {
   padding-top: 2rem;
   text-align: center;
@@ -955,3 +967,35 @@ img.oc-gs-logo {
     
   }
 }
+
+ /************************************
+   * Utility: Hide Display
+   * // Depends on corresponding JS library
+   * .simple_country_select
+   ***********************************/
+   #engrid #en_custom_field_simple_country_select_long a,
+   #engrid #en_custom_field_simple_country_select_short a {
+     cursor: pointer;
+   }
+   
+   #engrid #en_custom_field_simple_country_select_short {
+     display: none;
+   }
+   
+   #engrid .en__component--formblock.simple_country_select {
+     transition: opacity 0.3s;
+   }
+   
+   body:not(#en__pagebuilder)
+   #engrid
+     .en__component--formblock.simple_country_select:not(.country-select-visible) {
+     opacity: 0;
+     height: 0px;
+   }
+   
+   #engrid
+     .en__component--formblock.country-select-visible
+     .en__field--address1
+     span {
+     display: none;
+   }
