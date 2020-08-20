@@ -82,7 +82,7 @@
       }
     </style>
     <!-- <link rel="preload" href="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/main.css?v=1597697150000" as="style" > -->
-    <link
+    <!-- <link
       rel="preload"
       href="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/logo-black-large.png?v=1522954644000"
       as="image"
@@ -98,7 +98,7 @@
       href="https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfBBc4AMP6lQ.woff2"
       as="font"
       crossorigin="anonymous"
-    />
+    /> -->
 
     <link rel="preconnect" href="//d2amdniajcqcy4.cloudfront.net" />
     <link rel="dns-prefetch" href="//www.googletagmanager.com" />
@@ -110,63 +110,170 @@
     <link rel="dns-prefetch" href="//www.googleadservices.com" />
     <link rel="dns-prefetch" href="//www.facebook.com" />
 
-    <!-- Google Tag Manager -->
-    <!-- Hard inclusion of JQuery because GTM is loading code expecting it to be there -->
-    <script
-      async
-      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
-    ></script>
-
     <script>
-      (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-P99B2PT");
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- GA Conversion Tracking Start -->
-    <script>
-      // window.dataLayer = window.dataLayer || [];
-      window.addEventListener("DOMContentLoaded", (event) => {
-        console.log("DOM fully loaded and parsed");
-        const giftProcess = pageJson.giftProcess;
-        const pageNumber = pageJson.pageNumber;
-        const pageCount = pageJson.pageCount;
-        console.log("giftProcess: ", giftProcess);
-        console.log("pageNumber: ", pageNumber);
-        console.log("pageCount: ", pageCount);
-
-        if (giftProcess === true && pageNumber == pageCount) {
-          window.receipt_amount_data = "{receipt_data~amount}";
-          window.receipt_recurring_frequency =
-            "{receipt_data~recurringFrequency}";
-          window.receipt_tx_id = "{receipt_data~txId}";
-
-          let rti = window.sessionStorage.getItem("receipt_tx_id");
-          if (!rti || window.receipt_tx_id != rti) {
-            window.sessionStorage.setItem(
-              "receipt_tx_id",
-              window.receipt_tx_id
-            );
-            var initialAmount = "{receipt_data~amount}",
-              prettyAmount = initialAmount.replace(/\$/g, "");
-            dataLayer.push({ adRevenue: prettyAmount });
-            console.log(
-              "A gift has been made and recorded to Google Analytics " +
-                "{receipt_data~amount}"
-            );
+      function isIframe() {
+        try {
+          return window.self !== window.top
+        } catch (e) {
+          return true
+        }
+      };
+      
+      function load_scripts_fast() {
+          // Get the first script element on the page
+          var ref = document.getElementsByTagName( 'body' )[ 0 ];
+      
+          // Create a new script element
+          var script_jQuery = document.createElement( 'script' );
+      
+          // Set the script element `src`
+          script_jQuery.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
+      
+          // Inject the script-jQuery into the DOM
+          ref.parentNode.insertBefore( script_jQuery, ref );
+      
+        /* START: Your Analytics Scripts */
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-P99B2PT');
+      }
+      
+      function load_scripts_slow() {
+      
+          // Get the first script element on the page
+          var ref = document.getElementsByTagName( 'body' )[ 0 ];
+      
+          // Create a new script element
+          var script_oc_en_upland_sms_signup = document.createElement( 'script' );
+          var script_neverbounce = document.createElement( 'script' );
+          var script_threatMetrix = document.createElement( 'script' );
+      
+          // Set the script element `src`
+          script_oc_en_upland_sms_signup.src ='https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/oc-en-upland-sms-signup.js?v=1583861134000';
+          script_neverbounce.src = 'https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/child-theme/js/NeverBounce.js';
+          script_threatMetrix.src = 'https://h.online-metrix.net/fp/tags.js?org_id=7nrfulxi&session_id=e1991-${page~sessionId}&page_id=1';
+      
+          // Inject the script-jQuery into the DOM
+          ref.parentNode.insertBefore( script_oc_en_upland_sms_signup, ref );
+          ref.parentNode.insertBefore( script_neverbounce, ref );
+          ref.parentNode.insertBefore( script_threatMetrix, ref );
+        
+          <!-- GA Conversion Tracking Start -->
+          // window.dataLayer = window.dataLayer || [];
+          window.addEventListener('DOMContentLoaded', (event) => {
+              console.log('DOM fully loaded and parsed');
+              const giftProcess = pageJson.giftProcess; 
+              const pageNumber = pageJson.pageNumber;
+              const pageCount = pageJson.pageCount;
+              console.log("giftProcess: ", giftProcess);
+              console.log("pageNumber: ", pageNumber);
+              console.log("pageCount: ", pageCount);
+      
+              if (giftProcess === true && pageNumber == pageCount) {
+                  window.receipt_amount_data = '{receipt_data~amount}';
+                  window.receipt_recurring_frequency = '{receipt_data~recurringFrequency}';
+                  window.receipt_tx_id = '{receipt_data~txId}';
+      
+                  let rti = window.sessionStorage.getItem('receipt_tx_id');
+                  if(!rti || window.receipt_tx_id != rti) {
+                      window.sessionStorage.setItem('receipt_tx_id', window.receipt_tx_id);
+                      var initialAmount = "{receipt_data~amount}",
+                      prettyAmount = initialAmount.replace(/\$/g, '');
+                      dataLayer.push({'adRevenue': prettyAmount });
+                      console.log("A gift has been made and recorded to Google Analytics " + '{receipt_data~amount}');
+                  }
+              }
+          });
+          <!-- GA Conversion Tracking End -->  
+      
+          <!-- 4Site Template JS: Render Critical: Tracking JS -->
+              window.addEventListener("load",function(){var e=window.receipt_amount_data,a=pageJson.pageName.toLowerCase();if(a.indexOf("honor")>=0)var n="Honor";else n=a.indexOf("memorial")>=0?"Memorial":a.indexOf("premium")>=0?"Premium":a.indexOf("monthly")>=0?"Monthly":"Standard Donation";var i,o=window.receipt_recurring_frequency;i=o||"OneTime";var r=e.replace(/\$/g,"");parseFloat(r)>0&&"{receipt_data~amount}"!=r&&dataLayer.push({event:"BFREDtransaction",ecommerce:{purchase:{actionField:{id:window.receipt_tx_id,affiliation:"Engaging Networks Donation Form",revenue:r,tax:"0.00",shipping:"0.00"},products:[{name:pageJson.pageName+" - "+pageJson.campaignPageId,brand:n,id:pageJson.campaignPageId+" - "+r+" - "+i,price:r,variant:i,quantity:1}]}}})});
+       
+          <!-- Upland / Mobilecommons Script -->
+          function getFieldValue(id){
+              let field = document.getElementById(id);
+              return (field && "value" in field) ? field.value : "";
+          }
+          function getUserData(){
+          let phone = getFieldValue("en__field_supporter_phoneNumber");
+          let sms_message_opt_in = document.getElementById('en__field_supporter_questions_178688');
+          if(!phone || !sms_message_opt_in || !sms_message_opt_in.checked) return false;
+          return {
+              firstname: getFieldValue('en__field_supporter_firstName'),
+              lastname: getFieldValue('en__field_supporter_lastName'),
+              address1: getFieldValue('en__field_supporter_address1'),
+              address2:getFieldValue('en__field_supporter_address2'),
+              city: getFieldValue('en__field_supporter_city'),
+              state: getFieldValue('en__field_supporter_region'),
+              country: getFieldValue('en__field_supporter_country'),
+              postal_code: getFieldValue('en__field_supporter_postcode'),
+              msisdn: phone,
+              email: getFieldValue('en__field_supporter_emailAddress'),
+              phone: phone.replace(/\D/g,''),
+              optin_path_key: 'OP1AF618AA53A977C5E6EE7A033BA8BDDB',
+              donor: document.getElementsByName('transaction.donationAmt.other').length,
+              tags: 'OC_EN_Form'
+          }
+          }
+          function postAjax(url, data, success) {
+          var params = typeof data == 'string' ? data : Object.keys(data).map(
+              function(k){ return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) }
+            ).join('&');
+          
+          var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+          xhr.open('POST', url);
+          xhr.onreadystatechange = function() {
+            if(xhr.readyState > 3 && (xhr.status == 200 || xhr.status == 202)) {
+              success(xhr.responseText); 
+            }
+          };
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          xhr.send(params);
+          return xhr;
+          }
+          window.enOnSubmit = function(){
+          // handle async code with promises
+          return new Promise(function(resolve, reject){
+            console.log('Submit Start');
+            let userData = getUserData();
+            console.log('User Data', userData);
+            if(!userData) return resolve();
+            postAjax('https://oceanconservancy.org/wp-admin/admin-ajax.php?action=upland_sms_signup', userData, function(data) {
+              console.log('Response Data', data);
+              var response = JSON.parse(data);
+              if(response.error) console.log('error adding contact');
+              else console.log(response.message);
+              resolve();
+            });
+          })
+          }
+      
+        /* END: Your Analytics Scripts */
+        console.log("Scripts Loaded")
+      }
+      if (isIframe()) {
+        var loaded_once;
+        window.onfocus = function() {
+          if (!loaded_once) {
+            load_scripts_fast();
+                  load_scripts_slow();
+            loaded_once = true
           }
         }
-      });
-    </script>
-    <!-- GA Conversion Tracking End -->
+      } else {
+          window.addEventListener('DOMContentLoaded', (event) => {
+              console.log('DOM fully loaded and parsed');
+              load_scripts_fast()
+          });
+      
+          window.addEventListener('load', (event) => {
+              console.log('page is fully loaded');
+              load_scripts_slow()
+          });    
+      }
+      </script>
 
     <meta name="title" content="" />
     <meta property="og:title" content="" />
@@ -2053,175 +2160,27 @@
           </div>
         </div>
       </form>
-      <!-- End EN Page Builder -->
-    </div>
+<!-- End EN Page Builder -->
+</div>
+     
+<!-- Default and Fallback Meta Tags: Placed at the bottom so any previously defined meta tags in the page take precedence -->
+<meta property="og:description" content="We use the best in science-based solutions to tackle the biggest threats to our ocean. Join the Fight for a Healthy Ocean.">  
+<meta name="description" content="We use the best in science-based solutions to tackle the biggest threats to our ocean. Join the Fight for a Healthy Ocean.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="We use the best in science-based solutions to tackle the biggest threats to our ocean. Join the Fight for a Healthy Ocean.">
+<meta name="twitter:title" content="Ocean Conservancy">
+<meta name="twitter:site" content="@OurOcean">
+<meta name="twitter:image" content="https://oceanconservancy.org/wp-content/uploads/2017/02/fb-share.png">
+<meta name="twitter:creator" content="@OurOcean">
 
-    <!-- Default and Fallback Meta Tags: Placed at the bottom so any previously defined meta tags in the page take precedence -->
-    <meta
-      property="og:description"
-      content="Supporting environmental projects across the United States and around the globe with financial management, administration, training, and peer learning."
-    />
-    <meta
-      name="description"
-      content="Supporting environmental projects across the United States and around the globe with financial management, administration, training, and peer learning."
-    />
+<script async src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/main.js?v=15978025300"></script>     
 
-    <meta
-      name="twitter:description"
-      content="Supporting environmental projects across the United States and around the globe with financial management, administration, training, and peer learning."
-    />
-    <meta
-      property="og:image"
-      content="https://www.earthisland.org/images/uploads/home_hero_turtle.png"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@earthisland" />
-    <meta name="twitter:creator" content="@earthisland" />
+<!-- Begin ThreatMetric profiling tags below -->    
+<noscript>
+<iframe style="width: 100px; height: 100px; border: 0; position: absolute; top: -5000px;"
+src="https://h.online-metrix.net/fp/tags.js?org_id=7nrfulxi&session_id=e1991-${page~sessionId}&page_id=1"></iframe>
+</noscript>
+<!-- End profiling tags -->        
 
-    <!-- <link rel="stylesheet"href="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/main.css?v=1597697150000" media="print" onload="this.media='all'">     -->
-    <!-- <script async src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/main.js?v=1597697150000"></script>      -->
-    <script
-      async
-      src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/oc-en-upland-sms-signup.js?v=1583861134000"
-    ></script>
-    <script
-      async
-      src="https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/child-theme/js/NeverBounce.js"
-    ></script>
-    <script
-      async
-      src="https://h.online-metrix.net/fp/tags.js?org_id=7nrfulxi&session_id=e1991-d6d6f1446f12409ebf2e180336db6b89-server10228&page_id=1"
-    ></script>
-
-    <!-- 4Site Template JS: Render Critical: Tracking JS -->
-    <!--<script src="https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/child-theme/js/oc-en-tracking.js"></script>-->
-    <script>
-      window.addEventListener("load", function() {
-        var e = window.receipt_amount_data,
-          a = pageJson.pageName.toLowerCase();
-        if (a.indexOf("honor") >= 0) var n = "Honor";
-        else
-          n =
-            a.indexOf("memorial") >= 0
-              ? "Memorial"
-              : a.indexOf("premium") >= 0
-              ? "Premium"
-              : a.indexOf("monthly") >= 0
-              ? "Monthly"
-              : "Standard Donation";
-        var i,
-          o = window.receipt_recurring_frequency;
-        i = o || "OneTime";
-        var r = e.replace(/\$/g, "");
-        parseFloat(r) > 0 &&
-          "{receipt_data~amount}" != r &&
-          dataLayer.push({
-            event: "BFREDtransaction",
-            ecommerce: {
-              purchase: {
-                actionField: {
-                  id: window.receipt_tx_id,
-                  affiliation: "Engaging Networks Donation Form",
-                  revenue: r,
-                  tax: "0.00",
-                  shipping: "0.00",
-                },
-                products: [
-                  {
-                    name: pageJson.pageName + " - " + pageJson.campaignPageId,
-                    brand: n,
-                    id: pageJson.campaignPageId + " - " + r + " - " + i,
-                    price: r,
-                    variant: i,
-                    quantity: 1,
-                  },
-                ],
-              },
-            },
-          });
-      });
-    </script>
-
-    <!-- Upland / Mobilecommons Script -->
-    <script>
-      function getFieldValue(id) {
-        let field = document.getElementById(id);
-        return field && "value" in field ? field.value : "";
-      }
-      function getUserData() {
-        let phone = getFieldValue("en__field_supporter_phoneNumber");
-        let sms_message_opt_in = document.getElementById(
-          "en__field_supporter_questions_178688"
-        );
-        if (!phone || !sms_message_opt_in || !sms_message_opt_in.checked)
-          return false;
-        return {
-          firstname: getFieldValue("en__field_supporter_firstName"),
-          lastname: getFieldValue("en__field_supporter_lastName"),
-          address1: getFieldValue("en__field_supporter_address1"),
-          address2: getFieldValue("en__field_supporter_address2"),
-          city: getFieldValue("en__field_supporter_city"),
-          state: getFieldValue("en__field_supporter_region"),
-          country: getFieldValue("en__field_supporter_country"),
-          postal_code: getFieldValue("en__field_supporter_postcode"),
-          msisdn: phone,
-          email: getFieldValue("en__field_supporter_emailAddress"),
-          phone: phone.replace(/\D/g, ""),
-          optin_path_key: "OP1AF618AA53A977C5E6EE7A033BA8BDDB",
-          donor: document.getElementsByName("transaction.donationAmt.other")
-            .length,
-          tags: "OC_EN_Form",
-        };
-      }
-      function postAjax(url, data, success) {
-        var params =
-          typeof data == "string"
-            ? data
-            : Object.keys(data)
-                .map(function(k) {
-                  return (
-                    encodeURIComponent(k) + "=" + encodeURIComponent(data[k])
-                  );
-                })
-                .join("&");
-
-        var xhr = window.XMLHttpRequest
-          ? new XMLHttpRequest()
-          : new ActiveXObject("Microsoft.XMLHTTP");
-        xhr.open("POST", url);
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState > 3 && (xhr.status == 200 || xhr.status == 202)) {
-            success(xhr.responseText);
-          }
-        };
-        xhr.setRequestHeader(
-          "Content-Type",
-          "application/x-www-form-urlencoded"
-        );
-        xhr.send(params);
-        return xhr;
-      }
-      window.enOnSubmit = function() {
-        // handle async code with promises
-        return new Promise(function(resolve, reject) {
-          console.log("Submit Start");
-          let userData = getUserData();
-          console.log("User Data", userData);
-          if (!userData) return resolve();
-          postAjax(
-            "https://oceanconservancy.org/wp-admin/admin-ajax.php?action=upland_sms_signup",
-            userData,
-            function(data) {
-              console.log("Response Data", data);
-              var response = JSON.parse(data);
-              if (response.error) console.log("error adding contact");
-              else console.log(response.message);
-              resolve();
-            }
-          );
-        });
-      };
-    </script>
-  </body>
+</body>
 </html>
-<!-- Ω Reference - Ocean Conservancy - Premium Donation:19219:52328:10069 -->

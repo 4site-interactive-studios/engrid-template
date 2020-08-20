@@ -23,19 +23,39 @@
       ] !important; 
     }
     }
-  }
 
-  .page-backgroundImage {
-    background-attachment: fixed;
-    height: auto !important;
-    &::before {
-      background-color: rgba(0, 0, 0, 0.5);
-      position: fixed;
-      top: -12px;
-      width: 100vw;
-      height: calc(100vh + 12px);
+    .content-header {
+      border-top-right-radius: 7px;
+      border-top-left-radius: 7px;
+    }  
+  
+    .content-footer {
+      border-bottom-right-radius: 7px;
+      border-bottom-left-radius: 7px;
+    }
+
+    .page-backgroundImageSet {
+      background-attachment: fixed;
+      height: auto !important;
+      &::before {
+        // background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0px;
+        width: 100vw;
+        height: calc(100vh + 12px);
+      }
     }
   }
+
+
+}
+
+body#en__pagebuilder.body-bannerOverlay{
+  background-color: #ffffff;
+}
+
+body:not(#en__pagebuilder).body-banner{
+  background-color: var(--client-light-gray);
 }
 
 body:not(#en__pagebuilder)
@@ -210,15 +230,6 @@ label.en__field__label {
   input[type="radio"]:checked + label {
     color: var(--client-white);
   }
-}
-
-.give-by-select .en__field--radio .en__field__item {
-  // flex-grow: 1;
-
-  input[type="radio"] + label {
-    
-  }
-
 }
 
 // // Case insensitive selector
@@ -802,12 +813,10 @@ input[name="transaction.donationAmt.other"] {
   border-color: var(--client-button-border-color, $client-button-border-color);
 }
 
-#engrid.layout-centercenter1col .en__component--advrow .content-footer {
+.content-footer {
   background-color: var(--client-black);
   // box-shadow: none;
   color: var(--client-white);
-  border-bottom-right-radius: 7px;
-  border-bottom-left-radius: 7px;
   overflow: hidden;
   font-size: 14px;
   font-style: normal;
@@ -852,6 +861,11 @@ input[name="transaction.donationAmt.other"] {
     text-align: center;
     color: #828282;
   }
+}
+
+.body-header{
+  display: flex;
+  align-items: center;
 }
 
 .body-banner img{

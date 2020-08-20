@@ -53,9 +53,9 @@
   #engrid .pre-footer-card.footer-wrapper .footer-menu a {
     font-size: calc((0.05552rem * 16) * 1);
   }
-  #engrid label.en__field__label {
-    font-size: calc((0.05552rem * 12) * 0.95);
-  }
+  // #engrid label.en__field__label {
+  //   font-size: calc((0.05552rem * 12) * 0.95);
+  // }
 
   #engrid
     .en__field__label--item
@@ -70,16 +70,6 @@
     input[type="radio"]
     + label {
     font-size: calc((0.05552rem * 18) * 1);
-  }
-}
-
-@media screen and (max-width: 599px) {
-  // body #engrid {
-  //   font-size: 94%;
-  // }
-
-  #engrid .en__field--donationAmt .en__field__element--radio .en__field__item {
-    // width: calc(50% - 0.5rem);
   }
 }
 
@@ -103,7 +93,9 @@
   .body-headerOutside,
   .body-side,
   .body-footer,
-  .content-preFooter {
+  .body-headerOutside,
+  .content-preFooter,
+  .page-backgroundImageOverlay {
     // display: none;
     position: absolute;
     width: 1px;
@@ -318,6 +310,14 @@ body#en__pagebuilder #engrid.layout-centerright1col {
   .page-backgroundImage > div,
   .page-backgroundImageOverlay > div {
     grid-column: bc;
+  }
+}
+
+#engrid.layout-centerleft1col,
+#engrid.layout-centercenter1col,
+#engrid.layout-centerright1col{
+  .body-side{
+    display: none;
   }
 }
 
