@@ -353,13 +353,13 @@ export const debugBar = () => {
     }
 
     const fancyErrorsToggle = () => {
-      if(enGrid) {
+      if (enGrid) {
         enGrid.classList.toggle("fancy-errors");
       }
     };
 
     const floatLabelsToggle = () => {
-      if(enGrid) {
+      if (enGrid) {
         enGrid.classList.toggle("float-labels");
       }
     };
@@ -681,7 +681,7 @@ export const watchGiveBySelectField = () => {
     ) {
       if (enGrid) {
         removeClassesByPrefix(enGrid, prefix);
-        enGrid.classList.add("has-give-by-paypal");      
+        enGrid.classList.add("has-give-by-paypal");
       }
       enFieldPaymentType.value = "paypal";
     }
@@ -698,7 +698,7 @@ export const watchGiveBySelectField = () => {
     ) {
       if (enGrid) {
         removeClassesByPrefix(enGrid, prefix);
-        enGrid.classList.add("has-give-by-card");      
+        enGrid.classList.add("has-give-by-card");
       }
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
@@ -775,7 +775,7 @@ export const watchLegacyGiveBySelectField = () => {
     ) {
       if (enGrid) {
         removeClassesByPrefix(enGrid, prefix);
-        enGrid.classList.add("has-give-by-check");      
+        enGrid.classList.add("has-give-by-check");
       }
       enFieldPaymentType.value = "Check";
       enFieldPaymentType.value = "check";
@@ -785,7 +785,7 @@ export const watchLegacyGiveBySelectField = () => {
     ) {
       if (enGrid) {
         removeClassesByPrefix(enGrid, prefix);
-        enGrid.classList.add("has-give-by-paypal");      
+        enGrid.classList.add("has-give-by-paypal");
       }
       enFieldPaymentType.add(paypalOption);
       enFieldPaymentType.value = "Paypal";
@@ -804,7 +804,7 @@ export const watchLegacyGiveBySelectField = () => {
     ) {
       if (enGrid) {
         removeClassesByPrefix(enGrid, prefix);
-        enGrid.classList.add("has-give-by-card");      
+        enGrid.classList.add("has-give-by-card");
       }
       // enFieldPaymentType.value = "card";
       handleCCUpdate();
@@ -814,7 +814,7 @@ export const watchLegacyGiveBySelectField = () => {
     ) {
       if (enGrid) {
         removeClassesByPrefix(enGrid, prefix);
-        enGrid.classList.add("has-give-by-check");      
+        enGrid.classList.add("has-give-by-check");
       }
       enFieldPaymentType.value = "Check";
       enFieldPaymentType.value = "check";
@@ -824,7 +824,7 @@ export const watchLegacyGiveBySelectField = () => {
     ) {
       if (enGrid) {
         removeClassesByPrefix(enGrid, prefix);
-        enGrid.classList.add("has-give-by-paypal");      
+        enGrid.classList.add("has-give-by-paypal");
       }
       enFieldPaymentType.add(paypalOption);
       enFieldPaymentType.value = "Paypal";
@@ -910,7 +910,7 @@ const getCardType = (cc_partial: string) => {
     case "5":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-mastercard");
-      return "Mastercard";
+      return "MasterCard";
     case "6":
       field_credit_card.className = field_credit_card_classes.join(" ").trim();
       field_credit_card.classList.add("live-card-type-discover");
@@ -1154,21 +1154,21 @@ const contentFooter = document.querySelector(".content-footer");
 * @return {Boolean}      Returns true if element is in the viewport
 */
 const isInViewport = (e: any) => {
-    const distance = e.getBoundingClientRect();
-    // console.log("Footer: ", distance);
-    return (
-        distance.top >= 0 &&
-        distance.left >= 0 &&
-        distance.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-        distance.right <=
-        (window.innerWidth || document.documentElement.clientWidth)
-    );
+  const distance = e.getBoundingClientRect();
+  // console.log("Footer: ", distance);
+  return (
+    distance.top >= 0 &&
+    distance.left >= 0 &&
+    distance.bottom <=
+    (window.innerHeight || document.documentElement.clientHeight) &&
+    distance.right <=
+    (window.innerWidth || document.documentElement.clientWidth)
+  );
 };
 
 // Checks to see if the page is so short, the footer is above the fold. If the footer is above the folde we'll use this class to ensure at a minimum the page fills the full viewport height.
 if (contentFooter && isInViewport(contentFooter)) {
-    body.classList.add("footer-above-fold");
+  body.classList.add("footer-above-fold");
 } else {
-    body.classList.add("footer-below-fold");
+  body.classList.add("footer-below-fold");
 }
