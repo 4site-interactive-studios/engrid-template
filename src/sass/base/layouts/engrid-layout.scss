@@ -525,10 +525,9 @@ body:not(#en__pagebuilder)
 body:not(#en__pagebuilder)
   #engrid
   .en__component--advrow
-  .page-backgroundImage::before {
+  .page-backgroundImage:not(.page-backgroundImageSet)::before {
   background-position: top left;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
   // background-image: var(--background-image,#{$background-image});
   background-image: var(--background-image); //@TODO Get SCSS variable working
   will-change: transform; // creates a new paint layer

@@ -299,8 +299,8 @@ textarea:focus {
 .en__contactDetails__rows::before {
   content: "";
   position: absolute;
-  height: calc(1.4rem - 2px);
-  width: calc(1.4rem - 2px);
+  height: 1.4rem;
+  width: 1.4rem;
   left: -2rem;
   display: inline-block;
   vertical-align: middle;
@@ -338,8 +338,8 @@ textarea:focus {
     --client-checkmark-background-color,
     $client-checkmark-background-color
   );
-  -webkit-box-shadow: inset 0 0 0 3px #ffffff;
-  box-shadow: inset 0 0 0 3px #ffffff;
+  -webkit-box-shadow: inset 0 0 0 4px #ffffff;
+  box-shadow: inset 0 0 0 4px #ffffff;
   border-width: 1px;
 }
 
@@ -367,7 +367,7 @@ textarea:focus {
     $client-checkmark-background-color
   );
   background-color: transparent;
-  font-size: calc(0.05552em * 18);
+  font-size: calc(0.05552rem * 18);
 }
 
 /* QA Needed: Would like to find a way so that radio input focus is round rather than square. May require re-writing how radio inputs are styled */

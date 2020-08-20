@@ -41,7 +41,7 @@ body:not(#en__pagebuilder) {
 
 h1 {
   font-family: HarmoniaSansStd;
-  font-size: calc(0.05552em * 48);
+  font-size: calc(0.05552rem * 48);
   font-weight: 900;
   font-stretch: normal;
   font-style: normal;
@@ -54,7 +54,7 @@ h1 {
 
 h2 {
   font-family: HarmoniaSansStd;
-  font-size: calc(0.05552em * 24);
+  font-size: calc(0.05552rem * 24);
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -64,7 +64,7 @@ h2 {
 
 h3 {
   font-family: HarmoniaSansStd;
-  font-size: calc(0.05552em * 16);
+  font-size: calc(0.05552rem * 16);
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -74,7 +74,7 @@ h3 {
 
 label.en__field__label {
   font-family: HarmoniaSansStd;
-  font-size: calc(0.05552em * 12);
+  font-size: calc(0.05552rem * 12);
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -85,7 +85,7 @@ label.en__field__label {
 
 .en__field__label--item {
   font-family: HarmoniaSansStd;
-  font-size: calc(0.05552em * 18);
+  font-size: calc(0.05552rem * 18);
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -98,7 +98,7 @@ label.en__field__label {
   .en__field__item--other::before,
   .en__field__item--other input {
     font-family: HarmoniaSansStd;
-    font-size: calc(0.05552em * 24);
+    font-size: calc(0.05552rem * 24);
     font-weight: 900;
     font-stretch: normal;
     font-style: normal;
@@ -108,7 +108,7 @@ label.en__field__label {
 }
 
 .en__field--recurrpay label.en__field__label {
-  font-size: calc(0.05552em * 24);
+  font-size: calc(0.05552rem * 24);
 }
 
 .give-by-select .en__field--radio {
@@ -117,7 +117,7 @@ label.en__field__label {
     margin-top: 0.83rem;
     display: block;
     width: 100%;
-    font-size: calc(0.05552em * 24);
+    font-size: calc(0.05552rem * 24);
     font-weight: 900;
     line-height: 1;
     padding: 18px 0;
@@ -193,7 +193,7 @@ label.en__field__label {
 
 .en__field--recurrpay {
   label.en__field__label {
-    // font-size: calc(0.05552em * 24) !important;
+    // font-size: calc(0.05552rem * 24) !important;
     font-weight: 900 !important;
     text-transform: none !important;
     &::before {
@@ -226,7 +226,7 @@ label.en__field__label {
 
 .en__field__input--checkbox + .en__field__label,
 .en__contactDetails__rows {
-  font-size: calc(0.05552em * 18);
+  font-size: calc(0.05552rem * 18);
   font-weight: 400;
   text-transform: none;
   letter-spacing: 0.4px;
@@ -307,7 +307,7 @@ label.en__field__label {
   .header-wrapper {
     h2 {
       margin: 0;
-      font-size: calc(0.05552em * 32);
+      font-size: calc(0.05552rem * 32);
       font-weight: 900;
       letter-spacing: 1px;
       color: #000000;
@@ -317,7 +317,7 @@ label.en__field__label {
     }
   }
   p {
-    font-size: calc(0.05552em * 16);
+    font-size: calc(0.05552rem * 16);
     line-height: 1.58;
     letter-spacing: 0.2px;
     text-align: center;
@@ -347,7 +347,7 @@ label.en__field__label {
     a {
       display: block;
       color: #fff;
-      font-size: calc(0.05552em * 16);
+      font-size: calc(0.05552rem * 16);
       font-weight: bold;
       text-decoration: none;
       &:hover {
@@ -360,7 +360,7 @@ label.en__field__label {
     max-width: 452px;
 
     p {
-      font-size: calc(0.05552em * 14);
+      font-size: calc(0.05552rem * 14);
       font-weight: 400;
       line-height: 1.57;
       letter-spacing: 0.6px;
@@ -403,7 +403,7 @@ label.en__field__label {
     background-position-x: calc(50% - 25px);
     background-position-y: calc(50% - 2px);
     background-repeat: no-repeat;
-    font-size: calc(0.05552em * 18);
+    font-size: calc(0.05552rem * 18);
     font-weight: bold;
     letter-spacing: 0.4px;
     text-align: center;

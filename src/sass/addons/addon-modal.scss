@@ -35,7 +35,7 @@
   }
 
   &.is-hidden {
-    top: -100vh;
+    top: -500vh;
     transition: none; /* When the modal gains the "is-hidden" class it will dissapear instantly */
   }
 

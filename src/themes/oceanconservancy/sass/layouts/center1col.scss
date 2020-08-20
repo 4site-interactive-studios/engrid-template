@@ -37,7 +37,7 @@
   }
 
   #engrid h1 {
-    font-size: calc((0.05552em * 48) * 0.85);
+    font-size: calc((0.05552rem * 48) * 0.85);
   }
   #engrid h2,
   #engrid .en__field--donationAmt .en__field__label--item,
@@ -46,15 +46,15 @@
   #engrid .give-by-select .en__field--radio label,
   #engrid .en__field--recurrpay label.en__field__label,
   #engrid .highlight.big {
-    font-size: calc((0.05552em * 24) * 0.9);
+    font-size: calc((0.05552rem * 24) * 0.9);
   }
   body #engrid h3,
   #engrid .pre-footer-card p,
   #engrid .pre-footer-card.footer-wrapper .footer-menu a {
-    font-size: calc((0.05552em * 16) * 1);
+    font-size: calc((0.05552rem * 16) * 1);
   }
   #engrid label.en__field__label {
-    font-size: calc((0.05552em * 12) * 0.95);
+    font-size: calc((0.05552rem * 12) * 0.95);
   }
 
   #engrid
@@ -69,7 +69,7 @@
     .en__field__item
     input[type="radio"]
     + label {
-    font-size: calc((0.05552em * 18) * 1);
+    font-size: calc((0.05552rem * 18) * 1);
   }
 }
 
@@ -79,12 +79,19 @@
   // }
 
   #engrid .en__field--donationAmt .en__field__element--radio .en__field__item {
-    width: calc(50% - 0.5rem);
+    // width: calc(50% - 0.5rem);
   }
 }
 
 #engrid h1 {
   margin-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  #engrid .en__component--advrow > div,
+  #EN__RootElement .en__component--advrow > div {
+    grid-column: pc !important;
+  }
 }
 
 #engrid.layout-centerleft1col,
@@ -95,7 +102,8 @@
   .content-header,
   .body-headerOutside,
   .body-side,
-  .body-footerOutside {
+  .body-footer,
+  .content-preFooter {
     // display: none;
     position: absolute;
     width: 1px;
@@ -117,7 +125,6 @@
   }
 
   .body-header {
-    margin-top: 2.1875rem;
     padding-top: 0;
     padding-right: 1.875rem;
     padding-left: 1.875rem;
@@ -126,12 +133,13 @@
 
     :first-child,
     :last-child {
-      display: flex;
+      
       align-items: center;
       justify-content: center;
     }
 
     :first-child {
+      display: flex;
       justify-content: flex-start;
 
       img {
@@ -146,7 +154,15 @@
     }
 
     :last-child {
+      display: flex;
       justify-content: flex-end;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      .have-questions-call-line{
+        display: none;
+      }
     }
 
     :first-child img,
@@ -323,8 +339,26 @@ body#en__pagebuilder #engrid.layout-centerright1col {
     .en__component--advrow .body-main,
     .en__component--advrow .body-bottom,
     .en__component--advrow .body-footer {
-      padding-left: 5rem;
-      padding-right: 5rem;
+      padding-left: 6.5rem;
+      padding-right: 6.5rem;
+    }
+
+    .en__component--advrow .body-header,
+    .en__component--advrow .body-banner,
+    .en__component--advrow .body-top,
+    .en__component--advrow .body-side,
+    .en__component--advrow .body-main,
+    .en__component--advrow .body-bottom,
+    .en__component--advrow .body-footer {
+      position: relative;
+    }
+
+    .body-header {
+      margin-top: 2.1875rem;
+    }
+
+    .content-footerSpacer {
+      margin-bottom: 2.1875rem;
     }
 
     .en__component--advrow .body-footer {

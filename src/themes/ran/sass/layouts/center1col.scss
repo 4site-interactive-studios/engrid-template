@@ -37,7 +37,7 @@
   }
 
   #engrid h1 {
-    font-size: calc((0.05552em * 48) * 0.85);
+    font-size: calc((0.05552rem * 48) * 0.85);
   }
   #engrid h2,
   #engrid .en__field--donationAmt .en__field__label--item,
@@ -46,15 +46,15 @@
   #engrid .give-by-select .en__field--radio label,
   #engrid .en__field--recurrpay label.en__field__label,
   #engrid .highlight.big {
-    font-size: calc((0.05552em * 24) * 0.9);
+    font-size: calc((0.05552rem * 24) * 0.9);
   }
   body #engrid h3,
   #engrid .pre-footer-card p,
   #engrid .pre-footer-card.footer-wrapper .footer-menu a {
-    font-size: calc((0.05552em * 16) * 1);
+    font-size: calc((0.05552rem * 16) * 1);
   }
   #engrid label.en__field__label {
-    font-size: calc((0.05552em * 12) * 0.95);
+    font-size: calc((0.05552rem * 12) * 0.95);
   }
 
   #engrid
@@ -69,7 +69,7 @@
     .en__field__item
     input[type="radio"]
     + label {
-    font-size: calc((0.05552em * 18) * 1);
+    font-size: calc((0.05552rem * 18) * 1);
   }
 }
 
