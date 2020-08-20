@@ -462,6 +462,10 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImageO
   padding-right: 1.75rem;
 }
 
+#en__pagebuilder #engrid .en__component--advrow .body-bannerOverlay{
+  background-color: #ffffff;
+}
+
 #engrid .en__component--advrow .body-banner img{
   object-fit: cover;
 }
