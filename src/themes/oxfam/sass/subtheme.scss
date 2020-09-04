@@ -1,0 +1,67 @@
+#engrid {
+    --client-white: #ffffff;
+    --client-black: #323232;
+    --client-gray: #8a8a8a;
+    --client-light-gray: #cacaca;
+    --client-cta: #039bc4;
+    --client-cta-hover: #e74b3c;
+  
+    --client-prefooter-background-color: #d0e2e7;
+    --client-footer-background-color: #323232;
+  
+    --background-color: #f3f3f3;
+    --background-image-background-color: #f3f3f3;
+  
+    /* @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand
+      * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
+      */
+  
+    // --client-body-background-color: --client-white; //@TODO Not yet used anywhere
+    --client-body-border-radius: 7px;
+    --body-padding-sm: 0.8652rem; //@TODO Revisit
+    --body-padding: calc(0.8652rem * 0.75); //@TODO Revisit
+    --body-padding-lg: calc(0.8652rem * 2.5); //@TODO Revisit
+    --body-padding-xlg: calc(0.8652rem * 5); //@TODO Revisit
+  
+    --client-input-border-radius: 5px;
+    --client-input-border-width: 1px;
+    --client-input-border-color: var(--client-black);
+    --client-input-border-color-focus: var(--client-cta);
+    --client-input-background-color: var(--client-white);
+    --client-input-background-color-hover: var(--client-white);
+  
+    --client-button-background-color: var(--client-white);
+    --client-button-background-color-hover: var(--client-black);
+    --client-button-background-color-active: var(--client-black);
+    --client-button-background-color-disabled: #949494;
+    --client-button-border-color: var(--client-black);
+    --client-button-border-color-active: var(--client-black);
+    --client-button-border-color-hover: var(--client-black);
+    --client-button-border-radius: 50px;
+    --client-button-font-color: var(--client-black);
+    --client-button-font-color-active: var(--client-white);
+  
+    --client-submit-button-background-color: var(--client-cta);
+    --client-submit-button-background-color-hover: var(--client-cta-hover);
+    --client-submit-button-border-color: var(--client-cta);
+    --client-submit-button-font-color: var(--client-white);
+  
+    --client-checkmark-background-color: var(--client-black);
+    --client-checkmark-border-color: var(--client-cta);
+    --client-checkmark-font-color: var(--client-white);
+  
+    --client-error-red: #f12222;
+    --client-error-red-grayscale: #949494;
+    --client-error-red-faded: #ffeae9;
+    --client-error-page-group-background: #f4ddda;
+    --client-error-input-border-width: var(--client-input-border-width);
+  
+    --client-highlight-background-color: #227f9e;
+    --client-highlight-font-color: #ffffff;
+  }
+  
+  #engrid.subtheme-oceanconservancy {
+    --background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/gray_pattern-optimized-2.jpg?v=1598492702000");
+    --background-image-background-color: #f3f3f3;
+  }
+  
