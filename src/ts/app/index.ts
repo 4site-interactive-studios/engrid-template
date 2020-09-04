@@ -7,6 +7,7 @@ import LiveVariables from "./utils/live-variables";
 import ProcessingFees from "./events/processing-fees";
 import Modal from "./utils/modal";
 import IE from "./utils/ie";
+import SimpleCountrySelect from "./utils/simple-country-select";
 import getUrlParameter from "./utils/query-string";
 
 // IE Warning
@@ -132,4 +133,7 @@ export const run = (opts: Object) => {
   // On the end of the script, after all subscribers defined, let's load the current value
   amount.load();
   frequency.load();
+
+  // Simple Country Select
+  const simpleCountrySelect = new SimpleCountrySelect();
 };

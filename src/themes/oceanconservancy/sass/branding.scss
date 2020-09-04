@@ -27,8 +27,8 @@
     .content-header {
       border-top-right-radius: 7px;
       border-top-left-radius: 7px;
-    }  
-  
+    }
+
     .content-footer {
       border-bottom-right-radius: 7px;
       border-bottom-left-radius: 7px;
@@ -46,15 +46,13 @@
       }
     }
   }
-
-
 }
 
-body#en__pagebuilder.body-bannerOverlay{
+body#en__pagebuilder.body-bannerOverlay {
   background-color: #ffffff;
 }
 
-body:not(#en__pagebuilder).body-banner{
+body:not(#en__pagebuilder).body-banner {
   background-color: var(--client-light-gray);
 }
 
@@ -255,11 +253,11 @@ label.en__field__label {
    * Assumes items are in order of Card, PayPal, Check
    * .give-by-select
    ***********************************/
-.give-by-select .en__field__element--radio{
-   justify-content: space-between;
+.give-by-select .en__field__element--radio {
+  justify-content: space-between;
 }
 
-.give-by-select .en__field__element--radio .en__field__item{
+.give-by-select .en__field__element--radio .en__field__item {
   margin-right: 0 !important;
   max-width: calc((100% - 2rem) / 3);
 }
@@ -405,7 +403,7 @@ label.en__field__label {
 }
 
 // Couldn't find the cause of this spacing issue https://d.pr/i/1W9vTl
-.en__field--giveBySelect div div.en__field__item:last-child{
+.en__field--giveBySelect div div.en__field__item:last-child {
   margin-right: 0 !important;
 }
 
@@ -517,12 +515,15 @@ label.en__field__label {
   color: var(--client-white);
 }
 
-.en__field--donationAmt .en__field__element--radio .en__field__item:not(.en__field__item--other){
+.en__field--donationAmt
+  .en__field__element--radio
+  .en__field__item:not(.en__field__item--other) {
   max-width: 100px;
-
 }
 
-.en__component .en__field--donationAmt.en__field.en__field--radio .en__field__item:not(.en__field__item--other){
+.en__component
+  .en__field--donationAmt.en__field.en__field--radio
+  .en__field__item:not(.en__field__item--other) {
   flex-grow: 0;
   align-items: flex-start;
 }
@@ -537,15 +538,15 @@ label.en__field__label {
 
 .en__field--donationAmt .en__field__item--other::after {
   display: block;
-  opacity: .8;
+  opacity: 0.8;
   font-size: 80%;
   position: relative;
   font-family: inherit;
   font-weight: 400;
   line-height: 1.5;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   left: 1rem;
-  top: .25rem;
+  top: 0.25rem;
 }
 
 .pre-footer-card-wrapper {
@@ -608,22 +609,21 @@ label.en__field__label {
     --client-footer-background-color,
     $client-footer-background-color
   );
-  .en__component:first-child{
+  .en__component:first-child {
     padding-top: 1rem;
   }
 
-  .en__component:not(:last-child){
+  .en__component:not(:last-child) {
     margin-bottom: 1rem;
   }
 
-  .en__component:last-child{
+  .en__component:last-child {
     padding-bottom: 0.5rem;
   }
 
-  p{
+  p {
     margin: 0;
   }
-
 }
 
 .footer-wrapper {
@@ -856,7 +856,7 @@ input[name="transaction.donationAmt.other"] {
     0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
-#en__pagebuilder #engrid .en__component--advrow .body-bannerOverlay::before{
+#en__pagebuilder #engrid .en__component--advrow .body-bannerOverlay::before {
   content: "";
   position: absolute;
   top: 0;
@@ -883,17 +883,17 @@ input[name="transaction.donationAmt.other"] {
   }
 }
 
-.body-header{
+.body-header {
   display: flex;
   align-items: center;
 }
 
-.body-banner img{
+.body-banner img {
   height: 300px !important;
   width: fit-content !important;
 }
 
-.body-top{
+.body-top {
   padding-top: 1.5rem;
 }
 
@@ -950,52 +950,24 @@ img.oc-gs-logo {
   }
 }
 
-#engrid div[id^=nb-field-] div.nb-feedback{
+#engrid div[id^="nb-field-"] div.nb-feedback {
   margin-top: 0.25rem !important;
   margin-bottom: 0.25rem !important;
-  border-radius: var(--client-input-border-radius,5px) !important;
+  border-radius: var(--client-input-border-radius, 5px) !important;
   font-size: 1.125em !important;
 
-  span.nb-result{
-    font-family: Roboto,sans-serif !important;
+  span.nb-result {
+    font-family: Roboto, sans-serif !important;
     font-size: 0.75rem !important;
     font-weight: 400 !important;
     font-stretch: normal !important;
     font-style: normal !important;
     line-height: 1.44 !important;
     letter-spacing: normal !important;
-    
   }
 }
-
- /************************************
-   * Utility: Hide Display
-   * // Depends on corresponding JS library
-   * .simple_country_select
-   ***********************************/
-   #engrid #en_custom_field_simple_country_select_long a,
-   #engrid #en_custom_field_simple_country_select_short a {
-     cursor: pointer;
-   }
-   
-   #engrid #en_custom_field_simple_country_select_short {
-     display: none;
-   }
-   
-   #engrid .en__component--formblock.simple_country_select {
-     transition: opacity 0.3s;
-   }
-   
-   body:not(#en__pagebuilder)
-   #engrid
-     .en__component--formblock.simple_country_select:not(.country-select-visible) {
-     opacity: 0;
-     height: 0px;
-   }
-   
-   #engrid
-     .en__component--formblock.country-select-visible
-     .en__field--address1
-     span {
-     display: none;
-   }
+#en_custom_field_simple_country_select_long a,
+#en_custom_field_simple_country_select_short a {
+  font-size: 0.9em;
+  color: #2ba8dd;
+}

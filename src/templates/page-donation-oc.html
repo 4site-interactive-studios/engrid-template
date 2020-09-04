@@ -124,16 +124,14 @@
         var ref = document.getElementsByTagName("body")[0];
 
         // Create a new script element
-        var script_international_country_select = document.createElement( 'script' );
-        var script_jQuery = document.createElement( 'script' );
-    
+        var script_jQuery = document.createElement("script");
+
         // Set the script element `src`
-        script_international_country_select.src='https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-international-country-select.js';
-        script_jQuery.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
-    
+        script_jQuery.src =
+          "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js";
+
         // Inject the script-jQuery into the DOM
-        ref.parentNode.insertBefore( international_country_select, ref );
-        ref.parentNode.insertBefore( script_jQuery, ref );
+        ref.parentNode.insertBefore(script_jQuery, ref);
 
         /* START: Your Analytics Scripts */
         (function(w, d, s, l, i) {
@@ -866,11 +864,11 @@
               </div>
             </div>
             <div
-              class="en__component en__component--formblock i2-50 i2-start i3-50 i3-end"
+              class="en__component en__component--formblock i2-50 i2-start i3-50 i3-end simple_country_select"
               style=""
             >
               <div
-                class="en__field en__field--select en__field--741984 en__field--country simple_country_select en__mandatory has-value"
+                class="en__field en__field--select en__field--741984 en__field--country en__mandatory has-value"
               >
                 <label
                   for="en__field_supporter_country"
@@ -2253,13 +2251,17 @@
             class="en__component en__component en__component--column en__component--advcolumn page-customCode"
             style=""
           >
-          <div class="en__component en__component--codeblock"><script type="text/javascript">
-            _NBSettings = {
-                apiKey: 'public_45feb67a2317d1f97b59ba35cc2b7118'
-            };
-        </script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/child-theme/js/NeverBounce.js"></script>
-        </div>
+            <div class="en__component en__component--codeblock">
+              <script type="text/javascript">
+                _NBSettings = {
+                  apiKey: "public_45feb67a2317d1f97b59ba35cc2b7118",
+                };
+              </script>
+              <script
+                type="text/javascript"
+                src="https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/child-theme/js/NeverBounce.js"
+              ></script>
+            </div>
             <div class="en__component en__component--codeblock">
               <!-- Modals -->
               <template id="upsellModal">
@@ -2361,10 +2363,10 @@
     />
     <meta name="twitter:creator" content="@OurOcean" />
 
-    <script
+    <!-- <script
       async
       src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/main.js?v=15978025300"
-    ></script>
+    ></script> -->
 
     <!-- Begin ThreatMetric profiling tags below -->
     <noscript>
