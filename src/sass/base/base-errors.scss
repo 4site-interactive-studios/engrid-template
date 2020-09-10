@@ -4,8 +4,6 @@
 
 /* Page Level Errors */
 .en__errorHeader {
-  margin-left: -1.875rem;
-  margin-right: -1.875rem;
   padding: 0.5rem 2rem;
   color: var(--client-error-red,$client-error-red);
   font-weight: 700;
@@ -14,8 +12,6 @@
 }
 
 .en__errorList > .en__error {
-  margin-left: -1.875rem;
-  margin-right: -1.875rem;
   padding: 0.5rem 2rem;
   list-style: none;
   color: var(--client-error-red,$client-error-red);
