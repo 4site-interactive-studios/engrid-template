@@ -29,13 +29,16 @@
     
     <!-- Get color on the page ASAP. -->
     <style>
-        body:not(#en__pagebuilder){
-            visibility: hidden; /* Prevent the page ever being seen until the Page CSS has finished downloading */
-        }
-        #en__pagebuilder {
-            background-color: #c1c0c0 !important;
-        }
-    </style>
+      body {
+          background-color: #f3f3f3 !important;
+      }
+      body:not(#en__pagebuilder){
+          visibility: hidden; /* Prevent the page ever being seen until the Page CSS has finished downloading */
+      }
+      #en__pagebuilder {
+          background-color: #c1c0c0 !important;
+      }
+   </style>
     <link rel="preconnect" href="//d2amdniajcqcy4.cloudfront.net">
     <link rel="preconnect" href="//fonts.gstatic.com">
     <link rel="preconnect" href="//h.online-metrix.net">
