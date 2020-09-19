@@ -278,9 +278,7 @@ export const debugBar = () => {
         buttonsWrapper.insertAdjacentHTML(
           "afterbegin",
           '<button id="layout-toggle" type="button">Layout Toggle</button>' +
-          '<button id="fancy-errors-toggle" type="button">Toggle Fancy Errors</button>' +
-          '<button id="float-labels-toggle" type="button">Toggle Float Lables</button>'
-        );
+          '<button id="fancy-errors-toggle" type="button">Toggle Fancy Errors</button>'        );
       }
     }
 
@@ -293,21 +291,6 @@ export const debugBar = () => {
           "click",
           function () {
             fancyErrorsToggle();
-          },
-          false
-        );
-      }
-    }
-
-    if (document.getElementById("float-labels-toggle")) {
-      const debugTemplateButton = document.getElementById(
-        "float-labels-toggle"
-      );
-      if (debugTemplateButton) {
-        debugTemplateButton.addEventListener(
-          "click",
-          function () {
-            floatLabelsToggle();
           },
           false
         );
@@ -359,12 +342,6 @@ export const debugBar = () => {
       }
     };
 
-    const floatLabelsToggle = () => {
-      if (enGrid) {
-        enGrid.classList.toggle("float-labels");
-      }
-    };
-
     const pageEdit = () => {
       window.location.href = window.location.href + "?edit";
     };
@@ -408,10 +385,6 @@ export const debugBar = () => {
 };
 
 export const inputPlaceholder = () => {
-  const enGridFloatLabels = document.querySelector(
-    "#engrid:not(.float-labels)"
-  ) as HTMLElement;
-  if (enGridFloatLabels) {
     const enFieldDonationAmt = document.querySelector(
       ".en__field--donationAmt.en__field--withOther .en__field__input--other"
     ) as HTMLInputElement;
