@@ -521,7 +521,6 @@ export const inputPlaceholder = () => {
     // if (enFieldBankRoutingNumber) {
     //   enFieldBankRoutingNumber.placeholder = "Bank routing number";
     // }
-  }
 };
 
 export const watchInmemField = () => {
