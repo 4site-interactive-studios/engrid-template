@@ -2,137 +2,6 @@
 
 /*
 * ##########################################################
-* # ENGRID - Mobile First Styling
-* # LAYOUT - Page Builder Preview Layout
-* #####################2#####################################
-*/
-
-// Vertically center the labels
-#EN__RootElement .pboAdvancedRow__preview .en__component--column div {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.page-alert::before {
-  content: "Page Alert";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.content-header::before {
-  content: "Content Header";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-headerOutside::before {
-  content: "Body Header Outside";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-header::before {
-  content: "Body Header Spacer";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-banner::before {
-  content: "Body Banner";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-bannerOverlay::before {
-  content: "Body Banner Overlay";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-top::before {
-  content: "Body Top (Copy)";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-side::before {
-  content: "Body Side (Copy)";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-main::before {
-  content: "Body Main (Form)";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-bottom::before {
-  content: "Body Bottom (Copy)";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-footer::before {
-  content: "Body Footer Spacer";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-footerOutside::before {
-  content: "Body Footer Outside";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.content-footerSpacer::before {
-  content: "Content Footer Spacer";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.content-preFooter::before {
-  content: "Content Pre Footer";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.content-footer::before {
-  content: "Content Footer";
-}
-
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.page-backgroundImage::before {
-  content: "Page Background Image";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.page-backgroundImageOverlay::before {
-  content: "Page Background Image Overlay";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.page-customCode::before {
-  content: "Page Custom Code";
-}
-
-/*
-* ##########################################################
-* # ENGRID - BODY Column Breakpoint Styling
-* # LAYOUT - Page Builder Preview Layout
-* ##########################################################
-*/
-
-/* Sum of all MIN values of the Body Columns */
-@media screen and (min-width: 700px) {
-  /* prettier-ignore */
-  #EN__RootElement .pboAdvancedRow__preview .en__component--advrow,
-  #EN__RootElement .pboAdvancedRow__preview .en__component--advrow .pseudo-subgrid{
-    /* autoprefixer grid: off */
-    grid-template-columns:
-    [
-      pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
-      cc-start lcc-start]  minmax(25px, 1fr)     [lcc-end
-      bc-start lbc-start]  minmax(300px, 300px)  [lbc-end
-      rbc-start]           minmax(300px, 300px)  [rbc-end bc-end
-      rcc-start]           minmax(25px, 1fr)     [rcc-end cc-end
-      rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end
-    ];
-  }
-}
-
-/*
-* ##########################################################
 * # LAYOUT - Page Builder Custom Styles
 * ##########################################################
 */
@@ -148,34 +17,13 @@
     min-height: 25px !important;
   }
 
+  /* Sometimes our styles might cause a code blocks title and label to display inline, rather than in rows. This should help prevent that https://d.pr/v/vXlAUM */
+  .en__placeholder__text{
+    flex-direction: column !important;
+  }
+
   .page-backgroundImage img:not([loading]) {
     border: 5px solid red;
-  }
-
-  /* Adjust the editable space in the Page Editor so that the content can occupy as much space as possible */
-  .pboAdvancedRow__preview .en__container {
-    margin-left: 1px !important;
-    margin-right: 1px !important;
-    margin-bottom: 0px !important;
-    border: none !important;
-  }
-
-  /* Page builder adds a hidden div to the bottom of the layout, this can result in undesired spacing */
-  .pboAdvancedRow__preview .en__component--row:nth-last-child(2) {
-    padding-bottom: 0px;
-  }
-
-  // @TODO Might need to be moved into main.pboAdvancedRow__preview css
-  .pboAdvancedRow__preview .en__component--advrow {
-    width: 100%;
-  }
-
-  .hide {
-    background-color: #ff00001a !important;
-    &.pboAdvancedRow__preview .en__component--column {
-      outline-color: #ff0000 !important;
-      z-index: 1;
-    }
   }
 
   // Includes both upper and lower case scenarios for typical field values
@@ -205,11 +53,6 @@
       outline-color: #00ff00 !important;
       z-index: 1;
     }
-  }
-
-  .pboAdvancedRow__preview
-    .en__component--column.page-backgroundImageOverlay::before {
-    min-height: 350px !important;
   }
 
   .page-backgroundImage img {
