@@ -67,6 +67,17 @@ button.cta.primary:focus {
   );
 }
 
+.arrow .en__submit button::after {
+  content: "→";
+  float: right;
+  margin-right: 1rem;
+  opacity: 0.9;
+}
+
+.arrow .en__submit button:disabled::after {
+  display: none;
+}
+
 .next-step .en__submit button {
   width: initial;
   margin-left: auto;
