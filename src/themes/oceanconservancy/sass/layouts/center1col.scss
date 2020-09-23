@@ -88,6 +88,7 @@
 #engrid[data-engrid-layout="centerleft1col"],
 #engrid[data-engrid-layout="centercenter1col"],
 #engrid[data-engrid-layout="centercenter1col-wide"],
+#engrid[data-engrid-layout="centercenter2col"],
 #engrid[data-engrid-layout="centerright1col"] {
   .page-alert,
   .content-header,
@@ -283,6 +284,7 @@
 body:not(#en__pagebuilder) #engrid[data-engrid-layout="centerleft1col"],
 body:not(#en__pagebuilder) #engrid[data-engrid-layout="centercenter1col"],
 body:not(#en__pagebuilder) #engrid[data-engrid-layout="centercenter1col-wide"],
+body:not(#en__pagebuilder) #engrid[data-engrid-layout="centercenter2col"],
 body:not(#en__pagebuilder) #engrid[data-engrid-layout="centerright1col"] {
   .page-backgroundImage {
     grid-row: page-start / content-preFooter-end;
@@ -307,6 +309,7 @@ body:not(#en__pagebuilder) #engrid[data-engrid-layout="centerright1col"] {
 body#en__pagebuilder #engrid[data-engrid-layout="centerleft1col"],
 body#en__pagebuilder #engrid[data-engrid-layout="centercenter1col"],
 body#en__pagebuilder #engrid[data-engrid-layout="centercenter1col-wide"],
+body#en__pagebuilder #engrid[data-engrid-layout="centercenter2col"],
 body#en__pagebuilder #engrid[data-engrid-layout="centerright1col"] {
   .page-backgroundImage > div,
   .page-backgroundImageOverlay > div {
@@ -316,6 +319,8 @@ body#en__pagebuilder #engrid[data-engrid-layout="centerright1col"] {
 
 #engrid[data-engrid-layout="centerleft1col"],
 #engrid[data-engrid-layout="centercenter1col"],
+#engrid[data-engrid-layout="centercenter1col-1col"],
+#engrid[data-engrid-layout="centercenter2col"],
 #engrid[data-engrid-layout="centerright1col"]{
   .body-side{
     display: none;
@@ -334,6 +339,7 @@ body#en__pagebuilder #engrid[data-engrid-layout="centerright1col"] {
   #engrid[data-engrid-layout="centerleft1col"],
   #engrid[data-engrid-layout="centercenter1col"],
   #engrid[data-engrid-layout="centercenter1col-wide"],
+  #engrid[data-engrid-layout="centercenter2col"],
   #engrid[data-engrid-layout="centerright1col"] {
     .en__component--advrow .body-top,
     .en__component--advrow .body-side,
@@ -409,6 +415,7 @@ body#en__pagebuilder #engrid[data-engrid-layout="centerright1col"] {
   #engrid[data-engrid-layout="centerleft1col"],
   #engrid[data-engrid-layout="centercenter1col"],
   #engrid[data-engrid-layout="centercenter1col-wide"],
+  #engrid[data-engrid-layout="centercenter2col"],
   #engrid[data-engrid-layout="centerright1col"] {
     .content-preFooter {
       background-size: cover;
