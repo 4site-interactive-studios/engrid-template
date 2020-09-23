@@ -60,7 +60,7 @@
   }
   body:not(#en__pagebuilder) #engrid[data-engrid-layout="rightright1col"] {
     .page-backgroundImage {
-      grid-row: page-start / content-footerSpacer-end;
+      grid-row: page-start / content-footer-end;
       grid-column: lpc-start / lpc-end;
     }
   }

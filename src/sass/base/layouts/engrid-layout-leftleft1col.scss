@@ -54,7 +54,7 @@
   }
   body:not(#en__pagebuilder) #engrid[data-engrid-layout="leftleft1col"] {
     .page-backgroundImage {
-      grid-row: page-start / content-footerSpacer-end;
+      grid-row: page-start / content-footer-end;
       grid-column: rcc-start / pc-end;
     }
   }
