@@ -7,7 +7,7 @@
 */
 
   @media screen and (min-width: 600px) {
-    &[engrid-layout="centercenter1col"] {
+    &[data-engrid-layout="centercenter1col"] {
       /* prettier-ignore */
       .en__component--advrow,
     .en__component--advrow .pseudo-subgrid {
@@ -1209,7 +1209,7 @@ input[name="transaction.donationAmt.other"] {
     0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
-#engrid[engrid-layout="centercenter1col"] .en__component--advrow .body-bottom {
+#engrid[data-engrid-layout="centercenter1col"] .en__component--advrow .body-bottom {
   padding-top: 2rem;
   text-align: center;
   p {
@@ -1231,7 +1231,8 @@ input[name="transaction.donationAmt.other"] {
 
 .body-banner img {
   height: 300px !important;
-  width: fit-content !important;
+  // width: fit-content !important;
+  width: 100%;
 }
 
 .body-top {
@@ -1310,4 +1311,66 @@ img.oc-gs-logo {
 #en_custom_field_simple_country_select_long a,
 #en_custom_field_simple_country_select_short a {
   color: #007eb3; // WCAG AA Compliant version of #2ba8dd
+}
+
+.body-header{
+  min-height: 80px !important;
+}
+
+// social sharing styling
+#engrid .social-share p {
+  text-align: right;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  font-weight: bold;
+}
+
+#engrid .social-share img {
+  display: inline-block;
+  margin-left: 1em;
+  height: 16px;
+}
+
+#engrid .social-share p {
+  display: flex;
+  align-items: center;
+}
+
+/*Override EN Default Icons */
+#engrid .en__share__button {
+  height: 16px;
+  width: 16px;
+}
+
+#engrid .en__shares {
+  align-items: center;
+}
+
+#engrid .en__shares::before {
+  content: "SHARE";
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  color: #323232;
+  margin-right: 1rem;
+}
+
+#engrid .en__share__button--facebook {
+  background-image: url('https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/facebook.svg') !important;
+}
+
+#engrid .en__share__button--twitter {
+  background-image: url('https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/twitter.svg') !important;
+}
+
+#engrid .en__share__button--gplus {
+  background-size: 16px;
+}   
+
+/* @TODO: Temp Fix, needs to be replaced */
+#engrid[engrid-layout=centercenter1col] .body-header #social-share-block a img{
+  height: 14px !important;
 }
