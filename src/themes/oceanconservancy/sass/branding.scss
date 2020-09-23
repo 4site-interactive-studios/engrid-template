@@ -7,7 +7,7 @@
 */
 
   @media screen and (min-width: 600px) {
-    &.layout-centercenter1col {
+    &[engrid-layout="centercenter1col"] {
       /* prettier-ignore */
       .en__component--advrow,
     .en__component--advrow .pseudo-subgrid {
@@ -868,7 +868,7 @@ input[name="transaction.donationAmt.other"] {
     0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
-#engrid.layout-centercenter1col .en__component--advrow .body-bottom {
+#engrid[engrid-layout="centercenter1col"] .en__component--advrow .body-bottom {
   padding-top: 2rem;
   text-align: center;
   p {
