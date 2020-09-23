@@ -4,7 +4,7 @@
 * ##########################################################
 */
 
-#engrid[engrid-errors="fancy"] .en__component .en__field__error {
+#engrid[data-engrid-errors="fancy"] .en__component .en__field__error {
   padding: 0.25rem 0.5rem;
   color: $client-white;
   font-size: 0.75rem;
@@ -14,7 +14,7 @@
   order: 3;
 }
 
-#engrid[engrid-errors="fancy"] {
+#engrid[data-engrid-errors="fancy"] {
   .en__field--text.en__field--validationFailed input,
   .en__field--email.en__field--validationFailed input,
   .en__field--telephone.en__field--validationFailed input,
@@ -26,31 +26,31 @@
   }
 }
 
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--select.en__field--withOther.en__field--validationFailed
   .en__field__element,
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--radio.en__field--validationFailed
   .en__field__element,
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--checkbox.en__field--validationFailed
   .en__field__element,
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--splittext.en__field--validationFailed
   .en__field__element,
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--tripletext.en__field--validationFailed
   .en__field__element,
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--splitselect.en__field--validationFailed
   .en__field__element,
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--tripleselect.en__field--validationFailed
   .en__field__element {
@@ -58,35 +58,35 @@
   border-bottom-right-radius: 0rem;
 }
 
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--select.en__field--withOther.en__field--validationFailed.has-value
   .en__field__element,
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--radio.en__field--validationFailed.has-value
   .en__field__element,
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--checkbox.en__field--validationFailed.has-value
   .en__field__element,
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--splittext.en__field--validationFailed.has-value
   .en__field__element,
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--tripletext.en__field--validationFailed.has-value
   .en__field__element,
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--splitselect.en__field--validationFailed.has-value
   .en__field__element,
-#engrid[engrid-errors="fancy"]
+#engrid[data-engrid-errors="fancy"]
   .en__component
   .en__field.en__field--tripleselect.en__field--validationFailed.has-value
   .en__field__element,
-#engrid[engrid-errors="fancy"] .en__field--validationFailed.has-value .en__field__error {
+#engrid[data-engrid-errors="fancy"] .en__field--validationFailed.has-value .en__field__error {
   border-color: var(--client-error-red-grayscale,$client-error-red-grayscale);
   background-color: var(--client-error-red-grayscale,$client-error-red-grayscale);
   color: var(--client-white,$client-white);

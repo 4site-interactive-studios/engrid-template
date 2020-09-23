@@ -84,10 +84,10 @@
   }
 }
 
-#engrid[engrid-layout="centerleft1col"],
-#engrid[engrid-layout="centercenter1col"],
-#engrid[engrid-layout="centercenter1col-wide"],
-#engrid[engrid-layout="centerright1col"] {
+#engrid[data-engrid-layout="centerleft1col"],
+#engrid[data-engrid-layout="centercenter1col"],
+#engrid[data-engrid-layout="centercenter1col-wide"],
+#engrid[data-engrid-layout="centerright1col"] {
   .page-alert,
   .content-header,
   .body-headerOutside,
@@ -280,10 +280,10 @@
   }
 }
 
-body:not(#en__pagebuilder) #engrid[engrid-layout="centerleft1col"],
-body:not(#en__pagebuilder) #engrid[engrid-layout="centercenter1col"],
-body:not(#en__pagebuilder) #engrid[engrid-layout="centercenter1col-wide"],
-body:not(#en__pagebuilder) #engrid[engrid-layout="centerright1col"] {
+body:not(#en__pagebuilder) #engrid[data-engrid-layout="centerleft1col"],
+body:not(#en__pagebuilder) #engrid[data-engrid-layout="centercenter1col"],
+body:not(#en__pagebuilder) #engrid[data-engrid-layout="centercenter1col-wide"],
+body:not(#en__pagebuilder) #engrid[data-engrid-layout="centerright1col"] {
   .page-backgroundImage {
     grid-row: page-start / content-preFooter-end;
   }
@@ -304,19 +304,19 @@ body:not(#en__pagebuilder) #engrid[engrid-layout="centerright1col"] {
   }
 }
 
-body#en__pagebuilder #engrid[engrid-layout="centerleft1col"],
-body#en__pagebuilder #engrid[engrid-layout="centercenter1col"],
-body#en__pagebuilder #engrid[engrid-layout="centercenter1col-wide"],
-body#en__pagebuilder #engrid[engrid-layout="centerright1col"] {
+body#en__pagebuilder #engrid[data-engrid-layout="centerleft1col"],
+body#en__pagebuilder #engrid[data-engrid-layout="centercenter1col"],
+body#en__pagebuilder #engrid[data-engrid-layout="centercenter1col-wide"],
+body#en__pagebuilder #engrid[data-engrid-layout="centerright1col"] {
   .page-backgroundImage > div,
   .page-backgroundImageOverlay > div {
     grid-column: bc;
   }
 }
 
-#engrid[engrid-layout="centerleft1col"],
-#engrid[engrid-layout="centercenter1col"],
-#engrid[engrid-layout="centerright1col"]{
+#engrid[data-engrid-layout="centerleft1col"],
+#engrid[data-engrid-layout="centercenter1col"],
+#engrid[data-engrid-layout="centerright1col"]{
   .body-side{
     display: none;
   }
@@ -331,10 +331,10 @@ body#en__pagebuilder #engrid[engrid-layout="centerright1col"] {
 
 /* Sum of all MIN values of the Body Columns */
 @media screen and (min-width: 600px) {
-  #engrid[engrid-layout="centerleft1col"],
-  #engrid[engrid-layout="centercenter1col"],
-  #engrid[engrid-layout="centercenter1col-wide"],
-  #engrid[engrid-layout="centerright1col"] {
+  #engrid[data-engrid-layout="centerleft1col"],
+  #engrid[data-engrid-layout="centercenter1col"],
+  #engrid[data-engrid-layout="centercenter1col-wide"],
+  #engrid[data-engrid-layout="centerright1col"] {
     .en__component--advrow .body-top,
     .en__component--advrow .body-side,
     .en__component--advrow .body-main,
@@ -406,10 +406,10 @@ body#en__pagebuilder #engrid[engrid-layout="centerright1col"] {
 
 /* Sum of all MAX values of the Body Columns + 1px */
 @media screen and (min-width: 1231px) {
-  #engrid[engrid-layout="centerleft1col"],
-  #engrid[engrid-layout="centercenter1col"],
-  #engrid[engrid-layout="centercenter1col-wide"],
-  #engrid[engrid-layout="centerright1col"] {
+  #engrid[data-engrid-layout="centerleft1col"],
+  #engrid[data-engrid-layout="centercenter1col"],
+  #engrid[data-engrid-layout="centercenter1col-wide"],
+  #engrid[data-engrid-layout="centerright1col"] {
     .content-preFooter {
       background-size: cover;
     }
@@ -440,7 +440,7 @@ body:not(#en__pagebuilder).footer-below-fold
 * ##########################################################
 */
 
-// #engrid[engrid-layout="rightright1col"]{
+// #engrid[data-engrid-layout="rightright1col"]{
 //   .body-header{
 //     margin-top: 0;
 //     border-radius: 0;
@@ -457,7 +457,7 @@ body:not(#en__pagebuilder).footer-below-fold
 // }
 
 // @media screen and (min-width: 550px) {
-//   #engrid[engrid-layout="centerright1col"] {
+//   #engrid[data-engrid-layout="centerright1col"] {
 //     /* prettier-ignore */
 //     .en__component--advrow,
 //     .en__component--advrow .pseudo-subgrid {
@@ -481,7 +481,7 @@ body:not(#en__pagebuilder).footer-below-fold
 // }
 
 // @media screen and (min-width: 600px) {
-//   #engrid[engrid-layout="centerleft1col"] {
+//   #engrid[data-engrid-layout="centerleft1col"] {
 //     /* prettier-ignore */
 //     .en__component--advrow,
 //     .en__component--advrow .pseudo-subgrid {
