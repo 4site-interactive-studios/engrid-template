@@ -890,7 +890,8 @@ input[name="transaction.donationAmt.other"] {
 
 .body-banner img {
   height: 300px !important;
-  width: fit-content !important;
+  // width: fit-content !important;
+  width: 100%;
 }
 
 .body-top {
