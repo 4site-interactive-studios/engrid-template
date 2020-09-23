@@ -11,7 +11,7 @@
 * ##########################################################
 */
 
-#engrid[engrid-layout="leftleft1col"] {
+#engrid[data-engrid-layout="leftleft1col"] {
   /* prettier-ignore */
   .en__component--advrow,
   .en__component--advrow .pseudo-subgrid {
@@ -36,7 +36,7 @@
 */
 
 @media screen and (min-width: 500px) {
-  #engrid[engrid-layout="leftleft1col"] {
+  #engrid[data-engrid-layout="leftleft1col"] {
     /* prettier-ignore */
     .en__component--advrow,
     .en__component--advrow .pseudo-subgrid {
@@ -52,7 +52,7 @@
       ]; 
     }
   }
-  body:not(#en__pagebuilder) #engrid[engrid-layout="leftleft1col"] {
+  body:not(#en__pagebuilder) #engrid[data-engrid-layout="leftleft1col"] {
     .page-backgroundImage {
       grid-row: page-start / content-footerSpacer-end;
       grid-column: rcc-start / pc-end;

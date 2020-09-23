@@ -1209,7 +1209,9 @@ input[name="transaction.donationAmt.other"] {
     0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
-#engrid[data-engrid-layout="centercenter1col"] .en__component--advrow .body-bottom {
+#engrid[data-engrid-layout="centercenter1col"]
+  .en__component--advrow
+  .body-bottom {
   padding-top: 2rem;
   text-align: center;
   p {
@@ -1313,7 +1315,7 @@ img.oc-gs-logo {
   color: #007eb3; // WCAG AA Compliant version of #2ba8dd
 }
 
-.body-header{
+.body-header {
   min-height: 80px !important;
 }
 
@@ -1359,18 +1361,22 @@ img.oc-gs-logo {
 }
 
 #engrid .en__share__button--facebook {
-  background-image: url('https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/facebook.svg') !important;
+  background-image: url("https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/facebook.svg") !important;
 }
 
 #engrid .en__share__button--twitter {
-  background-image: url('https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/twitter.svg') !important;
+  background-image: url("https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/twitter.svg") !important;
 }
 
 #engrid .en__share__button--gplus {
   background-size: 16px;
-}   
+}
 
 /* @TODO: Temp Fix, needs to be replaced */
-#engrid[engrid-layout=centercenter1col] .body-header #social-share-block a img{
+#engrid[data-engrid-layout="centercenter1col"]
+  .body-header
+  #social-share-block
+  a
+  img {
   height: 14px !important;
 }
