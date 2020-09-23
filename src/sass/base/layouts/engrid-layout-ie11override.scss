@@ -12,7 +12,7 @@
 * ##########################################################
 */
 
-#engrid.layout-ie11override {
+#engrid[engrid-layout="ie11override"] {
   .en__component--advrow,
   .en__component--advrow .pseudo-subgrid {
     display: flex !important;
@@ -20,7 +20,7 @@
   }
 }
 
-body:not(#en__pagebuilder) #engrid.layout-ie11override {
+body:not(#en__pagebuilder) #engrid[engrid-layout="ie11override"] {
   form > .en__component--advrow{
     .body-headerOutside,
     .body-header,
@@ -44,7 +44,7 @@ body:not(#en__pagebuilder) #engrid.layout-ie11override {
   
 }
 
-body:not(#en__pagebuilder) #engrid.layout-ie11override:not(.layout-embedded){
+body:not(#en__pagebuilder) #engrid[engrid-layout="ie11override"]:not([engrid-layout="embedded"]){
   .content-footer{
     margin-top: 1rem !important;
   }

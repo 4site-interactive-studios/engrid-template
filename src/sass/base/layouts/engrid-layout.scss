@@ -178,7 +178,7 @@ body:not(#en__pagebuilder) #engrid:not(.legacy) form > .en__component--advrow {
 * ##########################################################
 */
 
-#engrid:not(.legacy):not(.layout-embedded) .en__component--advrow {
+#engrid:not(.legacy):not([engrid-layout="embedded"]) .en__component--advrow {
   min-height: 100vh;
 }
 

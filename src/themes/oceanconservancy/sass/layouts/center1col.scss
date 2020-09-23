@@ -440,63 +440,62 @@ body:not(#en__pagebuilder).footer-below-fold
 * ##########################################################
 */
 
-/* @TODO This should actually be .layout-right1col but we didn't have time to make it that way */
-#engrid[engrid-layout="centerright1col"]{
-  .body-header{
-    margin-top: 0;
-    border-radius: 0;
-  }
+// #engrid[engrid-layout="rightright1col"]{
+//   .body-header{
+//     margin-top: 0;
+//     border-radius: 0;
+//   }
   
-  .content-footerSpacer{
-    display: none;
-  }
+//   .content-footerSpacer{
+//     display: none;
+//   }
 
-  .content-footer{
-    margin-bottom: 0;
-    border-radius: 0;
-  }
-}
+//   .content-footer{
+//     margin-bottom: 0;
+//     border-radius: 0;
+//   }
+// }
 
-@media screen and (min-width: 550px) {
-  #engrid[engrid-layout="centerright1col"] {
-    /* prettier-ignore */
-    .en__component--advrow,
-    .en__component--advrow .pseudo-subgrid {
-      /* autoprefixer grid: off */
-      grid-template-columns:
-      [
-        pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
-        cc-start lcc-start]  minmax(25px, 475px)    [lcc-end
-        bc-start lbc-start]  minmax(250px, 340px)  [lbc-end
-        rbc-start]           minmax(250px, 340px)  [rbc-end bc-end
-        rcc-start]           minmax(0px, 0px)   [rcc-end cc-end
-        rpc-start]           minmax(0px, 0fr)     [rpc-end pc-end            
-      ]; 
-    }
+// @media screen and (min-width: 550px) {
+//   #engrid[engrid-layout="centerright1col"] {
+//     /* prettier-ignore */
+//     .en__component--advrow,
+//     .en__component--advrow .pseudo-subgrid {
+//       /* autoprefixer grid: off */
+//       grid-template-columns:
+//       [
+//         pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
+//         cc-start lcc-start]  minmax(25px, 475px)    [lcc-end
+//         bc-start lbc-start]  minmax(250px, 340px)  [lbc-end
+//         rbc-start]           minmax(250px, 340px)  [rbc-end bc-end
+//         rcc-start]           minmax(0px, 0px)   [rcc-end cc-end
+//         rpc-start]           minmax(0px, 0fr)     [rpc-end pc-end            
+//       ]; 
+//     }
 
-    .page-backgroundImage{
-      grid-column: pc-start / lcc-end;
-    }
+//     .page-backgroundImage{
+//       grid-column: pc-start / lcc-end;
+//     }
     
-  }
-}
+//   }
+// }
 
-@media screen and (min-width: 600px) {
-  #engrid[engrid-layout="centerleft1col"] {
-    /* prettier-ignore */
-    .en__component--advrow,
-    .en__component--advrow .pseudo-subgrid {
-      /* autoprefixer grid: off */
-      grid-template-columns:
-      [
-        pc-start lpc-start]  minmax(25px, 25px)     [lpc-end
-        cc-start lcc-start]  minmax(25px, 25px)    [lcc-end
-        bc-start lbc-start]  minmax(250px, 340px)  [lbc-end
-        rbc-start]           minmax(250px, 340px)  [rbc-end bc-end
-        rcc-start]           minmax(25px, 25px)   [rcc-end cc-end
-        rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end            
-      ]; 
-    }
+// @media screen and (min-width: 600px) {
+//   #engrid[engrid-layout="centerleft1col"] {
+//     /* prettier-ignore */
+//     .en__component--advrow,
+//     .en__component--advrow .pseudo-subgrid {
+//       /* autoprefixer grid: off */
+//       grid-template-columns:
+//       [
+//         pc-start lpc-start]  minmax(25px, 25px)     [lpc-end
+//         cc-start lcc-start]  minmax(25px, 25px)    [lcc-end
+//         bc-start lbc-start]  minmax(250px, 340px)  [lbc-end
+//         rbc-start]           minmax(250px, 340px)  [rbc-end bc-end
+//         rcc-start]           minmax(25px, 25px)   [rcc-end cc-end
+//         rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end            
+//       ]; 
+//     }
     
-  }
-}
+//   }
+// }
