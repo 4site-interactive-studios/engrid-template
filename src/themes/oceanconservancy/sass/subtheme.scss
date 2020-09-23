@@ -1,66 +1,113 @@
-#engrid {
-  --client-white: #ffffff;
-  --client-black: #323232;
-  --client-gray: #8a8a8a;
-  --client-light-gray: #cacaca;
-  --client-cta: #039bc4;
-  --client-cta-hover: #e74b3c;
-
-  --client-prefooter-background-color: #d0e2e7;
-  --client-footer-background-color: #323232;
-
-  --background-color: #f3f3f3;
-  --background-image-background-color: #f3f3f3;
-
-  /* @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand
-    * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
-    */
-
-  // --client-body-background-color: --client-white; //@TODO Not yet used anywhere
-  --client-body-border-radius: 7px;
-  --body-padding-sm: 0.8652rem; //@TODO Revisit
-  --body-padding: calc(0.8652rem * 0.75); //@TODO Revisit
-  --body-padding-lg: calc(0.8652rem * 2.5); //@TODO Revisit
-  --body-padding-xlg: calc(0.8652rem * 5); //@TODO Revisit
-
-  --client-input-border-radius: 5px;
-  --client-input-border-width: 1px;
-  --client-input-border-color: var(--client-black);
-  --client-input-border-color-focus: var(--client-cta);
-  --client-input-background-color: var(--client-white);
-  --client-input-background-color-hover: var(--client-white);
-
-  --client-button-background-color: var(--client-white);
-  --client-button-background-color-hover: var(--client-black);
-  --client-button-background-color-active: var(--client-black);
-  --client-button-background-color-disabled: #949494;
-  --client-button-border-color: var(--client-black);
-  --client-button-border-color-active: var(--client-black);
-  --client-button-border-color-hover: var(--client-black);
-  --client-button-border-radius: 50px;
-  --client-button-font-color: var(--client-black);
-  --client-button-font-color-active: var(--client-white);
-
-  --client-submit-button-background-color: var(--client-cta);
-  --client-submit-button-background-color-hover: var(--client-cta-hover);
-  --client-submit-button-border-color: var(--client-cta);
-  --client-submit-button-font-color: var(--client-white);
-
-  --client-checkmark-background-color: var(--client-black);
-  --client-checkmark-border-color: var(--client-cta);
-  --client-checkmark-font-color: var(--client-white);
-
-  --client-error-red: #f12222;
-  --client-error-red-grayscale: #949494;
-  --client-error-red-faded: #ffeae9;
-  --client-error-page-group-background: #f4ddda;
-  --client-error-input-border-width: var(--client-input-border-width);
-
-  --client-highlight-background-color: #227f9e;
-  --client-highlight-font-color: #ffffff;
+@media screen and (max-width: 360px) {
+  // Remove down arrow when giving frequency wraps
+  #engrid.subtheme-oceanconservancy
+    .monthly-gift-upsell-tooltip
+    .highlight:after {
+    display: none;
+  }
 }
 
 #engrid[engrid-subtheme="oceanconservancy"] {
   --background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/gray_pattern-optimized-2.jpg?v=1598492702000");
   --background-image-background-color: #f3f3f3;
 }
+
+/*
+* ##########################################################
+* # ENGRID - Content Column Breakpoint Styling
+* # LAYOUT - Center ANY - [class^="layout-center"][class$="1col"]
+* ##########################################################
+*/
+
+/* Sum of all MAX values of the Body Columns + 1px */
+@media screen and (min-width: 1231px) {
+  #engrid.layout-centerleft1col,
+  #engrid.layout-centercenter1col,
+  #engrid.layout-centercenter1col-wide,
+  #engrid.layout-centerright1col {
+    .content-preFooter {
+      background-size: cover;
+    }
+  }
+}
+
+// @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
+body:not(#en__pagebuilder).footer-below-fold
+  #engrid
+  .en__component--advrow
+  .page-backgroundImage::before {
+  -webkit-clip-path: none;
+  clip-path: none;
+  height: 100%;
+  top: 0;
+  background-color: var(
+    --background-image-background-color,
+    $background-image-background-color
+  );
+}
+
+/*
+* ##########################################################
+* # BODY BREAKPOINT
+* # Sum of all MIN values of the Body Columns
+* ##########################################################
+*/
+
+/* @TODO This should actually be .layout-right1col but we didn't have time to make it that way */
+#engrid {
+  .body-header {
+    margin-top: 0;
+    border-radius: 0;
+  }
+
+  .content-footerSpacer {
+    display: none;
+  }
+
+  .content-footer {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  #engrid {
+    /* prettier-ignore */
+    // .en__component--advrow,
+    // .en__component--advrow .pseudo-subgrid {
+    //   /* autoprefixer grid: off */
+    //   grid-template-columns:
+    //   [
+    //     pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
+    //     cc-start lcc-start]  minmax(25px, 475px)    [lcc-end
+    //     bc-start lbc-start]  minmax(250px, 340px)  [lbc-end
+    //     rbc-start]           minmax(250px, 340px)  [rbc-end bc-end
+    //     rcc-start]           minmax(0px, 0px)   [rcc-end cc-end
+    //     rpc-start]           minmax(0px, 0fr)     [rpc-end pc-end
+    //   ];
+    // }
+
+    // .page-backgroundImage {
+    //   grid-column: pc-start / lcc-end;
+    // }
+  }
+}
+
+// @media screen and (min-width: 600px) {
+//   #engrid.layout-centerleft1col {
+//     /* prettier-ignore */
+//     .en__component--advrow,
+//     .en__component--advrow .pseudo-subgrid {
+//       /* autoprefixer grid: off */
+//       grid-template-columns:
+//       [
+//         pc-start lpc-start]  minmax(25px, 25px)     [lpc-end
+//         cc-start lcc-start]  minmax(25px, 25px)    [lcc-end
+//         bc-start lbc-start]  minmax(250px, 340px)  [lbc-end
+//         rbc-start]           minmax(250px, 340px)  [rbc-end bc-end
+//         rcc-start]           minmax(25px, 25px)   [rcc-end cc-end
+//         rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end
+//       ];
+//     }
+//   }
+// }

@@ -50,10 +50,10 @@ body:not(#en__pagebuilder) #engrid[engrid-layout="centerright1col"] {
       grid-template-columns:
       [
         pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
-        cc-start lcc-start]  minmax(25px, 475px)    [lcc-end
+        cc-start lcc-start]  minmax(25px, 475px)   [lcc-end
         bc-start lbc-start]  minmax(250px, 340px)  [lbc-end
         rbc-start]           minmax(250px, 340px)  [rbc-end bc-end
-        rcc-start]           minmax(25px, 25px)   [rcc-end cc-end
+        rcc-start]           minmax(25px, 25px)    [rcc-end cc-end
         rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end            
       ]; 
     }

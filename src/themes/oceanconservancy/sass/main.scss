@@ -30,6 +30,12 @@
 @import "../../../sass/base/layouts/engrid-layout-manual";
 @import "../../../sass/base/layouts/engrid-layout-embedded";
 @import "../../../sass/base/layouts/engrid-layout-ie11override";
+@import "../../../sass/base/layouts/engrid-layout-centercenter1col-wide";
+@import "../../../sass/base/layouts/engrid-layout-centercenter1col";
+@import "../../../sass/base/layouts/engrid-layout-centerleft1col";
+@import "../../../sass/base/layouts/engrid-layout-centerright1col";
+@import "../../../sass/base/layouts/engrid-layout-leftleft1col";
+@import "../../../sass/base/layouts/engrid-layout-rightright1col";
 
 /* 4SITE ADDON STYLING */
 @import "../../../sass/addons/addon-debug";
@@ -46,7 +52,7 @@
 @import "../../../sass/addons/addon-tweet-to-target";
 
 /* CLIENT STYLING AND LAYOUTS */
-@import "./subtheme";
+@import "./variables";
 @import "./font";
 @import "./branding";
-@import "./layouts/center1col";
+@import "./subtheme";
