@@ -27,18 +27,6 @@
     <link rel="apple-touch-icon" sizes="152x152" href="https://oceanconservancy.org/wp-content/themes/oco-wp/images/touch-icon-iphone-@3x.png">
     <link rel="shortcut icon" href="https://oceanconservancy.org/wp-content/themes/oco-wp/favicon.ico">	
     
-    <!-- Get color on the page ASAP. -->
-    <style>
-      body {
-          background-color: #f3f3f3 !important;
-      }
-      body:not(#en__pagebuilder){
-          visibility: hidden; /* Prevent the page ever being seen until the Page CSS has finished downloading */
-      }
-      #en__pagebuilder {
-          background-color: #c1c0c0 !important;
-      }
-   </style>
     <link rel="preconnect" href="//d2amdniajcqcy4.cloudfront.net">
     <link rel="preconnect" href="//fonts.gstatic.com">
     <link rel="preconnect" href="//h.online-metrix.net">
@@ -291,6 +279,19 @@
     <!-- Placed here so that it always comes after Engaging Networks CSS which gets injected in HEAD -->
     <!-- <link href="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/main.css?v=1598493914" rel="stylesheet" type="text/css"> -->
     <style>
+        body {
+            background-color: #f3f3f3 !important;
+        }
+        
+         /* Prevent the page ever being seen until the DOM has been parsed. A corresponding style is added just before the </body> tag. */
+        body:not(#en__pagebuilder){
+            opacity: 0;
+        }
+        
+        #en__pagebuilder {
+            background-color: #c1c0c0 !important;
+        }
+
         /* latin */
         @font-face {
             font-family: 'Roboto';
@@ -1268,7 +1269,16 @@
             min-height: 80px !important;
         }
     </style>
-    
+
+    <!-- Once the DOM has been parsed, show whatever the browser has rendered. The slight pause allows for any JS layout changes to happen before it's shown -->
+    <style>
+		body:not(#en__pagebuilder){
+		  transition: opacity 0.1s;
+		  -webkit-transition: opacity 0.1s;
+		  opacity: 1;
+		}
+	</style>
+
    </body>
 </html>
 <!-- ENGrid Template - A/B Mirror of 40745:66689:191100:1991 -->
