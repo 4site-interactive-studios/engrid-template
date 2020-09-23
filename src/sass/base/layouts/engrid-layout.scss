@@ -409,8 +409,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImageO
 
 #engrid .en__component--advrow > div,
 #EN__RootElement .en__component--advrow > div {
-  grid-column: pc;
-  grid-row: na; //None existant row name used as fallback for un-assogned rows to be placed at the bottom of the grid
+  grid-row: na; //None existant row name used as fallback for un-assigned rows to be placed at the bottom of the grid
 }
 
 #engrid
@@ -450,16 +449,18 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImageO
 */
 
 #engrid .en__component--advrow .body-header,
-#engrid .en__component--advrow .body-banner,
 #engrid .en__component--advrow .body-top,
 #engrid .en__component--advrow .body-side,
 #engrid .en__component--advrow .body-main,
 #engrid .en__component--advrow .body-bottom,
 #engrid .en__component--advrow .body-footer {
-  // position: relative;
   background-color: #ffffff;
   padding-left: 1.75rem;
   padding-right: 1.75rem;
+}
+
+#engrid .en__component--advrow .body-banner{
+  background-color: #ffffff;  
 }
 
 #en__pagebuilder #engrid .en__component--advrow .body-bannerOverlay{
@@ -477,7 +478,7 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImageO
 }
 
 #engrid .en__component--advrow .body-header {
-  padding-top: 1.75rem;
+  // padding-top: 1.75rem;
   min-height: var(--client-body-border-radius,$client-body-border-radius);
   border-top-left-radius: var(--client-body-border-radius,$client-body-border-radius);
   border-top-right-radius: var(--client-body-border-radius,$client-body-border-radius);

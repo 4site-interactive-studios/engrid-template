@@ -43,14 +43,16 @@
       /* autoprefixer grid: off */
       grid-template-columns:
       [
-        pc-start lpc-start]  minmax(0, 1fr)     [lpc-end
-        cc-start lcc-start]  minmax(0, 0)    [lcc-end
+        pc-start lpc-start]  minmax(0, 1fr)        [lpc-end
+        cc-start lcc-start]  minmax(0, 0)          [lcc-end
         bc-start lbc-start]  minmax(250px, 340px)  [lbc-end
         rbc-start]           minmax(250px, 340px)  [rbc-end bc-end
-        rcc-start]           minmax(0, 0)   [rcc-end cc-end
-        rpc-start]           minmax(0, 0)     [rpc-end pc-end            
+        rcc-start]           minmax(0, 0)          [rcc-end cc-end
+        rpc-start]           minmax(0, 0)          [rpc-end pc-end            
       ]; 
     }
+
+    /* @TODO This shouldn't be here, it's just an OC thing but shouldn't be in the main layout */
     .content-footerSpacer,
     .body-footer {
       display: none;
