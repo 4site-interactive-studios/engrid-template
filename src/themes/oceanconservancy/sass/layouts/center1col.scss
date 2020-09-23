@@ -336,10 +336,10 @@ body#en__pagebuilder #engrid[data-engrid-layout="centerright1col"] {
 
 /* Sum of all MIN values of the Body Columns */
 @media screen and (min-width: 600px) {
+
   #engrid[data-engrid-layout="centerleft1col"],
   #engrid[data-engrid-layout="centercenter1col"],
   #engrid[data-engrid-layout="centercenter1col-wide"],
-  #engrid[data-engrid-layout="centercenter2col"],
   #engrid[data-engrid-layout="centerright1col"] {
     .en__component--advrow .body-top,
     .en__component--advrow .body-side,
@@ -349,6 +349,36 @@ body#en__pagebuilder #engrid[data-engrid-layout="centerright1col"] {
       padding-left: 6.5rem;
       padding-right: 6.5rem;
     }
+  }
+
+  #engrid[data-engrid-layout="centercenter2col"]{    
+    .en__component--advrow .body-side,
+    .en__component--advrow .body-bottom,
+    .en__component--advrow .body-footer {
+      padding-left: 6.5rem;
+      padding-right: 6.5rem;
+    }
+
+    .en__component--advrow .body-top{
+      padding-left: 6.5rem;
+      padding-right: 3.25rem;
+      padding-bottom: 3.25rem;
+    }
+
+    .en__component--advrow .body-main{
+      padding-top: 1.5rem;
+      padding-left: 3.25rem;
+      padding-right: 6.5rem;
+      padding-bottom: 3.25rem;
+    }
+
+  }
+    
+  #engrid[data-engrid-layout="centerleft1col"],
+  #engrid[data-engrid-layout="centercenter1col"],
+  #engrid[data-engrid-layout="centercenter1col-wide"],
+  #engrid[data-engrid-layout="centercenter2col"],
+  #engrid[data-engrid-layout="centerright1col"] {
 
     .en__component--advrow .body-header,
     .en__component--advrow .body-banner,

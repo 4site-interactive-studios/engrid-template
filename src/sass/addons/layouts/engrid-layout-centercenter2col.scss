@@ -57,6 +57,16 @@ body:not(#en__pagebuilder) #engrid[data-engrid-layout="centercenter2col"] {
         rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end                 
       ]; 
     }
+
+    .body-top{
+      grid-column: bc-start / lbc-end;
+      grid-row: body-top-start / body-main-end; 
+    }
+
+    .body-main{
+      grid-column: rbc-start / bc-end;
+      grid-row: body-top-start / body-main-end;
+    }
   }
 }
 
