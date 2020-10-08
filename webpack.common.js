@@ -38,6 +38,16 @@ module.exports = {
       },
     }),
     new HtmlWebpackPlugin({
+      title: "Ocean Conservancy - Engaging Networks Page - Donation",
+      filename: "page-donation-applepay.html",
+      template: "./src/templates/page-donation-applepay.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+    }),
+    new HtmlWebpackPlugin({
       title: "Engaging Networks Page - Sign Up",
       filename: "page-sign-up.html",
       template: "./src/templates/page-sign-up.html",
@@ -80,6 +90,7 @@ module.exports = {
             plugins: [
               "@babel/proposal-class-properties",
               "@babel/proposal-object-rest-spread",
+              "@babel/plugin-transform-runtime",
             ],
           },
         },

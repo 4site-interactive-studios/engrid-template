@@ -774,6 +774,12 @@ body:not(#en__pagebuilder).footer-below-fold
   .en__field--recurrpay > label {
     display: none;
   }
+  @include from(3) {
+    > .en__field__element {
+      flex-wrap: nowrap;
+      width: 50%;
+    }
+  }
 }
 
 .monthly-gift-upsell-tooltip {
@@ -1381,43 +1387,41 @@ img.oc-gs-logo {
   height: 14px !important;
 }
 
-
 @media screen and (min-width: 600px) {
   #engrid[data-engrid-layout="centerleft1col"],
   #engrid[data-engrid-layout="centercenter1col"],
   #engrid[data-engrid-layout="centercenter2col"],
-  #engrid[data-engrid-layout="centerright1col"]{
-    .body-header{
+  #engrid[data-engrid-layout="centerright1col"] {
+    .body-header {
       margin-top: 3rem;
     }
   }
 }
 
 @media screen and (min-width: 1200px) {
-  #engrid[data-engrid-layout="centercenter2col"]{
-    .body-top{
+  #engrid[data-engrid-layout="centercenter2col"] {
+    .body-top {
       padding-right: 3.25rem;
       padding-bottom: 3.25rem;
       grid-row: body-top-start / body-bottom-end;
     }
 
-    .body-main{
+    .body-main {
       padding-top: 1.5rem;
       padding-left: 3.25rem;
       padding-bottom: 3.25rem;
     }
 
-    .body-bottom{
+    .body-bottom {
       padding-left: 3.25rem;
       grid-column: rbc-start / bc-end;
     }
-
   }
 }
 
 #engrid[data-engrid-layout="leftleft1col"],
-#engrid[data-engrid-layout="rightright1col"]{
-  .body-footer{
+#engrid[data-engrid-layout="rightright1col"] {
+  .body-footer {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -1434,8 +1438,8 @@ img.oc-gs-logo {
 
 @media screen and (min-width: 500px) {
   #engrid[data-engrid-layout="leftleft1col"],
-  #engrid[data-engrid-layout="rightright1col"]{
-    .content-footer{
+  #engrid[data-engrid-layout="rightright1col"] {
+    .content-footer {
       grid-column: bc;
     }
   }

@@ -278,7 +278,7 @@ export const debugBar = () => {
         buttonsWrapper.insertAdjacentHTML(
           "afterbegin",
           '<button id="layout-toggle" type="button">Layout Toggle</button>' +
-          '<button id="fancy-errors-toggle" type="button">Toggle Fancy Errors</button>'        );
+          '<button id="fancy-errors-toggle" type="button">Toggle Fancy Errors</button>');
       }
     }
 
@@ -385,142 +385,142 @@ export const debugBar = () => {
 };
 
 export const inputPlaceholder = () => {
-    const enFieldDonationAmt = document.querySelector(
-      ".en__field--donationAmt.en__field--withOther .en__field__input--other"
-    ) as HTMLInputElement;
-    // const enFieldFirstName = document.querySelector("#en__field_supporter_firstName") as HTMLInputElement;
-    // const enFieldLastName = document.querySelector("#en__field_supporter_lastName") as HTMLInputElement;
-    // const enFieldEmailAddress = document.querySelector("#en__field_supporter_emailAddress") as HTMLInputElement;
-    // const enFieldPhoneNumber = document.querySelector("#en__field_supporter_phoneNumber") as HTMLInputElement;
-    const enFieldPhoneNumber2 = document.querySelector(
-      "#en__field_supporter_phoneNumber2"
-    ) as HTMLInputElement;
-    // const enFieldCountry = document.querySelector("#en__field_supporter_country") as HTMLSelectElement;
-    // const enFieldAddress1 = document.querySelector("#en__field_supporter_address1") as HTMLInputElement;
-    // const enFieldAddress2 = document.querySelector("#en__field_supporter_address2") as HTMLInputElement;
-    // const enFieldCity = document.querySelector("#en__field_supporter_city") as HTMLInputElement;
-    // const enFieldRegion = document.querySelector("#en__field_supporter_region") as HTMLSelectElement;
-    // const enFieldPostcode = document.querySelector("#en__field_supporter_postcode") as HTMLInputElement;
-    const enFieldHonname = document.querySelector(
-      "#en__field_transaction_honname"
-    ) as HTMLInputElement;
-    const enFieldInfname = document.querySelector(
-      "#en__field_transaction_infname"
-    ) as HTMLInputElement;
-    const enFieldInfemail = document.querySelector(
-      "#en__field_transaction_infemail"
-    ) as HTMLInputElement;
-    // const enFieldInfcountry = document.querySelector("#en__field_transaction_infcountry") as HTMLSelectElement;
-    const enFieldInfadd1 = document.querySelector(
-      "#en__field_transaction_infadd1"
-    ) as HTMLInputElement;
-    const enFieldInfadd2 = document.querySelector(
-      "#en__field_transaction_infadd2"
-    ) as HTMLInputElement;
-    const enFieldInfcity = document.querySelector(
-      "#en__field_transaction_infcity"
-    ) as HTMLInputElement;
-    // const enFieldInfreg = document.querySelector("#en__field_transaction_infreg") as HTMLSelectElement;
-    const enFieldInfpostcd = document.querySelector(
-      "#en__field_transaction_infpostcd"
-    ) as HTMLInputElement;
-    const enFieldGftrsn = document.querySelector(
-      "#en__field_transaction_gftrsn"
-    ) as HTMLInputElement;
-    // const enPaymentType = document.querySelector("#en__field_transaction_paymenttype") as HTMLInputElement;
-    const enFieldCcnumber = document.querySelector(
-      "#en__field_transaction_ccnumber"
-    ) as HTMLInputElement;
-    // const enFieldCcexpire = document.querySelector("#en__field_transaction_ccexpire") as HTMLInputElement;
-    // const enFieldCcvv = document.querySelector("#en__field_transaction_ccvv") as HTMLInputElement;
-    // const enFieldBankAccountNumber = document.querySelector("#en__field_supporter_bankAccountNumber") as HTMLInputElement;
-    // const enFieldBankRoutingNumber = document.querySelector("#en__field_supporter_bankRoutingNumber") as HTMLInputElement;
+  const enFieldDonationAmt = document.querySelector(
+    ".en__field--donationAmt.en__field--withOther .en__field__input--other"
+  ) as HTMLInputElement;
+  // const enFieldFirstName = document.querySelector("#en__field_supporter_firstName") as HTMLInputElement;
+  // const enFieldLastName = document.querySelector("#en__field_supporter_lastName") as HTMLInputElement;
+  // const enFieldEmailAddress = document.querySelector("#en__field_supporter_emailAddress") as HTMLInputElement;
+  // const enFieldPhoneNumber = document.querySelector("#en__field_supporter_phoneNumber") as HTMLInputElement;
+  const enFieldPhoneNumber2 = document.querySelector(
+    "#en__field_supporter_phoneNumber2"
+  ) as HTMLInputElement;
+  // const enFieldCountry = document.querySelector("#en__field_supporter_country") as HTMLSelectElement;
+  // const enFieldAddress1 = document.querySelector("#en__field_supporter_address1") as HTMLInputElement;
+  // const enFieldAddress2 = document.querySelector("#en__field_supporter_address2") as HTMLInputElement;
+  // const enFieldCity = document.querySelector("#en__field_supporter_city") as HTMLInputElement;
+  // const enFieldRegion = document.querySelector("#en__field_supporter_region") as HTMLSelectElement;
+  // const enFieldPostcode = document.querySelector("#en__field_supporter_postcode") as HTMLInputElement;
+  const enFieldHonname = document.querySelector(
+    "#en__field_transaction_honname"
+  ) as HTMLInputElement;
+  const enFieldInfname = document.querySelector(
+    "#en__field_transaction_infname"
+  ) as HTMLInputElement;
+  const enFieldInfemail = document.querySelector(
+    "#en__field_transaction_infemail"
+  ) as HTMLInputElement;
+  // const enFieldInfcountry = document.querySelector("#en__field_transaction_infcountry") as HTMLSelectElement;
+  const enFieldInfadd1 = document.querySelector(
+    "#en__field_transaction_infadd1"
+  ) as HTMLInputElement;
+  const enFieldInfadd2 = document.querySelector(
+    "#en__field_transaction_infadd2"
+  ) as HTMLInputElement;
+  const enFieldInfcity = document.querySelector(
+    "#en__field_transaction_infcity"
+  ) as HTMLInputElement;
+  // const enFieldInfreg = document.querySelector("#en__field_transaction_infreg") as HTMLSelectElement;
+  const enFieldInfpostcd = document.querySelector(
+    "#en__field_transaction_infpostcd"
+  ) as HTMLInputElement;
+  const enFieldGftrsn = document.querySelector(
+    "#en__field_transaction_gftrsn"
+  ) as HTMLInputElement;
+  // const enPaymentType = document.querySelector("#en__field_transaction_paymenttype") as HTMLInputElement;
+  const enFieldCcnumber = document.querySelector(
+    "#en__field_transaction_ccnumber"
+  ) as HTMLInputElement;
+  // const enFieldCcexpire = document.querySelector("#en__field_transaction_ccexpire") as HTMLInputElement;
+  // const enFieldCcvv = document.querySelector("#en__field_transaction_ccvv") as HTMLInputElement;
+  // const enFieldBankAccountNumber = document.querySelector("#en__field_supporter_bankAccountNumber") as HTMLInputElement;
+  // const enFieldBankRoutingNumber = document.querySelector("#en__field_supporter_bankRoutingNumber") as HTMLInputElement;
 
-    if (enFieldDonationAmt) {
-      enFieldDonationAmt.placeholder = "Other";
-      enFieldDonationAmt.setAttribute("inputmode", "numeric");
-    }
-    // if (enFieldFirstName) {
-    //   enFieldFirstName.placeholder = "First name";
-    // }
-    // if (enFieldLastName) {
-    //   enFieldLastName.placeholder = "Last name";
-    // }
-    // if (enFieldEmailAddress) {
-    //   enFieldEmailAddress.placeholder = "Email address";
-    // }
-    // if (enFieldPhoneNumber) {
-    //   enFieldPhoneNumber.placeholder = "Phone number";
-    // }
-    if (enFieldPhoneNumber2) {
-      enFieldPhoneNumber2.placeholder = "000-000-0000 (optional)";
-    }
-    // if (enFieldCountry){
-    //   enFieldCountry.placeholder = "Country";
-    // // }
-    // if (enFieldAddress1) {
-    //   enFieldAddress1.placeholder = "Street address";
-    // }
-    // if (enFieldAddress2) {
-    //   enFieldAddress2.placeholder = "Apt., ste., bldg.";
-    // }
-    // if (enFieldCity) {
-    //   enFieldCity.placeholder = "City";
-    // }
-    // if (enFieldRegion){
-    //   enFieldRegion.placeholder = "TBD";
-    // }
-    // if (enFieldPostcode) {
-    //   enFieldPostcode.placeholder = "Post code";
-    // }
-    if (enFieldHonname) {
-      enFieldHonname.placeholder = "Honoree name";
-    }
-    if (enFieldInfname) {
-      enFieldInfname.placeholder = "Recipient name";
-    }
-    if (enFieldInfemail) {
-      enFieldInfemail.placeholder = "Recipient email address";
-    }
-    // if (enFieldInfcountry){
-    //   enFieldInfcountry.placeholder = "TBD";
-    // }
-    if (enFieldInfadd1) {
-      enFieldInfadd1.placeholder = "Recipient street address";
-    }
-    if (enFieldInfadd2) {
-      enFieldInfadd2.placeholder = "Recipient Apt., ste., bldg.";
-    }
-    if (enFieldInfcity) {
-      enFieldInfcity.placeholder = "Recipient city";
-    }
-    // if (enFieldInfreg){
-    //   enFieldInfreg.placeholder = "TBD";
-    // }
-    if (enFieldInfpostcd) {
-      enFieldInfpostcd.placeholder = "Recipient postal code";
-    }
-    if (enFieldGftrsn) {
-      enFieldGftrsn.placeholder = "Reason for your gift";
-    }
-    // if (enPaymentType) {
-    //   enPaymentType.placeholder = "TBD";
-    // }
-    if (enFieldCcnumber) {
-      enFieldCcnumber.placeholder = "•••• •••• •••• ••••";
-    }
-    // if (enFieldCcexpire) {
-    //   enFieldCcexpire.placeholder = "MM / YY";
-    // }
-    // if (enFieldCcvv) {
-    //   enFieldCcvv.placeholder = "CVV";
-    // }
-    // if (enFieldBankAccountNumber) {
-    //   enFieldBankAccountNumber.placeholder = "Bank account number";
-    // }
-    // if (enFieldBankRoutingNumber) {
-    //   enFieldBankRoutingNumber.placeholder = "Bank routing number";
-    // }
+  if (enFieldDonationAmt) {
+    enFieldDonationAmt.placeholder = "Other";
+    enFieldDonationAmt.setAttribute("inputmode", "numeric");
+  }
+  // if (enFieldFirstName) {
+  //   enFieldFirstName.placeholder = "First name";
+  // }
+  // if (enFieldLastName) {
+  //   enFieldLastName.placeholder = "Last name";
+  // }
+  // if (enFieldEmailAddress) {
+  //   enFieldEmailAddress.placeholder = "Email address";
+  // }
+  // if (enFieldPhoneNumber) {
+  //   enFieldPhoneNumber.placeholder = "Phone number";
+  // }
+  if (enFieldPhoneNumber2) {
+    enFieldPhoneNumber2.placeholder = "000-000-0000 (optional)";
+  }
+  // if (enFieldCountry){
+  //   enFieldCountry.placeholder = "Country";
+  // // }
+  // if (enFieldAddress1) {
+  //   enFieldAddress1.placeholder = "Street address";
+  // }
+  // if (enFieldAddress2) {
+  //   enFieldAddress2.placeholder = "Apt., ste., bldg.";
+  // }
+  // if (enFieldCity) {
+  //   enFieldCity.placeholder = "City";
+  // }
+  // if (enFieldRegion){
+  //   enFieldRegion.placeholder = "TBD";
+  // }
+  // if (enFieldPostcode) {
+  //   enFieldPostcode.placeholder = "Post code";
+  // }
+  if (enFieldHonname) {
+    enFieldHonname.placeholder = "Honoree name";
+  }
+  if (enFieldInfname) {
+    enFieldInfname.placeholder = "Recipient name";
+  }
+  if (enFieldInfemail) {
+    enFieldInfemail.placeholder = "Recipient email address";
+  }
+  // if (enFieldInfcountry){
+  //   enFieldInfcountry.placeholder = "TBD";
+  // }
+  if (enFieldInfadd1) {
+    enFieldInfadd1.placeholder = "Recipient street address";
+  }
+  if (enFieldInfadd2) {
+    enFieldInfadd2.placeholder = "Recipient Apt., ste., bldg.";
+  }
+  if (enFieldInfcity) {
+    enFieldInfcity.placeholder = "Recipient city";
+  }
+  // if (enFieldInfreg){
+  //   enFieldInfreg.placeholder = "TBD";
+  // }
+  if (enFieldInfpostcd) {
+    enFieldInfpostcd.placeholder = "Recipient postal code";
+  }
+  if (enFieldGftrsn) {
+    enFieldGftrsn.placeholder = "Reason for your gift";
+  }
+  // if (enPaymentType) {
+  //   enPaymentType.placeholder = "TBD";
+  // }
+  if (enFieldCcnumber) {
+    enFieldCcnumber.placeholder = "•••• •••• •••• ••••";
+  }
+  // if (enFieldCcexpire) {
+  //   enFieldCcexpire.placeholder = "MM / YY";
+  // }
+  // if (enFieldCcvv) {
+  //   enFieldCcvv.placeholder = "CVV";
+  // }
+  // if (enFieldBankAccountNumber) {
+  //   enFieldBankAccountNumber.placeholder = "Bank account number";
+  // }
+  // if (enFieldBankRoutingNumber) {
+  //   enFieldBankRoutingNumber.placeholder = "Bank routing number";
+  // }
 };
 
 export const watchInmemField = () => {
@@ -658,6 +658,16 @@ export const watchGiveBySelectField = () => {
       }
       enFieldPaymentType.value = "paypal";
     }
+    else if (
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "applepay"
+    ) {
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-applepay");
+      }
+      enFieldPaymentType.value = "applepay";
+    }
   };
 
   // Check Giving Frequency on page load
@@ -695,7 +705,17 @@ export const watchGiveBySelectField = () => {
       }
       enFieldPaymentType.value = "paypal";
       enFieldPaymentType.value = "Paypal";
+    } else if (
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "applepay"
+    ) {
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-applepay");
+      }
+      enFieldPaymentType.value = "applepay";
     }
+
   }
 
   // Watch each Giving Frequency radio input for a change
@@ -722,6 +742,7 @@ export const watchLegacyGiveBySelectField = () => {
     'input[name="supporter.questions.180165"]:checked'
   ) as HTMLInputElement;
   let paypalOption = new Option("paypal");
+  let applepayOption = new Option("applepay");
   const prefix = "has-give-by-";
 
   const handleEnFieldGiveBySelect = (e: Event) => {
@@ -763,6 +784,16 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldPaymentType.add(paypalOption);
       enFieldPaymentType.value = "Paypal";
       enFieldPaymentType.value = "paypal";
+    } else if (
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "applepay"
+    ) {
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-applepay");
+      }
+      enFieldPaymentType.add(applepayOption);
+      enFieldPaymentType.value = "applepay";
     }
   };
 
@@ -802,6 +833,16 @@ export const watchLegacyGiveBySelectField = () => {
       enFieldPaymentType.add(paypalOption);
       enFieldPaymentType.value = "Paypal";
       enFieldPaymentType.value = "paypal";
+    } else if (
+      enFieldGiveBySelectCurrentValue &&
+      enFieldGiveBySelectCurrentValue.value.toLowerCase() == "applepay"
+    ) {
+      if (enGrid) {
+        removeClassesByPrefix(enGrid, prefix);
+        enGrid.classList.add("has-give-by-applepay");
+      }
+      enFieldPaymentType.add(applepayOption);
+      enFieldPaymentType.value = "applepay";
     }
   }
 
@@ -1149,74 +1190,74 @@ if (contentFooter && isInViewport(contentFooter)) {
 // @TODO Needs to be converted to Typescript
 // (function() {  
 //   window.addEventListener('load', function() {
-  
+
 //     // This function works when the user has added ".simple_country_select" as a class in page builder for the Country select
-  
+
 //     // Helper function to insert HTML after a node
 //     function insertAfter(el, referenceNode) {
 //         referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
 //     }
-  
+
 //     // Helper function to wrap a target in a new element
 //     function wrap(el, wrapper) {
 //         el.parentNode.insertBefore(wrapper, el);
 //         wrapper.appendChild(el);
 //     }
-  
+
 //     // Show the Country select dropdown and hide international label. Called when inserted label is clicked.
 //     window.showCountrySelect = function() {
 //         countryWrapper.classList.add("country-select-visible");
 //         addressWrapper.classList.add("country-select-visible");
 //         countrySelect.focus(); 
-  
+
 //         var countrySelectLabel = document.querySelector('#en_custom_simple_country_select');
-  
+
 //       // Reinstate Country Select tab index
 //       countrySelect.removeAttribute("tabIndex"); 
-  
+
 //     }
-  
+
 //     var countrySelect = document.querySelector('#en__field_supporter_country');
-  
+
 //     if (countrySelect) {
 //       var countrySelecLabel = countrySelect.options[countrySelect.selectedIndex].innerHTML;
 //       var countrySelecValue = countrySelect.options[countrySelect.selectedIndex].value;
 //     }
-    
+
 //     if (countrySelecValue == "US"){
 //        countrySelecValue = " US";
 //     }
-  
+
 //     if (countrySelecLabel == "United States"){
 //        countrySelecLabel = "the United States";
 //     }	
-    
+
 //     var countryWrapper = document.querySelector('.simple_country_select');
-    
+
 //     if(countryWrapper){
-  
+
 //       // Remove Country Select tab index
 //       countrySelect.tabIndex = "-1";
-  
+
 //       // Find the address label
 //       var addressWrapper = document.querySelector('.en__field--address1 label').parentElement.parentElement;
 //       var addressLabel = document.querySelector('.en__field--address1 label');
-  
+
 //       // EN does not enforce a labels on fields so we have to check for it
 //       if(addressLabel){
-  
+
 //         // Wrap the address label in a div to break out of the flexbox
 //         wrap(addressLabel, document.createElement('div'));
-  
+
 //         // Add our link after the address label
 //         // Includes both long form and short form variants
 //         var newEl = document.createElement('span');
 //         newEl.innerHTML = ' <label id="en_custom_field_simple_country_select_long" class="en__field__label"><a onclick="window.showCountrySelect()">(Outside ' + countrySelecLabel + '?)</a></label><label id="en_custom_field_simple_country_select_short" class="en__field__label"><a onclick="window.showCountrySelect()">(Outside ' + countrySelecValue + '?)</a></label>';
 //         insertAfter(newEl, addressLabel);
-  
-  
+
+
 //       }
 //     }
-  
+
 //   });
 //   })();

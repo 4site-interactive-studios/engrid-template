@@ -9,6 +9,7 @@ import Modal from "./utils/modal";
 import IE from "./utils/ie";
 import SimpleCountrySelect from "./utils/simple-country-select";
 import getUrlParameter from "./utils/query-string";
+import ApplePay from "./utils/apple-pay";
 
 // IE Warning
 const ie = new IE();
@@ -136,4 +137,5 @@ export const run = (opts: Object) => {
 
   // Simple Country Select
   const simpleCountrySelect = new SimpleCountrySelect();
+  const applePay = new ApplePay();
 };
