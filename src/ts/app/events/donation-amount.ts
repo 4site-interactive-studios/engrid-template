@@ -78,7 +78,7 @@ export default class DonationAmount {
         'input[name="' + this._other + '"]'
       ) as HTMLInputElement;
       otherField.focus();
-      otherField.value = amount.toString();
+      otherField.value = parseFloat(amount.toString()).toFixed(2);
     }
     // Set the new amount and trigger all live variables
     this.amount = amount;
@@ -95,13 +95,13 @@ export default class DonationAmount {
     otherWrapper.classList.add("en__field__item--hidden");
   }
   // Remove commas
-  public removeCommas (v: string){
+  public removeCommas(v: string) {
     // replace 5,00 with 5.00
     if (v.length > 3 && v.charAt(v.length - 3) == ',') {
-      v = v.substr(0,v.length-3) + "." + v.substr(v.length-2,2);
+      v = v.substr(0, v.length - 3) + "." + v.substr(v.length - 2, 2);
     }
     else if (v.length > 2 && v.charAt(v.length - 2) == ',') {
-      v = v.substr(0,v.length-2) + "." + v.substr(v.length-1,1);
+      v = v.substr(0, v.length - 2) + "." + v.substr(v.length - 1, 1);
     }
     // replace any remaining commas
     return v.replace(/,/g, '');
