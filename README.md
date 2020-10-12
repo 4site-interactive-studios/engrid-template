@@ -16,6 +16,7 @@ Since then, we've continued to enhance and refine our work, culminating in a com
   - Ocean Conservancy
   - Organic Consumers
   - Oxfam Canada
+  - People for the Ethical Treatment of Animals
   - Polaris Project
   - Rainforest Action Network
   - Save Tibet via Schultz and Williams
