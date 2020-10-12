@@ -8,6 +8,7 @@ Since then, we've continued to enhance and refine our work, culminating in a com
 
 - Designed and Developed by [4Site Studios](http://4sitestudios.com/en?ms=github) while working with:
   - Amnesty International USA
+  - Earth Island Institute
   - Human Rights Campaign via Lautman Maska Neill & Company
   - International Fund for Animal Welfare
   - Mercy for Animals
