@@ -21,6 +21,28 @@ Since then, we've continued to enhance and refine our work, culminating in a com
   - Polaris Project
   - Rainforest Action Network
   - Save Tibet via Schultz and Williams
+  
+## ENGrid Features
+- Auto Credit Card Type selection based on Credit Card Number
+- Processing Fee Checkbox
+- Donation Upsell Lightbox
+- Conditional Hide/Show fields (e.g. In Honor of Giving Fields)
+- Give by Check, Card, Paypal
+- Auto update CC Expiration Date fields
+- Living giving variables to insert currently selected gift frequency or gift amount in line in page copy or in buttons
+- Advocacy "Opt-in Upsell" Lightbox
+- Tweaked UI / UX for an improved e-card "add recipient" experience
+- Per Page Background Image
+- Per Page Layouts (Five Built In)
+- Possibility for Sub-Brands
+- Address Form Field Internationalization
+  - e.g. If the user is on a US / English page and selects "France" as their country the Address Form fields will update their labels, change their ordering, and hide/show relevant fields (example: https://action.ifaw.org/page/68500/action/1?mode=DEMO)
+- Update inputs with improved form field meta info for better auto-fill completion
+- "Remember Me" (Coming Soon)
+- Lazy Load all image assets
+- Fastest page load times possible on Engaging Networks
+- IE11 pop-up encouraging users to upgrade their browsers
+- All pages using our page template can be seamlessly embedded in your website with Shortcodes using our WordPress iFrame embed plugin
 
 ## ENGrid Resources
 - [ENGrid Github Repository](https://github.com/4site-interactive-studios/engrid/)
