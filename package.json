@@ -1,7 +1,7 @@
 {
   "name": "engrid",
   "version": "1.0.0",
-  "client": "oceanconservancy",
+  "client": "oxfam",
   "private": true,
   "description": "",
   "main": "index.js",

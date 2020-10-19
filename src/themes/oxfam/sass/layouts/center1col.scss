@@ -1,7 +1,7 @@
-@import "../../../../sass/addons/layouts/engrid-layout-centerleft1col";
+@import "../../../../sass/base/layouts/engrid-layout-centerleft1col";
 @import "../../../../sass/base/layouts/engrid-layout-centercenter1col";
-@import "../../../../sass/addons/layouts/engrid-layout-centercenter1col-wide";
-@import "../../../../sass/addons/layouts/engrid-layout-centerright1col";
+@import "../../../../sass/base/layouts/engrid-layout-centercenter1col-wide";
+@import "../../../../sass/base/layouts/engrid-layout-centerright1col";
 
 /*
 * ####################################################################################################################
@@ -262,6 +262,7 @@ body#en__pagebuilder #engrid[data-engrid-layout="centerright1col"] {
 * # ENGRID - IE 11 Override Background Styling
 * ##########################################################
 */
-body:not(#en__pagebuilder) #engrid[data-engrid-layout="ie11override"]:not([data-engrid-layout="embedded"]){
+body:not(#en__pagebuilder)
+  #engrid[data-engrid-layout="ie11override"]:not([data-engrid-layout="embedded"]) {
   background-color: #0a8848;
 }
