@@ -54,6 +54,7 @@ Designed and Developed by [4Site Studios](http://4sitestudios.com/en?ms=github) 
 - [ENGrid Github Repository](https://github.com/4site-interactive-studios/engrid/)
 - [ENGrid Documentation](https://docs.google.com/document/d/1Vhiudjm9pcDIgxirsiS7VWhqgqU_a6taVu2VTMOPbHI/edit)
 - [ENGrid Installation Instructions](https://github.com/4site-interactive-studios/engrid/wiki/ENGrid-Installation-Instructions)
+- [Engaging Networks Email Template](https://github.com/4site-interactive-studios/Engaging-Networks-Email-Template)
 - [Community Run EN Slack Channel](https://join.slack.com/t/endevelopers/shared_invite/enQtNTgyMDU5NDEzOTQxLWM1YjkwYmM2NjcxODdhNjI4MmRhMjI1ZTJlNzZlYTM5MmI4OTg3NTlhZTljMDMyMjczZmYyNTBjZmM4ZDY4MTA)
 
 ## Engaging Networks Resources
