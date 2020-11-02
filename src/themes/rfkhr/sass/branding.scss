@@ -1,0 +1,1445 @@
+#engrid {
+  /*
+* ##########################################################
+* # BODY BREAKPOINT
+* # Sum of all MIN values of the Body Columns
+* ##########################################################
+*/
+
+  @media screen and (min-width: 600px) {
+    &[data-engrid-layout="centercenter1col"] {
+      /* prettier-ignore */
+      .en__component--advrow,
+    .en__component--advrow .pseudo-subgrid {
+      /* autoprefixer grid: off */
+      grid-template-columns:
+      [
+        pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
+        cc-start lcc-start]  minmax(25px, 250px)   [lcc-end
+        bc-start lbc-start]  minmax(250px, 420px)  [lbc-end
+        rbc-start]           minmax(250px, 420px)  [rbc-end bc-end
+        rcc-start]           minmax(25px, 250px)   [rcc-end cc-end
+        rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end                 
+      ] !important; 
+    }
+    }
+
+    .content-header {
+      border-top-right-radius: 7px;
+      border-top-left-radius: 7px;
+    }
+
+    .content-footer {
+      border-bottom-right-radius: 7px;
+      border-bottom-left-radius: 7px;
+    }
+
+    .page-backgroundImageSet {
+      background-attachment: fixed;
+      height: auto !important;
+      &::before {
+        // background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0px;
+        width: 100vw;
+        height: calc(100vh + 12px);
+      }
+    }
+  }
+}
+
+body#en__pagebuilder.body-bannerOverlay {
+  background-color: #ffffff;
+}
+
+body:not(#en__pagebuilder).body-banner {
+  background-color: var(--client-light-gray);
+}
+
+body:not(#en__pagebuilder)
+  #engrid
+  .en__component--advrow
+  .page-backgroundImage.page-backgroundImageSet::before {
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: var(--background-image);
+  will-change: transform; // creates a new paint layer
+}
+
+// @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
+body {
+  color: var(--client-black, $client-black);
+  background-color: var(--background-color, $background-color);
+}
+
+body,
+body#en__pagebuilder {
+  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+}
+
+body:not(#en__pagebuilder) {
+  /* We need to set labels for error messages, but don't want them visually displayed outside page builder */
+  /* en__field--inmem is In Memoriam */
+  .en__field--inmem > label,
+  .en__field--recurrpay > label,
+  .en__field--donationAmt > label {
+    display: none;
+  }
+}
+
+/* RAN Named their EMAIl Opt-in `email` which causes it to get the generated class `en__field--email` that matches the auto assigned class `en__field--email` given to EMAIL type fields. This fixes that collision of styles. https://d.pr/i/ziiG76 */
+.en__field--102600 label {
+  position: relative !important;
+  -webkit-transform: initial !important;
+  transform: initial !important;
+  opacity: 1 !important;
+}
+
+/* Legacy Template Support */
+.legacy .en__component--row--1,
+.legacy .en__component--row--2 {
+  display: initial !important;
+}
+
+h1 {
+  color: var(--client-cta, $client-cta);
+  font-family: "Roboto", sans-serif;
+  font-size: calc(0.05552rem * 48);
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-align: center;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: var(--client-cta, $client-cta);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+h3 {
+  color: var(--client-cta, $client-cta);
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 36px;
+  letter-spacing: normal;
+}
+
+label.en__field__label {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.en__field__label--item {
+  font-family: "Roboto", sans-serif;
+  font-size: calc(0.05552rem * 18);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+}
+
+.en__field--donationAmt {
+  .en__field__label--item,
+  .en__field__item--other::before,
+  .en__field__item--other input {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    // font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+}
+
+.en__field--recurrpay label.en__field__label {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.give-by-select .en__field--radio {
+  label {
+    justify-content: center;
+    margin-top: 0.83rem;
+    display: block;
+    width: 100%;
+    font-size: calc(0.05552rem * 24);
+    font-weight: 900;
+    line-height: 1;
+    padding: 18px 0;
+  }
+  .en__field__item input[type="radio"] + label {
+    padding: 5px 0;
+    line-height: 24px;
+    // background-position: left center;
+    background-repeat: no-repeat;
+    // background-size: 20px;
+    // background-position-x: calc(50% - 1.5rem);
+    // background-position-y: 50%;
+    // padding-left: 2.5rem;
+
+    flex-grow: 1;
+    // background-position-x: calc(50% - 40px);
+    // background-position-y: calc(50% - 2px);
+    // background-repeat: no-repeat;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: var(--client-black);
+    // line-height: 1;
+    text-transform: none;
+    transition: 0.3s background-color ease;
+    &:hover {
+      background-color: var(--client-black);
+      color: var(--client-white);
+    }
+  }
+
+  input[type="radio"]:checked + label {
+    color: var(--client-white);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  // Remove down arrow when giving frequency wraps
+  #engrid .monthly-gift-upsell-tooltip .highlight:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  // Remove "Give By Select" icons on small screens
+  #engrid
+    .give-by-select
+    .en__field--radio
+    .en__field__item
+    input[type="radio"]
+    + label {
+    background-image: none;
+    padding-left: 0 !important;
+    padding-right: 0;
+  }
+
+  #engrid
+    .en__field__label--item
+    #engrid
+    .en__field__input--checkbox
+    + .en__field__label,
+  #engrid .en__contactDetails__rows,
+  #engrid
+    .give-by-select
+    .en__field--radio
+    .en__field__item
+    input[type="radio"]
+    + label {
+    font-size: calc((0.05552rem * 18) * 1);
+  }
+}
+
+#engrid h1 {
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  #engrid .en__component--advrow > div,
+  #EN__RootElement .en__component--advrow > div {
+    grid-column: pc !important;
+  }
+}
+
+#engrid {
+  .page-alert,
+  .content-header,
+  .body-headerOutside,
+  .body-side,
+  .body-footer,
+  .body-headerOutside,
+  .body-footerOutside,
+  .content-preFooter,
+  .page-backgroundImageOverlay {
+    // display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .body-headerOutside {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    grid-column: bc;
+  }
+
+  .body-header {
+    padding-top: 0;
+    padding-right: 1.875rem;
+    padding-left: 1.875rem;
+    display: flex;
+    justify-content: space-between;
+
+    :first-child,
+    :last-child {
+      align-items: center;
+      justify-content: center;
+    }
+
+    :first-child {
+      display: flex;
+      justify-content: flex-start;
+
+      img {
+        height: auto;
+        max-width: 140px !important;
+        display: block;
+      }
+
+      a {
+        cursor: default;
+      }
+    }
+
+    :last-child {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @media screen and (max-width: 600px) {
+      .have-questions-call-line {
+        display: none;
+      }
+    }
+
+    :first-child img,
+    :last-child img {
+      display: block;
+    }
+
+    .have-questions-call-line {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+
+      p:first-of-type {
+        font-size: 14px;
+        letter-spacing: 0.7px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      p:last-of-type {
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      a {
+        cursor: pointer;
+        color: #323232;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .body-banner,
+  .body-bannerOverlay {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .body-banner p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .body-bannerOverlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .banner-text p {
+      font-size: 34px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      padding: 0 0.9em;
+      color: #323232;
+      box-decoration-break: clone;
+      /* margin: .4em; */
+    }
+
+    .banner-text.blue p {
+      color: #ffffff;
+      background-color: #2ba8dd;
+      padding: 0.4em 0;
+      box-shadow: 1em 0 0 0 #2ba8dd, -1em 0 0 0 #2ba8dd;
+    }
+
+    .banner-text.red p {
+      color: #ffffff;
+      background-color: #32d3f0;
+      padding: 0.4em 0;
+      box-shadow: 1em 0 0 0 #32d3f0, -1em 0 0 0 #32d3f0;
+    }
+
+    .banner-text.black p {
+      color: #ffffff;
+      background-color: #323232;
+      padding: 0.4em 0;
+      box-shadow: 1em 0 0 0 #323232, -1em 0 0 0 #323232;
+    }
+  }
+
+  // .body-footer {
+  //   margin-bottom: 5rem;
+  //   grid-row: body-footer;
+  // }
+  .body-bottom {
+    display: flex;
+    justify-content: center;
+
+    .en__component {
+      max-width: 410px;
+    }
+  }
+
+  .content-footer {
+    grid-column: bc !important;
+    grid-row: body-footer !important;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .content-footer > div {
+    grid-column: bc;
+  }
+
+  .content-preFooter {
+    grid-column: pc;
+    background-size: contain;
+  }
+
+  .content-preFooter.pseudo-subgrid > div {
+    grid-column: bc;
+  }
+
+  .content-footer.pseudo-subgrid > div {
+    grid-column: bc;
+  }
+}
+
+body:not(#en__pagebuilder) #engrid {
+  .page-backgroundImage {
+    grid-row: page-start / content-preFooter-end;
+  }
+
+  /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
+  .page-backgroundImage::before {
+    content: "";
+    // background-image: radial-gradient(
+    //   circle at 50% 0,
+    //   rgba(0, 0, 0, 0.3),
+    //   transparent 53%
+    // );
+    z-index: -3;
+    grid-column: pc;
+  }
+  .page-backgroundImageOverlay {
+    grid-row: page-start / content-preFooter-end;
+  }
+}
+
+body#en__pagebuilder #engrid {
+  .page-backgroundImage > div,
+  .page-backgroundImageOverlay > div {
+    grid-column: bc;
+  }
+}
+
+#engrid {
+  .body-side {
+    display: none;
+  }
+}
+
+/*
+* ##########################################################
+* # ENGRID - BODY Column Breakpoint Styling
+* # LAYOUT - Center ANY - [class^="layout-center"][class$="1col"]
+* ##########################################################
+*/
+
+/* Sum of all MIN values of the Body Columns */
+@media screen and (min-width: 600px) {
+  #engrid {
+    .en__component--advrow .body-top,
+    .en__component--advrow .body-side,
+    .en__component--advrow .body-main,
+    .en__component--advrow .body-bottom,
+    .en__component--advrow .body-footer {
+      padding-left: 6.5rem;
+      padding-right: 6.5rem;
+    }
+
+    .en__component--advrow .body-header,
+    .en__component--advrow .body-banner,
+    .en__component--advrow .body-top,
+    .en__component--advrow .body-side,
+    .en__component--advrow .body-main,
+    .en__component--advrow .body-bottom,
+    .en__component--advrow .body-footer {
+      position: relative;
+    }
+
+    .body-header {
+      margin-top: 2.1875rem;
+    }
+
+    .content-footerSpacer {
+      margin-bottom: 2.1875rem;
+    }
+
+    .en__component--advrow .body-footer {
+      padding-bottom: 4rem;
+    }
+
+    .body-headerOutside {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    [class^="body-"] {
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    .body-header {
+      border-top-left-radius: var(
+        --client-input-border-radius,
+        $client-input-border-radius
+      );
+      border-top-right-radius: var(
+        --client-input-border-radius,
+        $client-input-border-radius
+      );
+    }
+
+    .content-preFooter.pseudo-subgrid > div {
+      grid-column: cc;
+    }
+
+    .content-footer.pseudo-subgrid > div {
+      grid-column: cc;
+    }
+  }
+}
+
+// @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
+body:not(#en__pagebuilder).footer-below-fold
+  #engrid
+  .en__component--advrow
+  .page-backgroundImage::before {
+  -webkit-clip-path: none;
+  clip-path: none;
+  height: 100%;
+  top: 0;
+  background-color: var(
+    --background-image-background-color,
+    $background-image-background-color
+  );
+}
+
+/************************************
+   * Utility: Give By Select Logos
+   * Assumes items are in order of Card, PayPal, Check
+   * .give-by-select
+   ***********************************/
+.give-by-select .en__field__element--radio {
+  justify-content: space-between;
+}
+
+.give-by-select .en__field__element--radio .en__field__item {
+  margin-right: 0 !important;
+  max-width: calc((100% - 2rem) / 3);
+}
+
+/* Card */
+.give-by-select .en__field__element--radio .en__field__item:nth-child(1) label {
+  background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/icon-card-black.svg);
+  padding-left: 27px !important;
+  background-size: 20px 16px;
+  background-position-x: calc(50% - 23px);
+  background-position-y: calc(50% - 1px);
+}
+
+/* Paypal */
+.give-by-select .en__field__element--radio .en__field__item:nth-child(2) label {
+  background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/icon-paypal-black.svg);
+  // background-position: left center;
+  // background-repeat: no-repeat;
+  padding-left: 23px !important;
+  background-size: 14px 17px;
+  background-position-x: calc(50% - 29px);
+  background-position-y: calc(50% + 1px);
+}
+
+/* Check */
+.give-by-select .en__field__element--radio .en__field__item:nth-child(3) label {
+  background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/icon-check-black.svg);
+  // background-position: left center;
+  // background-repeat: no-repeat;
+  padding-left: 27px !important;
+  background-size: 20px 16px;
+  background-position-x: calc(50% - 27px);
+  background-position-y: calc(50% - 1px);
+}
+
+.give-by-select
+  .en__field__element--radio
+  .en__field__item:nth-child(1)
+  label.en__field__label.en__field__label--item:hover,
+.give-by-select
+  .en__field__element--radio
+  .en__field__item:nth-child(1)
+  input[type="radio"]:checked
+  + label {
+  background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/icon-card-white.svg);
+}
+
+.give-by-select
+  .en__field__element--radio
+  .en__field__item:nth-child(2)
+  label.en__field__label.en__field__label--item:hover,
+.give-by-select
+  .en__field__element--radio
+  .en__field__item:nth-child(2)
+  input[type="radio"]:checked
+  + label {
+  background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/icon-paypal-white.svg);
+}
+
+.give-by-select
+  .en__field__element--radio
+  .en__field__item:nth-child(3)
+  label.en__field__label.en__field__label--item:hover,
+.give-by-select
+  .en__field__element--radio
+  .en__field__item:nth-child(3)
+  input[type="radio"]:checked
+  + label {
+  background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/icon-check-white.svg);
+}
+
+.highlight {
+  background-color: var(
+    --client-highlight-background-color,
+    $client-highlight-background-color
+  );
+  color: var(--client-highlight-font-color, $client-highlight-font-color);
+  padding: 0.5rem;
+  font-weight: 500;
+  display: inline-block;
+  // margin-left: -0.5rem;
+  &.big {
+    font-size: 120%;
+  }
+}
+
+.en__field--donationAmt {
+  input[type="text"].en__field__input--other,
+  input[type="number"].en__field__input--other,
+  input[type="tel"].en__field__input--other {
+    padding-left: 35px;
+    // padding-right: 27%;
+    // text-align: center;
+    min-height: 40px;
+  }
+}
+
+.en__field--donationAmt .en__field__item--other::before {
+  display: block;
+  content: "$";
+  position: relative;
+  height: 0;
+  left: 20px;
+  top: 10px;
+  color: var(--client-black);
+  width: 0;
+  font-weight: 400;
+}
+
+.en__field--donationAmt.en__field--radio
+  .en__field__item--other:not(.en__field__item--hidden)::before {
+  color: var(--client-white);
+}
+
+.en__field--monthly_upsell_checkbox
+  .en__field__input--checkbox
+  + .en__field__label {
+  display: inline-block !important;
+}
+
+.en__field--monthly_upsell_checkbox
+  .en__field__input--checkbox
+  + .en__field__label::before {
+  margin-top: 0.25rem;
+}
+
+.en__field__input--checkbox + .en__field__label::before,
+.en__contactDetails__rows::before {
+  border-radius: 50%;
+}
+.en__field__input--checkbox:checked + .en__field__label::before,
+.en__contactDetails__select:checked + .en__contactDetails__rows::before {
+  background-color: var(--client-black);
+  box-shadow: none;
+}
+
+.en__field__input--checkbox:checked + .en__field__label::after,
+.en__contactDetails__select:checked + .en__contactDetails__rows::after {
+  content: "\a0\2713";
+  color: var(--client-white);
+  left: -31px;
+  top: 1px;
+}
+
+// Couldn't find the cause of this spacing issue https://d.pr/i/1W9vTl
+.en__field--giveBySelect div div.en__field__item:last-child {
+  margin-right: 0 !important;
+}
+
+// .en__field--donationAmt .en__field__item--other::after{
+//   opacity: .8;
+//   font-size: 80%;
+//   position: absolute;
+//   font-family: inherit;
+//   font-weight: 400;
+//   line-height: 1.5;
+//   bottom: 1.25rem;
+//   display: inline-block;
+//   height: 0;
+//   margin-left: .5rem;
+// }
+
+// .en__field--donationAmt.monthly-giving .en__field__item--other::after {
+//   content: "enter monthly amount";
+// }
+
+// .en__field--donationAmt:not(.monthly-giving) .en__field__item--other::after {
+//   content: "enter amount";
+// }
+
+.en__field--recurrpay {
+  margin-top: 20px;
+  .en__field--recurrpay > label {
+    display: none;
+  }
+  @include from(3) {
+    > .en__field__element {
+      flex-wrap: nowrap;
+      width: 50%;
+    }
+  }
+}
+
+.monthly-gift-upsell-tooltip {
+  text-align: center;
+}
+
+.monthly-gift-upsell-tooltip .highlight:after {
+  bottom: -12px;
+  left: 60%;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border: 20px solid transparent;
+  border-top-color: #f9f003;
+  margin-left: 30px;
+  z-index: 1;
+}
+
+.en__field__input--checkbox + .en__field__label,
+.en__contactDetails__rows {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.4px;
+  display: inline-block;
+  line-height: 1.4;
+  .highlight {
+    font-weight: 700;
+    margin-top: -0.5rem;
+    margin-left: -0.2rem;
+  }
+}
+
+.en__field--donationAmt .en__field__element--radio {
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-items: center;
+  margin: 0.9375rem auto;
+  max-width: 575px;
+}
+
+.en__field--donationAmt .en__field__element--radio .en__field__item,
+.en__component--formblock
+  .en__field--donationAmt
+  div.en__field__item:first-of-type,
+.en__component--formblock
+  .en__field--donationAmt
+  div.en__field__item:last-of-type {
+  max-width: 200px;
+  margin: 0 0.25rem 1rem 0.25rem !important;
+  margin-top: 0 !important;
+  margin-right: 0.5rem !important;
+  margin-bottom: 1rem !important;
+  margin-left: 0.5rem !important;
+}
+
+.en__field--donationAmt .en__field__element--radio .en__field__item {
+  // width: calc((100% / 3) - (1rem / 2));
+  width: auto;
+  min-width: 100px;
+  max-width: 140px;
+  flex: 0 0 auto;
+}
+
+.en__field--donationAmt .en__field__element--radio .en__field__item label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+  transition: 0.3s background-color ease, 0.3s color ease;
+}
+.en__field--donationAmt
+  .en__field__element--radio
+  .en__field__item
+  label:hover {
+  background-color: var(--client-black);
+  color: var(--client-white);
+}
+
+.en__field--donationAmt
+  .en__field__element--radio
+  .en__field__item:not(.en__field__item--other) {
+  max-width: 100px;
+}
+
+.en__component
+  .en__field--donationAmt.en__field.en__field--radio
+  .en__field__item:not(.en__field__item--other) {
+  flex-grow: 0;
+  align-items: flex-start;
+}
+
+.has-give-monthly .en__field--donationAmt .en__field__item--other::after {
+  content: "enter monthly amount";
+}
+
+.has-give-once .en__field--donationAmt .en__field__item--other::after {
+  content: "enter amount";
+}
+
+.en__field--donationAmt .en__field__item--other::after {
+  display: block;
+  opacity: 0.8;
+  font-size: 80%;
+  position: relative;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  left: 1rem;
+  top: 0.25rem;
+}
+
+.pre-footer-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.pre-footer-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  padding: 0rem 1rem 2rem 1rem;
+  img {
+    display: block;
+    margin-bottom: 35px;
+  }
+  .header-wrapper {
+    h2 {
+      margin: 0;
+      // font-size: calc(0.05552rem * 32);
+      // font-weight: 900;
+      // letter-spacing: 1px;
+      // color: $client-black;
+      text-transform: uppercase;
+      // line-height: 1;
+      padding: 1rem 1rem 0.5rem 1rem; // Corrects for the fact the font is vertically off center
+    }
+  }
+  // p {
+  //   font-size: calc(0.05552rem * 16);
+  //   line-height: 1.58;
+  //   letter-spacing: 0.2px;
+  //   text-align: center;
+  // }
+}
+
+.content-preFooter {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  // background-color: $client-prefooter-background-color;
+
+  h1 {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    color: #ffffff;
+  }
+
+  p {
+    color: #ffffff;
+  }
+}
+
+.content-footer {
+  background-color: var(
+    --client-footer-background-color,
+    $client-footer-background-color
+  );
+  .en__component:first-child {
+    padding-top: 1rem;
+  }
+
+  .en__component:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .en__component:last-child {
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 30px 0px;
+  flex-wrap: wrap;
+  .footer-logo {
+    padding: 1rem;
+    img {
+      width: auto;
+      height: 50px;
+    }
+  }
+  .footer-menu {
+    padding: 1rem;
+    a {
+      display: block;
+      color: #ffffff;
+      font-size: calc(0.05552rem * 16);
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .footer-copy {
+    padding: 1rem;
+    max-width: 452px;
+
+    p {
+      font-size: calc(0.05552rem * 14);
+      font-weight: 400;
+      line-height: 1.57;
+      letter-spacing: 0.6px;
+      color: #ffffff;
+    }
+  }
+  .address {
+    font-size: calc(0.05552rem * 14);
+    font-weight: 400;
+    line-height: 1.57;
+    letter-spacing: 0.6px;
+    color: #ffffff;
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding-top: 30px;
+    border-top: 2px solid rgba(#ffffff, 0.8);
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 970px) {
+  .footer-wrapper .footer-copy p {
+    border-left: 1px solid #ffffff;
+    padding-left: 65px;
+  }
+}
+
+@media screen and (max-width: 497px) {
+  .footer-wrapper {
+    text-align: center;
+  }
+}
+
+// This field had a highlight applied to it that causes the checbox to show up off center
+#en__field_supporter_monthly_upsell_checkbox:checked + .en__field__label:after {
+  top: 0.25rem;
+}
+
+.en__field--donationAmt input.en__field__input--other::placeholder {
+  opacity: 0.7;
+}
+
+.white-font {
+  color: $client-white;
+}
+
+/** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/
+/* prettier-ignore */
+.en__component--advrow:not(.show) :not(.pboAdvancedRow__preview) .hide.en__component--column {
+  display: none;
+}
+
+/** Hide CONTENT when viewed publicly, but not when viewed in page builder. **/
+body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
+  display: none !important;
+}
+
+// // Client specific CSS
+// .content-footer > div {
+//   grid-column: pc !important;
+// }
+.footer-block-three {
+  height: 14px;
+  background: url("https://oxfam.ca/wp-content/uploads/2018/06/footer-bg.png");
+  background-size: cover;
+  clear: both;
+  font-size: 0;
+  line-height: 0;
+}
+
+.footer-block-two {
+  background-color: rgba(12, 136, 74, 1);
+}
+
+.footer-wrapper {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-block-two .yd-col.yd-ft-left p {
+  color: #ffffff;
+  font-size: 14px;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  line-height: 26px;
+  /* margin-left: 0px; */
+  margin: 20px 20px 20px 0;
+}
+
+.footer-block-two .yd-col.yd-ft-right p {
+  color: #ffffff;
+  font-size: 14px;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  margin-right: 10px;
+  /* margin-left: 0px; */
+  margin: 20px 20px 20px 0;
+}
+
+.yd-col {
+  /* float: left;
+    min-height: 1px; */
+  display: inline-block;
+}
+
+/* .yd-col:after {
+    clear: both;
+} */
+
+.yd-ft-left {
+  width: 36.51%;
+}
+
+.yd-ft-middle {
+  width: 42.16%;
+}
+
+.yd-ft-right {
+  width: 19.33%;
+  text-align: right;
+}
+
+.ft-link-wrapper {
+  margin: 20px;
+}
+
+.ft-link-wrapper a {
+  margin-right: 25px !important;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  line-height: 26px;
+}
+
+.ft-link-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.footer-badges {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  img {
+    display: block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* This input field is pretending to be a button, so let's mirror the border color of its neighboring buttons */
+input[name="transaction.donationAmt.other"] {
+  border-color: var(--client-button-border-color, $client-button-border-color);
+}
+
+.content-footer {
+  // box-shadow: none;
+  color: var(--client-white);
+  overflow: hidden;
+  font-size: 14px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: 0.6px;
+  text-align: center;
+  a {
+    color: var(--client-white);
+    text-decoration: none;
+  }
+}
+
+#engrid .en__component--advrow .body-header::before,
+#engrid .en__component--advrow .body-banner::before,
+#engrid .en__component--advrow .body-top::before,
+#engrid .en__component--advrow .body-side::before,
+#engrid .en__component--advrow .body-main::before,
+#engrid .en__component--advrow .body-bottom::before,
+#engrid .en__component--advrow .body-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+#en__pagebuilder #engrid .en__component--advrow .body-bannerOverlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+#engrid[data-engrid-layout="centercenter1col"]
+  .en__component--advrow
+  .body-bottom {
+  padding-top: 2rem;
+  text-align: center;
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: center;
+    color: #828282;
+  }
+}
+
+.body-header {
+  display: flex;
+  align-items: center;
+}
+
+.body-banner img {
+  height: 300px !important;
+  // width: fit-content !important;
+  width: 100%;
+}
+
+.body-top {
+  padding-top: 1.5rem;
+}
+
+#designed-by-4site {
+  text-align: center;
+  font-size: 80%;
+  margin: 1.5rem 0.5rem 0rem 0.5rem;
+}
+
+#designed-by-4site .text-fade {
+  opacity: 0.9;
+}
+
+#made-with-love {
+  color: #1294bf;
+  display: inline-block;
+}
+
+#designed-by-4site a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#designed-by-4site.light-font a {
+  color: #ffffff;
+  text-shadow: 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+img.oc-bbb-logo,
+img.oc-cna-logo {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  opacity: 0.5;
+  display: inline-block;
+}
+
+img.oc-gs-logo {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  opacity: 1;
+  display: inline-block;
+}
+
+.en__captcha {
+  margin: auto;
+}
+.en__submit {
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  button {
+    padding: 11px 0;
+    font-size: 20px;
+  }
+}
+
+#engrid div[id^="nb-field-"] div.nb-feedback {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+  border-radius: var(--client-input-border-radius, 5px) !important;
+  font-size: 1.125rem !important;
+
+  span.nb-result {
+    font-family: Roboto, sans-serif !important;
+    font-size: 0.75rem !important;
+    font-weight: 400 !important;
+    font-stretch: normal !important;
+    font-style: normal !important;
+    line-height: 1.44 !important;
+    letter-spacing: normal !important;
+  }
+}
+#en_custom_field_simple_country_select_long a,
+#en_custom_field_simple_country_select_short a {
+  color: #007eb3; // WCAG AA Compliant version of #2ba8dd
+}
+
+.body-header {
+  min-height: 80px !important;
+}
+
+// social sharing styling
+#engrid .social-share p {
+  text-align: right;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  font-weight: bold;
+}
+
+#engrid .social-share img {
+  display: inline-block;
+  margin-left: 1em;
+  height: 16px;
+}
+
+#engrid .social-share p {
+  display: flex;
+  align-items: center;
+}
+
+/*Override EN Default Icons */
+#engrid .en__share__button {
+  height: 16px;
+  width: 16px;
+}
+
+#engrid .en__shares {
+  align-items: center;
+}
+
+#engrid .en__shares::before {
+  content: "SHARE";
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  color: #323232;
+  margin-right: 1rem;
+}
+
+#engrid .en__share__button--facebook {
+  background-image: url("https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/facebook.svg") !important;
+}
+
+#engrid .en__share__button--twitter {
+  background-image: url("https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/twitter.svg") !important;
+}
+
+#engrid .en__share__button--gplus {
+  background-size: 16px;
+}
+
+/* @TODO: Temp Fix, needs to be replaced */
+#engrid[data-engrid-layout="centercenter1col"]
+  .body-header
+  #social-share-block
+  a
+  img {
+  height: 14px !important;
+}
+
+@media screen and (min-width: 600px) {
+  #engrid[data-engrid-layout="centerleft1col"],
+  #engrid[data-engrid-layout="centercenter1col"],
+  #engrid[data-engrid-layout="centercenter2col"],
+  #engrid[data-engrid-layout="centerright1col"] {
+    .body-header {
+      margin-top: 3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #engrid[data-engrid-layout="centercenter2col"] {
+    .body-top {
+      padding-right: 3.25rem;
+      padding-bottom: 3.25rem;
+      grid-row: body-top-start / body-bottom-end;
+    }
+
+    .body-main {
+      padding-top: 1.5rem;
+      padding-left: 3.25rem;
+      padding-bottom: 3.25rem;
+    }
+
+    .body-bottom {
+      padding-left: 3.25rem;
+      grid-column: rbc-start / bc-end;
+    }
+  }
+}
+
+#engrid[data-engrid-layout="leftleft1col"],
+#engrid[data-engrid-layout="rightright1col"] {
+  .body-footer {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  #engrid[data-engrid-layout="leftleft1col"],
+  #engrid[data-engrid-layout="rightright1col"] {
+    .content-footer {
+      grid-column: bc;
+    }
+  }
+}
