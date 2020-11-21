@@ -5,11 +5,6 @@
   }
 }
 
-#engrid[engrid-subtheme="rfkhr"] {
-  --background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/gray_pattern-optimized-2.jpg?v=1598492702000");
-  --background-image-background-color: #f3f3f3;
-}
-
 /*
 * ##########################################################
 * # ENGRID - Content Column Breakpoint Styling
@@ -67,8 +62,7 @@ body:not(#en__pagebuilder).footer-below-fold
 }
 
 #engrid[data-engrid-subtheme="rfkhr"] {
-  --background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  --background-image-background-color: #f3f3f3;
+  --background-image-background-color: #0302b7;
 }
 
 .en__errorList:empty {

@@ -76,7 +76,7 @@ body {
 body,
 body#en__pagebuilder {
   // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-family: "Roboto", sans-serif;
+  font-family: "proximanova-regular", sans-serif;
   font-size: 1.125rem;
   font-weight: normal;
   font-stretch: normal;
@@ -111,8 +111,8 @@ body:not(#en__pagebuilder) {
 
 h1 {
   color: var(--client-cta, $client-cta);
-  font-family: "Roboto", sans-serif;
-  font-size: calc(0.05552rem * 48);
+  font-family: "stanley-regular", serif;
+  font-size: 38px;
   font-weight: 900;
   font-stretch: normal;
   font-style: normal;
@@ -125,8 +125,8 @@ h1 {
 
 h2 {
   color: var(--client-cta, $client-cta);
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-family: "stanley-regular", serif;
+  font-size: 33px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -136,8 +136,8 @@ h2 {
 
 h3 {
   color: var(--client-cta, $client-cta);
-  font-family: "Roboto", sans-serif;
-  font-size: 32px;
+  font-family: "stanley-regular", serif;
+  font-size: 27px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -146,7 +146,7 @@ h3 {
 }
 
 label.en__field__label {
-  font-family: "Roboto", sans-serif;
+  font-family: "proximanova-regular", sans-serif;
   font-size: 14px;
   font-weight: 500;
   font-stretch: normal;
@@ -157,7 +157,7 @@ label.en__field__label {
 }
 
 .en__field__label--item {
-  font-family: "Roboto", sans-serif;
+  font-family: "proximanova-regular", sans-serif;
   font-size: calc(0.05552rem * 18);
   font-weight: normal;
   font-stretch: normal;
@@ -170,7 +170,7 @@ label.en__field__label {
   .en__field__label--item,
   .en__field__item--other::before,
   .en__field__item--other input {
-    font-family: "Roboto", sans-serif;
+    font-family: "proximanova-regular", sans-serif;
     font-size: 16px;
     // font-weight: 900;
     font-stretch: normal;
@@ -282,9 +282,9 @@ label.en__field__label {
   .content-header,
   .body-headerOutside,
   .body-side,
-  .body-footer,
   .body-headerOutside,
   .body-footerOutside,
+  .content-footerSpacer,
   .content-preFooter,
   .page-backgroundImageOverlay {
     // display: none;
@@ -445,8 +445,8 @@ label.en__field__label {
 
   .content-footer {
     grid-column: bc !important;
-    grid-row: body-footer !important;
-    padding-top: 2rem;
+    // grid-row: body-footer !important;
+    padding-top: 1rem;
     padding-bottom: 2rem;
   }
 
@@ -1091,7 +1091,7 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
   color: #ffffff;
   font-size: 14px;
   display: inline-block;
-  font-family: "Roboto", sans-serif;
+  font-family: "proximanova-regular", sans-serif;
   font-weight: normal;
   line-height: 26px;
   /* margin-left: 0px; */
@@ -1102,7 +1102,7 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
   color: #ffffff;
   font-size: 14px;
   display: inline-block;
-  font-family: "Roboto", sans-serif;
+  font-family: "proximanova-regular", sans-serif;
   margin-right: 10px;
   /* margin-left: 0px; */
   margin: 20px 20px 20px 0;
@@ -1141,7 +1141,7 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
   color: #ffffff !important;
   font-size: 14px !important;
   display: inline-block;
-  font-family: "Roboto", sans-serif;
+  font-family: "proximanova-regular", sans-serif;
   font-weight: normal;
   line-height: 26px;
 }
@@ -1263,13 +1263,13 @@ input[name="transaction.donationAmt.other"] {
 
 #designed-by-4site a {
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
 }
 
-#designed-by-4site.light-font a {
-  color: #ffffff;
-  text-shadow: 1px -1px rgba(0, 0, 0, 0.2);
-}
+// #designed-by-4site.light-font a {
+//   color: #ffffff;
+//   text-shadow: 1px -1px rgba(0, 0, 0, 0.2);
+// }
 
 img.oc-bbb-logo,
 img.oc-cna-logo {
@@ -1306,7 +1306,7 @@ img.oc-gs-logo {
   font-size: 1.125rem !important;
 
   span.nb-result {
-    font-family: Roboto, sans-serif !important;
+    font-family: "proximanova-regular", sans-serif !important;
     font-size: 0.75rem !important;
     font-weight: 400 !important;
     font-stretch: normal !important;
@@ -1442,4 +1442,23 @@ img.oc-gs-logo {
       grid-column: bc;
     }
   }
+}
+
+.en__field__input--radio:checked+.en__field__label:before {
+  background-color: var(--client-cta);
+}
+
+.en__contactDetails__select:checked+.en__contactDetails__rows:before,
+.en__field__input--checkbox:checked+.en__field__label:before {
+  background-color: var(--client-cta);
+}
+
+// .en__contactDetails__select:checked+.en__contactDetails__rows:after,
+// .en__field__input--checkbox:checked+.en__field__label:after {
+//   background-color: var(--client-cta);
+// }
+
+.en__tweetButton__send,
+.en__tweetButton__sent{
+  background-color: var(--client-cta);
 }
