@@ -1,71 +1,77 @@
+/* A mirror of "enPage.css?v=3.60.1" that was then edited to provide more responsive sizing (e.g removal of fixed widths) and to use ENGrid's theme colors (e.g. Error Red) and preferences (e.g. Border Radius) */
+/* As a changes in this document are made, changes elsewhere (e.g. engrid-fields.scss) will become redundant and can be removed from their respective files.
+/* @TODO Once a first pass of this file is completed, it should be added to the default theme scaffolding */
+/* REF: https://e-activist.com/page/71966/donate/1?ea.tracking.id=20ZPLPEAXX */
+/* Modified CSS can be found be searching with regex for the following, just remove the quotes "^	(?!(\/))" */
+
 .en__field__element--range,
 .en__field__element--rating,
 .en__field__input--checkbox,
 .en__field__input--radio {
-	vertical-align: middle
+	// vertical-align: middle
 }
 
 .en__imageSelectField__control,
 .en__rangeFieldLabels__label--current {
-	text-align: center
+	// text-align: center
 }
 
 .en__button,
 .en__imageSelectField,
 .en__ratingField__image,
 .en__submit button {
-	cursor: pointer
+	// cursor: pointer
 }
 
 .en__errorList {
-	margin: 0;
-	padding: 0
+	// margin: 0;
+	// padding: 0
 }
 
 .en__component {
-	position: relative
+	// position: relative
 }
 
 .en__component--row {
-	display: flex;
-	flex-wrap: wrap;
-	box-sizing: border-box
+	// display: flex;
+	// flex-wrap: wrap;
+	// box-sizing: border-box
 }
 
 .en__component--row.en__component--advrow {
-	display: flex;
-	flex-wrap: nowrap;
-	box-sizing: border-box
+	// display: flex;
+	// flex-wrap: nowrap;
+	// box-sizing: border-box
 }
 
 .en__component--column {
-	position: static;
-	flex: 1 0 auto;
-	box-sizing: border-box;
-	width: 100%;
+	// position: static;
+	// flex: 1 0 auto;
+	// box-sizing: border-box;
+	// width: 100%;
 	min-width: 300px
 }
 
 .en__component--column.en__component--advcolumn {
-	width: auto;
-	min-width: 0;
-	flex: 1 0 0%;
-	flex: 1 0 0
+	// width: auto;
+	// min-width: 0;
+	// flex: 1 0 0%;
+	// flex: 1 0 0 // TODO: Let EN know this is unnecessary and can be removed
 }
 
 .en__component--row--2 .en__component--column {
-	width: 50%
+	// width: 50%
 }
 
 @media only screen and (max-width:600px),
 only screen and (max-device-width:600px) {
 	.en__component--row,
 	.en__component--row.en__component--advrow {
-		display: block
+		// display: block
 	}
 	.en__component--column.en__component--advcolumn,
 	.en__component--row--2 .en__component--column {
-		width: 100%
+		// width: 100%
 	}
 }
 
@@ -79,18 +85,18 @@ only screen and (max-device-width:600px) {
 }
 
 .en__component--hubgadget--inactive {
-	display: none
+	// display: none
 }
 
 .en__component--hubgadget img {
-	display: block;
-	margin: auto
+	// display: block;
+	// margin: auto
 }
 
 .en__component--hubgadget span {
-	font-weight: 700;
-	display: block;
-	text-align: center;
+	// font-weight: 700;
+	// display: block;
+	// text-align: center;
 	margin-top: 12px
 }
 
@@ -104,23 +110,23 @@ only screen and (max-device-width:600px) {
 }
 
 .en__field__label {
-	display: inline-block;
+	// display: inline-block;
 	width: 180px
 }
 
 .en__field__helpText {
-	display: none;
+	// display: none;
 	font-size: .85em
 }
 
 .en__field__helpText,
 .en__field__label {
 	padding: 6px 0;
-	vertical-align: middle
+	// vertical-align: middle
 }
 
 .en__field__label--positionabove+.en__field__helpText {
-	display: block
+	// display: block
 }
 
 .en__field__element--calendar,
@@ -140,7 +146,7 @@ only screen and (max-device-width:600px) {
 .en__field__element--tripleselect,
 .en__field__element--tripletext,
 .en__field__item {
-	display: inline-block
+	// display: inline-block
 }
 
 .en__field__input--calendar,
@@ -157,7 +163,7 @@ only screen and (max-device-width:600px) {
 .en__field__input--tripleselect,
 .en__field__input--tripletext {
 	padding: 6px;
-	box-sizing: border-box
+	// box-sizing: border-box
 }
 
 .en__field__input--calendar,
@@ -196,12 +202,12 @@ only screen and (max-device-width:600px) {
 
 .en__field__element--layoutvertical .en__field__item,
 .en__field__label--positionabove {
-	display: block
+	// display: block
 }
 
 .en__field__label--item {
-	width: auto;
-	padding: 0
+	// width: auto;
+	// padding: 0
 }
 
 .en__field__input--radio {
@@ -211,22 +217,22 @@ only screen and (max-device-width:600px) {
 .en__field--checkbox .en__field__label,
 .en__field--radio .en__field__label,
 .en__field--textarea .en__field__label {
-	vertical-align: top
+	// vertical-align: top
 }
 
 .en__field__element--layoutvertical .en__field__label--item {
-	padding: 0;
-	vertical-align: middle
+	// padding: 0;
+	// vertical-align: middle
 }
 
 .en__field__element--labelsleft .en__field__label--item {
-	float: left;
+	float: left; // @TODO Help EN get away from using floats
 	margin-right: 4px
 }
 
 .en__field__item.en__field__item--hidden,
 .en__hidden {
-	display: none
+	// display: none
 }
 
 .en__field__element--imgselect .en__field__item {
@@ -239,17 +245,17 @@ only screen and (max-device-width:600px) {
 }
 
 .en__rangeFieldLabels {
-	display: flex;
-	justify-content: space-between
+	// display: flex;
+	// justify-content: space-between
 }
 
 .en__rangeFieldLabels__label {
 	width: 30%;
-	overflow-wrap: break-word
+	// overflow-wrap: break-word
 }
 
 .en__rangeFieldLabels__label--max {
-	text-align: right
+	// text-align: right
 }
 
 .en__additional__amount,
@@ -260,47 +266,47 @@ only screen and (max-device-width:600px) {
 .en__ticket__field--quantity,
 .en__ticket__quantity,
 .en__ticket__remaining {
-	text-align: center
+	// text-align: center
 }
 
 .en__field__element--range input[type=range]::-moz-range-thumb {
-	cursor: pointer
+	// cursor: pointer
 }
 
 .en__field__element--range input[type=range]::-webkit-slider-thumb {
-	cursor: pointer
+	// cursor: pointer
 }
 
 .en__field__element--range input[type=range]::-ms-thumb {
-	cursor: pointer
+	// cursor: pointer
 }
 
 .en__ratingField input {
-	display: none
+	// display: none
 }
 
 .en__ratingField--on .en__ratingField__image--on,
 .en__ratingField__image--off {
-	display: block
+	// display: block
 }
 
 .en__ratingField--on .en__ratingField__image--off,
 .en__ratingField__image--on {
-	display: none
+	// display: none
 }
 
 .en__button {
-	display: inline-block;
+	// display: inline-block;
 	background: #F5F5F5;
 	padding: 12px;
 	border: 1px solid #ccc;
-	color: initial;
-	text-decoration: none
+	// color: initial;
+	// text-decoration: none
 }
 
 .en__button--disabled,
 .en__button[disabled] {
-	cursor: default;
+	// cursor: default;
 	opacity: .3
 }
 
@@ -310,9 +316,9 @@ only screen and (max-device-width:600px) {
 
 .en__button.en__button--ajax--done,
 .en__button.en__button--ajax--inprogress {
-	color: transparent;
-	user-select: none;
-	cursor: auto
+	// color: transparent;
+	// user-select: none;
+	// cursor: auto
 }
 
 .en__button--ajax--inprogress {
@@ -326,9 +332,9 @@ only screen and (max-device-width:600px) {
 }
 
 .en__orderSummary {
-	display: table;
-	width: 100%;
-	table-layout: fixed;
+	// display: table;
+	// width: 100%;
+	// table-layout: fixed;
 	padding: 7px
 }
 
@@ -336,48 +342,48 @@ only screen and (max-device-width:600px) {
 .en__orderSummary__headers,
 .en__orderSummary__item,
 .en__orderSummary__total {
-	display: table-row
+	// display: table-row
 }
 
 .en__orderSummary__data,
 .en__orderSummary__header {
-	display: table-cell;
+	// display: table-cell;
 	padding: 7px
 }
 
 .en__orderSummary__data--promo {
-	word-break: break-word
+	// word-break: break-word
 }
 
 .en__ticketBlock {
 	border: 1px solid #D2D2D2;
-	background-color: #F6F6F6
+	// background-color: #F6F6F6
 }
 
 .en__tickets {
-	width: 100%;
-	box-sizing: border-box;
+	// width: 100%;
+	// box-sizing: border-box;
 	padding: 0 14px;
-	display: table;
-	table-layout: fixed
+	// display: table;
+	// table-layout: fixed
 }
 
 .en__additional,
 .en__ticket {
-	display: table-row
+	// display: table-row
 }
 
 .en__ticket--DSBL {
-	display: none
+	// display: none
 }
 
 .en__ticket__field {
 	border-bottom: 1px solid #D2D2D2;
-	vertical-align: top
+	// vertical-align: top
 }
 
 .en__ticket:last-child .en__ticket__field {
-	border: 0
+	// border: 0
 }
 
 .en__additional__amount,
@@ -392,7 +398,7 @@ only screen and (max-device-width:600px) {
 .en__additional__promo,
 .en__ticketSummary__checkout,
 .en__ticket__field {
-	display: table-cell
+	// display: table-cell
 }
 
 .en__ticket__currency,
@@ -401,7 +407,7 @@ only screen and (max-device-width:600px) {
 .en__ticket__price,
 .en__ticket__quantity,
 .en__ticket__selector {
-	display: inline-block
+	// display: inline-block
 }
 
 .en__additional__amount,
@@ -410,7 +416,7 @@ only screen and (max-device-width:600px) {
 .en__ticket__name,
 .en__ticket__price {
 	font-size: 1.5em;
-	font-weight: 700
+	// font-weight: 700
 }
 
 .en__ticket__field--quantity {
@@ -426,10 +432,10 @@ only screen and (max-device-width:600px) {
 	width: 3em;
 	line-height: 2.5em;
 	font-size: 1.5em;
-	vertical-align: middle;
+	// vertical-align: middle;
 	border: 1px solid #D2D2D2;
 	border-radius: 3px;
-	padding: 0
+	// padding: 0
 }
 
 .en__ticket__quantity--invalid {
@@ -440,16 +446,16 @@ only screen and (max-device-width:600px) {
 .en__ticket__plus {
 	height: 2.5em;
 	width: 2.5em;
-	vertical-align: middle;
+	// vertical-align: middle;
 	border: 1px solid #D2D2D2;
-	cursor: pointer;
+	// cursor: pointer;
 	border-radius: 3px;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none
+	// -webkit-touch-callout: none;
+	// -webkit-user-select: none;
+	// -khtml-user-select: none;
+	// -moz-user-select: none;
+	// -ms-user-select: none;
+	// user-select: none
 }
 
 .en__ticket__plus {
@@ -468,7 +474,7 @@ only screen and (max-device-width:600px) {
 	border-radius: 3px;
 	color: #fff;
 	font-size: 1em;
-	display: inline-block
+	// display: inline-block
 }
 
 .en__ticket__soldout {
@@ -477,12 +483,12 @@ only screen and (max-device-width:600px) {
 
 .en__ticket__waitList {
 	background-color: #3E9BD6;
-	cursor: pointer
+	// cursor: pointer
 }
 
 .en__additional__amount,
 .en__additional__label {
-	display: table-cell;
+	// display: table-cell;
 	padding: 10px
 }
 
@@ -490,7 +496,7 @@ only screen and (max-device-width:600px) {
 	padding: .6em 0;
 	width: 4em;
 	margin-right: 12px;
-	text-align: center;
+	// text-align: center;
 	border: 1px solid #D2D2D2;
 	border-radius: 3px
 }
@@ -504,52 +510,52 @@ only screen and (max-device-width:600px) {
 
 .en__ticketSummary {
 	border-top: 1px solid #D2D2D2;
-	text-align: right
+	// text-align: right
 }
 
 .en__ticketSummary__checkout {
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	font-size: 1.5em;
 	background-color: #EE3324;
-	display: inline-block;
+	// display: inline-block;
 	padding: 14px 28px;
-	text-align: center;
-	color: #fff;
-	vertical-align: middle;
-	cursor: pointer;
+	// text-align: center;
+	// color: #fff;
+	// vertical-align: middle;
+	// cursor: pointer;
 	width: 11em;
-	border: 0;
-	font-family: inherit
+	// border: 0;
+	// font-family: inherit
 }
 
 .en__lightbox {
-	display: none;
-	position: fixed;
-	width: 100%;
+	// display: none;
+	// position: fixed;
+	// width: 100%;
 	background: rgba(0, 0, 0, .8);
 	z-index: 99999;
-	height: 100%;
-	top: 0;
-	left: 0
+	// height: 100%;
+	// top: 0;
+	// left: 0
 }
 
 .en__lightbox__box {
-	margin: 0 auto;
-	position: absolute;
+	// margin: 0 auto;
+	// position: absolute;
 	top: 20%;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	// left: 0;
+	// right: 0;
+	// bottom: 0;
 	width: 35em
 }
 
 .en__lightbox__header {
-	background-color: #3E9BD6;
+	// background-color: #3E9BD6;
 	padding: 1em;
-	color: #fff;
+	// color: #fff;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
-	position: relative
+	// position: relative
 }
 
 .en__lightbox__title {
@@ -557,13 +563,13 @@ only screen and (max-device-width:600px) {
 }
 
 .en__lightbox__close {
-	position: absolute;
-	top: 0;
+	// position: absolute;
+	// top: 0;
 	right: 1em;
 	font-size: 1em;
-	vertical-align: ce;
-	bottom: 0;
-	margin: auto;
+	// vertical-align: ce; // @TODO Let EN know of this typo, they want "center" not "ce"
+	// bottom: 0;
+	// margin: auto;
 	height: 2em
 }
 
@@ -572,7 +578,7 @@ only screen and (max-device-width:600px) {
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 	padding: 1.5em;
-	text-align: center
+	// text-align: center
 }
 
 .en__lightbox__action,
@@ -582,18 +588,18 @@ only screen and (max-device-width:600px) {
 }
 
 .en__waitlist {
-	text-align: left;
-	display: inline-block
+	// text-align: left;
+	// display: inline-block
 }
 
 .en__waitlist__text {
 	margin-bottom: 1.5em;
-	text-align: left
+	// text-align: left
 }
 
 .en__waitlist__label {
 	width: 12em;
-	display: inline-block
+	// display: inline-block
 }
 
 .en__waitlist__field {
@@ -609,7 +615,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__waitlist__input--ticketId {
-	display: none
+	// display: none
 }
 
 .en__waitlist__input--quantity {
@@ -617,20 +623,20 @@ only screen and (max-device-width:600px) {
 }
 
 .en__waitlist__actions {
-	text-align: right;
+	// text-align: right;
 	margin-top: 1em
 }
 
 .en__lightbox {
-	text-align: left
+	// text-align: left
 }
 
 .en__lightbox__action {
-	color: #fff;
-	display: inline-block;
+	// color: #fff;
+	// display: inline-block;
 	padding: .2em 1em;
 	border-radius: 3px;
-	cursor: pointer;
+	// cursor: pointer;
 	font-size: 1.5em
 }
 
@@ -640,28 +646,28 @@ only screen and (max-device-width:600px) {
 }
 
 .en__waitlist--thankyou {
-	display: none
+	// display: none
 }
 
 .en__component--eventtickets .en__orderSummary__headers,
 .en__component--eventtickets .en__orderSummary__total {
-	font-weight: 700
+	// font-weight: 700
 }
 
 .en__component--eventtickets .en__orderSummary__data,
 .en__component--eventtickets .en__orderSummary__header {
-	text-align: center
+	// text-align: center
 }
 
 .en__component--eventtickets .en__orderSummary__data--totalLabel,
 .en__component--eventtickets .en__orderSummary__data--type,
 .en__component--eventtickets .en__orderSummary__header--type {
-	text-align: left
+	// text-align: left
 }
 
 .en__contact__actions,
 .en__tweetButton {
-	text-align: right
+	// text-align: right
 }
 
 .en__registrants {
@@ -670,13 +676,13 @@ only screen and (max-device-width:600px) {
 
 .en__registrants__ticketHead {
 	font-size: 1.5em;
-	font-weight: 700;
+	// font-weight: 700;
 	padding-bottom: 14px
 }
 
 .en__registrants__group {
-	display: flex;
-	flex-wrap: wrap
+	// display: flex;
+	// flex-wrap: wrap
 }
 
 .en__registrants__registrant {
@@ -696,7 +702,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__registrants__registrantLabel {
-	display: inline-block;
+	// display: inline-block;
 	min-width: 14em;
 	margin-bottom: 7px;
 	margin-right: 7px
@@ -704,13 +710,13 @@ only screen and (max-device-width:600px) {
 
 .en__registrants__registrantInput {
 	padding: .6em;
-	border: 1px solid #D2D2D2;
+	// border: 1px solid #D2D2D2;
 	border-radius: 3px
 }
 
 .en__shares {
-	display: flex;
-	justify-content: center
+	// display: flex;
+	// justify-content: center
 }
 
 .en__share {
@@ -728,7 +734,7 @@ only screen and (max-device-width:600px) {
 .en__share__button {
 	height: 50px;
 	width: 50px;
-	display: block
+	// display: block
 }
 
 .en__share__button--twitter {
@@ -750,8 +756,8 @@ only screen and (max-device-width:600px) {
 
 .en__socialShare__image,
 .en__socialShares {
-	width: 100%;
-	height: 100%
+	// width: 100%;
+	// height: 100%
 }
 
 .en__share__button--large.en__share__button--twitter {
@@ -759,10 +765,10 @@ only screen and (max-device-width:600px) {
 }
 
 .en__socialShares {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	// flex-wrap: wrap
 }
 
 .en__contact--closed .en__contactSubject,
@@ -777,7 +783,7 @@ only screen and (max-device-width:600px) {
 .en__singleMessage--hideMessage .en__contactMessage,
 .en__singleMessage--hideSubject .en__contactSubject,
 .en__singleMessage--hideSubject.en__singleMessage--hideMessage {
-	display: none
+	// display: none
 }
 
 .en__socialShare {
@@ -791,11 +797,11 @@ only screen and (max-device-width:600px) {
 
 .en__contact {
 	margin-bottom: 10px;
-	position: relative
+	// position: relative
 }
 
 .en__contact:last-child {
-	margin-bottom: 0
+	// margin-bottom: 0
 }
 
 .en__contact__detail {
@@ -804,16 +810,16 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contact__image {
-	flex-grow: 0;
-	flex-shrink: 0;
+	// flex-grow: 0;
+	// flex-shrink: 0;
 	margin-right: 10px;
 	width: 60px;
 	height: 60px
 }
 
 .en__contact__image img {
-	height: 100%;
-	width: 100%
+	// height: 100%;
+	// width: 100%
 }
 
 .en__contact__image.en__brokenImage {
@@ -821,18 +827,18 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contact__main {
-	flex-grow: 1
+	// flex-grow: 1
 }
 
 .en__contact__description p {
-	margin: 0
+	// margin: 0
 }
 
 .en__contact--closed .en__contactMessage,
 .en__contact--closed .en__contactSections {
-	height: 0;
-	overflow: hidden;
-	padding: 0
+	// height: 0;
+	// overflow: hidden;
+	// padding: 0
 }
 
 .en__contactMessage,
@@ -841,22 +847,22 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contactDetails {
-	display: flex;
-	align-items: center
+	// display: flex;
+	// align-items: center
 }
 
 .en__contactDetail {
-	display: inline-block
+	// display: inline-block
 }
 
 .en__contactSubject__field {
-	width: 100%
+	// width: 100%
 }
 
 .en__contactMessage__htmlDisplay iframe,
 .en__contactMessage__plainText {
-	width: 100%;
-	box-sizing: border-box
+	// width: 100%;
+	// box-sizing: border-box
 }
 
 .en__contactMessage__htmlDisplay {
@@ -864,8 +870,8 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contactMessage__plainText {
-	font-family: inherit;
-	font-size: inherit;
+	// font-family: inherit;
+	// font-size: inherit;
 	padding: 6px;
 	height: 200px
 }
@@ -879,18 +885,18 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contactDetails__row--1 {
-	font-weight: 700;
+	// font-weight: 700;
 	font-size: 1.1em
 }
 
 .en__contact__toggle {
-	cursor: pointer;
+	// cursor: pointer;
 	width: 60px;
 	height: 15px;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_open.png) center center no-repeat #fff;
-	margin: 0 auto;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px
+	// margin: 0 auto;
+	// border-bottom-left-radius: 5px;
+	// border-bottom-right-radius: 5px
 }
 
 .en__contact--open .en__contact__toggle {
@@ -900,7 +906,7 @@ only screen and (max-device-width:600px) {
 .en__singleMessage {
 	background: #fff;
 	padding: 0 10px 10px;
-	box-sizing: border-box
+	// box-sizing: border-box
 }
 
 .en__singleMessage .en__contactSubject {
@@ -908,14 +914,14 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contactDetails__background {
-	display: none;
+	// display: none;
 	width: 45px;
 	height: 45px;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_background.png) center center no-repeat #f0f0f0;
-	position: absolute;
-	top: 0;
-	right: 0;
-	cursor: pointer
+	// position: absolute;
+	// top: 0;
+	// right: 0;
+	// cursor: pointer
 }
 
 .en__contact--showBackground .en__contactDetails__background {
@@ -928,21 +934,21 @@ only screen and (max-device-width:600px) {
 
 .en__contact--open .en__contactDetails__background,
 .en__contacts--singleMessageMode .en__contactDetails__background {
-	display: block
+	// display: block
 }
 
 .en__contactBackground {
-	display: none;
+	// display: none;
 	padding: 20px;
 	border-top: 1px solid #f0f0f0;
 	margin-top: 10px;
-	position: relative
+	// position: relative
 }
 
 .en__contact--showBackground .en__contactMessage,
 .en__contact--showBackground .en__contactSection,
 .en__contact--showBackground .en__contactSubject {
-	display: none
+	// display: none
 }
 
 .en__contact--showBackground .en__contactDetails {
@@ -955,7 +961,7 @@ only screen and (max-device-width:600px) {
 
 .en__contact--open.en__contact--showBackground .en__contactBackground,
 .en__contacts--singleMessageMode .en__contact--showBackground .en__contactBackground {
-	display: block
+	// display: block
 }
 
 .en__contactBackground__text {
@@ -963,38 +969,38 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contactBackground__text pre {
-	font-family: inherit;
-	white-space: pre-wrap;
-	margin: 0
+	// font-family: inherit;
+	// white-space: pre-wrap;
+	// margin: 0
 }
 
 .en__contactBackground__cycle {
 	width: 25px;
 	height: 16px;
-	position: absolute;
-	top: 0;
+	// position: absolute;
+	// top: 0;
 	margin-top: -8px;
-	cursor: pointer
+	// cursor: pointer
 }
 
 .en__contactBackground__cycle--next {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_next.png) center right no-repeat #fff;
-	right: 0
+	// right: 0
 }
 
 .en__contactBackground__cycle--prev {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_prev.png) center left no-repeat #fff;
-	left: 0
+	// left: 0
 }
 
 .en__contact:first-child .en__contactBackground__cycle--prev,
 .en__contact:last-child .en__contactBackground__cycle--next,
 .en__contactSection--hidden {
-	display: none
+	// display: none
 }
 
 .en__contactSection__content--editable .en__contactMessage__plainText {
-	height: initial
+	// height: initial
 }
 
 .en__contactSection__content--uneditable,
@@ -1003,33 +1009,33 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contactSection__content--uneditable .en__contactMessage__plainText {
-	background: 0 0;
-	border: none;
-	height: auto;
-	cursor: default;
-	resize: none;
-	outline: 0;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	padding: 0
+	// background: 0 0;
+	// border: none;
+	// height: auto;
+	// cursor: default;
+	// resize: none;
+	// outline: 0;
+	// -webkit-box-shadow: none;
+	// -moz-box-shadow: none;
+	// box-shadow: none;
+	// padding: 0
 }
 
 .en__component--tweetcontactblock {
-	background-color: transparent
+	// background-color: transparent
 }
 
 .en__component--tweetcontactblock .en__contacts {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap
+	// display: flex;
+	// justify-content: space-around;
+	// flex-wrap: wrap
 }
 
 .en__tweetContact {
-	background-color: #f0f0f0;
+	// background-color: #f0f0f0;
 	padding: 10px;
 	width: 400px;
-	position: relative;
+	// position: relative;
 	margin-bottom: 10px
 }
 
@@ -1044,39 +1050,39 @@ only screen and (max-device-width:600px) {
 
 .en__tweetBackgroundText,
 .en__tweetButton {
-	padding-top: 0
+	// padding-top: 0
 }
 
 .en__twitterTarget__select {
-	display: none;
+	// display: none;
 	margin: 0 10px 0 0
 }
 
 .en__contacts--singleTweetMode .en__twitterTarget__select {
-	display: block
+	// display: block
 }
 
 .en__twitterTarget {
-	display: flex;
-	align-items: center
+	// display: flex;
+	// align-items: center
 }
 
 .en__twitterTarget p {
-	margin: 0;
+	// margin: 0;
 	line-height: 1.3em
 }
 
 .en__twitterTarget__image {
 	height: 60px;
 	width: 60px;
-	flex-grow: 0;
+	// flex-grow: 0;
 	margin-right: 10px
 }
 
 .en__twitterTarget__image:before {
-	content: ' ';
-	display: block;
-	position: absolute;
+	// content: ' ';
+	// display: block;
+	// position: absolute;
 	height: 60px;
 	width: 60px;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_twitter_fallback.png) center center no-repeat #f0f0f0
@@ -1084,67 +1090,67 @@ only screen and (max-device-width:600px) {
 
 .en__tweet textarea {
 	border: 1px solid #ccc;
-	font-family: inherit;
-	font-size: inherit;
+	// font-family: inherit;
+	// font-size: inherit;
 	padding: 10px;
 	width: 100%;
 	height: 100px;
-	box-sizing: border-box;
-	resize: none
+	// box-sizing: border-box;
+	// resize: none
 }
 
 .en__tweetButton a {
-	text-decoration: none;
-	font-weight: 700;
+	// text-decoration: none;
+	// font-weight: 700;
 	font-size: 1.5em;
-	color: #fff;
+	// color: #fff;
 	padding: 5px 10px;
-	display: block
+	// display: block
 }
 
 .en__tweetButton__send,
 .en__tweetButton__sent {
 	background-color: #CC0001;
-	border: 0;
+	// border: 0;
 	border-radius: 5px;
-	padding: 0;
-	text-align: center;
-	display: inline-block
+	// padding: 0;
+	// text-align: center;
+	// display: inline-block
 }
 
 .en__tweetButton__send {
-	cursor: pointer
+	// cursor: pointer
 }
 
 .en__tweetButton__sent {
-	display: none;
+	// display: none;
 	background-color: #3C3
 }
 
 .en__tweetButton--sent .en__tweetButton__sent {
-	display: inline-block
+	// display: inline-block
 }
 
 .en__tweetBackgroundText,
 .en__tweetButton--sent .en__tweetButton__send {
-	display: none
+	// display: none
 }
 
 .en__tweetContact .en__tweetBackgroundToggle {
 	width: 45px;
 	height: 45px;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_background.png) center center no-repeat #f0f0f0;
-	position: absolute;
-	top: 0;
-	right: 0;
-	cursor: pointer;
+	// position: absolute;
+	// top: 0;
+	// right: 0;
+	// cursor: pointer;
 	margin: 10px 10px 0 0
 }
 
 .en__tweetBackgroundText pre {
-	font-family: inherit;
-	white-space: pre-wrap;
-	margin: 0;
+	// font-family: inherit;
+	// white-space: pre-wrap;
+	// margin: 0;
 	padding-top: 10px;
 	border-top: 1px solid #f0f0f0
 }
@@ -1154,7 +1160,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__tweetContact--showBackground .en__tweetBackgroundText {
-	display: block
+	// display: block
 }
 
 .en__component.en__component--ecardblock {
@@ -1162,7 +1168,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__component.en__component--ecardblock.ui-draggable {
-	max-width: initial
+	// max-width: initial
 }
 
 .en__component--ecardblock h2 {
@@ -1170,15 +1176,15 @@ only screen and (max-device-width:600px) {
 }
 
 .en__ecarditems__list {
-	font-size: 0
+	// font-size: 0
 }
 
 .en__ecarditems__thumb {
-	display: inline-block;
+	// display: inline-block;
 	margin: 0 20px 20px 0;
 	width: 200px;
 	height: 200px;
-	cursor: pointer
+	// cursor: pointer
 }
 
 .en__ecarditems__thumb img {
@@ -1186,7 +1192,7 @@ only screen and (max-device-width:600px) {
 	opacity: .5;
 	width: 200px;
 	height: 200px;
-	margin: 0
+	// margin: 0
 }
 
 .en__ecarditems__thumb.thumb--active img {
@@ -1203,60 +1209,60 @@ only screen and (max-device-width:600px) {
 }
 
 .en__ecarditems__action {
-	text-align: center
+	// text-align: center
 }
 
 .en__ecarditems__button {
-	cursor: pointer;
+	// cursor: pointer;
 	font-size: 16px;
 	color: #fff;
 	background: #ff4351;
 	padding: 5px 10px;
-	margin: 0;
-	border: 0;
+	// margin: 0;
+	// border: 0;
 	border-radius: 4px
 }
 
 .en__ecarditems__addrecipient {
-	display: inline-block;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	font-weight: 700;
+	// display: inline-block;
+	// position: absolute;
+	// right: 0;
+	// bottom: 0;
+	// font-weight: 700;
 	width: 32px;
 	height: 32px;
-	font-size: 20px!important;
-	padding: 0!important;
-	font-family: arial!important
+	// font-size: 20px!important;
+	// padding: 0!important;
+	// font-family: arial!important
 }
 
 .en__ecarditems__button::-moz-focus-inner {
-	padding: 0!important;
-	border: 0!important
+	// padding: 0!important;
+	// border: 0!important
 }
 
 .en__ecardmessage__default {
-	width: 100%;
+	// width: 100%;
 	min-height: 200px;
 	border: 1px solid #bbb;
 	padding: 10px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box
+	// -webkit-box-sizing: border-box;
+	// -moz-box-sizing: border-box;
+	// box-sizing: border-box
 }
 
 .en__ecardrecipients__detail {
-	display: -webkit-box;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between
+	// display: -webkit-box;
+	// display: flex;
+	// flex-wrap: wrap;
+	// justify-content: space-between
 }
 
 .en__ecardrecipients__email,
 .en__ecardrecipients__name {
-	flex: initial;
+	// flex: initial;
 	width: 50%;
-	position: relative
+	// position: relative
 }
 
 .en__ecardrecipients__email label,
@@ -1289,56 +1295,56 @@ only screen and (max-device-width:600px) {
 }
 
 .en__ecardrecipients__futureDelivery label {
-	display: block
+	// display: block
 }
 
 .en__ecardrecipients__recipient {
-	display: flex;
-	flex-wrap: wrap;
-	box-sizing: border-box;
+	// display: flex;
+	// flex-wrap: wrap;
+	// box-sizing: border-box;
 	padding: 5px 0
 }
 
 .en__ecardrecipients__recipient .ecardrecipient__email,
 .en__ecardrecipients__recipient .ecardrecipient__name {
-	display: inline;
-	border: none;
-	padding: 0;
+	// display: inline;
+	// border: none;
+	// padding: 0;
 	width: 47.5%
 }
 
 .en__ecardrecipients__recipient .ecardrecipient__remove {
-	display: inline;
+	// display: inline;
 	width: 5%;
-	text-align: right;
-	padding: 0
+	// text-align: right;
+	// padding: 0
 }
 
 .en__ecardrecipients__recipient .ecardrecipient__remove button {
-	border: none;
-	background: 0 0;
-	padding: 0;
-	cursor: pointer;
-	font-weight: 700
+	// border: none;
+	// background: 0 0;
+	// padding: 0;
+	// cursor: pointer;
+	// font-weight: 700
 }
 
 .en__ecarditems__preview {
-	display: none;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	font-size: initial;
+	// display: none;
+	// position: fixed;
+	// width: 100%;
+	// height: 100%;
+	// top: 0;
+	// left: 0;
+	// font-size: initial;
 	z-index: 999
 }
 
 .en__ecarditems__prevbg {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
+	// position: absolute;
+	// width: 100%;
+	// height: 100%;
+	// top: 0;
+	// left: 0;
 	background: rgba(0, 0, 0, .5)
 }
 
@@ -1347,44 +1353,44 @@ only screen and (max-device-width:600px) {
 	top: 50%;
 	width: 600px;
 	height: 800px;
-	position: absolute;
+	// position: absolute;
 	z-index: 9
 }
 
 .en__ecarditems__preview.preview--show {
-	display: block
+	// display: block
 }
 
 .en__ecarditems__preview.overflow--height .en__ecarditems__prevwrap {
-	height: 100%!important;
-	top: 0!important;
-	margin-top: 0!important
+	// height: 100%!important;
+	// top: 0!important;
+	// margin-top: 0!important
 }
 
 .en__ecarditems__preview.overflow--width .en__ecarditems__prevwrap {
-	width: 100%!important;
-	left: 0!important;
-	margin-left: 0!important
+	// width: 100%!important;
+	// left: 0!important;
+	// margin-left: 0!important
 }
 
 .en__ecarditems__prevwrap iframe {
-	width: 100%;
-	height: 100%;
+	// width: 100%;
+	// height: 100%;
 	background: #fff
 }
 
 .en__ecarditems__prevclose {
-	border: none;
-	background: 0 0;
-	padding: 0;
-	position: absolute;
+	// border: none;
+	// background: 0 0;
+	// padding: 0;
+	// position: absolute;
 	z-index: 9999;
-	top: 0;
-	right: 0;
+	// top: 0;
+	// right: 0;
 	line-height: 25px;
 	width: 25px;
-	cursor: pointer;
-	text-align: center;
+	// cursor: pointer;
+	// text-align: center;
 	font: Arial, sans-serif;
 	color: #000
 }
@@ -1392,8 +1398,8 @@ only screen and (max-device-width:600px) {
 .en__hubOverlay,
 .en__overlay {
 	z-index: 2147483647;
-	left: 0;
-	bottom: 0
+	// left: 0;
+	// bottom: 0
 }
 
 .ecard__mandatory__error {
@@ -1401,38 +1407,38 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubOverlay {
-	position: fixed;
-	top: 0;
-	right: 0;
+	// position: fixed;
+	// top: 0;
+	// right: 0;
 	background: rgba(0, 0, 0, .25);
-	overflow-y: auto;
+	// overflow-y: auto;
 	padding: 24px
 }
 
 .en__hubOverlay--closed {
-	display: none
+	// display: none
 }
 
 .en__hubOverlay__popup {
-	position: relative;
-	margin: auto;
+	// position: relative;
+	// margin: auto;
 	border-radius: 6px;
 	box-shadow: 0 0 6px 3px rgba(0, 0, 0, .2)
 }
 
 .en__hubOverlay__loading {
-	display: none;
+	// display: none;
 	opacity: .8;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	// position: absolute;
+	// top: 0;
+	// bottom: 0;
+	// left: 0;
+	// right: 0;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_loading.gif) center center no-repeat #fff
 }
 
 .en__hubOverlay__loading--active {
-	display: block
+	// display: block
 }
 
 .en__hubOverlay--supporterdetails .en__hubOverlay__popup,
@@ -1465,26 +1471,26 @@ only screen and (max-device-width:600px) {
 	background: #f5f5f5;
 	border-bottom: solid 1px #ccc;
 	border-radius: 6px 6px 0 0;
-	position: relative;
+	// position: relative;
 	min-height: 32px
 }
 
 .en__hubOverlay__header h2 {
-	margin: 0;
+	// margin: 0;
 	padding: 9px 32px 6px 24px;
 	font-size: 14px;
 	color: #333
 }
 
 .en__hubOverlay__header a {
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
+	// display: block;
+	// position: absolute;
+	// top: 0;
+	// right: 0;
+	// bottom: 0;
 	width: 32px;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_huboverlay_close.png) center center no-repeat;
-	overflow: hidden;
+	// overflow: hidden;
 	text-indent: -999px
 }
 
@@ -1496,10 +1502,10 @@ only screen and (max-device-width:600px) {
 
 .en__supporterHubLogin {
 	width: 420px;
-	margin: auto;
+	// margin: auto;
 	border: 1px solid #ccc;
 	border-radius: 6px;
-	overflow: hidden
+	// overflow: hidden
 }
 
 .en__supporterHubLogin__header {
@@ -1514,25 +1520,25 @@ only screen and (max-device-width:600px) {
 }
 
 .en__supporterHubLogin__emailAddress {
-	display: flex;
-	justify-content: space-between
+	// display: flex;
+	// justify-content: space-between
 }
 
 .en__supporterHubLogin__body .en__field__label {
 	margin-right: 10px;
-	flex-grow: 1;
-	width: initial
+	// flex-grow: 1;
+	// width: initial
 }
 
 .en__supporterHubLogin__body .en__field__input--email,
 .en__supporterHubLogin__body .en__field__input--number,
 .en__supporterHubLogin__body .en__field__input--telephone,
 .en__supporterHubLogin__body .en__field__input--text {
-	flex-grow: 1
+	// flex-grow: 1
 }
 
 .en__hubgadget__response {
-	display: none;
+	// display: none;
 	margin: 10px 0;
 	padding: 0 10px
 }
@@ -1547,38 +1553,38 @@ only screen and (max-device-width:600px) {
 
 .en__hubgadget__response--warn {
 	border: 1px dashed #fcac00;
-	display: block
+	// display: block
 }
 
 .en__hubgadget__response--active {
-	display: block
+	// display: block
 }
 
 .en__hubPledge__currency {
-	display: inline-block
+	// display: inline-block
 }
 
 .en__myImpact__hubCopies {
-	margin: 0
+	// margin: 0
 }
 
 .en__myImpact__hubCopy {
 	background: #f5f5f5;
 	padding: 0 12px;
 	margin-top: 6px;
-	cursor: pointer
+	// cursor: pointer
 }
 
 .en__myImpact__hubCopyEmpty {
 	background: #f5f5f5;
 	margin-top: 6px;
-	display: block;
+	// display: block;
 	border-radius: 3px;
 	padding: 12px
 }
 
 .en__myImpact__hubCopy span {
-	display: block;
+	// display: block;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_search.png) right center no-repeat;
 	border-radius: 3px;
 	padding: 12px 0
@@ -1587,8 +1593,8 @@ only screen and (max-device-width:600px) {
 .en__hubCopy__action {
 	background: #3e9bd6;
 	color: #fff;
-	display: inline-block;
-	float: right;
+	// display: inline-block;
+	float: right; // @TODO Help EN get away from using floats
 	padding: 8px 12px;
 	border-radius: 5px;
 	font-size: 20px;
@@ -1596,7 +1602,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubCopy__content {
-	clear: both
+	// clear: both
 }
 
 .en__hubOverlay__impact .en__hubOverlay__header h2 {
@@ -1610,12 +1616,12 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubOverlay__impact .en__hubOverlay__content.hubdetail>div {
-	background: 0 0;
-	padding: 0
+	// background: 0 0;
+	// padding: 0
 }
 
 .en__hubOverlay__impact .en__myImpact__header iframe {
-	border: none
+	// border: none
 }
 
 .en__p2phub__sites {
@@ -1631,8 +1637,8 @@ only screen and (max-device-width:600px) {
 
 .en__p2phub__site a {
 	color: #000!important;
-	text-decoration: none!important;
-	display: block;
+	// text-decoration: none!important;
+	// display: block;
 	border-radius: 3px;
 	padding: 12px 0
 }
@@ -1642,7 +1648,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubPledge__state {
-	display: flex
+	// display: flex
 }
 
 .en__hubPledge__icon {
@@ -1651,39 +1657,39 @@ only screen and (max-device-width:600px) {
 
 @media (max-width:768px) {
 	.en__hubOverlay__impact .en__hubOverlay__content>div {
-		background: 0 0;
-		padding: 0
+		// background: 0 0;
+		// padding: 0
 	}
 	.en__hubPledge__icon {
-		display: none
+		// display: none
 	}
 }
 
 .en__hubPledge__columns {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap
+	// display: flex;
+	// justify-content: space-between;
+	// flex-wrap: wrap
 }
 
 .en__hubPledge__panels {
-	flex-grow: 1
+	// flex-grow: 1
 }
 
 .en__hubPledge__buttons {
-	display: flex;
-	justify-content: space-between
+	// display: flex;
+	// justify-content: space-between
 }
 
 .en__hubPledge__buttons .en__submit:only-child {
-	margin-left: auto
+	// margin-left: auto
 }
 
 .en__component--copyblock--copyFailure {
-	display: none
+	// display: none
 }
 
 .en__hubPledge__state--failed .en__component--copyblock--copyFailure {
-	display: block
+	// display: block
 }
 
 .en__hubPledge__validationFail .en__field__element {
@@ -1696,12 +1702,12 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubUpdateCC__number {
-	display: flex;
-	align-items: top
+	// display: flex;
+	// align-items: top
 }
 
 .en__hubUpdateCC__toggle {
-	cursor: pointer;
+	// cursor: pointer;
 	width: 24px;
 	margin-bottom: 18px;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_edit.png) center center no-repeat;
@@ -1709,33 +1715,33 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubUpdateCC {
-	display: none
+	// display: none
 }
 
 .en__hubPledge__state--ccEnabled .en__hubUpdateCC {
-	display: block
+	// display: block
 }
 
 .en__hubUpdateCC--enabled .en__hubUpdateCC__toggle {
-	opacity: .5;
-	cursor: initial
+	// opacity: .5;
+	// cursor: initial
 }
 
 .en__hubUpdateCC__additional {
-	-webkit-transition: max-height 1s;
-	transition: max-height 1s;
-	max-height: 0;
-	overflow: hidden
+	// -webkit-transition: max-height 1s;
+	// transition: max-height 1s;
+	// max-height: 0;
+	// overflow: hidden
 }
 
 .en__hubMembership__viewMemberships {
-	display: inline-block
+	// display: inline-block
 }
 
 .en__hubMembership__viewMemberships p {
 	color: #999;
-	text-align: center;
-	margin: 0;
+	// text-align: center;
+	// margin: 0;
 	font-size: .8em
 }
 
@@ -1745,21 +1751,21 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubMembership__membership__summary {
-	display: flex;
-	overflow: hidden;
+	// display: flex;
+	// overflow: hidden;
 	max-height: 100px;
-	transition: max-height .1s ease-in-out
+	// transition: max-height .1s ease-in-out
 }
 
 .en__hubMembership__membership__full {
-	max-height: 0;
-	transition: max-height, .2s ease-in-out;
-	overflow: hidden;
+	// max-height: 0;
+	// transition: max-height, .2s ease-in-out;
+	// overflow: hidden;
 	padding: 0 12px
 }
 
 .en__hubMembership__membership__summary__name {
-	flex-grow: 1;
+	// flex-grow: 1;
 	padding: 9px 12px
 }
 
@@ -1774,7 +1780,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubMembership__membership__summary__edit {
-	padding: 0;
+	// padding: 0;
 	width: 48px
 }
 
@@ -1787,31 +1793,31 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubMembership__membership__details {
-	display: flex;
-	box-sizing: border-box;
+	// display: flex;
+	// box-sizing: border-box;
 	padding: 12px 0;
 	margin: 0 -6px;
-	flex-wrap: wrap
+	// flex-wrap: wrap
 }
 
 .en__hubMembership__membership__details>div {
-	flex: 1 0 50%;
+	// flex: 1 0 50%;
 	min-width: 300px
 }
 
 .en__hubMembership__membership__detail {
-	display: flex;
-	flex-wrap: wrap
+	// display: flex;
+	// flex-wrap: wrap
 }
 
 .en__hubMembership__membership__detail__label {
-	font-weight: 700;
+	// font-weight: 700;
 	width: 180px;
 	padding: 6px
 }
 
 .en__hubMembership__membership__detail__value {
-	flex-grow: 1;
+	// flex-grow: 1;
 	padding: 6px
 }
 
@@ -1820,26 +1826,26 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubMemCardUpdate__page--success {
-	display: none
+	// display: none
 }
 
 .en__hubMemCardUpdate--success .en__hubMemCardUpdate__page--success {
-	display: block
+	// display: block
 }
 
 .en__hubMemCardUpdate--success .en__hubMemCardUpdate__page--initial {
-	display: none
+	// display: none
 }
 
 .en__hubMemCardUpdate__actions {
-	display: flex;
-	justify-content: space-between
+	// display: flex;
+	// justify-content: space-between
 }
 
 .en__hubMemCardUpdate__forms {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between
+	// display: flex;
+	// flex-wrap: wrap;
+	// justify-content: space-between
 }
 
 .en__hubMemCardUpdate__form--left {
@@ -1848,56 +1854,56 @@ only screen and (max-device-width:600px) {
 
 .en__hubMembership__card {
 	background: #f5f5f5;
-	display: inline-block;
+	// display: inline-block;
 	padding: 12px;
-	position: relative;
+	// position: relative;
 	width: 320px;
 	font-size: .85em
 }
 
 .en__hubMembership__card dl {
-	padding: 0;
-	margin: 0;
-	display: flex;
-	flex-wrap: wrap
+	// padding: 0;
+	// margin: 0;
+	// display: flex;
+	// flex-wrap: wrap
 }
 
 .en__hubMembership__card dt {
-	flex: 1 0 50%;
-	box-sizing: border-box;
+	// flex: 1 0 50%;
+	// box-sizing: border-box;
 	padding: 6px 12px;
-	margin: 0;
-	font-weight: 700
+	// margin: 0;
+	// font-weight: 700
 }
 
 .en__hubMembership__card dd {
-	flex: 1 0 50%;
-	box-sizing: border-box;
+	// flex: 1 0 50%;
+	// box-sizing: border-box;
 	padding: 6px 12px;
-	margin: 0
+	// margin: 0
 }
 
 .en__hubMembership__card__update {
 	width: 24px;
 	height: 24px;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_edit.png) center center no-repeat;
-	cursor: pointer;
-	text-indent: -99999px;
-	position: absolute;
+	// cursor: pointer;
+	// text-indent: -99999px;
+	// position: absolute;
 	top: 12px;
 	right: 12px
 }
 
 .en__hubMembershipRenew__actions {
-	text-align: right
+	// text-align: right
 }
 
 .en__hubMembershipHistory table {
-	width: 100%
+	// width: 100%
 }
 
 .en__hubMembershipHistory th {
-	text-align: left
+	// text-align: left
 }
 
 .en__hubTxnGiving__header {
@@ -1905,9 +1911,9 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubTxnGiving__transactions__list ol {
-	list-style: none;
-	padding: 0;
-	margin: 0
+	// list-style: none;
+	// padding: 0;
+	// margin: 0
 }
 
 .en__hubTxnGiving__transactions__list li {
@@ -1918,23 +1924,23 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubTxnGiving__transactions__header {
-	display: table;
-	width: 100%
+	// display: table;
+	// width: 100%
 }
 
 .en__hubTxnGiving__transactions__date {
-	display: table-cell;
+	// display: table-cell;
 	width: 33%;
 	padding-right: 12px
 }
 
 .en__hubTxnGiving__transactions__total {
-	display: table-cell;
-	text-align: right
+	// display: table-cell;
+	// text-align: right
 }
 
 .en__component--premiumgiftblock {
-	display: none;
+	// display: none;
 	border: 1px solid #ccc;
 	border-radius: 6px;
 	margin-bottom: 12px
@@ -1944,7 +1950,7 @@ only screen and (max-device-width:600px) {
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 	background-color: #f5f5f5;
-	overflow: hidden;
+	// overflow: hidden;
 	padding: 12px 18px
 }
 
@@ -1955,20 +1961,20 @@ only screen and (max-device-width:600px) {
 }
 
 .en__pg:last-child {
-	border-bottom: 0
+	// border-bottom: 0
 }
 
 .en__pg__select input {
-	cursor: pointer;
-	margin: 0
+	// cursor: pointer;
+	// margin: 0
 }
 
 .en__pg__image {
-	display: none
+	// display: none
 }
 
 .en__pg__image--selected {
-	display: block
+	// display: block
 }
 
 .en__pg--selected .en__pg__image--selected {
@@ -1976,20 +1982,20 @@ only screen and (max-device-width:600px) {
 }
 
 .en__pg__imageSelector {
-	text-align: center;
+	// text-align: center;
 	margin-top: 6px
 }
 
 .en__pg__imageSelector input,
 .en__pg__imageSelector--hidden {
-	display: none
+	// display: none
 }
 
 .en__pg__imageSelector label {
 	width: 12px;
-	height: 12px;
-	display: inline-block;
-	cursor: pointer
+	weight: 12px; // @TODO Let EN know that they want "font-weight" not "weight"
+	// display: inline-block;
+	// cursor: pointer
 }
 
 .en__pg__imageSelector input:checked+.en__pg__imageRadio {
@@ -1998,29 +2004,29 @@ only screen and (max-device-width:600px) {
 }
 
 .en__pg__imageRadio {
-	display: inline-block;
+	// display: inline-block;
 	height: 6px;
 	width: 6px;
 	border-radius: 6px;
 	border: 1px solid #9E9E9E;
-	cursor: pointer
+	// cursor: pointer
 }
 
 .en__pg__body {
-	display: flex;
-	flex-wrap: wrap;
+	// display: flex;
+	// flex-wrap: wrap;
 	padding: 12px
 }
 
 .en__memselector,
 .en__memtypelist,
 .en__memtypeselect__descriptions {
-	padding: 0;
-	list-style-type: none
+	// padding: 0;
+	// list-style-type: none
 }
 
 .en__pg__optionTypes {
-	display: flex
+	// display: flex
 }
 
 .en__pg__optionType {
@@ -2037,86 +2043,86 @@ only screen and (max-device-width:600px) {
 }
 
 .en__memtypeselect .en__memactions {
-	justify-content: space-between
+	// justify-content: space-between
 }
 
 .en__memselector {
-	display: flex;
-	flex-wrap: wrap
+	// display: flex;
+	// flex-wrap: wrap
 }
 
 .en__memselector__item {
 	border: 1px solid #ccc;
 	margin: 6px;
-	display: flex;
-	align-items: center
+	// display: flex;
+	// align-items: center
 }
 
 .en__memselector__label,
 .en__memselector__radio {
-	display: block;
-	cursor: pointer
+	// display: block;
+	// cursor: pointer
 }
 
 .en__memselector__radio {
 	margin: 0 0 0 12px;
-	outline: 0
+	// outline: 0
 }
 
 .en__memselector__label {
 	padding: 12px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none
+	// -webkit-user-select: none;
+	// -moz-user-select: none;
+	// -ms-user-select: none;
+	// user-select: none
 }
 
 .en__memtypeselect__description {
-	display: none
+	// display: none
 }
 
 .en__memtypeselect__description--active {
-	display: block
+	// display: block
 }
 
 .en__memtype {
-	display: flex;
-	flex-wrap: wrap
+	// display: flex;
+	// flex-wrap: wrap
 }
 
 .en__memimage {
 	max-width: 300px;
-	flex-grow: 0;
-	flex-shrink: 0;
-	font-size: 0;
+	// flex-grow: 0;
+	// flex-shrink: 0;
+	// font-size: 0;
 	padding: 12px
 }
 
 .en__memimage img {
-	max-width: 100%;
-	max-height: 100%;
-	display: block;
-	margin: auto
+	// max-width: 100%;
+	// max-height: 100%;
+	// display: block;
+	// margin: auto
 }
 
 .en__memtype__details {
-	flex-grow: 1;
-	flex-shrink: 0;
-	flex-basis: 0;
+	// flex-grow: 1;
+	// flex-shrink: 0;
+	// flex-basis: 0;
 	padding: 12px;
 	min-width: 350px
 }
 
 .en__memactions {
-	display: flex
+	// display: flex
 }
 
 .en__memaction {
-	margin: 6px
+	// margin: 6px
 }
 
 .en__component--memordersummary .en__orderSummary__item--total .en__orderSummary__data:first-child {
-	text-align: right
+	// text-align: right
 }
 
 .en__hubOverlay--memtyperenew .en__hubOverlay__popup {
@@ -2124,90 +2130,90 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubOverlay--memtyperenew .en__field__element {
-	display: block
+	// display: block
 }
 
 .en__hubOverlay--memtyperenew .en__field__input {
-	width: 100%
+	// width: 100%
 }
 
 .en__memtyperenew__message {
-	border-style: dashed;
+	// border-style: dashed;
 	border-width: 1px;
 	padding: 0 10px;
-	display: none
+	// display: none
 }
 
 .en__memtyperenew__actions {
-	display: flex;
-	justify-content: center
+	// display: flex;
+	// justify-content: center
 }
 
 .en__memtyperenew__or {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/dot.jpg) center center repeat-x;
-	text-align: center
+	// text-align: center
 }
 
 .en__memtyperenew__orText {
 	background-color: #fff;
-	display: inline-block;
+	// display: inline-block;
 	padding: 10px
 }
 
 .en__memtyperenew__page:not(.en__memtyperenew__page--active) {
-	display: none
+	// display: none
 }
 
 .en__members {
-	list-style-type: none;
-	padding: 0
+	// list-style-type: none;
+	// padding: 0
 }
 
 .en__member {
 	border: 1px solid #ccc;
-	padding: 0;
+	// padding: 0;
 	margin-bottom: 10px;
 	background-color: #fff;
-	position: relative
+	// position: relative
 }
 
 .en__member__row {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	// display: flex;
+	// justify-content: space-between;
+	// align-items: center;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_background.png) left 10px center no-repeat;
 	padding: 0 20px 0 52px;
 	min-height: 52px
 }
 
 .en__member__toggle {
-	display: none;
+	// display: none;
 	width: 16px;
 	height: 16px;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_close.png) center center no-repeat
 }
 
 .en__member__openButton {
-	display: none;
-	position: absolute;
-	margin: auto;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
+	// display: none;
+	// position: absolute;
+	// margin: auto;
+	// top: 0;
+	// left: 0;
+	// bottom: 0;
+	// right: 0;
 	background-color: #fff;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	height: 3em;
 	padding: 0 10px;
-	cursor: pointer;
+	// cursor: pointer;
 	width: 160px
 }
 
 .en__member--closed .en__member__openButton,
 .en__member--closed .en__member__toggle,
 .en__member--open .en__member__toggle {
-	display: block
+	// display: block
 }
 
 .en__member--validationFailed .en__member__openButton {
@@ -2219,16 +2225,16 @@ only screen and (max-device-width:600px) {
 }
 
 .en__member--open .en__member__row {
-	cursor: pointer
+	// cursor: pointer
 }
 
 .en__member--closed {
-	border: 0
+	// border: 0
 }
 
 .en__member--closed .en__member__details,
 .en__overlay {
-	display: none
+	// display: none
 }
 
 .en__member--closed .en__member__row {
@@ -2241,17 +2247,17 @@ only screen and (max-device-width:600px) {
 }
 
 .en__overlay {
-	position: fixed;
-	top: 0;
-	right: 0;
+	// position: fixed;
+	// top: 0;
+	// right: 0;
 	background: rgba(0, 0, 0, .25);
-	overflow-y: auto;
+	// overflow-y: auto;
 	padding: 24px
 }
 
 .en__overlay__popup {
-	position: relative;
-	margin: auto;
+	// position: relative;
+	// margin: auto;
 	border-radius: 6px;
 	box-shadow: 0 0 6px 3px rgba(0, 0, 0, .2);
 	max-width: 800px
@@ -2259,11 +2265,11 @@ only screen and (max-device-width:600px) {
 
 .en__overlay__loading {
 	opacity: .8;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	// position: absolute;
+	// top: 0;
+	// bottom: 0;
+	// left: 0;
+	// right: 0;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_loading.gif) center center no-repeat #fff;
 	border-radius: 6px
 }
@@ -2282,59 +2288,59 @@ only screen and (max-device-width:600px) {
 
 .en__overlay__message--warn {
 	border: 1px dashed #fcac00;
-	display: block
+	// display: block
 }
 
 .en__overlay__header {
 	background: #f5f5f5;
 	border-bottom: solid 1px #ccc;
 	border-radius: 6px 6px 0 0;
-	position: relative;
+	// position: relative;
 	min-height: 32px
 }
 
 .en__overlay__header h2 {
-	margin: 0;
+	// margin: 0;
 	padding: 9px 32px 6px 24px;
 	font-size: 14px;
 	color: #333
 }
 
 .en__overlay__header a {
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
+	// display: block;
+	// position: absolute;
+	// top: 0;
+	// right: 0;
+	// bottom: 0;
 	width: 32px;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_huboverlay_close.png) center center no-repeat;
-	overflow: hidden;
+	// overflow: hidden;
 	text-indent: -999px
 }
 
 .en__overlay__content {
 	background: #fff;
 	border-radius: 0 0 6px 6px;
-	overflow: hidden
+	// overflow: hidden
 }
 
 .en__component--callcontactblock .en__contacts {
-	background-color: #f0f0f0;
+	// background-color: #f0f0f0;
 	padding: 10px
 }
 
 .en__component--callcontactblock .en__component--callcontactblock__officehours,
 .en__component--callcontactblock .en__contacts {
-	display: none
+	// display: none
 }
 
 .en__component--callcontactblock.en__component--callcontactblock--inofficehours .en__contacts,
 .en__component--callcontactblock.en__component--callcontactblock--outofoffice .en__component--callcontactblock__officehours {
-	display: block
+	// display: block
 }
 
 .en__component--callcontactblock .en__contact__detail {
-	display: flex
+	// display: flex
 }
 
 .en__component--callcontactblock .en__contact__description {
@@ -2342,13 +2348,13 @@ only screen and (max-device-width:600px) {
 }
 
 .en__c2c__step {
-	display: none;
+	// display: none;
 	margin: 24px
 }
 
 .en__c2c__actions {
-	display: flex;
-	justify-content: space-between;
+	// display: flex;
+	// justify-content: space-between;
 	margin-top: 24px
 }
 
@@ -2358,12 +2364,12 @@ only screen and (max-device-width:600px) {
 
 .en__c2c__survey__form .en__status--error,
 .en__c2c__survey__thankyou {
-	display: none
+	// display: none
 }
 
 .en__c2c__survey__rate {
-	display: flex;
-	justify-content: space-between;
+	// display: flex;
+	// justify-content: space-between;
 	max-width: 300px;
 	margin: 12px 0
 }
@@ -2377,51 +2383,51 @@ only screen and (max-device-width:600px) {
 }
 
 .en__component--svblock .en__field__label--positionabove {
-	width: auto
+	// width: auto
 }
 
 .en__component--svblock--displayInOrder .en__field--survey {
-	display: none
+	// display: none
 }
 
 .en__component--svblock--displayInOrder .en__field--survey--surveyActive,
 .en__component--svblock--displayInOrder .en__field--survey--surveyDone,
 .en__component--svblock--displayInOrder .en__field--survey.en__field--validationFailed,
 .en__component--svblock--displayInOrder .en__field--survey:first-child {
-	display: block
+	// display: block
 }
 
 .en__component--svblock--numbered {
-	counter-reset: surveyFieldNumbering
+	// counter-reset: surveyFieldNumbering
 }
 
 .en__component--svblock--numbered .en__field>.en__field__label:before {
-	counter-increment: surveyFieldNumbering;
-	content: counter(surveyFieldNumbering) '. '
+	// counter-increment: surveyFieldNumbering;
+	// content: counter(surveyFieldNumbering) '. '
 }
 
 .en__stripeButtons__preview {
 	max-width: 750px;
-	display: block;
-	background: #32325d;
+	// display: block;
+	// background: #32325d;
 	border-radius: 5px;
-	text-align: center;
-	position: relative
+	// text-align: center;
+	// position: relative
 }
 
 .en__stripeButtons__preview .en__stripeButtons__previewWrap {
-	display: inline-block;
+	// display: inline-block;
 	height: 22px;
-	position: relative;
+	// position: relative;
 	top: 50%
 }
 
 .en__stripeButtons__preview .en__stripeButtons__previewText {
-	display: inline;
+	// display: inline;
 	color: #fff;
-	vertical-align: top;
+	// vertical-align: top;
 	font: 500 16px/21px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
-	position: relative;
+	// position: relative;
 	top: -11px
 }
 
@@ -2434,9 +2440,9 @@ only screen and (max-device-width:600px) {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/gateways/buttons/stripe-icon.png) 0 center no-repeat;
 	width: 22px;
 	height: 22px;
-	display: inline-block;
+	// display: inline-block;
 	margin: 0 0 0 5px;
-	position: relative;
+	// position: relative;
 	top: -11px
 }
 
@@ -2446,35 +2452,35 @@ only screen and (max-device-width:600px) {
 
 .en__stripeButtons__preview.light-outline {
 	background: #fff;
-	border: 1px solid #d7d7d7
+	// border: 1px solid #d7d7d7
 }
 
 .en__paypalTouch__preview {
 	max-width: 750px;
-	display: block;
+	// display: block;
 	background: #ffc439;
 	border-radius: 5px;
-	text-align: center;
-	position: relative
+	// text-align: center;
+	// position: relative
 }
 
 .en__paypalTouch__preview .en__paypalTouch__previewWrap {
-	display: inline
+	// display: inline
 }
 
 .en__paypalTouch__preview .en__paypalTouch__previewIcon {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/gateways/buttons/paypal-icon-svg.svg) 0 center no-repeat;
 	width: 16px;
-	height: 100%;
-	display: inline-block;
+	// height: 100%;
+	// display: inline-block;
 	background-size: 13px
 }
 
 .en__paypalTouch__preview .en__paypalTouch__previewIcon2 {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/gateways/buttons/paypal-text-svg.svg) 0 center no-repeat;
 	width: 60px;
-	height: 100%;
-	display: inline-block;
+	// height: 100%;
+	// display: inline-block;
 	background-size: 60px
 }
 
@@ -2512,14 +2518,14 @@ only screen and (max-device-width:600px) {
 }
 
 #en__digitalWallet {
-	font-size: 0;
-	display: flex;
-	flex-wrap: wrap
+	// font-size: 0;
+	// display: flex;
+	// flex-wrap: wrap
 }
 
 #en__digitalWallet .en__digitalWallet__button {
-	display: inline-block;
-	vertical-align: top
+	// display: inline-block;
+	// vertical-align: top
 }
 
 #en__digitalWallet .en__digitalWallet__container {
