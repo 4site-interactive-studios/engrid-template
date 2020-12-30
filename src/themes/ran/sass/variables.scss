@@ -1,55 +1,55 @@
 $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
-$client-white: #ffffff;
-$client-black: #000000;
-$client-gray: #8a8a8a;
-$client-light-gray: #cacaca;
-$client-cta: #f1700b;
-$client-cta-hover: #f1700b;
-$background-color: #ffffff;
-$background-image-background-color: #487c0f;
+$default-white: #ffffff;
+$default-black: #000000;
+$default-gray: #8a8a8a;
+$default-light-gray: #cacaca;
+$default-cta: #f1700b;
+$default-cta-hover: #f1700b;
+$default-background-color: #ffffff;
+$default-background-image-background-color: #487c0f;
 
 /* @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand
  * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
  */
 
-$client-body-background-color: $client-white; //@TODO Not yet used anywhere
-$client-body-border-radius: 0px;
-$body-padding-sm: 0.8652rem; //@TODO Revisit
-$body-padding: calc(0.8652rem * 0.75); //@TODO Revisit
-$body-padding-lg: calc(0.8652rem * 2.5); //@TODO Revisit
-$body-padding-xlg: calc(0.8652rem * 5); //@TODO Revisit
+$default-body-background-color: $default-white; //@TODO Not yet used anywhere
+$default-body-border-radius: 0px;
+$default-body-spacing-sm: 0.8652rem; //@TODO Revisit
+$default-body-spacing: calc(0.8652rem * 0.75); //@TODO Revisit
+$default-body-spacing-lg: calc(0.8652rem * 2.5); //@TODO Revisit
+$default-body-spacing-xlg: calc(0.8652rem * 5); //@TODO Revisit
 
-$client-input-border-radius: 0px;
-$client-input-border-width: 1px;
-$client-input-border-color: $client-black;
-$client-input-background-color: transparent;
+$default-input-border-radius: 0px;
+$default-input-border-width: 1px;
+$default-input-border-color: $default-black;
+$default-input-background-color: transparent;
 
-$client-button-background-color: $client-black;
-$client-button-background-color-hover: $client-cta-hover;
-$client-button-background-color-active: $client-cta;
-$client-button-background-color-disabled: #949494;
-$client-button-border-color: $client-black;
-$client-button-border-color-active: $client-cta;
-$client-button-border-color-hover: $client-cta-hover;
-$client-button-border-radius: 0px;
-$client-button-font-color: $client-white;
-$client-button-font-color-active: $client-white;
+$default-button-background-color: $default-black;
+$default-button-background-color-hover: $default-cta-hover;
+$default-button-background-color-active: $default-cta;
+$default-button-background-color-disabled: #949494;
+$default-button-border-color: $default-black;
+$default-button-border-color-active: $default-cta;
+$default-button-border-color-hover: $default-cta-hover;
+$default-button-border-radius: 0px;
+$default-button-font-color: $default-white;
+$default-button-font-color-active: $default-white;
 
-$client-submit-button-background-color: $client-cta;
-$client-submit-button-background-color-hover: $client-cta-hover;
-$client-submit-button-border-color: $client-cta;
-$client-submit-button-font-color: $client-white;
+$default-submit-button-background-color: $default-cta;
+$default-submit-button-background-color-hover: $default-cta-hover;
+$default-submit-button-border-color: $default-cta;
+$default-submit-button-font-color: $default-white;
 
-$client-checkmark-background-color: $client-cta;
-$client-checkmark-border-color: $client-cta;
-$client-checkmark-font-color: $client-white;
+$default-checkmark-background-color: $default-cta;
+$default-checkmark-border-color: $default-cta;
+$default-checkmark-font-color: $default-white;
 
-$client-error-red: #e74b3c;
-$client-error-red-grayscale: #949494;
-$client-error-red-faded: #fef6f5;
-$client-error-page-group-background: #f4ddda;
-$client-error-input-border-width: $client-input-border-width;
+$default-error-red: #e74b3c;
+$default-error-red-grayscale: #949494;
+$default-error-red-faded: #fef6f5;
+$default-error-page-group-background: #f4ddda;
+$default-error-input-border-width: $default-input-border-width;
 
-$client-highlight-background-color: #f9f003;
-$client-highlight-font-color: #343432;
+$default-highlight-background-color: #f9f003;
+$default-highlight-font-color: #343432;

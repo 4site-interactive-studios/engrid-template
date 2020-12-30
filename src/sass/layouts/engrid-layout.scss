@@ -479,15 +479,15 @@ body:not(#en__pagebuilder) #engrid .en__component--advrow .page-backgroundImageO
 
 #engrid .en__component--advrow .body-header {
   // padding-top: 1.75rem;
-  min-height: var(--client-body-border-radius,$client-body-border-radius);
-  border-top-left-radius: var(--client-body-border-radius,$client-body-border-radius);
-  border-top-right-radius: var(--client-body-border-radius,$client-body-border-radius);
+  min-height: var(--theme-body-border-radius, $default-body-border-radius);
+  border-top-left-radius: var(--theme-body-border-radius, $default-body-border-radius);
+  border-top-right-radius: var(--theme-body-border-radius, $default-body-border-radius);
 }
 #engrid .en__component--advrow .body-footer {
   padding-bottom: 1.75rem;
-  min-height: var(--client-body-border-radius,$client-body-border-radius);
-  border-bottom-left-radius: var(--client-body-border-radius,$client-body-border-radius);
-  border-bottom-right-radius: var(--client-body-border-radius,$client-body-border-radius);
+  min-height: var(--theme-body-border-radius, $default-body-border-radius);
+  border-bottom-left-radius: var(--theme-body-border-radius, $default-body-border-radius);
+  border-bottom-right-radius: var(--theme-body-border-radius, $default-body-border-radius);
 }
 
 #engrid .en__component--advrow .body-header::before,
@@ -546,7 +546,7 @@ body:not(#en__pagebuilder).footer-below-fold
   -webkit-clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   height: 120vh;
-  background-color: var(--background-image-background-color,$background-image-background-color);
+  background-color: var(--background-image-background-color, $default-background-image-background-color);
 }
 
 // body:not(#en__pagebuilder)

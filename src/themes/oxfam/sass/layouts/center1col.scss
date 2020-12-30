@@ -224,8 +224,8 @@ body#en__pagebuilder #engrid[data-engrid-layout="centerright1col"] {
     .body-header {
       margin-top: 1rem;
       border-top: 1px solid black;
-      border-top-left-radius: $client-input-border-radius;
-      border-top-right-radius: $client-input-border-radius;
+      border-top-left-radius: $default-input-border-radius;
+      border-top-right-radius: $default-input-border-radius;
     }
 
     .content-preFooter.pseudo-subgrid > div {

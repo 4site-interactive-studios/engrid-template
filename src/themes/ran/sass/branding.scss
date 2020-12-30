@@ -1,6 +1,6 @@
 // @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
 body {
-  background-color: $background-color;
+  background-color: $default-background-color;
 }
 
 body,
@@ -125,8 +125,8 @@ label.en__field__label {
 }
 
 .highlight {
-  background-color: $client-highlight-background-color;
-  color: $client-highlight-font-color;
+  background-color: $default-highlight-background-color;
+  color: $default-highlight-font-color;
   padding: 0.5rem;
   font-weight: 500;
   display: inline-block;
@@ -441,7 +441,7 @@ label.en__field__label {
 }
 
 .white-font {
-  color: $client-white;
+  color: $default-white;
 }
 
 /** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/

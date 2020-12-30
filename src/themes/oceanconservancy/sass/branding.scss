@@ -53,7 +53,7 @@ body#en__pagebuilder.body-bannerOverlay {
 }
 
 body:not(#en__pagebuilder).body-banner {
-  background-color: var(--client-light-gray);
+  background-color: var(--theme-light-gray);
 }
 
 body:not(#en__pagebuilder)
@@ -69,8 +69,8 @@ body:not(#en__pagebuilder)
 
 // @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
 body {
-  color: var(--client-black, $client-black);
-  background-color: var(--background-color, $background-color);
+  color: var(--theme-black, $default-black);
+  background-color: var(--background-color, $default-background-color);
 }
 
 body,
@@ -110,7 +110,7 @@ body:not(#en__pagebuilder) {
 }
 
 h1 {
-  color: var(--client-black, $client-black);
+  color: var(--theme-black, $default-black);
   font-family: "Roboto", sans-serif;
   font-size: calc(0.05552rem * 48);
   font-weight: 900;
@@ -124,7 +124,7 @@ h1 {
 }
 
 h2 {
-  color: var(--client-black, $client-black);
+  color: var(--theme-black, $default-black);
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: bold;
@@ -135,7 +135,7 @@ h2 {
 }
 
 h3 {
-  color: var(--client-black, $client-black);
+  color: var(--theme-black, $default-black);
   font-family: "Roboto", sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -215,18 +215,18 @@ label.en__field__label {
     font-weight: bold;
     letter-spacing: 0.4px;
     text-align: center;
-    color: var(--client-black);
+    color: var(--theme-black);
     // line-height: 1;
     text-transform: none;
     transition: 0.3s background-color ease;
     &:hover {
-      background-color: var(--client-black);
-      color: var(--client-white);
+      background-color: var(--theme-black);
+      color: var(--theme-white);
     }
   }
 
   input[type="radio"]:checked + label {
-    color: var(--client-white);
+    color: var(--theme-white);
   }
 }
 
@@ -555,12 +555,12 @@ body#en__pagebuilder #engrid {
 
     .body-header {
       border-top-left-radius: var(
-        --client-input-border-radius,
-        $client-input-border-radius
+        --theme-input-border-radius,
+        $default-input-border-radius
       );
       border-top-right-radius: var(
-        --client-input-border-radius,
-        $client-input-border-radius
+        --theme-input-border-radius,
+        $default-input-border-radius
       );
     }
 
@@ -585,7 +585,7 @@ body:not(#en__pagebuilder).footer-below-fold
   top: 0;
   background-color: var(
     --background-image-background-color,
-    $background-image-background-color
+    $default-background-image-background-color
   );
 }
 
@@ -672,10 +672,10 @@ body:not(#en__pagebuilder).footer-below-fold
 
 .highlight {
   background-color: var(
-    --client-highlight-background-color,
-    $client-highlight-background-color
+    --theme-highlight-background-color,
+    $default-highlight-background-color
   );
-  color: var(--client-highlight-font-color, $client-highlight-font-color);
+  color: var(--theme-highlight-font-color, $default-highlight-font-color);
   padding: 0.5rem;
   font-weight: 500;
   display: inline-block;
@@ -703,14 +703,14 @@ body:not(#en__pagebuilder).footer-below-fold
   height: 0;
   left: 20px;
   top: 10px;
-  color: var(--client-black);
+  color: var(--theme-black);
   width: 0;
   font-weight: 400;
 }
 
 .en__field--donationAmt.en__field--radio
   .en__field__item--other:not(.en__field__item--hidden)::before {
-  color: var(--client-white);
+  color: var(--theme-white);
 }
 
 .en__field--monthly_upsell_checkbox
@@ -731,14 +731,14 @@ body:not(#en__pagebuilder).footer-below-fold
 }
 .en__field__input--checkbox:checked + .en__field__label::before,
 .en__contactDetails__select:checked + .en__contactDetails__rows::before {
-  background-color: var(--client-black);
+  background-color: var(--theme-black);
   box-shadow: none;
 }
 
 .en__field__input--checkbox:checked + .en__field__label::after,
 .en__contactDetails__select:checked + .en__contactDetails__rows::after {
   content: "\a0\2713";
-  color: var(--client-white);
+  color: var(--theme-white);
   left: -31px;
   top: 1px;
 }
@@ -858,8 +858,8 @@ body:not(#en__pagebuilder).footer-below-fold
   .en__field__element--radio
   .en__field__item
   label:hover {
-  background-color: var(--client-black);
-  color: var(--client-white);
+  background-color: var(--theme-black);
+  color: var(--theme-white);
 }
 
 .en__field--donationAmt
@@ -921,7 +921,7 @@ body:not(#en__pagebuilder).footer-below-fold
       // font-size: calc(0.05552rem * 32);
       // font-weight: 900;
       // letter-spacing: 1px;
-      // color: $client-black;
+      // color: $default-black;
       text-transform: uppercase;
       // line-height: 1;
       padding: 1rem 1rem 0.5rem 1rem; // Corrects for the fact the font is vertically off center
@@ -938,7 +938,7 @@ body:not(#en__pagebuilder).footer-below-fold
 .content-preFooter {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  // background-color: $client-prefooter-background-color;
+  // background-color: $default-prefooter-background-color;
 
   h1 {
     padding-top: 1rem;
@@ -953,8 +953,8 @@ body:not(#en__pagebuilder).footer-below-fold
 
 .content-footer {
   background-color: var(
-    --client-footer-background-color,
-    $client-footer-background-color
+    --theme-footer-background-color,
+    $default-footer-background-color
   );
   .en__component:first-child {
     padding-top: 1rem;
@@ -1050,7 +1050,7 @@ body:not(#en__pagebuilder).footer-below-fold
 }
 
 .white-font {
-  color: $client-white;
+  color: $default-white;
 }
 
 /** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/
@@ -1165,13 +1165,13 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
 
 /* This input field is pretending to be a button, so let's mirror the border color of its neighboring buttons */
 input[name="transaction.donationAmt.other"] {
-  border-color: var(--client-button-border-color, $client-button-border-color);
+  border-color: var(--theme-button-border-color, $default-button-border-color);
 }
 
 .content-footer {
-  background-color: var(--client-black);
+  background-color: var(--theme-black);
   // box-shadow: none;
-  color: var(--client-white);
+  color: var(--theme-white);
   overflow: hidden;
   font-size: 14px;
   font-style: normal;
@@ -1180,7 +1180,7 @@ input[name="transaction.donationAmt.other"] {
   letter-spacing: 0.6px;
   text-align: center;
   a {
-    color: var(--client-white);
+    color: var(--theme-white);
     text-decoration: none;
   }
 }
@@ -1303,7 +1303,7 @@ img.oc-gs-logo {
 #engrid div[id^="nb-field-"] div.nb-feedback {
   margin-top: 0.25rem !important;
   margin-bottom: 0.25rem !important;
-  border-radius: var(--client-input-border-radius, 5px) !important;
+  border-radius: var(--theme-input-border-radius, 5px) !important;
   font-size: 1.125rem !important;
 
   span.nb-result {

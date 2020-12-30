@@ -1,13 +1,13 @@
 #engrid {
-    --client-white: #ffffff;
-    --client-black: #323232;
-    --client-gray: #8a8a8a;
-    --client-light-gray: #cacaca;
-    --client-cta: #039bc4;
-    --client-cta-hover: #e74b3c;
+    --theme-white: #ffffff;
+    --theme-black: #323232;
+    --theme-gray: #8a8a8a;
+    --theme-light-gray: #cacaca;
+    --theme-cta: #039bc4;
+    --theme-cta-hover: #e74b3c;
   
-    --client-prefooter-background-color: #d0e2e7;
-    --client-footer-background-color: #323232;
+    --theme-prefooter-background-color: #d0e2e7;
+    --theme-footer-background-color: #323232;
   
     --background-color: #f3f3f3;
     --background-image-background-color: #f3f3f3;
@@ -16,48 +16,48 @@
       * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
       */
   
-    // --client-body-background-color: --client-white; //@TODO Not yet used anywhere
-    --client-body-border-radius: 7px;
+    // --theme-body-background-color: --theme-white; //@TODO Not yet used anywhere
+    --theme-body-border-radius: 7px;
     --body-padding-sm: 0.8652rem; //@TODO Revisit
     --body-padding: calc(0.8652rem * 0.75); //@TODO Revisit
     --body-padding-lg: calc(0.8652rem * 2.5); //@TODO Revisit
     --body-padding-xlg: calc(0.8652rem * 5); //@TODO Revisit
   
-    --client-input-border-radius: 5px;
-    --client-input-border-width: 1px;
-    --client-input-border-color: var(--client-black);
-    --client-input-border-color-focus: var(--client-cta);
-    --client-input-background-color: var(--client-white);
-    --client-input-background-color-hover: var(--client-white);
+    --theme-input-border-radius: 5px;
+    --theme-input-border-width: 1px;
+    --theme-input-border-color: var(--theme-black);
+    --theme-input-border-color-focus: var(--theme-cta);
+    --theme-input-background-color: var(--theme-white);
+    --theme-input-background-color-hover: var(--theme-white);
   
-    --client-button-background-color: var(--client-white);
-    --client-button-background-color-hover: var(--client-black);
-    --client-button-background-color-active: var(--client-black);
-    --client-button-background-color-disabled: #949494;
-    --client-button-border-color: var(--client-black);
-    --client-button-border-color-active: var(--client-black);
-    --client-button-border-color-hover: var(--client-black);
-    --client-button-border-radius: 50px;
-    --client-button-font-color: var(--client-black);
-    --client-button-font-color-active: var(--client-white);
+    --theme-button-background-color: var(--theme-white);
+    --theme-button-background-color-hover: var(--theme-black);
+    --theme-button-background-color-active: var(--theme-black);
+    --theme-button-background-color-disabled: #949494;
+    --theme-button-border-color: var(--theme-black);
+    --theme-button-border-color-active: var(--theme-black);
+    --theme-button-border-color-hover: var(--theme-black);
+    --theme-button-border-radius: 50px;
+    --theme-button-font-color: var(--theme-black);
+    --theme-button-font-color-active: var(--theme-white);
   
-    --client-submit-button-background-color: var(--client-cta);
-    --client-submit-button-background-color-hover: var(--client-cta-hover);
-    --client-submit-button-border-color: var(--client-cta);
-    --client-submit-button-font-color: var(--client-white);
+    --theme-submit-button-background-color: var(--theme-cta);
+    --theme-submit-button-background-color-hover: var(--theme-cta-hover);
+    --theme-submit-button-border-color: var(--theme-cta);
+    --theme-submit-button-font-color: var(--theme-white);
   
-    --client-checkmark-background-color: var(--client-black);
-    --client-checkmark-border-color: var(--client-cta);
-    --client-checkmark-font-color: var(--client-white);
+    --theme-checkmark-background-color: var(--theme-black);
+    --theme-checkmark-border-color: var(--theme-cta);
+    --theme-checkmark-font-color: var(--theme-white);
   
-    --client-error-red: #f12222;
-    --client-error-red-grayscale: #949494;
-    --client-error-red-faded: #ffeae9;
-    --client-error-page-group-background: #f4ddda;
-    --client-error-input-border-width: var(--client-input-border-width);
+    --theme-error-red: #f12222;
+    --theme-error-red-grayscale: #949494;
+    --theme-error-red-faded: #ffeae9;
+    --theme-error-page-group-background: #f4ddda;
+    --theme-error-input-border-width: var(--theme-input-border-width);
   
-    --client-highlight-background-color: #227f9e;
-    --client-highlight-font-color: #ffffff;
+    --theme-highlight-background-color: #227f9e;
+    --theme-highlight-font-color: #ffffff;
   }
   
   #engrid[data-engrid-subtheme="oceanconservancy"] {

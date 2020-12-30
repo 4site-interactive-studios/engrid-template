@@ -39,8 +39,8 @@
 
 // @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
 body {
-  color: $client-black;
-  background-color: $background-color;
+  color: $default-black;
+  background-color: $default-background-color;
 }
 
 body,
@@ -91,7 +91,7 @@ body:not(#en__pagebuilder)
 }
 
 h1 {
-  color: $client-black;
+  color: $default-black;
   font-family: OxfamHeadline;
   font-size: calc(0.05552rem * 48);
   font-weight: 900;
@@ -105,7 +105,7 @@ h1 {
 }
 
 h2 {
-  color: $client-black;
+  color: $default-black;
   font-family: "Oxfam TSTAR PRO", Arial, Helvetica, sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -116,7 +116,7 @@ h2 {
 }
 
 h3 {
-  color: $client-black;
+  color: $default-black;
   font-family: "Oxfam TSTAR PRO", Arial, Helvetica, sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -180,8 +180,8 @@ label.en__field__label {
 }
 
 .highlight {
-  background-color: $client-highlight-background-color;
-  color: $client-highlight-font-color;
+  background-color: $default-highlight-background-color;
+  color: $default-highlight-font-color;
   padding: 0.5rem;
   font-weight: 500;
   display: inline-block;
@@ -357,7 +357,7 @@ label.en__field__label {
       font-size: calc(0.05552rem * 32);
       font-weight: 900;
       letter-spacing: 1px;
-      color: $client-black;
+      color: $default-black;
       text-transform: uppercase;
       line-height: 1;
       padding: 1rem 1rem 0.5rem 1rem; // Corrects for the fact the font is vertically off center
@@ -368,11 +368,11 @@ label.en__field__label {
     line-height: 1.58;
     letter-spacing: 0.2px;
     text-align: center;
-    color: $client-black;
+    color: $default-black;
   }
 }
 .content-footer {
-  background-color: $client-black;
+  background-color: $default-black;
 }
 
 .footer-wrapper {
@@ -489,7 +489,7 @@ label.en__field__label {
 }
 
 .white-font {
-  color: $client-white;
+  color: $default-white;
 }
 
 /** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/

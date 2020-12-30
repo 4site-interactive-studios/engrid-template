@@ -1,17 +1,21 @@
-/* 4SITE BASE SASS BREAKPOINT SLICER */
+/* ENGRID SASS BREAKPOINT SLICER */
 @import "breakpoint-sass";
 @import "breakpoint-slicer";
 
-/* 4SITE BASE FUNCTIONS */
+/* ENGRID FUNCTIONS */
 @import "../../../sass/engrid-scss-functions";
 
-/* 4SITE BASE NORMALIZE AND SANITIZE */
+/* ENGRID SANITIZE (INCLUDES NOMRALIZE) */
 @import "~sanitize.css";
 
-/* 4SITE BASE VAIRABLES */
+/* ENGRID DEFAULT VAIRABLES */
 @import "../../../sass/engrid-variables";
 
-/* 4SITE BASE STYLING */
+/* ENGRID ENPAGE.CSS OVERRIDE STYLING */
+@import "../../../sass/engrid-enpage-overrides";
+
+/* ENGRID BASE STYLING */
+@import "../../../sass/engrid-root";
 @import "../../../sass/engrid-body";
 @import "../../../sass/engrid-autofill";
 @import "../../../sass/engrid-buttons";
@@ -20,31 +24,40 @@
 @import "../../../sass/engrid-fields";
 @import "../../../sass/engrid-images";
 @import "../../../sass/engrid-loading-animations";
-@import "../../../sass/engrid-page-builder-preview";
-@import "../../../sass/engrid-page-builder";
 @import "../../../sass/engrid-thermometer";
 @import "../../../sass/engrid-utility";
+@import "../../../sass/engrid-live-card-type";
 
-/* 4SITE BASE LAYOUTS */
-@import "../../../sass/layouts/engrid-layout";
-@import "../../../sass/layouts/engrid-layout-manual";
-@import "../../../sass/layouts/engrid-layout-embedded";
-@import "../../../sass/layouts/engrid-layout-ie11override";
-
-/* 4SITE ADDON STYLING */
-@import "../../../sass/engrid-debug";
+/* ENGRID PAGE TYPE STYLING */
 @import "../../../sass/engrid-donations";
 @import "../../../sass/engrid-ecard";
 @import "../../../sass/engrid-events";
 @import "../../../sass/engrid-fancy-errors";
 @import "../../../sass/engrid-letter-to-target";
-@import "../../../sass/engrid-live-card-type";
-@import "../../../sass/engrid-modal";
-@import "../../../sass/engrid-neverbounce";
 @import "../../../sass/engrid-premiums";
 @import "../../../sass/engrid-tweet-to-target";
 
-/* CLIENT STYLING AND LAYOUTS */
+/* ENGRID ENHANCEMENTS STYLING */
+@import "../../../sass/engrid-modal";
+@import "../../../sass/engrid-neverbounce";
+@import "../../../sass/engrid-debug";
+@import "../../../sass/engrid-page-builder-preview";
+@import "../../../sass/engrid-page-builder";
+
+/* ENGRID BASE LAYOUTS */
+@import "../../../sass/layouts/engrid-layout";
+@import "../../../sass/layouts/engrid-layout-leftleft1col";
+@import "../../../sass/layouts/engrid-layout-centerleft1col";
+@import "../../../sass/layouts/engrid-layout-centercenter1col";
+@import "../../../sass/layouts/engrid-layout-centercenter1col-wide";
+@import "../../../sass/layouts/engrid-layout-centercenter2col";
+@import "../../../sass/layouts/engrid-layout-centerright1col";
+@import "../../../sass/layouts/engrid-layout-rightright1col";
+@import "../../../sass/layouts/engrid-layout-manual";
+@import "../../../sass/layouts/engrid-layout-embedded";
+@import "../../../sass/layouts/engrid-layout-ie11override";
+
+/* THEME SPECIFIC STYLING AND LAYOUTS */
 @import "./subtheme";
 @import "./font";
 @import "./branding";

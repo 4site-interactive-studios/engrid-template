@@ -40,14 +40,14 @@
 }
 
 #engrid div[id^=nb-field-].nb-error input{
-    border-color: var(--client-error-red,$client-error-red) !important;
-    background-color: var(--client-error-red-faded,$client-error-red-faded) !important;
+    border-color: var(--theme-error-red, $default-error-red) !important;
+    background-color: var(--theme-error-red-faded, $default-error-red-faded) !important;
 }
 
 #engrid div[id^=nb-field-].nb-error .nb-feedback{
     position: initial !important;
     border: none !important;
-    background-color: var(--client-error-red,$client-error-red) !important;
+    background-color: var(--theme-error-red, $default-error-red) !important;
     color: #ffffff !important;
 
 }

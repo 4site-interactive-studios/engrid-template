@@ -1,62 +1,65 @@
 $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
-$client-white: #ffffff;
-$client-black: #4d4d4d;
-$client-gray: #8a8a8a;
-$client-light-gray: #cacaca;
-$client-cta: #208096;
-$client-cta-hover: #22a3cb;
+$default-white: #ffffff;
+$default-black: #4d4d4d;
+$default-gray: #8a8a8a;
+$default-light-gray: #cacaca;
+$default-cta: #208096;
+$default-cta-hover: #22a3cb;
 
-$client-prefooter-background-color: #d0e2e7;
-$client-footer-background-color: #20809e;
+$default-prefooter-background-color: #d0e2e7;
+$default-footer-background-color: #20809e;
 
-$background-color: $client-white;
+$default-background-color: $default-white;
 // $background-image: "url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)";
-$background-image-background-color: #333333;
+$default-background-image-background-color: #333333;
 
 /* @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand
  * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
  */
 
-$client-body-background-color: $client-white; // @TODO Not yet used anywhere
-$client-body-border-radius: 0px;
-$body-padding-sm: 0.8652rem; // @TODO Revisit
-$body-padding: calc(0.8652rem * 0.75); // @TODO Revisit
-$body-padding-lg: calc(0.8652rem * 2.5); // @TODO Revisit
-$body-padding-xlg: calc(0.8652rem * 5); // @TODO Revisit
+ /* REF: http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/ */
+$default-root-font-size: 16px; // Sets a baseline font size for all other REM based font-sizes to relatively build off of
 
-$client-input-border-radius: 5px;
-$client-input-border-width: 2px;
-$client-input-border-color: $client-black;
-$client-input-border-color-focus: $client-black;
-$client-input-background-color: $client-white;
-$client-input-background-color-hover: $client-white;
+$default-body-background-color: $default-white; // @TODO Not yet used anywhere
+$default-body-border-radius: 0px;
+$default-body-spacing-sm: 0.8652rem; // @TODO Revisit
+$default-body-spacing: calc(0.8652rem * 0.75); // @TODO Revisit
+$default-body-spacing-lg: calc(0.8652rem * 2.5); // @TODO Revisit
+$default-body-spacing-xlg: calc(0.8652rem * 5); // @TODO Revisit
 
-$client-button-background-color: $client-black;
-$client-button-background-color-hover: $client-cta-hover;
-$client-button-background-color-active: $client-cta;
-$client-button-background-color-disabled: #949494;
-$client-button-border-color: $client-black;
-$client-button-border-color-active: $client-cta;
-$client-button-border-color-hover: $client-cta-hover;
-$client-button-border-radius: 0px;
-$client-button-font-color: $client-white;
-$client-button-font-color-active: $client-white;
+$default-input-border-radius: 5px;
+$default-input-border-width: 2px;
+$default-input-border-color: $default-black;
+$default-input-border-color-focus: $default-black;
+$default-input-background-color: $default-white;
+$default-input-background-color-hover: $default-white;
 
-$client-submit-button-background-color: $client-cta;
-$client-submit-button-background-color-hover: $client-cta-hover;
-$client-submit-button-border-color: $client-cta;
-$client-submit-button-font-color: $client-white;
+$default-button-background-color: $default-black;
+$default-button-background-color-hover: $default-cta-hover;
+$default-button-background-color-active: $default-cta;
+$default-button-background-color-disabled: #949494;
+$default-button-border-color: $default-black;
+$default-button-border-color-active: $default-cta;
+$default-button-border-color-hover: $default-cta-hover;
+$default-button-border-radius: 0px;
+$default-button-font-color: $default-white;
+$default-button-font-color-active: $default-white;
 
-$client-checkmark-background-color: $client-cta;
-$client-checkmark-border-color: $client-cta;
-$client-checkmark-font-color: $client-white;
+$default-submit-button-background-color: $default-cta;
+$default-submit-button-background-color-hover: $default-cta-hover;
+$default-submit-button-border-color: $default-cta;
+$default-submit-button-font-color: $default-white;
 
-$client-error-red: #f12222;
-$client-error-red-grayscale: #949494;
-$client-error-red-faded: #ffeae9;
-$client-error-page-group-background: #f4ddda;
-$client-error-input-border-width: $client-input-border-width;
+$default-checkmark-background-color: $default-cta;
+$default-checkmark-border-color: $default-cta;
+$default-checkmark-font-color: $default-white;
 
-$client-highlight-background-color: #227f9e;
-$client-highlight-font-color: #ffffff;
+$default-error-red: #f12222;
+$default-error-red-grayscale: #949494;
+$default-error-red-faded: #ffeae9;
+$default-error-page-group-background: #f4ddda;
+$default-error-input-border-width: $default-input-border-width;
+
+$default-highlight-background-color: #227f9e;
+$default-highlight-font-color: #ffffff;

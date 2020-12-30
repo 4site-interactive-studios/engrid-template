@@ -39,8 +39,8 @@
 
 // @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
 body {
-  color: var(--client-black,$client-black);
-  background-color: var(--background-color,$background-color);
+  color: var(--theme-black, $default-black);
+  background-color: var(--background-color, $default-background-color);
 }
 
 body,
@@ -80,7 +80,7 @@ body:not(#en__pagebuilder) {
 }
 
 h1 {
-  color: var(--client-black,$client-black);
+  color: var(--theme-black, $default-black);
   font-family:"Proxima Nova Bold",sans-serif;
   font-size: calc(0.05552rem * 48);
   font-weight: 900;
@@ -94,7 +94,7 @@ h1 {
 }
 
 h2 {
-  color: var(--client-black,$client-black);
+  color: var(--theme-black, $default-black);
   font-family: "Proxima Nova Bold",sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -105,7 +105,7 @@ h2 {
 }
 
 h3 {
-  color: var(--client-black,$client-black);
+  color: var(--theme-black, $default-black);
   font-family: "Proxima Nova Bold",sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -169,8 +169,8 @@ label.en__field__label {
 }
 
 .highlight {
-  background-color: var(--client-highlight-background-color,$client-highlight-background-color);
-  color: var(--client-highlight-font-color,$client-highlight-font-color);
+  background-color: var(--theme-highlight-background-color, $default-highlight-background-color);
+  color: var(--theme-highlight-font-color, $default-highlight-font-color);
   padding: 0.5rem;
   font-weight: 500;
   display: inline-block;
@@ -341,7 +341,7 @@ label.en__field__label {
       // font-size: calc(0.05552rem * 32);
       // font-weight: 900;
       // letter-spacing: 1px;
-      // color: $client-black;
+      // color: $default-black;
       text-transform: uppercase;
       // line-height: 1;
       padding: 1rem 1rem 0.5rem 1rem; // Corrects for the fact the font is vertically off center
@@ -358,7 +358,7 @@ label.en__field__label {
 .content-preFooter {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  // background-color: $client-prefooter-background-color;
+  // background-color: $default-prefooter-background-color;
 
   h1{
     padding-top: 1rem;
@@ -373,7 +373,7 @@ label.en__field__label {
 }
 
 .content-footer {
-  background-color: var(--client-footer-background-color,$client-footer-background-color);
+  background-color: var(--theme-footer-background-color, $default-footer-background-color);
 }
 
 .footer-wrapper {
@@ -490,7 +490,7 @@ label.en__field__label {
 }
 
 .white-font {
-  color: $client-white;
+  color: $default-white;
 }
 
 /** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/
@@ -605,5 +605,5 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
 
 /* This input field is pretending to be a button, so let's mirror the border color of its neighboring buttons */
 input[name="transaction.donationAmt.other"]{
-  border-color: var(--client-button-border-color,$client-button-border-color)
+  border-color: var(--theme-button-border-color, $default-button-border-color)
 }

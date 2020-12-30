@@ -42,7 +42,7 @@ body:not(#en__pagebuilder).footer-below-fold
   top: 0;
   background-color: var(
     --background-image-background-color,
-    $background-image-background-color
+    $default-background-image-background-color
   );
 }
 
