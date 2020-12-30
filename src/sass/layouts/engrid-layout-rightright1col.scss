@@ -11,7 +11,7 @@
 * ##########################################################
 */
 
-#engrid[data-engrid-layout="rightright1col"] {
+[data-engrid-layout="rightright1col"] {
   /* prettier-ignore */
   .en__component--advrow,
   .en__component--advrow .pseudo-subgrid {
@@ -36,7 +36,7 @@
 */
 
 @media screen and (min-width: 500px) {
-  #engrid[data-engrid-layout="rightright1col"] {
+  [data-engrid-layout="rightright1col"] {
     /* prettier-ignore */
     .en__component--advrow,
     .en__component--advrow .pseudo-subgrid {
@@ -58,7 +58,7 @@
       display: none;
     }
   }
-  body:not(#en__pagebuilder) #engrid[data-engrid-layout="rightright1col"] {
+  body:not(#en__pagebuilder) [data-engrid-layout="rightright1col"] {
     .page-backgroundImage {
       grid-row: page-start / content-footer-end;
       grid-column: lpc-start / lpc-end;

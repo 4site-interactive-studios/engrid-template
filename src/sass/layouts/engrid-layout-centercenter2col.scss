@@ -11,7 +11,7 @@
 * ##########################################################
 */
 
-#engrid[data-engrid-layout="centercenter2col"] {
+[data-engrid-layout="centercenter2col"] {
   /* prettier-ignore */
   .en__component--advrow,
   .en__component--advrow .pseudo-subgrid {
@@ -28,7 +28,7 @@
   }
 }
 
-body:not(#en__pagebuilder) #engrid[data-engrid-layout="centercenter2col"] {
+body:not(#en__pagebuilder) [data-engrid-layout="centercenter2col"] {
   .page-backgroundImage {
     grid-row: page-start / content-footerSpacer-end;
   }
@@ -42,7 +42,7 @@ body:not(#en__pagebuilder) #engrid[data-engrid-layout="centercenter2col"] {
 */
 
 @media screen and (min-width: 1200px) {
-  #engrid[data-engrid-layout="centercenter2col"] {
+  [data-engrid-layout="centercenter2col"] {
     /* prettier-ignore */
     .en__component--advrow,
     .en__component--advrow .pseudo-subgrid {

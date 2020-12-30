@@ -1215,7 +1215,7 @@ input[name="transaction.donationAmt.other"] {
     0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
-#engrid[data-engrid-layout="centercenter1col"]
+[data-engrid-layout="centercenter1col"]
   .en__component--advrow
   .body-bottom {
   padding-top: 2rem;
@@ -1379,7 +1379,7 @@ img.oc-gs-logo {
 }
 
 /* @TODO: Temp Fix, needs to be replaced */
-#engrid[data-engrid-layout="centercenter1col"]
+[data-engrid-layout="centercenter1col"]
   .body-header
   #social-share-block
   a
@@ -1388,10 +1388,10 @@ img.oc-gs-logo {
 }
 
 @media screen and (min-width: 600px) {
-  #engrid[data-engrid-layout="centerleft1col"],
-  #engrid[data-engrid-layout="centercenter1col"],
-  #engrid[data-engrid-layout="centercenter2col"],
-  #engrid[data-engrid-layout="centerright1col"] {
+  [data-engrid-layout="centerleft1col"],
+  [data-engrid-layout="centercenter1col"],
+  [data-engrid-layout="centercenter2col"],
+  [data-engrid-layout="centerright1col"] {
     .body-header {
       margin-top: 3rem;
     }
@@ -1399,7 +1399,7 @@ img.oc-gs-logo {
 }
 
 @media screen and (min-width: 1200px) {
-  #engrid[data-engrid-layout="centercenter2col"] {
+  [data-engrid-layout="centercenter2col"] {
     .body-top {
       padding-right: 3.25rem;
       padding-bottom: 3.25rem;
@@ -1419,8 +1419,8 @@ img.oc-gs-logo {
   }
 }
 
-#engrid[data-engrid-layout="leftleft1col"],
-#engrid[data-engrid-layout="rightright1col"] {
+[data-engrid-layout="leftleft1col"],
+[data-engrid-layout="rightright1col"] {
   .body-footer {
     position: absolute;
     width: 1px;
@@ -1437,8 +1437,8 @@ img.oc-gs-logo {
 }
 
 @media screen and (min-width: 500px) {
-  #engrid[data-engrid-layout="leftleft1col"],
-  #engrid[data-engrid-layout="rightright1col"] {
+  [data-engrid-layout="leftleft1col"],
+  [data-engrid-layout="rightright1col"] {
     .content-footer {
       grid-column: bc;
     }

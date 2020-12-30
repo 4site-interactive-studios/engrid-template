@@ -87,10 +87,10 @@
   margin-top: 5px;
 }
 
-#engrid[data-engrid-layout="centerleft1col"],
-#engrid[data-engrid-layout="centercenter1col"],
-#engrid[data-engrid-layout="centercenter1col-wide"],
-#engrid[data-engrid-layout="centerright1col"] {
+[data-engrid-layout="centerleft1col"],
+[data-engrid-layout="centercenter1col"],
+[data-engrid-layout="centercenter1col-wide"],
+[data-engrid-layout="centerright1col"] {
   .page-alert,
   .content-header,
   .body-banner,
@@ -136,10 +136,10 @@
   }
 }
 
-body:not(#en__pagebuilder) #engrid[data-engrid-layout="centerleft1col"],
-body:not(#en__pagebuilder) #engrid[data-engrid-layout="centercenter1col"],
-body:not(#en__pagebuilder) #engrid[data-engrid-layout="centercenter1col-wide"],
-body:not(#en__pagebuilder) #engrid[data-engrid-layout="centerright1col"] {
+body:not(#en__pagebuilder) [data-engrid-layout="centerleft1col"],
+body:not(#en__pagebuilder) [data-engrid-layout="centercenter1col"],
+body:not(#en__pagebuilder) [data-engrid-layout="centercenter1col-wide"],
+body:not(#en__pagebuilder) [data-engrid-layout="centerright1col"] {
   // Specified on child dom elements so that if there are none, then the parent div collapses its vertical height.
   .content-preFooter > div {
     min-height: 710px;
@@ -173,10 +173,10 @@ body:not(#en__pagebuilder) #engrid[data-engrid-layout="centerright1col"] {
   }
 }
 
-body#en__pagebuilder #engrid[data-engrid-layout="centerleft1col"],
-body#en__pagebuilder #engrid[data-engrid-layout="centercenter1col"],
-body#en__pagebuilder #engrid[data-engrid-layout="centercenter1col-wide"],
-body#en__pagebuilder #engrid[data-engrid-layout="centerright1col"] {
+body#en__pagebuilder [data-engrid-layout="centerleft1col"],
+body#en__pagebuilder [data-engrid-layout="centercenter1col"],
+body#en__pagebuilder [data-engrid-layout="centercenter1col-wide"],
+body#en__pagebuilder [data-engrid-layout="centerright1col"] {
   .page-backgroundImage > div,
   .page-backgroundImageOverlay > div {
     grid-column: bc;
@@ -192,10 +192,10 @@ body#en__pagebuilder #engrid[data-engrid-layout="centerright1col"] {
 
 /* Sum of all MIN values of the Body Columns */
 @media screen and (min-width: 600px) {
-  #engrid[data-engrid-layout="centerleft1col"],
-  #engrid[data-engrid-layout="centercenter1col"],
-  #engrid[data-engrid-layout="centercenter1col-wide"],
-  #engrid[data-engrid-layout="centerright1col"] {
+  [data-engrid-layout="centerleft1col"],
+  [data-engrid-layout="centercenter1col"],
+  [data-engrid-layout="centercenter1col-wide"],
+  [data-engrid-layout="centerright1col"] {
     .en__component--advrow .body-header,
     .en__component--advrow .body-banner,
     .en__component--advrow .body-bannerOverlay,
@@ -252,19 +252,19 @@ body#en__pagebuilder #engrid[data-engrid-layout="centerright1col"] {
 
 /* Sum of all MAX values of the Body Columns + 1px */
 @media screen and (min-width: 1231px) {
-  #engrid[data-engrid-layout="centerleft1col"],
-  #engrid[data-engrid-layout="centercenter1col"],
-  #engrid[data-engrid-layout="centercenter1col-wide"],
-  #engrid[data-engrid-layout="centerright1col"] {
+  [data-engrid-layout="centerleft1col"],
+  [data-engrid-layout="centercenter1col"],
+  [data-engrid-layout="centercenter1col-wide"],
+  [data-engrid-layout="centerright1col"] {
     .content-preFooter {
       background-size: cover;
     }
   }
 
-  body:not(#en__pagebuilder) #engrid[data-engrid-layout="centerleft1col"],
-  body:not(#en__pagebuilder) #engrid[data-engrid-layout="centercenter1col"],
-  body:not(#en__pagebuilder) #engrid[data-engrid-layout="centercenter1col-wide"],
-  body:not(#en__pagebuilder) #engrid[data-engrid-layout="centerright1col"] {
+  body:not(#en__pagebuilder) [data-engrid-layout="centerleft1col"],
+  body:not(#en__pagebuilder) [data-engrid-layout="centercenter1col"],
+  body:not(#en__pagebuilder) [data-engrid-layout="centercenter1col-wide"],
+  body:not(#en__pagebuilder) [data-engrid-layout="centerright1col"] {
     // Specified on child dom elements so that if there are none, then the parent div collapses its vertical height.
     .content-preFooter > div {
       min-height: 1010px;

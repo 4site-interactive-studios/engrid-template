@@ -12,7 +12,7 @@
 * ##########################################################
 */
 
-#engrid[data-engrid-layout="ie11override"] {
+[data-engrid-layout="ie11override"] {
   .en__component--advrow,
   .en__component--advrow .pseudo-subgrid {
     display: flex !important;
@@ -20,7 +20,7 @@
   }
 }
 
-body:not(#en__pagebuilder) #engrid[data-engrid-layout="ie11override"] {
+body:not(#en__pagebuilder) [data-engrid-layout="ie11override"] {
   form > .en__component--advrow{
     .body-headerOutside,
     .body-header,
@@ -44,7 +44,7 @@ body:not(#en__pagebuilder) #engrid[data-engrid-layout="ie11override"] {
   
 }
 
-body:not(#en__pagebuilder) #engrid[data-engrid-layout="ie11override"]:not([data-engrid-layout="embedded"]){
+body:not(#en__pagebuilder) [data-engrid-layout="ie11override"]:not([data-engrid-layout="embedded"]){
   .content-footer{
     margin-top: 1rem !important;
   }
