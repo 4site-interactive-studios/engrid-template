@@ -18,10 +18,10 @@
   
     // --theme-body-background-color: --theme-white; //@TODO Not yet used anywhere
     --theme-body-border-radius: 7px;
-    --body-padding-sm: 0.8652rem; //@TODO Revisit
-    --body-padding: calc(0.8652rem * 0.75); //@TODO Revisit
-    --body-padding-lg: calc(0.8652rem * 2.5); //@TODO Revisit
-    --body-padding-xlg: calc(0.8652rem * 5); //@TODO Revisit
+    --theme-spacing-sm: 0.8652rem; //@TODO Revisit
+    --theme-spacing: calc(0.8652rem * 0.75); //@TODO Revisit
+    --theme-spacing-lg: calc(0.8652rem * 2.5); //@TODO Revisit
+    --theme-spacing-xlg: calc(0.8652rem * 5); //@TODO Revisit
   
     --theme-input-border-radius: 5px;
     --theme-input-border-width: 1px;

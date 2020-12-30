@@ -23,10 +23,10 @@ $default-root-font-size: 16px; // Sets a baseline font size for all other REM ba
 
 $default-body-background-color: $default-white; // @TODO Not yet used anywhere
 $default-body-border-radius: 0px;
-$default-body-spacing-sm: 0.8652rem; // @TODO Revisit
-$default-body-spacing: calc(0.8652rem * 0.75); // @TODO Revisit
-$default-body-spacing-lg: calc(0.8652rem * 2.5); // @TODO Revisit
-$default-body-spacing-xlg: calc(0.8652rem * 5); // @TODO Revisit
+$default-spacing-sm: 0.8652rem; // @TODO Revisit
+$default-spacing: calc(0.8652rem * 0.75); // @TODO Revisit
+$default-spacing-lg: calc(0.8652rem * 2.5); // @TODO Revisit
+$default-spacing-xlg: calc(0.8652rem * 5); // @TODO Revisit
 
 $default-input-border-radius: 5px;
 $default-input-border-width: 2px;
