@@ -1,4 +1,6 @@
-/* For the fastest critical page render times use @font-face and avoid importing an external font file that in turn then loads the final fonts
+/* For the fastest critical page render times, don't load a custom font at all. But, if you must
+ * use @font-face and avoid importing an external font file that in turn then loads the final fonts
+ *
  * e.g. <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
  * e.g. @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap')
 */
