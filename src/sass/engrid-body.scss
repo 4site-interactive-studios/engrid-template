@@ -1,3 +1,9 @@
+/* REF: http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/ */
+body{
+	font-size: 16px; // Added to set a baseline size for all other sizes to build off of
+}
+
+
 body,
 body.loading,
 body.loaded {

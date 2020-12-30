@@ -78,10 +78,10 @@ only screen and (max-device-width:600px) {
 .en__component--hubgadget {
 	box-shadow: 0 0 3px 1px rgba(0, 0, 0, .33);
 	border-radius: var(--client-input-border-radius,$client-input-border-radius); // 6px
-	background: #fff;
-	margin: 12px;
+	background: transparent; // #fff
+	margin: 0.75rem; // 12px
 	border: 1px solid #ccc;
-	padding: 12px
+	padding: 0.75rem; // 12px
 }
 
 .en__component--hubgadget--inactive {
@@ -97,7 +97,7 @@ only screen and (max-device-width:600px) {
 	// font-weight: 700;
 	// display: block;
 	// text-align: center;
-	margin-top: 12px
+	margin-top: 0.75rem; // 12px
 }
 
 .en__component--hubgadget>img {
@@ -106,7 +106,7 @@ only screen and (max-device-width:600px) {
 
 .en__captcha,
 .en__field {
-	padding-bottom: 18px
+	padding-bottom: 1.125rem; // 18px
 }
 
 .en__field__label {
@@ -116,12 +116,12 @@ only screen and (max-device-width:600px) {
 
 .en__field__helpText {
 	// display: none;
-	font-size: .85% // .85em
+	font-size: 85% // .85em
 }
 
 .en__field__helpText,
 .en__field__label {
-	padding: 6px 0;
+	padding: 0.375rem 0; // 6px 0
 	// vertical-align: middle
 }
 
@@ -227,7 +227,7 @@ only screen and (max-device-width:600px) {
 
 .en__field__element--labelsleft .en__field__label--item {
 	float: left; // left - @TODO Help EN get away from using floats
-	margin-right: 4px
+	margin-right: 0.25rem // 4px
 }
 
 .en__field__item.en__field__item--hidden,
@@ -236,7 +236,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__field__element--imgselect .en__field__item {
-	padding-right: 12px
+	padding-right: 0.75rem; // 12px
 }
 
 .en__field__element--rating .en__field__item,
@@ -298,7 +298,7 @@ only screen and (max-device-width:600px) {
 .en__button {
 	// display: inline-block;
 	background: #F5F5F5;
-	padding: 12px;
+	padding: 0.75rem; // 12px
 	border: 1px solid #ccc;
 	// color: initial;
 	// text-decoration: none
@@ -322,13 +322,13 @@ only screen and (max-device-width:600px) {
 }
 
 .en__button--ajax--inprogress {
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_loading.gif) center center no-repeat;
-	background-size: 30px 30px
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_loading.gif) center center no-repeat; // @TODO
+	background-size: 30px 30px // @TODO
 }
 
 .en__button--ajax--done {
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en__end--30.png) center center no-repeat;
-	background-size: 30px 30px
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en__end--30.png) center center no-repeat; // @TODO
+	background-size: 30px 30px // @TODO
 }
 
 .en__orderSummary {
@@ -390,7 +390,7 @@ only screen and (max-device-width:600px) {
 .en__additional__label,
 .en__ticketSummary__checkout,
 .en__ticket__field {
-	padding: 14px
+	padding: 0.875rem; // 14px
 }
 
 .en__additional__amount,
@@ -489,13 +489,13 @@ only screen and (max-device-width:600px) {
 .en__additional__amount,
 .en__additional__label {
 	// display: table-cell;
-	padding: 10px
+	padding: 0.625rem; // 10px
 }
 
 .en__additional__input {
 	padding: .6rem 0; // .6em 0;
 	width: 4rem; // 4em;
-	margin-right: 12px;
+	margin-right: 0.75rem; // 12px
 	// text-align: center;
 	border: 1px solid #D2D2D2;
 	border-radius: var(--client-input-border-radius,$client-input-border-radius); // 3px
@@ -518,7 +518,7 @@ only screen and (max-device-width:600px) {
 	font-size: 1.5rem; // 1.5em;
 	background-color: #EE3324;
 	// display: inline-block;
-	padding: 14px 28px;
+	padding: 0.875rem 1.75rem; // 14px 28px
 	// text-align: center;
 	// color: #fff;
 	// vertical-align: middle;
@@ -677,7 +677,7 @@ only screen and (max-device-width:600px) {
 .en__registrants__ticketHead {
 	font-size: 1.5rem; // 1.5em
 	// font-weight: 700;
-	padding-bottom: 14px
+	padding-bottom: 0.875rem; // 14px
 }
 
 .en__registrants__group {
@@ -686,7 +686,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__registrants__registrant {
-	padding: 0 14px
+	padding: 0 0.875rem // 0 14px
 }
 
 .en__registrants__registrantHead {
@@ -694,7 +694,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__registrants__registrantDetails {
-	padding: 14px 0
+	padding: 0.875rem 0 // 14px 0
 }
 
 .en__registrants__registrantField {
@@ -720,7 +720,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__share {
-	margin-right: 18px
+	margin-right: 1.125rem; // 18px
 }
 
 .en__share--facebook.en__share--small {
@@ -728,7 +728,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__share--gplus.en__share--small {
-	margin-top: 2px
+	margin-top: 0.125rem // 2px
 }
 
 .en__share__button {
@@ -792,11 +792,11 @@ only screen and (max-device-width:600px) {
 
 .en__component--contactblock {
 	background-color: #f0f0f0;
-	padding: 10px
+	padding: 0.625rem; // 10px
 }
 
 .en__contact {
-	margin-bottom: 10px;
+	margin-bottom: 0.625rem; // 10px
 	// position: relative
 }
 
@@ -806,13 +806,13 @@ only screen and (max-device-width:600px) {
 
 .en__contact__detail {
 	background-color: #fff;
-	padding: 10px
+	padding: 0.625rem; // 10px
 }
 
 .en__contact__image {
 	// flex-grow: 0;
 	// flex-shrink: 0;
-	margin-right: 10px;
+	margin-right: 0.625rem; // 10px
 	width: 60px;
 	height: 60px
 }
@@ -843,7 +843,7 @@ only screen and (max-device-width:600px) {
 
 .en__contactMessage,
 .en__contactSubject {
-	padding-top: 10px
+	padding-top: 0.625rem; // 10px
 }
 
 .en__contactDetails {
@@ -877,11 +877,11 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contactDetails__select {
-	margin: 10px
+	margin: 0.625rem; // 10px
 }
 
 .en__contactDetails__rows {
-	margin-right: 35px
+	margin-right: 2.1875rem // 35px
 }
 
 .en__contactDetails__row--1 {
@@ -892,7 +892,7 @@ only screen and (max-device-width:600px) {
 .en__contact__toggle {
 	// cursor: pointer;
 	width: 60px;
-	height: 15px;
+	height: 0.9375rem; // 15px
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_open.png) center center no-repeat #fff;
 	// margin: 0 auto;
 	border-bottom-left-radius: var(--client-input-border-radius,$client-input-border-radius); // 5px
@@ -905,12 +905,12 @@ only screen and (max-device-width:600px) {
 
 .en__singleMessage {
 	background: #fff;
-	padding: 0 10px 10px;
+	padding: 0 0.625rem 0.625rem; // 0 10px 10px
 	// box-sizing: border-box
 }
 
 .en__singleMessage .en__contactSubject {
-	padding-top: 10px
+	padding-top: 0.625rem; // 10px
 }
 
 .en__contactDetails__background {
@@ -939,9 +939,9 @@ only screen and (max-device-width:600px) {
 
 .en__contactBackground {
 	// display: none;
-	padding: 20px;
+	padding: 1.25rem; // 20px
 	border-top: 1px solid #f0f0f0;
-	margin-top: 10px;
+	margin-top: 0.625rem; // 10px
 	// position: relative
 }
 
@@ -952,11 +952,11 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contact--showBackground .en__contactDetails {
-	min-height: 35px
+	min-height: 2.1875rem // 35px
 }
 
 .en__contact__actions .en__button:not(:last-child) {
-	margin-right: 10px
+	margin-right: 0.625rem; // 10px
 }
 
 .en__contact--open.en__contact--showBackground .en__contactBackground,
@@ -975,8 +975,8 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contactBackground__cycle {
-	width: 25px;
-	height: 16px;
+	width: 25px; // @TODO
+	height: 16px; // @TODO
 	// position: absolute;
 	// top: 0;
 	margin-top: -8px;
@@ -1005,7 +1005,7 @@ only screen and (max-device-width:600px) {
 
 .en__contactSection__content--uneditable,
 .en__contactSection__label {
-	padding-top: 10px
+	padding-top: 0.625rem; // 10px
 }
 
 .en__contactSection__content--uneditable .en__contactMessage__plainText {
@@ -1033,10 +1033,10 @@ only screen and (max-device-width:600px) {
 
 .en__tweetContact {
 	// background-color: #f0f0f0;
-	padding: 10px;
+	padding: 0.625rem; // 10px
 	width: 400px;
 	// position: relative;
-	margin-bottom: 10px
+	margin-bottom: 0.625rem; // 10px
 }
 
 .en__tweet,
@@ -1045,7 +1045,7 @@ only screen and (max-device-width:600px) {
 .en__tweetDisabled,
 .en__twitterTarget {
 	background-color: #fff;
-	padding: 10px
+	padding: 0.625rem; // 10px
 }
 
 .en__tweetBackgroundText,
@@ -1055,7 +1055,7 @@ only screen and (max-device-width:600px) {
 
 .en__twitterTarget__select {
 	// display: none;
-	margin: 0 10px 0 0
+	margin: 0 0.625rem 0 0 // 0 10px 0 0
 }
 
 .en__contacts--singleTweetMode .en__twitterTarget__select {
@@ -1076,7 +1076,7 @@ only screen and (max-device-width:600px) {
 	height: 60px;
 	width: 60px;
 	// flex-grow: 0;
-	margin-right: 10px
+	margin-right: 0.625rem; // 10px
 }
 
 .en__twitterTarget__image:before {
@@ -1092,7 +1092,7 @@ only screen and (max-device-width:600px) {
 	border: 1px solid #ccc;
 	// font-family: inherit;
 	// font-size: inherit;
-	padding: 10px;
+	padding: 0.625rem; // 10px
 	width: 100%;
 	height: 100px;
 	// box-sizing: border-box;
@@ -1144,14 +1144,14 @@ only screen and (max-device-width:600px) {
 	// top: 0;
 	// right: 0;
 	// cursor: pointer;
-	margin: 10px 10px 0 0
+	margin: 0.625rem 0.625rem 0 0 // 10px 10px 0 0
 }
 
 .en__tweetBackgroundText pre {
 	// font-family: inherit;
 	// white-space: pre-wrap;
 	// margin: 0;
-	padding-top: 10px;
+	padding-top: 0.625rem; // 10px
 	border-top: 1px solid #f0f0f0
 }
 
@@ -1172,7 +1172,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__component--ecardblock h2 {
-	margin: 20px 0 10px
+	margin: 1.25rem 0 0.625rem; // 20px 0 10px
 }
 
 .en__ecarditems__list {
@@ -1214,7 +1214,7 @@ only screen and (max-device-width:600px) {
 
 .en__ecarditems__button {
 	// cursor: pointer;
-	font-size: 16px;
+	font-size: 1rem; // 16px
 	color: #fff;
 	background: #ff4351;
 	padding: 5px 10px;
@@ -1229,8 +1229,8 @@ only screen and (max-device-width:600px) {
 	// right: 0;
 	// bottom: 0;
 	// font-weight: 700;
-	width: 32px;
-	height: 32px;
+	width: 32px; // @TODO
+	height: 32px; // @TODO
 	// font-size: 20px!important;
 	// padding: 0!important;
 	// font-family: arial!important
@@ -1245,7 +1245,7 @@ only screen and (max-device-width:600px) {
 	// width: 100%;
 	min-height: 200px;
 	border: 1px solid #bbb;
-	padding: 10px;
+	padding: 0.625rem; // 10px
 	// -webkit-box-sizing: border-box;
 	// -moz-box-sizing: border-box;
 	// box-sizing: border-box
@@ -1267,12 +1267,12 @@ only screen and (max-device-width:600px) {
 
 .en__ecardrecipients__email label,
 .en__ecardrecipients__name label {
-	margin: 0 10px 0 0
+	margin: 0 0.625rem 0 0 // 10px
 }
 
 .en__ecardrecipients__email input,
 .en__ecardrecipients__name input {
-	padding: 6px 10px;
+	padding: 0.375rem 0.625rem; // 6px 10px
 	margin: 0 32px 0 0;
 	width: 57% // @TODO Investigate, there has to be a better way to do this
 }
@@ -1285,13 +1285,13 @@ only screen and (max-device-width:600px) {
 .en__ecardrecipients__list {
 	min-height: 200px; // @TODO Investigate, there has to be a better way to do this
 	border: 1px solid #bbb;
-	padding: 10px;
-	margin: 20px 0 0;
+	padding: 0.625rem; // 10px
+	margin: 1.25rem 0 0; // 20px 0 0
 	background: #fff
 }
 
 .en__ecardrecipients__futureDelivery {
-	margin: 20px 0 0
+	margin: 1.25rem 0 0; // 20px 0 0
 }
 
 .en__ecardrecipients__futureDelivery label {
@@ -1387,8 +1387,8 @@ only screen and (max-device-width:600px) {
 	z-index: 9999;
 	// top: 0;
 	// right: 0;
-	line-height: 25px;
-	width: 25px;
+	line-height: 25px; // @TODO
+	width: 25px; // @TODO
 	// cursor: pointer;
 	// text-align: center;
 	font: Arial, sans-serif; // @TODO Investigate, there has to be a better way to do this
@@ -1412,7 +1412,7 @@ only screen and (max-device-width:600px) {
 	// right: 0;
 	background: rgba(0, 0, 0, .25);
 	// overflow-y: auto;
-	padding: 24px
+	padding: 1.5rem; // 24px
 }
 
 .en__hubOverlay--closed {
@@ -1472,13 +1472,13 @@ only screen and (max-device-width:600px) {
 	border-bottom: solid 1px #ccc;
 	border-radius: var(--client-input-border-radius,$client-input-border-radius) var(--client-input-border-radius,$client-input-border-radius) 0 0; // 6px 6px 0 0;
 	// position: relative;
-	min-height: 32px
+	min-height: 32px // @TODO
 }
 
 .en__hubOverlay__header h2 {
 	// margin: 0;
 	padding: 9px 32px 6px 24px;
-	font-size: 14px;
+	font-size: 0.875rem; // 14px
 	color: #333
 }
 
@@ -1488,7 +1488,7 @@ only screen and (max-device-width:600px) {
 	// top: 0;
 	// right: 0;
 	// bottom: 0;
-	width: 32px;
+	width: 32px; // @TODO
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_huboverlay_close.png) center center no-repeat;
 	// overflow: hidden;
 	text-indent: -999px // @TODO Investigate, there has to be a better way to do this
@@ -1497,7 +1497,7 @@ only screen and (max-device-width:600px) {
 .en__hubOverlay__content {
 	background: #fff;
 	border-radius: 0 0 var(--client-input-border-radius,$client-input-border-radius) var(--client-input-border-radius,$client-input-border-radius); // 0 0 6px 6px;
-	padding: 24px
+	padding: 1.5rem; // 24px
 }
 
 .en__supporterHubLogin {
@@ -1511,11 +1511,11 @@ only screen and (max-device-width:600px) {
 .en__supporterHubLogin__header {
 	background: #f5f5f5;
 	border-bottom: 1px solid #ccc;
-	padding: 12px
+	padding: 0.75rem; // 12px
 }
 
 .en__supporterHubLogin__body {
-	padding: 24px;
+	padding: 1.5rem; // 24px
 	background: #fff
 }
 
@@ -1525,7 +1525,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__supporterHubLogin__body .en__field__label {
-	margin-right: 10px;
+	margin-right: 0.625rem; // 10px
 	// flex-grow: 1;
 	// width: initial
 }
@@ -1539,8 +1539,8 @@ only screen and (max-device-width:600px) {
 
 .en__hubgadget__response {
 	// display: none;
-	margin: 10px 0;
-	padding: 0 10px
+	margin: 0.625rem 0; // 10px 0
+	padding: 0 0.625rem // 0 10px
 }
 
 .en__hubgadget__response--success {
@@ -1580,14 +1580,14 @@ only screen and (max-device-width:600px) {
 	margin-top: 6px;
 	// display: block;
 	border-radius: var(--client-input-border-radius,$client-input-border-radius); // 3px
-	padding: 12px
+	padding: 0.75rem; // 12px
 }
 
 .en__myImpact__hubCopy span {
 	// display: block;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_search.png) right center no-repeat;
 	border-radius: var(--client-input-border-radius,$client-input-border-radius); // 3px
-	padding: 12px 0
+	padding: 0.75rem 0; // 12px 0
 }
 
 .en__hubCopy__action {
@@ -1597,7 +1597,7 @@ only screen and (max-device-width:600px) {
 	float: right; // @TODO Help EN get away from using floats
 	padding: 8px 12px;
 	border-radius: var(--client-input-border-radius,$client-input-border-radius); // 5px
-	font-size: 20px;
+	font-size: 1.25rem; // 20px
 	margin: 0 0 24px
 }
 
@@ -1606,7 +1606,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubOverlay__impact .en__hubOverlay__header h2 {
-	font-size: 20px;
+	font-size: 1.25rem; // 20px
 	color: #2774a8
 }
 
@@ -1629,7 +1629,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__p2phub__site {
-	font-size: 15px;
+	font-size: 0.9375rem; // 15px
 	background: #f5f5f5;
 	padding: 0 12px;
 	margin-top: 6px
@@ -1640,7 +1640,7 @@ only screen and (max-device-width:600px) {
 	// text-decoration: none!important;
 	// display: block;
 	border-radius: var(--client-input-border-radius,$client-input-border-radius); // 3px
-	padding: 12px 0
+	padding: 0.75rem 0 // 12px 0
 }
 
 .en__p2phub__site .en__p2phub__login {
@@ -1652,7 +1652,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubPledge__icon {
-	margin-right: 24px
+	margin-right: 24px // @TODO
 }
 
 @media (max-width:768px) {
@@ -1708,10 +1708,10 @@ only screen and (max-device-width:600px) {
 
 .en__hubUpdateCC__toggle {
 	// cursor: pointer;
-	width: 24px;
-	margin-bottom: 18px;
+	width: 24px; // @TODO
+	margin-bottom: 1.125rem; // 18px
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_edit.png) center center no-repeat;
-	margin-left: 24px
+	margin-left: 24px // @TODO
 }
 
 .en__hubUpdateCC {
@@ -1746,7 +1746,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubMembership__membership {
-	margin: 12px 0;
+	margin: 0.75rem 0; // 12px 0
 	border: 1px solid #ccc
 }
 
@@ -1795,7 +1795,7 @@ only screen and (max-device-width:600px) {
 .en__hubMembership__membership__details {
 	// display: flex;
 	// box-sizing: border-box;
-	padding: 12px 0;
+	padding: 0.75rem 0; // 12px 0
 	margin: 0 -6px;
 	// flex-wrap: wrap
 }
@@ -1849,13 +1849,13 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubMemCardUpdate__form--left {
-	margin-right: 10px
+	margin-right: 0.625rem; // 10px
 }
 
 .en__hubMembership__card {
 	background: #f5f5f5;
 	// display: inline-block;
-	padding: 12px;
+	padding: 0.75rem; // 12px
 	// position: relative;
 	width: 320px; // @TODO Investigate, there has to be a better way to do this
 	font-size: .85rem // .85em
@@ -1884,14 +1884,14 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubMembership__card__update {
-	width: 24px;
-	height: 24px;
+	width: 24px; // @TODO
+	height: 24px; // @TODO
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_edit.png) center center no-repeat;
 	// cursor: pointer;
 	// text-indent: -99999px;
 	// position: absolute;
-	top: 12px;
-	right: 12px
+	top: 12px; // @TODO
+	right: 12px // @TODO
 }
 
 .en__hubMembershipRenew__actions {
@@ -1907,7 +1907,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubTxnGiving__header {
-	margin-bottom: 24px
+	margin-bottom: 1.5rem; // 24px
 }
 
 .en__hubTxnGiving__transactions__list ol {
@@ -1931,7 +1931,7 @@ only screen and (max-device-width:600px) {
 .en__hubTxnGiving__transactions__date {
 	// display: table-cell;
 	width: 33%; // @TODO Investigate, there has to be a better way to do this
-	padding-right: 12px
+	padding-right: 0.75rem; // 12px
 }
 
 .en__hubTxnGiving__transactions__total {
@@ -1943,7 +1943,7 @@ only screen and (max-device-width:600px) {
 	// display: none;
 	border: 1px solid #ccc;
 	border-radius: var(--client-input-border-radius,$client-input-border-radius); // 6px
-	margin-bottom: 12px
+	margin-bottom: 0.75rem; // 12px
 }
 
 .en__pgHeader {
@@ -1951,13 +1951,13 @@ only screen and (max-device-width:600px) {
 	border-top-right-radius: var(--client-input-border-radius,$client-input-border-radius); // 6px
 	background-color: #f5f5f5;
 	// overflow: hidden;
-	padding: 12px 18px
+	padding: 0.75rem 1.125rem // 12px 18px
 }
 
 .en__pg__detail,
 .en__pg__display,
 .en__pg__select {
-	padding: 12px
+	padding: 0.75rem; // 12px
 }
 
 .en__pg:last-child {
@@ -1992,8 +1992,8 @@ only screen and (max-device-width:600px) {
 }
 
 .en__pg__imageSelector label {
-	width: 12px;
-	font-weight: 12px; // @TODO Let EN know that they want "font-weight" not "weight"
+	width: 0.75rem; // 12px
+	font-weight: 0.75rem; // 12px - @TODO Let EN know that they want "font-weight" not "weight"
 	// display: inline-block;
 	// cursor: pointer
 }
@@ -2015,7 +2015,7 @@ only screen and (max-device-width:600px) {
 .en__pg__body {
 	// display: flex;
 	// flex-wrap: wrap;
-	padding: 12px
+	padding: 0.75rem; // 12px
 }
 
 .en__memselector,
@@ -2030,7 +2030,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__pg__optionType {
-	margin: 12px 12px 0 0
+	margin: 0.75rem 0.75rem 0 0; // 12px 12px 0 0
 }
 
 .en__pg__optionType label {
@@ -2039,7 +2039,7 @@ only screen and (max-device-width:600px) {
 
 .en__memtypelist__item {
 	border: 1px solid #ccc;
-	margin-bottom: 12px
+	margin-bottom: 0.75rem; // 12px
 }
 
 .en__memtypeselect .en__memactions {
@@ -2065,12 +2065,12 @@ only screen and (max-device-width:600px) {
 }
 
 .en__memselector__radio {
-	margin: 0 0 0 12px;
+	margin: 0 0 0 0.75rem; // 0 0 0 12px
 	// outline: 0
 }
 
 .en__memselector__label {
-	padding: 12px;
+	padding: 0.75rem; // 12px
 	// -webkit-user-select: none;
 	// -moz-user-select: none;
 	// -ms-user-select: none;
@@ -2095,7 +2095,7 @@ only screen and (max-device-width:600px) {
 	// flex-grow: 0;
 	// flex-shrink: 0;
 	// font-size: 0;
-	padding: 12px
+	padding: 0.75rem; // 12px
 }
 
 .en__memimage img {
@@ -2109,7 +2109,7 @@ only screen and (max-device-width:600px) {
 	// flex-grow: 1;
 	// flex-shrink: 0;
 	// flex-basis: 0;
-	padding: 12px;
+	padding: 0.75rem; // 12px
 	min-width: initial // 350px - Set to no min-width
 }
 
@@ -2157,7 +2157,7 @@ only screen and (max-device-width:600px) {
 .en__memtyperenew__orText {
 	background-color: #fff;
 	// display: inline-block;
-	padding: 10px
+	padding: 0.625rem; // 10px
 }
 
 .en__memtyperenew__page:not(.en__memtyperenew__page--active) {
@@ -2172,7 +2172,7 @@ only screen and (max-device-width:600px) {
 .en__member {
 	border: 1px solid #ccc;
 	// padding: 0;
-	margin-bottom: 10px;
+	margin-bottom: 0.625rem; // 10px
 	background-color: #fff;
 	// position: relative
 }
@@ -2221,7 +2221,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__member__details {
-	padding: 10px
+	padding: 0.625rem; // 10px
 }
 
 .en__member--open .en__member__row {
@@ -2252,7 +2252,7 @@ only screen and (max-device-width:600px) {
 	// right: 0;
 	background: rgba(0, 0, 0, .25);
 	// overflow-y: auto;
-	padding: 24px
+	padding: 1.5rem; // 24px
 }
 
 .en__overlay__popup {
@@ -2275,7 +2275,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__overlay__message {
-	padding: 12px
+	padding: 0.75rem; // 12px
 }
 
 .en__overlay__message--success {
@@ -2296,13 +2296,13 @@ only screen and (max-device-width:600px) {
 	border-bottom: solid 1px #ccc;
 	border-radius: var(--client-input-border-radius,$client-input-border-radius) var(--client-input-border-radius,$client-input-border-radius) 0 0; // 6px 6px 0 0;
 	// position: relative;
-	min-height: 32px
+	min-height: 32px // @TODO
 }
 
 .en__overlay__header h2 {
 	// margin: 0;
-	padding: 9px 32px 6px 24px;
-	font-size: 14px;
+	padding: 0.5626rem 2rem 0.375rem 1.5rem; // 9px 32px 6px 24px
+	font-size: 0.875rem; // 14px
 	color: #333
 }
 
@@ -2312,7 +2312,7 @@ only screen and (max-device-width:600px) {
 	// top: 0;
 	// right: 0;
 	// bottom: 0;
-	width: 32px;
+	width: 32px; // @TODO
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_huboverlay_close.png) center center no-repeat;
 	// overflow: hidden;
 	text-indent: -999px
@@ -2326,7 +2326,7 @@ only screen and (max-device-width:600px) {
 
 .en__component--callcontactblock .en__contacts {
 	// background-color: #f0f0f0;
-	padding: 10px
+	padding: 0.625rem; // 10px
 }
 
 .en__component--callcontactblock .en__component--callcontactblock__officehours,
@@ -2344,22 +2344,22 @@ only screen and (max-device-width:600px) {
 }
 
 .en__component--callcontactblock .en__contact__description {
-	margin-bottom: 10px
+	margin-bottom: 0.625rem; // 10px
 }
 
 .en__c2c__step {
 	// display: none;
-	margin: 24px
+	margin: 1.5rem; // 24px
 }
 
 .en__c2c__actions {
 	// display: flex;
 	// justify-content: space-between;
-	margin-top: 24px
+	margin-top: 1.5rem; // 24px
 }
 
 .en__contact--call__fullQueue {
-	margin-top: 10px
+	margin-top: 0.625rem; // 10px
 }
 
 .en__c2c__survey__form .en__status--error,
@@ -2371,7 +2371,7 @@ only screen and (max-device-width:600px) {
 	// display: flex;
 	// justify-content: space-between;
 	max-width: 300px;
-	margin: 12px 0
+	margin: 0.75rem 0; // 12px 0
 }
 
 .en__c2c__survey__rate .en__button {
@@ -2438,8 +2438,8 @@ only screen and (max-device-width:600px) {
 
 .en__stripeButtons__preview .en__stripeButtons__previewIcon {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/gateways/buttons/stripe-icon.png) 0 center no-repeat;
-	width: 22px;
-	height: 22px;
+	width: 22px; // @TODO
+	height: 22px; // @TODO
 	// display: inline-block;
 	margin: 0 0 0 5px;
 	// position: relative;
