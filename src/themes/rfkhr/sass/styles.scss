@@ -14,10 +14,10 @@
 
 /* Sum of all MAX values of the Body Columns + 1px */
 @media screen and (min-width: 1231px) {
-  #engrid.layout-centerleft1col,
-  #engrid.layout-centercenter1col,
-  #engrid.layout-centercenter1col-wide,
-  #engrid.layout-centerright1col {
+  [data-engrid-layout="centerleft1col"],
+  [data-engrid-layout="centercenter1col"],
+  [data-engrid-layout="centercenter1col-wide"],
+  [data-engrid-layout="centerright1col"] {
     .content-preFooter {
       background-size: cover;
     }
@@ -46,7 +46,7 @@ body:not(#en__pagebuilder).footer-below-fold
 * ##########################################################
 */
 
-/* @TODO This should actually be .layout-right1col but we didn't have time to make it that way */
+/* @TODO This should actually be [data-engrid-layout="right1col"] but we didn't have time to make it that way */
 #engrid {
   .body-header {
     margin-top: 0;
@@ -70,7 +70,7 @@ body:not(#en__pagebuilder).footer-below-fold
 }
 
 // @media screen and (min-width: 600px) {
-//   #engrid.layout-centerleft1col {
+//   [data-engrid-layout="centerleft1col"] {
 //     /* prettier-ignore */
 //     .en__component--advrow,
 //     .en__component--advrow .pseudo-subgrid {
