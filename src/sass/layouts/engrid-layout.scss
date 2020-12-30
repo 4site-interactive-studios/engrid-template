@@ -533,7 +533,7 @@ body:not(#en__pagebuilder)
   .page-backgroundImage:not(.page-backgroundImageSet)::before {
   background-position: top left;
   background-repeat: repeat;
-  // background-image: var(--background-image,#{$background-image});
+  // background-image: var(--background-image,#{$default-background-image}); // @TODO What was the point of the hash and brackets #{$...}?
   background-image: var(--background-image); //@TODO Get SCSS variable working
   will-change: transform; // creates a new paint layer
 }
