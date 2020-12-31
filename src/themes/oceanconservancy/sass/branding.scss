@@ -862,11 +862,11 @@ body:not(#en__pagebuilder).footer-below-fold
   color: var(--theme-white);
 }
 
-.en__field--donationAmt
-  .en__field__element--radio
-  .en__field__item:not(.en__field__item--other) {
-  max-width: 100px;
-}
+// .en__field--donationAmt
+//   .en__field__element--radio
+//   .en__field__item:not(.en__field__item--other) {
+//   max-width: 100px;
+// }
 
 .en__component
   .en__field--donationAmt.en__field.en__field--radio

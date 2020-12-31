@@ -920,7 +920,7 @@ body:not(#en__pagebuilder).footer-below-fold
 .en__component--formblock
   .en__field--donationAmt
   div.en__field__item:last-of-type {
-  max-width: 200px;
+  max-width: calc(200px + 1rem);
   margin: 0 0.25rem 1rem 0.25rem !important;
   margin-top: 0 !important;
   margin-right: 0.5rem !important;
@@ -952,11 +952,11 @@ body:not(#en__pagebuilder).footer-below-fold
   color: var(--theme-white);
 }
 
-.en__field--donationAmt
-  .en__field__element--radio
-  .en__field__item:not(.en__field__item--other) {
-  max-width: 100px;
-}
+// .en__field--donationAmt
+//   .en__field__element--radio
+//   .en__field__item:not(.en__field__item--other) {
+//   max-width: 100px;
+// }
 
 .en__component
   .en__field--donationAmt.en__field.en__field--radio
