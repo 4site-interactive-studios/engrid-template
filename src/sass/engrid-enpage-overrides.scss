@@ -101,7 +101,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__component--hubgadget>img {
-	height: 56px
+	height: 3.5rem // 56px
 }
 
 .en__captcha,
@@ -111,7 +111,7 @@ only screen and (max-device-width:600px) {
 
 .en__field__label {
 	// display: inline-block;
-	width: initial; // 180px;
+	width: auto; // 180px;
 }
 
 .en__field__helpText {
@@ -162,7 +162,7 @@ only screen and (max-device-width:600px) {
 .en__field__input--textarea,
 .en__field__input--tripleselect,
 .en__field__input--tripletext {
-	padding: 6px;
+	padding: 0.375rem; // 6px
 	// box-sizing: border-box
 }
 
@@ -184,7 +184,7 @@ only screen and (max-device-width:600px) {
 
 .en__field__input--other {
 	width: initial;  // 100px - Set to no min-width
-	margin: -1px 0 0 5px
+	margin: 0 // -1px 0 0 5px
 }
 
 .en__field__input--splittext,
@@ -197,7 +197,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__field__item {
-	padding: 6px 0
+	padding: 0.375rem 0 // 6px 0
 }
 
 .en__field__element--layoutvertical .en__field__item,
@@ -241,7 +241,7 @@ only screen and (max-device-width:600px) {
 
 .en__field__element--rating .en__field__item,
 .en__pagination {
-	padding: 6px
+	padding: 0.375rem // 6px
 }
 
 .en__rangeFieldLabels {
@@ -323,19 +323,19 @@ only screen and (max-device-width:600px) {
 
 .en__button--ajax--inprogress {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_loading.gif) center center no-repeat; // @TODO
-	background-size: 30px 30px // @TODO
+	background-size: 1.875rem 1.875rem // 30px 30px - @TODO
 }
 
 .en__button--ajax--done {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en__end--30.png) center center no-repeat; // @TODO
-	background-size: 30px 30px // @TODO
+	background-size: 1.875rem 1.875rem // 30px 30px - @TODO
 }
 
 .en__orderSummary {
 	// display: table;
 	// width: 100%;
 	// table-layout: fixed;
-	padding: 7px
+	padding: 0.4375rem // 7px
 }
 
 .en__orderSummary__additional,
@@ -348,7 +348,7 @@ only screen and (max-device-width:600px) {
 .en__orderSummary__data,
 .en__orderSummary__header {
 	// display: table-cell;
-	padding: 7px
+	padding: 0.4375rem // 7px
 }
 
 .en__orderSummary__data--promo {
@@ -363,7 +363,7 @@ only screen and (max-device-width:600px) {
 .en__tickets {
 	// width: 100%;
 	// box-sizing: border-box;
-	padding: 0 14px;
+	padding: 0 0.875rem; // 0 14px;
 	// display: table;
 	// table-layout: fixed
 }
@@ -460,12 +460,12 @@ only screen and (max-device-width:600px) {
 
 .en__ticket__plus {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_plus.png) center center no-repeat #fff;
-	margin-left: 5px // @TODO Investigate, this seems unnecessary
+	margin-left: 0.3125rem // 5px - @TODO Investigate, this seems unnecessary
 }
 
 .en__ticket__minus {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_minus.png) center center no-repeat #fff;
-	margin-right: 5px // @TODO Investigate, this seems unnecessary
+	margin-right: 0.3125rem // 5px - @TODO Investigate, this seems unnecessary
 }
 
 .en__ticket__soldout,
@@ -542,16 +542,16 @@ only screen and (max-device-width:600px) {
 .en__lightbox__box {
 	// margin: 0 auto;
 	// position: absolute;
-	top: 20%;
+	top: 20vh; // 20% - @TODO Investigate to see if there's a better way to do this
 	// left: 0;
 	// right: 0;
 	// bottom: 0;
-	width: 35em // @TODO Investigate to see if there's a better way to do this
+	width: 35vw // 35em - @TODO Investigate to see if there's a better way to do this
 }
 
 .en__lightbox__header {
 	// background-color: #3E9BD6;
-	padding: 1em;
+	padding: 1rem; // 1em
 	// color: #fff;
 	border-top-left-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
 	border-top-right-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
@@ -671,7 +671,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__registrants {
-	padding: 0 14px
+	padding: 0 0.875rem // 0 14px
 }
 
 .en__registrants__ticketHead {
@@ -698,14 +698,14 @@ only screen and (max-device-width:600px) {
 }
 
 .en__registrants__registrantField {
-	margin-bottom: 7px
+	margin-bottom: 0.4375rem // 7px
 }
 
 .en__registrants__registrantLabel {
 	// display: inline-block;
 	min-width: initial; // 14rm - Set to no min-width @TODO this is such a strange default size
-	margin-bottom: 7px;
-	margin-right: 7px
+	margin-bottom: 0.4375rem; // 7px;
+	margin-right: 0.4375rem // 7px
 }
 
 .en__registrants__registrantInput {
@@ -732,8 +732,8 @@ only screen and (max-device-width:600px) {
 }
 
 .en__share__button {
-	height: 50px;
-	width: 50px;
+	height: 3.125rem; // 50px
+	width: auto; // 50px - Set the width to Auto and allow them to resize as needed
 	// display: block
 }
 
@@ -751,7 +751,7 @@ only screen and (max-device-width:600px) {
 
 .en__share__button--small.en__share__button--twitter {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_twitter--small.png) center 1px no-repeat;
-	width: 65px
+	width: auto; // 65px - Set the height to Auto and allow it to resize as needed
 }
 
 .en__socialShare__image,
@@ -787,7 +787,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__socialShare {
-	padding: 6px
+	padding: 0.375rem // 6px
 }
 
 .en__component--contactblock {
@@ -813,8 +813,8 @@ only screen and (max-device-width:600px) {
 	// flex-grow: 0;
 	// flex-shrink: 0;
 	margin-right: 0.625rem; // 10px
-	width: 60px;
-	height: 60px
+	width: 3.75rem; // 60px;
+	height: 3.75rem // 60px
 }
 
 .en__contact__image img {
@@ -872,7 +872,7 @@ only screen and (max-device-width:600px) {
 .en__contactMessage__plainText {
 	// font-family: inherit;
 	// font-size: inherit;
-	padding: 6px;
+	padding: 0.375rem; // 6px
 	height: 200px
 }
 
@@ -891,7 +891,7 @@ only screen and (max-device-width:600px) {
 
 .en__contact__toggle {
 	// cursor: pointer;
-	width: 60px;
+	width: 3.75rem; // 60px;
 	height: 0.9375rem; // 15px
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_open.png) center center no-repeat #fff;
 	// margin: 0 auto;
@@ -915,8 +915,8 @@ only screen and (max-device-width:600px) {
 
 .en__contactDetails__background {
 	// display: none;
-	width: 45px;
-	height: 45px;
+	width: 2.8125rem; // 45px
+	height: 2.8125rem; // 45px
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_background.png) center center no-repeat #f0f0f0;
 	// position: absolute;
 	// top: 0;
@@ -965,7 +965,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contactBackground__text {
-	margin-top: 5px
+	margin-top: 0.3125rem // 5px
 }
 
 .en__contactBackground__text pre {
@@ -975,11 +975,11 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contactBackground__cycle {
-	width: 25px; // @TODO
-	height: 16px; // @TODO
+	width: 1.5625rem; // 25px
+	height: 1rem; // 16px
 	// position: absolute;
 	// top: 0;
-	margin-top: -8px;
+	margin-top: 0; // -8px - @TODO There has to be a beter way to do this
 	// cursor: pointer
 }
 
@@ -1034,7 +1034,7 @@ only screen and (max-device-width:600px) {
 .en__tweetContact {
 	// background-color: #f0f0f0;
 	padding: 0.625rem; // 10px
-	width: 400px;
+	width: auto; // 400px @TODO - Should we set width: 100% and max-width 25rem (400px)?
 	// position: relative;
 	margin-bottom: 0.625rem; // 10px
 }
@@ -1073,8 +1073,8 @@ only screen and (max-device-width:600px) {
 }
 
 .en__twitterTarget__image {
-	height: 60px;
-	width: 60px;
+	height: 3.75rem; // 60px
+	width: 3.75rem; // 60px
 	// flex-grow: 0;
 	margin-right: 0.625rem; // 10px
 }
@@ -1083,8 +1083,8 @@ only screen and (max-device-width:600px) {
 	// content: ' ';
 	// display: block;
 	// position: absolute;
-	height: 60px;
-	width: 60px;
+	height: 3.75rem; // 60px
+	width: 3.75rem; // 60px
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_twitter_fallback.png) center center no-repeat #f0f0f0
 }
 
@@ -1093,8 +1093,8 @@ only screen and (max-device-width:600px) {
 	// font-family: inherit;
 	// font-size: inherit;
 	padding: 0.625rem; // 10px
-	width: 100%;
-	height: 100px;
+	width: 100%; // @TODO - Is this neccisary?
+	height: 250px;  // 100px - Set a larger default height for Text Areas
 	// box-sizing: border-box;
 	// resize: none
 }
@@ -1104,7 +1104,7 @@ only screen and (max-device-width:600px) {
 	// font-weight: 700;
 	font-size: 1.5rem; // 1.5em;
 	// color: #fff;
-	padding: 5px 10px;
+	padding: 0.3125rem 0.625rem; // 5px 10px;
 	// display: block
 }
 
@@ -1112,7 +1112,7 @@ only screen and (max-device-width:600px) {
 .en__tweetButton__sent {
 	background-color: #CC0001;
 	// border: 0;
-	border-radius: 5px;
+	border-radius: var(--theme-button-border-radius, $default-button-border-radius); // 5px
 	// padding: 0;
 	// text-align: center;
 	// display: inline-block
@@ -1137,8 +1137,8 @@ only screen and (max-device-width:600px) {
 }
 
 .en__tweetContact .en__tweetBackgroundToggle {
-	width: 45px;
-	height: 45px;
+	width: 2.8125rem; // 45px
+	height: 2.8125rem; // 45px
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_background.png) center center no-repeat #f0f0f0;
 	// position: absolute;
 	// top: 0;
@@ -1181,17 +1181,17 @@ only screen and (max-device-width:600px) {
 
 .en__ecarditems__thumb {
 	// display: inline-block;
-	margin: 0 20px 20px 0;
-	width: 200px; // @TODO Investigate, there has to be a better way to do this
-	height: 200px; // @TODO Investigate, there has to be a better way to do this
+	margin: 0 1.25rem 1.25rem 0; // 0 20px 20px 0;
+	width: 12.5rem; // 200px - @TODO Investigate, there has to be a better way to do this
+	height: 12.5rem; // 200px - @TODO Investigate, there has to be a better way to do this
 	// cursor: pointer
 }
 
 .en__ecarditems__thumb img {
 	border: 1px solid #ff4351;
 	opacity: .5;
-	width: 200px; // @TODO Investigate, there has to be a better way to do this
-	height: 200px; // @TODO Investigate, there has to be a better way to do this
+	width: 12.5rem; // 200px - @TODO Investigate, there has to be a better way to do this
+	height: 12.5rem; // 200px - @TODO Investigate, there has to be a better way to do this
 	// margin: 0
 }
 
@@ -1217,7 +1217,7 @@ only screen and (max-device-width:600px) {
 	font-size: 1rem; // 16px
 	color: #fff;
 	background: #ff4351;
-	padding: 5px 10px;
+	padding: 0.3125rem 0.625rem; // 5px 10px;
 	// margin: 0;
 	// border: 0;
 	border-radius: var(--theme-button-border-radius, $default-button-border-radius); // 4px
@@ -1243,7 +1243,7 @@ only screen and (max-device-width:600px) {
 
 .en__ecardmessage__default {
 	// width: 100%;
-	min-height: 200px;
+	min-height: 250px;  // 200px - Set a larger default height for Text Areas @TODO, is this actually a text area?
 	border: 1px solid #bbb;
 	padding: 0.625rem; // 10px
 	// -webkit-box-sizing: border-box;
@@ -1273,7 +1273,7 @@ only screen and (max-device-width:600px) {
 .en__ecardrecipients__email input,
 .en__ecardrecipients__name input {
 	padding: 0.375rem 0.625rem; // 6px 10px
-	margin: 0 32px 0 0;
+	margin: 0 2rem 0 0; // 0 32px 0 0
 	width: 57% // @TODO Investigate, there has to be a better way to do this
 }
 
@@ -1283,7 +1283,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__ecardrecipients__list {
-	min-height: 200px; // @TODO Investigate, there has to be a better way to do this
+	min-height: 250px; // 200px - @TODO Investigate, there has to be a better way to do this
 	border: 1px solid #bbb;
 	padding: 0.625rem; // 10px
 	margin: 1.25rem 0 0; // 20px 0 0
@@ -1351,8 +1351,8 @@ only screen and (max-device-width:600px) {
 .en__ecarditems__prevwrap {
 	left: 50%;
 	top: 50%;
-	width: 600px; // @TODO Investigate, there has to be a better way to do this
-	height: 800px; // @TODO Investigate, there has to be a better way to do this
+	width: 600px; //  @TODO There has to be a better way to do this than a fixed width
+	height: 80vh; // 800xp - @TODO There has to be a better way to do this than a fixed height
 	// position: absolute;
 	z-index: 9
 }
@@ -1387,8 +1387,8 @@ only screen and (max-device-width:600px) {
 	z-index: 9999;
 	// top: 0;
 	// right: 0;
-	line-height: 25px; // @TODO
-	width: 25px; // @TODO
+	line-height: 1.5625rem; // 25px - @TODO
+	width: 1.5625rem; // 25px - @TODO There has to be a better way to do this than a fixed width
 	// cursor: pointer;
 	// text-align: center;
 	font: Arial, sans-serif; // @TODO Investigate, there has to be a better way to do this
@@ -1477,7 +1477,7 @@ only screen and (max-device-width:600px) {
 
 .en__hubOverlay__header h2 {
 	// margin: 0;
-	padding: 9px 32px 6px 24px;
+	padding: 0.5625rem 2rem 0.375rem 1.5rem; // 9px 32px 6px 24px;
 	font-size: 0.875rem; // 14px
 	color: #333
 }
@@ -1488,7 +1488,7 @@ only screen and (max-device-width:600px) {
 	// top: 0;
 	// right: 0;
 	// bottom: 0;
-	width: 32px; // @TODO
+	width: 2rem; // 32px - @TODO There has to be a better way to do this than a fixed width
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_huboverlay_close.png) center center no-repeat;
 	// overflow: hidden;
 	text-indent: -999px // @TODO Investigate, there has to be a better way to do this
@@ -1501,7 +1501,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__supporterHubLogin {
-	width: 420px; // @TODO Investigate, there has to be a better way to do this
+	width: 26.25rem; // 420px - @TODO There has to be a better way to do this than a fixed width
 	// margin: auto;
 	border: 1px solid #ccc;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 6px
@@ -1570,14 +1570,14 @@ only screen and (max-device-width:600px) {
 
 .en__myImpact__hubCopy {
 	background: #f5f5f5;
-	padding: 0 12px;
+	padding: 0 0.75rem; // 0 12px;
 	margin-top: 6px;
 	// cursor: pointer
 }
 
 .en__myImpact__hubCopyEmpty {
 	background: #f5f5f5;
-	margin-top: 6px;
+	margin-top: 0.375rem; // 6px
 	// display: block;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
 	padding: 0.75rem; // 12px
@@ -1595,10 +1595,10 @@ only screen and (max-device-width:600px) {
 	color: #fff;
 	// display: inline-block;
 	float: right; // @TODO Help EN get away from using floats
-	padding: 8px 12px;
+	padding: 0.5rem 0.75rem; // 8px 12px;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 5px
 	font-size: 1.25rem; // 20px
-	margin: 0 0 24px
+	margin: 0 0 1.5rem // 0 0 24px
 }
 
 .en__hubCopy__content {
@@ -1612,7 +1612,7 @@ only screen and (max-device-width:600px) {
 
 .en__hubOverlay__impact .en__hubOverlay__content>div {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_thumbsup.png) no-repeat;
-	padding: 0 0 0 160px
+	padding: 0 0 0 11.25rem // 0 0 0 160px
 }
 
 .en__hubOverlay__impact .en__hubOverlay__content.hubdetail>div {
@@ -1625,14 +1625,14 @@ only screen and (max-device-width:600px) {
 }
 
 .en__p2phub__sites {
-	margin: 0 0 24px
+	margin: 0 0 1.5rem // 0 0 24px
 }
 
 .en__p2phub__site {
-	font-size: 0.9375rem; // 15px
+	font-size: 0.9375rem; // 15px;
 	background: #f5f5f5;
-	padding: 0 12px;
-	margin-top: 6px
+	padding: 0 0.75rem; // 0 12px;
+	margin-top: 0.375rem // 6px
 }
 
 .en__p2phub__site a {
@@ -1652,7 +1652,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubPledge__icon {
-	margin-right: 24px // @TODO
+	margin-right: 1.5rem // 24px
 }
 
 @media (max-width:768px) {
@@ -1708,10 +1708,10 @@ only screen and (max-device-width:600px) {
 
 .en__hubUpdateCC__toggle {
 	// cursor: pointer;
-	width: 24px; // @TODO
+	width: 1.5rem; // 25px - @TODO There has to be a better way to do this than a fixed width
 	margin-bottom: 1.125rem; // 18px
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_edit.png) center center no-repeat;
-	margin-left: 24px // @TODO
+	margin-left: 1.5rem; // 25px
 }
 
 .en__hubUpdateCC {
@@ -1761,27 +1761,27 @@ only screen and (max-device-width:600px) {
 	// max-height: 0;
 	// transition: max-height, .2s ease-in-out;
 	// overflow: hidden;
-	padding: 0 12px
+	padding: 0 0.75rem // 0 12px
 }
 
 .en__hubMembership__membership__summary__name {
 	// flex-grow: 1;
-	padding: 9px 12px
+	padding: 0.5625rem 0.75rem // 9px 12px
 }
 
 .en__hubMembership__membership__summary__status {
-	padding: 9px 12px;
+	padding: 0.5625rem 0.75rem // 9px 12px
 	width: 80px
 }
 
 .en__hubMembership__membership__summary__date {
-	padding: 9px 12px;
+	padding: 0.5625rem 0.75rem // 9px 12px
 	width: 120px
 }
 
 .en__hubMembership__membership__summary__edit {
 	// padding: 0;
-	width: 48px // @TODO Investigate, there has to be a better way to do this
+	width: 3rem // 48px - @TODO Investigate, there has to be a better way to do this than setting a fixed width
 }
 
 .open .en__hubMembership__membership__full {
@@ -1796,7 +1796,7 @@ only screen and (max-device-width:600px) {
 	// display: flex;
 	// box-sizing: border-box;
 	padding: 0.75rem 0; // 12px 0
-	margin: 0 -6px;
+	margin: 0; // 0 -6px - Remove negative margins
 	// flex-wrap: wrap
 }
 
@@ -1812,17 +1812,17 @@ only screen and (max-device-width:600px) {
 
 .en__hubMembership__membership__detail__label {
 	// font-weight: 700;
-	width: 180px; // @TODO Investigate, there has to be a better way to do this
-	padding: 6px
+	width: 11.25rem; // 180px - @TODO Investigate, there has to be a better way to do this than setting a fixed width
+	padding: 0.375rem // 6px
 }
 
 .en__hubMembership__membership__detail__value {
 	// flex-grow: 1;
-	padding: 6px
+	padding: 0.375rem // 6px
 }
 
 .en__hubMembership__recurring {
-	padding: 9px 0
+	padding: 0.5625rem 0 // 9px 0
 }
 
 .en__hubMemCardUpdate__page--success {
@@ -1857,7 +1857,7 @@ only screen and (max-device-width:600px) {
 	// display: inline-block;
 	padding: 0.75rem; // 12px
 	// position: relative;
-	width: 320px; // @TODO Investigate, there has to be a better way to do this
+	width: 20rem; // 320px; - @TODO Investigate, there has to be a better way to do this than setting a fixed width
 	font-size: .85rem // .85em
 }
 
@@ -1871,7 +1871,7 @@ only screen and (max-device-width:600px) {
 .en__hubMembership__card dt {
 	// flex: 1 0 50%;
 	// box-sizing: border-box;
-	padding: 6px 12px;
+	padding: 0.375rem 0.75rem; // 6px 12px
 	// margin: 0;
 	// font-weight: 700
 }
@@ -1879,19 +1879,19 @@ only screen and (max-device-width:600px) {
 .en__hubMembership__card dd {
 	// flex: 1 0 50%;
 	// box-sizing: border-box;
-	padding: 6px 12px;
+	padding: 0.375rem 0.75rem; // 6px 12px
 	// margin: 0
 }
 
 .en__hubMembership__card__update {
-	width: 24px; // @TODO
-	height: 24px; // @TODO
+	width: 1.5rem; // 24px
+	height: 1.5rem; // 24px
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_edit.png) center center no-repeat;
 	// cursor: pointer;
 	// text-indent: -99999px;
 	// position: absolute;
-	top: 12px; // @TODO
-	right: 12px // @TODO
+	top: 0.75rem; // 12px
+	right: 0.75rem // 12px
 }
 
 .en__hubMembershipRenew__actions {
@@ -1919,8 +1919,8 @@ only screen and (max-device-width:600px) {
 .en__hubTxnGiving__transactions__list li {
 	border: 1px solid #ccc;
 	font-size: .85rem; // .85em
-	margin: 6px 0;
-	padding: 6px
+	margin: 0.375rem 0; // 6px 0
+	padding: 0.375rem // 6px
 }
 
 .en__hubTxnGiving__transactions__header {
@@ -1983,7 +1983,7 @@ only screen and (max-device-width:600px) {
 
 .en__pg__imageSelector {
 	// text-align: center;
-	margin-top: 6px
+	margin-top: 0.375rem // 6px
 }
 
 .en__pg__imageSelector input,
@@ -2005,9 +2005,9 @@ only screen and (max-device-width:600px) {
 
 .en__pg__imageRadio {
 	// display: inline-block;
-	height: 6px;
-	width: 6px;
-	border-radius: 6px; // @TODO would 50% or 100% work?
+	height: 0.375rem; // 6px
+	width: 0.375rem; // 6px
+	border-radius: 0.375rem; // 6px - @TODO would 50% or 100% work?
 	border: 1px solid #9E9E9E;
 	// cursor: pointer
 }
@@ -2034,7 +2034,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__pg__optionType label {
-	margin-right: 6px
+	margin-right: 0.375rem // 6px
 }
 
 .en__memtypelist__item {
@@ -2053,7 +2053,7 @@ only screen and (max-device-width:600px) {
 
 .en__memselector__item {
 	border: 1px solid #ccc;
-	margin: 6px;
+	margin: 0.375rem; // 6px
 	// display: flex;
 	// align-items: center
 }
@@ -2091,7 +2091,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__memimage {
-	max-width: 300px; // @TODO Investigate, there has to be a better way to do this
+	max-width: 18.75rem; // 300px - @TODO Investigate, there has to be a better way to do this
 	// flex-grow: 0;
 	// flex-shrink: 0;
 	// font-size: 0;
@@ -2126,7 +2126,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubOverlay--memtyperenew .en__hubOverlay__popup {
-	max-width: 600px // @TODO Investigate, there has to be a better way to do this
+	max-width: 37.5rem // 600px @TODO Investigate, there has to be a better way to do this
 }
 
 .en__hubOverlay--memtyperenew .en__field__element {
@@ -2140,7 +2140,7 @@ only screen and (max-device-width:600px) {
 .en__memtyperenew__message {
 	// border-style: dashed;
 	border-width: 1px;
-	padding: 0 10px;
+	padding: 0 0.625rem; // 0 10px;
 	// display: none
 }
 
@@ -2182,14 +2182,14 @@ only screen and (max-device-width:600px) {
 	// justify-content: space-between;
 	// align-items: center;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_background.png) left 10px center no-repeat;
-	padding: 0 20px 0 52px;
-	min-height: 52px
+	padding: 0 1.25rem 0 3.25rem; // 0 20px 0 52px;
+	min-height: 3.25rem // 52px
 }
 
 .en__member__toggle {
 	// display: none;
-	width: 16px;
-	height: 16px;
+	width: 1rem; // 16px
+	height: 1rem; // 16px
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_close.png) center center no-repeat
 }
 
@@ -2205,9 +2205,9 @@ only screen and (max-device-width:600px) {
 	border: 1px solid #ccc;
 	border-radius: var(--theme-button-border-radius, $default-button-border-radius); // 5px
 	height: 3rem; // 3em
-	padding: 0 10px;
+	padding: 0 0.625rem; // 0 10px;
 	// cursor: pointer;
-	width: 160px
+	width: 10rem // 160px @TODO - There has to be a better way to do this than setting a fixed width
 }
 
 .en__member--closed .en__member__openButton,
@@ -2260,7 +2260,7 @@ only screen and (max-device-width:600px) {
 	// margin: auto;
 	border-radius: var(--theme-button-border-radius, $default-button-border-radius); // 6px
 	box-shadow: 0 0 6px 3px rgba(0, 0, 0, .2);
-	max-width: 800px // @TODO Investigate, there has to be a better way to do this
+	max-width: 50rem // 800px- @TODO Investigate, there has to be a better way to do this
 }
 
 .en__overlay__loading {
@@ -2271,7 +2271,7 @@ only screen and (max-device-width:600px) {
 	// left: 0;
 	// right: 0;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_loading.gif) center center no-repeat #fff;
-	border-radius: 6px
+	border-radius: 0.0625rem // 6px
 }
 
 .en__overlay__message {
@@ -2296,7 +2296,7 @@ only screen and (max-device-width:600px) {
 	border-bottom: solid 1px #ccc;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius) var(--theme-input-border-radius, $default-input-border-radius) 0 0; // 6px 6px 0 0;
 	// position: relative;
-	min-height: 32px // @TODO
+	min-height: 2rem // 32px
 }
 
 .en__overlay__header h2 {
@@ -2312,7 +2312,7 @@ only screen and (max-device-width:600px) {
 	// top: 0;
 	// right: 0;
 	// bottom: 0;
-	width: 32px; // @TODO
+	width: 2rem; // 32px;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_huboverlay_close.png) center center no-repeat;
 	// overflow: hidden;
 	text-indent: -999px
@@ -2370,7 +2370,7 @@ only screen and (max-device-width:600px) {
 .en__c2c__survey__rate {
 	// display: flex;
 	// justify-content: space-between;
-	max-width: 300px;
+	max-width: 18.75rem; // 300px
 	margin: 0.75rem 0; // 12px 0
 }
 
@@ -2407,7 +2407,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__stripeButtons__preview {
-	max-width: 750px; // @TODO Investigate, there has to be a better way to do this
+	max-width: 46.875rem; // 750px - @TODO Investigate, there has to be a better way to do this
 	// display: block;
 	// background: #32325d;
 	border-radius: var(--theme-button-border-radius, $default-button-border-radius); // 5px
@@ -2417,7 +2417,7 @@ only screen and (max-device-width:600px) {
 
 .en__stripeButtons__preview .en__stripeButtons__previewWrap {
 	// display: inline-block;
-	height: 22px; // @TODO Investigate, there has to be a better way to do this
+	height: 1.375rem; // 22px - @TODO Investigate, there has to be a better way to do this
 	// position: relative;
 	top: 50% // @TODO Investigate, there has to be a better way to do this
 }
@@ -2426,9 +2426,9 @@ only screen and (max-device-width:600px) {
 	// display: inline;
 	color: #fff;
 	// vertical-align: top;
-	font: 500 16px/21px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; // @TODO Investigate, there has to be a better way to do this
+	font: 500 1rem/1.3125rem -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; // font: 500 16px/21px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; - @TODO Investigate, there has to be a better way to do this
 	// position: relative;
-	top: -11px // @TODO Investigate, there has to be a better way to do this
+	top: -0.6875rem // -11px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__stripeButtons__preview.light .en__stripeButtons__previewText,
@@ -2438,12 +2438,12 @@ only screen and (max-device-width:600px) {
 
 .en__stripeButtons__preview .en__stripeButtons__previewIcon {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/gateways/buttons/stripe-icon.png) 0 center no-repeat;
-	width: 22px; // @TODO
-	height: 22px; // @TODO
+	width: 1.375rem; // 22px - @TODO
+	height: 1.375rem; // 22px - @TODO
 	// display: inline-block;
-	margin: 0 0 0 5px;
+	margin: 0 0 0 0.3125rem; // 0 0 0 5px;
 	// position: relative;
-	top: -11px // @TODO Investigate, there has to be a better way to do this
+	top: -0.6875rem // -11px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__stripeButtons__preview.light {
@@ -2456,7 +2456,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__paypalTouch__preview {
-	max-width: 750px; // @TODO Investigate, there has to be a better way to do this
+	max-width: 46.875rem; // 750px - @TODO Investigate, there has to be a better way to do this
 	// display: block;
 	background: #ffc439;
 	border-radius: var(--theme-button-border-radius, $default-button-border-radius); // 5px
@@ -2470,18 +2470,18 @@ only screen and (max-device-width:600px) {
 
 .en__paypalTouch__preview .en__paypalTouch__previewIcon {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/gateways/buttons/paypal-icon-svg.svg) 0 center no-repeat;
-	width: 16px; // @TODO Investigate, there has to be a better way to do this
+	width: 1rem; // 16px - @TODO Investigate, there has to be a better way to do this
 	// height: 100%;
 	// display: inline-block;
-	background-size: 13px // @TODO Investigate, there has to be a better way to do this
+	background-size: 0.8125rem // 13px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__paypalTouch__preview .en__paypalTouch__previewIcon2 {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/gateways/buttons/paypal-text-svg.svg) 0 center no-repeat;
-	width: 60px; // @TODO Investigate, there has to be a better way to do this
+	width: 3.75rem; // 60px - @TODO Investigate, there has to be a better way to do this
 	// height: 100%;
 	// display: inline-block;
-	background-size: 60px // @TODO Investigate, there has to be a better way to do this
+	background-size: 3.75rem // 60px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__paypalTouch__preview.blue {
@@ -2490,12 +2490,12 @@ only screen and (max-device-width:600px) {
 
 .en__paypalTouch__preview.blue .en__paypalTouch__previewIcon {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/gateways/buttons/paypal-icon-white-svg.svg) 0 center no-repeat;
-	background-size: 13px // @TODO Investigate, there has to be a better way to do this
+	background-size: 0.8125rem // 13px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__paypalTouch__preview.blue .en__paypalTouch__previewIcon2 {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/gateways/buttons/paypal-text-white-svg.svg) 0 center no-repeat;
-	background-size: 60px // @TODO Investigate, there has to be a better way to do this
+	background-size: 3.75rem // 60px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__paypalTouch__preview.white {
@@ -2509,12 +2509,12 @@ only screen and (max-device-width:600px) {
 
 .en__paypalTouch__preview.black .en__paypalTouch__previewIcon {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/gateways/buttons/paypal-icon-white-svg.svg) 0 center no-repeat;
-	background-size: 13px // @TODO Investigate, there has to be a better way to do this
+	background-size: 0.8125rem // 13px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__paypalTouch__preview.black .en__paypalTouch__previewIcon2 {
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/gateways/buttons/paypal-text-white-svg.svg) 0 center no-repeat;
-	background-size: 60px // @TODO Investigate, there has to be a better way to do this
+	background-size: 3.75rem // 60px - @TODO Investigate, there has to be a better way to do this
 }
 
 #en__digitalWallet {
@@ -2529,6 +2529,6 @@ only screen and (max-device-width:600px) {
 }
 
 #en__digitalWallet .en__digitalWallet__container {
-	max-width: 750px; // @TODO Investigate, there has to be a better way to do this
-	max-height: 55px // @TODO Investigate, there has to be a better way to do this
+	max-width: 46.875rem; // 750px - @TODO Investigate, there has to be a better way to do this
+	max-height: 3.4375rem // 55px - @TODO Investigate, there has to be a better way to do this
 }

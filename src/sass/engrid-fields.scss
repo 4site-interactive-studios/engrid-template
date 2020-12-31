@@ -117,14 +117,17 @@
   margin-right: 0.5rem;
 }
 
-.en__field__item {
-  padding: 0;
-}
+/* @TODO This was overly zeroing the padding */
+/* If returned it could be moved to engrid-enpage-overrides.scss */
+// .en__field__item {
+//   padding: 0;
+// }
 
+/* Moved to engrid-enpage-overrides.scss */
 /* EN sets field labels to a fixed width of 180px, this makes them responsive */
-.en__field__label {
-  width: auto;
-}
+// .en__field__label {
+//   width: auto;
+// }
 
 /************************************
      * Inputs
