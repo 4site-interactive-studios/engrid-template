@@ -829,8 +829,8 @@ body:not(#en__pagebuilder).footer-below-fold
 .en__contactDetails__select:checked + .en__contactDetails__rows::after {
   content: "\a0\2713";
   color: var(--theme-white);
-  left: -31px;
-  top: 1px;
+  left: -1.95rem;
+  top: 0.45rem;
 }
 
 // Couldn't find the cause of this spacing issue https://d.pr/i/1W9vTl
