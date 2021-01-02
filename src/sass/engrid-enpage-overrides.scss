@@ -4,6 +4,24 @@
 /* REF: https://e-activist.com/page/71966/donate/1?ea.tracking.id=20ZPLPEAXX */
 /* Modified CSS can be found be searching with regex for the following, just remove the quotes "^	(?!(\/))" */
 
+
+/* Unified Color Palette */
+/*
+#0000FF - Blue
+#0070BA - Lake Blue
+#32325D - Ocean Blue
+#33CC33 - Green
+#FCAC00 - Orange
+#CC0001 - Red
+#FFFFFF - White
+#DFDFDF - Off White
+#BFBFBF - Light Gray
+#9F9F9F - Gray
+#808080 - Dark Gray
+#404040 - Off Black
+#000000 - Black
+*/
+
 .en__field__element--range,
 .en__field__element--rating,
 .en__field__input--checkbox,
@@ -78,9 +96,9 @@ only screen and (max-device-width:600px) {
 .en__component--hubgadget {
 	box-shadow: 0 0 3px 1px rgba(0, 0, 0, .33);
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 6px
-	background: transparent; // #fff
+	background: transparent; // #FFFFFF
 	margin: 0.75rem; // 12px
-	border: 1px solid #ccc; // 1px solid #ccc
+	border: 1px solid #BFBFBF;
 	padding: 0.75rem; // 12px
 }
 
@@ -193,7 +211,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__field__input--textarea {
-	height: 250px;  // 100px - Set a larger default height for Text Areas
+	height: 15.625rem  // 100px - Set a larger default height for Text Areas
 }
 
 .en__field__item {
@@ -250,7 +268,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__rangeFieldLabels__label {
-	width: 30%; // @TODO Investigate to see if there's a better way to do this
+	width: 30%; // @TODO Investigate to see if there is a better way to do this
 	// overflow-wrap: break-word
 }
 
@@ -297,9 +315,9 @@ only screen and (max-device-width:600px) {
 
 .en__button {
 	// display: inline-block;
-	background: #F5F5F5;
+	background: #DFDFDF;
 	padding: 0.75rem; // 12px
-	border: 1px solid #ccc;
+	border: 1px solid #BFBFBF;
 	// color: initial;
 	// text-decoration: none
 }
@@ -311,7 +329,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__button--active {
-	background: #ccc
+	background: #BFBFBF
 }
 
 .en__button.en__button--ajax--done,
@@ -356,8 +374,8 @@ only screen and (max-device-width:600px) {
 }
 
 .en__ticketBlock {
-	border: 1px solid #D2D2D2;
-	// background-color: #F6F6F6
+	border: 1px solid #BFBFBF;
+	// background-color: #DFDFDF
 }
 
 .en__tickets {
@@ -378,7 +396,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__ticket__field {
-	border-bottom: 1px solid #D2D2D2;
+	border-bottom: 1px solid #BFBFBF;
 	// vertical-align: top
 }
 
@@ -420,34 +438,34 @@ only screen and (max-device-width:600px) {
 }
 
 .en__ticket__field--quantity {
-	width: 13rem // 13em - @TODO Investigate to see if there's a better way to do this
+	width: 13rem // 13em - @TODO Investigate to see if there is a better way to do this
 }
 
 .en__additional__amount,
 .en__ticket__field--cost {
-	width: 10rem // - 10em @TODO Investigate to see if there's a better way to do this
+	width: 10rem // - 10em @TODO Investigate to see if there is a better way to do this
 }
 
 .en__ticket__quantity {
-	width: 3rem; // @TODO Investigate to see if there's a better way to do this
+	width: 3rem; // @TODO Investigate to see if there is a better way to do this
 	line-height: 2.5rem; // 2.5em
 	font-size: 1.5rem; // 1.5em
 	// vertical-align: middle;
-	border: 1px solid #D2D2D2;
+	border: 1px solid #BFBFBF;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
 	// padding: 0
 }
 
 .en__ticket__quantity--invalid {
-	border: 1px solid #EE3324
+	border: 1px solid #CC0001
 }
 
 .en__ticket__minus,
 .en__ticket__plus {
-	height: 2.5em; // @TODO Investigate to see if there's a better way to do this
-	width: 2.5em; // @TODO Investigate to see if there's a better way to do this
+	height: 2.5em; // @TODO Investigate to see if there is a better way to do this
+	width: 2.5em; // @TODO Investigate to see if there is a better way to do this
 	// vertical-align: middle;
-	border: 1px solid #D2D2D2;
+	border: 1px solid #BFBFBF;
 	// cursor: pointer;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
 	// -webkit-touch-callout: none;
@@ -459,12 +477,12 @@ only screen and (max-device-width:600px) {
 }
 
 .en__ticket__plus {
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_plus.png) center center no-repeat #fff;
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_plus.png) center center no-repeat #FFFFFF;
 	margin-left: 0.3125rem // 5px - @TODO Investigate, this seems unnecessary
 }
 
 .en__ticket__minus {
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_minus.png) center center no-repeat #fff;
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_minus.png) center center no-repeat #FFFFFF;
 	margin-right: 0.3125rem // 5px - @TODO Investigate, this seems unnecessary
 }
 
@@ -472,7 +490,7 @@ only screen and (max-device-width:600px) {
 .en__ticket__waitList {
 	padding: .5rem 2rem; // .5em 2em
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
-	color: #fff;
+	color: #FFFFFF;
 	font-size: 1rem; // 1em
 	// display: inline-block
 }
@@ -482,7 +500,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__ticket__waitList {
-	background-color: #3E9BD6;
+	background-color: #0070BA;
 	// cursor: pointer
 }
 
@@ -497,30 +515,30 @@ only screen and (max-device-width:600px) {
 	width: 4rem; // 4em;
 	margin-right: 0.75rem; // 12px
 	// text-align: center;
-	border: 1px solid #D2D2D2;
+	border: 1px solid #BFBFBF;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
 }
 
 .en__additional__code {
 	width: 8rem; // 8em;
 	padding: .6rem 0; // .6em 0;
-	border: 1px solid #D2D2D2;
+	border: 1px solid #BFBFBF;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
 }
 
 .en__ticketSummary {
-	border-top: 1px solid #D2D2D2;
+	border-top: 1px solid #BFBFBF;
 	// text-align: right
 }
 
 .en__ticketSummary__checkout {
 	// text-transform: uppercase;
 	font-size: 1.5rem; // 1.5em;
-	background-color: #EE3324;
+	background-color: #CC0001;
 	// display: inline-block;
 	padding: 0.875rem 1.75rem; // 14px 28px
 	// text-align: center;
-	// color: #fff;
+	// color: #FFFFFF;
 	// vertical-align: middle;
 	// cursor: pointer;
 	width: 11rem; // 11em;
@@ -542,17 +560,17 @@ only screen and (max-device-width:600px) {
 .en__lightbox__box {
 	// margin: 0 auto;
 	// position: absolute;
-	top: 20vh; // 20% - @TODO Investigate to see if there's a better way to do this
+	top: 20vh; // 20% - @TODO Investigate to see if there is a better way to do this
 	// left: 0;
 	// right: 0;
 	// bottom: 0;
-	width: 35vw // 35em - @TODO Investigate to see if there's a better way to do this
+	width: 35vw // 35em - @TODO Investigate to see if there is a better way to do this
 }
 
 .en__lightbox__header {
-	// background-color: #3E9BD6;
+	// background-color: #0070BA;
 	padding: 1rem; // 1em
-	// color: #fff;
+	// color: #FFFFFF;
 	border-top-left-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
 	border-top-right-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
 	// position: relative
@@ -574,7 +592,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__lightbox__body {
-	background-color: #fff;
+	background-color: #FFFFFF;
 	border-bottom-left-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
 	border-bottom-right-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
 	padding: 1.5rem; // 1.5em
@@ -584,7 +602,7 @@ only screen and (max-device-width:600px) {
 .en__lightbox__action,
 .en__lightbox__action--close,
 .en__lightbox__action--submit {
-	background-color: #EE3324
+	background-color: #CC0001
 }
 
 .en__waitlist {
@@ -608,9 +626,9 @@ only screen and (max-device-width:600px) {
 
 .en__waitlist__input {
 	padding: .6rem; // .6em
-	border: 1px solid #D2D2D2;
+	border: 1px solid #BFBFBF;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
-	width: 18rem; // 18em - @TODO Investigate to see if there's a better way to do this
+	width: 18rem; // 18em - @TODO Investigate to see if there is a better way to do this
 	font-size: 1rem // 1em
 }
 
@@ -632,7 +650,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__lightbox__action {
-	// color: #fff;
+	// color: #FFFFFF;
 	// display: inline-block;
 	padding: .2rem 1rem; // .2em 1em;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
@@ -641,7 +659,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__lightbox__action--cancel {
-	background-color: #999;
+	background-color: #9F9F9F;
 	margin-right: 1rem // 1em
 }
 
@@ -710,7 +728,7 @@ only screen and (max-device-width:600px) {
 
 .en__registrants__registrantInput {
 	padding: .6rem; // .6em
-	// border: 1px solid #D2D2D2;
+	border: 1px solid #BFBFBF;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
 }
 
@@ -791,7 +809,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__component--contactblock {
-	background-color: #f0f0f0;
+	background-color: #DFDFDF;
 	padding: 0.625rem; // 10px
 }
 
@@ -805,7 +823,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contact__detail {
-	background-color: #fff;
+	background-color: #FFFFFF;
 	padding: 0.625rem; // 10px
 }
 
@@ -866,7 +884,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contactMessage__htmlDisplay {
-	background: #fff
+	background: #FFFFFF
 }
 
 .en__contactMessage__plainText {
@@ -893,18 +911,18 @@ only screen and (max-device-width:600px) {
 	// cursor: pointer;
 	width: 3.75rem; // 60px;
 	height: 0.9375rem; // 15px
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_open.png) center center no-repeat #fff;
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_open.png) center center no-repeat #FFFFFF;
 	// margin: 0 auto;
 	border-bottom-left-radius: var(--theme-input-border-radius, $default-input-border-radius); // 5px
 	border-bottom-right-radius: var(--theme-input-border-radius, $default-input-border-radius); // 5px
 }
 
 .en__contact--open .en__contact__toggle {
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_close.png) center center no-repeat #fff
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_close.png) center center no-repeat #FFFFFF
 }
 
 .en__singleMessage {
-	background: #fff;
+	background: #FFFFFF;
 	padding: 0 0.625rem 0.625rem; // 0 10px 10px
 	// box-sizing: border-box
 }
@@ -917,7 +935,7 @@ only screen and (max-device-width:600px) {
 	// display: none;
 	width: 2.8125rem; // 45px
 	height: 2.8125rem; // 45px
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_background.png) center center no-repeat #f0f0f0;
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_background.png) center center no-repeat #DFDFDF;
 	// position: absolute;
 	// top: 0;
 	// right: 0;
@@ -925,11 +943,11 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contact--showBackground .en__contactDetails__background {
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_message.png) center center no-repeat #f0f0f0
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_message.png) center center no-repeat #DFDFDF
 }
 
 .en__contacts--singleMessageMode .en__contact--showBackground .en__contactDetails__background {
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_backgroundClose.png) center center no-repeat #f0f0f0
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_backgroundClose.png) center center no-repeat #DFDFDF
 }
 
 .en__contact--open .en__contactDetails__background,
@@ -940,7 +958,7 @@ only screen and (max-device-width:600px) {
 .en__contactBackground {
 	// display: none;
 	padding: 1.25rem; // 20px
-	border-top: 1px solid #f0f0f0;
+	border-top: 1px solid #DFDFDF;
 	margin-top: 0.625rem; // 10px
 	// position: relative
 }
@@ -984,12 +1002,12 @@ only screen and (max-device-width:600px) {
 }
 
 .en__contactBackground__cycle--next {
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_next.png) center right no-repeat #fff;
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_next.png) center right no-repeat #FFFFFF;
 	// right: 0
 }
 
 .en__contactBackground__cycle--prev {
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_prev.png) center left no-repeat #fff;
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_prev.png) center left no-repeat #FFFFFF;
 	// left: 0
 }
 
@@ -1032,7 +1050,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__tweetContact {
-	// background-color: #f0f0f0;
+	// background-color: #DFDFDF;
 	padding: 0.625rem; // 10px
 	width: auto; // 400px @TODO - Should we set width: 100% and max-width 25rem (400px)?
 	// position: relative;
@@ -1044,7 +1062,7 @@ only screen and (max-device-width:600px) {
 .en__tweetButton,
 .en__tweetDisabled,
 .en__twitterTarget {
-	background-color: #fff;
+	background-color: #FFFFFF;
 	padding: 0.625rem; // 10px
 }
 
@@ -1080,21 +1098,21 @@ only screen and (max-device-width:600px) {
 }
 
 .en__twitterTarget__image:before {
-	// content: ' ';
+	content: " "; // @TODO - Changed from single quote to double quotes so it work with http://www.css-color-extractor.com/
 	// display: block;
 	// position: absolute;
 	height: 3.75rem; // 60px
 	width: 3.75rem; // 60px
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_twitter_fallback.png) center center no-repeat #f0f0f0
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_twitter_fallback.png) center center no-repeat #DFDFDF
 }
 
 .en__tweet textarea {
-	border: 1px solid #ccc;
+	border: 1px solid #BFBFBF;
 	// font-family: inherit;
 	// font-size: inherit;
 	padding: 0.625rem; // 10px
 	width: 100%; // @TODO - Is this neccisary?
-	height: 250px;  // 100px - Set a larger default height for Text Areas
+	height: 15.625rem;  // 100px - Set a larger default height for Text Areas
 	// box-sizing: border-box;
 	// resize: none
 }
@@ -1103,7 +1121,7 @@ only screen and (max-device-width:600px) {
 	// text-decoration: none;
 	// font-weight: 700;
 	font-size: 1.5rem; // 1.5em;
-	// color: #fff;
+	// color: #FFFFFF;
 	padding: 0.3125rem 0.625rem; // 5px 10px;
 	// display: block
 }
@@ -1124,7 +1142,7 @@ only screen and (max-device-width:600px) {
 
 .en__tweetButton__sent {
 	// display: none;
-	background-color: #3C3
+	background-color: #33CC33
 }
 
 .en__tweetButton--sent .en__tweetButton__sent {
@@ -1139,7 +1157,7 @@ only screen and (max-device-width:600px) {
 .en__tweetContact .en__tweetBackgroundToggle {
 	width: 2.8125rem; // 45px
 	height: 2.8125rem; // 45px
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_background.png) center center no-repeat #f0f0f0;
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_background.png) center center no-repeat #DFDFDF;
 	// position: absolute;
 	// top: 0;
 	// right: 0;
@@ -1152,11 +1170,11 @@ only screen and (max-device-width:600px) {
 	// white-space: pre-wrap;
 	// margin: 0;
 	padding-top: 0.625rem; // 10px
-	border-top: 1px solid #f0f0f0
+	border-top: 1px solid #DFDFDF
 }
 
 .en__tweetContact--showBackground .en__tweetBackgroundToggle {
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_backgroundClose.png) center center no-repeat #f0f0f0
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_backgroundClose.png) center center no-repeat #DFDFDF
 }
 
 .en__tweetContact--showBackground .en__tweetBackgroundText {
@@ -1188,7 +1206,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__ecarditems__thumb img {
-	border: 1px solid #ff4351;
+	border: 1px solid #CC0001;
 	opacity: .5;
 	width: 12.5rem; // 200px - @TODO Investigate, there has to be a better way to do this
 	height: 12.5rem; // 200px - @TODO Investigate, there has to be a better way to do this
@@ -1204,7 +1222,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__ecarditems__thumb:hover img {
-	box-shadow: 1px 1px 5px 3px #ccc;
+	box-shadow: 1px 1px 5px 3px #BFBFBF;
 	border-color: default!important // @TODO Investigate, there has to be a better way to do this
 }
 
@@ -1215,8 +1233,8 @@ only screen and (max-device-width:600px) {
 .en__ecarditems__button {
 	// cursor: pointer;
 	font-size: 1rem; // 16px
-	color: #fff;
-	background: #ff4351;
+	color: #FFFFFF;
+	background: #CC0001;
 	padding: 0.3125rem 0.625rem; // 5px 10px;
 	// margin: 0;
 	// border: 0;
@@ -1229,8 +1247,8 @@ only screen and (max-device-width:600px) {
 	// right: 0;
 	// bottom: 0;
 	// font-weight: 700;
-	width: 32px; // @TODO
-	height: 32px; // @TODO
+	width: 2rem; // 32px - @TODO Investigate, there has to be a better way to do this than set a fixed width
+	height: 2rem; // 32px - @TODO Investigate, there has to be a better way to do this than set a fixed height
 	// font-size: 20px!important;
 	// padding: 0!important;
 	// font-family: arial!important
@@ -1243,7 +1261,7 @@ only screen and (max-device-width:600px) {
 
 .en__ecardmessage__default {
 	// width: 100%;
-	min-height: 250px;  // 200px - Set a larger default height for Text Areas @TODO, is this actually a text area?
+	min-height: 15.625rem;  // 200px - Set a larger default height for Text Areas @TODO, is this actually a text area?
 	border: 1px solid #bbb;
 	padding: 0.625rem; // 10px
 	// -webkit-box-sizing: border-box;
@@ -1279,15 +1297,15 @@ only screen and (max-device-width:600px) {
 
 .en__ecardrecipients__email input.invalid,
 .en__ecardrecipients__name input.invalid {
-	border: 1px solid red
+	border: 1px solid #CC0001
 }
 
 .en__ecardrecipients__list {
-	min-height: 250px; // 200px - @TODO Investigate, there has to be a better way to do this
+	min-height: 15.625rem; // 200px - @TODO Investigate, there has to be a better way to do this
 	border: 1px solid #bbb;
 	padding: 0.625rem; // 10px
 	margin: 1.25rem 0 0; // 20px 0 0
-	background: #fff
+	background: #FFFFFF
 }
 
 .en__ecardrecipients__futureDelivery {
@@ -1351,8 +1369,8 @@ only screen and (max-device-width:600px) {
 .en__ecarditems__prevwrap {
 	left: 50%;
 	top: 50%;
-	width: 600px; //  @TODO There has to be a better way to do this than a fixed width
-	height: 80vh; // 800xp - @TODO There has to be a better way to do this than a fixed height
+	width: 37.5rem; // 600px; @TODO There has to be a better way to do this than a fixed width
+	height: 80vh; // 800px; - @TODO There has to be a better way to do this than a fixed height
 	// position: absolute;
 	z-index: 9
 }
@@ -1376,7 +1394,7 @@ only screen and (max-device-width:600px) {
 .en__ecarditems__prevwrap iframe {
 	// width: 100%;
 	// height: 100%;
-	background: #fff
+	background: #FFFFFF
 }
 
 .en__ecarditems__prevclose {
@@ -1392,7 +1410,7 @@ only screen and (max-device-width:600px) {
 	// cursor: pointer;
 	// text-align: center;
 	font: Arial, sans-serif; // @TODO Investigate, there has to be a better way to do this
-	color: #000
+	color: #000000
 }
 
 .en__hubOverlay,
@@ -1403,7 +1421,7 @@ only screen and (max-device-width:600px) {
 }
 
 .ecard__mandatory__error {
-	border: 1px solid red
+	border: 1px solid #CC0001
 }
 
 .en__hubOverlay {
@@ -1434,7 +1452,7 @@ only screen and (max-device-width:600px) {
 	// bottom: 0;
 	// left: 0;
 	// right: 0;
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_loading.gif) center center no-repeat #fff
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_loading.gif) center center no-repeat #FFFFFF
 }
 
 .en__hubOverlay__loading--active {
@@ -1443,43 +1461,43 @@ only screen and (max-device-width:600px) {
 
 .en__hubOverlay--supporterdetails .en__hubOverlay__popup,
 .en__hubOverlay--supportersubscriptions .en__hubOverlay__popup {
-	max-width: 600px // @TODO Investigate, there has to be a better way to do this
+	max-width: 37.5rem // 600px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__hubOverlay--pledge .en__hubOverlay__popup {
-	max-width: 1100px // @TODO Investigate, there has to be a better way to do this
+	max-width: 68.75rem // 1100px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__hubOverlay--membership>.en__hubOverlay__popup {
-	max-width: 800px // @TODO Investigate, there has to be a better way to do this
+	max-width: 50rem; // 800px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__hubOverlay--membershipHistory>.en__hubOverlay__popup {
-	max-width: 600px // @TODO Investigate, there has to be a better way to do this
+	max-width: 37.5rem // 600px @TODO Investigate, there has to be a better way to do this
 }
 
 .en__hubOverlay--memCardUpdate>.en__hubOverlay__popup {
-	max-width: 930px // @TODO Investigate, there has to be a better way to do this
+	max-width: 58.125rem // 930px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__hubOverlay--membershipRenew>.en__hubOverlay__popup,
 .en__hubOverlay--txngiving>.en__hubOverlay__popup {
-	max-width: 600px // @TODO Investigate, there has to be a better way to do this
+	max-width: 37.5rem // 600px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__hubOverlay__header {
-	background: #f5f5f5;
-	border-bottom: solid 1px #ccc;
+	background: #DFDFDF;
+	border-bottom: solid 1px #BFBFBF;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius) var(--theme-input-border-radius, $default-input-border-radius) 0 0; // 6px 6px 0 0;
 	// position: relative;
-	min-height: 32px // @TODO
+	min-height: 2rem // 32px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__hubOverlay__header h2 {
 	// margin: 0;
 	padding: 0.5625rem 2rem 0.375rem 1.5rem; // 9px 32px 6px 24px;
 	font-size: 0.875rem; // 14px
-	color: #333
+	color: #404040
 }
 
 .en__hubOverlay__header a {
@@ -1491,11 +1509,11 @@ only screen and (max-device-width:600px) {
 	width: 2rem; // 32px - @TODO There has to be a better way to do this than a fixed width
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_huboverlay_close.png) center center no-repeat;
 	// overflow: hidden;
-	text-indent: -999px // @TODO Investigate, there has to be a better way to do this
+	text-indent: -500vw // -999px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__hubOverlay__content {
-	background: #fff;
+	background: #FFFFFF;
 	border-radius: 0 0 var(--theme-input-border-radius, $default-input-border-radius) var(--theme-input-border-radius, $default-input-border-radius); // 0 0 6px 6px;
 	padding: 1.5rem; // 24px
 }
@@ -1503,20 +1521,20 @@ only screen and (max-device-width:600px) {
 .en__supporterHubLogin {
 	width: 26.25rem; // 420px - @TODO There has to be a better way to do this than a fixed width
 	// margin: auto;
-	border: 1px solid #ccc;
+	border: 1px solid #BFBFBF;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 6px
 	// overflow: hidden
 }
 
 .en__supporterHubLogin__header {
-	background: #f5f5f5;
-	border-bottom: 1px solid #ccc;
+	background: #DFDFDF;
+	border-bottom: 1px solid #BFBFBF;
 	padding: 0.75rem; // 12px
 }
 
 .en__supporterHubLogin__body {
 	padding: 1.5rem; // 24px
-	background: #fff
+	background: #FFFFFF
 }
 
 .en__supporterHubLogin__emailAddress {
@@ -1544,7 +1562,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubgadget__response--success {
-	border: 1px dashed #3C3
+	border: 1px dashed #33CC33
 }
 
 .en__hubgadget__response--failure {
@@ -1552,7 +1570,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubgadget__response--warn {
-	border: 1px dashed #fcac00;
+	border: 1px dashed #FCAC00;
 	// display: block
 }
 
@@ -1569,14 +1587,14 @@ only screen and (max-device-width:600px) {
 }
 
 .en__myImpact__hubCopy {
-	background: #f5f5f5;
+	background: #DFDFDF;
 	padding: 0 0.75rem; // 0 12px;
 	margin-top: 6px;
 	// cursor: pointer
 }
 
 .en__myImpact__hubCopyEmpty {
-	background: #f5f5f5;
+	background: #DFDFDF;
 	margin-top: 0.375rem; // 6px
 	// display: block;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
@@ -1591,8 +1609,8 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubCopy__action {
-	background: #3e9bd6;
-	color: #fff;
+	background: #9F9F9F;
+	color: #FFFFFF;
 	// display: inline-block;
 	float: right; // @TODO Help EN get away from using floats
 	padding: 0.5rem 0.75rem; // 8px 12px;
@@ -1607,7 +1625,7 @@ only screen and (max-device-width:600px) {
 
 .en__hubOverlay__impact .en__hubOverlay__header h2 {
 	font-size: 1.25rem; // 20px
-	color: #2774a8
+	color: #0070BA
 }
 
 .en__hubOverlay__impact .en__hubOverlay__content>div {
@@ -1630,13 +1648,13 @@ only screen and (max-device-width:600px) {
 
 .en__p2phub__site {
 	font-size: 0.9375rem; // 15px;
-	background: #f5f5f5;
+	background: #DFDFDF;
 	padding: 0 0.75rem; // 0 12px;
 	margin-top: 0.375rem // 6px
 }
 
 .en__p2phub__site a {
-	color: #000!important; // @TODO Investigate, there has to be a better way to do this
+	color: #000000!important; // @TODO Investigate, there has to be a better way to do this
 	// text-decoration: none!important;
 	// display: block;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 3px
@@ -1698,7 +1716,7 @@ only screen and (max-device-width:600px) {
 
 .en__pg,
 .en__pgHeader {
-	border-bottom: 1px solid #ccc
+	border-bottom: 1px solid #BFBFBF
 }
 
 .en__hubUpdateCC__number {
@@ -1739,7 +1757,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubMembership__viewMemberships p {
-	color: #999;
+	color: #9F9F9F;
 	// text-align: center;
 	// margin: 0;
 	font-size: .8rem // .8em
@@ -1747,13 +1765,13 @@ only screen and (max-device-width:600px) {
 
 .en__hubMembership__membership {
 	margin: 0.75rem 0; // 12px 0
-	border: 1px solid #ccc
+	border: 1px solid #BFBFBF
 }
 
 .en__hubMembership__membership__summary {
 	// display: flex;
 	// overflow: hidden;
-	max-height: 100px; // @TODO Investigate, there has to be a better way to do this
+	max-height: 6.25rem; // 100px - @TODO Investigate, there has to be a better way to do this than setting a max-height
 	// transition: max-height .1s ease-in-out
 }
 
@@ -1771,12 +1789,12 @@ only screen and (max-device-width:600px) {
 
 .en__hubMembership__membership__summary__status {
 	padding: 0.5625rem 0.75rem; // 9px 12px
-	width: 80px
+	width: 5rem // 80px - @TODO Investigate, there has to be a better way to do this than setting a fixed width
 }
 
 .en__hubMembership__membership__summary__date {
 	padding: 0.5625rem 0.75rem; // 9px 12px
-	width: 120px
+	width: 7.5rem // 120px - @TODO Investigate, there has to be a better way to do this than setting a fixed width
 }
 
 .en__hubMembership__membership__summary__edit {
@@ -1785,11 +1803,11 @@ only screen and (max-device-width:600px) {
 }
 
 .open .en__hubMembership__membership__full {
-	max-height: 1000px // @TODO Investigate, there has to be a better way to do this
+	max-height: 62.5rem // 1000px - @TODO Investigate, there has to be a better way to do this than setting a fixed max-height
 }
 
 .en__hubMembership__membership__header {
-	padding: 9px 0
+	padding: 0.5625rem 0 // 9px 0;
 }
 
 .en__hubMembership__membership__details {
@@ -1853,7 +1871,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubMembership__card {
-	background: #f5f5f5;
+	background: #DFDFDF;
 	// display: inline-block;
 	padding: 0.75rem; // 12px
 	// position: relative;
@@ -1888,7 +1906,7 @@ only screen and (max-device-width:600px) {
 	height: 1.5rem; // 24px
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_edit.png) center center no-repeat;
 	// cursor: pointer;
-	// text-indent: -99999px;
+	text-indent: -500vw; // -9F9F9Fpx; - @TODO Investigate, there has to be a better way to do this
 	// position: absolute;
 	top: 0.75rem; // 12px
 	right: 0.75rem // 12px
@@ -1917,7 +1935,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__hubTxnGiving__transactions__list li {
-	border: 1px solid #ccc;
+	border: 1px solid #BFBFBF;
 	font-size: .85rem; // .85em
 	margin: 0.375rem 0; // 6px 0
 	padding: 0.375rem // 6px
@@ -1941,7 +1959,7 @@ only screen and (max-device-width:600px) {
 
 .en__component--premiumgiftblock {
 	// display: none;
-	border: 1px solid #ccc;
+	border: 1px solid #BFBFBF;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius); // 6px
 	margin-bottom: 0.75rem; // 12px
 }
@@ -1949,7 +1967,7 @@ only screen and (max-device-width:600px) {
 .en__pgHeader {
 	border-top-left-radius: var(--theme-input-border-radius, $default-input-border-radius); // 6px
 	border-top-right-radius: var(--theme-input-border-radius, $default-input-border-radius); // 6px
-	background-color: #f5f5f5;
+	background-color: #DFDFDF;
 	// overflow: hidden;
 	padding: 0.75rem 1.125rem // 12px 18px
 }
@@ -1978,7 +1996,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__pg--selected .en__pg__image--selected {
-	outline: #00b2d9 solid 3px
+	outline: #0070BA solid 3px
 }
 
 .en__pg__imageSelector {
@@ -1999,8 +2017,8 @@ only screen and (max-device-width:600px) {
 }
 
 .en__pg__imageSelector input:checked+.en__pg__imageRadio {
-	background-color: #ccc;
-	border-color: #ccc
+	background-color: #BFBFBF;
+	border-color: #BFBFBF
 }
 
 .en__pg__imageRadio {
@@ -2008,7 +2026,7 @@ only screen and (max-device-width:600px) {
 	height: 0.375rem; // 6px
 	width: 0.375rem; // 6px
 	border-radius: 0.375rem; // 6px - @TODO would 50% or 100% work?
-	border: 1px solid #9E9E9E;
+	border: 1px solid #9F9F9F;
 	// cursor: pointer
 }
 
@@ -2038,7 +2056,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__memtypelist__item {
-	border: 1px solid #ccc;
+	border: 1px solid #BFBFBF;
 	margin-bottom: 0.75rem; // 12px
 }
 
@@ -2052,7 +2070,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__memselector__item {
-	border: 1px solid #ccc;
+	border: 1px solid #BFBFBF;
 	margin: 0.375rem; // 6px
 	// display: flex;
 	// align-items: center
@@ -2155,7 +2173,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__memtyperenew__orText {
-	background-color: #fff;
+	background-color: #FFFFFF;
 	// display: inline-block;
 	padding: 0.625rem; // 10px
 }
@@ -2170,10 +2188,10 @@ only screen and (max-device-width:600px) {
 }
 
 .en__member {
-	border: 1px solid #ccc;
+	border: 1px solid #BFBFBF;
 	// padding: 0;
 	margin-bottom: 0.625rem; // 10px
-	background-color: #fff;
+	background-color: #FFFFFF;
 	// position: relative
 }
 
@@ -2201,8 +2219,8 @@ only screen and (max-device-width:600px) {
 	// left: 0;
 	// bottom: 0;
 	// right: 0;
-	background-color: #fff;
-	border: 1px solid #ccc;
+	background-color: #FFFFFF;
+	border: 1px solid #BFBFBF;
 	border-radius: var(--theme-button-border-radius, $default-button-border-radius); // 5px
 	height: 3rem; // 3em
 	padding: 0 0.625rem; // 0 10px;
@@ -2238,7 +2256,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__member--closed .en__member__row {
-	background-color: #ccc;
+	background-color: #BFBFBF;
 	opacity: .3
 }
 
@@ -2270,7 +2288,7 @@ only screen and (max-device-width:600px) {
 	// bottom: 0;
 	// left: 0;
 	// right: 0;
-	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_loading.gif) center center no-repeat #fff;
+	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_loading.gif) center center no-repeat #FFFFFF;
 	border-radius: 0.0625rem // 6px
 }
 
@@ -2279,7 +2297,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__overlay__message--success {
-	border: 1px dashed #3C3
+	border: 1px dashed #33CC33
 }
 
 .en__overlay__message--error {
@@ -2287,13 +2305,13 @@ only screen and (max-device-width:600px) {
 }
 
 .en__overlay__message--warn {
-	border: 1px dashed #fcac00;
+	border: 1px dashed #FCAC00;
 	// display: block
 }
 
 .en__overlay__header {
-	background: #f5f5f5;
-	border-bottom: solid 1px #ccc;
+	background: #DFDFDF;
+	border-bottom: solid 1px #BFBFBF;
 	border-radius: var(--theme-input-border-radius, $default-input-border-radius) var(--theme-input-border-radius, $default-input-border-radius) 0 0; // 6px 6px 0 0;
 	// position: relative;
 	min-height: 2rem // 32px
@@ -2303,7 +2321,7 @@ only screen and (max-device-width:600px) {
 	// margin: 0;
 	padding: 0.5626rem 2rem 0.375rem 1.5rem; // 9px 32px 6px 24px
 	font-size: 0.875rem; // 14px
-	color: #333
+	color: #404040
 }
 
 .en__overlay__header a {
@@ -2315,17 +2333,17 @@ only screen and (max-device-width:600px) {
 	width: 2rem; // 32px;
 	background: url(https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_huboverlay_close.png) center center no-repeat;
 	// overflow: hidden;
-	text-indent: -999px
+	text-indent: -500vw // -999px - @TODO Investigate, there has to be a better way to do this
 }
 
 .en__overlay__content {
-	background: #fff;
+	background: #FFFFFF;
 	border-radius: 0 0 var(--theme-input-border-radius, $default-input-border-radius) var(--theme-input-border-radius, $default-input-border-radius); // 0 0 6px 6px;
 	// overflow: hidden
 }
 
 .en__component--callcontactblock .en__contacts {
-	// background-color: #f0f0f0;
+	// background-color: #DFDFDF;
 	padding: 0.625rem; // 10px
 }
 
@@ -2403,13 +2421,13 @@ only screen and (max-device-width:600px) {
 
 .en__component--svblock--numbered .en__field>.en__field__label:before {
 	// counter-increment: surveyFieldNumbering;
-	// content: counter(surveyFieldNumbering) '. '
+	content: counter(surveyFieldNumbering) ". " // @TODO - Changed from single quote to double quotes so it work with http://www.css-color-extractor.com/
 }
 
 .en__stripeButtons__preview {
 	max-width: 46.875rem; // 750px - @TODO Investigate, there has to be a better way to do this
 	// display: block;
-	// background: #32325d;
+	// background: #32325D;
 	border-radius: var(--theme-button-border-radius, $default-button-border-radius); // 5px
 	// text-align: center;
 	// position: relative
@@ -2424,7 +2442,7 @@ only screen and (max-device-width:600px) {
 
 .en__stripeButtons__preview .en__stripeButtons__previewText {
 	// display: inline;
-	color: #fff;
+	color: #FFFFFF;
 	// vertical-align: top;
 	font: 500 1rem/1.3125rem -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; // font: 500 16px/21px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; - @TODO Investigate, there has to be a better way to do this
 	// position: relative;
@@ -2433,7 +2451,7 @@ only screen and (max-device-width:600px) {
 
 .en__stripeButtons__preview.light .en__stripeButtons__previewText,
 .en__stripeButtons__preview.light-outline .en__stripeButtons__previewText {
-	color: #39325c
+	color: #32325D
 }
 
 .en__stripeButtons__preview .en__stripeButtons__previewIcon {
@@ -2447,18 +2465,18 @@ only screen and (max-device-width:600px) {
 }
 
 .en__stripeButtons__preview.light {
-	background: #fff
+	background: #FFFFFF
 }
 
 .en__stripeButtons__preview.light-outline {
-	background: #fff;
-	// border: 1px solid #d7d7d7
+	background: #FFFFFF;
+	border: 1px solid #BFBFBF
 }
 
 .en__paypalTouch__preview {
 	max-width: 46.875rem; // 750px - @TODO Investigate, there has to be a better way to do this
 	// display: block;
-	background: #ffc439;
+	background: #FCAC00;
 	border-radius: var(--theme-button-border-radius, $default-button-border-radius); // 5px
 	// text-align: center;
 	// position: relative
@@ -2485,7 +2503,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__paypalTouch__preview.blue {
-	background: #0070ba
+	background: #0070BA
 }
 
 .en__paypalTouch__preview.blue .en__paypalTouch__previewIcon {
@@ -2499,12 +2517,12 @@ only screen and (max-device-width:600px) {
 }
 
 .en__paypalTouch__preview.white {
-	background: #fff;
-	border: 1px solid #555
+	background: #FFFFFF;
+	border: 1px solid #808080
 }
 
 .en__paypalTouch__preview.black {
-	background: #2C2E2F
+	background: #404040
 }
 
 .en__paypalTouch__preview.black .en__paypalTouch__previewIcon {
