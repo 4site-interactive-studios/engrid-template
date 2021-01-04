@@ -1,15 +1,13 @@
 /*
-############################################################
-# ENPAGE OVERRIDE
-############################################################
+	############################################################
+	# ENPAGE OVERRIDE
+	############################################################
 
 	A mirror of "enPage.css?v=3.60.1" that was then edited to provide more responsive sizing (e.g removal of fixed widths) and to use ENGrid's theme colors (e.g. Error Red) and preferences (e.g. Border Radius)
 	As a changes in this document are made, changes elsewhere (e.g. engrid-fields.scss) will become redundant and can be removed from their respective files.
 
-	@TODO Once a first pass of this file is completed, it should be added to the default theme scaffolding
-
 	REF: https://e-activist.com/ea-demo/frontend/pbAssets/build/css/enPage.css?v=3.60.1
-	The CSS file is then cleaned up on https://www.10bestdesign.com/dirtymarkup/css/
+	The CSS file is then cleaned up on https://www.10bestdesign.com/dirtymarkup/css/ for comparison
 
 	Modified CSS can be found be searching with regex for the following, just remove the quotes "^	(?!(\/))"
 
@@ -28,8 +26,6 @@
 	#404040 - Off Black
 	#000000 - Black
 */
-
-
 
 .en__field__element--range,
 .en__field__element--rating,
@@ -505,7 +501,7 @@ only screen and (max-device-width:600px) {
 }
 
 .en__ticket__soldout {
-	background-color: #999
+	background-color: #999999
 }
 
 .en__ticket__waitList {
@@ -2020,7 +2016,7 @@ only screen and (max-device-width:600px) {
 
 .en__pg__imageSelector label {
 	width: 0.75rem; // 12px
-	font-weight: 0.75rem; // 12px - @TODO Let EN know that they want "font-weight" not "weight"
+	font-weight: 0.75rem; // 12px - @TODO Let EN know that they want "font-weight" or "font-size" and not "weight". Not sure which one given the value was 12px and not 700 like all other font-weights
 	// display: inline-block;
 	// cursor: pointer
 }

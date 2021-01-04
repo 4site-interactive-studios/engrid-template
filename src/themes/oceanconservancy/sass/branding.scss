@@ -70,7 +70,7 @@ body:not(#en__pagebuilder)
 // @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
 body {
   color: var(--theme-black, $default-black);
-  background-color: var(--background-color, $default-background-color);
+  background-color: var(--theme-body-background-color, $default-body-background-color);
 }
 
 body,
@@ -585,7 +585,7 @@ body:not(#en__pagebuilder).footer-below-fold
   top: 0;
   background-color: var(
     --background-image-background-color,
-    $default-background-image-background-color
+    $default-page-backgroundImage-background-color
   );
 }
 
@@ -938,7 +938,7 @@ body:not(#en__pagebuilder).footer-below-fold
 .content-preFooter {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  // background-color: $default-prefooter-background-color;
+  // background-color: $default-content-prefooter-background-color;
 
   h1 {
     padding-top: 1rem;
@@ -954,7 +954,7 @@ body:not(#en__pagebuilder).footer-below-fold
 .content-footer {
   background-color: var(
     --theme-footer-background-color,
-    $default-footer-background-color
+    $default-content-footer-background-color
   );
   .en__component:first-child {
     padding-top: 1rem;
