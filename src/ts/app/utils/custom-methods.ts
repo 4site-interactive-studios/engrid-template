@@ -110,20 +110,13 @@ export const setBackgroundImages = (bg: string | Array<String>) => {
 
   // Set the background image
   if (pageBackground && pageBackgroundImgSrc) {
+    // Set background image on the appropriate Background Image grid component
 
-    // @TODO Gut IE11 background image support?
-    // Check if IE11, because IE11 does not support our CSS Grid layout and we need to set it elsewhere
-    if (navigator.appName.indexOf("Internet Explorer") != -1 || navigator.userAgent.match(/Trident.*rv[ :]*11\./)) {
-      // If IE11, set background image on body
-      // document.body.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
-    } else {
-      // If not IE11, set background image on the appropriate Background Image grid component
-      //pageBackground.style.backgroundImage = "url(" + pageBackgroundImgSrc + ")";
-      var pageBackgroundImgSrcUrl = "url(" + pageBackgroundImgSrc + ")";
-      pageBackground.classList.add('page-backgroundImageSet');
-      // Add support for the background image to be defined using CSS Custom Properties
-      pageBackground.style.setProperty('--background-image', pageBackgroundImgSrcUrl);
-    }
+    var pageBackgroundImgSrcUrl = "url(" + pageBackgroundImgSrc + ")";
+    pageBackground.classList.add('page-backgroundImageSet');
+
+    // Support for the background image to be defined using CSS Custom Properties
+    pageBackground.style.setProperty('--background-image', pageBackgroundImgSrcUrl);
   }
 };
 
@@ -348,10 +341,7 @@ export const debugBar = () => {
 
     const layoutToggle = () => {
       if (enGrid) {
-        if (enGrid.classList.contains("layout-ie11override")) {
-          removeClassesByPrefix(enGrid, "layout-");
-          enGrid.classList.add("layout-centercenter1col");
-        } else if (enGrid.classList.contains("layout-centercenter1col")) {
+        if (enGrid.classList.contains("layout-centercenter1col")) {
           removeClassesByPrefix(enGrid, "layout-");
           enGrid.classList.add("layout-centercenter1col-wide");
         } else if (enGrid.classList.contains("layout-centercenter1col-wide")) {
@@ -365,7 +355,7 @@ export const debugBar = () => {
           enGrid.classList.add("layout-embedded");
         } else if (enGrid.classList.contains("layout-embedded")) {
           removeClassesByPrefix(enGrid, "layout-");
-          enGrid.classList.add("layout-ie11override");
+          enGrid.classList.add("layout-centercenter1col");
         } else {
           console.log(
             "While trying to switch layouts, something unexpected happen."
