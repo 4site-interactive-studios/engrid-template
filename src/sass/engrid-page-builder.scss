@@ -16,10 +16,24 @@
   form {
     min-height: 25px !important;
   }
-
   /* Sometimes our styles might cause a code blocks title and label to display inline, rather than in rows. This should help prevent that https://d.pr/v/vXlAUM */
   .en__placeholder__text{
     flex-direction: column !important;
+  }
+
+  // When in page builder display Overlay sections after their counterparts and not overtop of their target grid row. This way content editors can more easily interact with them
+  .body-bannerOverlay{
+    grid-row: body-bannerOverlay !important;
+  }
+
+  // When in page builder display Overlay sections after their counterparts and not overtop of their target grid row. This way content editors can more easily interact with them
+  .page-backgroundImageOverlay{
+    grid-row: page-backgroundImageOverlay !important;
+  }
+
+  // Helps position the Engaging Networks pagebuilder tabs that are shown on hover of the Advanced Row
+  .en__component--advrow.en__component--active .en__component__actions.en__component__actions--advrow {
+    grid-row: page;
   }
 
   .page-backgroundImage img:not([loading]) {

@@ -43,13 +43,12 @@
 
 /* ENGRID BASE LAYOUTS */
 @import "layouts/engrid-layout";
-@import "layouts/engrid-layout-leftleft1col";
-@import "layouts/engrid-layout-centerleft1col";
 @import "layouts/engrid-layout-centercenter1col";
 @import "layouts/engrid-layout-centercenter1col-wide";
 @import "layouts/engrid-layout-centercenter2col";
+@import "layouts/engrid-layout-centerleft1col";
 @import "layouts/engrid-layout-centerright1col";
-@import "layouts/engrid-layout-rightright1col";
-@import "layouts/engrid-layout-manual";
 @import "layouts/engrid-layout-embedded";
-@import "layouts/engrid-layout-ie11override";
+@import "layouts/engrid-layout-leftleft1col";
+@import "layouts/engrid-layout-manual";
+@import "layouts/engrid-layout-rightright1col";
