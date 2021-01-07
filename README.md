@@ -19,6 +19,7 @@ Designed and Developed by [4Site Studios](http://4sitestudios.com/en?ms=github) 
 - National Wildlife Federation
 - Ocean Conservancy
 - Organic Consumers
+- Oxfam America
 - Oxfam Canada
 - People for the Ethical Treatment of Animals
 - Polaris Project
