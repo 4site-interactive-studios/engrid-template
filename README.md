@@ -27,6 +27,7 @@ Designed and Developed by [4Site Studios](http://4sitestudios.com/en?ms=github) 
 
 ## ENGrid Features
 
+- Works with all page types (e.g. Donation, e-Card, Email to Target, Event, etc..)
 - Auto Credit Card Type selection based on Credit Card Number
 - Processing Fee Checkbox
 - Donation Upsell Lightbox
