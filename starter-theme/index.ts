@@ -1,4 +1,4 @@
-// import { run } from "../../ts/app";
+import { run } from "../../ts/app";
 import "./sass/main.scss";
 
 const options = {
@@ -20,10 +20,10 @@ const options = {
   submitLabel: "Give"
 };
 
-// if (document.readyState !== "loading") {
-//   run(options);
-// } else {
-//   document.addEventListener("DOMContentLoaded", function() {
-//     run(options);
-//   });
-// }
+if (document.readyState !== "loading") {
+  run(options);
+} else {
+  document.addEventListener("DOMContentLoaded", function() {
+    run(options);
+  });
+}
