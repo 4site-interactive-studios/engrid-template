@@ -1,9 +1,9 @@
 {
-  "name": "engrid-starter-theme",
-  "version": "1.0.0",
-  "client": "starter-theme",
+  "name": "@4site/engrid",
+  "version": "2.0.0",
+  "client": "rfkhr",
   "private": false,
-  "description": "Starter Theme for ENGrid",
+  "description": "Page Template Framework for Engaging Networks",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server  --config webpack.dev.js",
@@ -21,7 +21,7 @@
   ],
   "author": "4Site Studios",
   "license": "Unlicense",
-  "url": "https://github.com/4site-interactive-studios/engrid-starter-theme",
+  "url": "https://github.com/4site-interactive-studios/engrid",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "7.5.5",
@@ -52,7 +52,6 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "@4site/engrid": "^2.0.0",
     "@babel/runtime": "^7.12.1",
     "clean-webpack-plugin": "^3.0.0",
     "sanitize.css": "^11.0.1",
@@ -60,10 +59,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/4site-interactive-studios/engrid-starter-theme.git"
+    "url": "git+https://github.com/4site-interactive-studios/engrid.git"
   },
   "bugs": {
-    "url": "https://github.com/4site-interactive-studios/engrid-starter-theme/issues"
+    "url": "https://github.com/4site-interactive-studios/engrid/issues"
   },
-  "homepage": "https://github.com/4site-interactive-studios/engrid-starter-theme#readme"
+  "homepage": "https://github.com/4site-interactive-studios/engrid#readme"
 }

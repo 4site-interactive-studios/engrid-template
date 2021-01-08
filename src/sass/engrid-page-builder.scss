@@ -1,0 +1,345 @@
+// Styles Related to the Page-Builder
+
+/*
+* ##########################################################
+* # LAYOUT - Page Builder Custom Styles
+* ##########################################################
+*/
+
+// Styles Related to the Page-Builder
+#en__pagebuilder {
+  /* When in page builder we want to center the content area on the page and must reduce it by 50px to make it visible because of the sidebar */
+  width: calc(100% - 51px);
+  /* If in page builder, give the background some color so that input fields stand out */
+  background-color: #f1f1f1;
+  /* If the user accidentally deletes all content from the form, prevent it from completely collapsing in on itself and making it impossible for the user to add new content */
+  form {
+    min-height: 25px !important;
+  }
+  /* Sometimes our styles might cause a code blocks title and label to display inline, rather than in rows. This should help prevent that https://d.pr/v/vXlAUM */
+  .en__placeholder__text{
+    flex-direction: column !important;
+  }
+
+  // When in page builder display Overlay sections after their counterparts and not overtop of their target grid row. This way content editors can more easily interact with them
+  .body-bannerOverlay{
+    grid-row: body-bannerOverlay !important;
+  }
+
+  // When in page builder display Overlay sections after their counterparts and not overtop of their target grid row. This way content editors can more easily interact with them
+  .page-backgroundImageOverlay{
+    grid-row: page-backgroundImageOverlay !important;
+  }
+
+  // Helps position the Engaging Networks pagebuilder tabs that are shown on hover of the Advanced Row
+  .en__component--advrow.en__component--active .en__component__actions.en__component__actions--advrow {
+    grid-row: page;
+  }
+
+  .page-backgroundImage img:not([loading]) {
+    border: 5px solid red;
+  }
+
+  // Includes both upper and lower case scenarios for typical field values
+  .inmem-y,
+  .inmem-n,
+  .giveBySelect-card,
+  .giveBySelect-check,
+  .giveBySelect-paypal,
+  .inmem-Y,
+  .inmem-N,
+  .giveBySelect-Card,
+  .giveBySelect-Check,
+  .giveBySelect-Paypal {
+    background-color: #0000ff1a !important;
+    &.pboAdvancedRow__preview .en__component--column {
+      outline-color: #0000ff !important;
+      z-index: 1;
+    }
+  }
+
+  .live-giving-amount,
+  .live-giving-upsell-amount,
+  .live-giving-upsell-amount-raw,
+  .live-giving-frequency {
+    background-color: #00ff001a !important;
+    &.pboAdvancedRow__preview .en__component--column {
+      outline-color: #00ff00 !important;
+      z-index: 1;
+    }
+  }
+
+  .page-backgroundImage img {
+    width: auto !important;
+    height: 350px !important;
+    margin: 0 auto;
+  }
+}
+
+// ####################################################################
+// Style Content Inside Page Builder
+// ####################################################################
+body#en__pagebuilder{
+  .page-alert,
+  .content-header,
+  .body-headerOutside,
+  .body-header,
+  .body-banner,
+  .body-bannerOverlay,
+  .body-top,
+  .body-side,
+  .body-main,
+  .body-bottom,
+  .body-footer,
+  .body-footerOutside,
+  .content-footerSpacer,
+  .content-preFooter,
+  .content-footer,
+  .page-backgroundImageOverlay,
+  .page-customCode{
+    min-height: 5rem;
+  }
+
+  .page-backgroundImage{
+    min-height: 15rem;
+  }
+
+  .messageOverlay.hidden {
+    visibility: hidden;
+    display: block !important;
+
+    :only-child::before {
+      font-size: 18px;
+      font-weight: 700;
+      color: #999999;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  
+    :only-child {
+      visibility: visible;
+      color: transparent;
+      background-color: transparent;
+    }
+    
+    :only-child .messageOverlay__message {
+      display: none;
+    }
+
+  }
+  
+  /* prettier-ignore */
+  .page-alert .messageOverlay.hidden:only-child::before { content: "Page Alert"; }
+  /* prettier-ignore */
+  .content-header .messageOverlay.hidden:only-child::before { content: "Content Header"; }
+  /* prettier-ignore */
+  .body-headerOutside .messageOverlay.hidden:only-child::before { content: "Body Header Outside"; }
+  /* prettier-ignore */
+  .body-header .messageOverlay.hidden:only-child::before { content: "Body Header Spacer"; }
+  /* prettier-ignore */
+  .body-banner .messageOverlay.hidden:only-child::before { content: "Body Banner"; }
+  /* prettier-ignore */
+  .body-bannerOverlay .messageOverlay.hidden:only-child::before { content: "Body Banner Overlay"; }
+  /* prettier-ignore */
+  .body-top .messageOverlay.hidden:only-child::before { content: "Body Top (Copy)"; }
+  /* prettier-ignore */
+  .body-side .messageOverlay.hidden:only-child::before { content: "Body Side (Copy)"; }
+  /* prettier-ignore */
+  .body-main .messageOverlay.hidden:only-child::before { content: "Body Main (Form)"; }
+  /* prettier-ignore */
+  .body-bottom .messageOverlay.hidden:only-child::before { content: "Body Bottom (Copy)"; }
+  /* prettier-ignore */
+  .body-footer .messageOverlay.hidden:only-child::before { content: "Body Footer Spacer"; }
+  /* prettier-ignore */
+  .body-footerOutside .messageOverlay.hidden:only-child::before { content: "Body Footer Outside"; }
+  /* prettier-ignore */
+  .content-footerSpacer .messageOverlay.hidden:only-child::before { content: "Content Footer Spacer"; }
+  /* prettier-ignore */
+  .content-preFooter .messageOverlay.hidden:only-child::before { content: "Content Pre Footer"; }
+  /* prettier-ignore */
+  .content-footer .messageOverlay.hidden:only-child::before { content: "Content Footer"; }
+  /* prettier-ignore */
+  .page-backgroundImage .messageOverlay.hidden:only-child::before { content: "Page Background Image"; }
+  /* prettier-ignore */
+  .page-backgroundImageOverlay .messageOverlay.hidden:only-child::before { content: "Page Background Image Overlay"; }
+  /* prettier-ignore */
+  .page-customCode .messageOverlay.hidden:only-child::before { content: "Custom Code"; }
+
+}
+
+/*
+* ##########################################################
+* # ENGRID - Mobile First Styling
+* # LAYOUT - Page Builder Preview Layout
+* #####################2#####################################
+*/
+
+// Vertically center the labels
+#EN__RootElement .pboAdvancedRow__preview .en__component--column div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.page-alert::before {
+  content: "Page Alert";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.content-header::before {
+  content: "Content Header";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-headerOutside::before {
+  content: "Body Header Outside";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-header::before {
+  content: "Body Header Spacer";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-banner::before {
+  content: "Body Banner";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-bannerOverlay::before {
+  content: "Body Banner Overlay";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-top::before {
+  content: "Body Top (Copy)";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-side::before {
+  content: "Body Side (Copy)";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-main::before {
+  content: "Body Main (Form)";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-bottom::before {
+  content: "Body Bottom (Copy)";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-footer::before {
+  content: "Body Footer Spacer";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.body-footerOutside::before {
+  content: "Body Footer Outside";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.content-footerSpacer::before {
+  content: "Content Footer Spacer";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.content-preFooter::before {
+  content: "Content Pre Footer";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.content-footer::before {
+  content: "Content Footer";
+}
+
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.page-backgroundImage::before {
+  content: "Page Background Image";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.page-backgroundImageOverlay::before {
+  content: "Page Background Image Overlay";
+}
+#EN__RootElement
+  .pboAdvancedRow__preview
+  .en__component--column.page-customCode::before {
+  content: "Page Custom Code";
+}
+
+/*
+* ##########################################################
+* # ENGRID - BODY Column Breakpoint Styling
+* # LAYOUT - Page Builder Preview Layout
+* ##########################################################
+*/
+
+/* Sum of all MIN values of the Body Columns */
+@media screen and (min-width: 700px) {
+  /* prettier-ignore */
+  #EN__RootElement .pboAdvancedRow__preview .en__component--advrow,
+  #EN__RootElement .pboAdvancedRow__preview .en__component--advrow .pseudo-subgrid{
+    /* autoprefixer grid: off */
+    grid-template-columns:
+    [
+      pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
+      cc-start lcc-start]  minmax(25px, 1fr)     [lcc-end
+      bc-start lbc-start]  minmax(300px, 300px)  [lbc-end
+      rbc-start]           minmax(300px, 300px)  [rbc-end bc-end
+      rcc-start]           minmax(25px, 1fr)     [rcc-end cc-end
+      rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end
+    ];
+  }
+}
+
+/* Something in EN is causing outlines to overlap, this prevents the issue */
+#EN__RootElement .pboAdvancedRow__preview .en__component--column {
+  margin-bottom: 1px;
+}
+
+#EN__RootElement .pboAdvancedRow__preview .en__component--column:before {
+  padding: 0.5rem 0;
+}
+
+#en__pagebuilder{
+    /* Adjust the editable space in the Page Editor so that the content can occupy as much space as possible */
+    .pboAdvancedRow__preview .en__container {
+      margin-left: 1px !important;
+      margin-right: 1px !important;
+      margin-bottom: 0px !important;
+      border: none !important;
+    }
+  
+    /* Page builder adds a hidden div to the bottom of the layout, this can result in undesired spacing */
+    .pboAdvancedRow__preview .en__component--row:nth-last-child(2) {
+      padding-bottom: 0px;
+    }
+  
+    // @TODO Might need to be moved into main.pboAdvancedRow__preview css
+    .pboAdvancedRow__preview .en__component--advrow {
+      width: 100%;
+    }
+  
+    .hide {
+      background-color: #ff00001a !important;
+      &.pboAdvancedRow__preview .en__component--column {
+        outline-color: #ff0000 !important;
+        z-index: 1;
+      }
+    }
+
+    .pboAdvancedRow__preview
+      .en__component--column.page-backgroundImageOverlay::before {
+      min-height: 350px !important;
+    }
+}
+

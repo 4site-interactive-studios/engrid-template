@@ -1,0 +1,108 @@
+/* @TODO Design buttons with style (Primary, Secondary, Text Only, Outine)
+ * See #3 https://medium.com/eightshapes-llc/component-examples-9c4b3bb3b308
+ */
+
+/* Buttons */
+button {
+  display: block;
+  margin: 0 0 1rem 0;
+  font-family: inherit;
+  padding: 0.85rem 1rem;
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  border-radius: var(--theme-input-border-radius, $default-input-border-radius);
+  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(
+    --theme-button-background-color,
+    $default-button-background-color
+  );
+  color: var(--theme-white, $default-white);
+}
+
+.en__submit button {
+  margin-top: 2rem;
+  background-color: var(
+    --theme-submit-button-background-color,
+    $default-submit-button-background-color
+  );
+  border-color: var(
+    --theme-submit-button-background-color,
+    $default-submit-button-background-color
+  );
+  color: var(
+    --theme-submit-button-font-color,
+    $default-submit-button-font-color
+  );
+  border-radius: var(
+    --theme-button-border-radius,
+    $default-button-border-radius
+  );
+  display: block;
+  font-size: calc(0.05552rem * 24);
+  font-weight: 900;
+  line-height: 1;
+  padding: 18px 0;
+}
+
+.en__submit,
+.en__submit button {
+  width: 100%;
+}
+
+.en__submit button:hover,
+.en__submit button:focus,
+button.cta.primary:hover,
+button.cta.primary:focus {
+  background-color: var(
+    --theme-submit-button-background-color-hover,
+    $default-submit-button-background-color-hover
+  );
+  border-color: var(
+    --theme-submit-button-background-color-hover,
+    $default-submit-button-background-color-hover
+  );
+}
+
+.arrow .en__submit button::after {
+  content: "→";
+  float: right;
+  margin-right: 1rem;
+  opacity: 0.9;
+}
+
+.arrow .en__submit button:disabled::after {
+  display: none;
+}
+
+.next-step .en__submit button {
+  width: initial;
+  margin-left: auto;
+}
+
+button:hover,
+button:focus {
+  background-color: var(
+    --theme-button-background-color-hover,
+    $default-button-background-color-hover
+  );
+}
+
+button[disabled],
+button[disabled]:hover,
+button[disabled]:focus {
+  background-color: var(
+    --theme-button-background-color-disabled,
+    $default-button-background-color-disabled
+  );
+  color: var(--theme-button-font-color, $default-button-font-color);
+  content: "Processing...";
+}
+
+button[disabled] {
+  opacity: 0.25;
+  cursor: not-allowed;
+}

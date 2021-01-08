@@ -1,0 +1,75 @@
+/************************************
+* Browser Form Autofill
+* REF: https://medium.com/@brunn/detecting-autofilled-fields-in-javascript-aed598d25da7
+***********************************/
+
+/* There is a browser bug that causes small text to be shown during the process of autofilling, no workaround at the moment */
+/* https://stackoverflow.com/questions/57242841/input-text-very-small-when-hovering-on-autofill-suggestion */
+/* https://bugs.chromium.org/p/chromium/issues/detail?id=953689#c24 */
+/* Screencast: https://d.pr/v/2xecBA */
+
+@-webkit-keyframes onAutoFillStart {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+
+@keyframes onAutoFillStart {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+@-webkit-keyframes onAutoFillCancel {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+@keyframes onAutoFillCancel {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+
+input:-webkit-autofill {
+  /* Expose a hook for JavaScript when autofill is shown */
+  /* JavaScript can capture 'animationstart' events */
+  -webkit-animation-name: onAutoFillStart;
+  animation-name: onAutoFillStart;
+
+  /* Make the background color transition really slowly */
+  -webkit-transition: background-color 50000s ease-in-out 0s;
+  transition: background-color 50000s ease-in-out 0s;
+}
+
+input:not(:-webkit-autofill) {
+  /* Expose a hook for JS onAutoFillCancel */
+  /* JavaScript can capture 'animationstart' events */
+  -webkit-animation-name: onAutoFillCancel;
+  animation-name: onAutoFillCancel;
+}
+
+.is-autofilled,
+.is-autofilled label {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+/* A fix for tiny font sizes on autofill: https://stackoverflow.com/a/60379185/815683 */
+/* Might be able to remove the other work arounds */
+input:-webkit-autofill::first-line,
+textarea:-webkit-autofill::first-line,
+select:-webkit-autofill::first-line{
+  font-size: 1rem;
+}

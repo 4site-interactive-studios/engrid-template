@@ -1,0 +1,48 @@
+//Tweet to target theming
+
+/* Make sure that background colors are not hard coded */
+.en__twitterTarget,
+.en__tweetBackgroundText,
+.en__tweet,
+.en__tweetDisabled,
+.en__tweetButton,
+.en__tweetContact {
+  background-color: initial;
+}
+
+.en__contacts {
+  flex-direction: column;
+}
+
+.en__tweetContact {
+  margin: 0 0 1rem 0;
+  padding: 0;
+  width: initial;
+}
+
+.en__twitterTarget__image {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+.en__twitterTarget__details span {
+  display: block;
+}
+
+.en__twitterTarget__details br {
+  display: none;
+}
+
+.en__tweetButton__send,
+.en__tweetButton__sent {
+  background-color: #f1700b;
+  border-radius: 0;
+}
+
+
+.en__twitterTarget,
+.en__tweet,
+.en__tweetButton{
+    padding-left: 0;
+    padding-right: 0;
+}

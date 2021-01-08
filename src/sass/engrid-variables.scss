@@ -1,0 +1,108 @@
+/* NOTE: Any time updates are made here, they should also be made in themes/starter-theme/sass/variables.scss */
+
+/* @TODO There has to be a better way of defining breakpoints as a default and then adjust them up stream in the themes */
+$slicer-breakpoints: 0 400px 600px 1024px 1200px;
+
+/* UNIVERSAL COLOR PALETTE */
+$default-transparent: transparent;
+$default-white: #FFFFFF;
+$default-off-white: #DFDFDF;
+$default-light-gray: #BFBFBF;
+$default-gray: #9F9F9F;
+$default-dark-gray: #808080;
+$default-off-black: #404040;
+$default-black: #000000;
+
+/* SEMANTIC COLOR PALETTE */
+$default-success: #33CC33;
+$default-warning: #FCAC00;
+$default-error: #F12222;
+
+/* CTA COLOR */
+$default-cta: #0070BA;
+$default-cta-hover: #22a3cb;
+
+/* BODY BACKGROUND COLOR */
+$default-body-background-color: $default-light-gray;
+
+/* ENGRID SECTIONS BACKGROUND COLOR */
+$default-page-alert-background-color: $default-transparent;
+$default-content-header-background-color: $default-transparent;
+$default-body-headerOutside-background-color: $default-transparent;
+$default-body-header-background-color: $default-white;
+$default-body-banner-background-color: $default-white;
+$default-body-bannerOverlay-background-color: $default-transparent;
+$default-body-top-background-color: $default-white;
+$default-body-side-background-color: $default-white;
+$default-body-main-background-color: $default-white;
+$default-body-bottom-background-color: $default-white;
+$default-body-footer-background-color: $default-white;
+$default-body-footerOutside-background-color: $default-transparent;
+$default-content-footerSpacer-background-color: $default-transparent;
+$default-content-preFooter-background-color: $default-transparent;
+$default-content-footer-background-color: $default-transparent;
+$default-page-backgroundImage-background-color: #333333;
+$default-page-backgroundImageOverlay-background-color: $default-transparent;
+$default-page-customCode-background-color: $default-transparent;
+
+/* ENGRID BACKGROUND IMAGE SECTION'S BACKGROUND PATTERN */
+/* This is a background pattern that is shown before the hi-resolution background image is lazy loaded in, if at all */
+/* It's background color "$default-page-backgroundImage-background-color" should be the average color of the image  */
+/* REF: (https://doodad.dev/pattern-generator/) */
+$default-page-backgroundImage-background-pattern: "url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)"; // Invisible GIF
+
+/* @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand
+ * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
+ */
+
+ /* REF: http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/ */
+$default-root-font-size: 16px; // Sets a baseline font size for all other REM based font-sizes to relatively build off of
+
+$default-body-background-color: $default-white; // @TODO Not yet used anywhere
+$default-body-border-radius: 0px;
+$default-spacing-sm: 0.8652rem; // @TODO Revisit
+$default-spacing: calc(0.8652rem * 0.75); // @TODO Revisit
+$default-spacing-lg: calc(0.8652rem * 2.5); // @TODO Revisit
+$default-spacing-xlg: calc(0.8652rem * 5); // @TODO Revisit
+
+/* INPUTS */
+$default-input-border-radius: 5px;
+$default-input-border-width: 2px;
+$default-input-border-color: $default-black;
+$default-input-border-color-focus: $default-black;
+$default-input-background-color: $default-white;
+$default-input-background-color-hover: $default-white;
+
+/* BUTTONS */
+$default-button-background-color: $default-black;
+$default-button-background-color-hover: $default-cta-hover;
+$default-button-background-color-active: $default-cta;
+$default-button-background-color-disabled: #949494;
+$default-button-border-color: $default-black;
+$default-button-border-color-active: $default-cta;
+$default-button-border-color-hover: $default-cta-hover;
+$default-button-border-radius: 0px;
+$default-button-font-color: $default-white;
+$default-button-font-color-active: $default-white;
+
+/* SUBMIT BUTTONS */
+$default-submit-button-background-color: $default-cta;
+$default-submit-button-background-color-hover: $default-cta-hover;
+$default-submit-button-border-color: $default-cta;
+$default-submit-button-font-color: $default-white;
+
+/* CHECKMARKS */
+$default-checkmark-background-color: $default-cta;
+$default-checkmark-border-color: $default-cta;
+$default-checkmark-font-color: $default-white;
+
+/* ERRORS */
+$default-error-red: $default-error;
+$default-error-red-grayscale: #949494;
+$default-error-red-faded: #FFEAE9;
+$default-error-page-group-background: #FFEAE9;
+$default-error-input-border-width: $default-input-border-width;
+
+/* HIGHLIGHTS */
+$default-highlight-background-color: #227F9E;
+$default-highlight-font-color: #FFFFFF;
