@@ -1,17 +1,27 @@
 {
-  "name": "engrid",
-  "version": "1.0.0",
+  "name": "@4site/engrid",
+  "version": "2.0.0",
   "client": "rfkhr",
-  "private": true,
-  "description": "",
+  "private": false,
+  "description": "Page Template Framework for Engaging Networks",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server  --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
-  "keywords": [],
+  "keywords": [
+    "Engaging Networks",
+    "ENGrid",
+    "4Site Studios",
+    "4Site",
+    "Page Templates",
+    "Non Profit",
+    "Non-Profit",
+    "CRM"
+  ],
   "author": "4Site Studios",
   "license": "Unlicense",
+  "url": "https://github.com/4site-interactive-studios/engrid",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "7.5.5",
@@ -46,5 +56,13 @@
     "clean-webpack-plugin": "^3.0.0",
     "sanitize.css": "^11.0.1",
     "strongly-typed-events": "^1.6.22"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4site-interactive-studios/engrid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/4site-interactive-studios/engrid/issues"
+  },
+  "homepage": "https://github.com/4site-interactive-studios/engrid#readme"
 }
