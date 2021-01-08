@@ -4,13 +4,13 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./starter-theme/" + process.env.npm_package_client + "/index.ts",
+    main: "./src/themes/" + process.env.npm_package_client + "/index.ts",
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Engaging Networks - Page Type Selection",
-      template: "testing-pages/index.html",
+      template: "./src/index.html",
       inject: true,
       minify: {
         removeComments: true,
@@ -20,7 +20,57 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Engaging Networks Page - Donation",
       filename: "page-donation.html",
-      template: "testing-pages/page-donation.html",
+      template: "./src/templates/page-donation.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      title: "Ocean Conservancy - Engaging Networks Page - Donation",
+      filename: "page-donation-oc.html",
+      template: "./src/templates/page-donation-oc.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      title: "RFK HR - Engaging Networks Page - Donation",
+      filename: "page-donation-rfkhr.html",
+      template: "./src/templates/page-donation-rfkhr.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      title: "Ocean Conservancy - Engaging Networks Page - Donation",
+      filename: "page-donation-applepay.html",
+      template: "./src/templates/page-donation-applepay.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      title: "Engaging Networks Page - Sign Up",
+      filename: "page-sign-up.html",
+      template: "./src/templates/page-sign-up.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      title: "Engaging Networks Email - eCard",
+      filename: "email-ecard.html",
+      template: "./src/templates/email-ecard.html",
       inject: true,
       minify: {
         removeComments: true,
