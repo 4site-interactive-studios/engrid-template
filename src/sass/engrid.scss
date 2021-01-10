@@ -17,6 +17,7 @@
 @import "engrid-background-image";
 @import "engrid-body";
 @import "engrid-buttons";
+@import "engrid-click-to-expand";
 @import "engrid-columns";
 @import "engrid-donations";
 @import "engrid-ecard";
@@ -35,7 +36,7 @@
 @import "engrid-root";
 @import "engrid-thermometer";
 @import "engrid-tweet-to-target";
-@import "engrid-utility";
+@import "engrid-utility"; // @TODO Pending removal
 
 /* ENGRID ADMIN ONLY STYLINGS */
 @import "engrid-debug";

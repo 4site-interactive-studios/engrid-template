@@ -11,6 +11,7 @@ import SimpleCountrySelect from "./utils/simple-country-select";
 import getUrlParameter from "./utils/query-string";
 import ApplePay from "./utils/apple-pay";
 import CapitalizeFields from "./utils/capitalize-fields";
+import ClickToExpand from "./utils/click-to-expand";
 
 // IE Warning
 const ie = new IE();
