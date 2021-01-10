@@ -356,7 +356,6 @@ textarea:focus {
   background-color: transparent;
 }
 
-/* TODO This needs to pull in $clinet-cta instead of being hard coded to #F57E20 */
 /* REF: https://stackoverflow.com/questions/25477819/scss-variable-in-background-image-with-svg-image-data-uri */
 .en__field__input--checkbox:checked + .en__field__label::after,
 .en__contactDetails__select:checked + .en__contactDetails__rows::after {

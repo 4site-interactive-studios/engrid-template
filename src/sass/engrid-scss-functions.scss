@@ -1,3 +1,6 @@
+/* Source: SCSS variable in background image with SVG image data URI
+   REF: https://stackoverflow.com/questions/25477819/scss-variable-in-background-image-with-svg-image-data-uri
+*/
 @function svg-friendly-color($color) {
     @return '%23' + str-slice('#{$color}', 2, -1);
 }

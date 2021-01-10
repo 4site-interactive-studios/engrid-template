@@ -5,7 +5,7 @@
 /* ENGRID FUNCTIONS */
 @import "engrid-scss-functions";
 
-/* ENGRID SANITIZE.CSS (INCLUDES NOMRALIZE.CSS) */
+/* SANITIZE.CSS (INCLUDES NOMRALIZE.CSS) */
 @import "~sanitize.css";
 
 /* ENGRID DEFAULT VAIRABLES */
@@ -36,11 +36,6 @@
 @import "engrid-root";
 @import "engrid-thermometer";
 @import "engrid-tweet-to-target";
-@import "engrid-utility"; // @TODO Pending removal
-
-/* ENGRID ADMIN ONLY STYLINGS */
-@import "engrid-debug";
-@import "engrid-page-builder";
 
 /* ENGRID BASE LAYOUTS */
 @import "layouts/engrid-layout";
@@ -53,3 +48,8 @@
 @import "layouts/engrid-layout-leftleft1col";
 @import "layouts/engrid-layout-manual";
 @import "layouts/engrid-layout-rightright1col";
+
+/* ENGRID ADMIN ONLY STYLINGS */
+/* @TODO Separate these out into their own CSS file */
+@import "engrid-debug";
+@import "engrid-page-builder";
