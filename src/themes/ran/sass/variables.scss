@@ -1,7 +1,7 @@
 $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
-$default-white: #ffffff;
-$default-black: #000000;
+$color-white: #ffffff;
+$color-black: #000000;
 $default-gray: #8a8a8a;
 $default-light-gray: #cacaca;
 $default-cta: #f1700b;
@@ -13,7 +13,7 @@ $default-page-backgroundImage-background-color: #487c0f;
  * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
  */
 
-$default-body-background-color: $default-white; //@TODO Not yet used anywhere
+$default-body-background-color: $color-white; //@TODO Not yet used anywhere
 $default-body-border-radius: 0px;
 $default-spacing-sm: 0.8652rem; //@TODO Revisit
 $default-spacing: calc(0.8652rem * 0.75); //@TODO Revisit
@@ -22,28 +22,28 @@ $default-spacing-xlg: calc(0.8652rem * 5); //@TODO Revisit
 
 $default-input-border-radius: 0px;
 $default-input-border-width: 1px;
-$default-input-border-color: $default-black;
+$default-input-border-color: $color-black;
 $default-input-background-color: transparent;
 
-$default-button-background-color: $default-black;
+$default-button-background-color: $color-black;
 $default-button-background-color-hover: $default-cta-hover;
 $default-button-background-color-active: $default-cta;
 $default-button-background-color-disabled: #949494;
-$default-button-border-color: $default-black;
+$default-button-border-color: $color-black;
 $default-button-border-color-active: $default-cta;
 $default-button-border-color-hover: $default-cta-hover;
 $default-button-border-radius: 0px;
-$default-button-font-color: $default-white;
-$default-button-font-color-active: $default-white;
+$default-button-font-color: $color-white;
+$default-button-font-color-active: $color-white;
 
 $default-submit-button-background-color: $default-cta;
 $default-submit-button-background-color-hover: $default-cta-hover;
 $default-submit-button-border-color: $default-cta;
-$default-submit-button-font-color: $default-white;
+$default-submit-button-font-color: $color-white;
 
 $default-checkmark-background-color: $default-cta;
 $default-checkmark-border-color: $default-cta;
-$default-checkmark-font-color: $default-white;
+$default-checkmark-font-color: $color-white;
 
 $default-error-red: #e74b3c;
 $default-error-red-grayscale: #949494;

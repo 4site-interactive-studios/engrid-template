@@ -1,6 +1,6 @@
 #engrid{
-    --theme-white: #ffffff;
-    --theme-black: #4D4D4D;
+    --color-white: #ffffff;
+    --color-black: #4D4D4D;
     --theme-gray: #8a8a8a;
     --theme-light-gray: #cacaca;
     --theme-cta: #208096;
@@ -9,7 +9,7 @@
     --theme-prefooter-background-color: #d0e2e7;
     --theme-footer-background-color: #20809e;
 
-    // --theme-background-color: --theme-white;
+    // --theme-background-color: --color-white;
     // --theme-background-image: url("");
     --theme-background-image-background-color: #333333;
 
@@ -20,7 +20,7 @@
      /* REF: http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/ */
     $theme-root-font-size: 16px; // Sets a baseline font size for all other REM based font-sizes to relatively build off of
 
-    // --theme-body-background-color: --theme-white; //@TODO Not yet used anywhere
+    // --theme-body-background-color: --color-white; //@TODO Not yet used anywhere
     --theme-body-border-radius: 0px;
     --theme-spacing-sm: 0.8652rem; //@TODO Revisit
     --theme-spacing: calc(0.8652rem * 0.75); //@TODO Revisit
@@ -29,28 +29,27 @@
 
     --theme-input-border-radius: 5px;
     --theme-input-border-width: 2px;
-    // --theme-input-border-color: --theme-black;
-    // --theme-input-background-color: --theme-white;
+    // --theme-input-border-color: --color-black;
+    // --theme-input-background-color: --color-white;
 
-    // --theme-button-background-color: --theme-black;
+    // --theme-button-background-color: --color-black;
     // --theme-button-background-color-hover: --theme-cta-hover;
     // --theme-button-background-color-active: --theme-cta;
-    --theme-button-background-color-disabled: #949494;
-    // --theme-button-border-color: --theme-black;
+    // --theme-button-border-color: --color-black;
     // --theme-button-border-color-active: --theme-cta;
     // --theme-button-border-color-hover: --theme-cta-hover;
     --theme-button-border-radius: 0px;
-    // --theme-button-font-color: --theme-white;
-    // --theme-button-font-color-active: --theme-white;
+    // --theme-button-font-color: --color-white;
+    // --theme-button-font-color-active: --color-white;
 
     // --theme-submit-button-background-color: --theme-cta;
     // --theme-submit-button-background-color-hover: --theme-cta-hover;
     // --theme-submit-button-border-color: --theme-cta;
-    // --theme-submit-button-font-color: --theme-white;
+    // --theme-submit-button-font-color: --color-white;
 
     // --theme-checkmark-background-color: --theme-cta;
     // --theme-checkmark-border-color: --theme-cta;
-    // --theme-checkmark-font-color: --theme-white;
+    // --theme-checkmark-font-color: --color-white;
 
     --theme-error-red: #f12222;
     --theme-error-red-grayscale: #949494;
@@ -68,7 +67,7 @@
 
 /* IMMP Sub-theme */
 #engrid.theme-immp{
-    --theme-black: #3c4d64;
+    --color-black: #3c4d64;
     
     --theme-prefooter-background-color: #d0e2e7;
     --theme-footer-background-color: #3c4d64;
@@ -79,7 +78,6 @@
     --theme-button-background-color: #208096;
     --theme-button-background-color-hover: #22A3CB;
     --theme-button-background-color-active: #3c4d64;
-    --theme-button-background-color-disabled: #949494;
     --theme-button-border-color: #208096;
     --theme-button-border-color-active: #3c4d64;
     --theme-button-border-color-hover: #22A3CB;

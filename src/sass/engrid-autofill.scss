@@ -71,5 +71,5 @@ input:not(:-webkit-autofill) {
 input:-webkit-autofill::first-line,
 textarea:-webkit-autofill::first-line,
 select:-webkit-autofill::first-line{
-  font-size: 1rem;
+  font-size: var(--theme-root-font-size);
 }

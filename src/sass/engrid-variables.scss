@@ -1,113 +1,118 @@
-/* NOTE: Any time updates are made here, they should also be made in themes/starter-theme/sass/variables.scss */
+// NOTE: Any CSS Custom Properties are changes they should also be made in themes/starter-theme/sass/variables.scss
 
-/* @TODO There has to be a better way of defining breakpoints as a default and then adjust them up stream in the themes */
+// @TODO There has to be a better way of defining breakpoints as a default and then adjust them up stream in the themes
 $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
-/* UNIVERSAL COLOR PALETTE */
-$default-transparent: transparent;
-$default-white: #FFFFFF;
-$default-off-white: #DFDFDF;
-$default-light-gray: #BFBFBF;
-$default-gray: #9F9F9F;
-$default-dark-gray: #808080;
-$default-off-black: #404040;
-$default-black: #000000;
+// @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
+body{
+    // FIXED COLOR PALETTE
+    --color-transparent: transparent;
+    --color-white: rgba(255, 255, 255, 1);
+    --color-black: rgba(0, 0, 0, 1);
 
-/* SEMANTIC COLOR PALETTE */
-$default-success: #33CC33;
-$default-warning: #FCAC00;
-$default-error: #F12222;
+    // GRAYSCALE COLOR PALETTE
+    --theme-off-white: #DFDFDF;
+    --theme-light-gray: #BFBFBF;
+    --theme-gray: #9F9F9F;
+    --theme-dark-gray: #808080;
+    --theme-off-black: #404040;
 
-/* CTA COLOR */
-$default-cta: #0070BA;
-$default-cta-hover: #22a3cb;
+    // SEMANTIC COLOR PALETTE
+    --theme-success: #33CC33;
+    --theme-warning: #FCAC00;
+    --theme-error: #F12222;
 
-/* BODY BACKGROUND COLOR */
-$default-body-background-color: $default-light-gray;
+    // CTA COLOR
+    --theme-cta: #0070BA;
+    --theme-cta-hover: #22a3cb;
 
-/* ENGRID SECTIONS BACKGROUND COLOR */
-$default-page-alert-background-color: $default-transparent;
-$default-content-header-background-color: $default-transparent;
-$default-body-headerOutside-background-color: $default-transparent;
-$default-body-header-background-color: $default-white;
-$default-body-banner-background-color: $default-white;
-$default-body-bannerOverlay-background-color: $default-transparent;
-$default-body-top-background-color: $default-white;
-$default-body-side-background-color: $default-white;
-$default-body-main-background-color: $default-white;
-$default-body-bottom-background-color: $default-white;
-$default-body-footer-background-color: $default-white;
-$default-body-footerOutside-background-color: $default-transparent;
-$default-content-footerSpacer-background-color: $default-transparent;
-$default-content-preFooter-background-color: $default-transparent;
-$default-content-footer-background-color: $default-transparent;
-$default-page-backgroundImage-background-color: #333333;
-$default-page-backgroundImageOverlay-background-color: $default-transparent;
-$default-page-customCode-background-color: $default-transparent;
+    // PAGE, CONTENT, and BODY BACKGROUND COLOR
+    // Quick set the background color on all corresponding sections
+    --theme-page-background-color: var(--color-transparent);
+    --theme-content-background-color: var(--color-transparent);
+    --theme-body-background-color: var(--color-white);
 
-/* ENGRID BACKGROUND IMAGE SECTION'S BACKGROUND PATTERN */
-/* This is a background pattern that is shown before the hi-resolution background image is lazy loaded in, if at all */
-/* It's background color "$default-page-backgroundImage-background-color" should be the average color of the image  */
-/* REF: (https://doodad.dev/pattern-generator/) */
-$default-page-backgroundImage-background-pattern: "url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)"; // Invisible GIF
+    // ENGRID SECTIONS BACKGROUND COLOR
+    --theme-page-alert-background-color: var(--theme-page-background-color);
+    --theme-content-header-background-color: var(--theme-content-background-color);
+    --theme-body-headerOutside-background-color: var(--color-transparent);
+    --theme-body-header-background-color: var(--theme-body-background-color);
+    --theme-body-banner-background-color: var(--theme-body-background-color);
+    --theme-body-bannerOverlay-background-color: var(--color-transparent);
+    --theme-body-top-background-color: var(--theme-body-background-color);
+    --theme-body-side-background-color: var(--theme-body-background-color);
+    --theme-body-main-background-color: var(--theme-body-background-color);
+    --theme-body-bottom-background-color: var(--theme-body-background-color);
+    --theme-body-footer-background-color: var(--theme-body-background-color);
+    --theme-body-footerOutside-background-color: var(--color-transparent);
+    --theme-content-footerSpacer-background-color: var(--theme-content-background-color);
+    --theme-content-preFooter-background-color: var(--theme-content-background-color);
+    --theme-content-footer-background-color: var(--theme-content-background-color);
+    --theme-page-backgroundImage-background-color: var(--theme-page-background-color);
+    --theme-page-backgroundImageOverlay-background-color: var(--color-transparent);
+    --theme-page-customCode-background-color: var(--theme-page-background-color);
 
-/* @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand
- * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
- */
+    /* ENGRID BACKGROUND IMAGE SECTION'S BACKGROUND PATTERN */
+    /* This is a background pattern that is shown before the hi-resolution background image is lazy loaded in, if at all */
+    /* It's background color "--theme-page-backgroundImage-background-color" should be the average color of the image  */
+    /* REF: (https://doodad.dev/pattern-generator/) */
+    --theme-page-backgroundImage-background-pattern: "url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)"; // Invisible GIF
 
- /* REF: http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/ */
-$default-root-font-size: 16px; // Sets a baseline font size for all other REM based font-sizes to relatively build off of
+    /* REF: http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/ */
+    --theme-root-font-size: 16px; // Sets a baseline font size for all other REM based font-sizes to relatively build off of
 
-$default-body-background-color: $default-white; // @TODO Not yet used anywhere
-$default-body-border-radius: 0px;
-$default-spacing-sm: 0.8652rem; // @TODO Revisit
-$default-spacing: calc(0.8652rem * 0.75); // @TODO Revisit
-$default-spacing-lg: calc(0.8652rem * 2.5); // @TODO Revisit
-$default-spacing-xlg: calc(0.8652rem * 5); // @TODO Revisit
+    --theme-page-backgroundImage-url: "url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)"; // Invisible GIF
 
-/* INPUTS */
-$default-input-border-radius: 5px;
-$default-input-border-width: 2px;
-$default-input-border-color: $default-black;
-$default-input-border-color-focus: $default-black;
-$default-input-background-color: $default-white;
-$default-input-background-color-hover: $default-white;
+    --theme-body-border-radius: 0px;
+    --theme-spacing-sm: 0.8652rem; // @TODO Revisit
+    --theme-spacing: calc(0.8652rem * 0.75); // @TODO Revisit
+    --theme-spacing-lg: calc(0.8652rem * 2.5); // @TODO Revisit
+    --theme-spacing-xlg: calc(0.8652rem * 5); // @TODO Revisit
 
-/* BUTTONS */
-$default-button-background-color: $default-black;
-$default-button-background-color-hover: $default-cta-hover;
-$default-button-background-color-active: $default-cta;
-$default-button-background-color-disabled: #949494;
-$default-button-border-color: $default-black;
-$default-button-border-color-active: $default-cta;
-$default-button-border-color-hover: $default-cta-hover;
-$default-button-border-radius: 0px;
-$default-button-font-color: $default-white;
-$default-button-font-color-active: $default-white;
+    /* INPUTS */
+    --theme-input-border-radius: 5px;
+    --theme-input-border-width: 2px;
+    --theme-input-border-color: var(--color-black);
+    --theme-input-border-color-focus: var(--color-black);
+    --theme-input-background-color: var(--color-white);
+    --theme-input-background-color-hover: var(--color-white);
+    --theme-input-font-placeholder-color: var(--theme-light-gray);   
 
-/* SUBMIT BUTTONS */
-$default-submit-button-background-color: $default-cta;
-$default-submit-button-background-color-hover: $default-cta-hover;
-$default-submit-button-border-color: $default-cta;
-$default-submit-button-font-color: $default-white;
+    /* BUTTONS */
+    --theme-button-background-color: var(--color-black);
+    --theme-button-background-color-hover: var(--theme-cta-hover);
+    --theme-button-background-color-active: var(--theme-cta);
+    --theme-button-border-color: var(--color-black);
+    --theme-button-border-color-active: var(--theme-cta);
+    --theme-button-border-color-hover: var(--theme-cta-hover);
+    --theme-button-border-radius: 0px;
+    --theme-button-font-color: var(--color-white);
+    --theme-button-font-color-active: var(--color-white);
 
-/* CHECKMARKS */
-$default-checkmark-background-color: $default-cta;
-$default-checkmark-border-color: $default-cta;
-$default-checkmark-font-color: $default-white;
+    /* SUBMIT BUTTONS */
+    --theme-submit-button-background-color: var(--theme-cta);
+    --theme-submit-button-background-color-hover: var(--theme-cta-hover);
+    --theme-submit-button-border-color: var(--theme-cta);
+    --theme-submit-button-font-color: var(--color-white);
 
-/* ERRORS */
-$default-error-red: $default-error;
-$default-error-red-grayscale: #949494;
-$default-error-red-faded: #FFEAE9;
-$default-error-page-group-background: #FFEAE9;
-$default-error-input-border-width: $default-input-border-width;
+    /* CHECKMARKS */
+    --theme-checkmark-background-color: var(--theme-cta);
+    --theme-checkmark-border-color: var(--theme-cta);
+    --theme-checkmark-font-color: var(--color-white);
 
-/* HIGHLIGHTS */
-$default-highlight-background-color: #227F9E;
-$default-highlight-font-color: #FFFFFF;
+    /* ERRORS */
+    --theme-error-red: var(--theme-error);
+    --theme-error-red-grayscale: #949494;
+    --theme-error-red-faded: #FFEAE9;
+    --theme-error-page-group-background: #FFEAE9;
+    --theme-error-input-border-width: var(--theme-input-border-width);
 
-/* CLICK TO EXPAND */
-$default-click-to-expand-cta-image-url: "https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_open.png";
-$default-click-to-expand-cta-image-width: 16px;
-$default-click-to-expand-cta-image-height: 16px;
+    /* HIGHLIGHTS */
+    --theme-highlight-background-color: #227F9E;
+    --theme-highlight-font-color: #FFFFFF;
+
+    /* CLICK TO EXPAND */
+    --theme-click-to-expand-cta-image-url: url("https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_open.png");
+    --theme-click-to-expand-cta-image-width: 16px;
+    --theme-click-to-expand-cta-image-height: 16px;
+}

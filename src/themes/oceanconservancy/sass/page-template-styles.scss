@@ -40,10 +40,7 @@ body:not(#en__pagebuilder).footer-below-fold
   clip-path: none;
   height: 100%;
   top: 0;
-  background-color: var(
-    --background-image-background-color,
-    $default-page-backgroundImage-background-color
-  );
+  background-color: var(--background-image-background-color);
 }
 
 /*
@@ -162,14 +159,14 @@ body:not(#en__pagebuilder)
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: var(--background-image);
+  background-image: var(--theme-page-backgroundImage-url);
   will-change: transform; // creates a new paint layer
 }
 
 // @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
 body {
-  color: var(--theme-black, $default-black);
-  background-color: var(--theme-body-background-color, $default-body-background-color);
+  color: var(--color-black);
+  background-color: var(--theme-body-background-color);
 }
 
 body,
@@ -209,7 +206,7 @@ body:not(#en__pagebuilder) {
 }
 
 h1 {
-  color: var(--theme-black, $default-black);
+  color: var(--color-black);
   font-family: "Roboto", sans-serif;
   font-size: calc(0.05552rem * 48);
   font-weight: 900;
@@ -223,7 +220,7 @@ h1 {
 }
 
 h2 {
-  color: var(--theme-black, $default-black);
+  color: var(--color-black);
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: bold;
@@ -234,7 +231,7 @@ h2 {
 }
 
 h3 {
-  color: var(--theme-black, $default-black);
+  color: var(--color-black);
   font-family: "Roboto", sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -314,18 +311,18 @@ label.en__field__label {
     font-weight: bold;
     letter-spacing: 0.4px;
     text-align: center;
-    color: var(--theme-black);
+    color: var(--color-black);
     // line-height: 1;
     text-transform: none;
     transition: 0.3s background-color ease;
     &:hover {
-      background-color: var(--theme-black);
-      color: var(--theme-white);
+      background-color: var(--color-black);
+      color: var(--color-white);
     }
   }
 
   input[type="radio"]:checked + label {
-    color: var(--theme-white);
+    color: var(--color-white);
   }
 }
 
@@ -653,14 +650,8 @@ body#en__pagebuilder #engrid {
     }
 
     .body-header {
-      border-top-left-radius: var(
-        --theme-input-border-radius,
-        $default-input-border-radius
-      );
-      border-top-right-radius: var(
-        --theme-input-border-radius,
-        $default-input-border-radius
-      );
+      border-top-left-radius: var(--theme-input-border-radius);
+      border-top-right-radius: var(--theme-input-border-radius);
     }
 
     .content-preFooter.pseudo-subgrid > div {
@@ -682,10 +673,7 @@ body:not(#en__pagebuilder).footer-below-fold
   clip-path: none;
   height: 100%;
   top: 0;
-  background-color: var(
-    --background-image-background-color,
-    $default-page-backgroundImage-background-color
-  );
+  background-color: var(--background-image-background-color);
 }
 
 /************************************
@@ -770,11 +758,8 @@ body:not(#en__pagebuilder).footer-below-fold
 }
 
 .highlight {
-  background-color: var(
-    --theme-highlight-background-color,
-    $default-highlight-background-color
-  );
-  color: var(--theme-highlight-font-color, $default-highlight-font-color);
+  background-color: var(--theme-highlight-background-color);
+  color: var(--theme-highlight-font-color);
   padding: 0.5rem;
   font-weight: 500;
   display: inline-block;
@@ -802,14 +787,14 @@ body:not(#en__pagebuilder).footer-below-fold
   height: 0;
   left: 20px;
   top: 10px;
-  color: var(--theme-black);
+  color: var(--color-black);
   width: 0;
   font-weight: 400;
 }
 
 .en__field--donationAmt.en__field--radio
   .en__field__item--other:not(.en__field__item--hidden)::before {
-  color: var(--theme-white);
+  color: var(--color-white);
 }
 
 .en__field--monthly_upsell_checkbox
@@ -830,14 +815,14 @@ body:not(#en__pagebuilder).footer-below-fold
 }
 .en__field__input--checkbox:checked + .en__field__label::before,
 .en__contactDetails__select:checked + .en__contactDetails__rows::before {
-  background-color: var(--theme-black);
+  background-color: var(--color-black);
   box-shadow: none;
 }
 
 .en__field__input--checkbox:checked + .en__field__label::after,
 .en__contactDetails__select:checked + .en__contactDetails__rows::after {
   content: "\a0\2713";
-  color: var(--theme-white);
+  color: var(--color-white);
   left: -31px;
   top: 1px;
 }
@@ -957,8 +942,8 @@ body:not(#en__pagebuilder).footer-below-fold
   .en__field__element--radio
   .en__field__item
   label:hover {
-  background-color: var(--theme-black);
-  color: var(--theme-white);
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 // .en__field--donationAmt
@@ -1020,7 +1005,6 @@ body:not(#en__pagebuilder).footer-below-fold
       // font-size: calc(0.05552rem * 32);
       // font-weight: 900;
       // letter-spacing: 1px;
-      // color: $default-black;
       text-transform: uppercase;
       // line-height: 1;
       padding: 1rem 1rem 0.5rem 1rem; // Corrects for the fact the font is vertically off center
@@ -1037,7 +1021,6 @@ body:not(#en__pagebuilder).footer-below-fold
 .content-preFooter {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  // background-color: $default-content-prefooter-background-color;
 
   h1 {
     padding-top: 1rem;
@@ -1051,10 +1034,7 @@ body:not(#en__pagebuilder).footer-below-fold
 }
 
 .content-footer {
-  background-color: var(
-    --theme-footer-background-color,
-    $default-content-footer-background-color
-  );
+  background-color: var(--theme-footer-background-color);
   .en__component:first-child {
     padding-top: 1rem;
   }
@@ -1149,7 +1129,7 @@ body:not(#en__pagebuilder).footer-below-fold
 }
 
 .white-font {
-  color: $default-white;
+  color: var(--color-white);
 }
 
 /** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/
@@ -1264,13 +1244,13 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
 
 /* This input field is pretending to be a button, so let's mirror the border color of its neighboring buttons */
 input[name="transaction.donationAmt.other"] {
-  border-color: var(--theme-button-border-color, $default-button-border-color);
+  border-color: var(--theme-button-border-color);
 }
 
 .content-footer {
-  background-color: var(--theme-black);
+  background-color: var(--color-black);
   // box-shadow: none;
-  color: var(--theme-white);
+  color: var(--color-white);
   overflow: hidden;
   font-size: 14px;
   font-style: normal;
@@ -1279,7 +1259,7 @@ input[name="transaction.donationAmt.other"] {
   letter-spacing: 0.6px;
   text-align: center;
   a {
-    color: var(--theme-white);
+    color: var(--color-white);
     text-decoration: none;
   }
 }

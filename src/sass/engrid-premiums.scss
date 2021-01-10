@@ -34,7 +34,7 @@
 }
 
 .en__pg--selected .en__pg__image--selected{
-    outline-color: var(--theme-cta-hover, $default-cta-hover);
+    outline-color: var(--theme-cta-hover);
 }
 
 .en__pgList[data-nogift] .en__pg:last-of-type .en__pg__display{

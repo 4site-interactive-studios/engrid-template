@@ -269,10 +269,10 @@
 <link rel="canonical" href="https://donate.oceanconservancy.org/page/73920/donate/1?mode=DEMO&amp;locale=en-US"/>
 <meta property="og:url" content="https://donate.oceanconservancy.org/page/73920/donate/1?mode=DEMO&amp;locale=en-US"/>
 <link rel="image_src" href=""/>
-<link href='/ea-demo/frontend/pbAssets/build/css/enPage.css?v=3.60.1' rel='stylesheet' type='text/css' />
+<link href='https://e-activist.com/ea-demo/frontend/pbAssets/build/css/enPage.css?v=3.60.1' rel='stylesheet' type='text/css' />
 <script>var pageJson = {"clientId":1991,"pageType":"donation","redirectPresent":false,"pageCount":2,"giftProcess":false,"campaignId":202432,"campaignPageId":73920,"pageNumber":1,"pageName":"Ω DO NOT EDIT - Reference - Donation Page (Test Gateway)","locale":"en-US"};</script>
-<script src='/page/73920/pagedata.js?locale=en-US&ea.profile.id=0'></script>
-<script src='/ea-demo/frontend/pbAssets/build/js/enPage.js?v=3.60.1'></script>
+<script src='https://e-activist.com/page/73920/pagedata.js?locale=en-US&ea.profile.id=0'></script>
+<script src='https://e-activist.com/ea-demo/frontend/pbAssets/build/js/enPage.js?v=3.60.1'></script>
 </head>
   <body>
     <!-- Placed here so that it always comes after Engaging Networks CSS which gets injected in HEAD -->
@@ -280,18 +280,15 @@
     <!-- <link href="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/main-2020-09-23-v3.css?v=1600823081000" rel="stylesheet" type="text/css"> -->
     
     <style>
+        /* Get some color on screen ASAP */
         body,
         #engrid {
-            background-color: #f3f3f3 !important;
+            background-color: #f3f3f3;
         }
         
-         /* Prevent the page ever being seen until the DOM has been parsed. A corresponding style is added just before the body tag. */
+        /* Prevent the page ever being seen until the main.css file has downloaded */
         body:not(#en__pagebuilder){
             opacity: 0;
-        }
-        
-        #en__pagebuilder {
-            background-color: #c1c0c0 !important;
         }
         
         /* latin */
@@ -316,7 +313,9 @@
     </style>   
 
     <div id="engrid" data-engrid-layout="centercenter1col" data-engrid-subtheme="oceanconservancy" data-engrid-errors="fancy">
-    <!-- Start EN Page Builder --><form method="post" action="/page/73920/donate/2" class="en__component en__component--page">
+
+    <!-- Start EN Page Builder -->
+    <form method="post" action="/page/73920/donate/2" class="en__component en__component--page">
 	<input type="hidden" name="hidden" class="en__hiddenFields" value="">
 	<input type="hidden" name="sessionId" value="b212a1678ea8454a84e9094182b6f24d-server10008">
 	
@@ -362,7 +361,7 @@
 </div>
 </div>
 		<div class="en__component en__component en__component--column en__component--advcolumn body-top">
-		<div class="en__component en__component--copyblock">
+		<div class="en__component en__component--copyblock click-to-expand">
 	<h2 style="text-align: center;"><span style="color:#039BC4;"><span style="font-size:26px;"><strong>Donate Today to Ocean Conservancy</strong></span></span></h2>
 
 <h2 style="text-align: center;">Your Gift Today Can Help Save Our Ocean and its Wildilfe!</h2>
@@ -1301,84 +1300,7 @@
     src="https://h.online-metrix.net/fp/tags.js?org_id=7nrfulxi&session_id=e1991-b212a1678ea8454a84e9094182b6f24d-server10008&page_id=1"></iframe>
     </noscript>
     <!-- End profiling tags -->          
-    
-    <!-- Once the DOM has been parsed, show whatever the browser has rendered. The slight pause allows for any JS layout changes to happen before it's shown -->
-    <style>
-    body:not(#en__pagebuilder){
-      transition: opacity 0.1s;
-      -webkit-transition: opacity 0.1s;
-      opacity: 1;
-    }
-    </style>
-    
-    <!-- To be merged upstream into main.css -->
-    <style>
-        /* Only show ACH Gift Option if the donation frequence is one-time */
-        #engrid.has-give-once .en__field--giveBySelect .en__field__item,
-        #engrid .give-by-select-2-otpions .en__field--giveBySelect .en__field__item{
-            max-width: calc((100% - 1rem)/2);
-        }
-        
-        #engrid.has-give-once .en__field--giveBySelect .en__field__item.check,
-        #engrid .give-by-select-2-otpions .en__field--giveBySelect .en__field__item.check{
-            display: none;
-        }
-    </style>
-    
-    <!-- To be merged upstream into theme -->
-    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-click-to-expand.js"></script>
-    <style>
-        /************************************
-           * Utility: Collapsed Div
-           * Needs corresponding JS to work
-           * .collapsed-div
-           ***********************************/
-        
-        body:not(#en__pagebuilder) #engrid .click-to-expand.expanded {
-        	height: initial;
-        }
-        body:not(#en__pagebuilder) #engrid .click-to-expand:not(.expanded) {
-        	cursor: pointer;
-        	height: 430px;
-        	overflow: hidden;
-        }
-        body:not(#en__pagebuilder) #engrid .click-to-expand:not(.expanded) .click-to-expand-text-wrapper {
-        	height: 380px;
-        }
-        body:not(#en__pagebuilder) #engrid .click-to-expand:not(.expanded) .click-to-expand-text-wrapper:not(.div-expanded) {
-        	position: relative;
-        	overflow: hidden;
-        }
-        body:not(#en__pagebuilder) #engrid .click-to-expand:not(.expanded) .click-to-expand-text-wrapper::after {
-        	content: "";
-        	position: absolute;
-        	top: 100px;
-        	bottom: 0;
-        	left: 0;
-        	right: 0;
-        	width: 100%;
-        	height: 330px;
-        	background: -webkit-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-        	background-image: -moz-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-        	background-image: -o-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-        	background-image: linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-        	background-image: -ms-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-        }
-        body:not(#en__pagebuilder) #engrid .click-to-expand:not(.expanded) .click-to-expand-cta {
-        	background: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/collapsed-div.png);
-        	background-position: center bottom;
-        	background-repeat: no-repeat;
-        	background-size: 107px 29px;
-        	z-index: 100;
-        	width: 107px;
-        	height: 29px;
-        	bottom: 0em;
-        	position: absolute;
-        	margin-left: auto;
-        	margin-right: auto;
-        	left: 0;
-        	right: 0;
-        }
+
     </style>
    </body>
 </html>

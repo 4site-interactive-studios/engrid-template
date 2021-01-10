@@ -35,13 +35,13 @@ body:not(#en__pagebuilder) .click-to-expand:not(.expanded){
     }
 
     .click-to-expand-cta {
-        background: url(var(--theme-click-to-expand-cta-image-url, $default-click-to-expand-cta-image-url));
+        background: var(--theme-click-to-expand-cta-image-url);
         background-position: center bottom;
         background-repeat: no-repeat;
-        background-size: var(--theme-click-to-expand-cta-image-width, $default-click-to-expand-cta-image-width) var(--theme-click-to-expand-cta-image-height, $default-click-to-expand-cta-image-height);
+        background-size: var(--theme-click-to-expand-cta-image-width) var(--theme-click-to-expand-cta-image-height);
         z-index: 100; // @TODO Check this z-index
-        width: var(--theme-click-to-expand-cta-image-width, $default-click-to-expand-cta-image-width);
-        height: var(--theme-click-to-expand-cta-image-height, $default-click-to-expand-cta-image-height);
+        width: var(--theme-click-to-expand-cta-image-width);
+        height: var(--theme-click-to-expand-cta-image-height);
         bottom: 0em;
         position: absolute;
         margin-left: auto;

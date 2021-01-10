@@ -163,19 +163,15 @@ textarea {
   height: auto; // @TODO Removed !important, hopefully that didn't break anything
   margin: 0rem;
   padding: 0.5rem;
-  border: var(--theme-input-border-width, $default-input-border-width) solid
-    var(--theme-input-border-color, $default-input-border-color);
-  border-radius: var(--theme-input-border-radius, $default-input-border-radius);
-  background-color: var(
-    --theme-input-background-color,
-    $default-input-background-color
-  );
+  border: var(--theme-input-border-width) solid var(--theme-input-border-color);
+  border-radius: var(--theme-input-border-radius);
+  background-color: var(--theme-input-background-color,);
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   font-family: inherit;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
-  color: var(--theme-black, $default-black);
+  color: var(--color-black);
   transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
   appearance: none;
 }
@@ -217,13 +213,9 @@ input[type="week"]:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border: var(--theme-input-border-width, $default-input-border-width) solid
-    var(--theme-input-border-color-focus, $default-input-border-color-focus);
-  background-color: var(
-    --theme-input-background-color-hover,
-    $default-input-background-color-hover
-  );
-  box-shadow: 0 0 0.3125rem var(--theme-light-gray, $default-light-gray);
+  border: var(--theme-input-border-width) solid var(--theme-input-border-color-focus);
+  background-color: var(--theme-input-background-color-hover);
+  box-shadow: 0 0 0.3125rem var(--theme-light-gray);
   transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
 }
 
@@ -238,37 +230,37 @@ textarea:focus {
 /* Placeholder styling */
 /* Chrome, Firefox, Opera, Safari 10.1+ */
 ::-webkit-input-placeholder {
-  color: var(--theme-light-gray, $default-light-gray);
+  color: var(--theme-light-gray);
   opacity: 1;
   /* Firefox */
 }
 
 :-ms-input-placeholder {
-  color: var(--theme-light-gray, $default-light-gray);
+  color: var(--theme-light-gray);
   opacity: 1;
   /* Firefox */
 }
 
 ::-ms-input-placeholder {
-  color: var(--theme-light-gray, $default-light-gray);
+  color: var(--theme-light-gray);
   opacity: 1;
   /* Firefox */
 }
 
 ::placeholder {
-  color: var(--theme-light-gray, $default-light-gray);
+  color: var(--theme-light-gray);
   opacity: 1;
   /* Firefox */
 }
 
 /* Internet Explorer 10-11 */
 :-ms-input-placeholder {
-  color: var(--theme-light-gray, $default-light-gray);
+  color: var(--theme-light-gray);
 }
 
 /* Microsoft Edge */
 ::-ms-input-placeholder {
-  color: var(--theme-light-gray, $default-light-gray);
+  color: var(--theme-light-gray);
 }
 
 /* Custom Styling for Radio & Checkbox Inputs */
@@ -308,10 +300,10 @@ textarea:focus {
   left: -2rem;
   display: inline-block;
   vertical-align: middle;
-  border: 1px solid var(--theme-black, $default-black);
-  -webkit-box-shadow: inset 0 0 0 5px var(--theme-white, $default-white);
-  box-shadow: inset 0 0 0 5px var(--theme-white, $default-white);
-  background-color: var(--theme-white, $default-white);
+  border: 1px solid var(--color-black);
+  -webkit-box-shadow: inset 0 0 0 5px var(--color-white);
+  box-shadow: inset 0 0 0 5px var(--color-white);
+  background-color: var(--color-white);
   cursor: pointer;
   -webkit-transition-duration: 0.25s;
   transition-duration: 0.25s;
@@ -338,10 +330,7 @@ textarea:focus {
 .en__field__input--radio:checked + .en__field__label::before,
 .en__field__input--checkbox:checked + .en__field__label::before,
 .en__contactDetails__select:checked + .en__contactDetails__rows::before {
-  background-color: var(
-    --theme-checkmark-background-color,
-    $default-checkmark-background-color
-  );
+  background-color: var(--theme-checkmark-background-color);
   -webkit-box-shadow: inset 0 0 0 4px #ffffff;
   box-shadow: inset 0 0 0 4px #ffffff;
   border-width: 1px;
@@ -349,26 +338,21 @@ textarea:focus {
 
 .en__field__input--checkbox:checked + .en__field__label::before,
 .en__contactDetails__select:checked + .en__contactDetails__rows::before {
-  color: var(
-    --theme-checkmark-background-color,
-    $default-checkmark-background-color
-  );
+  color: var(--theme-checkmark-background-color);
   background-color: transparent;
 }
 
 /* REF: https://stackoverflow.com/questions/25477819/scss-variable-in-background-image-with-svg-image-data-uri */
 .en__field__input--checkbox:checked + .en__field__label::after,
 .en__contactDetails__select:checked + .en__contactDetails__rows::after {
-  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='16' viewBox='0 0 21 16'><path fill='#{svg-friendly-color($default-cta)}' fill-rule='nonzero' d='M18.76.16L6.68 12.113l-4.44-4.392a.555.555 0 0 0-.779 0L.161 9.006a.541.541 0 0 0 0 .771L6.29 15.84a.555.555 0 0 0 .78 0l13.77-13.624a.541.541 0 0 0 0-.771L19.539.16a.555.555 0 0 0-.779 0z'/></svg>");
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='21' height='16' viewBox='0 0 21 16'><path fill-rule='nonzero' d='M18.76.16L6.68 12.113l-4.44-4.392a.555.555 0 0 0-.779 0L.161 9.006a.541.541 0 0 0 0 .771L6.29 15.84a.555.555 0 0 0 .78 0l13.77-13.624a.541.541 0 0 0 0-.771L19.539.16a.555.555 0 0 0-.779 0z'/></svg>");
+  fill: var(--default-cta);
   position: absolute;
   left: -28px;
   top: 0;
   width: 21px;
   height: 16px;
-  color: var(
-    --theme-checkmark-background-color,
-    $default-checkmark-background-color
-  );
+  color: var(--theme-checkmark-background-color);
   background-color: transparent;
   font-size: calc(0.05552rem * 18);
 }
@@ -377,14 +361,14 @@ textarea:focus {
 .en__field__input--radio:focus + .en__field__label::before,
 .en__field__input--checkbox:focus + .en__field__label::before,
 .en__contactDetails__select:focus + .en__contactDetails__rows::before {
-  // outline: var(--theme-gray, $default-gray) auto 0.3125rem;
-  // border-color: var(--theme-input-border-color-focus, #4d4d4d);
+  // outline: var(--theme-gray) auto 0.3125rem;
+  // border-color: var(--theme-input-border-color-focus);
 }
 
 .en__field__input--radio:focus + .en__field__label,
 .en__field__input--checkbox:focus + .en__field__label,
 .en__contactDetails__select:focus + .en__contactDetails__rows {
-  // outline: 2px solid var(--theme-input-border-color-focus, #4d4d4d);
+  // outline: 2px solid var(--theme-input-border-color-focus);
   // outline-offset: 3px;
   outline: -webkit-focus-ring-color auto 1px;
   outline-offset: 3px;

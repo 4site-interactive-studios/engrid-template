@@ -87,13 +87,13 @@
 .page-alert{
   grid-column: pc;
   grid-row: page-alert;
-  background-color: var(--theme-page-alert-background-color, $default-page-alert-background-color)
+  background-color: var(--theme-page-alert-background-color)
 }
 
 .content-header{
   grid-column: pc;
   grid-row: content-header;
-  background-color: var(--theme-content-header-background-color, $default-content-header-background-color)
+  background-color: var(--theme-content-header-background-color)
 }
 
 .content-header.pseudo-subgrid > div{
@@ -103,79 +103,79 @@
 .body-headerOutside{
   grid-column: cc;
   grid-row: body-headerOutside;
-  background-color: var(--theme-body-headerOutside-background-color, $default-body-headerOutside-background-color)
+  background-color: var(--theme-body-headerOutside-background-color)
 }
 
 .body-header{
   grid-column: bc;
   grid-row: body-header;
-  background-color: var(--theme-body-header-background-color, $default-body-header-background-color)
+  background-color: var(--theme-body-header-background-color)
 }
 
 .body-banner{
   grid-column: bc;
   grid-row: body-banner;
-  background-color: var(--theme-body-banner-background-color, $default-body-banner-background-color)
+  background-color: var(--theme-body-banner-background-color)
 }
 
 .body-bannerOverlay{
   grid-column: bc;
   grid-row: body-banner;
-  background-color: var(--theme-body-bannerOverlay-background-color, $default-body-bannerOverlay-background-color)
+  background-color: var(--theme-body-bannerOverlay-background-color)
 }
 
 .body-top{
   grid-column: bc;
   grid-row: body-top;
-  background-color: var(--theme-body-top-background-color, $default-body-top-background-color)
+  background-color: var(--theme-body-top-background-color)
 }
 
 .body-side{
   grid-column: bc;
   grid-row: body-side;
-  background-color: var(--theme-body-side-background-color, $default-body-side-background-color)
+  background-color: var(--theme-body-side-background-color)
 }
 
 .body-main{
   grid-column: bc;
   grid-row: body-main;
-  background-color: var(--theme-body-main-background-color, $default-body-main-background-color)
+  background-color: var(--theme-body-main-background-color)
 }
 
 .body-bottom{
   grid-column: bc;
   grid-row: body-bottom;
-  background-color: var(--theme-body-bottom-background-color, $default-body-bottom-background-color)
+  background-color: var(--theme-body-bottom-background-color)
 }
 
 .body-footer{
   grid-column: bc;
   grid-row: body-footer;
-  background-color: var(--theme-body-footer-background-color, $default-body-footer-background-color)
+  background-color: var(--theme-body-footer-background-color)
 }
 
 .body-footerOutside{
   grid-column: cc;
   grid-row: body-footerOutside;
-  background-color: var(--theme-body-footerOutside-background-color, $default-body-footerOutside-background-color)
+  background-color: var(--theme-body-footerOutside-background-color)
 }
 
 .content-footerSpacer{
   grid-column: cc;
   grid-row: content-footerSpacer;
-  background-color: var(--theme-content-footerSpacer-background-color, $default-content-footerSpacer-background-color)
+  background-color: var(--theme-content-footerSpacer-background-color)
 }
 
 .content-preFooter{
   grid-column: cc;
   grid-row: content-preFooter;
-  background-color: var(--theme-content-preFooter-background-color, $default-content-preFooter-background-color)
+  background-color: var(--theme-content-preFooter-background-color)
 }
 
 .content-footer{
   grid-column: pc;
   grid-row: content-footer;
-  background-color: var(--theme-content-footer-background-color, $default-content-footer-background-color)
+  background-color: var(--theme-content-footer-background-color)
 }
 
 .content-footer.pseudo-subgrid > div{
@@ -185,13 +185,13 @@
 .page-backgroundImage{
   grid-column: pc;
   grid-row: page-backgroundImage;
-  background-color: var(--theme-page-backgroundImage-background-color, $default-page-backgroundImage-background-color)
+  background-color: var(--theme-page-backgroundImage-background-color)
 }
 
 .page-backgroundImageOverlay{
   grid-column: pc;
   grid-row: page-backgroundImage;
-  background-color: var(--theme-page-customCode-background-color, $default-page-customCode-background-color)
+  background-color: var(--theme-page-customCode-background-color)
 }
 
 .page-customCode{
@@ -222,8 +222,8 @@ body:not(#en__pagebuilder) .page-customCode {
 .body-main,
 .body-bottom,
 .body-footer {
-  padding-left: var(--theme-spacing-lg, $default-spacing-lg);
-  padding-right: var(--theme-spacing-lg, $default-spacing-lg);
+  padding-left: var(--theme-spacing-lg);
+  padding-right: var(--theme-spacing-lg);
 }
 
 .body-banner img{
@@ -232,21 +232,21 @@ body:not(#en__pagebuilder) .page-customCode {
 
 .body-bannerOverlay{
   position: relative;
-  padding-left: var(--theme-spacing-lg, $default-spacing-lg);
-  padding-right: var(--theme-spacing-lg, $default-spacing-lg);
+  padding-left: var(--theme-spacing-lg);
+  padding-right: var(--theme-spacing-lg);
 }
 
 .body-header {
-  min-height: var(--theme-body-border-radius, $default-body-border-radius); // Added in the event this section is present but contains no content @TODO, look into a better way to achieve this https://developer.mozilla.org/en-US/docs/Web/CSS/min-height
-  border-top-left-radius: var(--theme-body-border-radius, $default-body-border-radius);
-  border-top-right-radius: var(--theme-body-border-radius, $default-body-border-radius);
+  min-height: var(--theme-body-border-radius); // Added in the event this section is present but contains no content @TODO, look into a better way to achieve this https://developer.mozilla.org/en-US/docs/Web/CSS/min-height
+  border-top-left-radius: var(--theme-body-border-radius);
+  border-top-right-radius: var(--theme-body-border-radius);
 }
 
 .body-footer {
-  padding-bottom: var(--theme-spacing-lg, $default-spacing-lg);
-  min-height: var(--theme-body-border-radius, $default-body-border-radius); // Added in the event this section is present but contains no content @TODO, look into a better way to achieve this https://developer.mozilla.org/en-US/docs/Web/CSS/min-height
-  border-bottom-left-radius: var(--theme-body-border-radius, $default-body-border-radius);
-  border-bottom-right-radius: var(--theme-body-border-radius, $default-body-border-radius);
+  padding-bottom: var(--theme-spacing-lg);
+  min-height: var(--theme-body-border-radius); // Added in the event this section is present but contains no content @TODO, look into a better way to achieve this https://developer.mozilla.org/en-US/docs/Web/CSS/min-height
+  border-bottom-left-radius: var(--theme-body-border-radius);
+  border-bottom-right-radius: var(--theme-body-border-radius);
 }
 
 // Add drop shadows to the body sections

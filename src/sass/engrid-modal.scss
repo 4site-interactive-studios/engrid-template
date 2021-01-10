@@ -5,7 +5,7 @@
   left: 0;
   bottom: 0;
   z-index: 2147483645;
-  background-color: rgba($default-black, 0.85);
+  background-color: rgba(0, 0, 0, 0.85);
   width: 100vw;
   height: 100%;
   -webkit-transition: top 0.4s ease-in-out;
@@ -16,21 +16,21 @@
   align-items: center;
   overflow: hidden;
   &.exitModal {
-    background-color: rgba($default-error-red, 0.85);
-    color: $default-white;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: var(--color-white);
   }
 
   &.upsellModal .button-close {
     &::before,
     &::after {
-      background-color: rgb(255, 255, 255);
+      background-color: rgba(255, 255, 255, 1);
     }
   }
 
   &.exitModal .button-close {
     &::before,
     &::after {
-      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 1);
     }
   }
 
@@ -49,7 +49,6 @@
     -webkit-transition: 0.3s opacity ease-in-out;
     transition: 0.3s opacity ease-in-out;
     @include to(2) {
-      // top: -52px;
       opacity: 1;
     }
     &:hover {
@@ -62,12 +61,6 @@
       content: " ";
       height: 24px;
       width: 3px;
-      /* This value is the OPPOSITE color of our background */
-
-      // background-color: $default-black;
-      @include to(2) {
-        // background-color: $default-body-background-color;
-      }
     }
     &::before {
       -webkit-transform: rotate(45deg);
@@ -81,22 +74,11 @@
   .enModal-container,
   .ieModal-container {
     max-width: 820px;
-    // padding: 90px;
-    border-radius: $default-input-border-radius;
-    background-color: $default-body-background-color;
-    color: $default-black;
-    //font-family: graphik, sans-serif;
-    // font-size: 70px;
-    // line-height: 1;
-    // font-weight: 700;
+    border-radius: var(--default-input-border-radius);
+    background-color: var(--default-body-background-color);
+    color: var(color-black);
     z-index: 1;
     position: relative;
-
-    @include to(2) {
-      // padding: 60px 40px;
-      // font-size: 30px;
-      // max-height: 60vh;
-    }
 
     h1 {
       font-size: 48px;
@@ -109,8 +91,8 @@
     }
 
     .highlight {
-      background-color: $default-highlight-background-color;
-      color: $default-highlight-font-color;
+      background-color: var(--default-highlight-background-color);
+      color: var(--default-highlight-font-color);
       padding: 0.15em;
       display: inline-block;
     }
@@ -132,23 +114,13 @@
     }
 
     .title {
-      color: $default-black;
+      color: var(--color-black);
     }
     .accent {
-      color: $default-cta;
+      color: var(--default-cta);
     }
     .cta {
       cursor: pointer;
-      // // font-weight: 700;
-      // padding: 12px 25px;
-      // background-color: $default-black;
-      // color: $default-cta;
-      // display: block;
-      // max-width: 250px;
-      // // font-size: 26px;
-      // text-align: center;
-      // margin-top: 50px;
-      // opacity: 1;
       -webkit-transition: 0.3s background-color ease-in-out,
         0.3s color ease-in-out;
       -webkit-transition: 0.3s background-color ease-in-out,
@@ -168,15 +140,6 @@
       -webkit-transition: 0.3s background-color ease-in-out,
         0.3s color ease-in-out;
       transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out;
-      @include to(2) {
-        // font-size: 22px;
-        // padding: 10px 20px;
-        // max-width: 200px;
-      }
-      // &:hover {
-      //   background-color: $default-cta;
-      //   color: $default-black;
-      // }
     }
     .img {
       position: absolute;
@@ -243,7 +206,7 @@
     .modal-right-column {
       background-color: #2e2e2c;
       flex-basis: 50%;
-      padding: $default-spacing-lg;
+      padding: var(--default-spacing-lg);
       text-align: center;
       .cta-groups .group {
         flex-direction: column;

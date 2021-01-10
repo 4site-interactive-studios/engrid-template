@@ -1,29 +1,51 @@
 /* All SCSS variables in engrid-variables.scss can be used as CSS Custom Properties by replacing "$default" in the name with "--theme" */
 /* All CSS Custom Properties should be scoped to the theme they apply using CSS Data Attributes. */
 
+
+
 [data-engrid-theme="starter-theme"]{
---theme-white: #ffffff;
---theme-black: #4d4d4d;
---theme-gray: #8a8a8a;
---theme-light-gray: #cacaca;
+
+--color-off-white: #DFDFDF;
+--color-light-gray: #BFBFBF;
+--color-gray: #9F9F9F;
+--color-dark-gray: #808080;
+--color-off-black: #404040;
+
+
+// --theme-page-alert-background-color: #;
+// --theme-content-header-background-color: #;
+// --theme-body-headerOutside-background-color: #;
+--theme-body-header-background-color: var(--theme-body-background-color);
+--theme-body-banner-background-color: var(--theme-body-background-color);
+--theme-body-bannerOverlay-background-color: var(--theme-body-background-color);
+--theme-body-top-background-color: var(--theme-body-background-color);
+--theme-body-side-background-color: var(--theme-body-background-color);
+--theme-body-main-background-color: var(--theme-body-background-color);
+--theme-body-bottom-background-color: var(--theme-body-background-color);
+--theme-body-footer-background-color: var(--theme-body-background-color);
+--theme-body-footerOutside-background-color: var(--theme-body-background-color);
+// --theme-content-footerSpacer-background-color: #;
+// --theme-content-preFooter-background-color: #;
+// --theme-content-footer-background-color: #;
+// --theme-page-backgroundImage-background-color: #;
+// --theme-page-customCode-background-color: #;
+
+// Quick set the body color
+--theme-body-background-color: --color-white; // @TODO Not yet used anywhere
+
 --theme-cta: #208096;
 --theme-cta-hover: #22a3cb;
 
 --theme-prefooter-background-color: #d0e2e7;
 --theme-footer-background-color: #20809e;
 
---theme-background-color: --theme-white;
---theme-background-image: "";
+// --theme-background-color: --color-white;
+// --theme-background-image: url("");
 --theme-background-image-background-color: #333333;
 
-/* @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand
- * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
- */
-
- /* REF: http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/ */
 --theme-root-font-size: 16px; // Sets a baseline font size for all other REM based font-sizes to relatively build off of
 
---theme-body-background-color: --theme-white; // @TODO Not yet used anywhere
+
 --theme-body-border-radius: 0px;
 --theme-spacing-sm: 0.8652rem; // @TODO Revisit
 --theme-spacing: calc(0.8652rem * 0.75); // @TODO Revisit
@@ -32,30 +54,29 @@
 
 --theme-input-border-radius: 5px;
 --theme-input-border-width: 2px;
---theme-input-border-color: --theme-black;
---theme-input-border-color-focus: --theme-black;
---theme-input-background-color: --theme-white;
---theme-input-background-color-hover: --theme-white;
+--theme-input-border-color: --color-black;
+--theme-input-border-color-focus: --color-black;
+--theme-input-background-color: --color-white;
+--theme-input-background-color-hover: --color-white;
 
---theme-button-background-color: --theme-black;
+--theme-button-background-color: --color-black;
 --theme-button-background-color-hover: --theme-cta-hover;
 --theme-button-background-color-active: --theme-cta;
---theme-button-background-color-disabled: #949494;
---theme-button-border-color: --theme-black;
+--theme-button-border-color: --color-black;
 --theme-button-border-color-active: --theme-cta;
 --theme-button-border-color-hover: --theme-cta-hover;
 --theme-button-border-radius: 0px;
---theme-button-font-color: --theme-white;
---theme-button-font-color-active: --theme-white;
+--theme-button-font-color: --color-white;
+--theme-button-font-color-active: --color-white;
 
 --theme-submit-button-background-color: --theme-cta;
 --theme-submit-button-background-color-hover: --theme-cta-hover;
 --theme-submit-button-border-color: --theme-cta;
---theme-submit-button-font-color: --theme-white;
+--theme-submit-button-font-color: --color-white;
 
 --theme-checkmark-background-color: --theme-cta;
 --theme-checkmark-border-color: --theme-cta;
---theme-checkmark-font-color: --theme-white;
+--theme-checkmark-font-color: --color-white;
 
 --theme-error-red: #f12222;
 --theme-error-red-grayscale: #949494;
@@ -65,6 +86,11 @@
 
 --theme-highlight-background-color: #227f9e;
 --theme-highlight-font-color: #ffffff;
+
+// CLICK TO EXPAND
+//   --theme-click-to-expand-cta-image-url: url("");
+//   --theme-click-to-expand-cta-image-width: 100px;
+//   --theme-click-to-expand-cta-image-height: 20px;
 }
 
 /* You can define multiple themes together by scoping the variables with a corresponding Data Attribute */

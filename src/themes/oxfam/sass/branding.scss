@@ -39,7 +39,7 @@
 
 // @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
 body {
-  color: $default-black;
+  color: $color-black;
   background-color: $default-body-background-color;
 }
 
@@ -72,7 +72,7 @@ body:not(#en__pagebuilder)
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: var(--background-image);
+  background-image: var(--theme-page-backgroundImage-url);
   will-change: transform; // creates a new paint layer
 }
 
@@ -91,7 +91,7 @@ body:not(#en__pagebuilder)
 }
 
 h1 {
-  color: $default-black;
+  color: $color-black;
   font-family: OxfamHeadline;
   font-size: calc(0.05552rem * 48);
   font-weight: 900;
@@ -105,7 +105,7 @@ h1 {
 }
 
 h2 {
-  color: $default-black;
+  color: $color-black;
   font-family: "Oxfam TSTAR PRO", Arial, Helvetica, sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -116,7 +116,7 @@ h2 {
 }
 
 h3 {
-  color: $default-black;
+  color: $color-black;
   font-family: "Oxfam TSTAR PRO", Arial, Helvetica, sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -357,7 +357,7 @@ label.en__field__label {
       font-size: calc(0.05552rem * 32);
       font-weight: 900;
       letter-spacing: 1px;
-      color: $default-black;
+      color: $color-black;
       text-transform: uppercase;
       line-height: 1;
       padding: 1rem 1rem 0.5rem 1rem; // Corrects for the fact the font is vertically off center
@@ -368,11 +368,11 @@ label.en__field__label {
     line-height: 1.58;
     letter-spacing: 0.2px;
     text-align: center;
-    color: $default-black;
+    color: $color-black;
   }
 }
 .content-footer {
-  background-color: $default-black;
+  background-color: $color-black;
 }
 
 .footer-wrapper {
@@ -489,7 +489,7 @@ label.en__field__label {
 }
 
 .white-font {
-  color: $default-white;
+  color: $color-white;
 }
 
 /** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/

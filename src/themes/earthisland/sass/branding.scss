@@ -39,7 +39,7 @@
 
 // @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
 body {
-  color: var(--theme-black, $default-black);
+  color: var(--color-black, $color-black);
   background-color: var(--theme-body-background-color, $default-body-background-color);
 }
 
@@ -80,7 +80,7 @@ body:not(#en__pagebuilder) {
 }
 
 h1 {
-  color: var(--theme-black, $default-black);
+  color: var(--color-black, $color-black);
   font-family:"Proxima Nova Bold",sans-serif;
   font-size: calc(0.05552rem * 48);
   font-weight: 900;
@@ -94,7 +94,7 @@ h1 {
 }
 
 h2 {
-  color: var(--theme-black, $default-black);
+  color: var(--color-black, $color-black);
   font-family: "Proxima Nova Bold",sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -105,7 +105,7 @@ h2 {
 }
 
 h3 {
-  color: var(--theme-black, $default-black);
+  color: var(--color-black, $color-black);
   font-family: "Proxima Nova Bold",sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -341,7 +341,7 @@ label.en__field__label {
       // font-size: calc(0.05552rem * 32);
       // font-weight: 900;
       // letter-spacing: 1px;
-      // color: $default-black;
+      // color: $color-black;
       text-transform: uppercase;
       // line-height: 1;
       padding: 1rem 1rem 0.5rem 1rem; // Corrects for the fact the font is vertically off center
@@ -490,7 +490,7 @@ label.en__field__label {
 }
 
 .white-font {
-  color: $default-white;
+  color: $color-white;
 }
 
 /** Hide COLUMNS when viewed publicly and in page builder, but not the page builder pop-up preview. **/

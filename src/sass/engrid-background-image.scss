@@ -13,8 +13,7 @@ body:not(#en__pagebuilder)
   .page-backgroundImage:not(.page-backgroundImageSet)::before {
   background-position: top left;
   background-repeat: repeat;
-  // background-image: var(--background-image,#{$default-page-backgroundImage-background-pattern}); // @TODO What was the point of the hash and brackets #{$...}?
-  background-image: var(--background-image); //@TODO Get SCSS variable working
+  background-image: var(--theme-page-backgroundImage-url); //@TODO Get SCSS variable working
   will-change: transform; // creates a new paint layer
 }
 
@@ -26,7 +25,7 @@ body:not(#en__pagebuilder).footer-below-fold
   -webkit-clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   height: 120vh;
-  background-color: var(--background-image-background-color, $default-page-backgroundImage-background-color);
+  background-color: var(--background-image-background-color);
 }
 
 // body:not(#en__pagebuilder)

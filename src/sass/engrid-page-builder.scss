@@ -11,7 +11,7 @@
   /* When in page builder we want to center the content area on the page and must reduce it by 50px to make it visible because of the sidebar */
   width: calc(100% - 51px);
   /* If in page builder, give the background some color so that input fields stand out */
-  background-color: #f1f1f1;
+  background-color: #f1f1f1 !important; // Could also be #c1c0c0 
   /* If the user accidentally deletes all content from the form, prevent it from completely collapsing in on itself and making it impossible for the user to add new content */
   form {
     min-height: 25px !important;

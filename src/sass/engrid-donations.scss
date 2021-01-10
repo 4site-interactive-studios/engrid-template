@@ -4,7 +4,7 @@
   .en__field--donationAmt.en__field--radio input[type="radio"] + label,
   .en__field--donationAmt .en__field__item--other input
   {
-    border-radius: var(--theme-button-border-radius, $default-button-border-radius);
+    border-radius: var(--theme-button-border-radius);
     // padding: 0.5rem 1.5rem;
   }
 
@@ -36,8 +36,8 @@
   .en__field--donationAmt.en__field--radio .en__field__item--other input[type="text"],
   .en__field--donationAmt.en__field--radio .en__field__item--other input[type="tel"],
   .en__field--donationAmt.en__field--radio .en__field__item--other input[type="number"] {
-    background-color: var(--theme-button-background-color, $default-button-background-color);
-    color: var(--theme-button-font-color, $default-button-font-color);
+    background-color: var(--theme-button-background-color);
+    color: var(--theme-button-font-color);
   }
 
 /* prettier-ignore */
@@ -51,32 +51,18 @@
   .en__field--donationAmt.en__field--radio .en__field__item--other.has-value input,
   .en__field--donationAmt.en__field--radio .en__field__item--other:not(.en__field__item--hidden) input {
     text-transform: none;
-    background-color: var(--theme-button-background-color-active, $default-button-background-color-active);
-    border-color: var(--theme-button-border-color-active, $default-button-border-color-active);
-    color: var(--theme-button-font-color-active, $default-button-font-color-active);
+    background-color: var(--theme-button-background-color-active);
+    border-color: var(--theme-button-border-color-active);
+    color: var(--theme-button-font-color-active);
   }
 
 /* prettier-ignore */
 .radio-to-buttons .en__field--radio label.en__field__label.en__field__label--item,
   .give-by-select .en__field--radio label.en__field__label.en__field__label--item,
   .en__field--donationAmt.en__field--radio label.en__field__label.en__field__label--item {
-    border: 1px solid var(--theme-button-border-color, $default-button-border-color);
+    border: 1px solid var(--theme-button-border-color);
     background-position-x: 40px;
   }
-
-/* TODO Possibly Trim */
-// .radio-to-buttons.dark .en__field--radio .en__field__element--radio .en__field__item label.en__field__label.en__field__label--item:hover,
-// .radio-to-buttons.dark .en__field--radio .en__field__element--radio .en__field__item input[type="radio"]:checked + label {
-//   background-color: $default-button-background-color-hover;
-//   border-color: $default-button-border-color-hover;
-// }
-
-/* TODO Possibly Trim */
-// .radio-to-buttons.dark .en__field--radio label.en__field__label.en__field__label--item:hover,
-// .radio-to-buttons.dark .en__field--radio input[type="radio"]:checked + label {
-//   background-color: $default-button-background-color;
-//   border-color: $default-button-border-color;
-// }
 
 /* prettier-ignore */
 .radio-to-buttons .en__field__input--other,
@@ -85,19 +71,14 @@
     height: auto !important;
   }
 
-/* TODO Possibly Trim */
-// .radio-to-buttons.fat-buttons .en__field__input--other {
-//   padding: 0.625rem 1.5625rem !important;
-// }
-
 /* prettier-ignore */
 .radio-to-buttons .en__field--radio input[type="radio"]:focus + label,
   .give-by-select .en__field--radio input[type="radio"]:focus + label,
   .en__field--donationAmt.en__field--radio input[type="radio"]:focus + label {
     outline: none !important;
     border: 1px solid #666666 !important;
-    -webkit-box-shadow: 0 0 0.3125rem var(--theme-light-gray, $default-light-gray) !important;
-    box-shadow: 0 0 0.3125rem var(--theme-light-gray, $default-light-gray) !important;
+    -webkit-box-shadow: 0 0 0.3125rem var(--theme-light-gray) !important;
+    box-shadow: 0 0 0.3125rem var(--theme-light-gray) !important;
     transition: box-shadow 0.25s, border-color 0.125s ease-in-out, -webkit-box-shadow 0.25s !important;
   }
 
