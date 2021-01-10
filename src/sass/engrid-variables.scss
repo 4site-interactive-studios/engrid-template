@@ -4,7 +4,7 @@
 $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
 // @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
-body{
+:root{
     // FIXED COLOR PALETTE
     --color-transparent: transparent;
     --color-white: rgba(255, 255, 255, 1);
