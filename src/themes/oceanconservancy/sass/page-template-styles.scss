@@ -821,7 +821,6 @@ body:not(#en__pagebuilder).footer-below-fold
 
 .en__field__input--checkbox:checked + .en__field__label::after,
 .en__contactDetails__select:checked + .en__contactDetails__rows::after {
-  content: "\a0\2713";
   color: var(--color-white);
   left: -31px;
   top: 1px;
