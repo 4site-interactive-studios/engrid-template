@@ -84,7 +84,7 @@ body.error-jump-assist .en__component .en__field__error {
   border: var(--theme-error-input-border-width) solid var(--theme-error-red);
   background-color: var(--theme-error-red-faded);
   padding: 0.5rem 0.5rem 0rem 0.5rem;
-  border-radius: var(--theme-input-border-radius);
+  border-radius: var(--theme-typography-input-border-radius);
 }
 
 .en__field--text.en__field--validationFailed .en__field__error,

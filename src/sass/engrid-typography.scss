@@ -1,0 +1,134 @@
+/* The most common typographic elements for EN pages */
+body{
+    font-family: var(--theme-typography-body-font-family);
+    color: var(--theme-typography-body-color);
+    font-size: var(--theme-typography-body-font-size);
+    font-weight: var(--theme-typography-body-font-weight);
+    line-height: var(--theme-typography-body-line-height);
+}
+
+h1{
+    font-family: var(--theme-typography-h1-font-family);
+    color: var(--theme-typography-h1-color);
+    font-size: var(--theme-typography-h1-font-size);
+    font-weight: var(--theme-typography-h1-font-weight);
+    line-height: var(--theme-typography-h1-line-height);
+}
+
+h2{
+    font-family: var(--theme-typography-h2-font-family);
+    color: var(--theme-typography-h2-color);
+    font-size: var(--theme-typography-h2-font-size);
+    font-weight: var(--theme-typography-h2-font-weight);
+    line-height: var(--theme-typography-h2-line-height);
+}
+
+h3{
+    font-family: var(--theme-typography-h3-font-family);
+    color: var(--theme-typography-h3-color);
+    font-size: var(--theme-typography-h3-font-size);
+    font-weight: var(--theme-typography-h3-font-weight);
+    line-height: var(--theme-typography-h3-line-height);
+}
+
+p{
+    font-family: var(--theme-typography-p-font-family);
+    color: var(--theme-typography-p-color);
+    font-size: var(--theme-typography-p-font-size);
+    font-weight: var(--theme-typography-p-font-weight);
+    line-height: var(--theme-typography-p-line-height);
+}
+
+strong{
+    font-family: var(--theme-typography-strong-font-family);
+    color: var(--theme-typography-strong-color);
+    font-size: var(--theme-typography-strong-font-size);
+    font-weight: var(--theme-typography-strong-font-weight);
+    line-height: var(--theme-typography-strong-line-height);
+}
+
+label{
+    font-family: var(--theme-typography-label-font-family);
+    color: var(--theme-typography-label-color);
+    font-size: var(--theme-typography-label-font-size);
+    font-weight: var(--theme-typography-label-font-weight);
+    line-height: var(--theme-typography-label-line-height);
+}
+
+input{
+    font-family: var(--theme-typography-input-font-family);
+    color: var(--theme-typography-input-color);
+    font-size: var(--theme-typography-input-font-size);
+    font-weight: var(--theme-typography-input-font-weight);
+    line-height: var(--theme-typography-input-line-height);
+    background-color: var(--theme-typography-input-background-color);
+    border-width: var(--theme-typography-input-border-width);
+    border-color: var(--theme-typography-input-border-color);
+    border-radius: var(--theme-typography-input-border-radius);
+}
+
+input:focus,
+input:hover{
+    color: var(--theme-typography-input-focus-hover-color);
+    background-color: var(--theme-typography-input-focus-hover-background-color);
+    border-color: var(--theme-typography-input-focus-hover-border-color);
+}
+
+select{
+    font-family: var(--theme-typography-select-font-family);
+    color: var(--theme-typography-select-color);
+    font-size: var(--theme-typography-select-font-size);
+    font-weight: var(--theme-typography-select-font-weight);
+    line-height: var(--theme-typography-select-line-height);
+    background-color: var(--theme-typography-select-background-color);
+    border-width: var(--theme-typography-select-border-width);
+    border-color: var(--theme-typography-select-border-color);
+    border-radius: var(--theme-typography-select-border-radius);
+    cursor: pointer;  
+}
+
+select:focus,
+select:hover{
+    color: var(--theme-typography-select-focus-hover-color);
+    background-color: var(--theme-typography-select-focus-hover-background-color);
+    border-color: var(--theme-typography-select-focus-hover-border-color);
+}
+
+button,
+.button{
+    font-family: var(--theme-typography-button-font-family);
+    color: var(--theme-typography-button-color);
+    font-size: var(--theme-typography-button-font-size);
+    font-weight: var(--theme-typography-button-font-weight);
+    line-height: var(--theme-typography-button-line-height);
+    background-color: var(--theme-typography-button-background-color);
+    border-width: var(--theme-typography-button-border-width);
+    border-color: var(--theme-typography-button-border-color);
+    border-radius: var(--theme-typography-button-border-radius);    
+    cursor: pointer;
+}
+
+button:focus,
+button:hover,
+.button:focus
+.button:hover{
+    color: var(--theme-typography-button-focus-hover-color);
+    background-color: var(--theme-typography-button-focus-hover-background-color);
+    border-width: var(--theme-typography-button-focus-hover-border-width);
+    border-color: var(--theme-typography-button-focus-hover-border-color);
+}
+
+a{
+    font-family: var(--theme-typography-a-font-family);
+    color: var(--theme-typography-a-color);
+    font-size: var(--theme-typography-a-font-size);
+    font-weight: var(--theme-typography-a-font-weight);
+    line-height: var(--theme-typography-a-line-height);
+    text-decoration: var(--theme-typography-a-text-decoration);
+}
+
+a:focus,
+a:hover{
+    color: var(--theme-typography-a-focus-hover-color);
+    text-decoration: var(--theme-typography-a-focus-hover-text-decoration);
+}

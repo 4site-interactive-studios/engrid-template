@@ -22,6 +22,115 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-warning: #FCAC00;
     --theme-error: #F12222;
 
+    // TYPOGRAPHY BODY
+    --theme-typography-body-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --theme-typography-body-color: initial;
+    --theme-typography-body-font-size: initial;
+    --theme-typography-body-font-weight: initial;
+    --theme-typography-body-line-height: initial;
+        
+    // TYPOGRAPHY H1
+    --theme-typography-h1-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --theme-typography-h1-color: initial;
+    --theme-typography-h1-font-size: initial;
+    --theme-typography-h1-font-weight: initial;
+    --theme-typography-h1-line-height: initial;
+        
+    // TYPOGRAPHY H2
+    --theme-typography-h2-font-family: var(--theme-typography-h1-font-family);
+    --theme-typography-h2-color: initial;
+    --theme-typography-h2-font-size: initial;
+    --theme-typography-h2-font-weight: initial;
+    --theme-typography-h2-line-height: initial;
+        
+    // TYPOGRAPHY H3
+    --theme-typography-h3-font-family: var(--theme-typography-h1-font-family);
+    --theme-typography-h3-color: initial;
+    --theme-typography-h3-font-size: initial;
+    --theme-typography-h3-font-weight: initial;
+    --theme-typography-h3-line-height: initial;
+        
+    // TYPOGRAPHY P
+    --theme-typography-p-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-p-color: initial;
+    --theme-typography-p-font-size: initial;
+    --theme-typography-p-font-weight: initial;
+    --theme-typography-p-line-height: initial;
+        
+    // TYPOGRAPHY STRONG
+    --theme-typography-strong-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-strong-color: initial;
+    --theme-typography-strong-font-size: initial;
+    --theme-typography-strong-font-weight: initial;
+    --theme-typography-strong-line-height: initial;
+        
+    // TYPOGRAPHY LABEL
+    --theme-typography-label-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-label-color: initial;
+    --theme-typography-label-font-size: initial;
+    --theme-typography-label-font-weight: initial;
+    --theme-typography-label-line-height: initial;
+        
+    // TYPOGRAPHY INPUT
+    --theme-typography-input-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-input-color: initial;
+    --theme-typography-input-font-size: initial;
+    --theme-typography-input-font-weight: initial;
+    --theme-typography-input-line-height: initial;
+    --theme-typography-input-background-color: initial;
+    --theme-typography-input-border-width: initial;
+    --theme-typography-input-border-color: initial;
+    --theme-typography-input-border-radius: initial;
+        
+    // TYPOGRAPHY INPUT:FOCUS
+    // TYPOGRAPHY INPUT:HOVER
+    --theme-typography-input-focus-hover-color: var(--theme-typography-body-font-family);
+    --theme-typography-input-focus-hover-background-color: initial;
+    --theme-typography-input-focus-hover-border-color: initial;
+        
+    // TYPOGRAPHY SELECT
+    --theme-typography-select-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-select-color: initial;
+    --theme-typography-select-font-size: initial;
+    --theme-typography-select-font-weight: initial;
+    --theme-typography-select-line-height: initial;
+    --theme-typography-select-background-color: initial;
+    --theme-typography-select-border-width: initial;
+    --theme-typography-select-border-color: initial;
+    --theme-typography-select-border-radius: initial;
+
+    
+    // TYPOGRAPHY BUTTON
+    --theme-typography-button-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-button-color: initial;
+    --theme-typography-button-font-size: initial;
+    --theme-typography-button-font-weight: initial;
+    --theme-typography-button-line-height: initial;
+    --theme-typography-button-background-color: initial;
+    --theme-typography-button-border-width: initial;
+    --theme-typography-button-border-color: initial;
+    --theme-typography-button-border-radius: initial;  
+    
+    // TYPOGRAPHY BUTTON:FOCUS
+    // TYPOGRAPHY BUTTON:HOVER
+    --theme-typography-button-focus-hover-color: initial;
+    --theme-typography-button-focus-hover-background-color: initial;
+    --theme-typography-button-focus-hover-border-width: initial;
+    --theme-typography-button-focus-hover-border-color: initial;
+    
+    // TYPOGRAPHY A
+    --theme-typography-a-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-a-color: initial;
+    --theme-typography-a-font-size: initial;
+    --theme-typography-a-font-weight: initial;
+    --theme-typography-a-line-height: initial;
+    --theme-typography-a-text-decoration: initial;
+
+    // TYPOGRAPHY A:FOCUS
+    // TYPOGRAPHY A:HOVER
+    --theme-typography-a-focus-hover-color: initial;
+    --theme-typography-a-focus-hover-text-decoration: initial;
+
     // CTA COLOR
     --theme-cta: #0070BA;
     --theme-cta-hover: #22a3cb;

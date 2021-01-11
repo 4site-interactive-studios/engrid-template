@@ -117,21 +117,9 @@
   margin-right: 0.5rem;
 }
 
-/* @TODO This was overly zeroing the padding */
-/* If returned it could be moved to engrid-enpage-overrides.scss */
-// .en__field__item {
-//   padding: 0;
-// }
-
-/* Moved to engrid-enpage-overrides.scss */
-/* EN sets field labels to a fixed width of 180px, this makes them responsive */
-// .en__field__label {
-//   width: auto;
-// }
-
 /************************************
-     * Inputs
-     ***********************************/
+* Inputs
+***********************************/
 
 /* General */
 input[type="date"],
@@ -164,7 +152,7 @@ textarea {
   margin: 0rem;
   padding: 0.5rem;
   border: var(--theme-input-border-width) solid var(--theme-input-border-color);
-  border-radius: var(--theme-input-border-radius);
+  border-radius: var(--theme-typography-input-border-radius);
   background-color: var(--theme-input-background-color,);
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   font-family: inherit;

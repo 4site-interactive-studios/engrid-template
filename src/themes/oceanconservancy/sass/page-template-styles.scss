@@ -650,8 +650,8 @@ body#en__pagebuilder #engrid {
     }
 
     .body-header {
-      border-top-left-radius: var(--theme-input-border-radius);
-      border-top-right-radius: var(--theme-input-border-radius);
+      border-top-left-radius: var(--theme-typography-input-border-radius);
+      border-top-right-radius: var(--theme-typography-input-border-radius);
     }
 
     .content-preFooter.pseudo-subgrid > div {
