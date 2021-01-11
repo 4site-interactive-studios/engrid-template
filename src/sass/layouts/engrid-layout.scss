@@ -109,7 +109,10 @@
 .body-header{
   grid-column: bc;
   grid-row: body-header;
-  background-color: var(--theme-body-header-background-color)
+  background-color: var(--theme-body-header-background-color);
+  border-top-left-radius: var(--theme-body-header-border-radius);
+  border-top-right-radius: var(--theme-body-header-border-radius);
+  min-height: var(--theme-body-header-border-radius);
 }
 
 .body-banner{
@@ -151,7 +154,10 @@
 .body-footer{
   grid-column: bc;
   grid-row: body-footer;
-  background-color: var(--theme-body-footer-background-color)
+  background-color: var(--theme-body-footer-background-color);
+  border-bottom-left-radius: var(--theme-body-footer-border-radius);
+  border-bottom-right-radius: var(--theme-body-footer-border-radius);
+  min-height: var(--theme-body-footer-border-radius);
 }
 
 .body-footerOutside{
@@ -236,17 +242,8 @@ body:not(#en__pagebuilder) .page-customCode {
   padding-right: var(--theme-spacing-lg);
 }
 
-.body-header {
-  min-height: var(--theme-body-border-radius); // Added in the event this section is present but contains no content @TODO, look into a better way to achieve this https://developer.mozilla.org/en-US/docs/Web/CSS/min-height
-  border-top-left-radius: var(--theme-body-border-radius);
-  border-top-right-radius: var(--theme-body-border-radius);
-}
-
 .body-footer {
   padding-bottom: var(--theme-spacing-lg);
-  min-height: var(--theme-body-border-radius); // Added in the event this section is present but contains no content @TODO, look into a better way to achieve this https://developer.mozilla.org/en-US/docs/Web/CSS/min-height
-  border-bottom-left-radius: var(--theme-body-border-radius);
-  border-bottom-right-radius: var(--theme-body-border-radius);
 }
 
 // Add drop shadows to the body sections

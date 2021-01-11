@@ -11,21 +11,21 @@ button {
   -webkit-appearance: none;
   border: 1px solid transparent;
   border-radius: var(--theme-typography-input-border-radius);
-  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  -webkit-transition: background-color 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
   font-size: 1rem;
   text-align: center;
   cursor: pointer;
-  background-color: var(--theme-button-background-color);
-  color: var(--theme-button-font-color);
+  background-color: var(--theme-typography-button-background-color);
+  color: var(--theme-typography-button-color);
 }
 
 .en__submit button {
   margin-top: 2rem;
-  background-color: var(--theme-submit-button-background-color);
-  border-color: var(--theme-submit-button-background-color);
-  color: var(--theme-submit-button-font-color);
-  border-radius: var(--theme-button-border-radius);
+  background-color: var(--theme-typography-primary-button-background-color);
+  border-color: var(--theme-typography-primary-button-background-color);
+  color: var(--theme-typography-primary-button-color);
+  border-radius: var(--theme-typography-button-border-radius);
   display: block;
   font-size: calc(0.05552rem * 24);
   font-weight: 900;
@@ -42,8 +42,8 @@ button {
 .en__submit button:focus,
 button.cta.primary:hover,
 button.cta.primary:focus {
-  background-color: var(--theme-submit-button-background-color-hover);
-  border-color: var(--theme-submit-button-background-color-hover);
+  background-color: var(--theme-typography-primary-button-focus-hover-background-color);
+  border-color: var(--theme-typography-primary-button-focus-hover-background-color);
 }
 
 .arrow .en__submit button::after {
@@ -64,7 +64,7 @@ button.cta.primary:focus {
 
 button:hover,
 button:focus {
-  background-color: var(--theme-button-background-color-hover);
+  background-color: var(--theme-typography-button-focus-hover-background-color);
 }
 
 button[disabled],

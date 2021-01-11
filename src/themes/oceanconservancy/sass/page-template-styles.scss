@@ -9,7 +9,7 @@
 
 #engrid[engrid-theme="oceanconservancy"] {
   --background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/gray_pattern-optimized-2.jpg?v=1598492702000");
-  --background-image-background-color: #f3f3f3;
+  --theme-page-backgroundImage-background-color: #f3f3f3;
 }
 
 /*
@@ -40,7 +40,7 @@ body:not(#en__pagebuilder).footer-below-fold
   clip-path: none;
   height: 100%;
   top: 0;
-  background-color: var(--background-image-background-color);
+  background-color: var(--theme-page-backgroundImage-background-color);
 }
 
 /*
@@ -69,7 +69,7 @@ body:not(#en__pagebuilder).footer-below-fold
 
 [data-engrid-theme="oceanconservancy"] {
   --background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/gray_pattern-optimized-2.jpg?v=1598492702000");
-  --background-image-background-color: #f3f3f3;
+  --theme-page-backgroundImage-background-color: #f3f3f3;
 }
 
 // @media screen and (min-width: 600px) {
@@ -673,7 +673,7 @@ body:not(#en__pagebuilder).footer-below-fold
   clip-path: none;
   height: 100%;
   top: 0;
-  background-color: var(--background-image-background-color);
+  background-color: var(--theme-page-backgroundImage-background-color);
 }
 
 /************************************
@@ -811,7 +811,7 @@ body:not(#en__pagebuilder).footer-below-fold
 
 .en__field__input--checkbox + .en__field__label::before,
 .en__contactDetails__rows::before {
-  border-radius: 50%;
+  border-radius: var(--theme-typography-checkbox-border-radius);
 }
 .en__field__input--checkbox:checked + .en__field__label::before,
 .en__contactDetails__select:checked + .en__contactDetails__rows::before {
@@ -1033,7 +1033,7 @@ body:not(#en__pagebuilder).footer-below-fold
 }
 
 .content-footer {
-  background-color: var(--theme-footer-background-color);
+  background-color: var(--theme-body-footer-background-color);
   .en__component:first-child {
     padding-top: 1rem;
   }
@@ -1243,7 +1243,7 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
 
 /* This input field is pretending to be a button, so let's mirror the border color of its neighboring buttons */
 input[name="transaction.donationAmt.other"] {
-  border-color: var(--theme-button-border-color);
+  border-color: var(--theme-typography-button-border-color);
 }
 
 .content-footer {
@@ -1381,7 +1381,7 @@ img.oc-gs-logo {
 #engrid div[id^="nb-field-"] div.nb-feedback {
   margin-top: 0.25rem !important;
   margin-bottom: 0.25rem !important;
-  border-radius: var(--theme-input-border-radius, 5px) !important;
+  border-radius: var(--theme-typography-input-border-radius, 5px) !important;
   font-size: 1.125rem !important;
 
   span.nb-result {

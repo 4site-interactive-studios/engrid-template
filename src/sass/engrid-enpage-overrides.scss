@@ -1135,7 +1135,7 @@ only screen and (max-device-width:600px) {
 .en__tweetButton__sent {
 	background-color: #CC0001;
 	// border: 0;
-	border-radius: var(--theme-button-border-radius); // 5px
+	border-radius: var(--theme-typography-button-border-radius); // 5px
 	// padding: 0;
 	// text-align: center;
 	// display: inline-block
@@ -1243,7 +1243,7 @@ only screen and (max-device-width:600px) {
 	padding: 0.3125rem 0.625rem; // 5px 10px;
 	// margin: 0;
 	// border: 0;
-	border-radius: var(--theme-button-border-radius); // 4px
+	border-radius: var(--theme-typography-button-border-radius); // 4px
 }
 
 .en__ecarditems__addrecipient {
@@ -2226,7 +2226,7 @@ only screen and (max-device-width:600px) {
 	// right: 0;
 	background-color: #FFFFFF;
 	border: 1px solid #BFBFBF;
-	border-radius: var(--theme-button-border-radius); // 5px
+	border-radius: var(--theme-typography-button-border-radius); // 5px
 	height: 3rem; // 3em
 	padding: 0 0.625rem; // 0 10px;
 	// cursor: pointer;
@@ -2281,7 +2281,7 @@ only screen and (max-device-width:600px) {
 .en__overlay__popup {
 	// position: relative;
 	// margin: auto;
-	border-radius: var(--theme-button-border-radius); // 6px
+	border-radius: var(--theme-typography-button-border-radius); // 6px
 	box-shadow: 0 0 6px 3px rgba(0, 0, 0, .2);
 	max-width: 50rem // 800px- @TODO Investigate, there has to be a better way to do this
 }
@@ -2433,7 +2433,7 @@ only screen and (max-device-width:600px) {
 	max-width: 46.875rem; // 750px - @TODO Investigate, there has to be a better way to do this
 	// display: block;
 	// background: #32325D;
-	border-radius: var(--theme-button-border-radius); // 5px
+	border-radius: var(--theme-typography-button-border-radius); // 5px
 	// text-align: center;
 	// position: relative
 }
@@ -2482,7 +2482,7 @@ only screen and (max-device-width:600px) {
 	max-width: 46.875rem; // 750px - @TODO Investigate, there has to be a better way to do this
 	// display: block;
 	background: #FCAC00;
-	border-radius: var(--theme-button-border-radius); // 5px
+	border-radius: var(--theme-typography-button-border-radius); // 5px
 	// text-align: center;
 	// position: relative
 }

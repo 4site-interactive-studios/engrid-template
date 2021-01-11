@@ -31,6 +31,16 @@ h3{
     line-height: var(--theme-typography-h3-line-height);
 }
 
+h4,
+h5,
+h6{
+    font-family: var(--theme-typography-h3-font-family);
+    color: var(--theme-typography-h3-color);
+    font-size: var(--theme-typography-h3-font-size);
+    font-weight: var(--theme-typography-h3-font-weight);
+    line-height: var(--theme-typography-h3-line-height);
+}
+
 p{
     font-family: var(--theme-typography-p-font-family);
     color: var(--theme-typography-p-color);
@@ -74,6 +84,39 @@ input:hover{
     border-color: var(--theme-typography-input-focus-hover-border-color);
 }
 
+input[type="radio"]{
+    content: var(--theme-typography-radio-content);
+    color: var(--theme-typography-radio-color);
+    background-color: var(--theme-typography-radio-background-color);
+    border-width: var(--theme-typography-radio-border-width);
+    border-color: var(--theme-typography-radio-border-color);
+    border-radius: var(--theme-typography-radio-border-radius);
+}
+
+input[type="radio"]:focus,
+input[type="radio"]:hover{
+    color: var(--theme-typography-radio-focus-hover-color);
+    background-color: var(--theme-typography-radio-focus-hover-background-color);
+    border-color: var(--theme-typography-radio-focus-hover-border-color);
+}
+
+// ✓
+input[type="checkbox"]{
+    content: var(--theme-typography-checkbox-content);
+    color: var(--theme-typography-checkbox-color);
+    background-color: var(--theme-typography-checkbox-background-color);
+    border-width: var(--theme-typography-checkbox-border-width);
+    border-color: var(--theme-typography-checkbox-border-color);
+    border-radius: var(--theme-typography-checkbox-border-radius);
+}
+
+input[type="checkbox"]:focus,
+input[type="checkbox"]:hover{
+    color: var(--theme-typography-checkbox-focus-hover-color);
+    background-color: var(--theme-typography-checkbox-focus-hover-background-color);
+    border-color: var(--theme-typography-checkbox-focus-hover-border-color);
+}
+
 select{
     font-family: var(--theme-typography-select-font-family);
     color: var(--theme-typography-select-color);
@@ -114,7 +157,6 @@ button:hover,
 .button:hover{
     color: var(--theme-typography-button-focus-hover-color);
     background-color: var(--theme-typography-button-focus-hover-background-color);
-    border-width: var(--theme-typography-button-focus-hover-border-width);
     border-color: var(--theme-typography-button-focus-hover-border-color);
 }
 

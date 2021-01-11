@@ -33,7 +33,7 @@ body:not(#en__pagebuilder).footer-below-fold
   clip-path: none;
   height: 100%;
   top: 0;
-  background-color: var(--background-image-background-color);
+  background-color: var(--theme-page-backgroundImage-background-color);
 }
 
 /*
@@ -42,25 +42,6 @@ body:not(#en__pagebuilder).footer-below-fold
 * # Sum of all MIN values of the Body Columns
 * ##########################################################
 */
-
-/* @TODO This should actually be [data-engrid-layout="right1col"] but we didn't have time to make it that way */
-#engrid {
-  .body-header {
-    margin-top: 0;
-    border-radius: 0;
-  }
-
-  .content-footer {
-    margin-bottom: 0;
-    border-radius: 0;
-    border-bottom-right-radius: 7px;
-    border-bottom-left-radius: 7px;
-  }
-}
-
-[data-engrid-theme="rfkhr"] {
-  --background-image-background-color: #0302b7;
-}
 
 .en__errorList:empty {
   display: none;
@@ -97,79 +78,21 @@ body:not(#en__pagebuilder).footer-below-fold
     &[data-engrid-layout="centercenter1col"] {
       /* prettier-ignore */
       .en__component--advrow,
-    .en__component--advrow .pseudo-subgrid {
-      /* autoprefixer grid: off */
-      grid-template-columns:
-      [
-        pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
-        cc-start lcc-start]  minmax(25px, 250px)   [lcc-end
-        bc-start lbc-start]  minmax(250px, 420px)  [lbc-end
-        rbc-start]           minmax(250px, 420px)  [rbc-end bc-end
-        rcc-start]           minmax(25px, 250px)   [rcc-end cc-end
-        rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end                 
-      ] !important; 
-    }
-    }
-
-    .content-header {
-      border-top-right-radius: 7px;
-      border-top-left-radius: 7px;
-    }
-
-    .content-footer {
-      border-bottom-right-radius: 7px;
-      border-bottom-left-radius: 7px;
-    }
-
-    .page-backgroundImageSet {
-      background-attachment: fixed;
-      height: auto !important;
-      &::before {
-        // background-color: rgba(0, 0, 0, 0.5);
-        position: fixed;
-        top: 0px;
-        width: 100vw;
-        height: calc(100vh + 12px);
+      .en__component--advrow .pseudo-subgrid {
+        /* autoprefixer grid: off */
+        grid-template-columns:
+        [
+          pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
+          cc-start lcc-start]  minmax(25px, 250px)   [lcc-end
+          bc-start lbc-start]  minmax(250px, 420px)  [lbc-end
+          rbc-start]           minmax(250px, 420px)  [rbc-end bc-end
+          rcc-start]           minmax(25px, 250px)   [rcc-end cc-end
+          rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end                 
+        ] !important; 
       }
     }
+
   }
-}
-
-body#en__pagebuilder.body-bannerOverlay {
-  background-color: #ffffff;
-}
-
-body:not(#en__pagebuilder).body-banner {
-  background-color: var(--theme-light-gray);
-}
-
-body:not(#en__pagebuilder)
-  #engrid
-  .en__component--advrow
-  .page-backgroundImage.page-backgroundImageSet::before {
-  background-position: top left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: var(--theme-page-backgroundImage-url);
-  will-change: transform; // creates a new paint layer
-}
-
-// @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
-body {
-  color: var(--color-black);
-  background-color: var(--theme-body-background-color);
-}
-
-body,
-body#en__pagebuilder {
-  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-family: "proximanova-regular", sans-serif;
-  font-size: 1.125rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.44;
-  letter-spacing: normal;
 }
 
 body:not(#en__pagebuilder) {
@@ -182,95 +105,13 @@ body:not(#en__pagebuilder) {
   }
 }
 
-/* RAN Named their EMAIl Opt-in `email` which causes it to get the generated class `en__field--email` that matches the auto assigned class `en__field--email` given to EMAIL type fields. This fixes that collision of styles. https://d.pr/i/ziiG76 */
-.en__field--102600 label {
-  position: relative !important;
-  -webkit-transform: initial !important;
-  transform: initial !important;
-  opacity: 1 !important;
-}
-
-/* Legacy Template Support */
-.legacy .en__component--row--1,
-.legacy .en__component--row--2 {
-  display: initial !important;
-}
-
-h1 {
-  color: var(--theme-cta);
-  font-family: "stanley-regular", serif;
-  font-size: 38px;
-  font-weight: 900;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -1px;
-  text-align: center;
-  margin-bottom: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-transform: uppercase;
-}
-
-h2 {
-  color: var(--theme-cta);
-  font-family: "stanley-regular", serif;
-  font-size: 33px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-}
-
-h3 {
-  color: var(--theme-cta);
-  font-family: "stanley-regular", serif;
-  font-size: 27px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 36px;
-  letter-spacing: normal;
-}
-
-label.en__field__label {
-  font-family: "proximanova-regular", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-transform: none;
-}
-
-.en__field__label--item {
-  font-family: "proximanova-regular", sans-serif;
-  font-size: calc(0.05552rem * 18);
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.44;
-  letter-spacing: normal;
-}
-
-.en__field--donationAmt {
-  .en__field__label--item,
-  .en__field__item--other::before,
-  .en__field__item--other input {
-    font-family: "proximanova-regular", sans-serif;
-    font-size: 16px;
-    // font-weight: 900;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-  }
-}
-
-.en__field--recurrpay label.en__field__label {
-  font-size: 14px;
-  font-weight: 400;
-  text-transform: none;
 }
 
 .give-by-select .en__field--radio {
@@ -279,28 +120,16 @@ label.en__field__label {
     margin-top: 0.83rem;
     display: block;
     width: 100%;
-    font-size: calc(0.05552rem * 24);
-    font-weight: 900;
-    line-height: 1;
+    // font-size: calc(0.05552rem * 24);
+    // font-weight: 900;
+    // line-height: 1;
     padding: 18px 0;
   }
   .en__field__item input[type="radio"] + label {
     padding: 5px 0;
     line-height: 24px;
-    // background-position: left center;
     background-repeat: no-repeat;
-    // background-size: 20px;
-    // background-position-x: calc(50% - 1.5rem);
-    // background-position-y: 50%;
-    // padding-left: 2.5rem;
-
     flex-grow: 1;
-    // background-position-x: calc(50% - 40px);
-    // background-position-y: calc(50% - 2px);
-    // background-repeat: no-repeat;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 0.4px;
     text-align: center;
     color: var(--color-black);
     // line-height: 1;
@@ -444,16 +273,16 @@ label.en__field__label {
       align-items: flex-end;
 
       p:first-of-type {
-        font-size: 14px;
-        letter-spacing: 0.7px;
-        font-weight: 700;
+        // font-size: 14px;
+        // letter-spacing: 0.7px;
+        // font-weight: 700;
         margin-top: 0;
         margin-bottom: 0;
       }
 
       p:last-of-type {
-        font-size: 12px;
-        letter-spacing: 0.6px;
+        font-size: 80%;
+        letter-spacing: 80%;
         margin-top: 0;
         margin-bottom: 0;
       }
@@ -484,11 +313,11 @@ label.en__field__label {
     width: 100%;
 
     .banner-text p {
-      font-size: 34px;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      letter-spacing: normal;
+      // font-size: 34px;
+      // font-weight: bold;
+      // font-style: normal;
+      // font-stretch: normal;
+      // letter-spacing: normal;
       padding: 0 0.9em;
       color: #323232;
       box-decoration-break: clone;
@@ -517,10 +346,6 @@ label.en__field__label {
     }
   }
 
-  // .body-footer {
-  //   margin-bottom: 5rem;
-  //   grid-row: body-footer;
-  // }
   .body-bottom {
     display: flex;
     justify-content: center;
@@ -635,14 +460,9 @@ body#en__pagebuilder #engrid {
       margin-bottom: 4rem;
     }
 
-    [class^="body-"] {
-      border-left: 1px solid black;
-      border-right: 1px solid black;
-    }
-
-    .body-header {
-      border-top-left-radius: var(--theme-typography-input-border-radius);
-      border-top-right-radius: var(--theme-typography-input-border-radius);
+    [class*="body-"] {
+      // border-left: 1px solid black;
+      // border-right: 1px solid black;
     }
 
     .content-preFooter.pseudo-subgrid > div {
@@ -664,7 +484,7 @@ body:not(#en__pagebuilder).footer-below-fold
   clip-path: none;
   height: 100%;
   top: 0;
-  background-color: var(--background-image-background-color);
+  background-color: var(--theme-page-backgroundImage-background-color);
 }
 
 /************************************
@@ -800,19 +620,10 @@ body:not(#en__pagebuilder).footer-below-fold
   margin-top: 0.25rem;
 }
 
-.en__field__input--checkbox + .en__field__label::before,
-.en__contactDetails__rows::before {
-  border-radius: 50%;
-}
 .en__field__input--checkbox:checked + .en__field__label::before,
 .en__contactDetails__select:checked + .en__contactDetails__rows::before {
   background-color: var(--color-black);
   box-shadow: none;
-}
-
-.en__field__input--checkbox:checked + .en__field__label::after,
-.en__contactDetails__select:checked + .en__contactDetails__rows::after {
-  top: 0.45rem;
 }
 
 // Couldn't find the cause of this spacing issue https://d.pr/i/1W9vTl
@@ -1022,7 +833,7 @@ body:not(#en__pagebuilder).footer-below-fold
 }
 
 .content-footer {
-  background-color: var(--theme-footer-background-color);
+
   .en__component:first-child {
     padding-top: 1rem;
   }
@@ -1232,7 +1043,7 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
 
 /* This input field is pretending to be a button, so let's mirror the border color of its neighboring buttons */
 input[name="transaction.donationAmt.other"] {
-  border-color: var(--theme-button-border-color);
+  border-color: var(--theme-typography-button-border-color);
 }
 
 .content-footer {
@@ -1369,7 +1180,7 @@ img.oc-gs-logo {
 #engrid div[id^="nb-field-"] div.nb-feedback {
   margin-top: 0.25rem !important;
   margin-bottom: 0.25rem !important;
-  border-radius: var(--theme-input-border-radius, 5px) !important;
+  border-radius: var(--theme-typography-input-border-radius, 5px) !important;
   font-size: 1.125rem !important;
 
   span.nb-result {

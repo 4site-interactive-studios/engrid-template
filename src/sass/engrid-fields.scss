@@ -151,9 +151,9 @@ textarea {
   height: auto; // @TODO Removed !important, hopefully that didn't break anything
   margin: 0rem;
   padding: 0.5rem;
-  border: var(--theme-input-border-width) solid var(--theme-input-border-color);
+  border: var(--theme-typography-input-border-width) solid var(--theme-typography-input-border-color);
   border-radius: var(--theme-typography-input-border-radius);
-  background-color: var(--theme-input-background-color,);
+  background-color: var(--theme-typography-input-background-color,);
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   font-family: inherit;
   font-size: 1rem;
@@ -201,8 +201,8 @@ input[type="week"]:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border: var(--theme-input-border-width) solid var(--theme-input-border-color-focus);
-  background-color: var(--theme-input-background-color-hover);
+  border: var(--theme-typography-input-border-width) solid var(--theme-typography-input-focus-hover-border-color);
+  background-color: var(--theme-typography-input-focus-hover-background-color);
   box-shadow: 0 0 0.3125rem var(--theme-light-gray);
   transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
 }
@@ -297,10 +297,11 @@ textarea:focus {
   transition-duration: 0.25s;
   -webkit-transition-property: border-color, background-color;
   transition-property: border-color, background-color;
+  top: 6px;
 }
 
 .en__field__input--radio + .en__field__label::before {
-  border-radius: 50%;
+  border-radius: var(--theme-typography-radio-border-radius);
 }
 
 .en__field__input--checkbox + .en__field__label::before,
@@ -318,7 +319,7 @@ textarea:focus {
 .en__field__input--radio:checked + .en__field__label::before,
 .en__field__input--checkbox:checked + .en__field__label::before,
 .en__contactDetails__select:checked + .en__contactDetails__rows::before {
-  background-color: var(--theme-checkmark-background-color);
+  background-color: var(--theme-typography-checkbox-background-color);
   -webkit-box-shadow: inset 0 0 0 4px #ffffff;
   box-shadow: inset 0 0 0 4px #ffffff;
   border-width: 1px;
@@ -326,7 +327,7 @@ textarea:focus {
 
 .en__field__input--checkbox:checked + .en__field__label::before,
 .en__contactDetails__select:checked + .en__contactDetails__rows::before {
-  color: var(--theme-checkmark-background-color);
+  color: var(--theme-typography-checkbox-background-color);
   background-color: transparent;
 }
 
@@ -337,11 +338,11 @@ textarea:focus {
   // fill: var(--default-cta);
   content: "✓"; // REF: https://www.toptal.com/designers/htmlarrows/symbols/check-mark/ 
   position: absolute;
-  left: -28px;
-  top: 0;
+  left: -27px;
+  top: 7px;
   width: 21px;
   height: 16px;
-  color: var(--theme-checkmark-font-color);
+  color: var(--theme-typography-checkbox-color);
   background-color: transparent;
   font-size: calc(0.05552rem * 18);
 }
@@ -351,13 +352,13 @@ textarea:focus {
 .en__field__input--checkbox:focus + .en__field__label::before,
 .en__contactDetails__select:focus + .en__contactDetails__rows::before {
   // outline: var(--theme-gray) auto 0.3125rem;
-  // border-color: var(--theme-input-border-color-focus);
+  // border-color: var(--theme-typography-input-focus-hover-border-color);
 }
 
 .en__field__input--radio:focus + .en__field__label,
 .en__field__input--checkbox:focus + .en__field__label,
 .en__contactDetails__select:focus + .en__contactDetails__rows {
-  // outline: 2px solid var(--theme-input-border-color-focus);
+  // outline: 2px solid var(--theme-typography-input-focus-hover-border-color);
   // outline-offset: 3px;
   outline: -webkit-focus-ring-color auto 1px;
   outline-offset: 3px;

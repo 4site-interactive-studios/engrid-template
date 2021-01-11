@@ -36,8 +36,8 @@
 --theme-cta: #208096;
 --theme-cta-hover: #22a3cb;
 
---theme-prefooter-background-color: #d0e2e7;
---theme-footer-background-color: #20809e;
+--theme-content-preFooter-background-color: #d0e2e7;
+--theme-body-footer-background-color: #20809e;
 
 // --theme-background-color: --color-white;
 // --theme-background-image: url("");
@@ -52,37 +52,37 @@
 --theme-spacing-lg: calc(0.8652rem * 2.5); // @TODO Revisit
 --theme-spacing-xlg: calc(0.8652rem * 5); // @TODO Revisit
 
---theme-input-border-radius: 5px;
---theme-input-border-width: 2px;
---theme-input-border-color: --color-black;
---theme-input-border-color-focus: --color-black;
---theme-input-background-color: --color-white;
---theme-input-background-color-hover: --color-white;
+--theme-typography-input-border-radius: 5px;
+--theme-typography-input-border-width: 2px;
+--theme-typography-input-border-color: --color-black;
+--theme-typography-input-focus-hover-border-color: --color-black;
+--theme-typography-input-background-color: --color-white;
+--theme-typography-input-focus-hover-background-color: --color-white;
 
---theme-button-background-color: --color-black;
---theme-button-background-color-hover: --theme-cta-hover;
---theme-button-background-color-active: --theme-cta;
---theme-button-border-color: --color-black;
---theme-button-border-color-active: --theme-cta;
---theme-button-border-color-hover: --theme-cta-hover;
---theme-button-border-radius: 0px;
---theme-button-font-color: --color-white;
---theme-button-font-color-active: --color-white;
+--theme-typography-button-background-color: --color-black;
+--theme-typography-button-focus-hover-background-color: --theme-cta-hover;
+--theme-typography-button-focus-hover-background-color: --theme-cta;
+--theme-typography-button-border-color: --color-black;
+--theme-typography-button-focus-hover-border-color: --theme-cta;
+--theme-typography-button-focus-hover-border-color: --theme-cta-hover;
+--theme-typography-button-border-radius: 0px;
+--theme-typography-button-color: --color-white;
+--theme-typography-button-focus-hover-color: --color-white;
 
---theme-submit-button-background-color: --theme-cta;
---theme-submit-button-background-color-hover: --theme-cta-hover;
---theme-submit-button-border-color: --theme-cta;
---theme-submit-button-font-color: --color-white;
+--theme-typography-primary-button-background-color: --theme-cta;
+--theme-typography-primary-button-focus-hover-background-color: --theme-cta-hover;
+--theme-typography-primary-button-border-color:: --theme-cta;
+--theme-typography-primary-button-color: --color-white;
 
---theme-checkmark-background-color: --theme-cta;
---theme-checkmark-border-color: --theme-cta;
---theme-checkmark-font-color: --color-white;
+--theme-typography-checkbox-background-color: --theme-cta;
+--theme-typography-checkbox-border-color: --theme-cta;
+--theme-typography-checkbox-color: --color-white;
 
 --theme-error-red: #f12222;
 --theme-error-red-grayscale: #949494;
 --theme-error-red-faded: #ffeae9;
 --theme-error-page-group-background: #f4ddda;
---theme-error-input-border-width: --theme-input-border-width;
+--theme-error-input-border-width: --theme-typography-input-border-width;
 
 --theme-highlight-background-color: #227f9e;
 --theme-highlight-font-color: #ffffff;

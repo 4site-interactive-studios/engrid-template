@@ -373,7 +373,7 @@ label.en__field__label {
 }
 
 .content-footer {
-  background-color: var(--theme-footer-background-color, $default-content-footer-background-color);
+  background-color: var(--theme-body-footer-background-color, $default-content-footer-background-color);
 }
 
 .footer-wrapper {
@@ -605,5 +605,5 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
 
 /* This input field is pretending to be a button, so let's mirror the border color of its neighboring buttons */
 input[name="transaction.donationAmt.other"]{
-  border-color: var(--theme-button-border-color, $default-button-border-color)
+  border-color: var(--theme-typography-button-border-color, $default-button-border-color)
 }

@@ -25,73 +25,103 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     // TYPOGRAPHY BODY
     --theme-typography-body-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --theme-typography-body-color: initial;
-    --theme-typography-body-font-size: initial;
+    --theme-typography-body-font-size: var(--theme-root-font-size);
     --theme-typography-body-font-weight: initial;
     --theme-typography-body-line-height: initial;
         
     // TYPOGRAPHY H1
     --theme-typography-h1-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --theme-typography-h1-color: initial;
-    --theme-typography-h1-font-size: initial;
+    --theme-typography-h1-font-size: var(--theme-root-font-size);
     --theme-typography-h1-font-weight: initial;
     --theme-typography-h1-line-height: initial;
         
     // TYPOGRAPHY H2
     --theme-typography-h2-font-family: var(--theme-typography-h1-font-family);
     --theme-typography-h2-color: initial;
-    --theme-typography-h2-font-size: initial;
+    --theme-typography-h2-font-size: var(--theme-root-font-size);
     --theme-typography-h2-font-weight: initial;
     --theme-typography-h2-line-height: initial;
         
     // TYPOGRAPHY H3
     --theme-typography-h3-font-family: var(--theme-typography-h1-font-family);
     --theme-typography-h3-color: initial;
-    --theme-typography-h3-font-size: initial;
+    --theme-typography-h3-font-size: var(--theme-root-font-size);
     --theme-typography-h3-font-weight: initial;
     --theme-typography-h3-line-height: initial;
         
     // TYPOGRAPHY P
     --theme-typography-p-font-family: var(--theme-typography-body-font-family);
     --theme-typography-p-color: initial;
-    --theme-typography-p-font-size: initial;
+    --theme-typography-p-font-size: var(--theme-root-font-size);
     --theme-typography-p-font-weight: initial;
     --theme-typography-p-line-height: initial;
         
     // TYPOGRAPHY STRONG
     --theme-typography-strong-font-family: var(--theme-typography-body-font-family);
     --theme-typography-strong-color: initial;
-    --theme-typography-strong-font-size: initial;
-    --theme-typography-strong-font-weight: initial;
+    --theme-typography-strong-font-size: var(--theme-root-font-size);
+    --theme-typography-strong-font-weight: bold;
     --theme-typography-strong-line-height: initial;
         
     // TYPOGRAPHY LABEL
     --theme-typography-label-font-family: var(--theme-typography-body-font-family);
     --theme-typography-label-color: initial;
-    --theme-typography-label-font-size: initial;
+    --theme-typography-label-font-size: var(--theme-root-font-size);
     --theme-typography-label-font-weight: initial;
     --theme-typography-label-line-height: initial;
         
     // TYPOGRAPHY INPUT
     --theme-typography-input-font-family: var(--theme-typography-body-font-family);
     --theme-typography-input-color: initial;
-    --theme-typography-input-font-size: initial;
+    --theme-typography-input-font-size: var(--theme-root-font-size);
     --theme-typography-input-font-weight: initial;
     --theme-typography-input-line-height: initial;
-    --theme-typography-input-background-color: initial;
-    --theme-typography-input-border-width: initial;
-    --theme-typography-input-border-color: initial;
+    --theme-typography-input-background-color: var(--color-white);
+    --theme-typography-input-border-width: 2px;
+    --theme-typography-input-border-color: var(--color-black);
     --theme-typography-input-border-radius: initial;
+    --theme-typography-input-placeholder-color: var(--theme-light-gray);
         
     // TYPOGRAPHY INPUT:FOCUS
     // TYPOGRAPHY INPUT:HOVER
     --theme-typography-input-focus-hover-color: var(--theme-typography-body-font-family);
-    --theme-typography-input-focus-hover-background-color: initial;
-    --theme-typography-input-focus-hover-border-color: initial;
+    --theme-typography-input-focus-hover-background-color: var(--color-white);
+    --theme-typography-input-focus-hover-border-color: var(--color-black);
         
+    // TYPOGRAPHY RADIO
+    --theme-typography-radio-content: initial;
+    --theme-typography-radio-color: initial;
+    --theme-typography-radio-background-color: initial;
+    --theme-typography-radio-border-width: initial;
+    --theme-typography-radio-border-color: initial;
+    --theme-typography-radio-border-radius: 50%;
+
+    // TYPOGRAPHY RADIO INPUT:FOCUS
+    // TYPOGRAPHY RADIO INPUT:HOVER
+    --theme-typography-radio-focus-hover-color: initial;
+    --theme-typography-radio-focus-hover-background-color: initial;
+    --theme-typography-radio-focus-hover-border-color: initial;
+
+    // TYPOGRAPHY CHECKBOX
+    --theme-typography-checkbox-content:"✓";
+    --theme-typography-checkbox-color: var(--color-white);
+    --theme-typography-checkbox-background-color: var(--theme-cta);
+    --theme-typography-checkbox-border-width: initial;
+    --theme-typography-checkbox-border-color: var(--theme-cta);
+    --theme-typography-checkbox-border-radius: 50%;
+
+    // TYPOGRAPHY CHECKBOX INPUT:FOCUS
+    // TYPOGRAPHY CHECKBOX INPUT:HOVER
+    --theme-typography-checkbox-focus-hover-color: initial;
+    --theme-typography-checkbox-focus-hover-background-color: initial;
+    --theme-typography-checkbox-focus-hover-border-color: initial;
+
+
     // TYPOGRAPHY SELECT
     --theme-typography-select-font-family: var(--theme-typography-body-font-family);
     --theme-typography-select-color: initial;
-    --theme-typography-select-font-size: initial;
+    --theme-typography-select-font-size: var(--theme-root-font-size);
     --theme-typography-select-font-weight: initial;
     --theme-typography-select-line-height: initial;
     --theme-typography-select-background-color: initial;
@@ -99,29 +129,50 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-typography-select-border-color: initial;
     --theme-typography-select-border-radius: initial;
 
-    
+    // TYPOGRAPHY SELECT:FOCUS
+    // TYPOGRAPHY SELECT:HOVER
+    --theme-typography-select-focus-hover-color: initial;
+    --theme-typography-select-focus-hover-background-color: var(--theme-cta-hover);
+    --theme-typography-select-focus-hover-border-color: var(--theme-cta-hover);
+
     // TYPOGRAPHY BUTTON
     --theme-typography-button-font-family: var(--theme-typography-body-font-family);
-    --theme-typography-button-color: initial;
-    --theme-typography-button-font-size: initial;
+    --theme-typography-button-color: var(--color-white);
+    --theme-typography-button-font-size: var(--theme-root-font-size);
     --theme-typography-button-font-weight: initial;
     --theme-typography-button-line-height: initial;
-    --theme-typography-button-background-color: initial;
+    --theme-typography-button-background-color: var(--color-black);
     --theme-typography-button-border-width: initial;
-    --theme-typography-button-border-color: initial;
-    --theme-typography-button-border-radius: initial;  
+    --theme-typography-button-border-color: var(--color-black);
+    --theme-typography-button-border-radius: initial;
     
     // TYPOGRAPHY BUTTON:FOCUS
     // TYPOGRAPHY BUTTON:HOVER
     --theme-typography-button-focus-hover-color: initial;
-    --theme-typography-button-focus-hover-background-color: initial;
-    --theme-typography-button-focus-hover-border-width: initial;
-    --theme-typography-button-focus-hover-border-color: initial;
+    --theme-typography-button-focus-hover-background-color: var(--theme-cta-hover);
+    --theme-typography-button-focus-hover-border-color: var(--theme-cta-hover);
+
+    // TYPOGRAPHY PRIMARY BUTTON
+    --theme-typography-primary-button-font-family: var(--theme-typography-button-font-family);
+    --theme-typography-primary-button-color: var(--color-white);
+    --theme-typography-primary-button-font-size: var(--theme-typography-button-font-size);
+    --theme-typography-primary-button-font-weight: var(--theme-typography-button-font-weight);
+    --theme-typography-primary-button-line-height: var(--theme-typography-button-line-height);
+    --theme-typography-primary-button-background-color: var(--theme-cta);
+    --theme-typography-primary-button-border-width: var(--theme-typography-button-border-width);
+    --theme-typography-primary-button-border-color: var(--theme-cta);
+    --theme-typography-primary-button-border-radius: var(--theme-typography-button-border-radius);
+
+    // TYPOGRAPHY PRIMARY BUTTON:FOCUS
+    // TYPOGRAPHY PRIMARY BUTTON:HOVER  
+    --theme-typography-primary-button-focus-hover-color: var(--theme-typography-button-focus-hover-color);
+    --theme-typography-primary-button-focus-hover-background-color: var(--theme-cta-hover);
+    --theme-typography-primary-button-focus-hover-border-color: var(---theme-typography-button-focus-hover-border-color);
     
     // TYPOGRAPHY A
     --theme-typography-a-font-family: var(--theme-typography-body-font-family);
     --theme-typography-a-color: initial;
-    --theme-typography-a-font-size: initial;
+    --theme-typography-a-font-size: var(--theme-root-font-size);
     --theme-typography-a-font-weight: initial;
     --theme-typography-a-line-height: initial;
     --theme-typography-a-text-decoration: initial;
@@ -161,67 +212,41 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-page-backgroundImageOverlay-background-color: var(--color-transparent);
     --theme-page-customCode-background-color: var(--theme-page-background-color);
 
-    /* ENGRID BACKGROUND IMAGE SECTION'S BACKGROUND PATTERN */
-    /* This is a background pattern that is shown before the hi-resolution background image is lazy loaded in, if at all */
-    /* It's background color "--theme-page-backgroundImage-background-color" should be the average color of the image  */
-    /* REF: (https://doodad.dev/pattern-generator/) */
+    // BODY BORDER RADIUS
+    --theme-body-border-radius: 0px;
+    
+    // ENGRID BACKGROUND IMAGE SECTION'S BACKGROUND PATTERN
+    // This is a background pattern that is shown before the hi-resolution background image is lazy loaded in, if at all
+    // It's background color "--theme-page-backgroundImage-background-color" should be the average color of the image 
+    // REF: (https://doodad.dev/pattern-generator/)
     --theme-page-backgroundImage-background-pattern: "url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)"; // Invisible GIF
 
-    /* REF: http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/ */
+    // REF: http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/
     --theme-root-font-size: 16px; // Sets a baseline font size for all other REM based font-sizes to relatively build off of
 
     --theme-page-backgroundImage-url: "url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)"; // Invisible GIF
 
-    --theme-body-border-radius: 0px;
+    
     --theme-spacing-sm: 0.8652rem; // @TODO Revisit
     --theme-spacing: calc(0.8652rem * 0.75); // @TODO Revisit
     --theme-spacing-lg: calc(0.8652rem * 2.5); // @TODO Revisit
     --theme-spacing-xlg: calc(0.8652rem * 5); // @TODO Revisit
 
-    /* INPUTS */
-    --theme-input-border-radius: 5px;
-    --theme-input-border-width: 2px;
-    --theme-input-border-color: var(--color-black);
-    --theme-input-border-color-focus: var(--color-black);
-    --theme-input-background-color: var(--color-white);
-    --theme-input-background-color-hover: var(--color-white);
-    --theme-input-font-placeholder-color: var(--theme-light-gray);   
-
-    /* BUTTONS */
-    --theme-button-background-color: var(--color-black);
-    --theme-button-background-color-hover: var(--theme-cta-hover);
-    --theme-button-background-color-active: var(--theme-cta);
-    --theme-button-border-color: var(--color-black);
-    --theme-button-border-color-active: var(--theme-cta);
-    --theme-button-border-color-hover: var(--theme-cta-hover);
-    --theme-button-border-radius: 0px;
-    --theme-button-font-color: var(--color-white);
-    --theme-button-font-color-active: var(--color-white);
-
-    /* SUBMIT BUTTONS */
-    --theme-submit-button-background-color: var(--theme-cta);
-    --theme-submit-button-background-color-hover: var(--theme-cta-hover);
-    --theme-submit-button-border-color: var(--theme-cta);
-    --theme-submit-button-font-color: var(--color-white);
-
-    /* CHECKMARKS */
-    --theme-checkmark-background-color: var(--theme-cta);
-    --theme-checkmark-border-color: var(--theme-cta);
-    --theme-checkmark-font-color: var(--color-white);
-
-    /* ERRORS */
+    // ERRORS
     --theme-error-red: var(--theme-error);
     --theme-error-red-grayscale: #949494;
     --theme-error-red-faded: #FFEAE9;
     --theme-error-page-group-background: #FFEAE9;
-    --theme-error-input-border-width: var(--theme-input-border-width);
+    --theme-error-input-border-width: var(--theme-typography-input-border-width);
 
-    /* HIGHLIGHTS */
+    // HIGHLIGHTS
     --theme-highlight-background-color: #227F9E;
     --theme-highlight-font-color: #FFFFFF;
 
-    /* CLICK TO EXPAND */
+    // CLICK TO EXPAND
     --theme-click-to-expand-cta-image-url: url("https://e-activist.com/ea-demo/frontend/pbAssets/build/images/en_open.png");
     --theme-click-to-expand-cta-image-width: 16px;
     --theme-click-to-expand-cta-image-height: 16px;
+
+    // ADD THEME CUSTOM CSS PROPERTIES HERE
 }
