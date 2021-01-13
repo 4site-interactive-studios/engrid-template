@@ -3,6 +3,7 @@
   --color-transparent: transparent;
   --color-white: rgba(255, 255, 255, 1);
   --color-black: rgba(0, 0, 0, 1);
+  --en-pagebuilder-background-color: #C1C0C0;
 
   // GRAYSCALE COLOR PALETTE
   --theme-off-white: #DFDFDF;
@@ -24,7 +25,7 @@
   --theme-typography-body-line-height: initial;
       
   // TYPOGRAPHY H1
-  --theme-typography-h1-font-family: "proximanova-bold", sans-serif;
+  --theme-typography-h1-font-family: "proximanovacond-bold", sans-serif;
   --theme-typography-h1-color: initial;
   --theme-typography-h1-font-size: 38px;
   --theme-typography-h1-font-weight: 900;
@@ -182,8 +183,8 @@
 
   // PAGE, CONTENT, and BODY BACKGROUND COLOR
   // Quick set the background color on all corresponding sections
-  --theme-page-background-color: #0302b8;
-  --theme-content-background-color: var(--color-transparent);
+  --theme-page-background-color: var(--theme-cta);
+  --theme-content-background-color: var(--theme-cta);
   --theme-body-background-color: var(--color-white);
 
   // ENGRID SECTIONS BACKGROUND COLOR

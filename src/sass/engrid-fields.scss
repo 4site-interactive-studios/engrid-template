@@ -297,7 +297,7 @@ textarea:focus {
   transition-duration: 0.25s;
   -webkit-transition-property: border-color, background-color;
   transition-property: border-color, background-color;
-  top: 6px;
+  top: 5px;
 }
 
 .en__field__input--radio + .en__field__label::before {
@@ -338,10 +338,10 @@ textarea:focus {
   // fill: var(--default-cta);
   content: "✓"; // REF: https://www.toptal.com/designers/htmlarrows/symbols/check-mark/ 
   position: absolute;
-  left: -27px;
-  top: 7px;
-  width: 21px;
-  height: 16px;
+  left: -28px;
+  // top: 7px;
+  // width: 21px;
+  // height: 16px;
   color: var(--theme-typography-checkbox-color);
   background-color: transparent;
   font-size: calc(0.05552rem * 18);

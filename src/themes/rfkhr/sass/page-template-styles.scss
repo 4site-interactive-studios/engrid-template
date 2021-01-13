@@ -452,7 +452,7 @@ body#en__pagebuilder #engrid {
     }
 
     .en__component--advrow .body-footer {
-      padding-bottom: 4rem;
+      padding-bottom: 1.5rem;
     }
 
     .body-headerOutside {
@@ -1095,7 +1095,6 @@ input[name="transaction.donationAmt.other"] {
 [data-engrid-layout="centercenter1col"]
   .en__component--advrow
   .body-bottom {
-  padding-top: 2rem;
   text-align: center;
   p {
     font-size: 16px;
@@ -1174,6 +1173,7 @@ img.oc-gs-logo {
   button {
     padding: 11px 0;
     font-size: 20px;
+    text-transform: uppercase;
   }
 }
 

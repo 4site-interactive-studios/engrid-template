@@ -1,15 +1,7 @@
-body{
-  visibility: visible !important;
-}
-
 // By setting both the <body> and the #engrid to the same background color, you do not see white or another color when scrolling above the top of the page and the browsers shows briefly the overflow area there
-body,
-#engrid{
-  background-color: var(--theme-page-background-color)
-}
-
-body:not(#en__pagebuilder){
+body{
+  background-color: var(--theme-page-background-color);
+  opacity: 1;
   transition: opacity 0.1s;
   -webkit-transition: opacity 0.1s;
-  opacity: 1 !important;
 }

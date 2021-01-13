@@ -10,12 +10,20 @@
 #en__pagebuilder {
   /* When in page builder we want to center the content area on the page and must reduce it by 50px to make it visible because of the sidebar */
   width: calc(100% - 51px);
-  /* If in page builder, give the background some color so that input fields stand out */
-  background-color: #f1f1f1 !important; // Could also be #c1c0c0 
+  
+  /* If in page builder, give the background a better color so that input fields stand out */
+  background-color: var(--en-pagebuilder-background-color) !important;
+  
   /* If the user accidentally deletes all content from the form, prevent it from completely collapsing in on itself and making it impossible for the user to add new content */
   form {
     min-height: 25px !important;
   }
+
+  .page-backgroundImage,
+  .page-customCode{
+    background-color: var(--color-transparent) !important;
+  }
+
   /* Sometimes our styles might cause a code blocks title and label to display inline, rather than in rows. This should help prevent that https://d.pr/v/vXlAUM */
   .en__placeholder__text{
     flex-direction: column !important;
@@ -24,11 +32,13 @@
   // When in page builder display Overlay sections after their counterparts and not overtop of their target grid row. This way content editors can more easily interact with them
   .body-bannerOverlay{
     grid-row: body-bannerOverlay !important;
+    background-color: var(--theme-body-banner-background-color) !important;
   }
 
   // When in page builder display Overlay sections after their counterparts and not overtop of their target grid row. This way content editors can more easily interact with them
   .page-backgroundImageOverlay{
     grid-row: page-backgroundImageOverlay !important;
+    background-color: var(--theme-body-banner-background-color) !important;
   }
 
   // Helps position the Engaging Networks pagebuilder tabs that are shown on hover of the Advanced Row
@@ -36,7 +46,8 @@
     grid-row: page;
   }
 
-  .page-backgroundImage img:not([loading]) {
+  /* Highlight images not using our method for lazy loading them */
+  .page-backgroundImage img:not([data-src]) {
     border: 5px solid red;
   }
 
