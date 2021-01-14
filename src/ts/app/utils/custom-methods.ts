@@ -1,5 +1,6 @@
 declare global {
   interface Window {
+    pageJson: any;
     enOnSubmit: any;
     enOnError: any;
   }

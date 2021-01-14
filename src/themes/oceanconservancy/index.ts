@@ -24,6 +24,32 @@ function getFieldValue(id: string) {
   let field = document.getElementById(id) as HTMLInputElement;
   return field && "value" in field ? field.value : "";
 }
+function getPageType() {
+  if (
+    window.hasOwnProperty("pageJson") &&
+    window.pageJson.hasOwnProperty("pageType")
+  ) {
+    switch (window.pageJson.pageType) {
+      case "e-card":
+        return "ECARD";
+        break;
+      case "otherdatacapture":
+        return "SURVEY";
+        break;
+      case "emailtotarget":
+      case "advocacypetition":
+        return "ADVOCACY";
+        break;
+      case "emailsubscribeform":
+        return "SUBSCRIBEFORM";
+        break;
+      default:
+        return "DONATION";
+    }
+  } else {
+    return "DONATION";
+  }
+}
 function getUserData() {
   let phone = getFieldValue("en__field_supporter_phoneNumber");
   let sms_message_opt_in = document.getElementById(
@@ -47,8 +73,10 @@ function getUserData() {
     donor: document.getElementsByName("transaction.donationAmt.other")
       .length,
     tags: "OC_EN_Form",
+    source: getPageType(),
   };
 }
+
 function postAjax(url: string, data: any, success: Function) {
   var params =
     typeof data == "string"
@@ -85,7 +113,7 @@ form.onSubmit.subscribe(() => {
   return new Promise(function (resolve, reject) {
     let userData = getUserData();
     console.log("User Data", userData);
-    if (!userData) return resolve();
+    if (!userData) return resolve(true);
     postAjax(
       "https://oceanconservancy.org/wp-admin/admin-ajax.php?action=upland_sms_signup",
       userData,
@@ -94,7 +122,7 @@ form.onSubmit.subscribe(() => {
         var response = JSON.parse(data);
         if (response.error) console.log("error adding contact");
         else console.log(response.message);
-        resolve();
+        resolve(true);
       }
     );
   });
