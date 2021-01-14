@@ -74,16 +74,16 @@
 }
 
 @media screen and (max-width: 599px) {
-  body #engrid {
+  body {
     font-size: 94%;
   }
 
-  #engrid .en__field--donationAmt .en__field__element--radio .en__field__item {
+  .en__field--donationAmt .en__field__element--radio .en__field__item {
     width: calc(50% - 0.5rem);
   }
 }
 
-#engrid h1 {
+h1 {
   margin-top: 5px;
 }
 
@@ -136,10 +136,10 @@
   }
 }
 
-body:not(#en__pagebuilder) [data-engrid-layout="centerleft1col"],
-body:not(#en__pagebuilder) [data-engrid-layout="centercenter1col"],
-body:not(#en__pagebuilder) [data-engrid-layout="centercenter1col-wide"],
-body:not(#en__pagebuilder) [data-engrid-layout="centerright1col"] {
+body:not(#en__pagebuilder)[data-engrid-layout="centerleft1col"],
+body:not(#en__pagebuilder)[data-engrid-layout="centercenter1col"],
+body:not(#en__pagebuilder)[data-engrid-layout="centercenter1col-wide"],
+body:not(#en__pagebuilder)[data-engrid-layout="centerright1col"] {
   /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
   .page-backgroundImage::before {
     content: "";

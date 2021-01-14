@@ -74,7 +74,7 @@
 }
 
 @media screen and (max-width: 599px) {
-  body #engrid {
+  body {
     font-size: 94%;
   }
 
@@ -136,10 +136,10 @@
   }
 }
 
-body:not(#en__pagebuilder) [data-engrid-layout="centerleft1col"],
-body:not(#en__pagebuilder) [data-engrid-layout="centercenter1col"],
-body:not(#en__pagebuilder) [data-engrid-layout="centercenter1col-wide"],
-body:not(#en__pagebuilder) [data-engrid-layout="centerright1col"] {
+body:not(#en__pagebuilder)[data-engrid-layout="centerleft1col"],
+body:not(#en__pagebuilder)[data-engrid-layout="centercenter1col"],
+body:not(#en__pagebuilder)[data-engrid-layout="centercenter1col-wide"],
+body:not(#en__pagebuilder)[data-engrid-layout="centerright1col"] {
   // Specified on child dom elements so that if there are none, then the parent div collapses its vertical height.
   .content-preFooter > div {
     min-height: 710px;
@@ -261,10 +261,10 @@ body#en__pagebuilder [data-engrid-layout="centerright1col"] {
     }
   }
 
-  body:not(#en__pagebuilder) [data-engrid-layout="centerleft1col"],
-  body:not(#en__pagebuilder) [data-engrid-layout="centercenter1col"],
-  body:not(#en__pagebuilder) [data-engrid-layout="centercenter1col-wide"],
-  body:not(#en__pagebuilder) [data-engrid-layout="centerright1col"] {
+  body:not(#en__pagebuilder)[data-engrid-layout="centerleft1col"],
+  body:not(#en__pagebuilder)[data-engrid-layout="centercenter1col"],
+  body:not(#en__pagebuilder)[data-engrid-layout="centercenter1col-wide"],
+  body:not(#en__pagebuilder)[data-engrid-layout="centerright1col"] {
     // Specified on child dom elements so that if there are none, then the parent div collapses its vertical height.
     .content-preFooter > div {
       min-height: 1010px;

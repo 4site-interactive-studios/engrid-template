@@ -11,7 +11,7 @@
     <script async type="text/javascript" src="https://cdn.neverbounce.com/widget/dist/NeverBounce.js"></script>
 */
 
-#engrid div[id^=nb-field-]{
+div[id^=nb-field-]{
     max-width: 100% !important;
     width: 100% !important;
     
@@ -40,7 +40,7 @@
     }
 }
 
-#engrid div[id^=nb-field-].nb-error{
+div[id^=nb-field-].nb-error{
     input{
         border-color: var(--theme-error-red) !important;
         background-color: var(--theme-error-red-faded) !important;
@@ -58,6 +58,6 @@
     }
 }
 
-#engrid div[id^=nb-field-].nb-success input{
+div[id^=nb-field-].nb-success input{
     border-color: initial !important;
 }

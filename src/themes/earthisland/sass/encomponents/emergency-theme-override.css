@@ -55,15 +55,15 @@ button:focus,button:hover {
     color: #FF1D34 !important;
 }
 
-#engrid:before {
+body:before {
     background: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2110/strip-emergency-desktop.png?v=1520436486000") !important;
 }
 
-#engrid .body-header:before {
+body .body-header:before {
     background: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2110/strip-emergency-desktop.png?v=1520436486000") !important;
 }
 
-#engrid .footer-block-three{
+body.footer-block-three{
     background: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2110/strip-emergency-desktop.png?v=1520436486000") !important;
 }
 

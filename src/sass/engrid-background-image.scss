@@ -1,5 +1,4 @@
 body:not(#en__pagebuilder)
-  #engrid
   .en__component--advrow
   .page-backgroundImage{
     overflow: hidden; // added for before pseudo-element to help improve page redraw and subsequent page scroll FPS
@@ -8,7 +7,6 @@ body:not(#en__pagebuilder)
   }
 
 body:not(#en__pagebuilder)
-  #engrid
   .en__component--advrow
   .page-backgroundImage:not(.page-backgroundImageSet)::before {
   background-position: top left;
@@ -19,7 +17,6 @@ body:not(#en__pagebuilder)
 
 // @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
 body:not(#en__pagebuilder).footer-below-fold
-  #engrid
   .en__component--advrow
   .page-backgroundImage::before {
   -webkit-clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
@@ -28,8 +25,7 @@ body:not(#en__pagebuilder).footer-below-fold
   background-color: var(--theme-page-backgroundImage-background-color);
 }
 
-// body:not(#en__pagebuilder)
-//   #engrid:not(.legacy)
+// body:not(#en__pagebuilder):not(.legacy)
 //   .en__component--advrow
 //   .page-backgroundImage {
 //   background-position: top left;
@@ -40,8 +36,7 @@ body:not(#en__pagebuilder).footer-below-fold
 //   height: 120vh;
 // }
 
-// body:not(#en__pagebuilder)
-//   #engrid.legacy
+// body:not(#en__pagebuilder)legacy
 //   .en__component--advrow
 //   .page-backgroundImage {
 //   background-position: top right;
@@ -50,15 +45,13 @@ body:not(#en__pagebuilder).footer-below-fold
 //   background-size: cover;
 // }
 
-body:not(#en__pagebuilder)
-  #engrid.legacy
+body:not(#en__pagebuilder).legacy
   .en__component--advrow
   .page-backgroundImage {
   background-position: top right;
 }
 
 body:not(#en__pagebuilder)
-  #engrid
   .en__component--advrow
   .page-backgroundImageOverlay {
   z-index: -1;

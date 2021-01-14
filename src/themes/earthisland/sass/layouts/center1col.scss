@@ -135,10 +135,10 @@
   }
 }
 
-body:not(#en__pagebuilder) [data-engrid-layout="centerleft1col"],
-body:not(#en__pagebuilder) [data-engrid-layout="centercenter1col"],
-body:not(#en__pagebuilder) [data-engrid-layout="centercenter1col-wide"],
-body:not(#en__pagebuilder) [data-engrid-layout="centerright1col"] {
+body:not(#en__pagebuilder)[data-engrid-layout="centerleft1col"],
+body:not(#en__pagebuilder)[data-engrid-layout="centercenter1col"],
+body:not(#en__pagebuilder)[data-engrid-layout="centercenter1col-wide"],
+body:not(#en__pagebuilder)[data-engrid-layout="centerright1col"] {
 
   .page-backgroundImage {
     grid-row: page-start / content-preFooter-end;

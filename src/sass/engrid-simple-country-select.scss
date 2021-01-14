@@ -3,25 +3,24 @@
    * // Depends on corresponding JS library
    * .simple_country_select
    ***********************************/
-#engrid #en_custom_field_simple_country_select_long a,
-#engrid #en_custom_field_simple_country_select_short a {
+#en_custom_field_simple_country_select_long a,
+#en_custom_field_simple_country_select_short a {
   cursor: pointer;
 }
 
-#engrid #en_custom_field_simple_country_select_short {
+#en_custom_field_simple_country_select_short {
   display: none;
   @include to(2) {
     display: initial;
   }
 }
 
-#engrid
-  .en__component--formblock.country-select-visible
-  .en__field--address1
-  span {
+.en__component--formblock.country-select-visible
+.en__field--address1
+span {
   display: none;
 }
-body:not(#en__pagebuilder) #engrid .simple_country_select {
+body:not(#en__pagebuilder) .simple_country_select {
   .en__field--country {
     display: none;
   }
@@ -30,13 +29,13 @@ body:not(#en__pagebuilder) #engrid .simple_country_select {
     display: flex;
   }
 }
-#engrid .country-select-visible #en_custom_field_simple_country_select_short,
-#engrid .country-select-visible #en_custom_field_simple_country_select_long {
+.country-select-visible #en_custom_field_simple_country_select_short,
+.country-select-visible #en_custom_field_simple_country_select_long {
   display: none;
 }
 @include to(2) {
   /* Hides long form country select */
-  #engrid #en_custom_field_simple_country_select_long {
+  #en_custom_field_simple_country_select_long {
     display: none;
   }
 }

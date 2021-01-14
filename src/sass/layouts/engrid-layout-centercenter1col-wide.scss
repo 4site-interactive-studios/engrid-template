@@ -28,7 +28,7 @@
   }
 }
 
-body:not(#en__pagebuilder) [data-engrid-layout="centercenter1col-wide"] {
+body:not(#en__pagebuilder)[data-engrid-layout="centercenter1col-wide"] {
   .page-backgroundImage {
     grid-row: page-start / content-footerSpacer-end;
   }

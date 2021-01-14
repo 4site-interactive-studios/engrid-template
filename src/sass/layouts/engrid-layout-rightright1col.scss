@@ -53,12 +53,12 @@
     }
 
     /* @TODO This shouldn't be here, it's just an OC thing but shouldn't be in the main layout */
-    .content-footerSpacer,
-    .body-footer {
-      display: none;
-    }
+    // .content-footerSpacer,
+    // .body-footer {
+    //   display: none;
+    // }
   }
-  body:not(#en__pagebuilder) [data-engrid-layout="rightright1col"] {
+  body:not(#en__pagebuilder)[data-engrid-layout="rightright1col"] {
     .page-backgroundImage {
       grid-row: page-start / content-footer-end;
       grid-column: lpc-start / lpc-end;

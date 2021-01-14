@@ -1,4 +1,4 @@
-#engrid{
+body{
     --color-white: #ffffff;
     --color-black: #4D4D4D;
     --theme-gray: #8a8a8a;
@@ -61,12 +61,12 @@
     --theme-highlight-font-color: #ffffff;
 }
 
-#engrid.theme-earthisland{
+.theme-earthisland{
     --background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10069/earthisland-background.jpg?v=1589652190000");
 }
 
 /* IMMP Sub-theme */
-#engrid.theme-immp{
+.theme-immp{
     --color-black: #3c4d64;
     
     --theme-content-preFooter-background-color: #d0e2e7;

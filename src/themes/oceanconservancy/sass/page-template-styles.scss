@@ -1,13 +1,14 @@
 @media screen and (max-width: 360px) {
   // Remove down arrow when giving frequency wraps
-  #engrid.theme-oceanconservancy
+  [data-engrid-theme="oceanconservancy"]{
     .monthly-gift-upsell-tooltip
     .highlight:after {
-    display: none;
+      display: none;
+    }
   }
 }
 
-#engrid[engrid-theme="oceanconservancy"] {
+[data-engrid-theme="oceanconservancy"] {
   --background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/gray_pattern-optimized-2.jpg?v=1598492702000");
   --theme-page-backgroundImage-background-color: #f3f3f3;
 }
@@ -33,7 +34,6 @@
 
 // @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
 body:not(#en__pagebuilder).footer-below-fold
-  #engrid
   .en__component--advrow
   .page-backgroundImage::before {
   -webkit-clip-path: none;
@@ -51,7 +51,7 @@ body:not(#en__pagebuilder).footer-below-fold
 */
 
 /* @TODO This should actually be [data-engrid-layout="right1col"] but we didn't have time to make it that way */
-#engrid {
+body {
   .body-header {
     margin-top: 0;
     border-radius: 0;
@@ -94,18 +94,17 @@ body:not(#en__pagebuilder).footer-below-fold
 
 
 
-#engrid {
-  /*
+/*
 * ##########################################################
 * # BODY BREAKPOINT
 * # Sum of all MIN values of the Body Columns
 * ##########################################################
 */
 
-  @media screen and (min-width: 600px) {
-    &[data-engrid-layout="centercenter1col"] {
-      /* prettier-ignore */
-      .en__component--advrow,
+@media screen and (min-width: 600px) {
+  [data-engrid-layout="centercenter1col"] {
+    /* prettier-ignore */
+    .en__component--advrow,
     .en__component--advrow .pseudo-subgrid {
       /* autoprefixer grid: off */
       grid-template-columns:
@@ -118,28 +117,27 @@ body:not(#en__pagebuilder).footer-below-fold
         rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end                 
       ] !important; 
     }
-    }
+  }
 
-    .content-header {
-      border-top-right-radius: 7px;
-      border-top-left-radius: 7px;
-    }
+  .content-header {
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+  }
 
-    .content-footer {
-      border-bottom-right-radius: 7px;
-      border-bottom-left-radius: 7px;
-    }
+  .content-footer {
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
 
-    .page-backgroundImageSet {
-      background-attachment: fixed;
-      height: auto !important;
-      &::before {
-        // background-color: rgba(0, 0, 0, 0.5);
-        position: fixed;
-        top: 0px;
-        width: 100vw;
-        height: calc(100vh + 12px);
-      }
+  .page-backgroundImageSet {
+    background-attachment: fixed;
+    height: auto !important;
+    &::before {
+      // background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0px;
+      width: 100vw;
+      height: calc(100vh + 12px);
     }
   }
 }
@@ -153,7 +151,6 @@ body:not(#en__pagebuilder).body-banner {
 }
 
 body:not(#en__pagebuilder)
-  #engrid
   .en__component--advrow
   .page-backgroundImage.page-backgroundImageSet::before {
   background-position: top left;
@@ -328,14 +325,13 @@ label.en__field__label {
 
 @media screen and (max-width: 360px) {
   // Remove down arrow when giving frequency wraps
-  #engrid .monthly-gift-upsell-tooltip .highlight:after {
+  .monthly-gift-upsell-tooltip .highlight:after {
     display: none;
   }
 }
 
 @media screen and (max-width: 400px) {
   // Remove "Give By Select" icons on small screens
-  #engrid
     .give-by-select
     .en__field--radio
     .en__field__item
@@ -346,13 +342,10 @@ label.en__field__label {
     padding-right: 0;
   }
 
-  #engrid
     .en__field__label--item
-    #engrid
     .en__field__input--checkbox
     + .en__field__label,
-  #engrid .en__contactDetails__rows,
-  #engrid
+  .en__contactDetails__rows,
     .give-by-select
     .en__field--radio
     .en__field__item
@@ -362,18 +355,18 @@ label.en__field__label {
   }
 }
 
-#engrid h1 {
+h1 {
   margin-top: 5px;
 }
 
 @media screen and (max-width: 600px) {
-  #engrid .en__component--advrow > div,
+  .en__component--advrow > div,
   #EN__RootElement .en__component--advrow > div {
     grid-column: pc !important;
   }
 }
 
-#engrid {
+body {
   .page-alert,
   .content-header,
   .body-headerOutside,
@@ -564,7 +557,7 @@ label.en__field__label {
   }
 }
 
-body:not(#en__pagebuilder) #engrid {
+body:not(#en__pagebuilder){
   .page-backgroundImage {
     grid-row: page-start / content-preFooter-end;
   }
@@ -585,18 +578,16 @@ body:not(#en__pagebuilder) #engrid {
   }
 }
 
-body#en__pagebuilder #engrid {
+body#en__pagebuilder {
   .page-backgroundImage > div,
   .page-backgroundImageOverlay > div {
     grid-column: bc;
   }
 }
 
-#engrid {
   .body-side {
     display: none;
   }
-}
 
 /*
 * ##########################################################
@@ -607,66 +598,63 @@ body#en__pagebuilder #engrid {
 
 /* Sum of all MIN values of the Body Columns */
 @media screen and (min-width: 600px) {
-  #engrid {
-    .en__component--advrow .body-top,
-    .en__component--advrow .body-side,
-    .en__component--advrow .body-main,
-    .en__component--advrow .body-bottom,
-    .en__component--advrow .body-footer {
-      padding-left: 6.5rem;
-      padding-right: 6.5rem;
-    }
+  .en__component--advrow .body-top,
+  .en__component--advrow .body-side,
+  .en__component--advrow .body-main,
+  .en__component--advrow .body-bottom,
+  .en__component--advrow .body-footer {
+    padding-left: 6.5rem;
+    padding-right: 6.5rem;
+  }
 
-    .en__component--advrow .body-header,
-    .en__component--advrow .body-banner,
-    .en__component--advrow .body-top,
-    .en__component--advrow .body-side,
-    .en__component--advrow .body-main,
-    .en__component--advrow .body-bottom,
-    .en__component--advrow .body-footer {
-      position: relative;
-    }
+  .en__component--advrow .body-header,
+  .en__component--advrow .body-banner,
+  .en__component--advrow .body-top,
+  .en__component--advrow .body-side,
+  .en__component--advrow .body-main,
+  .en__component--advrow .body-bottom,
+  .en__component--advrow .body-footer {
+    position: relative;
+  }
 
-    .body-header {
-      margin-top: 2.1875rem;
-    }
+  .body-header {
+    margin-top: 2.1875rem;
+  }
 
-    .content-footerSpacer {
-      margin-bottom: 2.1875rem;
-    }
+  .content-footerSpacer {
+    margin-bottom: 2.1875rem;
+  }
 
-    .en__component--advrow .body-footer {
-      padding-bottom: 4rem;
-    }
+  .en__component--advrow .body-footer {
+    padding-bottom: 4rem;
+  }
 
-    .body-headerOutside {
-      margin-top: 4rem;
-      margin-bottom: 4rem;
-    }
+  .body-headerOutside {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
 
-    [class^="body-"] {
-      border-left: 1px solid black;
-      border-right: 1px solid black;
-    }
+  [class^="body-"] {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
 
-    .body-header {
-      border-top-left-radius: var(--theme-typography-input-border-radius);
-      border-top-right-radius: var(--theme-typography-input-border-radius);
-    }
+  .body-header {
+    border-top-left-radius: var(--theme-typography-input-border-radius);
+    border-top-right-radius: var(--theme-typography-input-border-radius);
+  }
 
-    .content-preFooter.pseudo-subgrid > div {
-      grid-column: cc;
-    }
+  .content-preFooter.pseudo-subgrid > div {
+    grid-column: cc;
+  }
 
-    .content-footer.pseudo-subgrid > div {
-      grid-column: cc;
-    }
+  .content-footer.pseudo-subgrid > div {
+    grid-column: cc;
   }
 }
 
 // @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
 body:not(#en__pagebuilder).footer-below-fold
-  #engrid
   .en__component--advrow
   .page-backgroundImage::before {
   -webkit-clip-path: none;
@@ -1263,13 +1251,13 @@ input[name="transaction.donationAmt.other"] {
   }
 }
 
-#engrid .en__component--advrow .body-header::before,
-#engrid .en__component--advrow .body-banner::before,
-#engrid .en__component--advrow .body-top::before,
-#engrid .en__component--advrow .body-side::before,
-#engrid .en__component--advrow .body-main::before,
-#engrid .en__component--advrow .body-bottom::before,
-#engrid .en__component--advrow .body-footer::before {
+.en__component--advrow .body-header::before,
+.en__component--advrow .body-banner::before,
+.en__component--advrow .body-top::before,
+.en__component--advrow .body-side::before,
+.en__component--advrow .body-main::before,
+.en__component--advrow .body-bottom::before,
+.en__component--advrow .body-footer::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1281,7 +1269,7 @@ input[name="transaction.donationAmt.other"] {
     0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
-#en__pagebuilder #engrid .en__component--advrow .body-bannerOverlay::before {
+#en__pagebuilder .en__component--advrow .body-bannerOverlay::before {
   content: "";
   position: absolute;
   top: 0;
