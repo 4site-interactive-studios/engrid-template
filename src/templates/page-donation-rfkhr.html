@@ -415,8 +415,20 @@
         locale: "en-US",
       };
     </script>
+
+
+    <!-- Get color on page ASAP and hide it until main.css is parsed and sets the <body> opacity back to 1 -->
+      <style>
+        body{
+            background-color: #0302b8;
+            opacity: 0;
+        }
+    </style>
+
     <script src="https://e-activist.com/page/71966/pagedata.js?locale=en-US&ea.profile.id=0"></script>
     <script src="https://e-activist.com/ea-demo/frontend/pbAssets/build/js/enPage.js?v=3.58.0"></script>
+
+    
   </head>
   <body data-engrid-layout="centercenter1col"
   data-engrid-theme="rfkhr"
@@ -424,59 +436,11 @@
     <!-- Placed here so that it always comes after Engaging Networks CSS which gets injected in HEAD -->
     <!-- <link href="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1991/main.css?v=1598493914" rel="stylesheet" type="text/css"> -->
 
-    <style>
-      body{
-        background-color: #0302b8 !important;
-      }
+    <!-- Immeditely start preloading the Header, Body, and Label Fonts -->
+    <link rel="preload" href="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10075/proximanovacond-bold.woff2?v=1610647603000" as="font" type="font/woff2" crossorigin> <!-- Header -->
+    <link rel="preload" href="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10075/stanley-regular.woff2?v=1610647534000" as="font" type="font/woff2" crossorigin> <!-- Body -->
+    <link rel="preload" href="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10075/proximanova-bold.woff2?v=1610647602000" as="font" type="font/woff2" crossorigin> <!-- Label -->
 
-      /* Prevent the page ever being seen until the DOM has been parsed. A corresponding style is added just before the tag. */
-      body:not(#en__pagebuilder) {
-        opacity: 0;
-      }
-
-      #en__pagebuilder {
-        background-color: #c1c0c0 !important;
-      }
-
-
-      
-      /* latin */
-      @font-face {
-          font-family: 'stanley-regular';
-          src: url('https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10075/stanley-regular.woff2?v=1605921961000') format('woff2');
-          font-style: normal;
-          font-weight: 400;
-          font-display: swap;
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
-            U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
-            U+2212, U+2215, U+FEFF, U+FFFD;    
-      }
-
-      /* latin */
-      @font-face {
-          font-family: 'proximanova-regular';
-          src: url('https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10075/proximanova-regular.woff2?v=1605923517000') format('woff2');
-          font-style: normal;
-          font-weight: 400;
-          font-display: swap;
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
-            U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
-            U+2212, U+2215, U+FEFF, U+FFFD;          
-      }
-
-      /* latin */
-      @font-face {
-          font-family: 'proximanova-bold';
-          src: url('https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10075/proximanova-bold-webfont.woff2?v=1605921965000') format('woff2');
-          font-style: normal;
-          font-weight: 700;
-          font-display: swap;
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
-            U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
-            U+2212, U+2215, U+FEFF, U+FFFD;          
-      }
-
-    </style>
 
     <div
       id="engrid"
@@ -2045,14 +2009,6 @@
     </noscript>
     <!-- End profiling tags -->
 
-    <!-- Once the DOM has been parsed, show whatever the browser has rendered. The slight pause allows for any JS layout changes to happen before it's shown -->
-    <style>
-      body:not(#en__pagebuilder) {
-        transition: opacity 0.1s;
-        -webkit-transition: opacity 0.1s;
-        opacity: 1;
-      }
-    </style>
   </body>
 </html>
 <!-- ENGrid Template - A/B Mirror of 40745:66689:191100:1991 -->

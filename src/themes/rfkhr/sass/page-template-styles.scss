@@ -348,6 +348,9 @@ h1 {
   // grid-row: body-footer !important;
   padding-top: 1rem;
   padding-bottom: 2rem;
+  --theme-typography-p-font-family: "proximanovacond-bold", sans-serif;
+  --theme-typography-a-font-family: "proximanovacond-bold", sans-serif;
+  --theme-typography-body-font-family: "proximanovacond-bold", sans-serif;
 }
 
 .content-footer > div {
@@ -951,7 +954,7 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
   color: #ffffff;
   font-size: 14px;
   display: inline-block;
-  font-family: "proximanova-regular", sans-serif;
+  // font-family: "proximanova-regular", sans-serif;
   font-weight: normal;
   line-height: 26px;
   /* margin-left: 0px; */
@@ -962,7 +965,7 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
   color: #ffffff;
   font-size: 14px;
   display: inline-block;
-  font-family: "proximanova-regular", sans-serif;
+  // font-family: "proximanova-regular", sans-serif;
   margin-right: 10px;
   /* margin-left: 0px; */
   margin: 20px 20px 20px 0;
@@ -1001,7 +1004,7 @@ body:not(#en__pagebuilder) .en__component--advrow:not(.show) .hide {
   color: #ffffff !important;
   font-size: 14px !important;
   display: inline-block;
-  font-family: "proximanova-regular", sans-serif;
+  // font-family: "proximanova-regular", sans-serif;
   font-weight: normal;
   line-height: 26px;
 }
@@ -1160,7 +1163,7 @@ div[id^="nb-field-"] div.nb-feedback {
   font-size: 1.125rem !important;
 
   span.nb-result {
-    font-family: "proximanova-regular", sans-serif !important;
+    // font-family: "proximanova-regular", sans-serif !important;
     font-size: 0.75rem !important;
     font-weight: 400 !important;
     font-stretch: normal !important;
