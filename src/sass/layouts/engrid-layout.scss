@@ -197,12 +197,13 @@
 .page-backgroundImageOverlay{
   grid-column: pc;
   grid-row: page-backgroundImage;
-  background-color: var(--theme-page-customCode-background-color)
+  background-color: var(--theme-page-backgroundImageOverlay-background-color);
 }
 
 .page-customCode{
   grid-column: pc;
   grid-row: page-customCode;
+  background-color: var(--theme-page-customCode-background-color);
 }
 
 // The ENGrid Custom Code section should never be visible outside of page builder
@@ -230,10 +231,6 @@ body:not(#en__pagebuilder) .page-customCode {
 .body-footer {
   padding-left: var(--theme-spacing-lg);
   padding-right: var(--theme-spacing-lg);
-}
-
-.body-banner img{
-  object-fit: cover;
 }
 
 .body-bannerOverlay{

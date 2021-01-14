@@ -177,7 +177,7 @@
   --theme-typography-a-focus-hover-color: initial;
   --theme-typography-a-focus-hover-text-decoration: initial;
 
-  // CTA COLOR
+  // CTA COLORS
   --theme-cta: #0302b8;
   --theme-cta-hover: #32d3f0;
 
@@ -206,6 +206,9 @@
   --theme-page-backgroundImage-background-color: var(--theme-page-background-color);
   --theme-page-backgroundImageOverlay-background-color: var(--color-transparent);
   --theme-page-customCode-background-color: var(--theme-page-background-color);
+
+  // LAZY LOADED BANNER IMAGE PLACEHOLDER COLOR
+  --theme-body-banner-image-background-color: var(--theme-off-white);
 
   // BODY BORDER RADIUS
   --theme-body-border-radius: 0px;

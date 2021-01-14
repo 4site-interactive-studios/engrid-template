@@ -1,7 +1,6 @@
-// By setting both the <body> and the #engrid to the same background color, you do not see white or another color when scrolling above the top of the page and the browsers shows briefly the overflow area there
-body{
-  background-color: var(--theme-page-background-color);
+// Needs to be set for both these selectors to match the specificity of a render critical styling added in the Engaging Networks page templated header
+body,
+body:not(#en__pagebuilder){
+  // background-color: var(--theme-page-background-color); // @TODO The CSS Custom Property seems to use the value defined on ENGrid rather than in the Client Theme (https://d.pr/v/KSuZ0N). Disabled until fixed.
   opacity: 1;
-  transition: opacity 0.1s;
-  -webkit-transition: opacity 0.1s;
 }

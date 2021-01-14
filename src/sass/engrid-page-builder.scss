@@ -8,11 +8,12 @@
 
 // Styles Related to the Page-Builder
 #en__pagebuilder {
+  // If in page builder, give the background a better color so that input fields stand out
+  background-color: var(--en-pagebuilder-background-color) !important;
+  opacity: 1;
+
   /* When in page builder we want to center the content area on the page and must reduce it by 50px to make it visible because of the sidebar */
   width: calc(100% - 51px);
-  
-  /* If in page builder, give the background a better color so that input fields stand out */
-  background-color: var(--en-pagebuilder-background-color) !important;
   
   /* If the user accidentally deletes all content from the form, prevent it from completely collapsing in on itself and making it impossible for the user to add new content */
   form {

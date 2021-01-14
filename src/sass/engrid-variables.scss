@@ -184,7 +184,7 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-typography-a-focus-hover-color: initial;
     --theme-typography-a-focus-hover-text-decoration: initial;
 
-    // CTA COLOR
+    // CTA COLORS
     --theme-cta: #0070BA;
     --theme-cta-hover: #22a3cb;
 
@@ -213,6 +213,9 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-page-backgroundImage-background-color: var(--theme-page-background-color);
     --theme-page-backgroundImageOverlay-background-color: var(--color-transparent);
     --theme-page-customCode-background-color: var(--theme-page-background-color);
+
+    // LAZY LOADED BANNER IMAGE PLACEHOLDER COLOR
+    --theme-body-banner-image-background-color: var(--color-transparent);
 
     // BODY BORDER RADIUS
     --theme-body-border-radius: 0px;
