@@ -1366,7 +1366,7 @@ img.oc-gs-logo {
   }
 }
 
-#engrid div[id^="nb-field-"] div.nb-feedback {
+div[id^="nb-field-"] div.nb-feedback {
   margin-top: 0.25rem !important;
   margin-bottom: 0.25rem !important;
   border-radius: var(--theme-typography-input-border-radius, 5px) !important;
@@ -1392,35 +1392,35 @@ img.oc-gs-logo {
 }
 
 // social sharing styling
-#engrid .social-share p {
+.social-share p {
   text-align: right;
   font-size: 14px;
   letter-spacing: 0.7px;
   font-weight: bold;
 }
 
-#engrid .social-share img {
+.social-share img {
   display: inline-block;
   margin-left: 1em;
   height: 16px;
 }
 
-#engrid .social-share p {
+.social-share p {
   display: flex;
   align-items: center;
 }
 
 /*Override EN Default Icons */
-#engrid .en__share__button {
+.en__share__button {
   height: 16px;
   width: 16px;
 }
 
-#engrid .en__shares {
+.en__shares {
   align-items: center;
 }
 
-#engrid .en__shares::before {
+.en__shares::before {
   content: "SHARE";
   font-size: 14px;
   letter-spacing: 0.7px;
@@ -1432,15 +1432,15 @@ img.oc-gs-logo {
   margin-right: 1rem;
 }
 
-#engrid .en__share__button--facebook {
+.en__share__button--facebook {
   background-image: url("https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/facebook.svg") !important;
 }
 
-#engrid .en__share__button--twitter {
+.en__share__button--twitter {
   background-image: url("https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/images/twitter.svg") !important;
 }
 
-#engrid .en__share__button--gplus {
+.en__share__button--gplus {
   background-size: 16px;
 }
 
@@ -1512,12 +1512,12 @@ img.oc-gs-logo {
 }
 
 /* Only show ACH Gift Option if the donation frequence is one-time */
-#engrid.has-give-once .en__field--giveBySelect .en__field__item,
-#engrid .give-by-select-2-options .en__field--giveBySelect .en__field__item{
+.has-give-once .en__field--giveBySelect .en__field__item,
+.give-by-select-2-options .en__field--giveBySelect .en__field__item{
     max-width: calc((100% - 1rem)/2);
 }
 
-#engrid.has-give-once .en__field--giveBySelect .en__field__item.check,
-#engrid .give-by-select-2-options .en__field--giveBySelect .en__field__item.check{
+.has-give-once .en__field--giveBySelect .en__field__item.check,
+.give-by-select-2-options .en__field--giveBySelect .en__field__item.check{
     display: none;
 }

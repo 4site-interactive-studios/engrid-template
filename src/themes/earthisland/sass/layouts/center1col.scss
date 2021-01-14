@@ -18,14 +18,13 @@
 
 @media screen and (max-width: 360px) {
   // Remove down arrow when giving frequency wraps
-  #engrid .monthly-gift-upsell-tooltip .highlight:after {
+  .monthly-gift-upsell-tooltip .highlight:after {
     display: none;
   }
 }
 
 @media screen and (max-width: 400px) {
   // Remove "Give By Select" icons on small screens
-  #engrid
     .give-by-select
     .en__field--radio
     .en__field__item
@@ -36,34 +35,31 @@
     padding-right: 0;
   }
 
-  #engrid h1 {
+  h1 {
     font-size: calc((0.05552rem * 48) * 0.85);
   }
-  #engrid h2,
-  #engrid .en__field--donationAmt .en__field__label--item,
-  #engrid .en__field--donationAmt .en__field__item--other::before,
-  #engrid .en__field--donationAmt .en__field__item--other input,
-  #engrid .give-by-select .en__field--radio label,
-  #engrid .en__field--recurrpay label.en__field__label,
-  #engrid .highlight.big {
+  h2,
+  .en__field--donationAmt .en__field__label--item,
+  .en__field--donationAmt .en__field__item--other::before,
+  .en__field--donationAmt .en__field__item--other input,
+  .give-by-select .en__field--radio label,
+  .en__field--recurrpay label.en__field__label,
+  .highlight.big {
     font-size: calc((0.05552rem * 24) * 0.9);
   }
-  body #engrid h3,
-  #engrid .pre-footer-card p,
-  #engrid .pre-footer-card.footer-wrapper .footer-menu a {
+  body h3,
+  .pre-footer-card p,
+  .pre-footer-card.footer-wrapper .footer-menu a {
     font-size: calc((0.05552rem * 16) * 1);
   }
-  #engrid label.en__field__label {
+  label.en__field__label {
     font-size: calc((0.05552rem * 12) * 0.95);
   }
 
-  #engrid
     .en__field__label--item
-    #engrid
     .en__field__input--checkbox
     + .en__field__label,
-  #engrid .en__contactDetails__rows,
-  #engrid
+  .en__contactDetails__rows,
     .give-by-select
     .en__field--radio
     .en__field__item
@@ -74,16 +70,16 @@
 }
 
 @media screen and (max-width: 599px) {
-  body #engrid {
+  body {
     font-size: 94%;
   }
 
-  #engrid .en__field--donationAmt .en__field__element--radio .en__field__item {
+  .en__field--donationAmt .en__field__element--radio .en__field__item {
     width: calc(50% - 0.5rem);
   }
 }
 
-#engrid h1 {
+h1 {
   margin-top: 5px;
 }
 

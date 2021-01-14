@@ -1,6 +1,6 @@
 // Needs to be set for both these selectors to match the specificity of a render critical styling added in the Engaging Networks page templated header
-body,
-body:not(#en__pagebuilder){
-  // background-color: var(--theme-page-background-color); // @TODO The CSS Custom Property seems to use the value defined on ENGrid rather than in the Client Theme (https://d.pr/v/KSuZ0N). Disabled until fixed.
+body{
+  background-color: var(--theme-page-background-color); // @TODO Once main.css is downloaded and while it's being parsed by the browser from the top of the file to bottom it will briefly show the ENGrid body background default color (https://d.pr/i/CQFkR7). This flash is not perceptable, so far, in real world testing. There might be a better way to do / limit this.
+  transition: opacity 0.1s;
   opacity: 1;
 }

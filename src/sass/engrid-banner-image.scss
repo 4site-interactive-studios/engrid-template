@@ -6,7 +6,9 @@
 
 // Make the images inserted into the Banner Area as responsive as possible
 .body-banner img {
-    max-height: 300px;
+    max-height: 300px; // Sets the initial height to help minimalize page draw reflow
     width: 100%;
-    object-fit: cover; // @TODO the compiler creates this opera "-o-object-fit: cover;" prefix, maybe drop opera? https://d.pr/i/7IuZst
+    object-fit: cover; // For inline <img>'s added to the Banner
+    background-size: cover; // In the event a background image is used
+    background-position: center; // In the event a background image is used
 }
