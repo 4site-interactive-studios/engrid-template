@@ -51,6 +51,13 @@
 @import "layouts/engrid-layout-manual";
 @import "layouts/engrid-layout-rightright1col";
 
+/* ENGRID MAKE THE CONTENTS OF ALL COLUMNS VISIBLE */
+/* ADDED HERE SO IT COMES AFTER ALL OTHER PAGE LAYOUT CSS IS PARSED BY THE BROWSER*/
+body {
+    opacity: 1;
+    transition: opacity 0.1s;
+}
+
 /* ENGRID ADMIN ONLY STYLINGS */
 /* @TODO Separate these out into their own CSS file */
 @import "engrid-debug";
