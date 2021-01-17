@@ -23,16 +23,18 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-warning: #FCAC00;
     --theme-error: #F12222;
 
+    // FONT STACKS
+    --theme-font-stack-native-fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-    // TYPOGRAPHY BODY
-    --theme-typography-body-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --theme-typography-body-color: initial;
-    --theme-typography-body-font-size: var(--theme-root-font-size);
-    --theme-typography-body-font-weight: initial;
-    --theme-typography-body-line-height: initial;
+    // TYPOGRAPHY DEFAULT
+    --theme-typography-default-font-family: var(--theme-font-stack-native-fonts);
+    --theme-typography-default-color: initial;
+    --theme-typography-default-font-size: var(--theme-root-font-size);
+    --theme-typography-default-font-weight: initial;
+    --theme-typography-default-line-height: initial;
         
     // TYPOGRAPHY H1
-    --theme-typography-h1-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --theme-typography-h1-font-family: var(--theme-font-stack-native-fonts);
     --theme-typography-h1-color: initial;
     --theme-typography-h1-font-size: var(--theme-root-font-size);
     --theme-typography-h1-font-weight: initial;
@@ -53,28 +55,28 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-typography-h3-line-height: initial;
         
     // TYPOGRAPHY P
-    --theme-typography-p-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-p-font-family: var(--theme-typography-default-font-family);
     --theme-typography-p-color: initial;
     --theme-typography-p-font-size: var(--theme-root-font-size);
     --theme-typography-p-font-weight: initial;
     --theme-typography-p-line-height: initial;
         
     // TYPOGRAPHY STRONG
-    --theme-typography-strong-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-strong-font-family: var(--theme-typography-default-font-family);
     --theme-typography-strong-color: initial;
     --theme-typography-strong-font-size: var(--theme-root-font-size);
     --theme-typography-strong-font-weight: bold;
     --theme-typography-strong-line-height: initial;
         
     // TYPOGRAPHY LABEL
-    --theme-typography-label-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-label-font-family: var(--theme-typography-default-font-family);
     --theme-typography-label-color: initial;
     --theme-typography-label-font-size: var(--theme-root-font-size);
     --theme-typography-label-font-weight: initial;
     --theme-typography-label-line-height: initial;
         
     // TYPOGRAPHY INPUT
-    --theme-typography-input-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-input-font-family: var(--theme-typography-default-font-family);
     --theme-typography-input-color: initial;
     --theme-typography-input-font-size: var(--theme-root-font-size);
     --theme-typography-input-font-weight: initial;
@@ -87,7 +89,7 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
         
     // TYPOGRAPHY INPUT:FOCUS
     // TYPOGRAPHY INPUT:HOVER
-    --theme-typography-input-focus-hover-color: var(--theme-typography-body-font-family);
+    --theme-typography-input-focus-hover-color: var(--theme-typography-default-font-family);
     --theme-typography-input-focus-hover-background-color: var(--color-white);
     --theme-typography-input-focus-hover-border-color: var(--color-black);
         
@@ -119,9 +121,8 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-typography-checkbox-focus-hover-background-color: initial;
     --theme-typography-checkbox-focus-hover-border-color: initial;
 
-
     // TYPOGRAPHY SELECT
-    --theme-typography-select-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-select-font-family: var(--theme-typography-default-font-family);
     --theme-typography-select-color: initial;
     --theme-typography-select-font-size: var(--theme-root-font-size);
     --theme-typography-select-font-weight: initial;
@@ -138,7 +139,7 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-typography-select-focus-hover-border-color: var(--theme-cta-hover);
 
     // TYPOGRAPHY BUTTON
-    --theme-typography-button-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-button-font-family: var(--theme-typography-default-font-family);
     --theme-typography-button-color: var(--color-white);
     --theme-typography-button-font-size: var(--theme-root-font-size);
     --theme-typography-button-font-weight: initial;
@@ -172,7 +173,7 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-typography-primary-button-focus-hover-border-color: var(---theme-typography-button-focus-hover-border-color);
     
     // TYPOGRAPHY A
-    --theme-typography-a-font-family: var(--theme-typography-body-font-family);
+    --theme-typography-a-font-family: var(--theme-typography-default-font-family);
     --theme-typography-a-color: initial;
     --theme-typography-a-font-size: var(--theme-root-font-size);
     --theme-typography-a-font-weight: initial;

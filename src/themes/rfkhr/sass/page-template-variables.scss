@@ -17,15 +17,21 @@
   --theme-warning: #FCAC00;
   --theme-error: #F12222;
 
-  // TYPOGRAPHY BODY
-  --theme-typography-body-font-family: "stanley-regular", serif;
-  --theme-typography-body-color: initial;
-  --theme-typography-body-font-size: var(--theme-root-font-size);
-  --theme-typography-body-font-weight: initial;
-  --theme-typography-body-line-height: initial;
+  // FONT STACKS
+  --theme-font-stack-stanley-regular: "stanley-regular", serif;
+  --theme-font-stack-stanley-italic: "stanley-italic", serif;
+  --theme-font-stack-proximanova-bold: "proximanova-bold", sans-serif;
+  --theme-font-stack-proximanovacond-bold: "proximanovacond-bold", sans-serif;
+
+  // TYPOGRAPHY DEFAULT
+  --theme-typography-default-font-family: var(--theme-font-stack-stanley-regular);
+  --theme-typography-default-color: initial;
+  --theme-typography-default-font-size: var(--theme-root-font-size);
+  --theme-typography-default-font-weight: initial;
+  --theme-typography-default-line-height: initial;
       
   // TYPOGRAPHY H1
-  --theme-typography-h1-font-family: "proximanovacond-bold", sans-serif;
+  --theme-typography-h1-font-family: var(--theme-font-stack-proximanovacond-bold);
   --theme-typography-h1-color: initial;
   --theme-typography-h1-font-size: 38px;
   --theme-typography-h1-font-weight: 900;
@@ -46,21 +52,21 @@
   --theme-typography-h3-line-height: var(--theme-typography-h3-font-size);
       
   // TYPOGRAPHY P
-  --theme-typography-p-font-family: var(--theme-typography-body-font-family);
+  --theme-typography-p-font-family: var(--theme-typography-default-font-family);
   --theme-typography-p-color: initial;
   --theme-typography-p-font-size: var(--theme-root-font-size);
   --theme-typography-p-font-weight: initial;
   --theme-typography-p-line-height: initial;
       
   // TYPOGRAPHY STRONG
-  --theme-typography-strong-font-family: var(--theme-typography-body-font-family);
+  --theme-typography-strong-font-family: var(--theme-typography-default-font-family);
   --theme-typography-strong-color: initial;
   --theme-typography-strong-font-size: var(--theme-root-font-size);
   --theme-typography-strong-font-weight: bold;
   --theme-typography-strong-line-height: initial;
       
   // TYPOGRAPHY LABEL
-  --theme-typography-label-font-family: "proximanova-bold", sans-serif;
+  --theme-typography-label-font-family: var(--theme-font-stack-proximanova-bold);
   --theme-typography-label-color: initial;
   --theme-typography-label-font-size: var(--theme-root-font-size);
   --theme-typography-label-font-weight: 500;
@@ -114,7 +120,7 @@
 
 
   // TYPOGRAPHY SELECT
-  --theme-typography-select-font-family: var(--theme-typography-body-font-family);
+  --theme-typography-select-font-family: var(--theme-typography-default-font-family);
   --theme-typography-select-color: initial;
   --theme-typography-select-font-size: var(--theme-root-font-size);
   --theme-typography-select-font-weight: initial;
@@ -165,7 +171,7 @@
   --theme-typography-primary-button-focus-hover-border-color: var(---theme-typography-button-focus-hover-border-color);
 
   // TYPOGRAPHY A
-  --theme-typography-a-font-family: var(--theme-typography-body-font-family);
+  --theme-typography-a-font-family: var(--theme-typography-default-font-family);
   --theme-typography-a-color: initial;
   --theme-typography-a-font-size: var(--theme-root-font-size);
   --theme-typography-a-font-weight: initial;
@@ -260,3 +266,5 @@
   --theme-typography-primary-button-border-color:: var(--theme-cta);
   --theme-typography-primary-button-color: var(--color-white);
 }
+
+

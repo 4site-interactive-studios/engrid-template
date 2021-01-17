@@ -1,10 +1,10 @@
 /* The most common typographic elements for EN pages */
 body{
-    font-family: var(--theme-typography-body-font-family);
-    color: var(--theme-typography-body-color);
-    font-size: var(--theme-typography-body-font-size);
-    font-weight: var(--theme-typography-body-font-weight);
-    line-height: var(--theme-typography-body-line-height);
+    font-family: var(--theme-typography-default-font-family);
+    color: var(--theme-typography-default-color);
+    font-size: var(--theme-typography-default-font-size);
+    font-weight: var(--theme-typography-default-font-weight);
+    line-height: var(--theme-typography-default-line-height);
 }
 
 h1{

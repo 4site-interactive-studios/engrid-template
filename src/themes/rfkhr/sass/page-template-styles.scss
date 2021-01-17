@@ -345,12 +345,8 @@ h1 {
 
 .content-footer {
   grid-column: bc !important;
-  // grid-row: body-footer !important;
   padding-top: 1rem;
   padding-bottom: 2rem;
-  --theme-typography-p-font-family: "proximanovacond-bold", sans-serif;
-  --theme-typography-a-font-family: "proximanovacond-bold", sans-serif;
-  --theme-typography-body-font-family: "proximanovacond-bold", sans-serif;
 }
 
 .content-footer > div {
