@@ -1,99 +1,11 @@
-/* All SCSS variables in engrid-variables.scss can be used as CSS Custom Properties by replacing "$default" in the name with "--theme" */
-/* All CSS Custom Properties should be scoped to the theme they apply using CSS Data Attributes. */
+/* All SCSS variables in engrid-variables.scss can be used as CSS Custom Properties on the theme */
 
-
-
+/* All CSS Custom Properties should be scoped to the theme using CSS Data Attributes. */
 [data-engrid-theme="starter-theme"]{
-
---color-off-white: #DFDFDF;
---color-light-gray: #BFBFBF;
---color-gray: #9F9F9F;
---color-dark-gray: #808080;
---color-off-black: #404040;
-
-
-// --theme-page-alert-background-color: #;
-// --theme-content-header-background-color: #;
-// --theme-body-headerOutside-background-color: #;
---theme-body-header-background-color: var(--theme-body-background-color);
---theme-body-banner-background-color: var(--theme-body-background-color);
---theme-body-bannerOverlay-background-color: var(--theme-body-background-color);
---theme-body-top-background-color: var(--theme-body-background-color);
---theme-body-side-background-color: var(--theme-body-background-color);
---theme-body-main-background-color: var(--theme-body-background-color);
---theme-body-bottom-background-color: var(--theme-body-background-color);
---theme-body-footer-background-color: var(--theme-body-background-color);
---theme-body-footerOutside-background-color: var(--theme-body-background-color);
-// --theme-content-footerSpacer-background-color: #;
-// --theme-content-preFooter-background-color: #;
-// --theme-content-footer-background-color: #;
-// --theme-page-backgroundImage-background-color: #;
-// --theme-page-customCode-background-color: #;
-
-// Quick set the body color
---theme-body-background-color: --color-white; // @TODO Not yet used anywhere
-
---theme-cta: #208096;
---theme-cta-hover: #22a3cb;
-
---theme-content-preFooter-background-color: #d0e2e7;
---theme-body-footer-background-color: #20809e;
-
-// --theme-background-color: --color-white;
-// --theme-background-image: url("");
---theme-background-image-background-color: #333333;
-
---theme-root-font-size: 16px; // Sets a baseline font size for all other REM based font-sizes to relatively build off of
-
-
---theme-body-border-radius: 0px;
---theme-spacing-sm: 0.8652rem; // @TODO Revisit
---theme-spacing: calc(0.8652rem * 0.75); // @TODO Revisit
---theme-spacing-lg: calc(0.8652rem * 2.5); // @TODO Revisit
---theme-spacing-xlg: calc(0.8652rem * 5); // @TODO Revisit
-
---theme-typography-input-border-radius: 5px;
---theme-typography-input-border-width: 2px;
---theme-typography-input-border-color: --color-black;
---theme-typography-input-focus-hover-border-color: --color-black;
---theme-typography-input-background-color: --color-white;
---theme-typography-input-focus-hover-background-color: --color-white;
-
---theme-typography-button-background-color: --color-black;
---theme-typography-button-focus-hover-background-color: --theme-cta-hover;
---theme-typography-button-focus-hover-background-color: --theme-cta;
---theme-typography-button-border-color: --color-black;
---theme-typography-button-focus-hover-border-color: --theme-cta;
---theme-typography-button-focus-hover-border-color: --theme-cta-hover;
---theme-typography-button-border-radius: 0px;
---theme-typography-button-color: --color-white;
---theme-typography-button-focus-hover-color: --color-white;
-
---theme-typography-primary-button-background-color: --theme-cta;
---theme-typography-primary-button-focus-hover-background-color: --theme-cta-hover;
---theme-typography-primary-button-border-color:: --theme-cta;
---theme-typography-primary-button-color: --color-white;
-
---theme-typography-checkbox-background-color: --theme-cta;
---theme-typography-checkbox-border-color: --theme-cta;
---theme-typography-checkbox-color: --color-white;
-
---theme-error-red: #f12222;
---theme-error-red-grayscale: #949494;
---theme-error-red-faded: #ffeae9;
---theme-error-page-group-background: #f4ddda;
---theme-error-input-border-width: --theme-typography-input-border-width;
-
---theme-highlight-background-color: #227f9e;
---theme-highlight-font-color: #ffffff;
-
-// CLICK TO EXPAND
-//   --theme-click-to-expand-cta-image-url: url("");
-//   --theme-click-to-expand-cta-image-width: 100px;
-//   --theme-click-to-expand-cta-image-height: 20px;
+    --theme-body-background-color: #333333;
 }
 
-/* You can define multiple themes together by scoping the variables with a corresponding Data Attribute */
+/* Define multiple ENGrid themes together by scoping with a corresponding CSS Data Attribute. */
 [data-engrid-theme="starter-theme-emergency"]{
     --theme-body-background-color: #f12222;
 }
