@@ -86,6 +86,10 @@ export const run = (opts: Object) => {
   };
   if (inIframe()) {
     var enID = getUrlParameter('en_id');
+
+    // Add the data-engrid-embedded attribute when inside an iFrame
+    document.getElementsByTagName("BODY")[0].setAttribute("data-engrid-embedded", "");
+
     const shouldScroll = () => {
       // If you find a error, scroll
       if (document.querySelector('.en__errorHeader')) {
@@ -116,13 +120,14 @@ export const run = (opts: Object) => {
     };
     window.onresize = () => sendIframeHeight(enID);
     // Change the layout class to embedded
-    const gridElement = document.getElementById("engrid") || document.body as HTMLElement;
+    // const gridElement = document.getElementById("engrid") || document.body as HTMLElement;
     // @TODO We need to write a better way of stripping layout classes 
-    gridElement.classList.add("layout-embedded");
-    gridElement.classList.remove("layout-centerleft1col");
-    gridElement.classList.remove("layout-centercenter1col");
-    gridElement.classList.remove("layout-centerright1col");
-    gridElement.classList.remove("layout-centercenter1col-wide");
+    
+    // gridElement.classList.add("layout-embedded");
+    // gridElement.classList.remove("layout-centerleft1col");
+    // gridElement.classList.remove("layout-centercenter1col");
+    // gridElement.classList.remove("layout-centerright1col");
+    // gridElement.classList.remove("layout-centercenter1col-wide");
 
   }
   // Iframe Code End
