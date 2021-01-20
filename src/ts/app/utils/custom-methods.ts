@@ -1173,9 +1173,9 @@ const isInViewport = (e: any) => {
 
 // Checks to see if the page is so short, the footer is above the fold. If the footer is above the folde we'll use this class to ensure at a minimum the page fills the full viewport height.
 if (contentFooter && isInViewport(contentFooter)) {
-  body.classList.add("footer-above-fold");
+  document.getElementsByTagName("BODY")[0].setAttribute("data-engrid-footer-above-fold", "");
 } else {
-  body.classList.add("footer-below-fold");
+  document.getElementsByTagName("BODY")[0].setAttribute("data-engrid-footer-below-fold", "");
 }
 
 // @TODO Needs to be converted to Typescript

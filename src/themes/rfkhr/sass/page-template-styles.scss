@@ -25,7 +25,7 @@
 }
 
 // @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
-body:not(#en__pagebuilder).footer-below-fold
+body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
   .en__component--advrow
   .page-backgroundImage::before {
   -webkit-clip-path: none;
@@ -426,10 +426,6 @@ body#en__pagebuilder {
     position: relative;
   }
 
-  .body-header {
-    margin-top: 2.1875rem;
-  }
-
   .content-footerSpacer {
     margin-bottom: 2.1875rem;
   }
@@ -458,7 +454,7 @@ body#en__pagebuilder {
 }
 
 // @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
-body:not(#en__pagebuilder).footer-below-fold
+body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
   .en__component--advrow
   .page-backgroundImage::before {
   -webkit-clip-path: none;
@@ -1177,9 +1173,9 @@ div[id^="nb-field-"] div.nb-feedback {
   color: #007eb3; // WCAG AA Compliant version of #2ba8dd
 }
 
-.body-header {
-  min-height: 80px !important;
-}
+// .body-header {
+//   min-height: 80px !important;
+// }
 
 // social sharing styling
 .social-share p {
@@ -1243,13 +1239,19 @@ div[id^="nb-field-"] div.nb-feedback {
   height: 14px !important;
 }
 
+// There has to be a better way to add this spacing without the need for resorting to :not([data-engrid-embedded])
 @media screen and (min-width: 600px) {
-  [data-engrid-layout="centerleft1col"],
-  [data-engrid-layout="centercenter1col"],
-  [data-engrid-layout="centercenter2col"],
-  [data-engrid-layout="centerright1col"] {
+  [data-engrid-layout="centerleft1col"]:not([data-engrid-embedded]),
+  [data-engrid-layout="centercenter1col"]:not([data-engrid-embedded]),
+  [data-engrid-layout="centercenter2col"]:not([data-engrid-embedded]),
+  [data-engrid-layout="centerright1col"]:not([data-engrid-embedded]) {
     .body-header {
       margin-top: 3rem;
+    }
+  }
+  [data-engrid-embedded]{
+    .body-header{
+      margin-top: 0rem;
     }
   }
 }

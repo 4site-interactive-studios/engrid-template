@@ -33,7 +33,7 @@
 }
 
 // @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
-body:not(#en__pagebuilder).footer-below-fold
+body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
   .en__component--advrow
   .page-backgroundImage::before {
   -webkit-clip-path: none;
@@ -654,7 +654,7 @@ body#en__pagebuilder {
 }
 
 // @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
-body:not(#en__pagebuilder).footer-below-fold
+body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
   .en__component--advrow
   .page-backgroundImage::before {
   -webkit-clip-path: none;

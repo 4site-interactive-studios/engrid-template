@@ -1,94 +1,55 @@
 /*
 * ####################################################################################################################
-* # ENGRID CLIENT LAYOUT
+* # ENGRID EMBEDDED LAYOUT
 * # Embedded Layout for Seamless Embedding
 * ####################################################################################################################
 */
 
-/*
-* ##########################################################
-* # MOBILE FIRST BREAKPOINT
-* ##########################################################
-*/
-
 [data-engrid-embedded] {
-    /* prettier-ignore */
-    .en__component--advrow,
-    .en__component--advrow .pseudo-subgrid {
-      /* autoprefixer grid: off */
-      grid-template-columns:
-      [
-        pc-start lpc-start]  minmax(0px, 0px)    [lpc-end
-        cc-start lcc-start]  minmax(0px, 0px)    [lcc-end
-        bc-start lbc-start]  minmax(calc(50vw))  [lbc-end
-        rbc-start]           minmax(calc(50vw))  [rbc-end bc-end
-        rcc-start]           minmax(0px, 0px)    [rcc-end cc-end
-        rpc-start]           minmax(0px, 0px)    [rpc-end pc-end               
-      ];
-    }
 
-    .en__component--advrow .body-main,
-    #EN__RootElement .en__component--advrow .body-main {
-      grid-column: bc;
-      padding: 0;
-      margin: 0;
-      background: transparent;
-    } 
+  --theme-page-background-color: var(--color-transparent) !important;
 
-    .en__component--advrow .body-banner::before,
-    .en__component--advrow .body-bannerOverlay::before,
-    .en__component--advrow .body-top::before,
-    .en__component--advrow .body-side::before,
-    .en__component--advrow .body-main::before,
-    .en__component--advrow .body-bottom::before,
-    .en__component--advrow .body-footer::before,
-    .en__component--advrow .body-footerOutside::before{
-      display: none;
-      box-shadow: none;
-    }
-  } 
-  
-  body:not(#en__pagebuilder)[data-engrid-embedded] {
-    .page-backgroundImage {
-      grid-row: page-start / content-footerSpacer-end;
-    }
+  /* prettier-ignore */
+  .en__component--advrow,
+  .en__component--advrow .pseudo-subgrid {
+    /* autoprefixer grid: off */
+    grid-template-columns:
+    [
+      pc-start lpc-start]  minmax(0px, 0px)    [lpc-end
+      cc-start lcc-start]  minmax(0px, 0px)    [lcc-end
+      bc-start lbc-start]  minmax(0px, 50vw)   [lbc-end
+      rbc-start]           minmax(0px, 50vw)   [rbc-end bc-end
+      rcc-start]           minmax(0px, 0px)    [rcc-end cc-end
+      rpc-start]           minmax(0px, 0px)    [rpc-end pc-end               
+    ];
   }
 
-/* prettier-ignore */
-body:not(#en__pagebuilder)[data-engrid-embedded] .page-alert { display: none; }
-/* prettier-ignore */
-body:not(#en__pagebuilder)[data-engrid-embedded] .content-header { display: none; }
-// /* prettier-ignore */
-body:not(#en__pagebuilder)[data-engrid-embedded] .body-headerOutside { display: none; }
-// /* prettier-ignore */
-body:not(#en__pagebuilder)[data-engrid-embedded] .body-header { display: none; }
-// /* prettier-ignore */
-body:not(#en__pagebuilder)[data-engrid-embedded] .body-banner { display: none; }
-// /* prettier-ignore */
-body:not(#en__pagebuilder)[data-engrid-embedded] .body-bannerOverlay { display: none; }
-// /* prettier-ignore */
-// body:not(#en__pagebuilder)[data-engrid-embedded] .body-top { display: none; }
-// /* prettier-ignore */
-// body:not(#en__pagebuilder)[data-engrid-embedded] .body-side { display: none; }
-// /* prettier-ignore */
-// body:not(#en__pagebuilder)[data-engrid-embedded] .body-main { display: none; }
-// /* prettier-ignore */
-// body:not(#en__pagebuilder)[data-engrid-embedded] .body-bottom { display: none; }
-// /* prettier-ignore */
-// body:not(#en__pagebuilder)[data-engrid-embedded] .body-footer { display: none; }
-// /* prettier-ignore */
-// body:not(#en__pagebuilder)[data-engrid-embedded] .body-footerOutside { display: none; }
-// /* prettier-ignore */
-// body:not(#en__pagebuilder)[data-engrid-embedded] .content-footerSpacer { display: none; }
-// /* prettier-ignore */
-body:not(#en__pagebuilder)[data-engrid-embedded] .content-preFooter { display: none; }
-/* prettier-ignore */
-body:not(#en__pagebuilder)[data-engrid-embedded] .content-footer { display: none; }
-/* prettier-ignore */
-body:not(#en__pagebuilder)[data-engrid-embedded] .page-customCode { display: none; }
-/* prettier-ignore */
-body:not(#en__pagebuilder)[data-engrid-embedded] .page-backgroundImage { display: none; }
-/* prettier-ignore */
-body:not(#en__pagebuilder)[data-engrid-embedded] .page-backgroundImageOverlay { display: none; }
+  // When embedded "content-footerSpacer" does not need to be set to 1fr
+  // Define all the named rows of the ENGrid
+  /* prettier-ignore */
+  .en__component--advrow{
+    /* autoprefixer grid: off */
+    grid-template-rows:
+    [
+      page-start page-alert-start]        min-content  [page-alert-end
+      content-header-start]               min-content  [content-header-end
+      body-headerOutside-start]           min-content  [body-headerOutside-end
+      body-header-start]                  min-content  [body-header-end
+      body-banner-start]                  min-content  [body-banner-end
+      body-bannerOverlay-start]           min-content  [body-bannerOverlay-end
+      body-top-start]                     min-content  [body-top-end
+      body-side-start]                    min-content  [body-side-end  
+      body-main-start]                    min-content  [body-main-end  
+      body-bottom-start]                  min-content  [body-bottom-end  
+      body-footer-start]                  min-content  [body-footer-end
+      body-footerOutside-start]           min-content  [body-footerOutside-end  
+      content-footerSpacer-start]         min-content  [content-footerSpacer-end
+      content-preFooter-start]            min-content  [content-preFooter-end
+      content-footer-start]               min-content  [content-footer-end
+      page-backgroundImage-start]         min-content  [page-backgroundImage-end
+      page-backgroundImageOverlay-start]  min-content  [page-backgroundImageOverlay-end page-end
+      page-customCode-start]              min-content  [page-customCode-end        
+    ];        
+  }
 
-[data-engrid-embedded]::before { display: none; }
+}

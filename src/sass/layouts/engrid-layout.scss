@@ -61,24 +61,24 @@
   /* autoprefixer grid: off */
   grid-template-rows:
   [
-    page-start page-alert-start]        minmax(0px, auto)  [page-alert-end
-    content-header-start]               minmax(0px, auto)  [content-header-end
-    body-headerOutside-start]           minmax(0px, auto)  [body-headerOutside-end
-    body-header-start]                  minmax(0px, auto)  [body-header-end
-    body-banner-start]                  minmax(0px, auto)  [body-banner-end
-    body-bannerOverlay-start]           minmax(0px, auto)  [body-bannerOverlay-end
-    body-top-start]                     minmax(0px, auto)  [body-top-end
-    body-side-start]                    minmax(0px, auto)  [body-side-end  
-    body-main-start]                    minmax(0px, auto)  [body-main-end  
-    body-bottom-start]                  minmax(0px, auto)  [body-bottom-end  
-    body-footer-start]                  minmax(0px, auto)  [body-footer-end
-    body-footerOutside-start]           minmax(0px, auto)  [body-footerOutside-end  
+    page-start page-alert-start]        min-content        [page-alert-end
+    content-header-start]               min-content        [content-header-end
+    body-headerOutside-start]           min-content        [body-headerOutside-end
+    body-header-start]                  min-content        [body-header-end
+    body-banner-start]                  min-content        [body-banner-end
+    body-bannerOverlay-start]           min-content        [body-bannerOverlay-end
+    body-top-start]                     min-content        [body-top-end
+    body-side-start]                    min-content        [body-side-end  
+    body-main-start]                    min-content        [body-main-end  
+    body-bottom-start]                  min-content        [body-bottom-end  
+    body-footer-start]                  min-content        [body-footer-end
+    body-footerOutside-start]           min-content        [body-footerOutside-end  
     content-footerSpacer-start]         minmax(0px, 1fr)   [content-footerSpacer-end
-    content-preFooter-start]            minmax(0px, auto)  [content-preFooter-end
-    content-footer-start]               minmax(0px, auto)  [content-footer-end
-    page-backgroundImage-start]         minmax(0px, auto)  [page-backgroundImage-end
-    page-backgroundImageOverlay-start]  minmax(0px, auto)  [page-backgroundImageOverlay-end page-end
-    page-customCode-start]              minmax(0px, auto)  [page-customCode-end        
+    content-preFooter-start]            min-content        [content-preFooter-end
+    content-footer-start]               min-content        [content-footer-end
+    page-backgroundImage-start]         min-content        [page-backgroundImage-end
+    page-backgroundImageOverlay-start]  min-content        [page-backgroundImageOverlay-end page-end
+    page-customCode-start]              min-content        [page-customCode-end        
   ];        
 }
 
@@ -101,7 +101,7 @@
 }
 
 .body-headerOutside{
-  grid-column: cc;
+  grid-column: bc;
   grid-row: body-headerOutside;
   background-color: var(--theme-body-headerOutside-background-color)
 }
@@ -161,7 +161,7 @@
 }
 
 .body-footerOutside{
-  grid-column: cc;
+  grid-column: bc;
   grid-row: body-footerOutside;
   background-color: var(--theme-body-footerOutside-background-color)
 }

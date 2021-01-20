@@ -196,7 +196,7 @@
   // ENGRID SECTIONS BACKGROUND COLOR
   --theme-page-alert-background-color: var(--theme-page-background-color);
   --theme-content-header-background-color: var(--theme-content-background-color);
-  --theme-body-headerOutside-background-color: var(--color-transparent);
+  --theme-body-headerOutside-background-color: var(--theme-content-background-color);
   --theme-body-header-background-color: var(--theme-body-background-color);
   --theme-body-banner-background-color: var(--theme-body-background-color);
   --theme-body-bannerOverlay-background-color: var(--color-transparent);
@@ -205,7 +205,7 @@
   --theme-body-main-background-color: var(--theme-body-background-color);
   --theme-body-bottom-background-color: var(--theme-body-background-color);
   --theme-body-footer-background-color: var(--theme-body-background-color);
-  --theme-body-footerOutside-background-color: var(--color-transparent);
+  --theme-body-footerOutside-background-color: var(--theme-content-background-color);
   --theme-content-footerSpacer-background-color: var(--theme-content-background-color);
   --theme-content-preFooter-background-color: var(--theme-content-background-color);
   --theme-content-footer-background-color: var(--theme-content-background-color);
