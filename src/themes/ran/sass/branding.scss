@@ -95,7 +95,7 @@ label.en__field__label {
 
 .en__field--donationAmt {
   .en__field__label--item,
-  .en__field__item--other::before,
+  .en__field__item--other:before,
   .en__field__item--other input {
     font-family: HarmoniaSansStd;
     font-size: calc(0.05552rem * 24);
@@ -147,7 +147,7 @@ label.en__field__label {
   }
 }
 
-.en__field--donationAmt .en__field__item--other::before {
+.en__field--donationAmt .en__field__item--other:before {
   display: block;
   content: "$";
   position: relative;
@@ -166,7 +166,7 @@ label.en__field__label {
 
 .en__field--monthly_upsell_checkbox
   .en__field__input--checkbox
-  + .en__field__label::before {
+  + .en__field__label:before {
   margin-top: 0.25rem;
 }
 
@@ -196,7 +196,7 @@ label.en__field__label {
     // font-size: calc(0.05552rem * 24) !important;
     font-weight: 900 !important;
     text-transform: none !important;
-    &::before {
+    &:before {
       top: 3px;
     }
   }

@@ -102,7 +102,7 @@ input[type="radio"]:hover{
 
 // ✓
 input[type="checkbox"]{
-    content: var(--theme-typography-checkbox-content);
+    content: var(--theme-typography-checkbox-checked-content);
     color: var(--theme-typography-checkbox-color);
     background-color: var(--theme-typography-checkbox-background-color);
     border-width: var(--theme-typography-checkbox-border-width);
@@ -135,6 +135,25 @@ select:hover{
     color: var(--theme-typography-select-focus-hover-color);
     background-color: var(--theme-typography-select-focus-hover-background-color);
     border-color: var(--theme-typography-select-focus-hover-border-color);
+}
+
+textarea{
+    font-family: var(--theme-typography-textarea-font-family);
+    color: var(--theme-typography-textarea-color);
+    font-size: var(--theme-typography-textarea-font-size);
+    font-weight: var(--theme-typography-textarea-font-weight);
+    line-height: var(--theme-typography-textarea-line-height);
+    background-color: var(--theme-typography-textarea-background-color);
+    border-width: var(--theme-typography-textarea-border-width);
+    border-color: var(--theme-typography-textarea-border-color);
+    border-radius: var(--theme-typography-textarea-border-radius);
+}
+
+textarea:focus,
+textarea:hover{
+    color: var(--theme-typography-textarea-focus-hover-color);
+    background-color: var(--theme-typography-textarea-focus-hover-background-color);
+    border-color: var(--theme-typography-textarea-focus-hover-border-color);
 }
 
 button,

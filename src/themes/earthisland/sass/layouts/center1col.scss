@@ -40,7 +40,7 @@
   }
   h2,
   .en__field--donationAmt .en__field__label--item,
-  .en__field--donationAmt .en__field__item--other::before,
+  .en__field--donationAmt .en__field__item--other:before,
   .en__field--donationAmt .en__field__item--other input,
   .give-by-select .en__field--radio label,
   .en__field--recurrpay label.en__field__label,
@@ -141,7 +141,7 @@ body:not(#en__pagebuilder)[data-engrid-layout="centerright1col"] {
   }
   
   /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
-  .page-backgroundImage::before {
+  .page-backgroundImage:before {
     content: "";
     // background-image: radial-gradient(
     //   circle at 50% 0,

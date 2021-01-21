@@ -244,13 +244,13 @@ body:not(#en__pagebuilder) .page-customCode {
 }
 
 // Add drop shadows to the body sections
-.body-header::before,
-.body-banner::before,
-.body-top::before,
-.body-side::before,
-.body-main::before,
-.body-bottom::before,
-.body-footer::before {
+.body-header:before,
+.body-banner:before,
+.body-top:before,
+.body-side:before,
+.body-main:before,
+.body-bottom:before,
+.body-footer:before {
   content: "";
   position: absolute;
   top: 0;

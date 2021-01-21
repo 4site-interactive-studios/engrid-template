@@ -8,7 +8,7 @@ body:not(#en__pagebuilder)
 
 body:not(#en__pagebuilder)
   .en__component--advrow
-  .page-backgroundImage:not(.page-backgroundImageSet)::before {
+  .page-backgroundImage:not(.page-backgroundImageSet):before {
   background-position: top left;
   background-repeat: repeat;
   background-image: var(--theme-page-backgroundImage-url); //@TODO Get SCSS variable working
@@ -18,7 +18,7 @@ body:not(#en__pagebuilder)
 // @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
 body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
   .en__component--advrow
-  .page-backgroundImage::before {
+  .page-backgroundImage:before {
   -webkit-clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   clip-path: polygon(100% 0, 100% 90vh, 50% 110vh, 0 90vh, 0 0);
   height: 120vh;

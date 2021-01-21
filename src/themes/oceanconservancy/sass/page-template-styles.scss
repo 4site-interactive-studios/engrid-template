@@ -35,7 +35,7 @@
 // @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
 body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
   .en__component--advrow
-  .page-backgroundImage::before {
+  .page-backgroundImage:before {
   -webkit-clip-path: none;
   clip-path: none;
   height: 100%;
@@ -132,7 +132,7 @@ body {
   .page-backgroundImageSet {
     background-attachment: fixed;
     height: auto !important;
-    &::before {
+    &:before {
       // background-color: rgba(0, 0, 0, 0.5);
       position: fixed;
       top: 0px;
@@ -152,7 +152,7 @@ body:not(#en__pagebuilder).body-banner {
 
 body:not(#en__pagebuilder)
   .en__component--advrow
-  .page-backgroundImage.page-backgroundImageSet::before {
+  .page-backgroundImage.page-backgroundImageSet:before {
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
@@ -261,7 +261,7 @@ label.en__field__label {
 
 .en__field--donationAmt {
   .en__field__label--item,
-  .en__field__item--other::before,
+  .en__field__item--other:before,
   .en__field__item--other input {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -563,7 +563,7 @@ body:not(#en__pagebuilder){
   }
 
   /* This should use a more robust solution for adding a gradient overlay to the background image, but below the overlay text */
-  .page-backgroundImage::before {
+  .page-backgroundImage:before {
     content: "";
     // background-image: radial-gradient(
     //   circle at 50% 0,
@@ -656,7 +656,7 @@ body#en__pagebuilder {
 // @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
 body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
   .en__component--advrow
-  .page-backgroundImage::before {
+  .page-backgroundImage:before {
   -webkit-clip-path: none;
   clip-path: none;
   height: 100%;
@@ -768,7 +768,7 @@ body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
   }
 }
 
-.en__field--donationAmt .en__field__item--other::before {
+.en__field--donationAmt .en__field__item--other:before {
   display: block;
   content: "$";
   position: relative;
@@ -781,7 +781,7 @@ body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
 }
 
 .en__field--donationAmt.en__field--radio
-  .en__field__item--other:not(.en__field__item--hidden)::before {
+  .en__field__item--other:not(.en__field__item--hidden):before {
   color: var(--color-white);
 }
 
@@ -793,16 +793,16 @@ body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
 
 .en__field--monthly_upsell_checkbox
   .en__field__input--checkbox
-  + .en__field__label::before {
+  + .en__field__label:before {
   margin-top: 0.25rem;
 }
 
-.en__field__input--checkbox + .en__field__label::before,
-.en__contactDetails__rows::before {
+.en__field__input--checkbox + .en__field__label:before,
+.en__contactDetails__rows:before {
   border-radius: var(--theme-typography-checkbox-border-radius);
 }
-.en__field__input--checkbox:checked + .en__field__label::before,
-.en__contactDetails__select:checked + .en__contactDetails__rows::before {
+.en__field__input--checkbox:checked + .en__field__label:before,
+.en__contactDetails__select:checked + .en__contactDetails__rows:before {
   background-color: var(--color-black);
   box-shadow: none;
 }
@@ -1251,13 +1251,13 @@ input[name="transaction.donationAmt.other"] {
   }
 }
 
-.en__component--advrow .body-header::before,
-.en__component--advrow .body-banner::before,
-.en__component--advrow .body-top::before,
-.en__component--advrow .body-side::before,
-.en__component--advrow .body-main::before,
-.en__component--advrow .body-bottom::before,
-.en__component--advrow .body-footer::before {
+.en__component--advrow .body-header:before,
+.en__component--advrow .body-banner:before,
+.en__component--advrow .body-top:before,
+.en__component--advrow .body-side:before,
+.en__component--advrow .body-main:before,
+.en__component--advrow .body-bottom:before,
+.en__component--advrow .body-footer:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1269,7 +1269,7 @@ input[name="transaction.donationAmt.other"] {
     0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
-#en__pagebuilder .en__component--advrow .body-bannerOverlay::before {
+#en__pagebuilder .en__component--advrow .body-bannerOverlay:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1419,7 +1419,7 @@ div[id^="nb-field-"] div.nb-feedback {
   align-items: center;
 }
 
-.en__shares::before {
+.en__shares:before {
   content: "SHARE";
   font-size: 14px;
   letter-spacing: 0.7px;

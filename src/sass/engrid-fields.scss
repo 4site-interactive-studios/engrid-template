@@ -197,12 +197,26 @@ input[type="tel"]:focus,
 input[type="text"]:focus,
 input[type="time"]:focus,
 input[type="url"]:focus,
-input[type="week"]:focus,
-select:focus,
-textarea:focus {
+input[type="week"]:focus {
   outline: none;
   border: var(--theme-typography-input-border-width) solid var(--theme-typography-input-focus-hover-border-color);
   background-color: var(--theme-typography-input-focus-hover-background-color);
+  box-shadow: 0 0 0.3125rem var(--theme-light-gray);
+  transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
+}
+
+select:focus {
+  outline: none;
+  border: var(--theme-typography-select-border-width) solid var(--theme-typography-select-focus-hover-border-color);
+  background-color: var(--theme-typography-select-focus-hover-background-color);
+  box-shadow: 0 0 0.3125rem var(--theme-light-gray);
+  transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
+}
+
+textarea:focus {
+  outline: none;
+  border: var(--theme-typography-textarea-border-width) solid var(--theme-typography-textarea-focus-hover-border-color);
+  background-color: var(--theme-typography-textarea-focus-hover-background-color);
   box-shadow: 0 0 0.3125rem var(--theme-light-gray);
   transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
 }
@@ -278,9 +292,9 @@ textarea:focus {
   align-items: center;
 }
 
-.en__field__input--radio + .en__field__label::before,
-.en__field__input--checkbox + .en__field__label::before,
-.en__contactDetails__rows::before {
+.en__field__input--radio + .en__field__label:before,
+.en__field__input--checkbox + .en__field__label:before,
+.en__contactDetails__rows:before {
   content: "";
   position: absolute;
   height: 1.4rem;
@@ -300,14 +314,16 @@ textarea:focus {
   top: 5px;
 }
 
-.en__field__input--radio + .en__field__label::before {
+.en__field__input--radio + .en__field__label:before {
   border-radius: var(--theme-typography-radio-border-radius);
 }
 
-.en__field__input--checkbox + .en__field__label::before,
-.en__contactDetails__rows::before {
-  border-radius: 0;
-  border-width: 2px;
+.en__field__input--checkbox + .en__field__label:before,
+.en__contactDetails__rows:before {
+  color: var(--theme-typography-checkbox-color);
+  border-radius: var(--theme-typography-checkbox-border-radius);
+  border-width: var(--theme-typography-checkbox-border-width);
+  background-color: var(--theme-typography-checkbox-background-color);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -316,20 +332,28 @@ textarea:focus {
 // e.g. .en__contactDetails__select + .en__contactDetails__rows:hover:before
 // This might also include adding a cursor effect to show that the label is clickable
 
-.en__field__input--radio:checked + .en__field__label::before,
-.en__field__input--checkbox:checked + .en__field__label::before,
-.en__contactDetails__select:checked + .en__contactDetails__rows::before {
-  background-color: var(--theme-typography-checkbox-background-color);
+.en__field__input--radio:checked + .en__field__label:before{
+  color: var(--theme-typography-radio-selected-color);
+  background-color: var(--theme-typography-radio-radio-background-color);
   -webkit-box-shadow: inset 0 0 0 4px #ffffff;
   box-shadow: inset 0 0 0 4px #ffffff;
-  border-width: 1px;
+  border-width: var(--theme-typography-radio-border-width);
 }
 
-.en__field__input--checkbox:checked + .en__field__label::before,
-.en__contactDetails__select:checked + .en__contactDetails__rows::before {
-  color: var(--theme-typography-checkbox-background-color);
-  background-color: transparent;
+.en__field__input--checkbox:checked + .en__field__label:before,
+.en__contactDetails__select:checked + .en__contactDetails__rows:before {
+  color: var(--theme-typography-checkbox-checked-color);
+  background-color: var(--theme-typography-checkbox-checked-background-color);
+  -webkit-box-shadow: inset 0 0 0 4px #ffffff;
+  box-shadow: inset 0 0 0 4px #ffffff;
+  border-width: var(--theme-typography-checkbox-border-width);
 }
+
+// .en__field__input--checkbox:checked + .en__field__label:before,
+// .en__contactDetails__select:checked + .en__contactDetails__rows:before {
+//   color: var(--theme-typography-checkbox-checked-color);
+//   background-color: transparent;
+// }
 
 .en__field__input--checkbox:checked + .en__field__label::after,
 .en__contactDetails__select:checked + .en__contactDetails__rows::after {
@@ -348,9 +372,9 @@ textarea:focus {
 }
 
 /* QA Needed: Would like to find a way so that radio input focus is round rather than square. May require re-writing how radio inputs are styled */
-.en__field__input--radio:focus + .en__field__label::before,
-.en__field__input--checkbox:focus + .en__field__label::before,
-.en__contactDetails__select:focus + .en__contactDetails__rows::before {
+.en__field__input--radio:focus + .en__field__label:before,
+.en__field__input--checkbox:focus + .en__field__label:before,
+.en__contactDetails__select:focus + .en__contactDetails__rows:before {
   // outline: var(--theme-gray) auto 0.3125rem;
   // border-color: var(--theme-typography-input-focus-hover-border-color);
 }

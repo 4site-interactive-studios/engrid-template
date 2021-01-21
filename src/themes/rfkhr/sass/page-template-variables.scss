@@ -86,38 +86,47 @@
       
   // TYPOGRAPHY INPUT:FOCUS
   // TYPOGRAPHY INPUT:HOVER
-  --theme-typography-input-focus-hover-color: var(--theme-typography-h1-font-family);
-  --theme-typography-input-focus-hover-background-color: var(--color-white);
+  --theme-typography-input-focus-hover-color: var(--theme-typography-input-color);
+  --theme-typography-input-focus-hover-background-color: var(--theme-typography-input-background-color);
   --theme-typography-input-focus-hover-border-color: var(--theme-cta);
       
   // TYPOGRAPHY RADIO
   --theme-typography-radio-content: initial;
-  --theme-typography-radio-color: initial;
-  --theme-typography-radio-background-color: initial;
-  --theme-typography-radio-border-width: initial;
-  --theme-typography-radio-border-color: initial;
+  --theme-typography-radio-color: var(--theme-cta);
+  --theme-typography-radio-background-color: var(--color-white);
+  --theme-typography-radio-border-width: 1px;
+  --theme-typography-radio-border-color: var(--color-black);
   --theme-typography-radio-border-radius: 0px;
 
   // TYPOGRAPHY RADIO INPUT:FOCUS
   // TYPOGRAPHY RADIO INPUT:HOVER
-  --theme-typography-radio-focus-hover-color: initial;
-  --theme-typography-radio-focus-hover-background-color: initial;
-  --theme-typography-radio-focus-hover-border-color: var(--color-black);
+  --theme-typography-radio-focus-hover-color: var(--theme-typography-radio-color);
+  --theme-typography-radio-focus-hover-background-color: var(--theme-typography-radio-background-color);
+  --theme-typography-radio-focus-hover-border-color: var(--theme-typography-radio-border-color);
+
+  // TYPOGRAPHY RADIO INPUT:CHECKED
+  --theme-typography-radio-selected-color: var(--theme-typography-radio-background-color);
+  --theme-typography-radio-selected-background-color: var(--theme-cta);
+  --theme-typography-radio-selected-border-color: var(--theme-typography-radio-border-color);
 
   // TYPOGRAPHY CHECKBOX
-  --theme-typography-checkbox-content:"✓";
   --theme-typography-checkbox-color: var(--color-white);
-  --theme-typography-checkbox-background-color: var(--color-black);
-  --theme-typography-checkbox-border-width: initial;
-  --theme-typography-checkbox-border-color: var(--theme-cta);
+  --theme-typography-checkbox-background-color: var(--color-white);
+  --theme-typography-checkbox-border-width: 1px;
+  --theme-typography-checkbox-border-color: var(--theme-black);
   --theme-typography-checkbox-border-radius: 0px;
 
   // TYPOGRAPHY CHECKBOX INPUT:FOCUS
   // TYPOGRAPHY CHECKBOX INPUT:HOVER
-  --theme-typography-checkbox-focus-hover-color: initial;
-  --theme-typography-checkbox-focus-hover-background-color: initial;
-  --theme-typography-checkbox-focus-hover-border-color: var(--color-black);
+  --theme-typography-checkbox-focus-hover-color: var(--theme-typography-checkbox-color);
+  --theme-typography-checkbox-focus-hover-background-color: var(--theme-typography-checkbox-background-color);
+  --theme-typography-checkbox-focus-hover-border-color: var(--theme-typography-checkbox-border-color);
 
+  // TYPOGRAPHY CHECKBOX INPUT:CHECKED
+  --theme-typography-checkbox-checked-content:"✓";
+  --theme-typography-checkbox-checked-color: var(--theme-typography-checkbox-background-color);
+  --theme-typography-checkbox-checked-background-color: var(--theme-cta);
+  --theme-typography-checkbox-checked-border-color: var(--theme-typography-checkbox-border-color);
 
   // TYPOGRAPHY SELECT
   --theme-typography-select-font-family: var(--theme-typography-default-font-family);
@@ -125,16 +134,34 @@
   --theme-typography-select-font-size: var(--theme-root-font-size);
   --theme-typography-select-font-weight: initial;
   --theme-typography-select-line-height: initial;
-  --theme-typography-select-background-color: initial;
-  --theme-typography-select-border-width: initial;
-  --theme-typography-select-border-color: initial;
+  --theme-typography-select-background-color: var(--color-white);
+  --theme-typography-select-border-width: 1px;
+  --theme-typography-select-border-color: var(--color-black);
   --theme-typography-select-border-radius: initial;
 
   // TYPOGRAPHY SELECT:FOCUS
   // TYPOGRAPHY SELECT:HOVER
-  --theme-typography-select-focus-hover-color: initial;
-  --theme-typography-select-focus-hover-background-color: initial;
+  --theme-typography-select-focus-hover-color: var(--theme-typography-select-color);
+  --theme-typography-select-focus-hover-background-color: var(--theme-typography-select-background-color);
   --theme-typography-select-focus-hover-border-color: var(--theme-cta);
+
+    // TYPOGRAPHY TEXTAREA
+    --theme-typography-textarea-font-family: var(--theme-typography-default-font-family);
+    --theme-typography-textarea-color: initial;
+    --theme-typography-textarea-font-size: var(--theme-root-font-size);
+    --theme-typography-textarea-font-weight: initial;
+    --theme-typography-textarea-line-height: initial;
+    --theme-typography-textarea-background-color: var(--color-white);
+    --theme-typography-textarea-border-width: 1px;
+    --theme-typography-textarea-border-color: var(--color-black);
+    --theme-typography-textarea-border-radius: initial;
+    --theme-typography-textarea-placeholder-color: var(--theme-light-gray);
+        
+    // TYPOGRAPHY TEXTAREA:FOCUS
+    // TYPOGRAPHY TEXTAREA:HOVER
+    --theme-typography-textarea-focus-hover-color: var(--theme-typography-textarea-color);
+    --theme-typography-textarea-focus-hover-background-color: var(--theme-typography-textarea-background-color);
+    --theme-typography-textarea-focus-hover-border-color: var(--theme-cta);
 
   // TYPOGRAPHY BUTTON
   --theme-typography-button-font-family: var(--theme-typography-h1-font-family);
@@ -168,7 +195,7 @@
   // TYPOGRAPHY PRIMARY BUTTON:HOVER  
   --theme-typography-primary-button-focus-hover-color: var(--theme-typography-button-focus-hover-color);
   --theme-typography-primary-button-focus-hover-background-color: var(--theme-cta-hover);
-  --theme-typography-primary-button-focus-hover-border-color: var(---theme-typography-button-focus-hover-border-color);
+  --theme-typography-primary-button-focus-hover-border-color: var(--theme-typography-button-focus-hover-border-color);
 
   // TYPOGRAPHY A
   --theme-typography-a-font-family: var(--theme-typography-default-font-family);
@@ -180,7 +207,7 @@
 
   // TYPOGRAPHY A:FOCUS
   // TYPOGRAPHY A:HOVER
-  --theme-typography-a-focus-hover-color: initial;
+  --theme-typography-a-focus-hover-color: var(--theme-typography-a-color);
   --theme-typography-a-focus-hover-text-decoration: initial;
 
   // CTA COLORS
@@ -267,4 +294,12 @@
   --theme-typography-primary-button-color: var(--color-white);
 }
 
+[data-engrid-embedded]{
+  .content-footer{
+    color: var(--color-black);
+    a {
+      color: var(--color-black);
+    }
+  }
+}
 

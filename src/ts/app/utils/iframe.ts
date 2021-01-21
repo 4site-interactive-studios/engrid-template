@@ -1,5 +1,6 @@
 const sendIframeHeight = (frameId: string) => {
   let height = document.body.offsetHeight;
+  console.log("Sending iFrame height of: ", height, "px for frameId: ", frameId); // check the message is being sent correctly
   window.parent.postMessage(
     {
       frameHeight: height,
@@ -7,6 +8,5 @@ const sendIframeHeight = (frameId: string) => {
     },
     "*"
   );
-  console.log("Sending height... ", height); // check the message is being sent correctly
 };
 export default sendIframeHeight;

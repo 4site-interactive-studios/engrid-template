@@ -11,6 +11,21 @@
 /* ENGRID DEFAULT VAIRABLES */
 @import "engrid-variables";
 
+/* ENGRID BASE LAYOUTS */
+@import "layouts/engrid-layout";
+@import "layouts/engrid-layout-centercenter1col";
+@import "layouts/engrid-layout-centercenter1col-wide";
+@import "layouts/engrid-layout-centercenter2col";
+@import "layouts/engrid-layout-centerleft1col";
+@import "layouts/engrid-layout-centerright1col";
+@import "layouts/engrid-layout-leftleft1col";
+@import "layouts/engrid-layout-rightright1col";
+
+/* ENGRID MANUAL AND EMBEDDED LAYOUT */
+/* THESE COME LAST SO THEY SUPERSEDES ANY PREVIOUS LAYOUTS IN THE CSS CASCADE */
+@import "layouts/engrid-layout-manual";
+@import "layouts/engrid-layout-embedded";
+
 /* ENGRID STYLINGS */
 @import "engrid-apple-pay";
 @import "engrid-autofill";
@@ -38,18 +53,6 @@
 @import "engrid-thermometer";
 @import "engrid-tweet-to-target";
 @import "engrid-typography";
-
-/* ENGRID BASE LAYOUTS */
-@import "layouts/engrid-layout";
-@import "layouts/engrid-layout-centercenter1col";
-@import "layouts/engrid-layout-centercenter1col-wide";
-@import "layouts/engrid-layout-centercenter2col";
-@import "layouts/engrid-layout-centerleft1col";
-@import "layouts/engrid-layout-centerright1col";
-@import "layouts/engrid-layout-embedded";
-@import "layouts/engrid-layout-leftleft1col";
-@import "layouts/engrid-layout-manual";
-@import "layouts/engrid-layout-rightright1col";
 
 /* ENGRID MAKE THE CONTENTS OF ALL COLUMNS VISIBLE */
 /* ADDED HERE SO IT COMES AFTER ALL OTHER PAGE LAYOUT CSS IS PARSED BY THE BROWSER*/

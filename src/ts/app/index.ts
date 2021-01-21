@@ -87,8 +87,8 @@ export const run = (opts: Object) => {
   if (inIframe()) {
     var enID = getUrlParameter('en_id');
 
-    // Add the data-engrid-embedded attribute when inside an iFrame
-    document.getElementsByTagName("BODY")[0].setAttribute("data-engrid-embedded", "");
+    // Add the data-engrid-embedded attribute when inside an iFrame if it wasn't already added by a script in the Page Template
+    document.body.setAttribute("data-engrid-embedded", "");
 
     const shouldScroll = () => {
       // If you find a error, scroll
@@ -102,9 +102,16 @@ export const run = (opts: Object) => {
       // Scroll if the Regex matches, don't scroll otherwise
       return enURLPattern.test(referrer);
     }
+
+    // Fire the resize event
+    console.log("iFrame Event - First Resize");
+    sendIframeHeight(enID);
+
+    // On load fire scroll behavior
     window.onload = () => {
-      sendIframeHeight(enID);
       // Scroll to top of iFrame
+      console.log("iFrame Event - window.onload");
+      sendIframeHeight(enID);
       window.parent.postMessage(
         {
           scroll: shouldScroll(),
@@ -112,13 +119,21 @@ export const run = (opts: Object) => {
         },
         "*"
       );
+      
+      // On click fire the resize event
       document.addEventListener("click", (e: Event) => {
+        console.log("iFrame Event - click");
         setTimeout(() => {
           sendIframeHeight(enID);
         }, 100);
       });
     };
-    window.onresize = () => sendIframeHeight(enID);
+
+    // On resize fire the resize event
+    window.onresize = () => {
+      console.log("iFrame Event - window.onload");
+      sendIframeHeight(enID);
+    }
     // Change the layout class to embedded
     // const gridElement = document.getElementById("engrid") || document.body as HTMLElement;
     // @TODO We need to write a better way of stripping layout classes 

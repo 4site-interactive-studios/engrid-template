@@ -1,5 +1,5 @@
 body {
-  &::before {
+  &:before {
     content: "";
     display: block;
     height: 12px;
@@ -10,7 +10,7 @@ body {
   }
   .body-header {
     border-top: 0 !important;
-    &::before {
+    &:before {
       content: "";
       display: block;
       height: 12px;
@@ -27,7 +27,7 @@ body {
     background-attachment: fixed;
     height: auto !important;
     clip-path: none !important;
-    &::before {
+    &:before {
       background-color: rgba(0, 0, 0, 0.5);
       position: fixed;
       top: -12px;
@@ -67,7 +67,7 @@ body:not(#en__pagebuilder) {
 
 body:not(#en__pagebuilder)
   .en__component--advrow
-  .page-backgroundImage.page-backgroundImageSet::before {
+  .page-backgroundImage.page-backgroundImageSet:before {
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
@@ -148,7 +148,7 @@ label.en__field__label {
 
 .en__field--donationAmt {
   .en__field__label--item,
-  .en__field__item--other::before,
+  .en__field__item--other:before,
   .en__field__item--other input {
     font-family: "Oxfam TSTAR PRO", Arial, Helvetica, sans-serif;
     font-size: calc(0.05552rem * 24);
@@ -201,7 +201,7 @@ label.en__field__label {
   }
 }
 
-.en__field--donationAmt .en__field__item--other::before {
+.en__field--donationAmt .en__field__item--other:before {
   display: block;
   content: "$";
   position: relative;
@@ -220,7 +220,7 @@ label.en__field__label {
 
 .en__field--monthly_upsell_checkbox
   .en__field__input--checkbox
-  + .en__field__label::before {
+  + .en__field__label:before {
   margin-top: 0.25rem;
 }
 
@@ -250,7 +250,7 @@ label.en__field__label {
     // font-size: calc(0.05552rem * 24) !important;
     font-weight: 900 !important;
     text-transform: none !important;
-    &::before {
+    &:before {
       top: 3px;
     }
   }

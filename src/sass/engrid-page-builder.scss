@@ -1,8 +1,8 @@
-// Styles Related to the Page-Builder
+// Styles Related to the Engaging Networks Page Builder
 
 /*
 * ##########################################################
-* # LAYOUT - Page Builder Custom Styles
+* # Page Builder Custom Styles
 * ##########################################################
 */
 
@@ -52,6 +52,14 @@
     border: 5px solid red;
   }
 
+  /* Adjust the editable space in the Page Editor so that the content can occupy as much space as possible */
+  .en__container {
+    margin-left: 1px !important;
+    margin-right: 1px !important;
+    margin-bottom: 0px !important;
+    border: none !important;
+  }
+
   // Includes both upper and lower case scenarios for typical field values
   .inmem-y,
   .inmem-n,
@@ -86,12 +94,7 @@
     height: 350px !important;
     margin: 0 auto;
   }
-}
 
-// ####################################################################
-// Style Content Inside Page Builder
-// ####################################################################
-body#en__pagebuilder{
   .page-alert,
   .content-header,
   .body-headerOutside,
@@ -120,7 +123,7 @@ body#en__pagebuilder{
     visibility: hidden;
     display: block !important;
 
-    :only-child::before {
+    &:only-child:before {
       font-size: 18px;
       font-weight: 700;
       color: #999999;
@@ -131,216 +134,206 @@ body#en__pagebuilder{
       height: 100%;
     }
   
-    :only-child {
+    &:only-child {
       visibility: visible;
       color: transparent;
       background-color: transparent;
     }
     
-    :only-child .messageOverlay__message {
+    &:only-child .messageOverlay__message {
       display: none;
     }
 
   }
-  
+
   /* prettier-ignore */
-  .page-alert .messageOverlay.hidden:only-child::before { content: "Page Alert"; }
+  .page-alert .messageOverlay.hidden:only-child:before { content: "Page Alert"; }
   /* prettier-ignore */
-  .content-header .messageOverlay.hidden:only-child::before { content: "Content Header"; }
+  .content-header .messageOverlay.hidden:only-child:before { content: "Content Header"; }
   /* prettier-ignore */
-  .body-headerOutside .messageOverlay.hidden:only-child::before { content: "Body Header Outside"; }
+  .body-headerOutside .messageOverlay.hidden:only-child:before { content: "Body Header Outside"; }
   /* prettier-ignore */
-  .body-header .messageOverlay.hidden:only-child::before { content: "Body Header Spacer"; }
+  .body-header .messageOverlay.hidden:only-child:before { content: "Body Header Spacer"; }
   /* prettier-ignore */
-  .body-banner .messageOverlay.hidden:only-child::before { content: "Body Banner"; }
+  .body-banner .messageOverlay.hidden:only-child:before { content: "Body Banner"; }
   /* prettier-ignore */
-  .body-bannerOverlay .messageOverlay.hidden:only-child::before { content: "Body Banner Overlay"; }
+  .body-bannerOverlay .messageOverlay.hidden:only-child:before { content: "Body Banner Overlay"; }
   /* prettier-ignore */
-  .body-top .messageOverlay.hidden:only-child::before { content: "Body Top (Copy)"; }
+  .body-top .messageOverlay.hidden:only-child:before { content: "Body Top (Copy)"; }
   /* prettier-ignore */
-  .body-side .messageOverlay.hidden:only-child::before { content: "Body Side (Copy)"; }
+  .body-side .messageOverlay.hidden:only-child:before { content: "Body Side (Copy)"; }
   /* prettier-ignore */
-  .body-main .messageOverlay.hidden:only-child::before { content: "Body Main (Form)"; }
+  .body-main .messageOverlay.hidden:only-child:before { content: "Body Main (Form)"; }
   /* prettier-ignore */
-  .body-bottom .messageOverlay.hidden:only-child::before { content: "Body Bottom (Copy)"; }
+  .body-bottom .messageOverlay.hidden:only-child:before { content: "Body Bottom (Copy)"; }
   /* prettier-ignore */
-  .body-footer .messageOverlay.hidden:only-child::before { content: "Body Footer Spacer"; }
+  .body-footer .messageOverlay.hidden:only-child:before { content: "Body Footer Spacer"; }
   /* prettier-ignore */
-  .body-footerOutside .messageOverlay.hidden:only-child::before { content: "Body Footer Outside"; }
+  .body-footerOutside .messageOverlay.hidden:only-child:before { content: "Body Footer Outside"; }
   /* prettier-ignore */
-  .content-footerSpacer .messageOverlay.hidden:only-child::before { content: "Content Footer Spacer"; }
+  .content-footerSpacer .messageOverlay.hidden:only-child:before { content: "Content Footer Spacer"; }
   /* prettier-ignore */
-  .content-preFooter .messageOverlay.hidden:only-child::before { content: "Content Pre Footer"; }
+  .content-preFooter .messageOverlay.hidden:only-child:before { content: "Content Pre Footer"; }
   /* prettier-ignore */
-  .content-footer .messageOverlay.hidden:only-child::before { content: "Content Footer"; }
+  .content-footer .messageOverlay.hidden:only-child:before { content: "Content Footer"; }
   /* prettier-ignore */
-  .page-backgroundImage .messageOverlay.hidden:only-child::before { content: "Page Background Image"; }
+  .page-backgroundImage .messageOverlay.hidden:only-child:before { content: "Page Background Image"; }
   /* prettier-ignore */
-  .page-backgroundImageOverlay .messageOverlay.hidden:only-child::before { content: "Page Background Image Overlay"; }
+  .page-backgroundImageOverlay .messageOverlay.hidden:only-child:before { content: "Page Background Image Overlay"; }
   /* prettier-ignore */
-  .page-customCode .messageOverlay.hidden:only-child::before { content: "Custom Code"; }
+  .page-customCode .messageOverlay.hidden:only-child:before { content: "Custom Code"; }
 
 }
 
 /*
 * ##########################################################
-* # ENGRID - Mobile First Styling
-* # LAYOUT - Page Builder Preview Layout
-* #####################2#####################################
-*/
-
-// Vertically center the labels
-#EN__RootElement .pboAdvancedRow__preview .en__component--column div {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.page-alert::before {
-  content: "Page Alert";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.content-header::before {
-  content: "Content Header";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-headerOutside::before {
-  content: "Body Header Outside";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-header::before {
-  content: "Body Header Spacer";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-banner::before {
-  content: "Body Banner";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-bannerOverlay::before {
-  content: "Body Banner Overlay";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-top::before {
-  content: "Body Top (Copy)";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-side::before {
-  content: "Body Side (Copy)";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-main::before {
-  content: "Body Main (Form)";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-bottom::before {
-  content: "Body Bottom (Copy)";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-footer::before {
-  content: "Body Footer Spacer";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.body-footerOutside::before {
-  content: "Body Footer Outside";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.content-footerSpacer::before {
-  content: "Content Footer Spacer";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.content-preFooter::before {
-  content: "Content Pre Footer";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.content-footer::before {
-  content: "Content Footer";
-}
-
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.page-backgroundImage::before {
-  content: "Page Background Image";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.page-backgroundImageOverlay::before {
-  content: "Page Background Image Overlay";
-}
-#EN__RootElement
-  .pboAdvancedRow__preview
-  .en__component--column.page-customCode::before {
-  content: "Page Custom Code";
-}
-
-/*
-* ##########################################################
-* # ENGRID - BODY Column Breakpoint Styling
-* # LAYOUT - Page Builder Preview Layout
+* # Page Builders Custom Layout Editor
 * ##########################################################
 */
+#EN__RootElement{
 
-/* Sum of all MIN values of the Body Columns */
-@media screen and (min-width: 700px) {
-  /* prettier-ignore */
-  #EN__RootElement .pboAdvancedRow__preview .en__component--advrow,
-  #EN__RootElement .pboAdvancedRow__preview .en__component--advrow .pseudo-subgrid{
-    /* autoprefixer grid: off */
-    grid-template-columns:
-    [
-      pc-start lpc-start]  minmax(25px, 1fr)     [lpc-end
-      cc-start lcc-start]  minmax(25px, 1fr)     [lcc-end
-      bc-start lbc-start]  minmax(300px, 300px)  [lbc-end
-      rbc-start]           minmax(300px, 300px)  [rbc-end bc-end
-      rcc-start]           minmax(25px, 1fr)     [rcc-end cc-end
-      rpc-start]           minmax(25px, 1fr)     [rpc-end pc-end
-    ];
-  }
-}
+  .pboAdvancedRow__preview{
 
-/* Something in EN is causing outlines to overlap, this prevents the issue */
-#EN__RootElement .pboAdvancedRow__preview .en__component--column {
-  margin-bottom: 1px;
-}
-
-#EN__RootElement .pboAdvancedRow__preview .en__component--column:before {
-  padding: 0.5rem 0;
-}
-
-#en__pagebuilder{
-    /* Adjust the editable space in the Page Editor so that the content can occupy as much space as possible */
-    .pboAdvancedRow__preview .en__container {
-      margin-left: 1px !important;
-      margin-right: 1px !important;
-      margin-bottom: 0px !important;
-      border: none !important;
+    .en__component--advrow{
+      display: grid !important;
+      grid-template-rows: [
+        page-start page-alert-start]        minmax(0,auto) [page-alert-end 
+        content-header-start]               minmax(0,auto) [content-header-end 
+        body-headerOutside-start]           minmax(0,auto) [body-headerOutside-end 
+        body-header-start]                  minmax(0,auto) [body-header-end 
+        body-banner-start]                  minmax(0,auto) [body-banner-end 
+        body-bannerOverlay-start]           minmax(0,auto) [body-bannerOverlay-end 
+        body-top-start]                     minmax(0,auto) [body-top-end 
+        body-side-start]                    minmax(0,auto) [body-side-end 
+        body-main-start]                    minmax(0,auto) [body-main-end 
+        body-bottom-start]                  minmax(0,auto) [body-bottom-end 
+        body-footer-start]                  minmax(0,auto) [body-footer-end 
+        body-footerOutside-start]           minmax(0,auto) [body-footerOutside-end 
+        content-footerSpacer-start]         minmax(0,auto) [content-footerSpacer-end c
+        ontent-preFooter-start]             minmax(0,auto) [content-preFooter-end 
+        content-footer-start]               minmax(0,auto) [content-footer-end 
+        page-backgroundImage-start]         minmax(0,auto) [page-backgroundImage-end 
+        page-backgroundImageOverlay-start]  minmax(0,auto) [page-backgroundImageOverlay-end page-end 
+        page-customCode-start]              minmax(0,auto) [page-customCode-end
+      ] !important;
     }
-  
+
+    .en__component--advrow,
+    .en__component--advrow .pseudo-subgrid{
+      /* autoprefixer grid: off */
+      grid-template-columns: [
+        pc-start lpc-start]  minmax(25px, 1fr)    [lpc-end
+        cc-start lcc-start]  minmax(25px, 1fr)    [lcc-end
+        bc-start lbc-start]  minmax(25px, 2fr)    [lbc-end
+        rbc-start]           minmax(25px, 2fr)    [rbc-end bc-end
+        rcc-start]           minmax(25px, 1fr)    [rcc-end cc-end
+        rpc-start]           minmax(25px, 1fr)    [rpc-end pc-end
+      ] !important;
+
+      // grid-template-columns: [
+      //   pc-start lpc-start lpc-end cc-start lcc-start lcc-end bc-start lbc-start lbc-end] auto [rbc-start rbc-end bc-end rcc-start rcc-end cc-end rpc-start rpc-end pc-end
+      // ]
+    }
+
     /* Page builder adds a hidden div to the bottom of the layout, this can result in undesired spacing */
-    .pboAdvancedRow__preview .en__component--row:nth-last-child(2) {
+    .en__component--row:nth-last-child(2) {
       padding-bottom: 0px;
     }
-  
-    // @TODO Might need to be moved into main.pboAdvancedRow__preview css
-    .pboAdvancedRow__preview .en__component--advrow {
-      width: 100%;
+
+    // Vertically center the labels
+    .en__component--advcolumn {
+      align-items: center;
+      display: flex;
+      justify-content: center;
     }
-  
+
+    /* Something in EN is causing outlines to overlap, this prevents the issue */
+    .en__component--column {
+      margin-bottom: 1px;
+
+      &:before {
+        padding: 0.5rem 0;
+      }
+    }
+
+    // @TODO This does not compile correctly in SASS (see below) https://d.pr/i/5IgMUK
+    // It outputs as    "#EN__RootElement .pboAdvancedRow__preview.page-alert:before {"
+    // But it should be "#EN__RootElement .pboAdvancedRow__preview .en__component--column.page-alert:before {"
+    // Once fixed can be mergd with above.
+    .en__component--column {
+      &.page-alert:before {
+        content: "Page Alert";
+      }
+    
+      &.content-header:before {
+        content: "Content Header";
+      }
+    
+      &.body-headerOutside:before {
+        content: "Body Header Outside";
+      }
+    
+      &.body-header:before {
+        content: "Body Header Spacer";
+      }
+    
+      &.body-banner:before {
+        content: "Body Banner";
+      }
+    
+      &.body-bannerOverlay:before {
+        content: "Body Banner Overlay";
+      }
+    
+      &.body-top:before {
+        content: "Body Top (Copy)";
+      }
+    
+      &.body-side:before {
+        content: "Body Side (Copy)";
+      }
+    
+      &.body-main:before {
+        content: "Body Main (Form)";
+      }
+    
+      &.body-bottom:before {
+        content: "Body Bottom (Copy)";
+      }
+    
+      &.body-footer:before {
+        content: "Body Footer Spacer";
+      }
+    
+      &.body-footerOutside:before {
+        content: "Body Footer Outside";
+      }
+    
+      &.content-footerSpacer:before {
+        content: "Content Footer Spacer";
+      }
+    
+      &.content-preFooter:before {
+        content: "Content Pre Footer";
+      }
+    
+      &.content-footer:before {
+        content: "Content Footer";
+      }
+    
+      &.page-backgroundImage:before {
+        content: "Page Background Image";
+      }
+    
+      &.page-backgroundImageOverlay:before {
+        content: "Page Background Image Overlay";
+      }
+    
+      &.page-customCode:before {
+        content: "Page Custom Code";
+      }
+    }
+
     .hide {
       background-color: #ff00001a !important;
       &.pboAdvancedRow__preview .en__component--column {
@@ -348,10 +341,5 @@ body#en__pagebuilder{
         z-index: 1;
       }
     }
-
-    .pboAdvancedRow__preview
-      .en__component--column.page-backgroundImageOverlay::before {
-      min-height: 350px !important;
-    }
+  }
 }
-
