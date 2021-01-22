@@ -38,6 +38,16 @@ module.exports = {
       },
     }),
     new HtmlWebpackPlugin({
+      title: "RFK HR - Engaging Networks Page - Advocacy",
+      filename: "page-advocacy-rfkhr.html",
+      template: "./src/templates/page-advocacy-rfkhr.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+    }),    
+    new HtmlWebpackPlugin({
       title: "RFK HR - Engaging Networks Page - Donation",
       filename: "page-donation-rfkhr.html",
       template: "./src/templates/page-donation-rfkhr.html",
