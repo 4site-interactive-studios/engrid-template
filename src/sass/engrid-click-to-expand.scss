@@ -12,12 +12,12 @@ body:not(#en__pagebuilder) .click-to-expand:not(.expanded){
     .click-to-expand-text-wrapper {
         height: 380px;
 
-        :not(.div-expanded) {
+        &:not(.div-expanded) {
             position: relative;
             overflow: hidden;
         }
 
-        ::after {
+        &::after {
             content: "";
             position: absolute;
             top: 100px;
