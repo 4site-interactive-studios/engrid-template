@@ -119,7 +119,7 @@ export const run = (opts: Object) => {
         },
         "*"
       );
-      
+
       // On click fire the resize event
       document.addEventListener("click", (e: Event) => {
         console.log("iFrame Event - click");
@@ -137,7 +137,7 @@ export const run = (opts: Object) => {
     // Change the layout class to embedded
     // const gridElement = document.getElementById("engrid") || document.body as HTMLElement;
     // @TODO We need to write a better way of stripping layout classes 
-    
+
     // gridElement.classList.add("layout-embedded");
     // gridElement.classList.remove("layout-centerleft1col");
     // gridElement.classList.remove("layout-centercenter1col");
@@ -162,4 +162,5 @@ export const run = (opts: Object) => {
   const simpleCountrySelect = new SimpleCountrySelect();
   const applePay = new ApplePay();
   new CapitalizeFields();
+  new ClickToExpand();
 };
