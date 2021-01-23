@@ -12,6 +12,11 @@
 .en__component--advrow {
   width: 100%;
   max-width: 100vw;
+}
+
+// Set the min-height of a page to the viewport height; except when embedded because there is no "viewport" as far as the iframe is concerned
+// This also prevents an issue with Safari where the height of the iFrame'ed page can not be calculated correctly (https://d.pr/v/O2kcrb)
+body:not([data-engrid-embedded]) .en__component--advrow {
   min-height: 100vh;
 }
 
