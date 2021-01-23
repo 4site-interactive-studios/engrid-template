@@ -1,37 +1,13 @@
 // Depends on click-to-expand.ts
-
-body:not(#en__pagebuilder) .click-to-expand.expanded{
-    height: initial;
-}
-
 body:not(#en__pagebuilder) .click-to-expand:not(.expanded){
     cursor: pointer;
-    height: 430px;
+    height: var(--theme-click-to-expand-copy-total-height);
     overflow: hidden;
 
     .click-to-expand-text-wrapper {
-        height: 380px;
-
-        &:not(.div-expanded) {
-            position: relative;
-            overflow: hidden;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 100px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 330px;
-            background: -webkit-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-            background-image: -moz-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-            background-image: -o-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-            background-image: linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-            background-image: -ms-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-        }
+        height: calc(var(--theme-click-to-expand-copy-total-height) - var(--theme-click-to-expand-cta-image-height));
+        -webkit-mask-image: linear-gradient(to bottom, black var(--theme-click-to-expand-copy-height-before-fade-starts), transparent 100%);
+        mask-image: linear-gradient(to bottom, black var(--theme-click-to-expand-copy-height-before-fade-starts), transparent 100%);
     }
 
     .click-to-expand-cta {
