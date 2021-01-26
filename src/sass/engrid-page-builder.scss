@@ -30,6 +30,11 @@
     flex-direction: column !important;
   }
 
+  // To help page editors identify images missing alt attributes which improve accesability
+  img:not([alt]){
+    outline: 1px dashed red;
+  }
+
   // When in page builder display Overlay sections after their counterparts and not overtop of their target grid row. This way content editors can more easily interact with them
   .body-bannerOverlay{
     grid-row: body-bannerOverlay !important;

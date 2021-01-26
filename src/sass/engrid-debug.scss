@@ -6,6 +6,11 @@
 
 .debug {
   margin-top: 47px;
+
+  // To help page editors identify images missing alt attributes which improve accesability
+  img:not([alt]){
+    outline: 1px dashed red;
+  }
 }
 
 // REF: https://github.com/tachyons-css/tachyons/blob/master/src/_debug.css
