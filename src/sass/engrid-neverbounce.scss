@@ -1,7 +1,7 @@
 /* Utilizes the standard NeverBounce Implimentation but styles it to match the client brand */
 /* Note, we add "async" to the javascript file call */
 /* Note, NeverBounce's CDN uses HTTP 1. You can self host the file to get around this */
-/* @TODO2 Check support for "fancyerrors" and float labels, as well as input fields with rounded borders
+/* @TODO Check support for "fancyerrors" and float labels, as well as input fields with rounded borders
 /*
     <script type="text/javascript">
         _NBSettings = {
@@ -26,7 +26,7 @@ div[id^=nb-field-]{
         padding: .25rem .5rem !important;
         font-size: 1.125em !important;
         font-size: .75rem !important;
-        font-family: HarmoniaSansStd !important; //@TODO2 Update to match the default/theme font
+        font-family: HarmoniaSansStd !important; //@TODO Update to match the default/theme font
         font-weight: 400 !important;
         font-stretch: normal !important;
         font-style: normal !important;

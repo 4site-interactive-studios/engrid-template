@@ -1,5 +1,5 @@
 // For lazy loaded banner images, use a placeholder color to indicate something is coming
-// @TODO2 Doesn't actually do what it's supposed to, possibly because of the placeholder transparent data uri
+// @TODO Doesn't actually do what it's supposed to, possibly because of the placeholder transparent data uri
 .body-banner img[data-src]{
     background-color: var(--theme-body-banner-image-background-color);
 }
