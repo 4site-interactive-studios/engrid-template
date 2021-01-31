@@ -1,4 +1,4 @@
-// NOTE: Any CSS Custom Properties are changes they should also be made in themes/starter-theme/sass/variables.scss
+// NOTE: Any CSS Custom Properties changes should also be made in themes/starter-theme/sass/variables.scss
 
 // @TODO There has to be a better way of defining breakpoints as a default and then adjust them up stream in the themes
 $slicer-breakpoints: 0 400px 600px 1024px 1200px;
@@ -260,11 +260,12 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
     --theme-page-backgroundImage-url: "url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)"; // Invisible GIF
 
-    
-    --theme-spacing-sm: 0.8652rem; // @TODO Revisit
-    --theme-spacing: calc(0.8652rem * 0.75); // @TODO Revisit
-    --theme-spacing-lg: calc(0.8652rem * 2.5); // @TODO Revisit
-    --theme-spacing-xlg: calc(0.8652rem * 5); // @TODO Revisit
+    // @TODO Revisit these spacing values and calculations
+    // @BODY Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
+    --theme-spacing-sm: 0.8652rem;
+    --theme-spacing: calc(0.8652rem * 0.75);
+    --theme-spacing-lg: calc(0.8652rem * 2.5);
+    --theme-spacing-xlg: calc(0.8652rem * 5);
 
     // ERRORS
     --theme-error-red: var(--theme-error);

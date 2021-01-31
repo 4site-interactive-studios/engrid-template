@@ -1,4 +1,4 @@
-/* EN sets width to 100%, without setting max-width it overflows offscreen */
+/* EN sets width to 100%, without setting a max-width it can overflow offscreen */
 .en__component--column.en__component--advcolumn,
 .en__component--row--1 .en__component--column,
 .en__component--row--2 .en__component--column {
@@ -7,21 +7,9 @@
 
 /* Reset minimum and default width */
 .en__component--column {
-  min-width: auto !important;
-  width: auto !important;
+  min-width: auto; // Removed !important because we have better main.css placement in the Page Temaplte
+  width: auto; // Removed !important because we have better main.css placement in the Page Temaplte
 }
-
-// div[class*="-column-"].en__field .en__field__element,
-// .en__field.column .en__field__element {
-//   flex-direction: column;
-//   display: flex;
-// }
-
-// div[class*="-row-"].en__field .en__field__element,
-// .en__field.row .en__field__element {
-//   flex-direction: row;
-//   display: flex;
-// }
 
 /* Fix for flexbox sub-pixel rounding causing a 1px jitter in Chrome. */
 /* And because EN inserts a div at the end of rows in the page builder, we needed to use a more permiscuse scope. */

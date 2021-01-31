@@ -1,6 +1,4 @@
 /* REF: http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/ */
-/* @TODO This declaration doesn't appear to make it into the compiled main.css */
-/* @TODO The "--theme-root-font-size" CSS Custom Property is not used anywhere */
 :root{
 	font-size: var(--theme-root-font-size);  // Sets a baseline font size for all other REM based font-sizes to relatively build off of
 }

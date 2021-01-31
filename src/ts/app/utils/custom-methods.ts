@@ -170,7 +170,9 @@ export const bindEvents = (e: Element) => {
     }
   };
 
-  // Occurs on browser autofill of fields
+  // Occurs when the web browser autofills a form fields
+  // REF: engrid-autofill.scss
+  // REF: https://medium.com/@brunn/detecting-autofilled-fields-in-javascript-aed598d25da7
   const onAutoFillStart = (e: any) => {
     e.parentNode.parentNode.classList.add("is-autofilled", "has-value");
   };

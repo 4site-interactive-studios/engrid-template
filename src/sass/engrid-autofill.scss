@@ -6,7 +6,7 @@
 /* There is a browser bug that causes small text to be shown during the process of autofilling, no workaround at the moment */
 /* https://stackoverflow.com/questions/57242841/input-text-very-small-when-hovering-on-autofill-suggestion */
 /* https://bugs.chromium.org/p/chromium/issues/detail?id=953689#c24 */
-/* Screencast: https://d.pr/v/2xecBA */
+/* Screencast: https://d.pr/v/Kvo5BW (Broken on left, fixed on right) */
 
 @-webkit-keyframes onAutoFillStart {
   from {
@@ -60,6 +60,7 @@ input:not(:-webkit-autofill) {
   animation-name: onAutoFillCancel;
 }
 
+/* Prevent any CSS Transition from making the autofill text visually transition withing the input field */
 .is-autofilled,
 .is-autofilled label {
   -webkit-transition: none !important;
@@ -67,9 +68,16 @@ input:not(:-webkit-autofill) {
 }
 
 /* A fix for tiny font sizes on autofill: https://stackoverflow.com/a/60379185/815683 */
-/* Might be able to remove the other work arounds */
-input:-webkit-autofill::first-line,
-textarea:-webkit-autofill::first-line,
+/* @TODO Might be able to remove the above work arounds. Ensure to test that removal does not break the ability for JS to add "is-autofilled" */
+input:-webkit-autofill::first-line{
+  font-size: var(--theme-typography-input-font-size);
+}
+
+
+textarea:-webkit-autofill::first-line{
+  font-size: var(--theme-typography-textarea-font-size);
+}
+
 select:-webkit-autofill::first-line{
-  font-size: var(--theme-root-font-size);
+  font-size: var(--theme-typography-select-font-size);
 }

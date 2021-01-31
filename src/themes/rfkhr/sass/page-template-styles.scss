@@ -24,7 +24,6 @@
   }
 }
 
-// @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
 body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
   .en__component--advrow
   .page-backgroundImage:before {
@@ -453,7 +452,6 @@ body#en__pagebuilder {
   }
 }
 
-// @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
 body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
   .en__component--advrow
   .page-backgroundImage:before {
@@ -1216,7 +1214,7 @@ div[id^="nb-field-"] div.nb-feedback {
   background-size: 16px;
 }
 
-/* @TODO: Temp Fix, needs to be replaced */
+/* Temp Fix, needs to be replaced */
 [data-engrid-layout="centercenter1col"]
   .body-header
   #social-share-block

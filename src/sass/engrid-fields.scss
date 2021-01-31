@@ -121,148 +121,12 @@
 * Inputs
 ***********************************/
 
-/* General */
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="range"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
-input[type="hidden"],
-select,
-select.en__field__input--select, // @TODO Required, otherwise EN's CSS wins out on Selects
-select.en__field__input--splitselect, // @TODO Required, otherwise EN's CSS wins out on Selects
-select.en__field__input--tripleselect, // @TODO Required, otherwise EN's CSS wins out on Selects
-textarea {
-  max-width: 100%;
-  width: 100%;
-  min-width: initial;
-  display: block;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  height: auto; // @TODO Removed !important, hopefully that didn't break anything
-  margin: 0rem;
-  padding: 0.5rem;
-  border: var(--theme-typography-input-border-width) solid var(--theme-typography-input-border-color);
-  border-radius: var(--theme-typography-input-border-radius);
-  background-color: var(--theme-typography-input-background-color,);
-  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.5;
-  color: var(--color-black);
-  transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
-  appearance: none;
-}
-
-select,
-select.en__field__input--select,
-select.en__field__input--splitselect,
-select.en__field__input--tripleselect {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
-  background-origin: content-box;
-  background-position: right -1rem center;
-  background-repeat: no-repeat;
-  background-size: 0.5625rem 0.375rem;
-  padding-right: 1.5rem;
-  transition: box-shadow 0.25s, border-color 0.25s ease-in-out,
-    -webkit-box-shadow 0.25s;
-}
-
-textarea {
-  height: 7rem;
-  resize: vertical;
-}
-
-/* Focus state */
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="email"]:focus,
-input[type="month"]:focus,
-input[type="number"]:focus,
-input[type="password"]:focus,
-input[type="range"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="text"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-input[type="week"]:focus {
-  outline: none;
-  border: var(--theme-typography-input-border-width) solid var(--theme-typography-input-focus-hover-border-color);
-  background-color: var(--theme-typography-input-focus-hover-background-color);
-  box-shadow: 0 0 0.3125rem var(--theme-light-gray);
-  transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
-}
-
-select:focus {
-  outline: none;
-  border: var(--theme-typography-select-border-width) solid var(--theme-typography-select-focus-hover-border-color);
-  background-color: var(--theme-typography-select-focus-hover-background-color);
-  box-shadow: 0 0 0.3125rem var(--theme-light-gray);
-  transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
-}
-
-textarea:focus {
-  outline: none;
-  border: var(--theme-typography-textarea-border-width) solid var(--theme-typography-textarea-focus-hover-border-color);
-  background-color: var(--theme-typography-textarea-focus-hover-background-color);
-  box-shadow: 0 0 0.3125rem var(--theme-light-gray);
-  transition: box-shadow 0.25s, border-color 0.25s ease-in-out;
-}
-
 /**
       * Form Block Component: Select Fields
       * Overrides EN Default Styling to ensure mobile friendly widths
       */
 .en__field__input--select {
   min-width: initial !important;
-}
-
-/* Placeholder styling */
-/* Chrome, Firefox, Opera, Safari 10.1+ */
-::-webkit-input-placeholder {
-  color: var(--theme-light-gray);
-  opacity: 1;
-  /* Firefox */
-}
-
-:-ms-input-placeholder {
-  color: var(--theme-light-gray);
-  opacity: 1;
-  /* Firefox */
-}
-
-::-ms-input-placeholder {
-  color: var(--theme-light-gray);
-  opacity: 1;
-  /* Firefox */
-}
-
-::placeholder {
-  color: var(--theme-light-gray);
-  opacity: 1;
-  /* Firefox */
-}
-
-/* Internet Explorer 10-11 */
-:-ms-input-placeholder {
-  color: var(--theme-light-gray);
-}
-
-/* Microsoft Edge */
-::-ms-input-placeholder {
-  color: var(--theme-light-gray);
 }
 
 /* Custom Styling for Radio & Checkbox Inputs */
@@ -348,12 +212,6 @@ textarea:focus {
   box-shadow: inset 0 0 0 4px #ffffff;
   border-width: var(--theme-typography-checkbox-border-width);
 }
-
-// .en__field__input--checkbox:checked + .en__field__label:before,
-// .en__contactDetails__select:checked + .en__contactDetails__rows:before {
-//   color: var(--theme-typography-checkbox-checked-color);
-//   background-color: transparent;
-// }
 
 .en__field__input--checkbox:checked + .en__field__label::after,
 .en__contactDetails__select:checked + .en__contactDetails__rows::after {
@@ -485,95 +343,6 @@ textarea:focus {
 
 /* Custom Styles */
 
-/* Default Stylings for Common Form Fields */
-/* Can be disabled by added manual-form-layout at the template or component level */
-div:not(.manual-form-layout) {
-  .en__component--formblock {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .en__field--firstName,
-  .en__field--lastName,
-  .en__field--bankAccountNumber,
-  .en__field--bankRoutingNumber {
-    flex-basis: 50%;
-  }
-
-  .en__field--ccexpire {
-    flex-basis: calc((100% / 3) * 2);
-  }
-
-  .en__field--checkbox,
-  .en__field--emailAddress,
-  .en__field--phoneNumber,
-  .en__field--phoneNumber2,
-  .en__field--country,
-  .en__field--address1,
-  .en__field--honname,
-  .en__field--infname,
-  .en__field--infemail,
-  .en__field--infcountry,
-  .en__field--infadd1,
-  .en__field--gftrsn,
-  .en__field--paymenttype,
-  .en__field--ccnumber,
-  .en__field--bankAccountType {
-    flex-basis: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .en__field--city,
-  .en__field--region,
-  .en__field--postcode,
-  .en__field--infcity,
-  .en__field--infreg,
-  .en__field--infpostcd,
-  .en__field--ccvv {
-    flex-basis: calc(100% / 3);
-  }
-
-  .en__field--city,
-  .en__field--infcity,
-  .en__field--ccexpire {
-    padding-left: 0;
-  }
-
-  .en__field--lastName,
-  .en__field--postcode,
-  .en__field--infpostcd,
-  .en__field--ccvv {
-    padding-right: 0;
-  }
-
-  .en__field--recurrpay,
-  .en__field--donationAmt {
-    align-items: center;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .en__field--donationAmt.en__field--withOther
-    .en__field__element--radio
-    .en__field__item:nth-last-child(1) {
-    display: flex !important;
-  }
-
-  .en__field--donationAmt.en__field--withOther
-    .en__field__element--radio
-    .en__field__item:nth-last-child(2) {
-    display: none !important;
-  }
-
-  .en__field--donationAmt.en__field--withOther {
-    align-items: center;
-  }
-}
-
-// @TODO Style Mandatory Checboxes https://d.pr/i/KAZKV6
-
-// @TODO Confirm the font-size styling is resetting the fonts https://act.ran.org/page/14333/event/1?mode=DEMO
 
 // Inline Country Helper
 .inline-country .en__field--country {

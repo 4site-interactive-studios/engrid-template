@@ -13,19 +13,15 @@ body{
     // --theme-background-image: url("");
     --theme-background-image-background-color: #333333;
 
-    /* @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand
-    * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
-    */
-
      /* REF: http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/ */
     $theme-root-font-size: 16px; // Sets a baseline font size for all other REM based font-sizes to relatively build off of
 
-    // --theme-body-background-color: --color-white; //@TODO Not yet used anywhere
+    // --theme-body-background-color: --color-white;
     --theme-body-border-radius: 0px;
-    --theme-spacing-sm: 0.8652rem; //@TODO Revisit
-    --theme-spacing: calc(0.8652rem * 0.75); //@TODO Revisit
-    --theme-spacing-lg: calc(0.8652rem * 2.5); //@TODO Revisit
-    --theme-spacing-xlg: calc(0.8652rem * 5); //@TODO Revisit
+    --theme-spacing-sm: 0.8652rem;
+    --theme-spacing: calc(0.8652rem * 0.75);
+    --theme-spacing-lg: calc(0.8652rem * 2.5);
+    --theme-spacing-xlg: calc(0.8652rem * 5);
 
     --theme-typography-input-border-radius: 5px;
     --theme-typography-input-border-width: 2px;

@@ -32,7 +32,6 @@
   }
 }
 
-// @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
 body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
   .en__component--advrow
   .page-backgroundImage:before {
@@ -50,7 +49,7 @@ body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
 * ##########################################################
 */
 
-/* @TODO This should actually be [data-engrid-layout="right1col"] but we didn't have time to make it that way */
+/* This should actually be [data-engrid-layout="right1col"] but we didn't have time to make it that way */
 body {
   .body-header {
     margin-top: 0;
@@ -160,7 +159,6 @@ body:not(#en__pagebuilder)
   will-change: transform; // creates a new paint layer
 }
 
-// @TODO Implement a more advanced SASS based method for fluidly scaling type size https://css-tricks.com/snippets/css/fluid-typography/
 body {
   color: var(--color-black);
   background-color: var(--theme-body-background-color);
@@ -653,7 +651,6 @@ body#en__pagebuilder {
   }
 }
 
-// @TODO  RENDER CRITICAL: Consider moving into page template as it's critical to page render
 body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
   .en__component--advrow
   .page-backgroundImage:before {
@@ -1443,7 +1440,6 @@ div[id^="nb-field-"] div.nb-feedback {
   background-size: 16px;
 }
 
-/* @TODO: Temp Fix, needs to be replaced */
 [data-engrid-layout="centercenter1col"]
   .body-header
   #social-share-block

@@ -4,7 +4,7 @@ body:not(#en__pagebuilder) .click-to-expand:not(.expanded){
     height: var(--theme-click-to-expand-copy-total-height);
     overflow: hidden;
 
-    // New method works with transparent backgrounds, no faking the fade by matching the background color; which didn't work when in ENGrid was in its embedded state
+    // Works with transparent backgrounds for when the ENGrid is in its embedded state
     // REF: https://stackoverflow.com/a/58740440/815683
     .click-to-expand-text-wrapper {
         height: calc(var(--theme-click-to-expand-copy-total-height) - var(--theme-click-to-expand-cta-image-height));
@@ -17,7 +17,7 @@ body:not(#en__pagebuilder) .click-to-expand:not(.expanded){
         background-position: center bottom;
         background-repeat: no-repeat;
         background-size: var(--theme-click-to-expand-cta-image-width) var(--theme-click-to-expand-cta-image-height);
-        z-index: 100; // @TODO Check this z-index
+        z-index: 100;
         width: var(--theme-click-to-expand-cta-image-width);
         height: var(--theme-click-to-expand-cta-image-height);
         bottom: 0em;

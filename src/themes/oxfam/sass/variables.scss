@@ -9,16 +9,12 @@ $default-cta-hover: #f05523;
 $default-body-background-color: $color-white;
 $default-page-backgroundImage-background-color: #333333;
 
-/* @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand
- * https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
- */
-
-$default-body-background-color: $color-white; //@TODO Not yet used anywhere
+$default-body-background-color: $color-white;
 $default-body-border-radius: 0px;
-$default-spacing-sm: 0.8652rem; //@TODO Revisit
-$default-spacing: calc(0.8652rem * 0.75); //@TODO Revisit
-$default-spacing-lg: calc(0.8652rem * 2.5); //@TODO Revisit
-$default-spacing-xlg: calc(0.8652rem * 5); //@TODO Revisit
+$default-spacing-sm: 0.8652rem;
+$default-spacing: calc(0.8652rem * 0.75);
+$default-spacing-lg: calc(0.8652rem * 2.5);
+$default-spacing-xlg: calc(0.8652rem * 5);
 
 $default-input-border-radius: 5px;
 $default-input-border-width: 2px;

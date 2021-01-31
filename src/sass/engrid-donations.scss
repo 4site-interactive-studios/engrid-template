@@ -5,13 +5,7 @@
   .en__field--donationAmt .en__field__item--other input
   {
     border-radius: var(--theme-typography-button-border-radius);
-    // padding: 0.5rem 1.5rem;
   }
-
-/* TODO Possibly Trim */
-// .radio-to-buttons.fat-buttons .en__field--radio input[type="radio"] + label {
-//   padding: 0.625rem 1.5625rem !important;
-// }
 
 /* prettier-ignore */
 .radio-to-buttons .en__field--radio .en__field__input--radio + .en__field__label,
@@ -91,6 +85,7 @@
 }
 
 // Add "/mo" to giving amount labels
+// @TODO Make "content" use a ENGRID CSS Property
 .has-give-monthly
   .en__field--donationAmt
   div:not(.en__field__item--other)
