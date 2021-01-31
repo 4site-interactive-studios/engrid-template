@@ -196,6 +196,10 @@
 // e.g. .en__contactDetails__select + .en__contactDetails__rows:hover:before
 // This might also include adding a cursor effect to show that the label is clickable
 
+// @TODO Change the checkbox checkmark to use an SVG Data URI or similar
+// @BODY Currently, the checkbox checkmark uses the checkmark character, but if the font doesn't have this character or the designer wants to use something else, it falls apart. We should switch to an "image" based solution. Ideally, it would be a data-uri and not require a separate image asset. This should be added as default and client SCSS variable where the necessary CSS are mapped to custom properties.
+// REF: Cross browser tested radio / checkbox stylings https://codepen.io/aaroniker/pen/ZEYoxEY
+
 .en__field__input--radio:checked + .en__field__label:before{
   color: var(--theme-typography-radio-selected-color);
   background-color: var(--theme-typography-radio-radio-background-color);
