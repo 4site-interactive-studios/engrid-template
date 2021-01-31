@@ -14,7 +14,7 @@ body:not(#en__pagebuilder)
   .page-backgroundImage:not(.page-backgroundImageSet):before {
   background-position: top left;
   background-repeat: repeat;
-  background-image: var(--theme-page-backgroundImage-url); //@TODO Get SCSS variable working
+  background-image: var(--theme-page-backgroundImage-url); //@TODO2 Get SCSS variable working
   will-change: transform; // creates a new paint layer
 }
 
