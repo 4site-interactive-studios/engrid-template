@@ -1,10 +1,7 @@
-// NOTE: Any CSS Custom Properties changes should also be made in themes/starter-theme/sass/variables.scss
+/* All SCSS variables in engrid-variables.scss can be used as CSS Custom Properties on the theme */
 
-// @TODO There has to be a better way of defining breakpoints as a default and then adjust them up stream in the themes
-$slicer-breakpoints: 0 400px 600px 1024px 1200px;
-
-// @TODO Look into replicating "Teach a System of Space Visually" as a Development page that shows all styling decisions for the brand https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.fwng4aef7
-:root{
+/* All CSS Custom Properties should be scoped to the theme using CSS Data Attributes. */
+[data-engrid-theme="aiusa"]{
     // FIXED COLOR PALETTE
     --color-transparent: transparent;
     --color-white: rgba(255, 255, 255, 1);
@@ -79,7 +76,7 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
         
     // TYPOGRAPHY LABEL
     --theme-typography-label-font-family: var(--theme-typography-default-font-family);
-    --theme-typography-label-color: initial;
+    --theme-typography-label-color: #525252;
     --theme-typography-label-font-size: var(--theme-root-font-size);
     --theme-typography-label-font-weight: initial;
     --theme-typography-label-line-height: initial;
@@ -90,8 +87,8 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-typography-input-font-size: var(--theme-root-font-size);
     --theme-typography-input-font-weight: initial;
     --theme-typography-input-line-height: initial;
-    --theme-typography-input-background-color: var(--color-white);
-    --theme-typography-input-border-width: 1px;
+    --theme-typography-input-background-color: rgba(228, 228, 228, 0.36);
+    --theme-typography-input-border-width: 0px;
     --theme-typography-input-border-color: var(--color-black);
     --theme-typography-input-border-radius: initial;
     --theme-typography-input-placeholder-color: var(--theme-light-gray);
@@ -107,8 +104,8 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-typography-radio-color: var(--theme-cta);
     --theme-typography-radio-background-color: var(--color-white);
     --theme-typography-radio-border-width: 1px;
-    --theme-typography-radio-border-color: var(--color-black);
-    --theme-typography-radio-border-radius: 50%;
+    --theme-typography-radio-border-color: rgba(228, 228, 228, 0.36);
+    --theme-typography-radio-border-radius: 0px;
 
     // TYPOGRAPHY RADIO INPUT:FOCUS
     // TYPOGRAPHY RADIO INPUT:HOVER
@@ -125,8 +122,8 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-typography-checkbox-color: var(--color-white);
     --theme-typography-checkbox-background-color: var(--color-white);
     --theme-typography-checkbox-border-width: 1px;
-    --theme-typography-checkbox-border-color: var(--theme-black);
-    --theme-typography-checkbox-border-radius: 50%;
+    --theme-typography-checkbox-border-color: rgba(228, 228, 228, 0.36);
+    --theme-typography-checkbox-border-radius: 0px;
 
     // TYPOGRAPHY CHECKBOX INPUT:FOCUS
     // TYPOGRAPHY CHECKBOX INPUT:HOVER
@@ -137,7 +134,7 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     // TYPOGRAPHY CHECKBOX INPUT:CHECKED
     --theme-typography-checkbox-checked-content:"✓";
     --theme-typography-checkbox-checked-color: var(--theme-typography-checkbox-background-color);
-    --theme-typography-checkbox-checked-background-color: var(--theme-cta);
+    --theme-typography-checkbox-checked-background-color: var(--color-black);
     --theme-typography-checkbox-checked-border-color: var(--theme-typography-checkbox-border-color);
 
     // TYPOGRAPHY SELECT
@@ -146,8 +143,8 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-typography-select-font-size: var(--theme-root-font-size);
     --theme-typography-select-font-weight: initial;
     --theme-typography-select-line-height: initial;
-    --theme-typography-select-background-color: var(--color-white);
-    --theme-typography-select-border-width: 1px;
+    --theme-typography-select-background-color: rgba(228, 228, 228, 0.36);
+    --theme-typography-select-border-width: 0px;
     --theme-typography-select-border-color: var(--color-black);
     --theme-typography-select-border-radius: initial;
 
@@ -163,8 +160,8 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-typography-textarea-font-size: var(--theme-root-font-size);
     --theme-typography-textarea-font-weight: initial;
     --theme-typography-textarea-line-height: initial;
-    --theme-typography-textarea-background-color: var(--color-white);
-    --theme-typography-textarea-border-width: 1px;
+    --theme-typography-textarea-background-color: rgba(228, 228, 228, 0.36);
+    --theme-typography-textarea-border-width: 0px;
     --theme-typography-textarea-border-color: var(--color-black);
     --theme-typography-textarea-border-radius: initial;
     --theme-typography-textarea-placeholder-color: var(--theme-light-gray);
@@ -177,24 +174,24 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
     // TYPOGRAPHY BUTTON
     --theme-typography-button-font-family: var(--theme-typography-default-font-family);
-    --theme-typography-button-color: var(--color-white);
+    --theme-typography-button-color: var(--color-black);
     --theme-typography-button-font-size: var(--theme-root-font-size);
     --theme-typography-button-font-weight: initial;
     --theme-typography-button-line-height: initial;
-    --theme-typography-button-background-color: var(--color-black);
-    --theme-typography-button-border-width: initial;
-    --theme-typography-button-border-color: var(--color-black);
+    --theme-typography-button-background-color: var(--color-white);
+    --theme-typography-button-border-width: 1px;
+    --theme-typography-button-border-color: rgba(228, 228, 228, 0.36);
     --theme-typography-button-border-radius: initial;
     
     // TYPOGRAPHY BUTTON:FOCUS
     // TYPOGRAPHY BUTTON:HOVER
-    --theme-typography-button-focus-hover-color: var(--theme-typography-button-color);
-    --theme-typography-button-focus-hover-background-color: var(--theme-cta-hover);
-    --theme-typography-button-focus-hover-border-color: var(--theme-cta-hover);
+    --theme-typography-button-focus-hover-color: var(--theme-white);
+    --theme-typography-button-focus-hover-background-color: var(--color-black);
+    --theme-typography-button-focus-hover-border-color: var(--color-black);
 
     // TYPOGRAPHY PRIMARY BUTTON
     --theme-typography-primary-button-font-family: var(--theme-typography-button-font-family);
-    --theme-typography-primary-button-color: var(--color-white);
+    --theme-typography-primary-button-color: var(--color-black);
     --theme-typography-primary-button-font-size: var(--theme-typography-button-font-size);
     --theme-typography-primary-button-font-weight: var(--theme-typography-button-font-weight);
     --theme-typography-primary-button-line-height: var(--theme-typography-button-line-height);
@@ -205,9 +202,9 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
 
     // TYPOGRAPHY PRIMARY BUTTON:FOCUS
     // TYPOGRAPHY PRIMARY BUTTON:HOVER  
-    --theme-typography-primary-button-focus-hover-color: var(--theme-typography-button-focus-hover-color);
-    --theme-typography-primary-button-focus-hover-background-color: var(--theme-cta-hover);
-    --theme-typography-primary-button-focus-hover-border-color: var(--theme-typography-button-focus-hover-border-color);
+    --theme-typography-primary-button-focus-hover-color: var(--theme-typography-primary-button-color);
+    --theme-typography-primary-button-focus-hover-background-color: var(--theme-typography-primary-button-background-color);
+    --theme-typography-primary-button-focus-hover-border-color: var(--theme-typography-primary-button-border-color);
     
     // TYPOGRAPHY A
     --theme-typography-a-font-family: var(--theme-typography-default-font-family);
@@ -223,8 +220,8 @@ $slicer-breakpoints: 0 400px 600px 1024px 1200px;
     --theme-typography-a-focus-hover-text-decoration: initial;
 
     // CTA COLORS
-    --theme-cta: #0070BA;
-    --theme-cta-hover: #22a3cb;
+    --theme-cta: #ffff00;
+    --theme-cta-hover: #ffff00;
 
     // PAGE, CONTENT, and BODY BACKGROUND COLOR
     // Quick set the background color on all corresponding sections

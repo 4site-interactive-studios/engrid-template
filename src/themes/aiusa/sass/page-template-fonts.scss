@@ -1,0 +1,23 @@
+/* For the fastest critical page render times, don't load a custom font at all. But, if you must
+ * use @font-face and avoid importing an external font file that in turn then loads the final fonts
+ *
+ * BUILDOUT NOTE: For your render critical fonts, mirror of your font-face declaration in the <head> of your page
+ * template to start fetching them ASAP without the need for the main.css fuke to finish downloading and getting parsed.
+ *
+ * e.g. <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+ * e.g. @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap')
+*/
+
+/* Example For Loading a Custom Font */
+// @font-face {
+// 	font-family: 'Proxima Nova Bold';
+// 	src: local('Proxima Nova Bold'),
+// 	url(https://www.earthisland.org/components/site/default/asset/fonts/ProximaNova-Bold.woff2) format("woff2"),
+// 	url(https://www.earthisland.org/components/site/default/asset/fonts/ProximaNova-Bold.woff) format("woff"),
+// 	url(https://www.earthisland.org/components/site/default/asset/fonts/ProximaNova-Bold.ttf) format("truetype"),
+// 	url(https://www.earthisland.org/components/site/default/asset/fonts/ProximaNova-Bold.eot?#iefix) format("embedded-opentype"),
+// 	url(https://www.earthisland.org/components/site/default/asset/fonts/ProximaNova-Bold.svg#ProximaNova-Bold) format("svg");
+// 	font-weight: bold;
+// 	font-style: normal;
+// 	font-display: swap
+// }

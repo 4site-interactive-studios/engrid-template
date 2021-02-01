@@ -1,0 +1,19 @@
+/* Add your custom theme styles here */
+
+
+/* All headlines in the body are always capitalized */
+/* All label text in the body are capitalized */
+/* All button text in the body are always capitalized */
+[class*="body-"]{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    label,
+    button,
+    .button{
+        text-transform: uppercase;
+    }
+}

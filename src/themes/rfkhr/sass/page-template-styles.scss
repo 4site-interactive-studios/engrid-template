@@ -546,7 +546,7 @@ body:not(#en__pagebuilder)[data-engrid-footer-below-fold]
 .highlight {
   background-color: var(--theme-highlight-background-color);
   color: var(--theme-highlight-font-color);
-  padding: 0.5rem;
+  padding: 1ch;
   font-weight: 500;
   display: inline-block;
   // margin-left: -0.5rem;

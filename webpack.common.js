@@ -18,6 +18,16 @@ module.exports = {
       },
     }),
     new HtmlWebpackPlugin({
+      title: "AIUSA - Engaging Networks Page - Donation",
+      filename: "page-donation-aiusa.html",
+      template: "./src/templates/page-donation-aiusa.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+    }),      
+    new HtmlWebpackPlugin({
       title: "Engaging Networks Page - Donation",
       filename: "page-donation.html",
       template: "./src/templates/page-donation.html",

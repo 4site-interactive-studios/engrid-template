@@ -88,7 +88,7 @@ input.en__field__input{
     -webkit-box-sizing: border-box; // Shared between input, textarea, and select
     box-sizing: border-box; // Shared between input, textarea, and select
     margin: 0rem; // Shared between input, textarea, and select
-    padding: 0.5rem; // Shared between input, textarea, and select
+    padding: 1ch; // Shared between input, textarea, and select
     box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1); // Shared between input, textarea, and select
     transition: box-shadow 0.25s, border-color 0.25s ease-in-out; // Shared between input, textarea, and select
     border-style: solid; // Shared between input, textarea, and select
@@ -156,7 +156,7 @@ select.en__field__input--select{
     -webkit-box-sizing: border-box; // Shared between input, textarea, and select
     box-sizing: border-box; // Shared between input, textarea, and select
     margin: 0rem; // Shared between input, textarea, and select
-    padding: 0.5rem; // Shared between input, textarea, and select
+    padding: 1ch; // Shared between input, textarea, and select
     box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1); // Shared between input, textarea, and select
     transition: box-shadow 0.25s, border-color 0.25s ease-in-out; // Shared between input, textarea, and select
     border-style: solid; // Shared between input, textarea, and select
@@ -196,7 +196,7 @@ textarea{
     -webkit-box-sizing: border-box; // Shared between input, textarea, and select
     box-sizing: border-box; // Shared between input, textarea, and select
     margin: 0rem; // Shared between input, textarea, and select
-    padding: 0.5rem; // Shared between input, textarea, and select
+    padding: 1ch; // Shared between input, textarea, and select
     border-style: solid; // Shared between input, textarea, and select
     box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1); // Shared between input, textarea, and select
     transition: box-shadow 0.25s, border-color 0.25s ease-in-out; // Shared between input, textarea, and select
