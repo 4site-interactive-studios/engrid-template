@@ -1,33 +1,20 @@
-import * as app from "./utils/custom-methods";
-import ShowHideRadioCheckboxes from "./utils/show-hide-radio-checkboxes";
-import DonationAmount from "./events/donation-amount";
-import DonationFrequency from "./events/donation-frequency";
-import EnForm from "./events/en-form";
-import LiveVariables from "./utils/live-variables";
-import ProcessingFees from "./events/processing-fees";
-import Modal from "./utils/modal";
-import IE from "./utils/ie";
-import SimpleCountrySelect from "./utils/simple-country-select";
-import getUrlParameter from "./utils/query-string";
-import ApplePay from "./utils/apple-pay";
-import CapitalizeFields from "./utils/capitalize-fields";
-import ClickToExpand from "./utils/click-to-expand";
-
+import { DonationAmount, DonationFrequency, EnForm, ProcessingFees } from '@4site/engrid-events';
+import { ApplePay, CapitalizeFields, ClickToExpand, engrid, getUrlParameter, IE, LiveVariables, Modal, sendIframeHeight, ShowHideRadioCheckboxes, SimpleCountrySelect } from '@4site/engrid-common';
 
 // IE Warning
 const ie = new IE();
 
-import sendIframeHeight from "./utils/iframe";
 
-export const amount = new DonationAmount(
+
+export const amount = DonationAmount.getInstance(
   "transaction.donationAmt",
   "transaction.donationAmt.other"
 );
-export const frequency = new DonationFrequency("transaction.recurrpay");
-export const form = new EnForm();
+export const frequency = DonationFrequency.getInstance("transaction.recurrpay");
+export const form = EnForm.getInstance();
 
 // Processing Fees Event
-export const fees = new ProcessingFees();
+export const fees = ProcessingFees.getInstance();
 
 export const run = (opts: Object) => {
   const options = {
@@ -38,19 +25,19 @@ export const run = (opts: Object) => {
     ...opts,
   };
   // The entire App
-  app.setBackgroundImages(options.backgroundImage);
+  engrid.setBackgroundImages(options.backgroundImage);
 
-  app.inputPlaceholder();
-  app.watchInmemField();
-  app.watchRecurrpayField();
-  app.watchGiveBySelectField();
-  app.watchLegacyGiveBySelectField();
-  app.SetEnFieldOtherAmountRadioStepValue();
-  app.simpleUnsubscribe();
+  engrid.inputPlaceholder();
+  engrid.watchInmemField();
+  engrid.watchRecurrpayField();
+  engrid.watchGiveBySelectField();
+  engrid.watchLegacyGiveBySelectField();
+  engrid.SetEnFieldOtherAmountRadioStepValue();
+  engrid.simpleUnsubscribe();
 
-  app.contactDetailLabels();
-  app.easyEdit();
-  app.enInput.init();
+  engrid.contactDetailLabels();
+  engrid.easyEdit();
+  engrid.enInput.init();
 
   new ShowHideRadioCheckboxes("transaction.giveBySelect", "giveBySelect-");
   new ShowHideRadioCheckboxes("supporter.questions.180165", "giveBySelect-");
@@ -58,7 +45,7 @@ export const run = (opts: Object) => {
   new ShowHideRadioCheckboxes("transaction.recurrpay", "recurrpay-");
 
   // Controls if the Theme has a the "Debug Bar"
-  // app.debugBar();
+  // engrid.debugBar();
 
   // Event Listener Examples
   amount.onAmountChange.subscribe((s) => console.log(`Live Amount: ${s}`));

@@ -1,4 +1,4 @@
-import { run } from "../../ts/app";
+import { run } from "../..";
 import "./sass/main.scss";
 
 const options = {
@@ -23,7 +23,7 @@ const options = {
 if (document.readyState !== "loading") {
   run(options);
 } else {
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     run(options);
   });
 }

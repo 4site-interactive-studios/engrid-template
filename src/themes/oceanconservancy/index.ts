@@ -1,7 +1,5 @@
-import { run } from "../../ts/app";
+import { run, form } from "../..";
 import "./sass/main.scss";
-
-import { form } from "../../ts/app/index";
 
 const options = {
   // backgroundImage: [
