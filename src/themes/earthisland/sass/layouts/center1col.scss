@@ -83,29 +83,11 @@ h1 {
   margin-top: 5px;
 }
 
+
 [data-engrid-layout="centerleft1col"],
 [data-engrid-layout="centercenter1col"],
 [data-engrid-layout="centercenter1col-wide"],
 [data-engrid-layout="centerright1col"] {
-  .page-alert,
-  .content-header,
-  .body-banner,
-  .body-bannerOverlay,
-  .body-side,
-  .body-footerOutside{
-    // display: none;
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    -webkit-clip-path: inset(100%);
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
 
   .body-headerOutside {
     margin-top: 2rem;
@@ -129,6 +111,28 @@ h1 {
   .content-footer.pseudo-subgrid > div {
     grid-column: bc;
   }
+
+  // The choice of hiding sections should be handled by the Client theme
+  // .page-alert,
+  // .content-header,
+  // .body-banner,
+  // .body-bannerOverlay,
+  // .body-side,
+  // .body-footerOutside{
+  //   // display: none;
+  //   position: absolute;
+  //   width: 1px;
+  //   height: 1px;
+  //   margin: -1px;
+  //   border: 0;
+  //   padding: 0;
+  //   white-space: nowrap;
+  //   -webkit-clip-path: inset(100%);
+  //   clip-path: inset(100%);
+  //   clip: rect(0 0 0 0);
+  //   overflow: hidden;
+  // }
+
 }
 
 body:not(#en__pagebuilder)[data-engrid-layout="centerleft1col"],

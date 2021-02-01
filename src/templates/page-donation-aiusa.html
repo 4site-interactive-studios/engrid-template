@@ -47,10 +47,33 @@
         body[data-engrid-embedded]{
             background-color: transparent !important;
         }
+        
+        .skip-link{
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            padding: 2ch 1ch !important;
+            z-index: 2147483647 !important;
+            display: block !important;
+            font-family: sans-serif !important;
+        }
+        
+        .skip-link:not(:focus):not(:active) {
+            border: 0;
+            clip: rect(1px,1px,1px,1px);
+            -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute!important;
+            width: 1px;
+            word-wrap: normal!important;
+        }
     </style>  
 
     <!-- Placed here so that downloading begins before Engaging Network's CSS and JS files -->
-    <link rel="preload" href="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10075/main.css?v=1611375974000" as="style">
+    <!-- <link rel="preload" href="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10075/main.css?v=1611375974000" as="style"> -->
     <link rel="preload" href="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10075/logo-rfkhr.png?v=1604271164000" as="image">
 
   <meta name="title" content=""/>
@@ -61,13 +84,14 @@
 <link rel="canonical" href="https://netdonor.net/page/74408/donate/1?mode=DEMO&amp;locale=en-US"/>
 <meta property="og:url" content="https://netdonor.net/page/74408/donate/1?mode=DEMO&amp;locale=en-US"/>
 <link rel="image_src" href=""/>
-<link href='https://donate.amnestyusa.org/ea-demo/frontend/pbAssets/build/css/enPage.css?v=3.60.1' rel='stylesheet' type='text/css' />
+<link href='https://netdonor.net/ea-demo/frontend/pbAssets/build/css/enPage.css?v=3.60.1' rel='stylesheet' type='text/css' />
 <script>var pageJson = {"pageCount":2,"redirectPresent":false,"pageNumber":1,"campaignId":203154,"campaignPageId":74408,"clientId":1839};</script>
-<script src='https://donate.amnestyusa.org/page/74408/pagedata.js?locale=en-US&ea.profile.id=0'></script>
-<script src='https://donate.amnestyusa.org/page/74408/productvariants.js'></script>
-<script src='https://donate.amnestyusa.org/ea-demo/frontend/pbAssets/build/js/enPage.js?v=3.60.1'></script>
+<script src='https://netdonor.net/page/74408/pagedata.js?locale=en-US&ea.profile.id=0'></script>
+<script src='https://netdonor.net/page/74408/productvariants.js'></script>
+<script src='https://netdonor.net/ea-demo/frontend/pbAssets/build/js/enPage.js?v=3.60.1'></script>
 </head>
-  <body data-engrid-layout="centercenter1col" data-engrid-theme="aiusa" data-engrid-errors="">
+  <body data-engrid-layout="centerleft1col" data-engrid-theme="aiusa" data-engrid-errors="">
+     <a class="skip-link" href="#maincontent">Skip to main content</a>
     
     <!-- Quickly check to see if the page is in an iFrame and if so set the corresponding Custom Attribute so it can also set the background-color. Must be after <body> otherwise there will be a flash of color -->
     <script>
@@ -100,31 +124,79 @@
 		<div class="en__component en__component en__component--column en__component--advcolumn page-alert">
 </div>
 		<div class="en__component en__component en__component--column en__component--advcolumn content-header pseudo-subgrid">
-		<div class="en__component en__component--codeblock"><!-- Placeholder Generator: https://png-pixel.com/ -->
+		<div class="en__component en__component--codeblock"><header>
+<div id="header-logo-wrapper">
+<!-- Placeholder Generator: https://png-pixel.com/ -->
 <!-- Placeholder 142x60 rgba(255, 255, 0, 1) -->
 <a id="header-logo" href="https://www.amnestyusa.org/" target="_blank">
   <img alt="Amnesty International USA" data-src="https://via.placeholder.com/142x60/FFFF00/000000.png?text=(142x60)" height="60px" width="142px">
 </a>
 </div>
-		<div class="en__component en__component--codeblock"><p><strong>Amnesty International USA is a Nobel-Prize winning organization.</strong></p
-<p>We accept no government money for our campaigns and research.</p></div>
-		<div class="en__component en__component--codeblock"><div id="menu-wrapper">
-    <div id="menu-label" class="inactive"><span id="menu-icon"></span>Other Ways to Give</div>
-    <ul id="menu-flyout" class="inactive">
-        <li><a href="#">Renew</a></li>
-        <li><a href="#">Honorary</a></li>
-        <li><a href="#">Workplace</a></li>
-        <li><a href="#">Give Stock</a></li>
-        <li><a href="#">Donor Advices Fund</a></li>
-        <li><a href="#">Planned Giving</a></li>
-        <li><a href="#">FAQ</a></li>
-    </ul>
-</div></div>
+
+<div id="social-proof-wrapper">
+<p><strong>Amnesty International USA is a Nobel-Prize winning organization.</strong></p>
+<p>We accept no government money for our campaigns and research.</p>
+</div>
+
+<div id="menu-wrapper">
+    <!--<div id="menu-label" class="inactive"><span id="menu-icon"></span>Other Ways to Give</div>-->
+    <!--<ul id="menu-flyout" class="inactive">-->
+    <!--    <li><a href="#">Renew</a></li>-->
+    <!--    <li><a href="#">Honorary</a></li>-->
+    <!--    <li><a href="#">Workplace</a></li>-->
+    <!--    <li><a href="#">Give Stock</a></li>-->
+    <!--    <li><a href="#">Donor Advices Fund</a></li>-->
+    <!--    <li><a href="#">Planned Giving</a></li>-->
+    <!--    <li><a href="#">FAQ</a></li>-->
+    <!--</ul>-->
+    
+<!-- REF: https://www.w3.org/WAI/tutorials/menus/flyout/#use-parent-as-toggle -->    
+<style>
+    nav > ul li       ul { display: none; }
+    nav > ul li:hover ul { display: block;}    
+</style>    
+    
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+    var menuItems = document.querySelectorAll('li.has-submenu');
+	Array.prototype.forEach.call(menuItems, function(el, i){
+		el.addEventListener("mouseover", function(event){
+			this.className = "has-submenu open";
+		});
+		el.addEventListener("mouseout", function(event){
+			document.querySelector(".has-submenu.open").className = "has-submenu";
+		});
+	});
+});
+
+
+
+</script>    
+    
+<nav aria-label="Main Navigation">
+	<ul>
+		<li class="has-submenu">
+			<a href="…" aria-haspopup="true" aria-expanded="false">Other Ways to Give</a>
+			<ul>
+        	    <li><a href="#">Renew</a></li>
+                <li><a href="#">Honorary</a></li>
+                <li><a href="#">Workplace</a></li>
+                <li><a href="#">Give Stock</a></li>
+                <li><a href="#">Donor Advices Fund</a></li>
+                <li><a href="#">Planned Giving</a></li>
+                <li><a href="#">FAQ</a></li>
+			</ul>
+    	</li>
+	</ul>
+</nav>    
+    
+</div>
+</header></div>
 </div>
 		<div class="en__component en__component en__component--column en__component--advcolumn body-headerOutside">
 </div>
 		<div class="en__component en__component en__component--column en__component--advcolumn body-header">
-		<div class="en__component en__component--codeblock"><!-- Transparent Placeholder: src="image.jpg" /> -->
+		<div class="en__component en__component--codeblock"><!-- Transparent Placeholder: src="image.jpg"/> -->
 <!-- Light Grey Placeholder: /> -->
 <!-- Placeholder Generator: https://png-pixel.com/ -->
 <!-- Placeholder 520x31 rgba(223, 223, 223, 1) -->
@@ -135,6 +207,8 @@
 		<div class="en__component en__component en__component--column en__component--advcolumn body-bannerOverlay">
 </div>
 		<div class="en__component en__component en__component--column en__component--advcolumn body-top">
+		<div class="en__component en__component--codeblock"><!--For user's navigating with a keyboard or screen reader the first option they will be presented with is to "Skip to main content". Doing this will jump them directly to wherever this code block is located.-->
+<span id="maincontent"></span></div>
 		<div class="en__component en__component--copyblock click-to-expand">
 	<h1>Lorem ipsum dolor</h1>
 
@@ -714,7 +788,7 @@
 	
 	
 </div>
-		<div class="en__component en__component--formblock giveBySelect-Check">
+		<div class="en__component en__component--formblock giveBySelect-Check i2-50 i2-start i3-50 i3-end">
 	
 	
 			<div class="en__field en__field--select en__field--871611 en__field--bankAccountType">
@@ -775,27 +849,40 @@
 		<div class="en__component en__component en__component--column en__component--advcolumn content-preFooter pseudo-subgrid">
 </div>
 		<div class="en__component en__component en__component--column en__component--advcolumn content-footer pseudo-subgrid">
-		<div class="en__component en__component--codeblock"><!-- Placeholder Generator: https://png-pixel.com/ -->
+		<div class="en__component en__component--codeblock"><footer>
+<div id="footer-logo-wrapper">
+<!-- Placeholder Generator: https://png-pixel.com/ -->
 <!-- Placeholder 62x62 rgba(255, 255, 0, 1) -->
 <a id="footer-logo" href="https://www.amnestyusa.org/" target="_blank">
   <img alt="Amnesty International USA" data-src="https://via.placeholder.com/142x60/FFFF00/000000.png?text=(62x62)" height="62px" width="62px">
 </a>
 </div>
-		<div class="en__component en__component--codeblock"><ul id="footer-menu">
+
+<div id="footer-menu-wrapper">
+<ul id="footer-menu">
     <li><a href="#">Privacy Policy</a></li>
     <li><a href="#">Terms & Conditions</a></li>
     <li><span class="copyright">©<span class="copyright-year">2021</span> AMNESTY INTERNATIONAL</span></li>
-</ul></div>
-		<div class="en__component en__component--codeblock"><ul id="footer-social">
+</ul>
+</div>
+
+<div id="footer-social-wrapper">
+<ul id="footer-social">
     <li><a href="#" class="icon-facebook grayscale">Amnesty International's Facebook</a></li>
     <li><a href="#" class="icon-twitter grayscale">Amnesty International's Twitter</a></li>
     <li><a href="#" class="icon-instagram grayscale">Amnesty International's Instagram</a></li>
     <li><a href="#" class="icon-youtube grayscale">Amnesty International's Youtube</a></li>
     <li><a href="#" class="icon-tumblr grayscale">Amnesty International's Tumblr</a></li>
     <li><a href="#" class="icon-medium grayscale">Amnesty International's Medium</a></li>
-</ul></div>
-		<div class="en__component en__component--codeblock"><!-- Thank you for supporting 4Site Studios -->
+</ul>
+</div>
+
+<div id="designed-by-4site-wrapper">
+<!-- Thank you for supporting 4Site Studios -->
 <div class="light-font" id="designed-by-4site"><a href="https://www.4sitestudios.com/engaging-networks" target="_blank" title="4Site Studios"><span class="text-fade">Crafted with </span><span id="made-with-love">&hearts;</span><span class="text-fade"> by 4Site Studios</span></a></div>
+</div>
+
+</footer>
 </div>
 </div>
 		<div class="en__component en__component en__component--column en__component--advcolumn page-backgroundImage pseudo-subgrid">
@@ -851,7 +938,7 @@
     <style>
         .content-footerSpacer,
         .content-header{
-            display: block;
+            /* display: block; */
             height: auto;
             width: auto;
             clip: initial;
@@ -861,3 +948,4 @@
     
    </body>
 </html>
+<!-- Reference - Donation with Premium (Test Gateway):74408:203154:1839 -->
