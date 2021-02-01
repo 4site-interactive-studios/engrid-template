@@ -13,6 +13,7 @@ Designed and Developed by [4Site Studios](http://4sitestudios.com/en?ms=github) 
 - Amnesty International USA
 - Earth Island Institute
 - Human Rights Campaign via Lautman Maska Neill & Company
+- The Humane Society of the United States
 - International Fund for Animal Welfare
 - Mercy for Animals
 - National Trust for Historic Preservation
