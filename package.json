@@ -1,7 +1,6 @@
 {
   "name": "@4site/engrid",
   "version": "2.0.0",
-  "client": "aiusa",
   "private": false,
   "description": "Page Template Framework for Engaging Networks",
   "main": "index.js",
@@ -23,6 +22,7 @@
   "license": "Unlicense",
   "url": "https://github.com/4site-interactive-studios/engrid",
   "devDependencies": {
+    "@4site/engrid-styles": "*",
     "@4site/engrid-events": "*",
     "@4site/engrid-common": "*",
     "@babel/core": "^7.12.10",

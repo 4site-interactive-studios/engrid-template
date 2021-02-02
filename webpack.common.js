@@ -4,7 +4,7 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/themes/" + process.env.npm_package_client + "/index.ts",
+    main: "./src/index.ts",
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
@@ -26,7 +26,7 @@ module.exports = {
         removeComments: true,
         collapseWhitespace: false,
       },
-    }),      
+    }),
     new HtmlWebpackPlugin({
       title: "Engaging Networks Page - Donation",
       filename: "page-donation.html",
@@ -56,7 +56,7 @@ module.exports = {
         removeComments: true,
         collapseWhitespace: false,
       },
-    }),    
+    }),
     new HtmlWebpackPlugin({
       title: "RFK HR - Engaging Networks Page - Donation",
       filename: "page-donation-rfkhr.html",
