@@ -20,4 +20,4 @@ The next command you need to run will the URL for your Github repository you jus
 
 `git push -u origin main`
 
-You have now duplicated a clean copy of ENGrid into your own Github Repository.
+You have now duplicated a clean copy of ENGrid into your own Github Repository!
