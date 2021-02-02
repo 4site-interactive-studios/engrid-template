@@ -15,7 +15,7 @@ In VSCode open your local copy of the repository you just created (engrid-XYZ). 
 
 `git branch -M main`
 
-The next command you need to run will the URL for your Github repository you just created. ABC is used below as a stand in for the account under which the repository was created (e.g `github.com:/your-account-name/engrid-XHZ.git`).
+The next command you need to run will the URL for your Github repository you just created. ABC is used below as a stand in for the account under which the repository was created (e.g `github.com:/your-account-name/engrid-XYZ.git`).
 
 `git remote add origin gig@github.com:ABC/engrid-XYZ.git`
 
