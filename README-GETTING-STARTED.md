@@ -1,3 +1,12 @@
+The ENGrid repo is now a "Starter Theme" (https://github.com/4site-interactive-studios/engrid). Which we (4Site) duplicate for each client theme we want to build, but you most likely can just Fork it. The only reason we are not forking it is that it turns out you can only fork a repo once per Github account and we need to do it many times over.
+
+This "Start Theme" now includes an NPM dependencies for the upstream ENGrid code which now lives at (https://github.com/4site-interactive-studios/engrid-scripts)
+Here's an example of a cloned ENGrid "Starter Theme" then being customized with the client SASS (https://github.com/4site-interactive-studios/engrid-aiusa)
+
+--
+
+If you're not interested in forking the repo, here are instructions for cloning it into your own repository.
+
 From your command line run the following to create a clean copy on your computer of the main ENGrid repository. And wherever you see XYZ replace that with the desired name of your project.
 
 You need [Node.js](https://nodejs.org/en/download/) to use `npx`.
