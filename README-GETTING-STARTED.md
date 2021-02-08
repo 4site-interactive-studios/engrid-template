@@ -1,6 +1,6 @@
 The ENGrid repo is now a "Starter Theme" (https://github.com/4site-interactive-studios/engrid). Which we (4Site) duplicate for each client theme we want to build, but you most likely can just Fork it. The only reason we are not forking it is that it turns out you can only fork a repo once per Github account and we need to do it many times over.
 
-This "Start Theme" now includes an NPM dependencies for the upstream ENGrid code which now lives at (https://github.com/4site-interactive-studios/engrid-scripts)
+This "Start Theme" now includes an NPM dependencies for the upstream ENGrid code (e.g. SASS and Typescript) which now lives at (https://github.com/4site-interactive-studios/engrid-scripts)
 Here's an example of a cloned ENGrid "Starter Theme" then being customized with the client SASS (https://github.com/4site-interactive-studios/engrid-aiusa).
 
 --
