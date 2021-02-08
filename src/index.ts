@@ -1,4 +1,4 @@
-import { Options, App } from "@4site/engrid-common";
+import { Options, App } from "../../engrid-scripts/packages/common";
 import "./sass/main.scss";
 
 const options: Options = {
@@ -21,8 +21,9 @@ const options: Options = {
   applePay: false,
   CapitalizeFields: false,
   ClickToExpand: true,
+  CurrencySymbol: '$',
+  CurrencySeparator: '.',
   onLoad: () => console.log("Starter Theme Loaded"),
-  onResize: () => console.log("Starter Theme Window Resized"),
-  submitLabel: "Give"
+  onResize: () => console.log("Starter Theme Window Resized")
 };
 new App(options);
