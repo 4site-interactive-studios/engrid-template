@@ -1,4 +1,5 @@
-import { Options, App } from "../../engrid-scripts/packages/common";
+import { Options, App } from "@4site/engrid-common";
+// import { Options, App } from "../../engrid-scripts/packages/common";
 import "./sass/main.scss";
 
 const options: Options = {
