@@ -1,6 +1,6 @@
 const path = require("path");
 const common = require("./webpack.common");
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -10,14 +10,14 @@ module.exports = merge(common, {
   mode: "production",
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
   },
   optimization: {
-    minimizer: [new OptimizeCssAssetsPlugin(), new TerserPlugin()]
+    minimizer: [new OptimizeCssAssetsPlugin(), new TerserPlugin()],
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name].css" }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
   ],
   module: {
     rules: [
@@ -30,12 +30,12 @@ module.exports = merge(common, {
             loader: "postcss-loader", // 2. Add Autoprefixer to CSS
             options: {
               ident: "postcss",
-              plugins: [require("autoprefixer")]
-            }
+              plugins: [require("autoprefixer")],
+            },
           },
-          "sass-loader" // 1. From SASS to CSS
-        ]
-      }
-    ]
-  }
+          "sass-loader", // 1. From SASS to CSS
+        ],
+      },
+    ],
+  },
 });
