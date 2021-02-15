@@ -7,7 +7,7 @@ Only the current "main" branch is explicitly supported
 | Version | Supported          |
 | ------- | ------------------ |
 | main    | :white_check_mark: |
-| < 4.0   | :x:                |
+| <       | :x:                |
 
 ## Reporting a Vulnerability
 
