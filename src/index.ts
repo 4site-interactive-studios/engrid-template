@@ -5,7 +5,7 @@ import "./sass/main.scss";
 const options: Options = {
   ModalDebug: true,
   applePay: false,
-  CapitalizeFields: false,
+  CapitalizeFields: true,
   ClickToExpand: true,
   CurrencySymbol: '$',
   CurrencySeparator: '.',
