@@ -11,7 +11,7 @@ From your command line run the following to create a clean copy on your computer
 
 You need [Node.js](https://nodejs.org/en/download/) to use `npx`.
 
-`npx degit https://github.com/4site-interactive-studios/engrid engrid-XYZ`
+`npx degit https://github.com/4site-interactive-studios/engrid#main engrid-XYZ`
 
 Now create a new repository on Github by the same name (e.g. engrid-XYZ)
 
