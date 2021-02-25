@@ -5,17 +5,20 @@ Here's an example of a cloned ENGrid "Starter Theme" then being customized with 
 
 --
 
-If you're not interested in forking the repo, here are instructions for cloning it into your own repository.
+If you can Fork the repo you should, otherwise you'll need to duplicate it into a new repo. Intructions for the duplication process are below.
 
-From your command line run the following to create a clean copy on your computer of the main ENGrid repository. And wherever you see XYZ replace that with the desired name of your project.
-
+**Prep**
 You need [Node.js](https://nodejs.org/en/download/) to use `npx`.
 
+**Notes**
+XYZ = Your abreviated organizational name (e.g. peta, nwf, ewg)
+
+**Instructions**
+Got to GitHub and create a new repository with the name (e.g. engrid-XYZ). Replace XYZ with your abreviated organizational name
+
+From your command line (Terminal or VSCode) navigate to an empty folder (this includes no hidden files). Run the following code to create a clean copy of the ENGrid repo in that folder. Then stage everything for committing and rename the default branch to "main".
+
 `npx degit https://github.com/4site-interactive-studios/engrid#main engrid-XYZ`
-
-Now create a new repository on Github by the same name (e.g. engrid-XYZ)
-
-In VSCode open your local copy of the repository you just created (engrid-XYZ). Then in VSCode's Terminal run:
 
 `git init`
 
@@ -25,7 +28,7 @@ In VSCode open your local copy of the repository you just created (engrid-XYZ). 
 
 `git branch -M main`
 
-The next command you need to run will the URL for your Github repository you just created. ABC is used below as a stand in for the account under which the repository was created (e.g `github.com:/your-account-name/engrid-XYZ.git`).
+For the next command you need to the URL for your Github repository created. ABC is used below as a stand in for the GitHub account name under which the repository was created (e.g `github.com:/your-account-name/engrid-XYZ.git`).
 
 `git remote add origin gig@github.com:ABC/engrid-XYZ.git`
 
