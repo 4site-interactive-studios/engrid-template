@@ -8,12 +8,15 @@ Here's an example of a cloned ENGrid "Starter Theme" then being customized with 
 If you can Fork the repo you should, otherwise you'll need to duplicate it into a new repo. Intructions for the duplication process are below.
 
 **Prep**
+
 You need [Node.js](https://nodejs.org/en/download/) to use `npx`.
 
 **Notes**
+
 XYZ = Your abreviated organizational name (e.g. peta, nwf, ewg)
 
 **Instructions**
+
 Got to GitHub and create a new repository with the name (e.g. engrid-XYZ). Replace XYZ with your abreviated organizational name
 
 From your command line (Terminal or VSCode) navigate to an empty folder (this includes no hidden files). Run the following code to create a clean copy of the ENGrid repo in that folder. Then stage everything for committing and rename the default branch to "main".
