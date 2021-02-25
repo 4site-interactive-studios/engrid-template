@@ -33,7 +33,7 @@ From your command line (Terminal or VSCode) navigate to an empty folder (this in
 
 For the next command you need to the URL for your Github repository created. ABC is used below as a stand in for the GitHub account name under which the repository was created (e.g `github.com:/your-account-name/engrid-XYZ.git`).
 
-`git remote add origin gig@github.com:ABC/engrid-XYZ.git`
+`git remote add origin git@github.com:ABC/engrid-XYZ.git`
 
 `git push -u origin main`
 
