@@ -9,7 +9,7 @@ const options: Options = {
   ClickToExpand: true,
   CurrencySymbol: '$',
   CurrencySeparator: '.',
-  ImageAttribution: true,
+  MediaAttribution: true,
   onLoad: () => console.log("Starter Theme Loaded"),
   onResize: () => console.log("Starter Theme Window Resized")
 };
