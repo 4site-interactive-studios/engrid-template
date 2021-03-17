@@ -2,7 +2,7 @@
  * use @font-face and avoid importing an external font file that in turn then loads the final fonts
  *
  * BUILDOUT NOTE: For your render critical fonts, mirror of your font-face declaration in the <head> of your page
- * template to start fetching them ASAP without the need for the main.css fuke to finish downloading and getting parsed.
+ * template to start fetching them ASAP without the need for the engrid.css fuke to finish downloading and getting parsed.
  *
  * e.g. <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
  * e.g. @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap')
