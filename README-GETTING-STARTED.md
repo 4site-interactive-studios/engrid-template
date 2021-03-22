@@ -19,7 +19,7 @@ XYZ = Your abreviated organizational name (e.g. peta, nwf, ewg)
 
 Got to GitHub and create a new repository with the name (e.g. engrid-XYZ). Replace XYZ with your abreviated organizational name
 
-From your command line (Terminal or VSCode) *navigate to an empty folder* (this includes no hidden files). Run the following code to create a clean copy of the ENGrid repo in that folder. Then stage everything for committing and rename the default branch to "main".
+From your command line (Terminal or VSCode) **navigate to an empty folder** (this includes no hidden files). Run the following code to create a clean copy of the ENGrid repo in that folder. Then stage everything for committing and rename the default branch to "main".
 
 `npx degit https://github.com/4site-interactive-studios/engrid#main engrid-XYZ`
 
