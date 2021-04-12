@@ -10,6 +10,7 @@ const options: Options = {
   CurrencySymbol: '$',
   CurrencySeparator: '.',
   MediaAttribution: true,
+  Debug: true,
   onLoad: () => console.log("Starter Theme Loaded"),
   onResize: () => console.log("Starter Theme Window Resized")
 };
