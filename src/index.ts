@@ -3,14 +3,13 @@ import { Options, App } from "@4site/engrid-common"; // Uses ENGrid via NPM
 import "./sass/main.scss";
 
 const options: Options = {
-  ModalDebug: true,
   applePay: false,
   CapitalizeFields: true,
   ClickToExpand: true,
   CurrencySymbol: '$',
   CurrencySeparator: '.',
   MediaAttribution: true,
-  Debug: true,
+  Debug: App.getUrlParameter('debug') == 'true' ? true : false,
   onLoad: () => console.log("Starter Theme Loaded"),
   onResize: () => console.log("Starter Theme Window Resized")
 };
