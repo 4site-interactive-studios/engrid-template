@@ -1,7 +1,5 @@
-const path = require("path");
-var HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
-
 module.exports = {
   entry: {
     engrid: "./src/index.ts",
@@ -12,90 +10,21 @@ module.exports = {
       title: "Engaging Networks - Page Type Selection",
       template: "./src/index.html",
       inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: false,
-      },
+      minify: false,
     }),
     new HtmlWebpackPlugin({
-      title: "AIUSA - Engaging Networks Page - Donation",
-      filename: "page-donation-aiusa.html",
-      template: "./src/templates/page-donation-aiusa.html",
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      title: "Engaging Networks Page - Donation",
+      title: "Page - Donation",
       filename: "page-donation.html",
       template: "./src/templates/page-donation.html",
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: false,
-      },
+      inject: false,
+      minify: false,
     }),
     new HtmlWebpackPlugin({
-      title: "Ocean Conservancy - Engaging Networks Page - Donation",
-      filename: "page-donation-oc.html",
-      template: "./src/templates/page-donation-oc.html",
+      title: "Page - Thank You",
+      filename: "thank-you.html",
+      template: "./src/templates/thank-you.html",
       inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      title: "RFK HR - Engaging Networks Page - Advocacy",
-      filename: "page-advocacy-rfkhr.html",
-      template: "./src/templates/page-advocacy-rfkhr.html",
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      title: "RFK HR - Engaging Networks Page - Donation",
-      filename: "page-donation-rfkhr.html",
-      template: "./src/templates/page-donation-rfkhr.html",
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      title: "Ocean Conservancy - Engaging Networks Page - Donation",
-      filename: "page-donation-applepay.html",
-      template: "./src/templates/page-donation-applepay.html",
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      title: "Engaging Networks Page - Sign Up",
-      filename: "page-sign-up.html",
-      template: "./src/templates/page-sign-up.html",
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      title: "Engaging Networks Email - eCard",
-      filename: "email-ecard.html",
-      template: "./src/templates/email-ecard.html",
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: false,
-      },
+      minify: false,
     }),
   ],
   module: {
@@ -127,9 +56,24 @@ module.exports = {
       },
       {
         test: /\.(html)$/,
-        use: {
-          loader: "html-loader",
-        },
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              minimize: false,
+              sources: false,
+            },
+          },
+          {
+            loader: "posthtml-loader",
+            options: {
+              ident: "posthtml",
+              // skipParse: true,
+              // parser: "PostHTML Parser",
+              plugins: [require("posthtml-include")({ encoding: "utf8" })],
+            },
+          },
+        ],
       },
     ],
   },

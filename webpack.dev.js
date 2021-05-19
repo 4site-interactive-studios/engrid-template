@@ -14,26 +14,20 @@ module.exports = merge(common, {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[name].[ext]',
-              outputPath: 'fonts/'
-            }
-          }
-        ]
+              name: "[name].[ext]",
+              outputPath: "fonts/",
+            },
+          },
+        ],
       },
       {
         test: /\.scss$/,
         use: [
           "style-loader", //4. Inject CSS into DOM
           "css-loader", // 3. From css to vanilla js
-          {
-            loader: "postcss-loader", // 2. Add Autoprefixer to CSS
-            options: {
-              ident: "postcss",
-              plugins: [require("autoprefixer")],
-            },
-          },
+          "postcss-loader", // 2. Add Autoprefixer to CSS
           "sass-loader", //1. From SASS to CSS
         ],
       },
