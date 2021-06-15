@@ -2,10 +2,16 @@
 <html lang="en">
   <head>
     <include
-      src="src/templates/includes/head.html"
+      src="src/templates/includes/page-wrapper-elements/head.html"
       locals='{
         "theme": "engrid",
         "domain": "https://"
+    }'
+    ></include>
+    <include
+    src="src/templates/includes/brand-guide-elements/styles.html"
+    locals='{
+      "theme": "engrid",
     }'
     ></include>
   </head>
@@ -13,10 +19,10 @@
     data-engrid-layout="centercenter1col"
     data-engrid-theme="engrid"
     data-engrid-add-input-placeholders
-    data-engrid-errors="fancy"
+    data-engrid-embedded
   >
     <include
-      src="src/templates/includes/body.html"
+      src="src/templates/includes/page-wrapper-elements/body.html"
       locals='{
         "theme": "engrid",
     }'
@@ -24,7 +30,7 @@
     <div id="engrid">
       <!-- Start EN Page Builder -->
       <include
-        src="src/templates/includes/thank-you-form.html"
+        src="src/templates/includes/page-contents/page-contents-brand-guide.html"
         locals='{
         "theme": "engrid",
     }'
@@ -32,7 +38,7 @@
       <!-- End EN Page Builder -->
     </div>
     <include
-      src="src/templates/includes/footer.html"
+      src="src/templates/includes/page-wrapper-elements/footer.html"
       locals='{
         "theme": "engrid",
     }'
