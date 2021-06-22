@@ -929,7 +929,19 @@ h1.brand-guide-section-header{
 <p>Not supported by ENGrid</p></div>
     <div class="brand-guide-section"><h1 class="brand-guide-section-header">Donation</h1>
 <h2 class="brand-guide-section-header">EN Tag Field: Gift Frequency</h2>
-<div class="en__component en__component--formblock recurring-payment en-row-center">
+<div class="en__component en__component--formblock recurring-payment">
+  <div class="en__field en__field--radio en__field--407139 en__field--recurrpay">
+    <div class="en__field__element en__field__element--radio">
+      <div class="en__field__item">
+        <input checked="" class="en__field__input en__field__input--radio" id="en__field_transaction_recurrpay0" name="transaction.recurrpay" type="radio" value="Y"> <label class="en__field__label en__field__label--item" for="en__field_transaction_recurrpay0">Give Monthly</label>
+      </div>
+      <div class="en__field__item">
+        <input class="en__field__input en__field__input--radio" id="en__field_transaction_recurrpay1" name="transaction.recurrpay" type="radio" value="N"> <label class="en__field__label en__field__label--item" for="en__field_transaction_recurrpay1">Give Once</label>
+      </div>
+    </div>
+  </div><input autocomplete="none" class="en__field__input en__field__input--hidden" name="transaction.recurrday" type="hidden" value="11"> <input autocomplete="none" class="en__field__input en__field__input--hidden" name="transaction.recurrfreq" type="hidden" value="MONTHLY"> <input class="en__field__input en__field__input--hidden" name="transaction.paycurrency" type="hidden" value="USD">
+</div>
+<div class="en__component en__component--formblock recurring-payment radio-to-buttons">
   <div class="en__field en__field--radio en__field--407139 en__field--recurrpay">
     <div class="en__field__element en__field__element--radio">
       <div class="en__field__item">
@@ -943,6 +955,35 @@ h1.brand-guide-section-header{
 </div>
 
 <h2 class="brand-guide-section-header">EN Tag Field: Gift Amount</h2>
+<div class="en__component en__component--formblock" style="">
+	<div class="en__field en__field--radio en__field--withOther en__field--914979 en__field--donationAmt en__mandatory">
+		<label class="en__field__label" style="">Donation Amount</label>
+		<div class="en__field__element en__field__element--radio">
+			<div class="en__field__item">
+				<input class="en__field__input en__field__input--radio" id="transaction_donationAmt0" name="transaction.donationAmt" type="radio" value="250"> <label class="en__field__label en__field__label--item" for="transaction_donationAmt0">$250</label>
+			</div>
+			<div class="en__field__item">
+				<input class="en__field__input en__field__input--radio" id="transaction_donationAmt1" name="transaction.donationAmt" type="radio" value="100"> <label class="en__field__label en__field__label--item" for="transaction_donationAmt1">$100</label>
+			</div>
+			<div class="en__field__item">
+				<input class="en__field__input en__field__input--radio" id="transaction_donationAmt2" name="transaction.donationAmt" type="radio" value="50"> <label class="en__field__label en__field__label--item" for="transaction_donationAmt2">$50</label>
+			</div>
+			<div class="en__field__item">
+				<input class="en__field__input en__field__input--radio" id="transaction_donationAmt3" name="transaction.donationAmt" type="radio" value="35"> <label class="en__field__label en__field__label--item" for="transaction_donationAmt3">$35</label>
+			</div>
+			<div class="en__field__item">
+				<input class="en__field__input en__field__input--radio" id="transaction_donationAmt5" name="transaction.donationAmt" type="radio" value="10"> <label class="en__field__label en__field__label--item" for="transaction_donationAmt5">$10</label>
+			</div>      
+			<div class="en__field__item">
+				<input class="en__field__input en__field__input--radio" id="transaction_donationAmt4" name="transaction.donationAmt" type="radio" value="Other"> <label class="en__field__label en__field__label--item" for="transaction_donationAmt4">Other</label>
+			</div>
+			<div class="en__field__item en__field__item--other en__field__item--hidden">
+				<input class="en__field__input en__field__input--other" inputmode="numeric" min="5" name="transaction.donationAmt.other" placeholder="Other Amount" step=".01" type="number" value="">
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="en__component en__component--formblock radio-to-buttons" style="">
 	<div class="en__field en__field--radio en__field--withOther en__field--914979 en__field--donationAmt en__mandatory">
 		<label class="en__field__label" style="">Donation Amount</label>
@@ -1022,7 +1063,23 @@ h1.brand-guide-section-header{
 </div>
 
 <h2 class="brand-guide-section-header">EN Tag Field: Give By Select</h2>
-<div class="en__component en__component--formblock give-by-select radio-to-buttons en-row-center dark-buttons pill-buttons en-form-fill-width space-below">
+<div class="en__component en__component--formblock give-by-select">
+  <div class="en__field en__field--radio en__field--question en__field--180165 en__field--give-by-select en__mandatory">
+    <div class="en__field__element en__field__element--radio">
+      <div class="en__field__item">
+        <input checked="" class="en__field__input en__field__input--radio" id="en__field_supporter_questions_1801650" name="supporter.questions.180165" type="radio" value="card"> <label class="en__field__label en__field__label--item" for="en__field_supporter_questions_1801650">Card</label>
+      </div>
+      <div class="en__field__item">
+        <input class="en__field__input en__field__input--radio" id="en__field_supporter_questions_1801651" name="supporter.questions.180165" type="radio" value="paypal"> <label class="en__field__label en__field__label--item" for="en__field_supporter_questions_1801651">PayPal</label>
+      </div>
+      <div class="en__field__item">
+        <input class="en__field__input en__field__input--radio" id="en__field_supporter_questions_1801652" name="supporter.questions.180165" type="radio" value="check"> <label class="en__field__label en__field__label--item" for="en__field_supporter_questions_1801652">Check</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="en__component en__component--formblock give-by-select radio-to-buttons">
   <div class="en__field en__field--radio en__field--question en__field--180165 en__field--give-by-select en__mandatory">
     <div class="en__field__element en__field__element--radio">
       <div class="en__field__item">
