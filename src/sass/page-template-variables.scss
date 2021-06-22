@@ -2,10 +2,10 @@
 
 /* All CSS Custom Properties should be scoped to the theme using CSS Data Attributes. */
 [data-engrid-theme="starter-theme"]{
-    --theme-body-background-color: #333333;
+    --theme-body-background-color: var(--color_off-black);
 }
 
 /* Define multiple ENGrid themes together by scoping with a corresponding CSS Data Attribute. */
 [data-engrid-theme="starter-theme-emergency"]{
-    --theme-body-background-color: #f12222;
+    --theme-body-background-color: var(--error__color);
 }
