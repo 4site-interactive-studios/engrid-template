@@ -26,9 +26,9 @@
 </div>
 
 <h2 class="brand-guide-section-header">EN Tag Field: Gift Amount</h2>
-<div class="en__component en__component--formblock" style="">
+<div class="en__component en__component--formblock">
 	<div class="en__field en__field--radio en__field--withOther en__field--914979 en__field--donationAmt en__mandatory">
-		<label class="en__field__label" style="">Donation Amount</label>
+		<label class="en__field__label">Donation Amount</label>
 		<div class="en__field__element en__field__element--radio">
 			<div class="en__field__item">
 				<input class="en__field__input en__field__input--radio" id="transaction_donationAmt0" name="transaction.donationAmt" type="radio" value="250"> <label class="en__field__label en__field__label--item" for="transaction_donationAmt0">$250</label>
@@ -55,9 +55,9 @@
 	</div>
 </div>
 
-<div class="en__component en__component--formblock radio-to-buttons" style="">
+<div class="en__component en__component--formblock radio-to-buttons">
 	<div class="en__field en__field--radio en__field--withOther en__field--914979 en__field--donationAmt en__mandatory">
-		<label class="en__field__label" style="">Donation Amount</label>
+		<label class="en__field__label">Donation Amount</label>
 		<div class="en__field__element en__field__element--radio">
 			<div class="en__field__item">
 				<input class="en__field__input en__field__input--radio" id="transaction_donationAmt1" name="transaction.donationAmt" type="radio" value="100"> <label class="en__field__label en__field__label--item" for="transaction_donationAmt1">$100</label>
@@ -78,9 +78,9 @@
 	</div>
 </div>
 
-<div class="en__component en__component--formblock radio-to-buttons" style="">
+<div class="en__component en__component--formblock radio-to-buttons">
 	<div class="en__field en__field--radio en__field--withOther en__field--914979 en__field--donationAmt en__mandatory">
-		<label class="en__field__label" style="">Donation Amount</label>
+		<label class="en__field__label">Donation Amount</label>
 		<div class="en__field__element en__field__element--radio">
 			<div class="en__field__item">
 				<input class="en__field__input en__field__input--radio" id="transaction_donationAmt0" name="transaction.donationAmt" type="radio" value="250"> <label class="en__field__label en__field__label--item" for="transaction_donationAmt0">$250</label>
@@ -104,9 +104,9 @@
 	</div>
 </div>
 
-<div class="en__component en__component--formblock radio-to-buttons" style="">
+<div class="en__component en__component--formblock radio-to-buttons">
 	<div class="en__field en__field--radio en__field--withOther en__field--914979 en__field--donationAmt en__mandatory">
-		<label class="en__field__label" style="">Donation Amount</label>
+		<label class="en__field__label">Donation Amount</label>
 		<div class="en__field__element en__field__element--radio">
 			<div class="en__field__item">
 				<input class="en__field__input en__field__input--radio" id="transaction_donationAmt0" name="transaction.donationAmt" type="radio" value="250"> <label class="en__field__label en__field__label--item" for="transaction_donationAmt0">$250</label>
@@ -164,4 +164,106 @@
       </div>
     </div>
   </div>
+</div>
+
+<h2 class="brand-guide-section-header">EN Tag Fields: CC Number, Expiration, CVV</h2>
+<div class="en__component en__component--formblock giveBySelect-Card">
+	<div class="en__field en__field--number en__field--871603 en__field--ccnumber">
+		<label class="en__field__label" for="en__field_transaction_ccnumber">Credit Card Number</label>
+		<div class="en__field__element en__field__element--number">
+			<input class="en__field__input en__field__input--number live-card-type-na" id="en__field_transaction_ccnumber" name="transaction.ccnumber" placeholder="•••• •••• •••• ••••" type="number" value="">
+		</div>
+	</div>
+	<div class="en__field en__field--splitselect en__field--871604 en__field--ccexpire">
+		<label class="en__field__label" for="en__field_transaction_ccexpire">Expiration Date</label>
+		<div class="en__field__element en__field__element--splitselect">
+			<input name="transaction.ccexpire.delimiter" type="hidden" value="/">
+			<div class="en__field__item">
+				<select class="en__field__input en__field__input--splitselect" id="en__field_transaction_ccexpire" name="transaction.ccexpire">
+					<option selected="selected" value="">
+						Month
+					</option>
+					<option value="01">
+						01 - Jan
+					</option>
+					<option value="02">
+						02 - Feb
+					</option>
+					<option value="03">
+						03 - Mar
+					</option>
+					<option value="04">
+						04 - Apr
+					</option>
+					<option value="05">
+						05 - May
+					</option>
+					<option value="06">
+						06 - Jun
+					</option>
+					<option value="07">
+						07 - Jul
+					</option>
+					<option value="08">
+						08 - Aug
+					</option>
+					<option value="09">
+						09 - Sep
+					</option>
+					<option value="10">
+						10 - Oct
+					</option>
+					<option value="11">
+						11 - Nov
+					</option>
+					<option value="12">
+						12 - Dec
+					</option>
+				</select>
+			</div>
+			<div class="en__field__item">
+				<select class="en__field__input en__field__input--splitselect" name="transaction.ccexpire">
+					<option selected="selected" value="">
+						Year
+					</option>
+					<option value="2021">
+						2021
+					</option>
+					<option value="2022">
+						2022
+					</option>
+					<option value="2023">
+						2023
+					</option>
+					<option value="2024">
+						2024
+					</option>
+					<option value="2025">
+						2025
+					</option>
+					<option value="2026">
+						2026
+					</option>
+					<option value="2027">
+						2027
+					</option>
+					<option value="2028">
+						2028
+					</option>
+					<option value="2029">
+						2029
+					</option>
+					<option value="2030">
+						2030
+					</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="en__field en__field--number en__field--871605 en__field--ccvv">
+		<label class="en__field__label" for="en__field_transaction_ccvv">CVV<span><a class="label-tooltip" href="#" id="ccv-tooltip" tabindex="-1">What's this?</a></span></label>
+		<div class="en__field__element en__field__element--number">
+			<input class="en__field__input en__field__input--number" id="en__field_transaction_ccvv" name="transaction.ccvv" placeholder="CVV" type="number" value="">
+		</div>
+	</div>
 </div>
