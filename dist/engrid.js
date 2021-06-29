@@ -7304,7 +7304,7 @@ class NeverBounce {
 // import { Options, App } from "../../engrid-scripts/packages/common"; // Uses ENGrid via Visual Studio Workspace
 
 
-var options = {
+const options = {
   applePay: false,
   CapitalizeFields: true,
   ClickToExpand: true,
@@ -7314,12 +7314,8 @@ var options = {
   SkipToMainContentLink: true,
   SrcDefer: true,
   Debug: App.getUrlParameter('debug') == 'true' ? true : false,
-  onLoad: function onLoad() {
-    return console.log("Starter Theme Loaded");
-  },
-  onResize: function onResize() {
-    return console.log("Starter Theme Window Resized");
-  }
+  onLoad: () => console.log("Starter Theme Loaded"),
+  onResize: () => console.log("Starter Theme Window Resized")
 };
 new App(options);
 })();
