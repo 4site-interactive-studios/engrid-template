@@ -14,9 +14,17 @@ module.exports = merge(common, {
   optimization: {
     minimize: true,
     minimizer: [
-      new CssMinimizerPlugin(),
-      new TerserPlugin({
-        extractComments: false,
+      new CssMinimizerPlugin({
+        minimizerOptions: {
+          preset: [
+            "default",
+            {
+              discardComments: { removeAll: false },
+              normalizeWhitespace: false,
+            },
+          ],
+        },
+        minify: [CssMinimizerPlugin.cssnanoMinify],
       }),
     ],
   },
@@ -28,8 +36,15 @@ module.exports = merge(common, {
         use: [
           MiniCssExtractPlugin.loader, // 4. Save css to files
           "css-loader", // 3. From css to vanilla js
-          // "postcss-loader", // 2. Add Autoprefixer to CSS
-          "sass-loader", // 1. From SASS to CSS
+          "postcss-loader", // 2. Add Autoprefixer to CSS
+          {
+            loader: "sass-loader", // 1. From SASS to CSS
+            options: {
+              sassOptions: {
+                outputStyle: "expanded",
+              },
+            },
+          },
         ],
       },
     ],
