@@ -3184,7 +3184,7 @@ body:not(#en__pagebuilder) .i1-hide-label .en__field:first-of-type>label,body:no
 }
 
 .radio-to-buttons_recurrfreq>.en__field>.en__field__element .en__field__input--other{
-  border-radius:Tvar(--recurring-frequency__button_border-radius);
+  border-radius:var(--recurring-frequency__button_border-radius);
 }
 .radio-to-buttons .en__field--radio input[type=radio]+label{
   background-color:var(--button_background-color);
