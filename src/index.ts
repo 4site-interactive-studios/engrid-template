@@ -11,6 +11,7 @@ const options: Options = {
   MediaAttribution: true,
   SkipToMainContentLink: true,
   SrcDefer: true,
+  ProgressBar: true,
   Debug: App.getUrlParameter('debug') == 'true' ? true : false,
   onLoad: () => console.log("Starter Theme Loaded"),
   onResize: () => console.log("Starter Theme Window Resized")
