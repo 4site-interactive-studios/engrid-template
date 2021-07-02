@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <include
+      src="src/templates/includes/page-wrapper-elements/head.html"
+      locals='{
+        "theme": "engrid",
+        "domain": "https://"
+    }'
+    ></include>
+  </head>
+  <body
+    data-engrid-layout="centercenter1col"
+    data-engrid-theme="engrid"
+  >
+    <include
+      src="src/templates/includes/page-wrapper-elements/body.html"
+      locals='{
+        "theme": "engrid",
+    }'
+    ></include>
+    <div id="engrid">
+      <!-- Start EN Page Builder -->
+      <include
+        src="src/templates/includes/page-contents/page-contents-free-and-flexible.html"
+        locals='{
+        "theme": "engrid",
+    }'
+      ></include>
+      <!-- End EN Page Builder -->
+    </div>
+    <include
+      src="src/templates/includes/page-wrapper-elements/footer.html"
+      locals='{
+        "theme": "engrid",
+    }'
+    ></include>
+
+    <!-- Shared Assets -->
+  </body>
+</html>

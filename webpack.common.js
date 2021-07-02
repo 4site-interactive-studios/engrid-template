@@ -20,6 +20,13 @@ module.exports = {
       minify: false,
     }),
     new HtmlWebpackPlugin({
+      title: "Page - Free and Flexible",
+      filename: "pages/free-and-flexible.html",
+      template: "./src/templates/page-free-and-flexible.html",
+      inject: false,
+      minify: false,
+    }),
+    new HtmlWebpackPlugin({
       title: "Page - Donation",
       filename: "pages/donation.html",
       template: "./src/templates/page-donation.html",
