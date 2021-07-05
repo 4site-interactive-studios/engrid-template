@@ -1115,7 +1115,7 @@ Object.defineProperty(exports, "PromiseSignalList", ({ enumerable: true, get: fu
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.NonUniformPromiseSimpleEventList = void 0;
-const PromiseSimpleEventDispatcher_1 = __webpack_require__(377);
+const PromiseSimpleEventDispatcher_1 = __webpack_require__(550);
 /**
  * Similar to EventList, but instead of TArgs, a map of event names ang argument types is provided with TArgsMap.
  */
@@ -1155,7 +1155,7 @@ exports.NonUniformPromiseSimpleEventList = NonUniformPromiseSimpleEventList;
 
 /***/ }),
 
-/***/ 377:
+/***/ 550:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -1241,7 +1241,7 @@ exports.PromiseSimpleEventHandlingBase = PromiseSimpleEventHandlingBase;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PromiseSimpleEventList = void 0;
 const ste_core_1 = __webpack_require__(233);
-const PromiseSimpleEventDispatcher_1 = __webpack_require__(377);
+const PromiseSimpleEventDispatcher_1 = __webpack_require__(550);
 /**
  * Storage class for multiple simple events that are accessible by name.
  * Events dispatchers are automatically created.
@@ -1281,7 +1281,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.NonUniformPromiseSimpleEventList = exports.PromiseSimpleEventList = exports.PromiseSimpleEventHandlingBase = exports.PromiseSimpleEventDispatcher = void 0;
 const NonUniformPromiseSimpleEventList_1 = __webpack_require__(841);
 Object.defineProperty(exports, "NonUniformPromiseSimpleEventList", ({ enumerable: true, get: function () { return NonUniformPromiseSimpleEventList_1.NonUniformPromiseSimpleEventList; } }));
-const PromiseSimpleEventDispatcher_1 = __webpack_require__(377);
+const PromiseSimpleEventDispatcher_1 = __webpack_require__(550);
 Object.defineProperty(exports, "PromiseSimpleEventDispatcher", ({ enumerable: true, get: function () { return PromiseSimpleEventDispatcher_1.PromiseSimpleEventDispatcher; } }));
 const PromiseSimpleEventHandlingBase_1 = __webpack_require__(511);
 Object.defineProperty(exports, "PromiseSimpleEventHandlingBase", ({ enumerable: true, get: function () { return PromiseSimpleEventHandlingBase_1.PromiseSimpleEventHandlingBase; } }));
@@ -1760,7 +1760,6 @@ const OptionsDefaults = {
   NeverBounceAPI: null,
   NeverBounceDateField: null,
   NeverBounceStatusField: null,
-  ProgressBar: false,
   Debug: false
 };
 ;// CONCATENATED MODULE: ../engrid-scripts/packages/common/dist/interfaces/upsell-options.js
@@ -2487,9 +2486,7 @@ class App extends engrid_ENGrid {
 
     if (this.options.ClickToExpand) new ClickToExpand();
     if (this.options.SkipToMainContentLink) new SkipToMainContentLink();
-    if (this.options.SrcDefer) new SrcDefer(); // Progress Bar
-
-    if (this.options.ProgressBar) new ProgressBar();
+    if (this.options.SrcDefer) new SrcDefer();
     if (this.options.NeverBounceAPI) new NeverBounce(this.options.NeverBounceAPI, this.options.NeverBounceDateField, this.options.NeverBounceStatusField);
     this.setDataAttributes();
   }
@@ -3259,7 +3256,7 @@ const watchInmemField = () => {
 }; // @TODO Refactor (low priority)
 
 const watchGiveBySelectField = () => {
-  const enFieldGiveBySelect = document.querySelector(".en__field--giveBySelect");
+  const enFieldGiveBySelect = document.querySelector(".en__field--give-by-select");
   const transactionGiveBySelect = document.getElementsByName("transaction.giveBySelect");
   const enFieldPaymentType = document.querySelector("#en__field_transaction_paymenttype");
   let enFieldGiveBySelectCurrentValue = document.querySelector('input[name="transaction.giveBySelect"]:checked');
@@ -3461,7 +3458,7 @@ const handleCCUpdate = () => {
   const payment_text = field_payment_type.options[field_payment_type.selectedIndex].text;
 
   if (card_type && payment_text != card_type) {
-    field_payment_type.value = Array.from(field_payment_type.options).filter(d => card_values[card_type].indexOf(d.value.toLowerCase()))[0].value;
+    field_payment_type.value = Array.from(field_payment_type.options).filter(d => card_values[card_type].includes(d.value.toLowerCase()))[0].value;
   }
 };
 
@@ -4858,7 +4855,7 @@ class NeverBounce {
       this.nbStatus.value = engrid_ENGrid.getFieldValue("nb-result");
     }
 
-    if (!['catchall', 'valid'].indexOf(engrid_ENGrid.getFieldValue('nb-result'))) {
+    if (!['catchall', 'valid'].includes(engrid_ENGrid.getFieldValue('nb-result'))) {
       this.setEmailStatus("required");
       (_a = this.emailField) === null || _a === void 0 ? void 0 : _a.focus();
       return false;
@@ -4868,52 +4865,8 @@ class NeverBounce {
   }
 
 }
-;// CONCATENATED MODULE: ../engrid-scripts/packages/common/dist/progress-bar.js
-
-class ProgressBar {
-  constructor() {
-    var _a, _b;
-
-    const progressIndicator = document.querySelector("span[data-engrid-progress-indicator]");
-    const pageCount = engrid_ENGrid.getPageCount();
-    const pageNumber = engrid_ENGrid.getPageNumber();
-
-    if (!progressIndicator || !pageCount || !pageNumber) {
-      return;
-    }
-
-    let maxValue = (_a = progressIndicator.getAttribute("max")) !== null && _a !== void 0 ? _a : 100;
-    if (typeof maxValue === 'string') maxValue = parseInt(maxValue);
-    let amountValue = (_b = progressIndicator.getAttribute("amount")) !== null && _b !== void 0 ? _b : 0;
-    if (typeof amountValue === 'string') amountValue = parseInt(amountValue);
-    const prevPercentage = pageNumber === 1 ? 0 : Math.ceil((pageNumber - 1) / pageCount * maxValue);
-    let percentage = pageNumber === 1 ? 0 : Math.ceil(pageNumber / pageCount * maxValue);
-    const scalePrev = prevPercentage / 100;
-    let scale = percentage / 100;
-
-    if (amountValue) {
-      percentage = Math.ceil(amountValue) > Math.ceil(maxValue) ? maxValue : amountValue;
-      scale = percentage / 100;
-    }
-
-    progressIndicator.innerHTML = `
-			<div class="indicator__wrap">
-				<span class="indicator__progress" style="transform: scaleX(${scalePrev});"></span>
-				<span class="indicator__percentage">${percentage}<span class="indicator__percentage-sign">%</span></span>
-			</div>`;
-
-    if (percentage !== prevPercentage) {
-      const progress = document.querySelector(".indicator__progress");
-      requestAnimationFrame(function () {
-        progress.style.transform = `scaleX(${scale})`;
-      });
-    }
-  }
-
-}
 ;// CONCATENATED MODULE: ../engrid-scripts/packages/common/dist/index.js
  // Runs first so it can change the DOM markup before any markup dependent code fires
-
 
 
 
@@ -4950,7 +4903,7 @@ const options = {
   MediaAttribution: true,
   SkipToMainContentLink: true,
   SrcDefer: true,
-  ProgressBar: true,
+  // ProgressBar: true,
   Debug: App.getUrlParameter('debug') == 'true' ? true : false,
   onLoad: () => console.log("Starter Theme Loaded"),
   onResize: () => console.log("Starter Theme Window Resized")
