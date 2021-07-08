@@ -2171,7 +2171,6 @@ input.en__field__input:focus,input.en__field__input:hover,input:focus,input:hove
   background-color:var(--input_background-color_hover);
   border-bottom-color:var(--input_border-color_hover);
   border-color:var(--input_border-color_hover) var(--input_border-color_hover) var(--input_border-bottom-color_hover);
-  box-shadow:var(--input_box-shadow_hover);
   color:var(--input_color_hover);
 }
 
@@ -3306,22 +3305,22 @@ body:not(#en__pagebuilder) .i1-hide-label .en__field:first-of-type>label,body:no
   border-color:var(--recurring-frequency__button_border-color_checked);
   color:var(--recurring-frequency__button_color_checked);
 }
-.radio-to-buttons .en__field--radio .en__field__item input[type=radio]:checked+label:hover{
+.radio-to-buttons .en__field--radio .en__field__item:hover input[type=radio]:checked+label{
   background-color:var(--button_background-color_checked);
   border-color:var(--button_border-color_checked);
   color:var(--button_color_checked);
 }
-.en__field--give-by-select.en__field--radio .en__field__item input[type=radio]:checked+label:hover{
+.en__field--give-by-select.en__field--radio .en__field__item:hover input[type=radio]:checked+label{
   background-color:var(--give-by-select__button_background-color_checked);
   border-color:var(--give-by-select__button_border-color_checked);
   color:var(--give-by-select__button_color_checked);
 }
-.radio-to-buttons_donationAmt .en__field--donationAmt.en__field--radio .en__field__item input[type=radio]:checked+label:hover{
+.radio-to-buttons_donationAmt .en__field--donationAmt.en__field--radio .en__field__item:hover input[type=radio]:checked+label{
   background-color:var(--donation-amount__button_background-color_checked);
   border-color:var(--donation-amount__button_border-color_checked);
   color:var(--donation-amount__button_color_checked);
 }
-.radio-to-buttons_recurrfreq .en__field--recurrfreq.en__field--radio .en__field__item input[type=radio]:checked+label:hover{
+.radio-to-buttons_recurrfreq .en__field--recurrfreq.en__field--radio .en__field__item:hover input[type=radio]:checked+label{
   background-color:var(--recurring-frequency__button_background-color_checked);
   border-color:var(--recurring-frequency__button_border-color_checked);
   color:var(--recurring-frequency__button_color_checked);
