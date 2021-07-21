@@ -1,9 +1,11 @@
-/* ENGRID */
-// @import "@4site/engrid-styles";
-@import "../../../engrid-scripts/packages/styles";
-
-/* THEME STYLING AND LAYOUTS */
+/* CLIENT THEME SASS VARIABLES, MUST COME BEFORE ENGRID ASSETS */
 @import "./page-template-variables";
+
+/* ENGRID ASSETS */
+// @import "@4site/engrid-styles"; // Uses ENGrid via NPM
+@import "../../../engrid-scripts/packages/styles"; // Uses ENGrid via Visual Studio Workspace
+
+/* CLIENT THEME FONTS AND STYLES */
 @import "./page-template-fonts";
 @import "./page-template-styles";
 

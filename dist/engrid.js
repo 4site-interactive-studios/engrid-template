@@ -16,6 +16,12 @@ exports.DispatchError = void 0;
  * @extends {Error}
  */
 class DispatchError extends Error {
+    /**
+     * Creates an instance of DispatchError.
+     * @param {string} message The message.
+     *
+     * @memberOf DispatchError
+     */
     constructor(message) {
         super(message);
     }
@@ -37,30 +43,59 @@ const __1 = __webpack_require__(233);
  * and unsubscribe methods based on generic handlers. The TEventType specifies
  * the type of event that should be exposed. Use the asEvent to expose the
  * dispatcher as event.
+ *
+ * @export
+ * @abstract
+ * @class DispatcherBase
+ * @implements {ISubscribable<TEventHandler>}
+ * @template TEventHandler The type of event handler.
  */
 class DispatcherBase {
     constructor() {
-        this._wrap = new __1.DispatcherWrapper(this);
+        /**
+         * The subscriptions.
+         *
+         * @protected
+         *
+         * @memberOf DispatcherBase
+         */
         this._subscriptions = new Array();
     }
     /**
      * Returns the number of subscriptions.
      *
      * @readonly
-     *
+     * @type {number}
      * @memberOf DispatcherBase
      */
     get count() {
         return this._subscriptions.length;
     }
     /**
+     * Triggered when subscriptions are changed (added or removed).
+     *
+     * @readonly
+     * @type {ISubscribable<SubscriptionChangeEventHandler>}
+     * @memberOf DispatcherBase
+     */
+    get onSubscriptionChange() {
+        if (this._onSubscriptionChange == null) {
+            this._onSubscriptionChange = new __1.SubscriptionChangeEventDispatcher();
+        }
+        return this._onSubscriptionChange.asEvent();
+    }
+    /**
      * Subscribe to the event dispatcher.
-     * @param fn The event handler that is called when the event is dispatched.
+     *
+     * @param {TEventHandler} fn The event handler that is called when the event is dispatched.
      * @returns A function that unsubscribes the event handler from the event.
+     *
+     * @memberOf DispatcherBase
      */
     subscribe(fn) {
         if (fn) {
             this._subscriptions.push(this.createSubscription(fn, false));
+            this.triggerSubscriptionChange();
         }
         return () => {
             this.unsubscribe(fn);
@@ -68,20 +103,27 @@ class DispatcherBase {
     }
     /**
      * Subscribe to the event dispatcher.
-     * @param fn The event handler that is called when the event is dispatched.
+     *
+     * @param {TEventHandler} fn The event handler that is called when the event is dispatched.
      * @returns A function that unsubscribes the event handler from the event.
+     *
+     * @memberOf DispatcherBase
      */
     sub(fn) {
         return this.subscribe(fn);
     }
     /**
      * Subscribe once to the event with the specified name.
-     * @param fn The event handler that is called when the event is dispatched.
+     *
+     * @param {TEventHandler} fn The event handler that is called when the event is dispatched.
      * @returns A function that unsubscribes the event handler from the event.
+     *
+     * @memberOf DispatcherBase
      */
     one(fn) {
         if (fn) {
             this._subscriptions.push(this.createSubscription(fn, true));
+            this.triggerSubscriptionChange();
         }
         return () => {
             this.unsubscribe(fn);
@@ -89,7 +131,10 @@ class DispatcherBase {
     }
     /**
      * Checks it the event has a subscription for the specified handler.
-     * @param fn The event handler.
+     *
+     * @param {TEventHandler} fn The event handler.
+     *
+     * @memberOf DispatcherBase
      */
     has(fn) {
         if (!fn)
@@ -98,21 +143,32 @@ class DispatcherBase {
     }
     /**
      * Unsubscribes the handler from the dispatcher.
-     * @param fn The event handler.
+     *
+     * @param {TEventHandler} fn The event handler.
+     *
+     * @memberOf DispatcherBase
      */
     unsubscribe(fn) {
         if (!fn)
             return;
+        let changes = false;
         for (let i = 0; i < this._subscriptions.length; i++) {
             if (this._subscriptions[i].handler == fn) {
                 this._subscriptions.splice(i, 1);
+                changes = true;
                 break;
             }
+        }
+        if (changes) {
+            this.triggerSubscriptionChange();
         }
     }
     /**
      * Unsubscribes the handler from the dispatcher.
-     * @param fn The event handler.
+     *
+     * @param {TEventHandler} fn The event handler.
+     *
+     * @memberOf DispatcherBase
      */
     unsub(fn) {
         this.unsubscribe(fn);
@@ -122,7 +178,7 @@ class DispatcherBase {
      *
      * @protected
      * @param {boolean} executeAsync `True` if the even should be executed async.
-     * @param {*} scrop The scope of the event. The scope becomes the `this` for handler.
+     * @param {*} scope The scope of the event. The scope becomes the `this` for handler.
      * @param {IArguments} args The arguments for the event.
      * @returns {(IPropagationStatus | null)} The propagation status, or if an `executeAsync` is used `null`.
      *
@@ -147,32 +203,76 @@ class DispatcherBase {
         }
         return { propagationStopped: false };
     }
+    /**
+     * Creates a subscription.
+     *
+     * @protected
+     * @param {TEventHandler} handler The handler.
+     * @param {boolean} isOnce True if the handler should run only one.
+     * @returns {ISubscription<TEventHandler>} The subscription.
+     *
+     * @memberOf DispatcherBase
+     */
     createSubscription(handler, isOnce) {
         return new __1.Subscription(handler, isOnce);
     }
     /**
      * Cleans up subs that ran and should run only once.
+     *
+     * @protected
+     * @param {ISubscription<TEventHandler>} sub The subscription.
+     *
+     * @memberOf DispatcherBase
      */
     cleanup(sub) {
+        let changes = false;
         if (sub.isOnce && sub.isExecuted) {
             let i = this._subscriptions.indexOf(sub);
             if (i > -1) {
                 this._subscriptions.splice(i, 1);
+                changes = true;
             }
+        }
+        if (changes) {
+            this.triggerSubscriptionChange();
         }
     }
     /**
      * Creates an event from the dispatcher. Will return the dispatcher
      * in a wrapper. This will prevent exposure of any dispatcher methods.
+     *
+     * @returns {ISubscribable<TEventHandler>}
+     *
+     * @memberOf DispatcherBase
      */
     asEvent() {
+        if (this._wrap == null) {
+            this._wrap = new __1.DispatcherWrapper(this);
+        }
         return this._wrap;
     }
     /**
-     * Clears all the subscriptions.
+     * Clears the subscriptions.
+     *
+     * @memberOf DispatcherBase
      */
     clear() {
-        this._subscriptions.splice(0, this._subscriptions.length);
+        if (this._subscriptions.length != 0) {
+            this._subscriptions.splice(0, this._subscriptions.length);
+            this.triggerSubscriptionChange();
+        }
+    }
+    /**
+     * Triggers the subscription change event.
+     *
+     * @private
+     *
+     * @memberOf DispatcherBase
+     */
+    triggerSubscriptionChange() {
+        if (this._onSubscriptionChange != null) {
+            this._onSubscriptionChange.dispatch(this.count);
+        }
     }
 }
 exports.DispatcherBase = DispatcherBase;
@@ -189,11 +289,18 @@ exports.DispatcherWrapper = void 0;
 /**
  * Hides the implementation of the event dispatcher. Will expose methods that
  * are relevent to the event.
+ *
+ * @export
+ * @class DispatcherWrapper
+ * @implements {ISubscribable<TEventHandler>}
+ * @template TEventHandler The type of event handler.
  */
 class DispatcherWrapper {
     /**
-     * Creates a new EventDispatcherWrapper instance.
-     * @param dispatcher The dispatcher.
+     * Creates an instance of DispatcherWrapper.
+     * @param {ISubscribable<TEventHandler>} dispatcher
+     *
+     * @memberOf DispatcherWrapper
      */
     constructor(dispatcher) {
         this._subscribe = (fn) => dispatcher.subscribe(fn);
@@ -202,6 +309,17 @@ class DispatcherWrapper {
         this._has = (fn) => dispatcher.has(fn);
         this._clear = () => dispatcher.clear();
         this._count = () => dispatcher.count;
+        this._onSubscriptionChange = () => dispatcher.onSubscriptionChange;
+    }
+    /**
+     * Triggered when subscriptions are changed (added or removed).
+     *
+     * @readonly
+     * @type {ISubscribable<SubscriptionChangeEventHandler>}
+     * @memberOf DispatcherWrapper
+     */
+    get onSubscriptionChange() {
+        return this._onSubscriptionChange();
     }
     /**
      * Returns the number of subscriptions.
@@ -215,50 +333,70 @@ class DispatcherWrapper {
     }
     /**
      * Subscribe to the event dispatcher.
-     * @param fn The event handler that is called when the event is dispatched.
-     * @returns A function that unsubscribes the event handler from the event.
+     *
+     * @param {TEventHandler} fn The event handler that is called when the event is dispatched.
+     * @returns {() => void} A function that unsubscribes the event handler from the event.
+     *
+     * @memberOf DispatcherWrapper
      */
     subscribe(fn) {
         return this._subscribe(fn);
     }
     /**
      * Subscribe to the event dispatcher.
-     * @param fn The event handler that is called when the event is dispatched.
-     * @returns A function that unsubscribes the event handler from the event.
+     *
+     * @param {TEventHandler} fn The event handler that is called when the event is dispatched.
+     * @returns {() => void} A function that unsubscribes the event handler from the event.
+     *
+     * @memberOf DispatcherWrapper
      */
     sub(fn) {
         return this.subscribe(fn);
     }
     /**
      * Unsubscribe from the event dispatcher.
-     * @param fn The event handler that is called when the event is dispatched.
+     *
+     * @param {TEventHandler} fn The event handler that is called when the event is dispatched.
+     *
+     * @memberOf DispatcherWrapper
      */
     unsubscribe(fn) {
         this._unsubscribe(fn);
     }
     /**
      * Unsubscribe from the event dispatcher.
-     * @param fn The event handler that is called when the event is dispatched.
+     *
+     * @param {TEventHandler} fn The event handler that is called when the event is dispatched.
+     *
+     * @memberOf DispatcherWrapper
      */
     unsub(fn) {
         this.unsubscribe(fn);
     }
     /**
      * Subscribe once to the event with the specified name.
-     * @param fn The event handler that is called when the event is dispatched.
+     *
+     * @returns {() => void} A function that unsubscribes the event handler from the event.
+     *
+     * @memberOf DispatcherWrapper
      */
     one(fn) {
         return this._one(fn);
     }
     /**
      * Checks it the event has a subscription for the specified handler.
-     * @param fn The event handler.
+     *
+     * @param {TEventHandler} fn The event handler that is called when the event is dispatched.
+     *
+     * @memberOf DispatcherWrapper
      */
     has(fn) {
         return this._has(fn);
     }
     /**
      * Clears all the subscriptions.
+     *
+     * @memberOf DispatcherWrapper
      */
     clear() {
         this._clear();
@@ -277,6 +415,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.EventListBase = void 0;
 /**
  * Base class for event lists classes. Implements the get and remove.
+ *
+ * @export
+ * @abstract
+ * @class EventListBaset
+ * @template TEventDispatcher The type of event dispatcher.
  */
 class EventListBase {
     constructor() {
@@ -284,7 +427,11 @@ class EventListBase {
     }
     /**
      * Gets the dispatcher associated with the name.
-     * @param name The name of the event.
+     *
+     * @param {string} name The name of the event.
+     * @returns {TEventDispatcher} The disptacher.
+     *
+     * @memberOf EventListBase
      */
     get(name) {
         let event = this._events[name];
@@ -297,7 +444,10 @@ class EventListBase {
     }
     /**
      * Removes the dispatcher associated with the name.
-     * @param name The name of the event.
+     *
+     * @param {string} name
+     *
+     * @memberOf EventListBase
      */
     remove(name) {
         delete this._events[name];
@@ -315,13 +465,42 @@ exports.EventListBase = EventListBase;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PromiseDispatcherBase = void 0;
 const __1 = __webpack_require__(233);
+/**
+ * Dispatcher base for dispatchers that use promises. Each promise
+ * is awaited before the next is dispatched, unless the event is
+ * dispatched with the executeAsync flag.
+ *
+ * @export
+ * @abstract
+ * @class PromiseDispatcherBase
+ * @extends {DispatcherBase<TEventHandler>}
+ * @template TEventHandler The type of event handler.
+ */
 class PromiseDispatcherBase extends __1.DispatcherBase {
-    constructor() {
-        super();
-    }
+    /**
+     * The normal dispatch cannot be used in this class.
+     *
+     * @protected
+     * @param {boolean} executeAsync `True` if the even should be executed async.
+     * @param {*} scope The scope of the event. The scope becomes the `this` for handler.
+     * @param {IArguments} args The arguments for the event.
+     * @returns {(IPropagationStatus | null)} The propagation status, or if an `executeAsync` is used `null`.
+     *
+     * @memberOf DispatcherBase
+     */
     _dispatch(executeAsync, scope, args) {
         throw new __1.DispatchError("_dispatch not supported. Use _dispatchAsPromise.");
     }
+    /**
+     * Crates a new subscription.
+     *
+     * @protected
+     * @param {TEventHandler} handler The handler.
+     * @param {boolean} isOnce Indicates if the handler should only run once.
+     * @returns {ISubscription<TEventHandler>} The subscription.
+     *
+     * @memberOf PromiseDispatcherBase
+     */
     createSubscription(handler, isOnce) {
         return new __1.PromiseSubscription(handler, isOnce);
     }
@@ -330,7 +509,7 @@ class PromiseDispatcherBase extends __1.DispatcherBase {
      *
      * @protected
      * @param {boolean} executeAsync `True` if the even should be executed async.
-     * @param {*} scrop The scope of the event. The scope becomes the `this` for handler.
+     * @param {*} scope The scope of the event. The scope becomes the `this` for handler.
      * @param {IArguments} args The arguments for the event.
      * @returns {(IPropagationStatus | null)} The propagation status, or if an `executeAsync` is used `null`.
      *
@@ -361,24 +540,66 @@ exports.PromiseDispatcherBase = PromiseDispatcherBase;
 
 /***/ }),
 
+/***/ 243:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.SubscriptionChangeEventDispatcher = void 0;
+const __1 = __webpack_require__(233);
+/**
+ * Dispatcher for subscription changes.
+ *
+ * @export
+ * @class SubscriptionChangeEventDispatcher
+ * @extends {DispatcherBase<SubscriptionChangeEventHandler>}
+ */
+class SubscriptionChangeEventDispatcher extends __1.DispatcherBase {
+    /**
+     * Dispatches the event.
+     *
+     * @param {number} count The currrent number of subscriptions.
+     *
+     * @memberOf SubscriptionChangeEventDispatcher
+     */
+    dispatch(count) {
+        this._dispatch(false, this, arguments);
+    }
+}
+exports.SubscriptionChangeEventDispatcher = SubscriptionChangeEventDispatcher;
+
+
+/***/ }),
+
 /***/ 622:
 /***/ ((__unused_webpack_module, exports) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PromiseSubscription = void 0;
+/**
+ * Subscription implementation for events with promises.
+ *
+ * @export
+ * @class PromiseSubscription
+ * @implements {ISubscription<TEventHandler>}
+ * @template TEventHandler The type of event handler.
+ */
 class PromiseSubscription {
     /**
-     * Creates an instance of Subscription.
-     *
+     * Creates an instance of PromiseSubscription.
      * @param {TEventHandler} handler The handler for the subscription.
      * @param {boolean} isOnce Indicates if the handler should only be executed once.
+     *
+     * @memberOf PromiseSubscription
      */
     constructor(handler, isOnce) {
         this.handler = handler;
         this.isOnce = isOnce;
         /**
          * Indicates if the subscription has been executed before.
+         *
+         * @memberOf PromiseSubscription
          */
         this.isExecuted = false;
     }
@@ -388,6 +609,8 @@ class PromiseSubscription {
      * @param {boolean} executeAsync True if the even should be executed async.
      * @param {*} scope The scope the scope of the event.
      * @param {IArguments} args The arguments for the event.
+     *
+     * @memberOf PromiseSubscription
      */
     async execute(executeAsync, scope, args) {
         if (!this.isOnce || !this.isExecuted) {
@@ -477,58 +700,76 @@ exports.HandlingBase = void 0;
  * @export
  * @abstract
  * @class HandlingBase
- * @template TEventHandler
- * @template TDispatcher
- * @template TList
+ * @template TEventHandler The type of event handler.
+ * @template TDispatcher The type of dispatcher.
+ * @template TList The type of event list.
  */
 class HandlingBase {
+    /**
+     * Creates an instance of HandlingBase.
+     * @param {TList} events The event list. Used for event management.
+     *
+     * @memberOf HandlingBase
+     */
     constructor(events) {
         this.events = events;
     }
     /**
      * Subscribes once to the event with the specified name.
-     * @param name The name of the event.
-     * @param fn The event handler.
+     * @param {string} name The name of the event.
+     * @param {TEventHandler} fn The event handler.
+     *
+     * @memberOf HandlingBase
      */
     one(name, fn) {
         this.events.get(name).one(fn);
     }
     /**
      * Checks it the event has a subscription for the specified handler.
-     * @param name The name of the event.
-     * @param fn The event handler.
+     * @param {string} name The name of the event.
+     * @param {TEventHandler} fn The event handler.
+     *
+     * @memberOf HandlingBase
      */
     has(name, fn) {
         return this.events.get(name).has(fn);
     }
     /**
      * Subscribes to the event with the specified name.
-     * @param name The name of the event.
-     * @param fn The event handler.
+     * @param {string} name The name of the event.
+     * @param {TEventHandler} fn The event handler.
+     *
+     * @memberOf HandlingBase
      */
     subscribe(name, fn) {
         this.events.get(name).subscribe(fn);
     }
     /**
      * Subscribes to the event with the specified name.
-     * @param name The name of the event.
-     * @param fn The event handler.
+     * @param {string} name The name of the event.
+     * @param {TEventHandler} fn The event handler.
+     *
+     * @memberOf HandlingBase
      */
     sub(name, fn) {
         this.subscribe(name, fn);
     }
     /**
      * Unsubscribes from the event with the specified name.
-     * @param name The name of the event.
-     * @param fn The event handler.
+     * @param {string} name The name of the event.
+     * @param {TEventHandler} fn The event handler.
+     *
+     * @memberOf HandlingBase
      */
     unsubscribe(name, fn) {
         this.events.get(name).unsubscribe(fn);
     }
     /**
      * Unsubscribes from the event with the specified name.
-     * @param name The name of the event.
-     * @param fn The event handler.
+     * @param {string} name The name of the event.
+     * @param {TEventHandler} fn The event handler.
+     *
+     * @memberOf HandlingBase
      */
     unsub(name, fn) {
         this.unsubscribe(name, fn);
@@ -552,7 +793,7 @@ exports.HandlingBase = HandlingBase;
  * Released under the MIT license
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.HandlingBase = exports.PromiseDispatcherBase = exports.PromiseSubscription = exports.DispatchError = exports.EventManagement = exports.EventListBase = exports.DispatcherWrapper = exports.DispatcherBase = exports.Subscription = void 0;
+exports.SubscriptionChangeEventDispatcher = exports.HandlingBase = exports.PromiseDispatcherBase = exports.PromiseSubscription = exports.DispatchError = exports.EventManagement = exports.EventListBase = exports.DispatcherWrapper = exports.DispatcherBase = exports.Subscription = void 0;
 const DispatcherBase_1 = __webpack_require__(53);
 Object.defineProperty(exports, "DispatcherBase", ({ enumerable: true, get: function () { return DispatcherBase_1.DispatcherBase; } }));
 const DispatchError_1 = __webpack_require__(110);
@@ -571,6 +812,8 @@ const PromiseSubscription_1 = __webpack_require__(622);
 Object.defineProperty(exports, "PromiseSubscription", ({ enumerable: true, get: function () { return PromiseSubscription_1.PromiseSubscription; } }));
 const Subscription_1 = __webpack_require__(84);
 Object.defineProperty(exports, "Subscription", ({ enumerable: true, get: function () { return Subscription_1.Subscription; } }));
+const SubscriptionChangeEventHandler_1 = __webpack_require__(243);
+Object.defineProperty(exports, "SubscriptionChangeEventDispatcher", ({ enumerable: true, get: function () { return SubscriptionChangeEventHandler_1.SubscriptionChangeEventDispatcher; } }));
 
 
 /***/ }),
@@ -584,14 +827,27 @@ exports.EventManagement = void 0;
 /**
  * Allows the user to interact with the event.
  *
+ * @export
  * @class EventManagement
  * @implements {IEventManagement}
  */
 class EventManagement {
+    /**
+     * Creates an instance of EventManagement.
+     * @param {() => void} unsub An unsubscribe handler.
+     *
+     * @memberOf EventManagement
+     */
     constructor(unsub) {
         this.unsub = unsub;
         this.propagationStopped = false;
     }
+    /**
+     * Stops the propagation of the event.
+     * Cannot be used when async dispatch is done.
+     *
+     * @memberOf EventManagement
+     */
     stopPropagation() {
         this.propagationStopped = true;
     }
@@ -616,8 +872,8 @@ const ste_core_1 = __webpack_require__(233);
  * @class EventDispatcher
  * @extends {DispatcherBase<IEventHandler<TSender, TArgs>>}
  * @implements {IEvent<TSender, TArgs>}
- * @template TSender
- * @template TArgs
+ * @template TSender The sender type.
+ * @template TArgs The event arguments type.
  */
 class EventDispatcher extends ste_core_1.DispatcherBase {
     /**
@@ -631,9 +887,9 @@ class EventDispatcher extends ste_core_1.DispatcherBase {
     /**
      * Dispatches the event.
      *
-     * @param {TSender} sender The sender object.
-     * @param {TArgs} args The arguments object.
-     * @returns {IPropagationStatus} The event status.
+     * @param {TSender} sender The sender.
+     * @param {TArgs} args The arguments.
+     * @returns {IPropagationStatus} The propagation status to interact with the event
      *
      * @memberOf EventDispatcher
      */
@@ -645,9 +901,12 @@ class EventDispatcher extends ste_core_1.DispatcherBase {
         return result;
     }
     /**
-     * Dispatches the events thread.
-     * @param sender The sender.
-     * @param args The arguments object.
+     * Dispatches the event in an async way. Does not support event interaction.
+     *
+     * @param {TSender} sender The sender.
+     * @param {TArgs} args The arguments.
+     *
+     * @memberOf EventDispatcher
      */
     dispatchAsync(sender, args) {
         this._dispatch(true, this, arguments);
@@ -1115,7 +1374,7 @@ Object.defineProperty(exports, "PromiseSignalList", ({ enumerable: true, get: fu
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.NonUniformPromiseSimpleEventList = void 0;
-const PromiseSimpleEventDispatcher_1 = __webpack_require__(550);
+const PromiseSimpleEventDispatcher_1 = __webpack_require__(377);
 /**
  * Similar to EventList, but instead of TArgs, a map of event names ang argument types is provided with TArgsMap.
  */
@@ -1155,7 +1414,7 @@ exports.NonUniformPromiseSimpleEventList = NonUniformPromiseSimpleEventList;
 
 /***/ }),
 
-/***/ 550:
+/***/ 377:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -1241,7 +1500,7 @@ exports.PromiseSimpleEventHandlingBase = PromiseSimpleEventHandlingBase;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PromiseSimpleEventList = void 0;
 const ste_core_1 = __webpack_require__(233);
-const PromiseSimpleEventDispatcher_1 = __webpack_require__(550);
+const PromiseSimpleEventDispatcher_1 = __webpack_require__(377);
 /**
  * Storage class for multiple simple events that are accessible by name.
  * Events dispatchers are automatically created.
@@ -1281,7 +1540,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.NonUniformPromiseSimpleEventList = exports.PromiseSimpleEventList = exports.PromiseSimpleEventHandlingBase = exports.PromiseSimpleEventDispatcher = void 0;
 const NonUniformPromiseSimpleEventList_1 = __webpack_require__(841);
 Object.defineProperty(exports, "NonUniformPromiseSimpleEventList", ({ enumerable: true, get: function () { return NonUniformPromiseSimpleEventList_1.NonUniformPromiseSimpleEventList; } }));
-const PromiseSimpleEventDispatcher_1 = __webpack_require__(550);
+const PromiseSimpleEventDispatcher_1 = __webpack_require__(377);
 Object.defineProperty(exports, "PromiseSimpleEventDispatcher", ({ enumerable: true, get: function () { return PromiseSimpleEventDispatcher_1.PromiseSimpleEventDispatcher; } }));
 const PromiseSimpleEventHandlingBase_1 = __webpack_require__(511);
 Object.defineProperty(exports, "PromiseSimpleEventHandlingBase", ({ enumerable: true, get: function () { return PromiseSimpleEventHandlingBase_1.PromiseSimpleEventHandlingBase; } }));
@@ -1308,14 +1567,6 @@ const ste_core_1 = __webpack_require__(233);
  * @implements {ISignal}
  */
 class SignalDispatcher extends ste_core_1.DispatcherBase {
-    /**
-     * Creates an instance of SignalDispatcher.
-     *
-     * @memberOf SignalDispatcher
-     */
-    constructor() {
-        super();
-    }
     /**
      * Dispatches the signal.
      *
@@ -1362,13 +1613,24 @@ exports.SignalDispatcher = SignalDispatcher;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SignalHandlingBase = void 0;
 const ste_core_1 = __webpack_require__(233);
-const SignalList_1 = __webpack_require__(80);
+const _1 = __webpack_require__(350);
 /**
  * Extends objects with signal event handling capabilities.
+ *
+ * @export
+ * @abstract
+ * @class SignalHandlingBase
+ * @extends {HandlingBase<ISignalHandler, SignalDispatcher, SignalList>}
+ * @implements {ISignalHandling}
  */
 class SignalHandlingBase extends ste_core_1.HandlingBase {
+    /**
+     * Creates an instance of SignalHandlingBase.
+     *
+     * @memberOf SignalHandlingBase
+     */
     constructor() {
-        super(new SignalList_1.SignalList());
+        super(new _1.SignalList());
     }
 }
 exports.SignalHandlingBase = SignalHandlingBase;
@@ -1383,23 +1645,34 @@ exports.SignalHandlingBase = SignalHandlingBase;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SignalList = void 0;
 const ste_core_1 = __webpack_require__(233);
-const SignalDispatcher_1 = __webpack_require__(275);
+const _1 = __webpack_require__(350);
 /**
  * Storage class for multiple signal events that are accessible by name.
  * Events dispatchers are automatically created.
+ *
+ * @export
+ * @class SignalList
+ * @extends {EventListBase<SignalDispatcher>}
  */
 class SignalList extends ste_core_1.EventListBase {
     /**
-     * Creates a new SignalList instance.
+     * Creates an instance of SignalList.
+     *
+     * @memberOf SignalList
      */
     constructor() {
         super();
     }
     /**
      * Creates a new dispatcher instance.
+     *
+     * @protected
+     * @returns {SignalDispatcher}
+     *
+     * @memberOf SignalList
      */
     createDispatcher() {
-        return new SignalDispatcher_1.SignalDispatcher();
+        return new _1.SignalDispatcher();
     }
 }
 exports.SignalList = SignalList;
@@ -1760,6 +2033,7 @@ const OptionsDefaults = {
   NeverBounceAPI: null,
   NeverBounceDateField: null,
   NeverBounceStatusField: null,
+  ProgressBar: false,
   Debug: false
 };
 ;// CONCATENATED MODULE: ../engrid-scripts/packages/common/dist/interfaces/upsell-options.js
@@ -2486,7 +2760,9 @@ class App extends engrid_ENGrid {
 
     if (this.options.ClickToExpand) new ClickToExpand();
     if (this.options.SkipToMainContentLink) new SkipToMainContentLink();
-    if (this.options.SrcDefer) new SrcDefer();
+    if (this.options.SrcDefer) new SrcDefer(); // Progress Bar
+
+    if (this.options.ProgressBar) new ProgressBar();
     if (this.options.NeverBounceAPI) new NeverBounce(this.options.NeverBounceAPI, this.options.NeverBounceDateField, this.options.NeverBounceStatusField);
     this.setDataAttributes();
   }
@@ -3062,9 +3338,6 @@ const debugBar = () => {
       if (enGrid) {
         if (enGrid.classList.contains("layout-centercenter1col")) {
           removeClassesByPrefix(enGrid, "layout-");
-          enGrid.classList.add("layout-centercenter1col-wide");
-        } else if (enGrid.classList.contains("layout-centercenter1col-wide")) {
-          removeClassesByPrefix(enGrid, "layout-");
           enGrid.classList.add("layout-centerright1col");
         } else if (enGrid.classList.contains("layout-centerright1col")) {
           removeClassesByPrefix(enGrid, "layout-");
@@ -3458,7 +3731,7 @@ const handleCCUpdate = () => {
   const payment_text = field_payment_type.options[field_payment_type.selectedIndex].text;
 
   if (card_type && payment_text != card_type) {
-    field_payment_type.value = Array.from(field_payment_type.options).filter(d => card_values[card_type].includes(d.value.toLowerCase()))[0].value;
+    field_payment_type.value = Array.from(field_payment_type.options).filter(d => card_values[card_type].indexOf(d.value.toLowerCase()))[0].value;
   }
 };
 
@@ -4281,10 +4554,11 @@ class UpsellLightbox {
     if (e.target instanceof Element && ((_a = document.querySelector("#upsellYesButton")) === null || _a === void 0 ? void 0 : _a.contains(e.target))) {
       if (engrid_ENGrid.debug) console.log("Upsold");
       this.setOriginalAmount(this._amount.amount.toString());
+      const upsoldAmount = this.getUpsellAmount();
 
       this._frequency.setFrequency("monthly");
 
-      this._amount.setAmount(this.getUpsellAmount());
+      this._amount.setAmount(upsoldAmount);
     } else {
       this.setOriginalAmount('');
       window.sessionStorage.removeItem('original');
@@ -4855,7 +5129,7 @@ class NeverBounce {
       this.nbStatus.value = engrid_ENGrid.getFieldValue("nb-result");
     }
 
-    if (!['catchall', 'valid'].includes(engrid_ENGrid.getFieldValue('nb-result'))) {
+    if (!['catchall', 'valid'].indexOf(engrid_ENGrid.getFieldValue('nb-result'))) {
       this.setEmailStatus("required");
       (_a = this.emailField) === null || _a === void 0 ? void 0 : _a.focus();
       return false;
@@ -4865,8 +5139,52 @@ class NeverBounce {
   }
 
 }
+;// CONCATENATED MODULE: ../engrid-scripts/packages/common/dist/progress-bar.js
+
+class ProgressBar {
+  constructor() {
+    var _a, _b;
+
+    const progressIndicator = document.querySelector("span[data-engrid-progress-indicator]");
+    const pageCount = engrid_ENGrid.getPageCount();
+    const pageNumber = engrid_ENGrid.getPageNumber();
+
+    if (!progressIndicator || !pageCount || !pageNumber) {
+      return;
+    }
+
+    let maxValue = (_a = progressIndicator.getAttribute("max")) !== null && _a !== void 0 ? _a : 100;
+    if (typeof maxValue === 'string') maxValue = parseInt(maxValue);
+    let amountValue = (_b = progressIndicator.getAttribute("amount")) !== null && _b !== void 0 ? _b : 0;
+    if (typeof amountValue === 'string') amountValue = parseInt(amountValue);
+    const prevPercentage = pageNumber === 1 ? 0 : Math.ceil((pageNumber - 1) / pageCount * maxValue);
+    let percentage = pageNumber === 1 ? 0 : Math.ceil(pageNumber / pageCount * maxValue);
+    const scalePrev = prevPercentage / 100;
+    let scale = percentage / 100;
+
+    if (amountValue) {
+      percentage = Math.ceil(amountValue) > Math.ceil(maxValue) ? maxValue : amountValue;
+      scale = percentage / 100;
+    }
+
+    progressIndicator.innerHTML = `
+			<div class="indicator__wrap">
+				<span class="indicator__progress" style="transform: scaleX(${scalePrev});"></span>
+				<span class="indicator__percentage">${percentage}<span class="indicator__percentage-sign">%</span></span>
+			</div>`;
+
+    if (percentage !== prevPercentage) {
+      const progress = document.querySelector(".indicator__progress");
+      requestAnimationFrame(function () {
+        progress.style.transform = `scaleX(${scale})`;
+      });
+    }
+  }
+
+}
 ;// CONCATENATED MODULE: ../engrid-scripts/packages/common/dist/index.js
  // Runs first so it can change the DOM markup before any markup dependent code fires
+
 
 
 
