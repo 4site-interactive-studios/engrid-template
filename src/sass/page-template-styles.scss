@@ -85,7 +85,40 @@
 
 /* Add your custom theme styles here */
 [data-engrid-theme="organizational-name"]{
-    // .customClass{
-    //     background-color: var(--color_primary);
-    // }
+    @mixin until-mobile-l {
+        // STYLES
+    }
+
+    @mixin from-mobile-l {
+        // STYLES
+    }
+
+    @mixin simplified-header {
+        // STLES
+    }
+
+    // Example Breakpoints Stylings (See engrid-scripts > _engrid-breakpoints.scss for more breakpoints)
+    &[data-engrid-layout] {
+        @include mq($until: mobile-l){
+            @include until-mobile-l;
+        }
+
+        @include mq($from: mobile-l){
+            @include from-mobile-l;
+        }
+    }
+    
+    // Example of Shared Layout Stylings
+    &[data-engrid-layout="centerleft1col"]{
+        @media screen and (max-width: $centerleft1col_content-column_min-width) {
+            @include simplified-header;
+        }
+    }
+
+    &[data-engrid-layout="centerright1col"]{
+        @media screen and (max-width: $centerright1col_content-column_min-width) {
+            @include simplified-header;
+        }
+    }
+
 }
