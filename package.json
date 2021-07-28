@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server  --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "npm run production & npm run minify",
+    "production": "webpack --config webpack.prod.js",
+    "minify": "webpack --config webpack.min.js"
   },
   "keywords": [
     "Engaging Networks",
