@@ -7,10 +7,15 @@
   />
   <ul class="en__errorList"></ul>
 
-  <a href="#" class="button" onclick="document.body.classList.toggle('debug-layout');">Debug Layout</a>
-  <a href="#" class="button" onclick="document.body.classList.toggle('debug-image-sizes');">Debug Image Sizes</a>
-  <a href="#" class="button" onclick="document.body.classList.toggle('debug-accessability');">Debug Accessability</a>
-
+  <span id="debug-bar">
+    <span id="buttons-wrapper">
+      <p>Debug:</p>
+      <a href="#" class="button" onclick="document.body.setAttribute('data-engrid-debug', 'layout');">Layout</a>
+      <a href="#" class="button" onclick="document.body.setAttribute('data-engrid-debug', 'image-sizes');">Image Sizes</a>
+      <a href="#" class="button" onclick="document.body.setAttribute('data-engrid-debug', 'Accessability');">Accessability</a>
+      <a href="#" class="button" onclick="document.body.toggleAttribute('data-engrid-debug');">End Debug</a>
+    </span>
+  </span>
   <div class="en__component en__component--row en__component--advrow">
     <div
       class="en__component en__component en__component--column en__component--advcolumn page-alert"

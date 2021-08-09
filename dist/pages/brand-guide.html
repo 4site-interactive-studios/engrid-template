@@ -82,7 +82,7 @@ h1.brand-guide-section-header{
 }
 </style>
   </head>
-  <body data-engrid-layout="centercenter1col" data-engrid-theme="engrid" data-engrid-add-input-placeholders="" data-engrid-embedded="">
+  <body data-engrid-layout="centercenter1col" data-engrid-theme="engrid" data-engrid-add-input-placeholders="" data-engrid-embedded="" data-engrid-debug="">
     <noscript>With Javascript disabled this page may not function as expected.</noscript>
 
 <!-- Quickly check to see if the page is in an iFrame and if so set the corresponding Custom Attribute so it can also set the background-color. Must be after <body> otherwise there will be a flash of color -->
@@ -106,10 +106,15 @@ h1.brand-guide-section-header{
   <input type="hidden" name="sessionId" value="9c18c9c660974a8c813fb86f68eb2113-server10150">
   <ul class="en__errorList"></ul>
 
-  <a href="#" class="button" onclick="document.body.classList.toggle('debug-layout');">Debug Layout</a>
-  <a href="#" class="button" onclick="document.body.classList.toggle('debug-image-sizes');">Debug Image Sizes</a>
-  <a href="#" class="button" onclick="document.body.classList.toggle('debug-accessability');">Debug Accessability</a>
-
+  <span id="debug-bar">
+    <span id="buttons-wrapper">
+      <p>Debug:</p>
+      <a href="#" class="button" onclick="document.body.setAttribute('data-engrid-debug', 'layout');">Layout</a>
+      <a href="#" class="button" onclick="document.body.setAttribute('data-engrid-debug', 'image-sizes');">Image Sizes</a>
+      <a href="#" class="button" onclick="document.body.setAttribute('data-engrid-debug', 'Accessability');">Accessability</a>
+      <a href="#" class="button" onclick="document.body.toggleAttribute('data-engrid-debug');">End Debug</a>
+    </span>
+  </span>
   <div class="en__component en__component--row en__component--advrow">
     <div class="en__component en__component en__component--column en__component--advcolumn page-alert"></div>
     <div class="en__component en__component en__component--column en__component--advcolumn content-header pseudo-subgrid"></div>
