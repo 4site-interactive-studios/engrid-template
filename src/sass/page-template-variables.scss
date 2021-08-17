@@ -1,10 +1,11 @@
 /* SCSS Layout Variables should be defined outside a CSS declaration so they're global */
 
 // ONE COLUMN LAYOUTS
-// $one_col_content-column_max-width: 880px;
-// $one_col_content-column_min-width: 700px;
+// $one_col_content-column_max-width: 1440px;
+// $one_col_content-column_min-width: 500px;
 // $one_col_body-column_max-width:    500px;
-// $one_col_body-column_offset-width: 130px;
+// $one_col_body-column_min-width:    500px;
+// $one_col_body-column_offset-width: 100px;
 
 // TWO COLUMN LAYOUTS
 // $two_col_content-column_max-width: 1280px;
