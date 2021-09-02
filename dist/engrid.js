@@ -2021,13 +2021,15 @@ class Deprecated {
 }
 ;// CONCATENATED MODULE: ../engrid-scripts/packages/common/dist/interfaces/options.js
 const OptionsDefaults = {
-  backgroundImage: '',
+  backgroundImage: "",
   MediaAttribution: true,
   applePay: false,
   CapitalizeFields: false,
   ClickToExpand: true,
-  CurrencySymbol: '$',
-  CurrencySeparator: '.',
+  CurrencySymbol: "$",
+  ThousandsSeparator: "",
+  DecimalSeparator: ".",
+  DecimalPlaces: 2,
   SkipToMainContentLink: true,
   SrcDefer: true,
   NeverBounceAPI: null,
@@ -2280,7 +2282,7 @@ class DonationAmount {
 class engrid_ENGrid {
   constructor() {
     if (!engrid_ENGrid.enForm) {
-      throw new Error('Engaging Networks Form Not Found!');
+      throw new Error("Engaging Networks Form Not Found!");
     }
   }
 
@@ -2289,31 +2291,31 @@ class engrid_ENGrid {
   }
 
   static get debug() {
-    return !!this.getOption('Debug');
+    return !!this.getOption("Debug");
   } // Return any parameter from the URL
 
 
   static getUrlParameter(name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
     var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   } // Return the field value from its name. It works on any field type.
   // Multiple values (from checkboxes or multi-select) are returned as single string
   // Separated by ,
 
 
   static getFieldValue(name) {
-    return new FormData(this.enForm).getAll(name).join(',');
+    return new FormData(this.enForm).getAll(name).join(",");
   } // Set a value to any field. If it's a dropdown, radio or checkbox, it selects the proper option matching the value
 
 
   static setFieldValue(name, value) {
     document.getElementsByName(name).forEach(field => {
-      if ('type' in field) {
+      if ("type" in field) {
         switch (field.type) {
-          case 'select-one':
-          case 'select-multiple':
+          case "select-one":
+          case "select-multiple":
             for (const option of field.options) {
               if (option.value == value) {
                 option.selected = true;
@@ -2322,8 +2324,8 @@ class engrid_ENGrid {
 
             break;
 
-          case 'checkbox':
-          case 'radio':
+          case "checkbox":
+          case "radio":
             // @TODO: Try to trigger the onChange event
             if (field.value == value) {
               field.checked = true;
@@ -2331,8 +2333,8 @@ class engrid_ENGrid {
 
             break;
 
-          case 'textarea':
-          case 'text':
+          case "textarea":
+          case "text":
           default:
             field.value = value;
         }
@@ -2349,37 +2351,37 @@ class engrid_ENGrid {
     if (window.EngagingNetworks && typeof ((_e = (_d = (_c = (_b = (_a = window.EngagingNetworks) === null || _a === void 0 ? void 0 : _a.require) === null || _b === void 0 ? void 0 : _b._defined) === null || _c === void 0 ? void 0 : _c.enDependencies) === null || _d === void 0 ? void 0 : _d.dependencies) === null || _e === void 0 ? void 0 : _e.parseDependencies) === "function") {
       window.EngagingNetworks.require._defined.enDependencies.dependencies.parseDependencies(window.EngagingNetworks.dependencies);
 
-      if (engrid_ENGrid.getOption('Debug')) console.trace('EN Dependencies Triggered');
+      if (engrid_ENGrid.getOption("Debug")) console.trace("EN Dependencies Triggered");
     }
   } // Return the status of the gift process (true if a donation has been made, otherwise false)
 
 
   static getGiftProcess() {
-    if ('pageJson' in window) return window.pageJson.giftProcess;
+    if ("pageJson" in window) return window.pageJson.giftProcess;
     return null;
   } // Return the page count
 
 
   static getPageCount() {
-    if ('pageJson' in window) return window.pageJson.pageCount;
+    if ("pageJson" in window) return window.pageJson.pageCount;
     return null;
   } // Return the current page number
 
 
   static getPageNumber() {
-    if ('pageJson' in window) return window.pageJson.pageNumber;
+    if ("pageJson" in window) return window.pageJson.pageNumber;
     return null;
   } // Return the current page ID
 
 
   static getPageID() {
-    if ('pageJson' in window) return window.pageJson.campaignPageId;
+    if ("pageJson" in window) return window.pageJson.campaignPageId;
     return 0;
   } // Return the current page type
 
 
   static getPageType() {
-    if ('pageJson' in window && 'pageType' in window.pageJson) {
+    if ("pageJson" in window && "pageType" in window.pageJson) {
       switch (window.pageJson.pageType) {
         case "e-card":
           return "ECARD";
@@ -2408,13 +2410,13 @@ class engrid_ENGrid {
 
 
   static setBodyData(dataName, value) {
-    const body = document.querySelector('body');
+    const body = document.querySelector("body");
     body.setAttribute(`data-engrid-${dataName}`, value);
   } // Get body engrid data attributes
 
 
   static getBodyData(dataName) {
-    const body = document.querySelector('body');
+    const body = document.querySelector("body");
     return body.getAttribute(`data-engrid-${dataName}`);
   } // Return the option value
 
@@ -2425,7 +2427,7 @@ class engrid_ENGrid {
 
 
   static loadJS(url, onload = null, head = true) {
-    const scriptTag = document.createElement('script');
+    const scriptTag = document.createElement("script");
     scriptTag.src = url;
     scriptTag.onload = onload;
 
@@ -2436,6 +2438,36 @@ class engrid_ENGrid {
 
     document.getElementsByTagName("body")[0].appendChild(scriptTag);
     return;
+  } // Format a number
+
+
+  static formatNumber(number, decimals = 2, dec_point = ".", thousands_sep = ",") {
+    // Strip all characters but numerical ones.
+    number = (number + "").replace(/[^0-9+\-Ee.]/g, "");
+    const n = !isFinite(+number) ? 0 : +number;
+    const prec = !isFinite(+decimals) ? 0 : Math.abs(decimals);
+    const sep = typeof thousands_sep === "undefined" ? "," : thousands_sep;
+    const dec = typeof dec_point === "undefined" ? "." : dec_point;
+    let s = [];
+
+    const toFixedFix = function (n, prec) {
+      const k = Math.pow(10, prec);
+      return "" + Math.round(n * k) / k;
+    }; // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+
+
+    s = (prec ? toFixedFix(n, prec) : "" + Math.round(n)).split(".");
+
+    if (s[0].length > 3) {
+      s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+    }
+
+    if ((s[1] || "").length < prec) {
+      s[1] = s[1] || "";
+      s[1] += new Array(prec - s[1].length + 1).join("0");
+    }
+
+    return s.join(dec);
   }
 
 }
@@ -2559,13 +2591,14 @@ class ProcessingFees {
     this._amount = DonationAmount.getInstance();
     this._form = EnForm.getInstance();
     this._fee = 0;
-    this._field = document.querySelector('input[name="supporter.processing_fees"]'); // console.log('%c Processing Fees Constructor', 'font-size: 30px; background-color: #000; color: #FF0');
+    this._field = null; // console.log('%c Processing Fees Constructor', 'font-size: 30px; background-color: #000; color: #FF0');
     // Run only if it is a Donation Page with a Donation Amount field
 
     if (!document.getElementsByName("transaction.donationAmt").length) {
       return;
-    } // Watch the Radios for Changes
+    }
 
+    this._field = this.isENfeeCover() ? document.querySelector("#en__field_transaction_feeCover") : document.querySelector('input[name="supporter.processing_fees"]'); // Watch the Radios for Changes
 
     if (this._field instanceof HTMLInputElement) {
       // console.log('%c Processing Fees Start', 'font-size: 30px; background-color: #000; color: #FF0');
@@ -2605,11 +2638,17 @@ class ProcessingFees {
   }
 
   calculateFees() {
-    if (this._field instanceof HTMLInputElement && this._field.checked && "dataset" in this._field) {
+    var _a;
+
+    if (this._field instanceof HTMLInputElement && this._field.checked) {
+      if (this.isENfeeCover()) {
+        return window.EngagingNetworks.require._defined.enjs.getDonationFee();
+      }
+
       const fees = Object.assign({
         processingfeepercentadded: "0",
         processingfeefixedamountadded: "0"
-      }, this._field.dataset);
+      }, (_a = this._field) === null || _a === void 0 ? void 0 : _a.dataset);
       const processing_fee = parseFloat(fees.processingfeepercentadded) / 100 * this._amount.amount + parseFloat(fees.processingfeefixedamountadded);
       return Math.round(processing_fee * 100) / 100;
     }
@@ -2619,14 +2658,27 @@ class ProcessingFees {
 
 
   addFees() {
-    if (this._form.submit) {
+    if (this._form.submit && !this.isENfeeCover()) {
       this._amount.setAmount(this._amount.amount + this.fee, false);
     }
   } // Remove Fees From Amount
 
 
   removeFees() {
-    this._amount.setAmount(this._amount.amount - this.fee);
+    if (!this.isENfeeCover()) this._amount.setAmount(this._amount.amount - this.fee);
+  } // Check if this is a Processing Fee from EN
+
+
+  isENfeeCover() {
+    if ("feeCover" in window.EngagingNetworks) {
+      for (const key in window.EngagingNetworks.feeCover) {
+        if (window.EngagingNetworks.feeCover.hasOwnProperty(key)) {
+          return true;
+        }
+      }
+    }
+
+    return false;
   }
 
 }
@@ -2649,7 +2701,7 @@ class App extends engrid_ENGrid {
 
     this.shouldScroll = () => {
       // If you find a error, scroll
-      if (document.querySelector('.en__errorHeader')) {
+      if (document.querySelector(".en__errorHeader")) {
         return true;
       } // Try to match the iframe referrer URL by testing valid EN Page URLs
 
@@ -2685,7 +2737,7 @@ class App extends engrid_ENGrid {
 
   run() {
     // Enable debug if available is the first thing
-    if (this.options.Debug || App.getUrlParameter('debug') == 'true') App.setBodyData('debug', ''); // IE Warning
+    if (this.options.Debug || App.getUrlParameter("debug") == "true") App.setBodyData("debug", ""); // IE Warning
 
     new IE(); // Page Background
 
@@ -2702,7 +2754,25 @@ class App extends engrid_ENGrid {
     enInput.init();
     new ShowHideRadioCheckboxes("transaction.giveBySelect", "giveBySelect-");
     new ShowHideRadioCheckboxes("transaction.inmem", "inmem-");
-    new ShowHideRadioCheckboxes("transaction.recurrpay", "recurrpay-"); // Controls if the Theme has a the "Debug Bar"
+    new ShowHideRadioCheckboxes("transaction.recurrpay", "recurrpay-"); // Automatically show/hide all radios
+
+    let radioFields = [];
+    const allRadios = document.querySelectorAll("input[type=radio]");
+    allRadios.forEach(radio => {
+      if ("name" in radio && radioFields.includes(radio.name) === false) {
+        radioFields.push(radio.name);
+      }
+    });
+    radioFields.forEach(field => {
+      new ShowHideRadioCheckboxes(field, "engrid__" + field.replace(/\./g, "") + "-");
+    }); // Automatically show/hide all checkboxes
+
+    const allCheckboxes = document.querySelectorAll("input[type=checkbox]");
+    allCheckboxes.forEach(checkbox => {
+      if ("name" in checkbox) {
+        new ShowHideRadioCheckboxes(checkbox.name, "engrid__" + checkbox.name.replace(/\./g, "") + "-");
+      }
+    }); // Controls if the Theme has a the "Debug Bar"
     // legacy.debugBar();
     // Client onSubmit and onError functions
 
@@ -2717,9 +2787,9 @@ class App extends engrid_ENGrid {
 
     this._frequency.onFrequencyChange.subscribe(s => console.log(`Live Frequency: ${s}`));
 
-    this._form.onSubmit.subscribe(s => console.log('Submit: ', s));
+    this._form.onSubmit.subscribe(s => console.log("Submit: ", s));
 
-    this._form.onError.subscribe(s => console.log('Error:', s));
+    this._form.onError.subscribe(s => console.log("Error:", s));
 
     window.enOnSubmit = () => {
       this._form.dispatchSubmit();
@@ -2815,7 +2885,7 @@ class App extends engrid_ENGrid {
     }
 
     if (this.inIframe()) {
-      sendIframeFormStatus('submit');
+      sendIframeFormStatus("submit");
     }
   }
 
@@ -2846,9 +2916,101 @@ class App extends engrid_ENGrid {
 
 
   setDataAttributes() {
-    // Add a body banner data attribute if it's empty
-    if (!document.querySelector('.body-banner img')) {
-      App.setBodyData('body-banner', 'empty');
+    // Add a body banner data attribute if the banner contains no image
+    // @TODO Should this account for video?
+    // @TODO Should we merge this with the script that checks the background image?
+    if (!document.querySelector(".body-banner img")) {
+      App.setBodyData("body-banner", "empty");
+    } // Add a page-alert data attribute if it is empty
+
+
+    if (!document.querySelector(".page-alert *")) {
+      App.setBodyData("no-page-alert", "");
+    } // Add a content-header data attribute if it is empty
+
+
+    if (!document.querySelector(".content-header *")) {
+      App.setBodyData("no-content-header", "");
+    } // Add a body-headerOutside data attribute if it is empty
+
+
+    if (!document.querySelector(".body-headerOutside *")) {
+      App.setBodyData("no-body-headerOutside", "");
+    } // Add a body-header data attribute if it is empty
+
+
+    if (!document.querySelector(".body-header *")) {
+      App.setBodyData("no-body-header", "");
+    } // Add a body-title data attribute if it is empty
+
+
+    if (!document.querySelector(".body-title *")) {
+      App.setBodyData("no-body-title", "");
+    } // Add a body-banner data attribute if it is empty
+
+
+    if (!document.querySelector(".body-banner *")) {
+      App.setBodyData("no-body-banner", "");
+    } // Add a body-bannerOverlay data attribute if it is empty
+
+
+    if (!document.querySelector(".body-bannerOverlay *")) {
+      App.setBodyData("no-body-bannerOverlay", "");
+    } // Add a body-top data attribute if it is empty
+
+
+    if (!document.querySelector(".body-top *")) {
+      App.setBodyData("no-body-top", "");
+    } // Add a body-main data attribute if it is empty
+
+
+    if (!document.querySelector(".body-main *")) {
+      App.setBodyData("no-body-main", "");
+    } // Add a body-bottom data attribute if it is empty
+
+
+    if (!document.querySelector(".body-bottom *")) {
+      App.setBodyData("no-body-bottom", "");
+    } // Add a body-footer data attribute if it is empty
+
+
+    if (!document.querySelector(".body-footer *")) {
+      App.setBodyData("no-body-footer", "");
+    } // Add a body-footerOutside data attribute if it is empty
+
+
+    if (!document.querySelector(".body-footerOutside *")) {
+      App.setBodyData("no-body-footerOutside", "");
+    } // Add a content-footerSpacer data attribute if it is empty
+
+
+    if (!document.querySelector(".content-footerSpacer *")) {
+      App.setBodyData("no-content-footerSpacer", "");
+    } // Add a content-preFooter data attribute if it is empty
+
+
+    if (!document.querySelector(".content-preFooter *")) {
+      App.setBodyData("no-content-preFooter", "");
+    } // Add a content-footer data attribute if it is empty
+
+
+    if (!document.querySelector(".content-footer *")) {
+      App.setBodyData("no-content-footer", "");
+    } // Add a page-backgroundImage data attribute if it is empty
+
+
+    if (!document.querySelector(".page-backgroundImage *")) {
+      App.setBodyData("no-page-backgroundImage", "");
+    } // Add a page-backgroundImageOverlay data attribute if it is empty
+
+
+    if (!document.querySelector(".page-backgroundImageOverlay *")) {
+      App.setBodyData("no-page-backgroundImageOverlay", "");
+    } // Add a page-customCode data attribute if it is empty
+
+
+    if (!document.querySelector(".page-customCode *")) {
+      App.setBodyData("no-page-customCode", "");
     }
   }
 
@@ -3109,8 +3271,6 @@ class ClickToExpand {
 const body = document.body;
 const enGrid = document.getElementById("engrid");
 const enInput = (() => {
-  /* @TODO */
-
   /************************************
    * Globablly Scoped Constants and Variables
    ***********************************/
@@ -4187,17 +4347,25 @@ class LiveVariables {
   }
 
   getAmountTxt(amount = 0) {
-    var _a, _b;
+    var _a, _b, _c, _d;
 
-    const symbol = (_a = this.options.CurrencySymbol) !== null && _a !== void 0 ? _a : '$';
-    const separator = (_b = this.options.CurrencySeparator) !== null && _b !== void 0 ? _b : '.';
-    const amountTxt = Number.isInteger(amount) ? symbol + amount : symbol + amount.toFixed(2).replace('.', separator);
-    return amount > 0 ? amountTxt : "";
+    const symbol = (_a = this.options.CurrencySymbol) !== null && _a !== void 0 ? _a : "$";
+    const dec_separator = (_b = this.options.DecimalSeparator) !== null && _b !== void 0 ? _b : ".";
+    const thousands_separator = (_c = this.options.ThousandsSeparator) !== null && _c !== void 0 ? _c : "";
+    const dec_places = amount % 1 == 0 ? 0 : (_d = this.options.DecimalPlaces) !== null && _d !== void 0 ? _d : 2;
+    const amountTxt = engrid_ENGrid.formatNumber(amount, dec_places, dec_separator, thousands_separator);
+    return amount > 0 ? symbol + amountTxt : "";
   }
 
   getUpsellAmountTxt(amount = 0) {
-    const amountTxt = this.options.CurrencySymbol + Math.ceil(amount / 5) * 5;
-    return amount > 0 ? amountTxt : "";
+    var _a, _b, _c, _d;
+
+    const symbol = (_a = this.options.CurrencySymbol) !== null && _a !== void 0 ? _a : "$";
+    const dec_separator = (_b = this.options.DecimalSeparator) !== null && _b !== void 0 ? _b : ".";
+    const thousands_separator = (_c = this.options.ThousandsSeparator) !== null && _c !== void 0 ? _c : "";
+    const dec_places = amount % 1 == 0 ? 0 : (_d = this.options.DecimalPlaces) !== null && _d !== void 0 ? _d : 2;
+    const amountTxt = engrid_ENGrid.formatNumber(Math.ceil(amount / 5) * 5, dec_places, dec_separator, thousands_separator);
+    return amount > 0 ? symbol + amountTxt : "";
   }
 
   getUpsellAmountRaw(amount = 0) {
@@ -4215,8 +4383,8 @@ class LiveVariables {
       label = label.replace("$AMOUNT", amount);
       label = label.replace("$FREQUENCY", frequency);
     } else {
-      label = label.replace("$AMOUNT", '');
-      label = label.replace("$FREQUENCY", '');
+      label = label.replace("$AMOUNT", "");
+      label = label.replace("$FREQUENCY", "");
     }
 
     if (submit && label) {
@@ -4255,10 +4423,10 @@ class LiveVariables {
   changeRecurrency() {
     const recurrpay = document.querySelector("[name='transaction.recurrpay']");
 
-    if (recurrpay && recurrpay.type != 'radio') {
-      recurrpay.value = this._frequency.frequency == 'onetime' ? 'N' : 'Y';
+    if (recurrpay && recurrpay.type != "radio") {
+      recurrpay.value = this._frequency.frequency == "onetime" ? "N" : "Y";
       this._frequency.recurring = recurrpay.value;
-      if (engrid_ENGrid.getOption('Debug')) console.log('Recurpay Changed!');
+      if (engrid_ENGrid.getOption("Debug")) console.log("Recurpay Changed!");
     }
   }
 
@@ -4284,7 +4452,7 @@ class LiveVariables {
 
       this._amount.load();
 
-      if (engrid_ENGrid.getOption('Debug')) console.log("Amounts Swapped To", window.EngridAmounts[this._frequency.frequency]);
+      if (engrid_ENGrid.getOption("Debug")) console.log("Amounts Swapped To", window.EngridAmounts[this._frequency.frequency]);
     }
   } // Watch for a clicks on monthly-upsell link
 
@@ -4381,7 +4549,7 @@ class UpsellLightbox {
                 </p>
                 <!-- YES BUTTON -->
                 <div id="upsellYesButton">
-                  <a href="#">
+                  <a class="pseduo__en__submit_button" href="#">
                     <div>
                     <span class='loader-wrapper'><span class='loader loader-quart'></span></span>
                     <span class='label'>${yes}</span>
@@ -4432,7 +4600,7 @@ class UpsellLightbox {
     // const hideModal = cookie.get("hideUpsell"); // Get cookie
     // if it's a first page of a Donation page
     return (// !hideModal &&
-      'EngridUpsell' in window && !!window.pageJson && window.pageJson.pageNumber == 1 && window.pageJson.pageType == "donation"
+      'EngridUpsell' in window && !!window.pageJson && window.pageJson.pageNumber == 1 && ['donation', 'premiumgift'].includes(window.pageJson.pageType)
     );
   }
 
@@ -4648,43 +4816,42 @@ class ShowHideRadioCheckboxes {
 // This class works when the user has added ".simple_country_select" as a class in page builder for the Country select
 class SimpleCountrySelect {
   constructor() {
-    var _a;
-
-    this.countryWrapper = document.querySelector('.simple_country_select');
-    this.countrySelect = document.querySelector('#en__field_supporter_country');
+    this.countryWrapper = document.querySelector(".simple_country_select");
+    this.countrySelect = document.querySelector("#en__field_supporter_country"); // @TODO Check if there is a country select AN an address1 label, otherwise we can abort the function
 
     if (this.countrySelect) {
-      let countrySelecLabel = this.countrySelect.options[this.countrySelect.selectedIndex].innerHTML;
-      let countrySelecValue = this.countrySelect.options[this.countrySelect.selectedIndex].value;
+      let countrySelectLabel = this.countrySelect.options[this.countrySelect.selectedIndex].innerHTML;
+      let countrySelectValue = this.countrySelect.options[this.countrySelect.selectedIndex].value; // @TODO Update so that it reads "(Outside X?)" where X is the Value of the Country Select. No need for long form version of it.
 
-      if (countrySelecValue == "US") {
-        countrySelecValue = " US";
+      if (countrySelectValue == "US") {
+        countrySelectValue = " US";
       }
 
-      if (countrySelecLabel == "United States") {
-        countrySelecLabel = "the United States";
+      if (countrySelectLabel == "United States") {
+        countrySelectLabel = "the United States";
       }
 
-      let countryWrapper = document.querySelector('.simple_country_select');
+      let countryWrapper = document.querySelector(".simple_country_select");
 
       if (countryWrapper) {
         // Remove Country Select tab index
         this.countrySelect.tabIndex = -1; // Find the address label
 
-        let addressLabel = document.querySelector('.en__field--address1 label');
-        let addressWrapper = (_a = addressLabel.parentElement) === null || _a === void 0 ? void 0 : _a.parentElement; // EN does not enforce a labels on fields so we have to check for it
+        let addressLabel = document.querySelector(".en__field--address1 label"); // EN does not enforce a labels on fields so we have to check for it
+        // @TODO Update so that this follows the same pattern / HTML structure as the Tippy tooltips which are added to labels. REF: https://github.com/4site-interactive-studios/engrid-aiusa/blob/6e4692d4f9a28b9668d6c1bfed5622ac0cc5bdb9/src/scripts/main.js#L42
 
         if (addressLabel) {
-          // Wrap the address label in a div to break out of the flexbox
-          this.wrap(addressLabel, document.createElement('div')); // Add our link after the address label
+          let labelText = addressLabel.innerHTML; // Wrap the address label in a div to break out of the flexbox
+
+          this.wrap(addressLabel, document.createElement("div")); // Add our link INSIDE the address label
           // Includes both long form and short form variants
 
-          let newEl = document.createElement('span');
-          newEl.innerHTML = ' <label id="en_custom_field_simple_country_select_long" class="en__field__label"><a href="javascript:void(0)">(Outside ' + countrySelecLabel + '?)</a></label><label id="en_custom_field_simple_country_select_short" class="en__field__label"><a href="javascript:void(0)">(Outside ' + countrySelecValue + '?)</a></label>';
-          newEl.querySelectorAll("a").forEach(el => {
+          let newEl = document.createElement("span");
+          newEl.innerHTML = ' <label id="en_custom_field_simple_country_select_long" class="en__field__label"><a href="javascript:void(0)">(Outside ' + countrySelectLabel + '?)</a></label><label id="en_custom_field_simple_country_select_short" class="en__field__label"><a href="javascript:void(0)">(Outside ' + countrySelectValue + "?)</a></label>";
+          addressLabel.innerHTML = `${labelText}${newEl.innerHTML}`;
+          addressLabel.querySelectorAll("a").forEach(el => {
             el.addEventListener("click", this.showCountrySelect.bind(this));
-          });
-          this.insertAfter(newEl, addressLabel);
+          }); //this.insertAfter(newEl, addressLabel);
         }
       }
     }
@@ -4708,7 +4875,7 @@ class SimpleCountrySelect {
 
     e.preventDefault();
     this.countryWrapper.classList.add("country-select-visible");
-    let addressLabel = document.querySelector('.en__field--address1 label');
+    let addressLabel = document.querySelector(".en__field--address1 label");
     let addressWrapper = (_a = addressLabel.parentElement) === null || _a === void 0 ? void 0 : _a.parentElement;
     addressWrapper.classList.add("country-select-visible");
     this.countrySelect.focus(); // Reinstate Country Select tab index
@@ -4800,38 +4967,43 @@ class SrcDefer {
     for (let i = 0; i < this.videoBackground.length; i++) {
       let video = this.videoBackground[i]; // Process one or more defined sources in the <video> tag
 
-      let videoBackgroundSource = video.querySelectorAll("source");
-      let videoBackgroundSourcedDataSrc = this.videoBackgroundSource[i].getAttribute("data-src");
+      this.videoBackgroundSource = video.querySelectorAll("source");
 
-      if (videoBackgroundSource) {
-        for (let i = 0; i < this.videoBackgroundSource.length; i++) {
-          // Construct the <video> tags new <source>
-          if (videoBackgroundSourcedDataSrc) {
-            this.videoBackgroundSource[i].setAttribute("src", videoBackgroundSourcedDataSrc);
-            this.videoBackgroundSource[i].setAttribute("data-engrid-data-src-processed", "true"); // Sets an attribute to mark that it has been processed by ENGrid
+      if (this.videoBackgroundSource) {
+        // loop through all the sources
+        for (let j = 0; j < this.videoBackgroundSource.length; j++) {
+          let videoSource = this.videoBackgroundSource[j];
 
-            this.videoBackgroundSource[i].removeAttribute("data-src"); // Removes the data-source
-          } // To get the browser to request the video asset defined we need to remove the <video> tag and re-add it
+          if (videoSource) {
+            let videoBackgroundSourcedDataSrc = videoSource.getAttribute("data-src");
 
+            if (videoBackgroundSourcedDataSrc) {
+              videoSource.setAttribute("src", videoBackgroundSourcedDataSrc);
+              videoSource.setAttribute("data-engrid-data-src-processed", "true"); // Sets an attribute to mark that it has been processed by ENGrid
 
-          let videoBackgroundParent = video.parentNode; // Determine the parent of the <video> tag
-
-          let copyOfVideoBackground = video; // Copy the <video> tag
-
-          if (videoBackgroundParent && copyOfVideoBackground) {
-            videoBackgroundParent.replaceChild(copyOfVideoBackground, this.videoBackground[i]); // Replace the <video> with the copy of itself
-            // Update the video to auto play, mute, loop
-
-            video.muted = true; // Mute the video by default
-
-            video.controls = false; // Hide the browser controls
-
-            video.loop = true; // Loop the video
-
-            video.playsInline = true; // Encourage the user agent to display video content within the element's playback area
-
-            video.play(); // Plays the video
+              videoSource.removeAttribute("data-src"); // Removes the data-source
+            }
           }
+        } // To get the browser to request the video asset defined we need to remove the <video> tag and re-add it
+
+
+        let videoBackgroundParent = video.parentNode; // Determine the parent of the <video> tag
+
+        let copyOfVideoBackground = video; // Copy the <video> tag
+
+        if (videoBackgroundParent && copyOfVideoBackground) {
+          videoBackgroundParent.replaceChild(copyOfVideoBackground, video); // Replace the <video> with the copy of itself
+          // Update the video to auto play, mute, loop
+
+          video.muted = true; // Mute the video by default
+
+          video.controls = false; // Hide the browser controls
+
+          video.loop = true; // Loop the video
+
+          video.playsInline = true; // Encourage the user agent to display video content within the element's playback area
+
+          video.play(); // Plays the video
         }
       }
     }
@@ -5236,13 +5408,14 @@ const options = {
   applePay: false,
   CapitalizeFields: true,
   ClickToExpand: true,
-  CurrencySymbol: '$',
-  CurrencySeparator: '.',
+  CurrencySymbol: "$",
+  CurrencySeparator: ".",
+  ThousandsSeparator: ",",
   MediaAttribution: true,
   SkipToMainContentLink: true,
   SrcDefer: true,
   // ProgressBar: true,
-  Debug: App.getUrlParameter('debug') == 'true' ? true : false,
+  Debug: App.getUrlParameter("debug") == "true" ? true : false,
   onLoad: () => console.log("Starter Theme Loaded"),
   onResize: () => console.log("Starter Theme Window Resized")
 };

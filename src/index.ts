@@ -8,6 +8,7 @@ const options: Options = {
   ClickToExpand: true,
   CurrencySymbol: "$",
   CurrencySeparator: ".",
+  ThousandsSeparator: ",",
   MediaAttribution: true,
   SkipToMainContentLink: true,
   SrcDefer: true,
