@@ -2,6 +2,18 @@
 
 @charset "UTF-8";
 
+/*!
+ * *************************************************
+ * ENGRID PAGE TEMPLATE ASSETS
+ *
+ * Date: Monday, September 6, 2021 @ 13:26:22 ET
+ * By: bryancasler
+ * ENGrid styles: vTBD1
+ * ENGrid scripts: vTBD2
+ *
+ * *************************************************
+ */
+
 *,:after,:before{
   box-sizing:border-box;
 }
@@ -2063,6 +2075,7 @@ a:focus,a:hover{
   --checkbox_padding-top:0px;
   --checkbox_padding-left:0px;
   --checkbox_text-transform:var(--radio_text-transform);
+  --checkbox_check_font-size:var(--radio_font-size);
   --checkbox_content_checked:"\2713";
   --select_font-family:var(--input_font-family);
   --select_font-size:var(--input_font-size);
@@ -2286,10 +2299,12 @@ input[type=checkbox]+label:before{
   background-color:var(--checkbox_background-color);
   border:var(--checkbox_border-width) solid var(--checkbox_border-color);
   border-radius:var(--checkbox_border-radius);
+  color:#0000;
   color:var(--checkbox_color);
-  content:" ";
+  content:var(--checkbox_content_checked);
   display:flex;
   flex:1 0 auto;
+  font-size:var(--checkbox_check_font-size);
   height:var(--checkbox_height);
   justify-content:center;
   margin-right:MAX(var(--fields_spacing-inline), 1ch, .5rem);
@@ -2329,9 +2344,11 @@ input[type=checkbox]:checked+label:before{
   background-color:var(--checkbox_background-color);
   border:var(--checkbox_border-width) solid var(--checkbox_border-color);
   border-radius:var(--checkbox_border-radius);
+  color:#0000;
   color:var(--checkbox_color);
-  content:" ";
+  content:var(--checkbox_content_checked);
   display:flex;
+  font-size:var(--checkbox_check_font-size);
   height:var(--checkbox_height);
   justify-content:center;
   padding-left:var(--checkbox_padding-left);
@@ -3716,6 +3733,7 @@ input[type=text].en__ticket__quantity{
   border:none !important;
   box-shadow:none !important;
   flex-basis:auto;
+  height:-moz-fit-content !important;
   height:fit-content !important;
   padding-left:0;
   padding-right:0;

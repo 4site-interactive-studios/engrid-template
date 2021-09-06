@@ -11,18 +11,6 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "fonts/",
-            },
-          },
-        ],
-      },
-      {
         test: /\.scss$/,
         use: [
           "style-loader", //4. Inject CSS into DOM
