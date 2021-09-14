@@ -29,8 +29,8 @@ Email: bryan@4sitestudios.com
 `4Site Page Template`
 
 **Uploaded Assets**<br/>
-`engrid.min.css`
-`engrid.min.css`
+`engrid.min.css`<br/>
+`engrid.min.css`<br/>
 `logo.png`
 
 **Components Folder**<br/>
