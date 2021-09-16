@@ -31,18 +31,36 @@ module.exports = {
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
     new webpack.BannerPlugin({
-      banner: `*************************************************
-ENGRID PAGE TEMPLATE ASSETS
-
-Date: ${new Date().toLocaleString(
-        "en-US",
-        localeStringDateOptions
-      )} @ ${new Date().toLocaleString("en-US", localeStringTimeOptions)} ET
-By: ${author}
-ENGrid styles: v${engridScriptStylesVersion}
-ENGrid scripts: v${engridScriptScriptsVersion}
-
-*************************************************`,
+      banner: `
+               ((((                                                        
+         ((((((((                                                          
+      (((((((                                                              
+    (((((((           ****                                                 
+  (((((((          *******                                                 
+ ((((((((       **********     *********       ****    ***                 
+ ((((((((    ************   **************     ***    ****                 
+ ((((((   *******  *****   *****        *     **    ******        *****    
+ (((   *******    ******   ******            ****  ********   ************ 
+     *******      *****     **********      ****    ****     ****      ****
+   *********************         *******   *****   ****     ***************
+    ********************            ****   ****    ****    ****            
+                *****    *****   *******  *****   *****     *****     **   
+               *****     *************    ****    *******     **********   
+ 
+ ENGRID PAGE TEMPLATE ASSETS
+ 
+ Date: ${new Date().toLocaleString(
+   "en-US",
+   localeStringDateOptions
+ )} @ ${new Date().toLocaleString("en-US", localeStringTimeOptions)} ET
+ By: ${author}
+ ENGrid styles: v${engridScriptStylesVersion}
+ ENGrid scripts: v${engridScriptScriptsVersion}
+ 
+ Created by 4Site Studios
+ Come work with us or join our team, we would love to hear from you
+ https://www.4sitestudios.com/en
+`,
     }),
   ],
   module: {

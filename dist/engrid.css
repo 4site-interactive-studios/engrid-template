@@ -3,15 +3,33 @@
 @charset "UTF-8";
 
 /*!
- * *************************************************
- * ENGRID PAGE TEMPLATE ASSETS
+ * 
+ *                ((((
+ *          ((((((((
+ *       (((((((
+ *     (((((((           ****
+ *   (((((((          *******
+ *  ((((((((       **********     *********       ****    ***
+ *  ((((((((    ************   **************     ***    ****
+ *  ((((((   *******  *****   *****        *     **    ******        *****
+ *  (((   *******    ******   ******            ****  ********   ************
+ *      *******      *****     **********      ****    ****     ****      ****
+ *    *********************         *******   *****   ****     ***************
+ *     ********************            ****   ****    ****    ****
+ *                 *****    *****   *******  *****   *****     *****     **
+ *                *****     *************    ****    *******     **********
  *
- * Date: Thursday, September 16, 2021 @ 16:30:12 ET
- * By: fe
- * ENGrid styles: v0.3.34
- * ENGrid scripts: v0.3.34
+ *  ENGRID PAGE TEMPLATE ASSETS
  *
- * *************************************************
+ *  Date: Thursday, September 16, 2021 @ 17:18:14 ET
+ *  By: fe
+ *  ENGrid styles: v0.3.34
+ *  ENGrid scripts: v0.3.34
+ *
+ *  Created by 4Site Studios
+ *  Come work with us or join our team, we would love to hear from you
+ *  https://www.4sitestudios.com/en
+ *
  */
 
 *,:after,:before{
@@ -6351,8 +6369,8 @@ body[data-engrid-debug]:before{
 [data-engrid-debug] #debug-bar #buttons-wrapper .button,[data-engrid-debug] #debug-bar #buttons-wrapper button{
   --button_font-family:Arial, sans-serif;
   --button_color:#fff;
-  --button_font-size:16px
-        --button_font-weight: initial;
+  --button_font-size:16px;
+  --button_font-weight:initial;
   --button_line-height:normal;
   --button_background-color:#000;
   --button_border-width:0px;
