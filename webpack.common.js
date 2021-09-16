@@ -1,10 +1,28 @@
+const exec = require("child_process").execSync;
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
-const webpack = require('webpack');
+const webpack = require("webpack");
 const author = require("os").userInfo().username;
-const engridScriptStylesVersion = 'TBD1';
-const engridScriptScriptsVersion = 'TBD2';
-const localeStringDateOptions = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-const localeStringTimeOptions = {hour12: false, hour: '2-digit', minute:'2-digit', second:'2-digit', timeZone: 'America/New_York' };
+let engridScriptStylesVersion = exec("npm list @4site/engrid-styles")
+  .toString("utf8")
+  .split("@4site/engrid-styles@")[1]
+  .split("\n")[0];
+const engridScriptScriptsVersion = exec("npm list @4site/engrid-common")
+  .toString("utf8")
+  .split("@4site/engrid-common@")[1]
+  .split("\n")[0];
+const localeStringDateOptions = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const localeStringTimeOptions = {
+  hour12: false,
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  timeZone: "America/New_York",
+};
 
 module.exports = {
   entry: {
@@ -13,16 +31,19 @@ module.exports = {
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
     new webpack.BannerPlugin({
-      banner:`*************************************************
+      banner: `*************************************************
 ENGRID PAGE TEMPLATE ASSETS
 
-Date: ${new Date().toLocaleString('en-US', localeStringDateOptions)} @ ${new Date().toLocaleString('en-US', localeStringTimeOptions)} ET
+Date: ${new Date().toLocaleString(
+        "en-US",
+        localeStringDateOptions
+      )} @ ${new Date().toLocaleString("en-US", localeStringTimeOptions)} ET
 By: ${author}
 ENGrid styles: v${engridScriptStylesVersion}
 ENGrid scripts: v${engridScriptScriptsVersion}
 
-*************************************************`
-    })
+*************************************************`,
+    }),
   ],
   module: {
     rules: [
