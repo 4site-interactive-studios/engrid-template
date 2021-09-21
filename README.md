@@ -30,16 +30,17 @@ Email: bryan@4sitestudios.com
 `4Site Page Template`
 
 **Uploaded Assets**<br/>
-`engrid.min.css`<br/>
-`engrid.min.css`<br/>
-`logo.png`
+`4Site Page Template > engrid.min.css`<br/>
+`4Site Page Template > engrid.min.css`<br/>
+`4Site Page Template > logo.png`
 
 **Components Folder**<br/>
-`4Site Page Template and Components`
+`Ω 4Site Live - ENGrid Page Template and Components`
+`Ω 4Site Development - ENGrid Page Template and Components`
 
-**Library Components**<br/>
+**Library Components (Naming Conventions)**<br/>
 `4Site Page Template - Center Left 1 Column`<br/>
-`General: Copy - Placeholder Title (Lorem Ipsum)`<br/>
-`General: Copy - Placeholder Paragraph (Lorem Ipsum)`<br/>
-`General: Form - Personal Infromation (First Name, Last Name, Email)`<br/>
+`General: Copy: Placeholder Title (Lorem Ipsum)`<br/>
+`General: Copy: Placeholder Paragraph (Lorem Ipsum)`<br/>
+`General: Form: Personal Infromation (First Name, Last Name, Email)`<br/>
 `Donation: Button (Give $AMOUNT $FREQUENCY)`
