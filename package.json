@@ -8,7 +8,9 @@
     "start": "webpack --watch  --config webpack.prod.js",
     "build": "npm run production & npm run minify",
     "production": "webpack --config webpack.prod.js",
-    "minify": "webpack --config webpack.min.js"
+    "minify": "webpack --config webpack.min.js",
+    "update": "npm update @4site/engrid-common @4site/engrid-styles",
+    "rebuild": "npm run update & npm run build"
   },
   "keywords": [
     "Engaging Networks",
