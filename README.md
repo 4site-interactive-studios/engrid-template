@@ -27,12 +27,14 @@ Email: bryan@4sitestudios.com
 `Ω Reference - Email to Target - Custom Target`
 
 **Images and Files Folder**<br/>
-`4Site Page Template`
+`Ω 4Site Live Templates`<br/>
+`Ω 4Site Archive`<br/>
+`Ω 4Site Archive - Legacy Templates`
 
 **Uploaded Assets**<br/>
-`4Site Page Template > engrid.min.css`<br/>
-`4Site Page Template > engrid.min.css`<br/>
-`4Site Page Template > logo.png`
+`Ω 4Site Live Templates > engrid.min.css`<br/>
+`Ω 4Site Live Templates > engrid.min.css`<br/>
+`Ω 4Site Live Templates > logo.png`
 
 **Components Folder**<br/>
 `Ω 4Site Live - ENGrid Page Template and Components`<br/>
