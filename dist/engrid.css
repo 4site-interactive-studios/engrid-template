@@ -21,10 +21,10 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Thursday, September 23, 2021 @ 10:49:11 ET
+ *  Date: Thursday, September 23, 2021 @ 20:57:35 ET
  *  By: fe
- *  ENGrid styles: v0.3.37
- *  ENGrid scripts: v0.3.36
+ *  ENGrid styles: v0.3.38
+ *  ENGrid scripts: v0.3.38
  *
  *  Created by 4Site Studios
  *  Come work with us or join our team, we would love to hear from you
@@ -4421,6 +4421,42 @@ body:not(#en__pagebuilder) img:not([src]):not([srcset]){
   font-weight:700;
 }
 
+#goMonthly .upsellOtherAmountLabel p{
+  margin:10px 0;
+}
+
+#goMonthly .upsellOtherAmount{
+  grid-gap:15px;
+  align-items:center;
+  display:flex;
+  gap:15px;
+}
+
+#goMonthly .upsellOtherAmount .upsellOtherAmountInput{
+  position:relative;
+}
+
+#goMonthly .upsellOtherAmount .upsellOtherAmountInput small{
+  background-color:var(--error__color);
+  border-bottom-left-radius:var(--input_border-radius);
+  border-bottom-right-radius:var(--input_border-radius);
+  bottom:40px;
+  color:var(--color_white);
+  display:block;
+  font-size:.75rem;
+  opacity:0;
+  padding:2px;
+  position:absolute;
+  text-align:center;
+  transition:opacity .3s ease-in-out,bottom .3s ease-in-out;
+  width:100%;
+}
+
+#goMonthly .upsellOtherAmount .upsellOtherAmountInput.is-invalid small{
+  bottom:-22px;
+  opacity:1;
+}
+
 #goMonthly #secondOtherField{
   -webkit-appearance:textfield;
           appearance:textfield;
@@ -4433,7 +4469,6 @@ body:not(#en__pagebuilder) img:not([src]):not([srcset]){
   display:inline-block;
   height:40px;
   margin-bottom:0;
-  margin-left:5px;
   padding-left:20px !important;
   transition:box-shadow .5s,border-color .25s ease-in-out;
   width:80px;

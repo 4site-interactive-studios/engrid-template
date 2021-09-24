@@ -10,7 +10,7 @@
     "production": "webpack --config webpack.prod.js",
     "minify": "webpack --config webpack.min.js",
     "update": "npm update @4site/engrid-common @4site/engrid-styles",
-    "rebuild": "npm run update & npm run build"
+    "rebuild": "npm run update;npm run build"
   },
   "keywords": [
     "Engaging Networks",
