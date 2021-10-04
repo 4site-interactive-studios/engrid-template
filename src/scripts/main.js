@@ -1,13 +1,10 @@
-// Loads client theme scripts as soon as possible, but never before DOMContentLoaded
-if (document.readyState !== "loading") {
-    this.run();
-} else {
-    document.addEventListener("DOMContentLoaded", () => {
-      this.run();
-    });
-};
+// Fires scripts ASAP, but not before DOMContentLoaded
+// Accounts for the circumstance where the DOMContentLoaded event has already triggered
+const DOMReady = function(callback) {
+  document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
+}
 
-function run(){
-    console.log("ENGrid client theme main.js scripts are executing");
-    // Add your client theme functions and scripts here
+DOMReady(function() {
+    console.log("ENGrid client scripts are executing");
+    // Add your client scripts here
 }
