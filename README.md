@@ -36,8 +36,11 @@ Email: bryan@4sitestudios.com
 `Ω 4Site Live Templates > logo.png`
 
 **Components Folder**<br/>
-`Ω 4Site Live - ENGrid Page Template and Components`<br/>
-`Ω 4Site Development - ENGrid Page Template and Components`
+`Ω1. 4Site Live - ENGrid Page Template and Components`<br/>
+`Ω2. 4Site Staging - ENGrid Page Template and Components`<br/>
+`Ω3. 4Site Development - ENGrid Page Template and Components`<br/>
+`Ω5. 4Site Legacy - ENGrid Page Template and Components`<br/>
+`ΩΩ. 4Site Archive`
 
 **Library Components (Naming Conventions)**<br/>
 `4Site Page Template - Center Left 1 Column`<br/>
