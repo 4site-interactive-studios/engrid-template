@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Start Google Tag Manager Data Layer Initialization Script -->
-	<script>
-	 dataLayer = [];
-	</script>
-	<!-- End Google Tag Manager Data Layer Initialization Script -->
-
-    <!-- Google Optimize page hiding snippet - Disable Google Optimize when not in use as it dramatically slows page load times -->
+	<!-- Start Google Optimize with page hiding snippet -->
 	<!-- 
 	<style>
 	.async-hide { opacity: 0 !important} 
@@ -20,7 +14,14 @@
 	   })(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-TBD':true});
 	</script>
 	-->
-	
+    <!-- End Google Optimize with page hiding snippet -->
+
+	<!-- Start Google Tag Manager Data Layer Initialization Script -->
+	<script>
+	 dataLayer = [];
+	</script>
+	<!-- End Google Tag Manager Data Layer Initialization Script -->
+
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<link href="/TBD-ORG-favicon.ico" rel="shortcut icon">
@@ -42,10 +43,18 @@
             background-color: #000000;
             opacity: 0;
         }
+
+        body[data-engrid-embedded] {
+            background-color: transparent;
+        }
     </style>
 
-    <!-- Preload ENGrid CSS so the download starts before EN's assets -->
-	<link rel="preload" href="https://TBD/engrid.min.css" as="style">
+    <!-- Preconnect and Preload Render Critical CSS, JS, and Fonts -->
+	<link rel="preconnect" href="//TBD.ssl.cf5.rackcdn.com">
+	<link rel="preconnect" href="//cdn.jsdelivr.net">
+	<link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/engrid.min.css" as="style">
+	<link rel="preload" href="https://cdn.jsdelivr.net/gh/4site-interactive-studios/engrid-loader@main/loader.js" as="script">
+	<link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/font.otf" as="font" type="font/otf" crossorigin> 
 
 </head>
 <body data-engrid-add-input-placeholders data-engrid-layout="centerleft1col" data-engrid-theme="engrid-TBD-ORG-NAME" data-replace-banner-with-background="if-banner-empty-or-background-video">
@@ -56,16 +65,10 @@
     if (window.self !== window.top) {
         document.getElementsByTagName("BODY")[0].setAttribute("data-engrid-embedded", "").style.setProperty("background-color", "transparent", "important");
     }
-    </script>
+    </script> 
 
-	<!-- Load ENGrid's CSS here so that it always comes after Engaging Networks CSS which gets injected into <head> -->
-	<link href="https://TBD/engrid.min.css" rel="stylesheet" type="text/css" id="engrid-loader-css">
-
-    <!-- Start loading above the fold fonts without waiting for engrid.css to be parsed -->
-	<!-- <link rel="preload" href="TBD/font.woff2" as="font" type="font/woff2" crossorigin>  -->
-	
-    <!-- Load ENGrid's Javascript asynchronously -->
-    <script async src="https://TBD/engrid.min.js" id="engrid-loader-js"></script> 
+	<!-- Placed here so that it always comes after Engaging Networks CSS which gets injected into <head> -->
+    <link href="https://TBD/engrid.min.css" rel="stylesheet" type="text/css" id="engrid-loader-css">
 
 	<div id="engrid">
 	<!-- Start EN Page Builder -->
@@ -81,6 +84,9 @@
 
     <!-- End EN Page Builder -->
     </div>
+
+    <!-- Placed here so it does not render block the page. loader.min.js conditially loads engrid.js and if necessary replaces engrid.css-->
+    <script src="https://cdn.jsdelivr.net/gh/4site-interactive-studios/engrid-loader@main/loader.js" data-repo-owner="4site-interactive-studios" data-repo-name="engrid-TBD" data-en-assets-url="https://TBD.ssl.cf5.rackcdn.com/12345TBD/" data-engrid-loader-js></script>
 
     <!-- Start Render Critical Javascript (comes after the DOM has finished loading) -->
     
