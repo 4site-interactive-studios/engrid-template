@@ -7,4 +7,4 @@ const DOMReady = function(callback) {
 DOMReady(function() {
     console.log("ENGrid client scripts are executing");
     // Add your client scripts here
-}
+});
