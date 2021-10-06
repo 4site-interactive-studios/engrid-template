@@ -23,10 +23,10 @@ Email: bryan@4sitestudios.com
 `ΩΩ. Archive - XYZ`
 
 **Page Names**<br/>
-`Ω Reference - Donation Page (Test Gateway)`<br/>
-`Ω Reference - Petition Page`<br/>
-`Ω Reference - Email to Target - Geo Targeted`<br/>
-`Ω Reference - Email to Target - Custom Target`
+`REFERENCE - Donation Page (Test Gateway)`<br/>
+`REFERENCE - Petition Page`<br/>
+`REFERENCE - Email to Target - Geo Targeted`<br/>
+`REFERENCE - Email to Target - Custom Target`
 
 ### EN Uploaded Assets
 
