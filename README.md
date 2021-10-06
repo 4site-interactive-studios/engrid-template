@@ -25,7 +25,7 @@ Email: bryan@4sitestudios.com
 **Page Names**<br/>
 `REFERENCE - Donation Page (Test Gateway)`<br/>
 `REFERENCE - Petition Page`<br/>
-`REFERENCE - Email to Target - Geo Targeted`<br/>
+`REFERENCE - Email to Target - Geolocated Targeted`<br/>
 `REFERENCE - Email to Target - Custom Target`
 
 ### EN Uploaded Assets
