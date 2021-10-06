@@ -14,6 +14,7 @@ Email: bryan@4sitestudios.com
 
 **Pages Folders**<br/>
 `Ω1. 4Site Live - Reference Pages for Duplication`<br/>
+'Ω1. 4Site Live Legacy - Live pages on Legacy Code'<br/>
 `Ω2. 4Site Staging - Quality Assurance Testing`<br/>
 `Ω3. 4Site Development - Code Development`<br/>
 `Ω4. 4Site Development - XYZ Feature Branch`<br/>
