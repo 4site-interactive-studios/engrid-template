@@ -34,6 +34,7 @@ Email: bryan@4sitestudios.com
 `Ω1. 4Site Live Templates`<br/>
 `Ω2. 4Site Live Legacy Templates`<br/>
 `ΩΩ. Archive`
+`ΩΩ. Archive - XYZ`
 
 **File Names**<br/>
 `Ω 4Site Live Templates > engrid.min.css`<br/>
@@ -48,6 +49,7 @@ Email: bryan@4sitestudios.com
 `Ω2. 4Site Staging - ENGrid Page Template and Components`<br/>
 `Ω3. 4Site Development - ENGrid Page Template and Components`<br/>
 `ΩΩ. Archive`
+`ΩΩ. Archive - XYZ`
 
 **Component Names**<br/>
 `4Site Page Template - Center Left 1 Column`<br/>
