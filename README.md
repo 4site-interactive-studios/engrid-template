@@ -12,7 +12,7 @@ Email: bryan@4sitestudios.com
 ## Account Buildout
 ### Client theme dependent on [4Site's Page Template Framework (ENGrid)](https://github.com/4site-interactive-studios/engrid-scripts)
 
-### Pages
+### EN Pages
 
 **Folder Names**<br/>
 `Ω1. 4Site Live - Reference Pages for Duplication`<br/>
@@ -28,7 +28,7 @@ Email: bryan@4sitestudios.com
 `Ω Reference - Email to Target - Geo Targeted`<br/>
 `Ω Reference - Email to Target - Custom Target`
 
-### Uploaded Assets
+### EN Uploaded Assets
 
 **Folders Names**<br/>
 `Ω1 4Site Live Templates`<br/>
@@ -40,7 +40,7 @@ Email: bryan@4sitestudios.com
 `Ω 4Site Live Templates > engrid.min.css`<br/>
 `Ω 4Site Live Templates > logo.png`
 
-### Component Library
+### EN Component Library
 
 **Folder Names**<br/>
 `Ω1. 4Site Live - ENGrid Page Template and Components`<br/>
