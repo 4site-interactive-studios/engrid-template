@@ -14,10 +14,9 @@ Email: bryan@4sitestudios.com
 
 **Pages Folders**<br/>
 `Ω1. 4Site Live - Reference Pages for Duplication`<br/>
-'Ω1. 4Site Live Legacy - Live pages on Legacy Code'<br/>
+`Ω1. 4Site Live Legacy - Live pages on Legacy Code`<br/>
 `Ω2. 4Site Staging - Quality Assurance Testing`<br/>
 `Ω3. 4Site Development - Code Development`<br/>
-`Ω4. 4Site Development - XYZ Feature Branch`<br/>
 `ΩΩ. 4Site Archive`<br/>
 `ΩΩ. 4Site Archive - XYZ`
 
@@ -38,9 +37,9 @@ Email: bryan@4sitestudios.com
 
 **Components Folder**<br/>
 `Ω1. 4Site Live - ENGrid Page Template and Components`<br/>
+`Ω1. 4Site Live Legacy - ENGrid Page Template and Components`<br/>
 `Ω2. 4Site Staging - ENGrid Page Template and Components`<br/>
 `Ω3. 4Site Development - ENGrid Page Template and Components`<br/>
-`Ω5. 4Site Legacy - ENGrid Page Template and Components`<br/>
 `ΩΩ. 4Site Archive`
 
 **Library Components (Naming Conventions)**<br/>
