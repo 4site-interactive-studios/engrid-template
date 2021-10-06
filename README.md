@@ -12,34 +12,46 @@ Email: bryan@4sitestudios.com
 ## Account Buildout
 ### Client theme dependent on [4Site's Page Template Framework (ENGrid)](https://github.com/4site-interactive-studios/engrid-scripts)
 
-**Pages Folders**<br/>
+### EN Pages
+
+**Folder Names**<br/>
 `Ω1. 4Site Live - Reference Pages for Duplication`<br/>
+`Ω1. 4Site Live Legacy - Live pages on Legacy Code`<br/>
 `Ω2. 4Site Staging - Quality Assurance Testing`<br/>
 `Ω3. 4Site Development - Code Development`<br/>
-`Ω4. 4Site Development - XYZ Feature Branch`<br/>
-`ΩΩ. 4Site Archive`<br/>
-`ΩΩ. 4Site Archive - XYZ`
+`ΩΩ. Archive`<br/>
+`ΩΩ. Archive - XYZ`
 
-**Reference Pages**<br/>
-`Ω Reference - Donation Page (Test Gateway)`<br/>
-`Ω Reference - Petition Page`<br/>
-`Ω Reference - Email to Target - Geo Targeted`<br/>
-`Ω Reference - Email to Target - Custom Target`
+**Page Names**<br/>
+`REFERENCE - Donation Page (Test Gateway)`<br/>
+`REFERENCE - Petition Page`<br/>
+`REFERENCE - Email to Target - Geolocated Targeted`<br/>
+`REFERENCE - Email to Target - Custom Target`
 
-**Images and Files Folder**<br/>
-`Ω1 4Site Live Assets`<br/>
-`Ω2 4Site Archived Assets`
+### EN Uploaded Assets
 
-**Uploaded Assets**<br/>
+**Folders Names**<br/>
+`Ω1. 4Site Live Templates`<br/>
+`Ω2. 4Site Live Legacy Templates`<br/>
+`ΩΩ. Archive`<br/>
+`ΩΩ. Archive - XYZ`
+
+**File Names**<br/>
 `Ω 4Site Live Templates > engrid.min.css`<br/>
 `Ω 4Site Live Templates > engrid.min.css`<br/>
 `Ω 4Site Live Templates > logo.png`
 
-**Components Folder**<br/>
-`Ω 4Site Live - ENGrid Page Template and Components`<br/>
-`Ω 4Site Development - ENGrid Page Template and Components`
+### EN Component Library
 
-**Library Components (Naming Conventions)**<br/>
+**Folder Names**<br/>
+`Ω1. 4Site Live - ENGrid Page Template and Components`<br/>
+`Ω1. 4Site Live Legacy - ENGrid Page Template and Components`<br/>
+`Ω2. 4Site Staging - ENGrid Page Template and Components`<br/>
+`Ω3. 4Site Development - ENGrid Page Template and Components`<br/>
+`ΩΩ. Archive`<br/>
+`ΩΩ. Archive - XYZ`
+
+**Component Names**<br/>
 `4Site Page Template - Center Left 1 Column`<br/>
 `General: Copy: Placeholder Title (Lorem Ipsum)`<br/>
 `General: Copy: Placeholder Paragraph (Lorem Ipsum)`<br/>
