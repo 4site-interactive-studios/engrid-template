@@ -31,9 +31,9 @@ Email: bryan@4sitestudios.com
 ### EN Uploaded Assets
 
 **Folders Names**<br/>
-`Ω1 4Site Live Templates`<br/>
-`Ω2 4Site Live Legacy Templates`<br/>
-`ΩΩ Archive`
+`Ω1. 4Site Live Templates`<br/>
+`Ω2. 4Site Live Legacy Templates`<br/>
+`ΩΩ. Archive`
 
 **File Names**<br/>
 `Ω 4Site Live Templates > engrid.min.css`<br/>
