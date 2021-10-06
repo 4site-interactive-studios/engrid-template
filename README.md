@@ -33,7 +33,7 @@ Email: bryan@4sitestudios.com
 **Folders Names**<br/>
 `Ω1. 4Site Live Templates`<br/>
 `Ω2. 4Site Live Legacy Templates`<br/>
-`ΩΩ. Archive`
+`ΩΩ. Archive`<br/>
 `ΩΩ. Archive - XYZ`
 
 **File Names**<br/>
@@ -48,7 +48,7 @@ Email: bryan@4sitestudios.com
 `Ω1. 4Site Live Legacy - ENGrid Page Template and Components`<br/>
 `Ω2. 4Site Staging - ENGrid Page Template and Components`<br/>
 `Ω3. 4Site Development - ENGrid Page Template and Components`<br/>
-`ΩΩ. Archive`
+`ΩΩ. Archive`<br/>
 `ΩΩ. Archive - XYZ`
 
 **Component Names**<br/>
