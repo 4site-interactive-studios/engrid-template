@@ -23,11 +23,22 @@ Email: bryan@4sitestudios.com
 `ΩΩ. Archive - XYZ`
 
 **Page Names**<br/>
+`REFERENCE - Tweet to Target - Custom Target`<br/>
+`REFERENCE - Tweet to Target - Geolocated Target`<br/>
+`REFERENCE - Ecard Page`<br/>
+`REFERENCE - Donation Page (Live Gateway)`<br/>
 `REFERENCE - Donation Page (Test Gateway)`<br/>
+`REFERENCE - Premium Donation Page (Live Gateway)`<br/>
+`REFERENCE - Premium Donation Page (Test Gateway)`<br/>
+`REFERENCE - Data Capture Page`<br/>
 `REFERENCE - Petition Page`<br/>
-`REFERENCE - Email to Target - Geolocated Targeted`<br/>
-`REFERENCE - Email to Target - Custom Target`
-
+`REFERENCE - Sign Up Page`<br/>
+`REFERENCE - Subscription Page`<br/>
+`REFERENCE - Survey Page`<br/>
+`REFERENCE - Email to Target - Custom Target`<br/>
+`REFERENCE - Email to Target - Geolocated Target`<br/>
+`ENGRID - Theming Brand Guide`
+  
 ### EN Uploaded Assets
 
 **Folders Names**<br/>
