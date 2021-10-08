@@ -23,6 +23,7 @@ Email: bryan@4sitestudios.com
 `ΩΩ. Archive - XYZ`
 
 **Page Names**<br/>
+`ENGRID - Theming Brand Guide`<br/>
 `REFERENCE - Tweet to Target - Custom Target`<br/>
 `REFERENCE - Tweet to Target - Geolocated Target`<br/>
 `REFERENCE - Ecard Page`<br/>
@@ -36,8 +37,7 @@ Email: bryan@4sitestudios.com
 `REFERENCE - Subscription Page`<br/>
 `REFERENCE - Survey Page`<br/>
 `REFERENCE - Email to Target - Custom Target`<br/>
-`REFERENCE - Email to Target - Geolocated Target`<br/>
-`ENGRID - Theming Brand Guide`
+`REFERENCE - Email to Target - Geolocated Target`
   
 ### EN Uploaded Assets
 
