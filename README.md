@@ -29,7 +29,7 @@ Email: bryan@4sitestudios.com
 `REFERENCE - Donation Page (Test Gateway)`<br/>
 `REFERENCE - Ecard Page`<br/>
 `REFERENCE - Email to Target - Custom Target`<br/>
-`REFERENCE - Email to Target - Geolocated Target`
+`REFERENCE - Email to Target - Geolocated Target`<br/>
 `REFERENCE - Petition Page`<br/>
 `REFERENCE - Premium Donation Page (Live Gateway)`<br/>
 `REFERENCE - Premium Donation Page (Test Gateway)`<br/>
@@ -37,7 +37,7 @@ Email: bryan@4sitestudios.com
 `REFERENCE - Subscription Page`<br/>
 `REFERENCE - Survey Page`<br/>
 `REFERENCE - Tweet to Target - Custom Target`<br/>
-`REFERENCE - Tweet to Target - Geolocated Target`<br/>
+`REFERENCE - Tweet to Target - Geolocated Target`
 
 ### EN Uploaded Assets
 
