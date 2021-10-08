@@ -49,7 +49,8 @@ Email: bryan@4sitestudios.com
 
 **File Names**<br/>
 `Ω 4Site Live Templates > engrid.min.css`<br/>
-`Ω 4Site Live Templates > engrid.min.css`<br/>
+`Ω 4Site Live Templates > engrid.min.js`<br/>
+`Ω 4Site Live Templates > loader.js`<br/>
 `Ω 4Site Live Templates > logo.png`
 
 ### EN Component Library
