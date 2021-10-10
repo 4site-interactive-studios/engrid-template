@@ -24,6 +24,12 @@ Email: bryan@4sitestudios.com
 
 **Page Names**<br/>
 `ENGRID - Theming Brand Guide`<br/>
+`ENGRID - Left Left 1 Column`<br/>
+`ENGRID - Center Left 1 Column`<br/>
+`ENGRID - Center Center 1 Column`<br/>2)
+`ENGRID - Center Center 2 Column`<br/>2)
+`ENGRID - Center Right 1 Column`<br/>
+`ENGRID - Right Right 1 Column`<br/>
 `REFERENCE - Data Capture Page`<br/>
 `REFERENCE - Donation Page (Live Gateway)`<br/>
 `REFERENCE - Donation Page (Test Gateway)`<br/>
