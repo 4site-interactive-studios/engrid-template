@@ -26,8 +26,8 @@ Email: bryan@4sitestudios.com
 `ENGRID - Theming Brand Guide`<br/>
 `ENGRID - Left Left 1 Column`<br/>
 `ENGRID - Center Left 1 Column`<br/>
-`ENGRID - Center Center 1 Column`<br/>2)
-`ENGRID - Center Center 2 Column`<br/>2)
+`ENGRID - Center Center 1 Column`<br/>
+`ENGRID - Center Center 2 Column`<br/>
 `ENGRID - Center Right 1 Column`<br/>
 `ENGRID - Right Right 1 Column`<br/>
 `REFERENCE - Data Capture Page`<br/>
