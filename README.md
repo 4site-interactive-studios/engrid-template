@@ -36,14 +36,14 @@ Email: bryan@4sitestudios.com
 `REFERENCE - Donation Page with Premium (Live Gateway)`<br/>
 `REFERENCE - Donation Page with Premium (Test Gateway)`<br/>
 `REFERENCE - Ecard Page`<br/>
-`REFERENCE - Email to Target - Custom Target`<br/>
-`REFERENCE - Email to Target - Geolocated Target`<br/>
+`REFERENCE - Email to Target Custom Target`<br/>
+`REFERENCE - Email to Target Geolocated Target`<br/>
 `REFERENCE - Petition Page`<br/>
 `REFERENCE - Sign Up Page`<br/>
 `REFERENCE - Subscription Page`<br/>
 `REFERENCE - Survey Page`<br/>
-`REFERENCE - Tweet to Target - Custom Target`<br/>
-`REFERENCE - Tweet to Target - Geolocated Target`
+`REFERENCE - Tweet to Target Custom Target`<br/>
+`REFERENCE - Tweet to Target Geolocated Target`
 
 ### EN Uploaded Assets
 
