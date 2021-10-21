@@ -17,10 +17,10 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Wednesday, October 6, 2021 @ 24:23:10 ET
- *  By: bryancasler
- *  ENGrid styles: v0.4.0
- *  ENGrid scripts: v0.4.0
+ *  Date: Thursday, October 21, 2021 @ 13:16:23 ET
+ *  By: fe
+ *  ENGrid styles: v0.4.7
+ *  ENGrid scripts: v0.4.9
  *
  *  Created by 4Site Studios
  *  Come work with us or join our team, we would love to hear from you
@@ -4628,6 +4628,7 @@ const OptionsDefaults = {
     NeverBounceAPI: null,
     NeverBounceDateField: null,
     NeverBounceStatusField: null,
+    NeverBounceDateFormat: "MM/DD/YYYY",
     ProgressBar: false,
     AutoYear: false,
     TranslateFields: true,
@@ -5072,6 +5073,21 @@ class engrid_ENGrid {
         }
         return false;
     }
+    static formatDate(date, format = "MM/DD/YYYY") {
+        const dateAray = date
+            .toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+        })
+            .split("/");
+        const dateString = format
+            .replace(/YYYY/g, dateAray[2])
+            .replace(/MM/g, dateAray[0])
+            .replace(/DD/g, dateAray[1])
+            .replace(/YY/g, dateAray[2].substr(2, 2));
+        return dateString;
+    }
 }
 
 ;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/events/donation-frequency.js
@@ -5419,7 +5435,7 @@ class App extends engrid_ENGrid {
         if (this.options.ProgressBar)
             new ProgressBar();
         if (this.options.NeverBounceAPI)
-            new NeverBounce(this.options.NeverBounceAPI, this.options.NeverBounceDateField, this.options.NeverBounceStatusField);
+            new NeverBounce(this.options.NeverBounceAPI, this.options.NeverBounceDateField, this.options.NeverBounceStatusField, this.options.NeverBounceDateFormat);
         this.setDataAttributes();
     }
     onLoad() {
@@ -5616,6 +5632,9 @@ class ApplePay {
         return __awaiter(this, void 0, void 0, function* () {
             const pageform = document.querySelector("form.en__component--page");
             if (!this.applePay || !window.hasOwnProperty("ApplePaySession")) {
+                const applePayContainer = document.querySelector(".en__field__item.applepay");
+                if (applePayContainer)
+                    applePayContainer.remove();
                 if (engrid_ENGrid.debug)
                     console.log("Apple Pay DISABLED");
                 return false;
@@ -7388,7 +7407,7 @@ class TranslateFields {
         this.resetTranslatedFields();
         if (this.countrySelect.value in this.options) {
             this.options[this.countrySelect.value].forEach((field) => {
-                console.log(field);
+                // console.log(field);
                 this.translateField(field.field, field.translation);
             });
         }
@@ -7398,14 +7417,17 @@ class TranslateFields {
             switch (this.countrySelect.value) {
                 case "FR":
                 case "FRA":
+                case "France":
                     recipient_block.forEach((elem) => (elem.innerHTML = "À:"));
                     break;
                 case "DE":
                 case "DEU":
+                case "Germany":
                     recipient_block.forEach((elem) => (elem.innerHTML = "Zu:"));
                     break;
                 case "NL":
                 case "NLD":
+                case "Netherlands":
                     recipient_block.forEach((elem) => (elem.innerHTML = "Aan:"));
                     break;
             }
@@ -7448,22 +7470,27 @@ class TranslateFields {
         switch (country) {
             case "BR":
             case "BRA":
+            case "Brazil":
                 this.setStateValues("Estado", null);
                 break;
             case "FR":
             case "FRA":
+            case "France":
                 this.setStateValues("Région", null);
                 break;
             case "GB":
             case "GBR":
+            case "United Kingdom":
                 this.setStateValues("State/Region", null);
                 break;
             case "DE":
             case "DEU":
+            case "Germany":
                 this.setStateValues("Bundesland", null);
                 break;
             case "NL":
             case "NLD":
+            case "Netherlands":
                 this.setStateValues("Provincie", null);
                 break;
             case "AU":
@@ -7478,6 +7505,22 @@ class TranslateFields {
                     { label: "Tasmania", value: "TAS" },
                     { label: "Northern Territory", value: "NT" },
                     { label: "Australian Capital Territory", value: "ACT" },
+                ]);
+                break;
+            case "Australia":
+                this.setStateValues("Province/State", [
+                    { label: "Select Province/State", value: "" },
+                    { label: "New South Wales", value: "New South Wales" },
+                    { label: "Victoria", value: "Victoria" },
+                    { label: "Queensland", value: "Queensland" },
+                    { label: "South Australia", value: "South Australia" },
+                    { label: "Western Australia", value: "Western Australia" },
+                    { label: "Tasmania", value: "Tasmania" },
+                    { label: "Northern Territory", value: "Northern Territory" },
+                    {
+                        label: "Australian Capital Territory",
+                        value: "Australian Capital Territory",
+                    },
                 ]);
                 break;
             case "US":
@@ -7537,6 +7580,102 @@ class TranslateFields {
                     { label: "Wyoming", value: "WY" },
                 ]);
                 break;
+            case "United States":
+                this.setStateValues("State", [
+                    { label: "Select State", value: "" },
+                    { label: "Alabama", value: "Alabama" },
+                    { label: "Alaska", value: "Alaska" },
+                    { label: "Arizona", value: "Arizona" },
+                    { label: "Arkansas", value: "Arkansas" },
+                    { label: "California", value: "California" },
+                    { label: "Colorado", value: "Colorado" },
+                    { label: "Connecticut", value: "Connecticut" },
+                    { label: "Delaware", value: "Delaware" },
+                    { label: "District of Columbia", value: "District of Columbia" },
+                    { label: "Florida", value: "Florida" },
+                    { label: "Georgia", value: "Georgia" },
+                    { label: "Hawaii", value: "Hawaii" },
+                    { label: "Idaho", value: "Idaho" },
+                    { label: "Illinois", value: "Illinois" },
+                    { label: "Indiana", value: "Indiana" },
+                    { label: "Iowa", value: "Iowa" },
+                    { label: "Kansas", value: "Kansas" },
+                    { label: "Kentucky", value: "Kentucky" },
+                    { label: "Louisiana", value: "Louisiana" },
+                    { label: "Maine", value: "Maine" },
+                    { label: "Maryland", value: "Maryland" },
+                    { label: "Massachusetts", value: "Massachusetts" },
+                    { label: "Michigan", value: "Michigan" },
+                    { label: "Minnesota", value: "Minnesota" },
+                    { label: "Mississippi", value: "Mississippi" },
+                    { label: "Missouri", value: "Missouri" },
+                    { label: "Montana", value: "Montana" },
+                    { label: "Nebraska", value: "Nebraska" },
+                    { label: "Nevada", value: "Nevada" },
+                    { label: "New Hampshire", value: "New Hampshire" },
+                    { label: "New Jersey", value: "New Jersey" },
+                    { label: "New Mexico", value: "New Mexico" },
+                    { label: "New York", value: "New York" },
+                    { label: "North Carolina", value: "North Carolina" },
+                    { label: "North Dakota", value: "North Dakota" },
+                    { label: "Ohio", value: "Ohio" },
+                    { label: "Oklahoma", value: "Oklahoma" },
+                    { label: "Oregon", value: "Oregon" },
+                    { label: "Pennsylvania", value: "Pennsylvania" },
+                    { label: "Rhode Island", value: "Rhode Island" },
+                    { label: "South Carolina", value: "South Carolina" },
+                    { label: "South Dakota", value: "South Dakota" },
+                    { label: "Tennessee", value: "Tennessee" },
+                    { label: "Texas", value: "Texas" },
+                    { label: "Utah", value: "Utah" },
+                    { label: "Vermont", value: "Vermont" },
+                    { label: "Virginia", value: "Virginia" },
+                    { label: "Washington", value: "Washington" },
+                    { label: "West Virginia", value: "West Virginia" },
+                    { label: "Wisconsin", value: "Wisconsin" },
+                    { label: "Wyoming", value: "Wyoming" },
+                ]);
+                break;
+            case "CA":
+            case "CAN":
+                this.setStateValues("Province/State", [
+                    { label: "Select Province/State", value: "" },
+                    { label: "Alberta", value: "AB" },
+                    { label: "British Columbia", value: "BC" },
+                    { label: "Manitoba", value: "MB" },
+                    { label: "New Brunswick", value: "NB" },
+                    { label: "Newfoundland and Labrador", value: "NL" },
+                    { label: "Northwest Territories", value: "NT" },
+                    { label: "Nova Scotia", value: "NS" },
+                    { label: "Nunavut", value: "NU" },
+                    { label: "Ontario", value: "ON" },
+                    { label: "Prince Edward Island", value: "PE" },
+                    { label: "Quebec", value: "QC" },
+                    { label: "Saskatchewan", value: "SK" },
+                    { label: "Yukon", value: "YT" },
+                ]);
+                break;
+            case "Canada":
+                this.setStateValues("Province/State", [
+                    { label: "Select Province/State", value: "" },
+                    { label: "Alberta", value: "Alberta" },
+                    { label: "British Columbia", value: "British Columbia" },
+                    { label: "Manitoba", value: "Manitoba" },
+                    { label: "New Brunswick", value: "New Brunswick" },
+                    {
+                        label: "Newfoundland and Labrador",
+                        value: "Newfoundland and Labrador",
+                    },
+                    { label: "Northwest Territories", value: "Northwest Territories" },
+                    { label: "Nova Scotia", value: "Nova Scotia" },
+                    { label: "Nunavut", value: "Nunavut" },
+                    { label: "Ontario", value: "Ontario" },
+                    { label: "Prince Edward Island", value: "Prince Edward Island" },
+                    { label: "Quebec", value: "Quebec" },
+                    { label: "Saskatchewan", value: "Saskatchewan" },
+                    { label: "Yukon", value: "Yukon" },
+                ]);
+                break;
             default:
                 this.setStateValues("Province/State", null);
                 break;
@@ -7587,6 +7726,7 @@ class TranslateFields {
 
 ;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/simple-country-select.js
 // This class works when the user has added ".simple_country_select" as a class in page builder for the Country select
+
 class SimpleCountrySelect {
     constructor() {
         this.countryWrapper = document.querySelector(".simple_country_select");
@@ -7595,16 +7735,20 @@ class SimpleCountrySelect {
             type: "region",
         });
         this.country = null;
-        fetch("https://www.cloudflare.com/cdn-cgi/trace")
-            .then((res) => res.text())
-            .then((t) => {
-            let data = t.replace(/[\r\n]+/g, '","').replace(/\=+/g, '":"');
-            data = '{"' + data.slice(0, data.lastIndexOf('","')) + '"}';
-            const jsondata = JSON.parse(data);
-            this.country = jsondata.loc;
-            this.init();
-            // console.log("Country:", this.country);
-        });
+        const engridAutofill = get("engrid-autofill");
+        // Only run if there's no engrid-autofill cookie
+        if (!engridAutofill) {
+            fetch("https://www.cloudflare.com/cdn-cgi/trace")
+                .then((res) => res.text())
+                .then((t) => {
+                let data = t.replace(/[\r\n]+/g, '","').replace(/\=+/g, '":"');
+                data = '{"' + data.slice(0, data.lastIndexOf('","')) + '"}';
+                const jsondata = JSON.parse(data);
+                this.country = jsondata.loc;
+                this.init();
+                // console.log("Country:", this.country);
+            });
+        }
     }
     init() {
         if (this.countrySelect) {
@@ -7929,10 +8073,11 @@ class PageBackground {
 
 
 class NeverBounce {
-    constructor(apiKey, dateField = null, statusField = null) {
+    constructor(apiKey, dateField = null, statusField = null, dateFormat) {
         this.apiKey = apiKey;
         this.dateField = dateField;
         this.statusField = statusField;
+        this.dateFormat = dateFormat;
         this.form = EnForm.getInstance();
         this.emailField = null;
         this.emailWrapper = document.querySelector(".en__field--emailAddress");
@@ -8010,11 +8155,7 @@ class NeverBounce {
                     if (e.detail.result.is(window._nb.settings.getAcceptedStatusCodes())) {
                         NBClass.setEmailStatus("valid");
                         if (NBClass.nbDate)
-                            NBClass.nbDate.value = new Date().toLocaleDateString("en-US", {
-                                year: "numeric",
-                                month: "2-digit",
-                                day: "2-digit",
-                            });
+                            NBClass.nbDate.value = engrid_ENGrid.formatDate(new Date(), NBClass.dateFormat);
                         if (NBClass.nbStatus)
                             NBClass.nbStatus.value = (e).detail.result.response.result;
                     }
