@@ -21,10 +21,10 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Thursday, October 21, 2021 @ 13:16:23 ET
+ *  Date: Thursday, October 21, 2021 @ 17:12:13 ET
  *  By: fe
- *  ENGrid styles: v0.4.7
- *  ENGrid scripts: v0.4.9
+ *  ENGrid styles: v0.5.1
+ *  ENGrid scripts: v0.5.1
  *
  *  Created by 4Site Studios
  *  Come work with us or join our team, we would love to hear from you
@@ -6216,6 +6216,10 @@ body:not(#en__pagebuilder)[data-engrid-no-body-banner]
   position:relative;
   z-index:1;
 }
+[data-engrid-layout=debug]{
+  border:5px solid red;
+}
+
 [data-engrid-debug=accessability] img:not([alt]){
   outline:1px dashed red;
 }
