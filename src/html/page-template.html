@@ -25,17 +25,21 @@
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<link href="/TBD-ORG-favicon.ico" rel="shortcut icon">
-	<title>${page~title} | TBD-ORG-NAME - TBD-ORG-TAGLINE</title>
     <meta name="theme-color" content="#000000" />
     
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@TBD">
-    <meta name="twitter:creator" content="@TBD">
-    <meta name="twitter:title" content="${page~title}">
-    <meta name="twitter:image" content="TBD.jpg">
-    <meta name="twitter:description" content="TBD">
-    <meta property="og:image" content="TBD.jpg">
+    <!-- Sharing Meta Tags Used by Facebook-->
+    <title>${page~title} | TBD-ORG-NAME - TBD-ORG-TAGLINE</title>
     <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1234567890"><!-- Optional -->
+
+    <!-- Social Sharing Meta Tags Used by Twitter-->
+    <meta property="twitter:account_id" content="0987654321"><!-- Optional -->
+    <meta name="twitter:site" content="@ABC"><!-- @username of website -->
+    <meta name="twitter:creator" content="@XYZ"><!-- @username of content creator -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://via.placeholder.com/1024x512.png?text=1024x512">
+    <meta name="twitter:title" content="${page~title}">
+    <meta name="twitter:description" content="Up to 160 character long description">
 
     <!-- Immeditately get color on the page and hide the contents until engrid.css is rendered by the browser -->
 	<style>
@@ -58,7 +62,7 @@
 	<link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/font.woff2" as="font" type="font/woff2" crossorigin> 
 
 </head>
-<body data-engrid-add-input-placeholders data-engrid-layout="centerleft1col" data-engrid-theme="engrid-TBD-ORG-NAME" data-replace-banner-with-background="if-banner-empty-or-background-video">
+<body data-engrid-theme="engrid-TBD-ORG-NAME" data-engrid-layout="centerleft1col" data-engrid-add-input-placeholders  data-replace-banner-with-background="if-banner-empty-or-background-video">
 	<noscript>With Javascript disabled this page may not function as expected.</noscript>
 
     <!-- Quickly check to see if the page is in an iFrame and if so set the corresponding Custom Attribute so it can also set the background-color. Must be after <body> otherwise there will be a flash of color -->
@@ -103,17 +107,14 @@
     </script> -->
     <!-- End Google Tag Manager -->
 
-    <meta property="og:title" content="${page~title}">
-    <meta property="og:site_name" content="TBD">
-    <meta property="og:description" content="TBD">
-    <meta property="description" content="TBD">  
+    <!-- More Sharing Meta Tags Used by Facebook-->
+    <!-- EN adds these tags just before <body> so you need them here to override them -->
+    <link rel="image_src" href="https://via.placeholder.com/1024x512.png?text=1024x512"/>
+    <meta name="title" content="${page~title} | Organization Name">
+    <meta name="description" content="Up to 255 character long description">
     
     <!-- Start Temporary CSS -->
 
     <!-- END Temporary CSS -->
 </body>
 </html>
-
-
-
-
