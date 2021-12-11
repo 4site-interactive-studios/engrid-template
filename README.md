@@ -10,7 +10,7 @@ Email: bryan@4sitestudios.com
 
 
 ## Account Buildout
-### Client theme dependent on [4Site's Page Template Framework (ENGrid)](https://github.com/4site-interactive-studios/engrid-scripts)
+### Client theme dependent on [4Site's Page Template Framework (ENgrid)](https://github.com/4site-interactive-studios/engrid-scripts)
 
 ### EN Pages
 
@@ -62,10 +62,10 @@ Email: bryan@4sitestudios.com
 ### EN Component Library
 
 **Folder Names**<br/>
-`Ω1. 4Site Live - ENGrid Page Template and Components`<br/>
-`Ω1. 4Site Live Legacy - ENGrid Page Template and Components`<br/>
-`Ω2. 4Site Staging - ENGrid Page Template and Components`<br/>
-`Ω3. 4Site Development - ENGrid Page Template and Components`<br/>
+`Ω1. 4Site Live - ENgrid Page Template and Components`<br/>
+`Ω1. 4Site Live Legacy - ENgrid Page Template and Components`<br/>
+`Ω2. 4Site Staging - ENgrid Page Template and Components`<br/>
+`Ω3. 4Site Development - ENgrid Page Template and Components`<br/>
 `ΩΩ. Archive`<br/>
 `ΩΩ. Archive - XYZ`
 
