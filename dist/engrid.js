@@ -17,10 +17,10 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Thursday, October 21, 2021 @ 17:12:13 ET
- *  By: fe
- *  ENGrid styles: v0.5.1
- *  ENGrid scripts: v0.5.1
+ *  Date: Saturday, December 11, 2021 @ 17:55:23 ET
+ *  By: bryancasler
+ *  ENGrid styles: v0.6.13
+ *  ENGrid scripts: v0.6.16
  *
  *  Created by 4Site Studios
  *  Come work with us or join our team, we would love to hear from you
@@ -9074,6 +9074,132 @@ const TranslateOptionsDefaults = {
     NLD: nlTranslation,
 };
 
+;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/loader.js
+// Ref: https://app.getguru.com/card/iMgx968T/ENgrid-Loader
+
+class Loader {
+    constructor() {
+        this.cssElement = document.querySelector('link[href*="engrid."][rel="stylesheet"]');
+        this.jsElement = document.querySelector('script[src*="engrid."]');
+    }
+    // Returns true if ENgrid should reload (that means the current ENgrid is not the right one)
+    // Returns false if ENgrid should not reload (that means the current ENgrid is the right one)
+    reload() {
+        var _a, _b, _c;
+        const isLoaded = engrid_ENGrid.getBodyData("loaded");
+        let assets = this.getOption("assets");
+        const enIsLoaded = engrid_ENGrid.checkNested(window.EngagingNetworks, "require", "_defined", "enjs");
+        if (isLoaded) {
+            if (engrid_ENGrid.debug)
+                console.log("ENgrid Loader: LOADED");
+            return false;
+        }
+        if (!assets) {
+            if (!enIsLoaded) {
+                if (engrid_ENGrid.debug)
+                    console.log("ENgrid Loader: EngagingNetworks Script NOT LOADED");
+                assets = "flush";
+            }
+            else {
+                if (engrid_ENGrid.debug)
+                    console.log("ENgrid Loader: LOADED");
+                return false;
+            }
+        }
+        // Load the right ENgrid
+        if (engrid_ENGrid.debug)
+            console.log("ENgrid Loader: RELOADING");
+        engrid_ENGrid.setBodyData("loaded", "true"); // Set the loaded flag, so the next time we don't reload
+        // Fetch the desired repo, assets location, and override JS/CSS
+        const engrid_repo = this.getOption("repo-name");
+        const engrid_repo_owner = this.getOption("repo-owner");
+        let engrid_js_url = "";
+        let engrid_css_url = "";
+        switch (assets) {
+            case "local":
+                if (engrid_ENGrid.debug)
+                    console.log("ENgrid Loader: LOADING LOCAL");
+                // Find a way to guess local URL if there's no engrid_repo
+                if (!engrid_repo) {
+                    const theme = engrid_ENGrid.getBodyData("theme");
+                    engrid_js_url = `https://engrid-${theme}.test/dist/engrid.js`;
+                    engrid_css_url = `https://engrid-${theme}.test/dist/engrid.css`;
+                }
+                else {
+                    engrid_js_url = `https://engrid-${engrid_repo}.test/dist/engrid.js`;
+                    engrid_css_url = `https://engrid-${engrid_repo}.test/dist/engrid.css`;
+                }
+                break;
+            case "flush":
+                if (engrid_ENGrid.debug)
+                    console.log("ENgrid Loader: FLUSHING CACHE");
+                const timestamp = Date.now();
+                const jsCurrentURL = new URL(((_a = this.jsElement) === null || _a === void 0 ? void 0 : _a.getAttribute("src")) || "");
+                jsCurrentURL.searchParams.set("v", timestamp.toString());
+                engrid_js_url = jsCurrentURL.toString();
+                const cssCurrentURL = new URL(((_b = this.cssElement) === null || _b === void 0 ? void 0 : _b.getAttribute("href")) || "");
+                cssCurrentURL.searchParams.set("v", timestamp.toString());
+                engrid_css_url = cssCurrentURL.toString();
+                break;
+            default:
+                if (engrid_ENGrid.debug)
+                    console.log("ENgrid Loader: LOADING EXTERNAL");
+                engrid_js_url =
+                    "https://cdn.jsdelivr.net/gh/" +
+                        engrid_repo_owner +
+                        "/" +
+                        engrid_repo +
+                        "@" +
+                        assets +
+                        "/dist/engrid.js";
+                engrid_css_url =
+                    "https://cdn.jsdelivr.net/gh/" +
+                        engrid_repo_owner +
+                        "/" +
+                        engrid_repo +
+                        "@" +
+                        assets +
+                        "/dist/engrid.css";
+        }
+        this.setCssFile(engrid_css_url);
+        this.setJsFile(engrid_js_url);
+        (_c = this.jsElement) === null || _c === void 0 ? void 0 : _c.remove();
+        return true;
+    }
+    getOption(key) {
+        const urlParam = engrid_ENGrid.getUrlParameter(key);
+        // Only "assets" can be set in URL
+        if (urlParam && key === "assets") {
+            return urlParam;
+        }
+        else if (window.EngridLoader && window.EngridLoader.hasOwnProperty(key)) {
+            return window.EngridLoader[key];
+        }
+        else if (this.jsElement && this.jsElement.hasAttribute("data-" + key)) {
+            return this.jsElement.getAttribute("data-" + key);
+        }
+        return null;
+    }
+    setCssFile(url) {
+        if (this.cssElement) {
+            this.cssElement.setAttribute("href", url);
+        }
+        else {
+            const link = document.createElement("link");
+            link.setAttribute("rel", "stylesheet");
+            link.setAttribute("type", "text/css");
+            link.setAttribute("media", "all");
+            link.setAttribute("href", url);
+            document.head.appendChild(link);
+        }
+    }
+    setJsFile(url) {
+        const script = document.createElement("script");
+        script.setAttribute("src", url);
+        document.head.appendChild(script);
+    }
+}
+
 // EXTERNAL MODULE: ./node_modules/@4site/engrid-common/node_modules/strongly-typed-events/dist/index.js
 var dist = __webpack_require__(5363);
 ;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/events/en-form.js
@@ -9453,6 +9579,20 @@ class engrid_ENGrid {
             .replace(/YY/g, dateAray[2].substr(2, 2));
         return dateString;
     }
+    /**
+     * Check if the provided object has ALL the provided properties
+     * Example: checkNested(EngagingNetworks, 'require', '_defined', 'enjs', 'checkSubmissionFailed')
+     * will return true if EngagingNetworks.require._defined.enjs.checkSubmissionFailed is defined
+     */
+    static checkNested(obj, ...args) {
+        for (let i = 0; i < args.length; i++) {
+            if (!obj || !obj.hasOwnProperty(args[i])) {
+                return false;
+            }
+            obj = obj[args[i]];
+        }
+        return true;
+    }
 }
 
 ;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/events/donation-frequency.js
@@ -9675,9 +9815,12 @@ class App extends engrid_ENGrid {
             // Scroll if the Regex matches, don't scroll otherwise
             return enURLPattern.test(referrer);
         };
+        const loader = new Loader();
         this.options = Object.assign(Object.assign({}, OptionsDefaults), options);
         // Add Options to window
         window.EngridOptions = this.options;
+        if (loader.reload())
+            return;
         // Document Load
         if (document.readyState !== "loading") {
             this.run();
@@ -9688,8 +9831,12 @@ class App extends engrid_ENGrid {
             });
         }
         // Window Load
-        window.onload = () => {
+        let onLoad = typeof window.onload === "function" ? window.onload : null;
+        window.onload = (e) => {
             this.onLoad();
+            if (onLoad) {
+                onLoad.bind(window, e);
+            }
         };
         // Window Resize
         window.onresize = () => {
@@ -9700,8 +9847,6 @@ class App extends engrid_ENGrid {
         // Enable debug if available is the first thing
         if (this.options.Debug || App.getUrlParameter("debug") == "true")
             App.setBodyData("debug", "");
-        // IE Warning
-        new IE();
         // Page Background
         new PageBackground();
         // TODO: Abstract everything to the App class so we can remove custom-methods
@@ -9743,7 +9888,12 @@ class App extends engrid_ENGrid {
         this._form.onValidate.subscribe(() => this.onValidate());
         // Event Listener Examples
         this._amount.onAmountChange.subscribe((s) => console.log(`Live Amount: ${s}`));
-        this._frequency.onFrequencyChange.subscribe((s) => console.log(`Live Frequency: ${s}`));
+        this._frequency.onFrequencyChange.subscribe((s) => {
+            console.log(`Live Frequency: ${s}`);
+            setTimeout(() => {
+                this._amount.load();
+            }, 150);
+        });
         this._form.onSubmit.subscribe((s) => console.log("Submit: ", s));
         this._form.onError.subscribe((s) => console.log("Error:", s));
         window.enOnSubmit = () => {
@@ -9765,6 +9915,8 @@ class App extends engrid_ENGrid {
         new setRecurrFreq();
         // Upsell Lightbox
         new UpsellLightbox();
+        // Amount Labels
+        new AmountLabel();
         // On the end of the script, after all subscribers defined, let's load the current value
         this._amount.load();
         this._frequency.load();
@@ -9785,6 +9937,8 @@ class App extends engrid_ENGrid {
         // Auto Year Class
         if (this.options.AutoYear)
             new AutoYear();
+        // Credit Card Numbers Only
+        new CreditCardNumbers();
         // Autocomplete Class
         new Autocomplete();
         // Ecard Class
@@ -9800,10 +9954,11 @@ class App extends engrid_ENGrid {
         if (this.options.ProgressBar)
             new ProgressBar();
         // RememberMe
-        if (this.options.RememberMe && typeof this.options.RememberMe === 'object')
+        if (this.options.RememberMe && typeof this.options.RememberMe === "object")
             new RememberMe(this.options.RememberMe);
         if (this.options.NeverBounceAPI)
             new NeverBounce(this.options.NeverBounceAPI, this.options.NeverBounceDateField, this.options.NeverBounceStatusField, this.options.NeverBounceDateFormat);
+        new ShowIfAmount();
         this.setDataAttributes();
     }
     onLoad() {
@@ -9960,6 +10115,44 @@ class App extends engrid_ENGrid {
         if (!document.querySelector(".page-customCode *")) {
             App.setBodyData("no-page-customCode", "");
         }
+        // Add a country data attribute
+        const countrySelect = document.querySelector("#en__field_supporter_country");
+        if (countrySelect) {
+            App.setBodyData("country", countrySelect.value);
+            countrySelect.addEventListener("change", () => {
+                App.setBodyData("country", countrySelect.value);
+            });
+        }
+    }
+}
+
+;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/amount-label.js
+// This script checks if the donations amounts are numbers and if they are, appends the correct currency symbol
+
+class AmountLabel {
+    constructor() {
+        this._frequency = DonationFrequency.getInstance();
+        if (!this.shouldRun()) {
+            // If we're not on a Donation Page, get out
+            return;
+        }
+        this._frequency.onFrequencyChange.subscribe((s) => window.setTimeout(this.fixAmountLabels.bind(this), 100));
+        // Run the main function on page load so we can analyze the amounts of the current frequency
+        window.setTimeout(this.fixAmountLabels.bind(this), 300);
+    }
+    // Should we run the script?
+    shouldRun() {
+        return engrid_ENGrid.getPageType() === "DONATION";
+    }
+    // Fix Amount Labels
+    fixAmountLabels() {
+        let amounts = document.querySelectorAll(".en__field--donationAmt label");
+        amounts.forEach((element) => {
+            if (!isNaN(element.innerText)) {
+                element.innerText =
+                    engrid_ENGrid.getOption("CurrencySymbol") + element.innerText;
+            }
+        });
     }
 }
 
@@ -10150,6 +10343,24 @@ class CapitalizeFields {
             if (engrid_ENGrid.debug)
                 console.log("Capitalized", field.value);
         }
+        return true;
+    }
+}
+
+;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/credit-card-numbers.js
+// This class removes any non-numeric characters from the credit card field
+
+class CreditCardNumbers {
+    constructor() {
+        this._form = EnForm.getInstance();
+        this.ccField = document.getElementById("en__field_transaction_ccnumber");
+        if (this.ccField) {
+            this._form.onSubmit.subscribe(() => this.onlyNumbersCC());
+        }
+    }
+    onlyNumbersCC() {
+        const onlyNumbers = this.ccField.value.replace(/\D/g, "");
+        this.ccField.value = onlyNumbers;
         return true;
     }
 }
@@ -10689,7 +10900,6 @@ const watchGiveBySelectField = () => {
                 removeClassesByPrefix(enGrid, prefix);
                 enGrid.classList.add("has-give-by-ach");
             }
-            enFieldPaymentType.value = "ach";
             enFieldPaymentType.value = "ACH";
         }
         else if (enFieldGiveBySelectCurrentValue &&
@@ -10727,7 +10937,6 @@ const watchGiveBySelectField = () => {
                 removeClassesByPrefix(enGrid, prefix);
                 enGrid.classList.add("has-give-by-check");
             }
-            enFieldPaymentType.value = "ach";
             enFieldPaymentType.value = "ACH";
         }
         else if (enFieldGiveBySelectCurrentValue &&
@@ -10737,7 +10946,6 @@ const watchGiveBySelectField = () => {
                 enGrid.classList.add("has-give-by-paypal");
             }
             enFieldPaymentType.value = "paypal";
-            enFieldPaymentType.value = "Paypal";
         }
         else if (enFieldGiveBySelectCurrentValue &&
             enFieldGiveBySelectCurrentValue.value.toLowerCase() == "applepay") {
@@ -10850,9 +11058,13 @@ const handleCCUpdate = () => {
         mastercard: ["mastercard", "master card", "mc"],
         discover: ["discover", "di"],
     };
-    const payment_text = field_payment_type.options[field_payment_type.selectedIndex].text;
-    if (card_type && payment_text != card_type) {
-        field_payment_type.value = Array.from(field_payment_type.options).filter((d) => card_values[card_type].includes(d.value.toLowerCase()))[0].value;
+    const selected_card_value = card_type
+        ? Array.from(field_payment_type.options).filter((d) => card_values[card_type].includes(d.value.toLowerCase()))[0].value
+        : "";
+    if (field_payment_type.value != selected_card_value) {
+        field_payment_type.value = selected_card_value;
+        const paymentTypeChangeEvent = new Event("change", { bubbles: true });
+        field_payment_type.dispatchEvent(paymentTypeChangeEvent);
     }
 };
 const handleExpUpdate = (e) => {
@@ -11031,136 +11243,6 @@ else {
     document
         .getElementsByTagName("BODY")[0]
         .setAttribute("data-engrid-footer-below-fold", "");
-}
-
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/cookie.js
-/**
-Example:
-import * as cookie from "./cookie";
-
-cookie.set('name', 'value');
-cookie.get('name'); // => 'value'
-cookie.remove('name');
-cookie.set('name', 'value', { expires: 7 }); // 7 Days cookie
-cookie.set('name', 'value', { expires: 7, path: '' }); // Set Path
-cookie.remove('name', { path: '' });
- */
-function stringifyAttribute(name, value) {
-    if (!value) {
-        return "";
-    }
-    let stringified = "; " + name;
-    if (value === true) {
-        return stringified; // boolean attributes shouldn't have a value
-    }
-    return stringified + "=" + value;
-}
-function stringifyAttributes(attributes) {
-    if (typeof attributes.expires === "number") {
-        let expires = new Date();
-        expires.setMilliseconds(expires.getMilliseconds() + attributes.expires * 864e5);
-        attributes.expires = expires;
-    }
-    return (stringifyAttribute("Expires", attributes.expires ? attributes.expires.toUTCString() : "") +
-        stringifyAttribute("Domain", attributes.domain) +
-        stringifyAttribute("Path", attributes.path) +
-        stringifyAttribute("Secure", attributes.secure) +
-        stringifyAttribute("SameSite", attributes.sameSite));
-}
-function encode(name, value, attributes) {
-    return (encodeURIComponent(name)
-        .replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent) // allowed special characters
-        .replace(/\(/g, "%28")
-        .replace(/\)/g, "%29") + // replace opening and closing parens
-        "=" +
-        encodeURIComponent(value)
-            // allowed special characters
-            .replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent) +
-        stringifyAttributes(attributes));
-}
-function parse(cookieString) {
-    let result = {};
-    let cookies = cookieString ? cookieString.split("; ") : [];
-    let rdecode = /(%[\dA-F]{2})+/gi;
-    for (let i = 0; i < cookies.length; i++) {
-        let parts = cookies[i].split("=");
-        let cookie = parts.slice(1).join("=");
-        if (cookie.charAt(0) === '"') {
-            cookie = cookie.slice(1, -1);
-        }
-        try {
-            let name = parts[0].replace(rdecode, decodeURIComponent);
-            result[name] = cookie.replace(rdecode, decodeURIComponent);
-        }
-        catch (e) {
-            // ignore cookies with invalid name/value encoding
-        }
-    }
-    return result;
-}
-function getAll() {
-    return parse(document.cookie);
-}
-function get(name) {
-    return getAll()[name];
-}
-function set(name, value, attributes) {
-    document.cookie = encode(name, value, Object.assign({ path: "/" }, attributes));
-}
-function remove(name, attributes) {
-    set(name, "", Object.assign(Object.assign({}, attributes), { expires: -1 }));
-}
-
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/ie.js
-
-class IE {
-    constructor() {
-        this.debug = false;
-        this.overlay = document.createElement("div");
-        const isIE = () => {
-            return (navigator.userAgent.indexOf("MSIE") !== -1 ||
-                navigator.appVersion.indexOf("Trident/") > -1);
-        };
-        // If it's not IE, get out!
-        if (!isIE())
-            return;
-        const markup = `
-    <div class="ieModal-container">
-        <a href="#" class="button-close"></a>
-        <div id="ieModalContent">
-        <strong>Attention: </strong>
-        Your browser is no longer supported and will not receive any further security updates. Websites may no longer display or behave correctly as they have in the past. 
-        Please transition to using <a href="https://www.microsoft.com/edge">Microsoft Edge</a>, Microsoft's latest browser, to continue enjoying the modern web.
-        </div>
-    </div>`;
-        let overlay = document.createElement("div");
-        overlay.id = "ieModal";
-        overlay.classList.add("is-hidden");
-        overlay.innerHTML = markup;
-        const closeButton = overlay.querySelector(".button-close");
-        closeButton.addEventListener("click", this.close.bind(this));
-        document.addEventListener("keyup", (e) => {
-            if (e.key === "Escape") {
-                closeButton.click();
-            }
-        });
-        this.overlay = overlay;
-        document.body.appendChild(overlay);
-        this.open();
-    }
-    open() {
-        const hideModal = get("hide_ieModal"); // Get cookie
-        // If we have a cookie AND no Debug, get out
-        if (hideModal && !this.debug)
-            return;
-        // Show Modal
-        this.overlay.classList.remove("is-hidden");
-    }
-    close(e) {
-        e.preventDefault();
-        set("hide_ieModal", "1", { expires: 1 }); // Create one day cookie
-        this.overlay.classList.add("is-hidden");
-    }
 }
 
 ;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/iframe.js
@@ -11754,12 +11836,92 @@ class ShowHideRadioCheckboxes {
     }
 }
 
+;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/cookie.js
+/**
+Example:
+import * as cookie from "./cookie";
+
+cookie.set('name', 'value');
+cookie.get('name'); // => 'value'
+cookie.remove('name');
+cookie.set('name', 'value', { expires: 7 }); // 7 Days cookie
+cookie.set('name', 'value', { expires: 7, path: '' }); // Set Path
+cookie.remove('name', { path: '' });
+ */
+function stringifyAttribute(name, value) {
+    if (!value) {
+        return "";
+    }
+    let stringified = "; " + name;
+    if (value === true) {
+        return stringified; // boolean attributes shouldn't have a value
+    }
+    return stringified + "=" + value;
+}
+function stringifyAttributes(attributes) {
+    if (typeof attributes.expires === "number") {
+        let expires = new Date();
+        expires.setMilliseconds(expires.getMilliseconds() + attributes.expires * 864e5);
+        attributes.expires = expires;
+    }
+    return (stringifyAttribute("Expires", attributes.expires ? attributes.expires.toUTCString() : "") +
+        stringifyAttribute("Domain", attributes.domain) +
+        stringifyAttribute("Path", attributes.path) +
+        stringifyAttribute("Secure", attributes.secure) +
+        stringifyAttribute("SameSite", attributes.sameSite));
+}
+function encode(name, value, attributes) {
+    return (encodeURIComponent(name)
+        .replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent) // allowed special characters
+        .replace(/\(/g, "%28")
+        .replace(/\)/g, "%29") + // replace opening and closing parens
+        "=" +
+        encodeURIComponent(value)
+            // allowed special characters
+            .replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent) +
+        stringifyAttributes(attributes));
+}
+function parse(cookieString) {
+    let result = {};
+    let cookies = cookieString ? cookieString.split("; ") : [];
+    let rdecode = /(%[\dA-F]{2})+/gi;
+    for (let i = 0; i < cookies.length; i++) {
+        let parts = cookies[i].split("=");
+        let cookie = parts.slice(1).join("=");
+        if (cookie.charAt(0) === '"') {
+            cookie = cookie.slice(1, -1);
+        }
+        try {
+            let name = parts[0].replace(rdecode, decodeURIComponent);
+            result[name] = cookie.replace(rdecode, decodeURIComponent);
+        }
+        catch (e) {
+            // ignore cookies with invalid name/value encoding
+        }
+    }
+    return result;
+}
+function getAll() {
+    return parse(document.cookie);
+}
+function get(name) {
+    return getAll()[name];
+}
+function set(name, value, attributes) {
+    document.cookie = encode(name, value, Object.assign({ path: "/" }, attributes));
+}
+function remove(name, attributes) {
+    set(name, "", Object.assign(Object.assign({}, attributes), { expires: -1 }));
+}
+
 ;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/translate-fields.js
+
 
 // This class works when the user has added ".simple_country_select" as a class in page builder for the Country select
 class TranslateFields {
     constructor() {
         this.countrySelect = document.querySelector("#en__field_supporter_country");
+        this.stateField = document.querySelector("#en__field_supporter_region");
         let options = "EngridTranslate" in window ? window.EngridTranslate : {};
         this.options = TranslateOptionsDefaults;
         if (options) {
@@ -11769,6 +11931,10 @@ class TranslateFields {
         }
         if (this.countrySelect) {
             this.countrySelect.addEventListener("change", this.translateFields.bind(this));
+            this.translateFields();
+        }
+        if (this.stateField) {
+            this.stateField.addEventListener("change", this.rememberState.bind(this));
         }
     }
     translateFields() {
@@ -11809,6 +11975,11 @@ class TranslateFields {
             const fieldWrapper = field.closest(".en__field");
             if (fieldWrapper) {
                 const fieldLabel = fieldWrapper.querySelector(".en__field__label");
+                // Check if there's the simple country select class
+                const simpleCountrySelect = fieldLabel.querySelector(".engrid-simple-country");
+                let simpleCountrySelectClone = simpleCountrySelect
+                    ? simpleCountrySelect.cloneNode(true)
+                    : null;
                 if (field instanceof HTMLInputElement && field.placeholder != "") {
                     if (!fieldLabel || fieldLabel.innerHTML == field.placeholder) {
                         field.dataset.original = field.placeholder;
@@ -11818,6 +11989,9 @@ class TranslateFields {
                 if (fieldLabel) {
                     fieldLabel.dataset.original = fieldLabel.innerHTML;
                     fieldLabel.innerHTML = translation;
+                    if (simpleCountrySelectClone) {
+                        fieldLabel.appendChild(simpleCountrySelectClone);
+                    }
                 }
             }
         }
@@ -11829,7 +12003,15 @@ class TranslateFields {
                 field.placeholder = field.dataset.original;
             }
             else {
+                // Check if there's the simple country select class
+                const simpleCountrySelect = field.querySelector(".engrid-simple-country");
+                let simpleCountrySelectClone = simpleCountrySelect
+                    ? simpleCountrySelect.cloneNode(true)
+                    : null;
                 field.innerHTML = field.dataset.original;
+                if (simpleCountrySelectClone) {
+                    field.appendChild(simpleCountrySelectClone);
+                }
             }
             field.removeAttribute("data-original");
         });
@@ -12044,6 +12226,79 @@ class TranslateFields {
                     { label: "Yukon", value: "Yukon" },
                 ]);
                 break;
+            case "MX":
+            case "MEX":
+                this.setStateValues("Province", [
+                    { label: "Select Province", value: "" },
+                    { label: "Aguascalientes", value: "AGU" },
+                    { label: "Baja California", value: "BCN" },
+                    { label: "Baja California Sur", value: "BCS" },
+                    { label: "Campeche", value: "CAM" },
+                    { label: "Chiapas", value: "CHP" },
+                    { label: "Ciudad de Mexico", value: "CMX" },
+                    { label: "Chihuahua", value: "CHH" },
+                    { label: "Coahuila", value: "COA" },
+                    { label: "Colima", value: "COL" },
+                    { label: "Durango", value: "DUR" },
+                    { label: "Guanajuato", value: "GUA" },
+                    { label: "Guerrero", value: "GRO" },
+                    { label: "Hidalgo", value: "HID" },
+                    { label: "Jalisco", value: "JAL" },
+                    { label: "Michoacan", value: "MIC" },
+                    { label: "Morelos", value: "MOR" },
+                    { label: "Nayarit", value: "NAY" },
+                    { label: "Nuevo Leon", value: "NLE" },
+                    { label: "Oaxaca", value: "OAX" },
+                    { label: "Puebla", value: "PUE" },
+                    { label: "Queretaro", value: "QUE" },
+                    { label: "Quintana Roo", value: "ROO" },
+                    { label: "San Luis Potosi", value: "SLP" },
+                    { label: "Sinaloa", value: "SIN" },
+                    { label: "Sonora", value: "SON" },
+                    { label: "Tabasco", value: "TAB" },
+                    { label: "Tamaulipas", value: "TAM" },
+                    { label: "Tlaxcala", value: "TLA" },
+                    { label: "Veracruz", value: "VER" },
+                    { label: "Yucatan", value: "YUC" },
+                    { label: "Zacatecas", value: "ZAC" },
+                ]);
+                break;
+            case "Mexico":
+                this.setStateValues("Province", [
+                    { label: "Select Province", value: "" },
+                    { label: "Aguascalientes", value: "Aguascalientes" },
+                    { label: "Baja California", value: "Baja California" },
+                    { label: "Baja California Sur", value: "Baja California Sur" },
+                    { label: "Campeche", value: "Campeche" },
+                    { label: "Chiapas", value: "Chiapas" },
+                    { label: "Ciudad de Mexico", value: "Ciudad de Mexico" },
+                    { label: "Chihuahua", value: "Chihuahua" },
+                    { label: "Coahuila", value: "Coahuila" },
+                    { label: "Colima", value: "Colima" },
+                    { label: "Durango", value: "Durango" },
+                    { label: "Guanajuato", value: "Guanajuato" },
+                    { label: "Guerrero", value: "Guerrero" },
+                    { label: "Hidalgo", value: "Hidalgo" },
+                    { label: "Jalisco", value: "Jalisco" },
+                    { label: "Michoacan", value: "Michoacan" },
+                    { label: "Morelos", value: "Morelos" },
+                    { label: "Nayarit", value: "Nayarit" },
+                    { label: "Nuevo Leon", value: "Nuevo Leon" },
+                    { label: "Oaxaca", value: "Oaxaca" },
+                    { label: "Puebla", value: "Puebla" },
+                    { label: "Queretaro", value: "Queretaro" },
+                    { label: "Quintana Roo", value: "Quintana Roo" },
+                    { label: "San Luis Potosi", value: "San Luis Potosi" },
+                    { label: "Sinaloa", value: "Sinaloa" },
+                    { label: "Sonora", value: "Sonora" },
+                    { label: "Tabasco", value: "Tabasco" },
+                    { label: "Tamaulipas", value: "Tamaulipas" },
+                    { label: "Tlaxcala", value: "Tlaxcala" },
+                    { label: "Veracruz", value: "Veracruz" },
+                    { label: "Yucatan", value: "Yucatan" },
+                    { label: "Zacatecas", value: "Zacatecas" },
+                ]);
+                break;
             default:
                 this.setStateValues("Province/State", null);
                 break;
@@ -12059,6 +12314,7 @@ class TranslateFields {
                 stateLabel.innerHTML = label;
             }
             if (elementWrapper) {
+                const selectedState = get("engrid-state");
                 if (values === null || values === void 0 ? void 0 : values.length) {
                     const select = document.createElement("select");
                     select.name = "supporter.region";
@@ -12070,10 +12326,14 @@ class TranslateFields {
                         const option = document.createElement("option");
                         option.value = value.value;
                         option.innerHTML = value.label;
+                        if (selectedState === value.value) {
+                            option.selected = true;
+                        }
                         select.appendChild(option);
                     });
                     elementWrapper.innerHTML = "";
                     elementWrapper.appendChild(select);
+                    select.addEventListener("change", this.rememberState.bind(this));
                 }
                 else {
                     elementWrapper.innerHTML = "";
@@ -12085,9 +12345,21 @@ class TranslateFields {
                     input.classList.add("en__field__input");
                     input.classList.add("en__field__input--text");
                     input.autocomplete = "address-level1";
+                    if (selectedState) {
+                        input.value = selectedState;
+                    }
                     elementWrapper.appendChild(input);
+                    input.addEventListener("change", this.rememberState.bind(this));
                 }
             }
+        }
+    }
+    rememberState() {
+        const stateField = document.querySelector("#en__field_supporter_region");
+        if (stateField) {
+            set("engrid-state", stateField.value, {
+                expires: 1,
+            });
         }
     }
 }
@@ -12095,18 +12367,18 @@ class TranslateFields {
 ;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/simple-country-select.js
 // This class works when the user has added ".simple_country_select" as a class in page builder for the Country select
 
+
 class SimpleCountrySelect {
     constructor() {
         this.countryWrapper = document.querySelector(".simple_country_select");
         this.countrySelect = document.querySelector("#en__field_supporter_country");
-        this.countriesNames = new Intl.DisplayNames(["en"], {
-            type: "region",
-        });
         this.country = null;
         const engridAutofill = get("engrid-autofill");
-        // Only run if there's no engrid-autofill cookie
-        if (!engridAutofill) {
-            fetch("https://www.cloudflare.com/cdn-cgi/trace")
+        const submissionFailed = !!(engrid_ENGrid.checkNested(window.EngagingNetworks, "require", "_defined", "enjs", "checkSubmissionFailed") && window.EngagingNetworks.require._defined.enjs.checkSubmissionFailed());
+        const hasIntlSupport = !!engrid_ENGrid.checkNested(window.Intl, "DisplayNames");
+        // Only run if there's no engrid-autofill cookie && if it has Intl support
+        if (!engridAutofill && !submissionFailed && hasIntlSupport) {
+            fetch(`https://${window.location.hostname}/cdn-cgi/trace`)
                 .then((res) => res.text())
                 .then((t) => {
                 let data = t.replace(/[\r\n]+/g, '","').replace(/\=+/g, '":"');
@@ -12117,21 +12389,25 @@ class SimpleCountrySelect {
                 // console.log("Country:", this.country);
             });
         }
+        else {
+            this.init();
+        }
     }
     init() {
         if (this.countrySelect) {
             if (this.country) {
+                const countriesNames = new Intl.DisplayNames(["en"], {
+                    type: "region",
+                });
                 // We are setting the country by Name because the ISO code is not always the same. They have 2 and 3 letter codes.
-                this.setCountryByName(this.countriesNames.of(this.country));
+                this.setCountryByName(countriesNames.of(this.country));
             }
-            let countrySelectLabel = this.countrySelect.options[this.countrySelect.selectedIndex].innerHTML;
             let countrySelectValue = this.countrySelect.options[this.countrySelect.selectedIndex].value;
             // @TODO Update so that it reads "(Outside X?)" where X is the Value of the Country Select. No need for long form version of it.
-            if (countrySelectValue == "US") {
-                countrySelectValue = " US";
-            }
-            if (countrySelectLabel == "United States") {
-                countrySelectLabel = "the United States";
+            if (countrySelectValue.toUpperCase() == "US" ||
+                countrySelectValue.toUpperCase() == "USA" ||
+                countrySelectValue.toUpperCase() == "UNITED STATES") {
+                countrySelectValue = "the US";
             }
             let countryWrapper = document.querySelector(".simple_country_select");
             if (countryWrapper) {
@@ -12143,36 +12419,25 @@ class SimpleCountrySelect {
                 // @TODO Update so that this follows the same pattern / HTML structure as the Tippy tooltips which are added to labels. REF: https://github.com/4site-interactive-studios/engrid-aiusa/blob/6e4692d4f9a28b9668d6c1bfed5622ac0cc5bdb9/src/scripts/main.js#L42
                 if (addressLabel) {
                     let labelText = addressLabel.innerHTML;
-                    // Wrap the address label in a div to break out of the flexbox
-                    this.wrap(addressLabel, document.createElement("div"));
                     // Add our link INSIDE the address label
-                    // Includes both long form and short form variants
                     let newEl = document.createElement("span");
                     newEl.innerHTML =
-                        ' <label id="en_custom_field_simple_country_select_long" class="en__field__label"><a href="javascript:void(0)">(Outside ' +
-                            countrySelectLabel +
-                            '?)</a></label><label id="en_custom_field_simple_country_select_short" class="en__field__label"><a href="javascript:void(0)">(Outside ' +
+                        '<label class="engrid-simple-country"><a href="javascript:void(0)">(Outside ' +
                             countrySelectValue +
                             "?)</a></label>";
                     addressLabel.innerHTML = `${labelText}${newEl.innerHTML}`;
-                    addressLabel.querySelectorAll("a").forEach((el) => {
-                        el.addEventListener("click", this.showCountrySelect.bind(this));
+                    addressLabel.addEventListener("click", (ev) => {
+                        var _a;
+                        ev.preventDefault();
+                        if (((_a = ev.target) === null || _a === void 0 ? void 0 : _a.tagName) === "A") {
+                            this.showCountrySelect(ev);
+                        }
                     });
-                    //this.insertAfter(newEl, addressLabel);
                 }
             }
+            // Deal with the auto-fill for the country
+            this.countrySelect.addEventListener("change", this.writeLink.bind(this));
         }
-    }
-    // Helper function to insert HTML after a node
-    insertAfter(el, referenceNode) {
-        const parentElement = referenceNode.parentNode;
-        parentElement.insertBefore(el, referenceNode.nextSibling);
-    }
-    // Helper function to wrap a target in a new element
-    wrap(el, wrapper) {
-        const parentElement = el.parentNode;
-        parentElement.insertBefore(wrapper, el);
-        wrapper.appendChild(el);
     }
     showCountrySelect(e) {
         var _a;
@@ -12184,6 +12449,14 @@ class SimpleCountrySelect {
         this.countrySelect.focus();
         // Reinstate Country Select tab index
         this.countrySelect.removeAttribute("tabIndex");
+    }
+    writeLink() {
+        let countryName = this.countrySelect.options[this.countrySelect.selectedIndex].value;
+        let addressLabel = document.querySelector(".engrid-simple-country");
+        if (addressLabel) {
+            let labelLink = `<a href="javascript:void(0)">(Outside ${countryName}?)</a>`;
+            addressLabel.innerHTML = labelLink;
+        }
     }
     setCountryByName(countryName) {
         if (this.countrySelect) {
@@ -12989,8 +13262,134 @@ class RememberMe {
     }
 }
 
+;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/show-if-amount.js
+
+
+class ShowIfAmount {
+    constructor() {
+        this._amount = DonationAmount.getInstance();
+        this._elements = document.querySelectorAll('[class*="showifamount"]');
+        if (this._elements.length > 0) {
+            this._amount.onAmountChange.subscribe(() => this.init());
+            this.init();
+            return;
+        }
+        if (engrid_ENGrid.debug)
+            console.log("Show If Amount: NO ELEMENTS FOUND");
+    }
+    init() {
+        const amount = this._amount.amount;
+        this._elements.forEach((element) => {
+            this.lessthan(amount, element);
+            this.lessthanorequalto(amount, element);
+            this.equalto(amount, element);
+            this.greaterthanorequalto(amount, element);
+            this.greaterthan(amount, element);
+            this.between(amount, element);
+        });
+    }
+    getClassNameByOperand(classList, operand) {
+        let myClass = null;
+        classList.forEach((className) => {
+            if (className.includes(`showifamount-${operand}-`)) {
+                myClass = className;
+            }
+        });
+        return myClass;
+    }
+    lessthan(amount, element) {
+        const showifamountClass = this.getClassNameByOperand(element.classList, "lessthan");
+        if (showifamountClass) {
+            let amountCheck = showifamountClass.split("-").slice(-1)[0];
+            if (amount < Number(amountCheck)) {
+                if (engrid_ENGrid.debug)
+                    console.log("Show If Amount (lessthan):", element);
+                element.classList.add("engrid-open");
+            }
+            else {
+                element.classList.remove("engrid-open");
+            }
+        }
+    }
+    lessthanorequalto(amount, element) {
+        const showifamountClass = this.getClassNameByOperand(element.classList, "lessthanorequalto");
+        if (showifamountClass) {
+            let amountCheck = showifamountClass.split("-").slice(-1)[0];
+            if (amount <= Number(amountCheck)) {
+                if (engrid_ENGrid.debug)
+                    console.log("Show If Amount (lessthanorequalto):", element);
+                element.classList.add("engrid-open");
+            }
+            else {
+                element.classList.remove("engrid-open");
+            }
+        }
+    }
+    equalto(amount, element) {
+        const showifamountClass = this.getClassNameByOperand(element.classList, "equalto");
+        if (showifamountClass) {
+            let amountCheck = showifamountClass.split("-").slice(-1)[0];
+            if (amount == Number(amountCheck)) {
+                if (engrid_ENGrid.debug)
+                    console.log("Show If Amount (equalto):", element);
+                element.classList.add("engrid-open");
+            }
+            else {
+                element.classList.remove("engrid-open");
+            }
+        }
+    }
+    greaterthanorequalto(amount, element) {
+        const showifamountClass = this.getClassNameByOperand(element.classList, "greaterthanorequalto");
+        if (showifamountClass) {
+            let amountCheck = showifamountClass.split("-").slice(-1)[0];
+            if (amount >= Number(amountCheck)) {
+                if (engrid_ENGrid.debug)
+                    console.log("Show If Amount (greaterthanorequalto):", element);
+                element.classList.add("engrid-open");
+            }
+            else {
+                element.classList.remove("engrid-open");
+            }
+        }
+    }
+    greaterthan(amount, element) {
+        const showifamountClass = this.getClassNameByOperand(element.classList, "greaterthan");
+        if (showifamountClass) {
+            let amountCheck = showifamountClass.split("-").slice(-1)[0];
+            if (amount > Number(amountCheck)) {
+                if (engrid_ENGrid.debug)
+                    console.log("Show If Amount (greaterthan):", element);
+                element.classList.add("engrid-open");
+            }
+            else {
+                element.classList.remove("engrid-open");
+            }
+        }
+    }
+    between(amount, element) {
+        const showifamountClass = this.getClassNameByOperand(element.classList, "between");
+        if (showifamountClass) {
+            let amountCheckMin = showifamountClass.split("-").slice(-2, -1)[0];
+            let amountCheckMax = showifamountClass.split("-").slice(-1)[0];
+            if (amount > Number(amountCheckMin) &&
+                amount < Number(amountCheckMax)) {
+                if (engrid_ENGrid.debug)
+                    console.log("Show If Amount (between):", element);
+                element.classList.add("engrid-open");
+            }
+            else {
+                element.classList.remove("engrid-open");
+            }
+        }
+    }
+}
+
 ;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/index.js
  // Runs first so it can change the DOM markup before any markup dependent code fires
+
+
+
 
 
 
