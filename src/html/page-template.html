@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="/TBD-ORG-favicon.ico" rel="shortcut icon">
+    <meta name="theme-color" content="#000000" />
+
 	<!-- Start Google Optimize with page hiding snippet -->
 	<!-- 
 	<style>
@@ -17,17 +22,14 @@
     <!-- End Google Optimize with page hiding snippet -->
 
 	<!-- Start Google Tag Manager Data Layer Initialization Script -->
+    <!--
 	<script>
 	 dataLayer = [];
 	</script>
+    -->
 	<!-- End Google Tag Manager Data Layer Initialization Script -->
-
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<link href="/TBD-ORG-favicon.ico" rel="shortcut icon">
-    <meta name="theme-color" content="#000000" />
     
-    <!-- Sharing Meta Tags Used by Facebook-->
+    <!-- Social Sharing Meta Tags Used by Facebook-->
     <title>${page~title} | TBD-ORG-NAME - TBD-ORG-TAGLINE</title>
     <meta property="og:type" content="website">
     <meta property="fb:app_id" content="1234567890"><!-- Optional -->
@@ -44,7 +46,7 @@
     <!-- Immeditately get color on the page and hide the contents until engrid.css is rendered by the browser -->
 	<style>
         body {
-            background-color: #000000;
+            background-color: #f6f8fa;
             opacity: 0;
         }
 
@@ -53,12 +55,9 @@
         }
     </style>
 
-    <!-- Preconnect and Preload Render Critical CSS, JS, and Fonts -->
-	<link rel="preconnect" href="//TBD.ssl.cf5.rackcdn.com">
-	<link rel="preconnect" href="//cdn.jsdelivr.net">
+    <!-- reload Render Critical ENgrid CSS, ENgrid JS, and Client Theme Fonts -->
 	<link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/engrid.min.css" as="style">
     <link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/engrid.min.js" as="script">
-	<link rel="preload" href="https://cdn.jsdelivr.net/gh/4site-interactive-studios/engrid-loader@main/loader.js" as="script">
 	<link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/font.woff2" as="font" type="font/woff2" crossorigin> 
 
 </head>
@@ -73,7 +72,7 @@
     </script> 
 
 	<!-- Placed here so that it always comes after Engaging Networks CSS which gets injected into <head> -->
-    <link href="https://TBD/engrid.min.css" rel="stylesheet" type="text/css" id="engrid-loader-css">
+    <link href="https://TBD/engrid.min.css" rel="stylesheet" type="text/css">
 
 	<div id="engrid">
 	<!-- Start EN Page Builder -->
@@ -90,8 +89,8 @@
     <!-- End EN Page Builder -->
     </div>
 
-    <!-- Placed here so it does not render block the page. loader.min.js conditially loads engrid.js and if necessary replaces engrid.css-->
-    <script src="https://cdn.jsdelivr.net/gh/4site-interactive-studios/engrid-loader@main/loader.js" data-repo-owner="4site-interactive-studios" data-repo-name="engrid-TBD" data-en-assets-url="https://TBD.ssl.cf5.rackcdn.com/12345TBD/" data-engrid-loader-js></script>
+    <!-- Placed here so it does not render block the page.-->
+    <script src="https://TBD/engrid.min.js" data-repo-owner="4site-interactive-studios" data-repo-name="engrid-TBD"></script>
 
     <!-- Start Render Critical Javascript (comes after the DOM has finished loading) -->
     
@@ -107,8 +106,8 @@
     </script> -->
     <!-- End Google Tag Manager -->
 
-    <!-- More Sharing Meta Tags Used by Facebook-->
-    <!-- EN adds these tags just before <body> so you need them here to override them -->
+    <!-- Additional Social Sharing Meta Tags Used by Facebook-->
+    <!-- EN adds these as blank tags just before <body>, so we need to redefine them here to create page template level defaults them -->
     <link rel="image_src" href="https://via.placeholder.com/1024x512.png?text=1024x512"/>
     <meta name="title" content="${page~title}">
     <meta name="description" content="Up to 255 character long description">
