@@ -51,7 +51,7 @@
         }
 
         body[data-engrid-embedded] {
-            background-color: transparent;
+            background-color: transparent !important;
         }
     </style>
 
@@ -67,7 +67,7 @@
     <!-- Quickly check to see if the page is in an iFrame and if so set the corresponding Custom Attribute so it can also set the background-color. Must be after <body> otherwise there will be a flash of color -->
     <script>
     if (window.self !== window.top) {
-        document.getElementsByTagName("BODY")[0].setAttribute("data-engrid-embedded", "").style.setProperty("background-color", "transparent", "important");
+        document.getElementsByTagName("BODY")[0].setAttribute("data-engrid-embedded", "");
     }
     </script> 
 
@@ -93,7 +93,22 @@
     <script src="https://TBD/engrid.min.js" data-repo-owner="4site-interactive-studios" data-repo-name="engrid-TBD"></script>
 
     <!-- Start Render Critical Javascript (comes after the DOM has finished loading) -->
-    
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // 4Site's simplified image lazy loader
+            var srcDefer = document.querySelectorAll("img[data-src]");
+            for (var i = 0; i < srcDefer.length; i++) {
+                let dataSrc = srcDefer[i].getAttribute("data-src");
+                if (dataSrc) {
+                    srcDefer[i].setAttribute("decoding", "async"); // Gets image processing off the main working thread
+                    srcDefer[i].setAttribute("loading", "lazy"); // Lets the browser determine when the asset should be downloaded
+                    srcDefer[i].setAttribute("src", dataSrc); // Sets the src which will cause the browser to retrieve the asset
+                    srcDefer[i].setAttribute("data-engrid-data-src-processed", "true"); // Sets an attribute to mark that it has been processed by ENGrid
+                    srcDefer[i].removeAttribute("data-src"); // Removes the data-source
+                }
+            }
+        });
+    </script>    
     <!-- End Render Critical Javascript (comes after the DOM has finished loading) -->	 
 
     <!-- Google Tag Manager --> 
