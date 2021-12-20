@@ -39,6 +39,7 @@ Email: bryan@4sitestudios.com
 `REFERENCE - Email to Target Custom Target`<br/>
 `REFERENCE - Email to Target Geolocated Target`<br/>
 `REFERENCE - Event with Free Tickets`<br/>
+`REFERENCE - Event with Paid Tickets (Live Gateway)`<br/>
 `REFERENCE - Event with Paid Tickets (Test Gateway)`<br/>
 `REFERENCE - Petition Page`<br/>
 `REFERENCE - Sign Up Page`<br/>
