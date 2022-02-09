@@ -4,9 +4,11 @@
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<link href="/TBD-ORG-favicon.ico" rel="shortcut icon">
-    <meta name="theme-color" content="#000000" />
-
-	<!-- Start Google Optimize with page hiding snippet -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    
+	<!-- Disable when not in use -->
+    <!-- Start Google Optimize with page hiding snippet -->
 	<!-- 
 	<style>
 	.async-hide { opacity: 0 !important} 
@@ -55,10 +57,9 @@
         }
     </style>
 
-    <!-- reload Render Critical ENgrid CSS, ENgrid JS, and Client Theme Fonts -->
+    <!-- Placed here so that downloading begins before Engaging Network's CSS and JS files -->
 	<link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/engrid.min.css" as="style">
-    <link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/engrid.min.js" as="script">
-	<link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/font.woff2" as="font" type="font/woff2" crossorigin> 
+    <link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/logo.svg" as="image">
 
 </head>
 <body data-engrid-theme="engrid-TBD-ORG-NAME" data-engrid-layout="centerleft1col" data-engrid-add-input-placeholders  data-replace-banner-with-background="if-banner-empty-or-background-video">
@@ -71,8 +72,11 @@
     }
     </script> 
 
-	<!-- Placed here so that it always comes after Engaging Networks CSS which gets injected into <head> -->
+    <!-- Load ENGrid's CSS here so that it always comes after Engaging Networks CSS which gets injected into <head> -->
     <link href="https://TBD/engrid.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Start preloading the Header Font, Body Font, and Label Fonts while the CSS files are still being downloaded -->
+    <link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/font.woff2" as="font" type="font/woff2" crossorigin> 
 
 	<div id="engrid">
 	<!-- Start EN Page Builder -->
