@@ -17,7 +17,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Wednesday, February 16, 2022 @ 18:02:10 ET
+ *  Date: Wednesday, February 16, 2022 @ 18:04:14 ET
  *  By: bryancasler
  *  ENGrid styles: v0.9.4
  *  ENGrid scripts: v0.9.5
@@ -13821,6 +13821,7 @@ const customScript = function () {
  // Uses ENGrid via NPM
 // import { Options, App } from "../../engrid-scripts/packages/common"; // Uses ENGrid via Visual Studio Workspace
 
+document.getElementsByTagName("body")[0].setAttribute("data-engrid-client-js-loading", "started");
 
 
 const options = {
@@ -13839,6 +13840,7 @@ const options = {
   onResize: () => console.log("Starter Theme Window Resized")
 };
 new App(options);
+document.getElementsByTagName("body")[0].setAttribute("data-engrid-client-js-loading", "finished");
 })();
 
 /******/ })()
