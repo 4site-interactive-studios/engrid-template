@@ -1,5 +1,10 @@
 import { Options, App } from "@4site/engrid-common"; // Uses ENGrid via NPM
 // import { Options, App } from "../../engrid-scripts/packages/common"; // Uses ENGrid via Visual Studio Workspace
+
+document
+  .getElementsByTagName("body")[0]
+  .setAttribute("data-engrid-client-js-loading", "started");
+
 import "./sass/main.scss";
 import { customScript } from "./scripts/main";
 
@@ -19,3 +24,7 @@ const options: Options = {
   onResize: () => console.log("Starter Theme Window Resized"),
 };
 new App(options);
+
+document
+  .getElementsByTagName("body")[0]
+  .setAttribute("data-engrid-client-js-loading", "finished");
