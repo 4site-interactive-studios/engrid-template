@@ -17,7 +17,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Wednesday, February 16, 2022 @ 18:04:14 ET
+ *  Date: Wednesday, February 23, 2022 @ 11:42:37 ET
  *  By: bryancasler
  *  ENGrid styles: v0.9.4
  *  ENGrid scripts: v0.9.5
@@ -9935,7 +9935,7 @@ class ProcessingFees {
 ;// CONCATENATED MODULE: ./node_modules/@4site/engrid-common/dist/app.js
 
 
-class App extends engrid_ENGrid {
+class app_App extends engrid_ENGrid {
     constructor(options) {
         super();
         // Events
@@ -9991,9 +9991,9 @@ class App extends engrid_ENGrid {
             }, 10);
             return;
         }
-        if (this.options.Debug || App.getUrlParameter("debug") == "true")
+        if (this.options.Debug || app_App.getUrlParameter("debug") == "true")
             // Enable debug if available is the first thing
-            App.setBodyData("debug", "");
+            app_App.setBodyData("debug", "");
         // Page Background
         new PageBackground();
         // TODO: Abstract everything to the App class so we can remove custom-methods
@@ -10172,7 +10172,7 @@ class App extends engrid_ENGrid {
     loadIFrame() {
         if (this.inIframe()) {
             // Add the data-engrid-embedded attribute when inside an iFrame if it wasn't already added by a script in the Page Template
-            App.setBodyData("embedded", "");
+            app_App.setBodyData("embedded", "");
             // Fire the resize event
             this.logger.log("iFrame Event - First Resize");
             sendIframeHeight();
@@ -10182,7 +10182,7 @@ class App extends engrid_ENGrid {
     setDataAttributes() {
         // Add the Page Type as a Data Attribute on the video
         if (engrid_ENGrid.checkNested(window, "pageJson", "pageType")) {
-            App.setBodyData("page-type", window.pageJson.pageType);
+            app_App.setBodyData("page-type", window.pageJson.pageType);
             this.logger.log("Page Type: " + window.pageJson.pageType);
         }
         else {
@@ -10192,86 +10192,86 @@ class App extends engrid_ENGrid {
         // @TODO Should this account for video?
         // @TODO Should we merge this with the script that checks the background image?
         if (!document.querySelector(".body-banner img")) {
-            App.setBodyData("body-banner", "empty");
+            app_App.setBodyData("body-banner", "empty");
         }
         // Add a page-alert data attribute if it is empty
         if (!document.querySelector(".page-alert *")) {
-            App.setBodyData("no-page-alert", "");
+            app_App.setBodyData("no-page-alert", "");
         }
         // Add a content-header data attribute if it is empty
         if (!document.querySelector(".content-header *")) {
-            App.setBodyData("no-content-header", "");
+            app_App.setBodyData("no-content-header", "");
         }
         // Add a body-headerOutside data attribute if it is empty
         if (!document.querySelector(".body-headerOutside *")) {
-            App.setBodyData("no-body-headerOutside", "");
+            app_App.setBodyData("no-body-headerOutside", "");
         }
         // Add a body-header data attribute if it is empty
         if (!document.querySelector(".body-header *")) {
-            App.setBodyData("no-body-header", "");
+            app_App.setBodyData("no-body-header", "");
         }
         // Add a body-title data attribute if it is empty
         if (!document.querySelector(".body-title *")) {
-            App.setBodyData("no-body-title", "");
+            app_App.setBodyData("no-body-title", "");
         }
         // Add a body-banner data attribute if it is empty
         if (!document.querySelector(".body-banner *")) {
-            App.setBodyData("no-body-banner", "");
+            app_App.setBodyData("no-body-banner", "");
         }
         // Add a body-bannerOverlay data attribute if it is empty
         if (!document.querySelector(".body-bannerOverlay *")) {
-            App.setBodyData("no-body-bannerOverlay", "");
+            app_App.setBodyData("no-body-bannerOverlay", "");
         }
         // Add a body-top data attribute if it is empty
         if (!document.querySelector(".body-top *")) {
-            App.setBodyData("no-body-top", "");
+            app_App.setBodyData("no-body-top", "");
         }
         // Add a body-main data attribute if it is empty
         if (!document.querySelector(".body-main *")) {
-            App.setBodyData("no-body-main", "");
+            app_App.setBodyData("no-body-main", "");
         }
         // Add a body-bottom data attribute if it is empty
         if (!document.querySelector(".body-bottom *")) {
-            App.setBodyData("no-body-bottom", "");
+            app_App.setBodyData("no-body-bottom", "");
         }
         // Add a body-footer data attribute if it is empty
         if (!document.querySelector(".body-footer *")) {
-            App.setBodyData("no-body-footer", "");
+            app_App.setBodyData("no-body-footer", "");
         }
         // Add a body-footerOutside data attribute if it is empty
         if (!document.querySelector(".body-footerOutside *")) {
-            App.setBodyData("no-body-footerOutside", "");
+            app_App.setBodyData("no-body-footerOutside", "");
         }
         // Add a content-footerSpacer data attribute if it is empty
         if (!document.querySelector(".content-footerSpacer *")) {
-            App.setBodyData("no-content-footerSpacer", "");
+            app_App.setBodyData("no-content-footerSpacer", "");
         }
         // Add a content-preFooter data attribute if it is empty
         if (!document.querySelector(".content-preFooter *")) {
-            App.setBodyData("no-content-preFooter", "");
+            app_App.setBodyData("no-content-preFooter", "");
         }
         // Add a content-footer data attribute if it is empty
         if (!document.querySelector(".content-footer *")) {
-            App.setBodyData("no-content-footer", "");
+            app_App.setBodyData("no-content-footer", "");
         }
         // Add a page-backgroundImage data attribute if it is empty
         if (!document.querySelector(".page-backgroundImage *")) {
-            App.setBodyData("no-page-backgroundImage", "");
+            app_App.setBodyData("no-page-backgroundImage", "");
         }
         // Add a page-backgroundImageOverlay data attribute if it is empty
         if (!document.querySelector(".page-backgroundImageOverlay *")) {
-            App.setBodyData("no-page-backgroundImageOverlay", "");
+            app_App.setBodyData("no-page-backgroundImageOverlay", "");
         }
         // Add a page-customCode data attribute if it is empty
         if (!document.querySelector(".page-customCode *")) {
-            App.setBodyData("no-page-customCode", "");
+            app_App.setBodyData("no-page-customCode", "");
         }
         // Add a country data attribute
         const countrySelect = document.querySelector("#en__field_supporter_country");
         if (countrySelect) {
-            App.setBodyData("country", countrySelect.value);
+            app_App.setBodyData("country", countrySelect.value);
             countrySelect.addEventListener("change", () => {
-                App.setBodyData("country", countrySelect.value);
+                app_App.setBodyData("country", countrySelect.value);
             });
         }
     }
@@ -13816,12 +13816,13 @@ document
 ;// CONCATENATED MODULE: ./src/scripts/main.js
 const customScript = function () {
   console.log("ENGrid client scripts are executing"); // Add your client scripts here
+
+  App.setBodydata("client-js-loading", "finished");
 };
 ;// CONCATENATED MODULE: ./src/index.ts
  // Uses ENGrid via NPM
 // import { Options, App } from "../../engrid-scripts/packages/common"; // Uses ENGrid via Visual Studio Workspace
 
-document.getElementsByTagName("body")[0].setAttribute("data-engrid-client-js-loading", "started");
 
 
 const options = {
@@ -13835,12 +13836,11 @@ const options = {
   SkipToMainContentLink: true,
   SrcDefer: true,
   ProgressBar: true,
-  Debug: App.getUrlParameter("debug") == "true" ? true : false,
+  Debug: app_App.getUrlParameter("debug") == "true" ? true : false,
   onLoad: () => customScript(),
   onResize: () => console.log("Starter Theme Window Resized")
 };
-new App(options);
-document.getElementsByTagName("body")[0].setAttribute("data-engrid-client-js-loading", "finished");
+new app_App(options);
 })();
 
 /******/ })()
