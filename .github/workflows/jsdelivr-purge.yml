@@ -1,0 +1,33 @@
+name: Purge JSDelivr cache
+on: [push, pull_request]
+env:
+  JSDELIVR_CSS_PATH: /gh/4site-interactive-studios/${{ github.event.repository.name }}@${{ github.head_ref || github.ref_name }}/dist/engrid.css
+  JSDELIVR_JS_PATH: /gh/4site-interactive-studios/${{ github.event.repository.name }}@${{ github.head_ref || github.ref_name }}/dist/engrid.js
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Purge JSDelivr CSS
+      id: jsdelivr-css
+      uses: fjogeleit/http-request-action@v1
+      with:
+        url: 'https://purge.jsdelivr.net${{ env.JSDELIVR_CSS_PATH }}'
+        method: 'GET'
+    - name: Purge JSDelivr JS
+      id: jsdelivr-js
+      uses: fjogeleit/http-request-action@v1
+      with:
+        url: 'https://purge.jsdelivr.net${{ env.JSDELIVR_JS_PATH }}'
+        method: 'GET'
+    - name: Response
+      run: |
+          if [[ ${{ fromJson(steps.jsdelivr-css.outputs.response).paths[env.JSDELIVR_CSS_PATH].throttled }} == "true" ]]; then
+            echo "CSS file at ${{ env.JSDELIVR_CSS_PATH }} is throttled for ${{ fromJson(steps.jsdelivr-css.outputs.response).paths[env.JSDELIVR_CSS_PATH].throttlingReset }} seconds longer"
+          else 
+            echo "CSS file at ${{ env.JSDELIVR_CSS_PATH }} cache has been purged."
+          fi
+          if [[ ${{ fromJson(steps.jsdelivr-js.outputs.response).paths[env.JSDELIVR_JS_PATH].throttled }} == "true" ]]; then
+            echo "JS file at ${{ env.JSDELIVR_JS_PATH }} is throttled for ${{ fromJson(steps.jsdelivr-js.outputs.response).paths[env.JSDELIVR_JS_PATH].throttlingReset }} seconds longer"
+          else 
+            echo "JS file at ${{ env.JSDELIVR_JS_PATH }} cache has been purged."
+          fi
