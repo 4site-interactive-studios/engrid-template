@@ -6,9 +6,9 @@ let engridScriptStylesVersion = exec("npm list @4site/engrid-styles")
   .toString("utf8")
   .split("@4site/engrid-styles@")[1]
   .split("\n")[0];
-const engridScriptScriptsVersion = exec("npm list @4site/engrid-common")
+const engridScriptScriptsVersion = exec("npm list @4site/engrid-scripts")
   .toString("utf8")
-  .split("@4site/engrid-common@")[1]
+  .split("@4site/engrid-scripts@")[1]
   .split("\n")[0];
 const localeStringDateOptions = {
   weekday: "long",
@@ -27,6 +27,14 @@ const localeStringTimeOptions = {
 module.exports = {
   entry: {
     engrid: "./src/index.ts",
+  },
+  performance: {
+    assetFilter: function (assetFilename) {
+      return assetFilename.endsWith(".min.js", ".min.css");
+    },
+    hints: "error",
+    maxEntrypointSize: 2000000,
+    maxAssetSize: 500000,
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
