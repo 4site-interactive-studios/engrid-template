@@ -44,7 +44,7 @@
     "mini-css-extract-plugin": "^1.6.2",
     "popper.js": "^1.16.1",
     "postcss-loader": "^6.1.0",
-    "postcss-preset-env": "^9.3.0",
+    "postcss-preset-env": "^10.0.5",
     "prettier": "2.4.1",
     "sass": "^1.49.0",
     "sass-loader": "^12.1.0",
