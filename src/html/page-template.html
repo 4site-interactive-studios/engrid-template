@@ -1,138 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<link href="/TBD-ORG-favicon.ico" rel="shortcut icon">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-    
-	<!-- Disable when not in use -->
-    <!-- Start Google Optimize with page hiding snippet -->
-	<!-- 
-	<style>
-	.async-hide { opacity: 0 !important} 
-	</style>
-	
-	<script>
-	   (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
-	   h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-	   (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
-	   })(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-TBD':true});
-	</script>
-	-->
-    <!-- End Google Optimize with page hiding snippet -->
+    <!-- Start Google Tag Manager Data Layer Initialization Script -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+    </script>
+    <!-- End Google Tag Manager Data Layer Initialization Script -->
 
-	<!-- Start Google Tag Manager Data Layer Initialization Script -->
-    <!--
-	<script>
-	 dataLayer = [];
-	</script>
-    -->
-	<!-- End Google Tag Manager Data Layer Initialization Script -->
-    
-    <!-- Social Sharing Meta Tags Used by Facebook-->
-    <title>${page~title} | TBD-ORG-NAME - TBD-ORG-TAGLINE</title>
-    <meta property="og:type" content="website">
-    <meta property="fb:app_id" content="1234567890"><!-- Optional -->
+    <!-- Start Google Optimize Script (With anti-flicker snippet) -->
+    <!-- IMPORTANT: You must initialize the dataLayer above the anti-flicker snippet or the performance of your site will be negatively impacted. Don't override the data layer later in the page. -->
+    <!--<style>.async-hide { opacity: 0 !important} </style>-->
+    <!--<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;-->
+    <!--h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};-->
+    <!--(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;-->
+    <!--})(window,document.documentElement,'async-hide','dataLayer',4000,-->
+    <!--{'OPT-123456':true});</script>-->
+    <!--<script src="https://www.googleoptimize.com/optimize.js?id=OPT-123456"></script>-->
+    <!-- End Google Optimize Script (With anti-flicker snippet) -->
 
-    <!-- Social Sharing Meta Tags Used by Twitter-->
-    <meta property="twitter:account_id" content="0987654321"><!-- Optional -->
-    <meta name="twitter:site" content="@ABC"><!-- @username of website -->
-    <meta name="twitter:creator" content="@XYZ"><!-- @username of content creator -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.website.org/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="https://www.website.org/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.website.org/favicon-16x16.png" sizes="16x16">
+    <link rel="mask-icon" href="https://www.website.org/safari-pinned-tab.svg" color="#000000">
+    <link rel="shortcut icon" href="https://www.website.org/favicon.ico">
+    <meta name="msapplication-TileImage" content="https://www.website.org/mstile-144x144.png">
+    <meta name="msapplication-config" content="https://www.website.org/browserconfig.xml">
+    <title>${page~title} | TBD-ORG-NAME</title>
+    <meta name="title" content="${page~title} | TBD-ORG-NAME">
+    <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Social Network Account meta tags -->
+    <!-- <meta property="twitter:account_id" content="123456"> -->
+    <!-- <meta property="fb:app_id" content="TBD"> -->
+
+    <!-- Default, Twitter Large Card, and Facebook meta tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://via.placeholder.com/1024x512.png?text=1024x512">
+    <meta name="twitter:site" content="@orgtwitter">
+    <meta name="twitter:creator" content="@orgtwitter">
     <meta name="twitter:title" content="${page~title}">
-    <meta name="twitter:description" content="Up to 160 character long description">
+    <meta name="twitter:image" content="https://TBD.ssl.cf5.rackcdn.com/12345/social.jpg">
+    <meta name="twitter:description"
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis laoreet sapien ac malesuada. Praesent sit amet dapibus ex, fringilla lacinia turpis. Vestibulum ac fringilla mauris.">
+    <meta property="og:type" content="website">
 
-    <!-- Immeditately get color on the page and hide the contents until engrid.css is rendered by the browser -->
-	<style>
+
+    <!-- Immeditately get color on the page and hide the contents until main.css is rendered by the browser -->
+    <style>
         body {
-            background-color: #f6f8fa;
+            background-color: #BFBFBF;
             opacity: 0;
         }
 
         body[data-engrid-embedded] {
             background-color: transparent !important;
         }
+
+        .responsive-image,
+        .responsive-image img {
+            width: 100%;
+            height: auto;
+        }
     </style>
 
-    <!-- Placed here so that downloading begins before Engaging Network's CSS and JS files -->
-	<link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/engrid.min.css" as="style">
-    <link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/logo.svg" as="image">
+    <!-- Preconnect and Preload Render Critical CSS, JS, Images, and Fonts -->
+    <link rel="preconnect" href="//TBD.ssl.cf5.rackcdn.com">
+    <link rel="preconnect" href="//e-activist.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="//www.google-analytics.com">
+    <link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345/engrid.min.css"
+        as="style">
+    <link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345/logo.svg" as="image">
 
 </head>
-<body data-engrid-theme="engrid-TBD-ORG-NAME" data-engrid-layout="centerleft1col" data-engrid-add-input-placeholders  data-replace-banner-with-background="if-banner-empty-or-background-video">
-	<noscript>With Javascript disabled this page may not function as expected.</noscript>
+
+<body data-engrid-layout="leftcenter1col" data-engrid-theme="engrid-TBD" data-engrid-add-input-placeholders data-replace-banner-with-background="if-banner-empty-or-background-video">
+    <noscript>With Javascript disabled this page may not function as expected.</noscript>
 
     <!-- Quickly check to see if the page is in an iFrame and if so set the corresponding Custom Attribute so it can also set the background-color. Must be after <body> otherwise there will be a flash of color -->
     <script>
-    if (window.self !== window.top) {
-        document.getElementsByTagName("BODY")[0].setAttribute("data-engrid-embedded", "");
-    }
-    </script> 
+        if (window.self !== window.top) {
+            document.body.setAttribute("data-engrid-embedded", "");
+        };
+    </script>
 
-    <!-- Load ENGrid's CSS here so that it always comes after Engaging Networks CSS which gets injected into <head> -->
-    <link href="https://TBD/engrid.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Start preloading the Header Font, Body Font, and Label Fonts while the CSS files are still being downloaded -->
-    <link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345TBD/font.woff2" as="font" type="font/woff2" crossorigin> 
-
-	<div id="engrid">
-	<!-- Start EN Page Builder -->
-
-
-
-
-
-
-
-
-
-
-    <!-- End EN Page Builder -->
-    </div>
-
-    <!-- Placed here so it does not render block the page.-->
-    <script src="https://TBD/engrid.min.js" data-repo-owner="4site-interactive-studios" data-repo-name="engrid-TBD"></script>
-
-    <!-- Start Render Critical Javascript (comes after the DOM has finished loading) -->
     <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            // 4Site's simplified image lazy loader
-            var srcDefer = document.querySelectorAll("img[data-src]");
-            for (var i = 0; i < srcDefer.length; i++) {
-                let dataSrc = srcDefer[i].getAttribute("data-src");
-                if (dataSrc) {
-                    srcDefer[i].setAttribute("decoding", "async"); // Gets image processing off the main working thread
-                    srcDefer[i].setAttribute("loading", "lazy"); // Lets the browser determine when the asset should be downloaded
-                    srcDefer[i].setAttribute("src", dataSrc); // Sets the src which will cause the browser to retrieve the asset
-                    srcDefer[i].setAttribute("data-engrid-data-src-processed", "true"); // Sets an attribute to mark that it has been processed by ENGrid
-                    srcDefer[i].removeAttribute("data-src"); // Removes the data-source
-                }
+        (new URLSearchParams(document.location.search)).forEach((value, key) => {
+            if (key.startsWith("data-engrid-")) {
+                document.body.setAttribute(key, value);
             }
         });
-    </script>    
-    <!-- End Render Critical Javascript (comes after the DOM has finished loading) -->	 
+    </script>
 
-    <!-- Google Tag Manager --> 
-    <!-- <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-TBD');
-    </script> -->
-    <!-- End Google Tag Manager -->
+    <!-- Function to set ENgrid data attributes on the body if not set in URL -->
+    <script>
+        function setEnGridBodyDataAttribute(attributeName, attributeValue) {
+            const body = document.querySelector("body");
+            const urlParams = new URLSearchParams(window.location.search);
 
-    <!-- Additional Social Sharing Meta Tags Used by Facebook-->
-    <!-- EN adds these as blank tags just before <body>, so we need to redefine them here to create page template level defaults them -->
-    <link rel="image_src" href="https://via.placeholder.com/1024x512.png?text=1024x512"/>
-    <meta name="title" content="${page~title}">
-    <meta name="description" content="Up to 255 character long description">
-    
-    <!-- Start Temporary CSS -->
+            if (!urlParams.has("data-engrid-" + attributeName)) {
+                body.setAttribute("data-engrid-" + attributeName, attributeValue);
+            }
+        }
+    </script>
 
-    <!-- END Temporary CSS -->
+    <!-- Load ENgrid's CSS here so that it always comes after Engaging Networks CSS which gets injected into <head> -->
+    <link href="https://TBD.ssl.cf5.rackcdn.com/12345/engrid.min.css" rel="stylesheet"
+        type="text/css">
+
+    <!-- Start preloading the Header Font, Body Font, and Label Fonts while the CSS files are still being downloaded -->
+    <link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345/font1.woff2" as="font"
+        type="font/woff" crossorigin> <!-- Content Header Strong -->
+    <link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345/font2.woff2" as="font"
+        type="font/woff" crossorigin> <!-- Content Header Normal -->
+    <link rel="preload" href="https://TBD.ssl.cf5.rackcdn.com/12345/font3.woff" as="font"
+        type="font/woff" crossorigin> <!-- Main Body -->
+
+    <div id="engrid">
+        <!-- Start EN Page Builder -->
+
+
+        <!-- End EN Page Builder -->
+</div>
+
+<!-- Additional Default meta tags: Placed at the bottom so any previously defined meta tags in the page take precedence -->
+<meta property="og:title" content="${page~title}">
+<meta property="og:site_name" content="TBD-ORG-NAME">
+<meta property="og:description"
+    content="TBD-ORG-DESC">
+<meta property="description"
+    content="TBD-ORG-DESC">
+
+<!-- If using a two column layout without content in the body-top OR body-main section, automatically change to a one column layout -->
+<script>
+    const checkForTwoColumnLayout = document.querySelector('body[data-engrid-layout="centercenter2col"]');
+    const checkForBodyTopContent = document.querySelector('.body-top > *');
+    const checkForBodyMainContent = document.querySelector('.body-main > *');
+    if (checkForTwoColumnLayout && (!checkForBodyTopContent || !checkForBodyMainContent)) {
+        document.querySelector("body").setAttribute("data-engrid-layout", "centercenter1col");
+    }
+</script>
+
+<!-- Load ENgrid's Javascript Asynchronous -->
+<script async src="https://TBD.ssl.cf5.rackcdn.com/12345/engrid.min.js"></script>
+
+<!-- Start Render Critical Javascript -->
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // 4Site's simplified image lazy loader
+        var srcDefer = document.querySelectorAll("img[data-src]");
+        for (var i = 0; i < srcDefer.length; i++) {
+            let dataSrc = srcDefer[i].getAttribute("data-src");
+            if (dataSrc) {
+                srcDefer[i].setAttribute("decoding", "async"); // Gets image processing off the main working thread
+                srcDefer[i].setAttribute("loading", "lazy"); // Lets the browser determine when the asset should be downloaded
+                srcDefer[i].setAttribute("src", dataSrc); // Sets the src which will cause the browser to retrieve the asset
+                srcDefer[i].setAttribute("data-engrid-data-src-processed", "true"); // Sets an attribute to mark that it has been processed by ENgrid
+                srcDefer[i].removeAttribute("data-src"); // Removes the data-source
+            }
+        }
+    });
+</script>
+<!-- End Render Critical Javascript -->
+
+<!-- Start Google Tag Manager Script -->
+<!-- <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-12345');</script> -->
+<!-- End Start Google Tag Manager Script -->
+
+<!-- Start ThreatMetrix Profiling Tag -->
+<!-- The default ThreatMetrix installation murders page load performance -->
+<!-- To optimize it we have removed the <script> tag and rely on the <iframe> for profiling 100% of site traffic -->
+<!-- <iframe style="width: 100px; height: 100px; border: 0; position: absolute; top: -5000px;"
+        src="https://h.online-metrix.net/fp/tags.js?org_id=e0j3u9ji&session_id=e1839-${page~sessionId}&page_id=1"></iframe> -->
+<!-- End ThreatMetrix Profiling Tag -->
 </body>
+
 </html>

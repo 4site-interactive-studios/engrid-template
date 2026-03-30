@@ -1,6 +1,6 @@
 /* For the fastest critical page render times, don't load a custom font at all. But, if you must
  * use @font-face and avoid importing an external font file that in turn then loads the final fonts
- *
+ * Only use woff2, as it's the most widely supported and optimized font format for web use. Avoid loading woff, ttf, eot, svg formats as they are either not supported by modern browsers or not optimized for web use.
  * BUILDOUT NOTE: For your render critical fonts, mirror of your font-face declaration in the <head> of your page
  * template to start fetching them ASAP without the need for the engrid.css fuke to finish downloading and getting parsed.
  *
@@ -12,11 +12,7 @@
 // @font-face {
 // 	font-family: 'Proxima Nova Bold';
 // 	src: local('Proxima Nova Bold'),
-// 	url(https://www.earthisland.org/components/site/default/asset/fonts/ProximaNova-Bold.woff2) format("woff2"),
-// 	url(https://www.earthisland.org/components/site/default/asset/fonts/ProximaNova-Bold.woff) format("woff"),
-// 	url(https://www.earthisland.org/components/site/default/asset/fonts/ProximaNova-Bold.ttf) format("truetype"),
-// 	url(https://www.earthisland.org/components/site/default/asset/fonts/ProximaNova-Bold.eot?#iefix) format("embedded-opentype"),
-// 	url(https://www.earthisland.org/components/site/default/asset/fonts/ProximaNova-Bold.svg#ProximaNova-Bold) format("svg");
+// 	url(https://www.earthisland.org/components/site/default/asset/fonts/ProximaNova-Bold.woff2) format("woff2");
 // 	font-weight: bold;
 // 	font-style: normal;
 // 	font-display: swap

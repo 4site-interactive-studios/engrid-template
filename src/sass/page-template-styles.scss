@@ -1,7 +1,7 @@
 // The most broadly used CSS Custom Properties for quick theming.
 // Uncomment to use and reference engrid-scrips SASS files for more CSS Custom Properties.
 // All CSS Custom Properties should be scoped to the theme using CSS Data Attributes.
-[data-engrid-theme="organizational-name"] {
+[data-engrid-theme="engrid-TBD"] {
   // TYPOGRAPHY DEFAULT
   // --default_font-family: var(--native-fonts__sans-serif);
   // --default_color: initial;
@@ -84,7 +84,7 @@
 }
 
 /* Add your custom theme styles here */
-[data-engrid-theme="organizational-name"] {
+[data-engrid-theme="engrid-TBD"] {
   @mixin until-mobile-l {
     // STYLES
   }
