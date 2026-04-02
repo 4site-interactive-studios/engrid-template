@@ -8,6 +8,16 @@ Director of Digital Strategy
 Cell: (315) 877-3420  
 Email: bryan@4sitestudios.com
 
+## Find and Replace Conventions
+
+You will find the following `TBD` placeholders in the codebase that should be replaced with your client's information, they're formatted in all caps to make them easy to find and replace:
+
+- `TBD-ORG-NAME` = Client Organization Name
+- `TBD-ORG-DESC` = Client Organization Description
+- `TBD-ADDRESS-LINE-1` = Client Street Address
+- `TBD-CITY-STATE-ZIP` = Client City, State, Zip
+- `TBD-IRS-TAX-ID` = Client IRS Tax EIN/ID Number
+- `engrid-TBD` = Replace TBD with your client's acronym or short name (e.g. `engrid-ran`)
 
 ## Account Buildout
 ### Client theme dependent on [4Site's Page Template Framework (ENgrid)](https://github.com/4site-interactive-studios/engrid-scripts)

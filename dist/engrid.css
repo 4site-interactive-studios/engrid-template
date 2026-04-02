@@ -19,10 +19,10 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Monday, March 30, 2026 @ 15:16:59 ET
+ *  Date: Thursday, April 2, 2026 @ 09:42:02 ET
  *  By: nick
  *  ENGrid styles: v0.24.0
- *  ENGrid scripts: v0.24.0
+ *  ENGrid scripts: v0.24.5
  *
  *  Created by 4Site Studios
  *  Come work with us or join our team, we would love to hear from you
@@ -1925,7 +1925,7 @@ a:focus,a:hover{
   --checkbox_padding-left:0px;
   --checkbox_text-transform:var(--radio_text-transform);
   --checkbox_check_font-size:var(--radio_font-size);
-  --checkbox_content_checked:"✓";
+  --checkbox_content_checked:"\2713";
   --select_font-family:var(--input_font-family);
   --select_font-size:var(--input_font-size);
   --select_font-weight:initial;
@@ -2014,7 +2014,6 @@ a:focus,a:hover{
   max-width:100%;
   width:fit-content;
 }
-
 .en__component--formblock.inline-other .en__field--checkbox.en__field--withOther--active .en__field__element,.en__component--formblock.inline-other .en__field--radio.en__field--withOther--active .en__field__element,.en__component--svblock.inline-other .en__field--checkbox.en__field--withOther--active .en__field__element,.en__component--svblock.inline-other .en__field--radio.en__field--withOther--active .en__field__element,.en__registrants__registrantDetails.inline-other .en__field--checkbox.en__field--withOther--active .en__field__element,.en__registrants__registrantDetails.inline-other .en__field--radio.en__field--withOther--active .en__field__element{
   grid-template-columns:min-content;
 }
@@ -3147,6 +3146,7 @@ body:not(#en__pagebuilder) .click-to-expand.expanded .click-to-expand-text-wrapp
 body:not(#en__pagebuilder):not([data-engrid-debug]) .hide:not(.en__field--validationFailed):not(:has(.en__field.en__field--validationFailed)),body:not(#en__pagebuilder):not([data-engrid-debug]) div:not(.en__field--validationFailed) .hide:not(.en__field--validationFailed):not(:has(.en__field.en__field--validationFailed)){
   display:none;
 }
+
 body:not(#en__pagebuilder):not([data-engrid-debug]):not([data-engrid-js-loading=finished]) .en__field--donationAmt .en__field__item label{
   color:#0000 !important;
 }
@@ -3201,6 +3201,7 @@ body:not(#en__pagebuilder):not([data-engrid-debug]) .hide-labels .en__field:not(
   --engrid__body-side_padding:var(--engrid__body-main_padding);
   --root_font-size:16px;
 }
+
 [data-engrid-theme] #en__digitalWallet,[data-engrid-theme] .en__digitalWallet__container{
   max-width:100% !important;
 }
@@ -3642,6 +3643,7 @@ body:not(#en__pagebuilder):not([data-engrid-debug]):not([data-engrid-transaction
 #en__pagebuilder .recurring-frequency-annual-hide,#en__pagebuilder .recurring-frequency-annual-show,#en__pagebuilder .recurring-frequency-monthly-hide,#en__pagebuilder .recurring-frequency-monthly-show,#en__pagebuilder .recurring-frequency-n-hide,#en__pagebuilder .recurring-frequency-n-show,#en__pagebuilder .recurring-frequency-onetime-hide,#en__pagebuilder .recurring-frequency-onetime-show,#en__pagebuilder .recurring-frequency-quarterly-hide,#en__pagebuilder .recurring-frequency-quarterly-show,#en__pagebuilder .recurring-frequency-semi-annual-hide,#en__pagebuilder .recurring-frequency-semi-annual-show,#en__pagebuilder .recurring-frequency-y-hide,#en__pagebuilder .recurring-frequency-y-show,[data-engrid-debug] .recurring-frequency-annual-hide,[data-engrid-debug] .recurring-frequency-annual-show,[data-engrid-debug] .recurring-frequency-monthly-hide,[data-engrid-debug] .recurring-frequency-monthly-show,[data-engrid-debug] .recurring-frequency-n-hide,[data-engrid-debug] .recurring-frequency-n-show,[data-engrid-debug] .recurring-frequency-onetime-hide,[data-engrid-debug] .recurring-frequency-onetime-show,[data-engrid-debug] .recurring-frequency-quarterly-hide,[data-engrid-debug] .recurring-frequency-quarterly-show,[data-engrid-debug] .recurring-frequency-semi-annual-hide,[data-engrid-debug] .recurring-frequency-semi-annual-show,[data-engrid-debug] .recurring-frequency-y-hide,[data-engrid-debug] .recurring-frequency-y-show{
   background-color:rgba(0,0,255,.102) !important;
 }
+
 [data-engrid-theme] #dd-container .dtd-callout,[data-engrid-theme] .dtd-plugin .dtd-callout{
   background-color:initial;
   border:none;

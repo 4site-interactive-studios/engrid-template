@@ -17,10 +17,10 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Monday, March 30, 2026 @ 15:16:59 ET
+ *  Date: Thursday, April 2, 2026 @ 09:42:02 ET
  *  By: nick
  *  ENGrid styles: v0.24.0
- *  ENGrid scripts: v0.24.0
+ *  ENGrid scripts: v0.24.5
  *
  *  Created by 4Site Studios
  *  Come work with us or join our team, we would love to hear from you
@@ -30,8 +30,8 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 3309:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 3309
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -58,10 +58,10 @@ class DispatchError extends Error {
 exports.DispatchError = DispatchError;
 
 
-/***/ }),
+/***/ },
 
-/***/ 8441:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 8441
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -308,10 +308,10 @@ class DispatcherBase {
 exports.DispatcherBase = DispatcherBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 8901:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 8901
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -436,10 +436,10 @@ class DispatcherWrapper {
 exports.DispatcherWrapper = DispatcherWrapper;
 
 
-/***/ }),
+/***/ },
 
-/***/ 4004:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 4004
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -488,10 +488,10 @@ class EventListBase {
 exports.EventListBase = EventListBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 6580:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 6580
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -571,10 +571,10 @@ class PromiseDispatcherBase extends __1.DispatcherBase {
 exports.PromiseDispatcherBase = PromiseDispatcherBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 956:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 956
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -603,10 +603,10 @@ class SubscriptionChangeEventDispatcher extends __1.DispatcherBase {
 exports.SubscriptionChangeEventDispatcher = SubscriptionChangeEventDispatcher;
 
 
-/***/ }),
+/***/ },
 
-/***/ 6436:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 6436
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -666,10 +666,10 @@ class PromiseSubscription {
 exports.PromiseSubscription = PromiseSubscription;
 
 
-/***/ }),
+/***/ },
 
-/***/ 3707:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 3707
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -720,10 +720,10 @@ class Subscription {
 exports.Subscription = Subscription;
 
 
-/***/ }),
+/***/ },
 
-/***/ 6442:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 6442
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -815,10 +815,10 @@ class HandlingBase {
 exports.HandlingBase = HandlingBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 4604:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 4604
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -854,10 +854,10 @@ const SubscriptionChangeEventHandler_1 = __webpack_require__(956);
 Object.defineProperty(exports, "SubscriptionChangeEventDispatcher", ({ enumerable: true, get: function () { return SubscriptionChangeEventHandler_1.SubscriptionChangeEventDispatcher; } }));
 
 
-/***/ }),
+/***/ },
 
-/***/ 1289:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 1289
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -894,10 +894,10 @@ class EventManagement {
 exports.EventManagement = EventManagement;
 
 
-/***/ }),
+/***/ },
 
-/***/ 71:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 71
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -966,10 +966,10 @@ class EventDispatcher extends ste_core_1.DispatcherBase {
 exports.EventDispatcher = EventDispatcher;
 
 
-/***/ }),
+/***/ },
 
-/***/ 2162:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 2162
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -988,10 +988,10 @@ class EventHandlingBase extends ste_core_1.HandlingBase {
 exports.EventHandlingBase = EventHandlingBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 338:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 338
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -1020,10 +1020,10 @@ class EventList extends ste_core_1.EventListBase {
 exports.EventList = EventList;
 
 
-/***/ }),
+/***/ },
 
-/***/ 2293:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 2293
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -1067,10 +1067,10 @@ class NonUniformEventList {
 exports.NonUniformEventList = NonUniformEventList;
 
 
-/***/ }),
+/***/ },
 
-/***/ 4214:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 4214
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -1094,10 +1094,10 @@ const NonUniformEventList_1 = __webpack_require__(2293);
 Object.defineProperty(exports, "NonUniformEventList", ({ enumerable: true, get: function () { return NonUniformEventList_1.NonUniformEventList; } }));
 
 
-/***/ }),
+/***/ },
 
-/***/ 2725:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 2725
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -1151,10 +1151,10 @@ class SignalDispatcher extends ste_core_1.DispatcherBase {
 exports.SignalDispatcher = SignalDispatcher;
 
 
-/***/ }),
+/***/ },
 
-/***/ 7936:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 7936
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -1184,10 +1184,10 @@ class SignalHandlingBase extends ste_core_1.HandlingBase {
 exports.SignalHandlingBase = SignalHandlingBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 1064:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 1064
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -1227,10 +1227,10 @@ class SignalList extends ste_core_1.EventListBase {
 exports.SignalList = SignalList;
 
 
-/***/ }),
+/***/ },
 
-/***/ 5010:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 5010
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -1252,10 +1252,10 @@ const SignalList_1 = __webpack_require__(1064);
 Object.defineProperty(exports, "SignalList", ({ enumerable: true, get: function () { return SignalList_1.SignalList; } }));
 
 
-/***/ }),
+/***/ },
 
-/***/ 7376:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 7376
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -1299,10 +1299,10 @@ class NonUniformSimpleEventList {
 exports.NonUniformSimpleEventList = NonUniformSimpleEventList;
 
 
-/***/ }),
+/***/ },
 
-/***/ 9606:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 9606
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -1368,10 +1368,10 @@ class SimpleEventDispatcher extends ste_core_1.DispatcherBase {
 exports.SimpleEventDispatcher = SimpleEventDispatcher;
 
 
-/***/ }),
+/***/ },
 
-/***/ 4763:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 4763
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -1390,10 +1390,10 @@ class SimpleEventHandlingBase extends ste_core_1.HandlingBase {
 exports.SimpleEventHandlingBase = SimpleEventHandlingBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 2175:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 2175
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -1422,10 +1422,10 @@ class SimpleEventList extends ste_core_1.EventListBase {
 exports.SimpleEventList = SimpleEventList;
 
 
-/***/ }),
+/***/ },
 
-/***/ 6569:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 6569
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -1441,10 +1441,10 @@ const SimpleEventList_1 = __webpack_require__(2175);
 Object.defineProperty(exports, "SimpleEventList", ({ enumerable: true, get: function () { return SimpleEventList_1.SimpleEventList; } }));
 
 
-/***/ }),
+/***/ },
 
-/***/ 3199:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 3199
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 var __webpack_unused_export__;
@@ -1499,10 +1499,10 @@ __webpack_unused_export__ = ({ enumerable: true, get: function () { return ste_p
 __webpack_unused_export__ = ({ enumerable: true, get: function () { return ste_promise_simple_events_1.NonUniformPromiseSimpleEventList; } });
 
 
-/***/ }),
+/***/ },
 
-/***/ 7391:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7391
+(module, __unused_webpack_exports, __webpack_require__) {
 
 // A library of seedable RNGs implemented in Javascript.
 //
@@ -1566,10 +1566,10 @@ sr.tychei = tychei;
 module.exports = sr;
 
 
-/***/ }),
+/***/ },
 
-/***/ 7180:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 7180
+(module, exports, __webpack_require__) {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 var __WEBPACK_AMD_DEFINE_RESULT__;// A port of an algorithm by Johannes Baagøe <baagoe@baagoe.com>, 2010
@@ -1689,10 +1689,10 @@ if (module && module.exports) {
 
 
 
-/***/ }),
+/***/ },
 
-/***/ 3717:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 3717
+(module, exports, __webpack_require__) {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "Tyche-i" prng algorithm by
@@ -1801,10 +1801,10 @@ if (module && module.exports) {
 
 
 
-/***/ }),
+/***/ },
 
-/***/ 3181:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 3181
+(module, exports, __webpack_require__) {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xor128" prng algorithm by
@@ -1891,10 +1891,10 @@ if (module && module.exports) {
 
 
 
-/***/ }),
+/***/ },
 
-/***/ 6833:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 6833
+(module, exports, __webpack_require__) {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of Richard Brent's Xorgens xor4096 algorithm.
@@ -2046,10 +2046,10 @@ if (module && module.exports) {
 );
 
 
-/***/ }),
+/***/ },
 
-/***/ 9067:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 9067
+(module, exports, __webpack_require__) {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorshift7" algorithm by
@@ -2152,10 +2152,10 @@ if (module && module.exports) {
 
 
 
-/***/ }),
+/***/ },
 
-/***/ 3031:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 3031
+(module, exports, __webpack_require__) {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorwow" prng algorithm by
@@ -2247,10 +2247,10 @@ if (module && module.exports) {
 
 
 
-/***/ }),
+/***/ },
 
-/***/ 4801:
-/***/ ((module, exports, __webpack_require__) => {
+/***/ 4801
+(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*
 Copyright 2014 David Bau.
@@ -2505,10 +2505,10 @@ if ( true && module.exports) {
 );
 
 
-/***/ }),
+/***/ },
 
-/***/ 3184:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3184
+(module, __unused_webpack_exports, __webpack_require__) {
 
 var seedrandom = __webpack_require__(7391);
 var self = __webpack_require__(2287);
@@ -2517,10 +2517,10 @@ module.exports = self;
 
 
 
-/***/ }),
+/***/ },
 
-/***/ 2287:
-/***/ (function(module) {
+/***/ 2287
+(module) {
 
 ;(function() {
 	var self = {};
@@ -2592,14 +2592,15 @@ module.exports = self;
 
 	if(true){
 		module.exports=self;
-	} else {}
+	} else // removed by dead control flow
+{}
 }.call(this));
 
 
-/***/ }),
+/***/ },
 
-/***/ 1246:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 1246
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -2643,10 +2644,10 @@ class NonUniformPromiseEventList {
 exports.NonUniformPromiseEventList = NonUniformPromiseEventList;
 
 
-/***/ }),
+/***/ },
 
-/***/ 2330:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 2330
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -2709,10 +2710,10 @@ class PromiseEventDispatcher extends ste_core_1.PromiseDispatcherBase {
 exports.PromiseEventDispatcher = PromiseEventDispatcher;
 
 
-/***/ }),
+/***/ },
 
-/***/ 3351:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 3351
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -2731,10 +2732,10 @@ class PromiseEventHandlingBase extends ste_core_1.HandlingBase {
 exports.PromiseEventHandlingBase = PromiseEventHandlingBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 4283:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 4283
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -2763,10 +2764,10 @@ class PromiseEventList extends ste_core_1.EventListBase {
 exports.PromiseEventList = PromiseEventList;
 
 
-/***/ }),
+/***/ },
 
-/***/ 606:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 606
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -2790,10 +2791,10 @@ const NonUniformPromiseEventList_1 = __webpack_require__(1246);
 Object.defineProperty(exports, "NonUniformPromiseEventList", ({ enumerable: true, get: function () { return NonUniformPromiseEventList_1.NonUniformPromiseEventList; } }));
 
 
-/***/ }),
+/***/ },
 
-/***/ 3729:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 3729
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -2820,10 +2821,10 @@ class DispatchError extends Error {
 exports.DispatchError = DispatchError;
 
 
-/***/ }),
+/***/ },
 
-/***/ 4645:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 4645
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -3070,10 +3071,10 @@ class DispatcherBase {
 exports.DispatcherBase = DispatcherBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 7569:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 7569
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -3198,10 +3199,10 @@ class DispatcherWrapper {
 exports.DispatcherWrapper = DispatcherWrapper;
 
 
-/***/ }),
+/***/ },
 
-/***/ 7672:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 7672
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -3250,10 +3251,10 @@ class EventListBase {
 exports.EventListBase = EventListBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 4995:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 4995
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -3333,10 +3334,10 @@ class PromiseDispatcherBase extends __1.DispatcherBase {
 exports.PromiseDispatcherBase = PromiseDispatcherBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 3512:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 3512
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -3365,10 +3366,10 @@ class SubscriptionChangeEventDispatcher extends __1.DispatcherBase {
 exports.SubscriptionChangeEventDispatcher = SubscriptionChangeEventDispatcher;
 
 
-/***/ }),
+/***/ },
 
-/***/ 7744:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 7744
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -3428,10 +3429,10 @@ class PromiseSubscription {
 exports.PromiseSubscription = PromiseSubscription;
 
 
-/***/ }),
+/***/ },
 
-/***/ 455:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 455
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -3482,10 +3483,10 @@ class Subscription {
 exports.Subscription = Subscription;
 
 
-/***/ }),
+/***/ },
 
-/***/ 278:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 278
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -3577,10 +3578,10 @@ class HandlingBase {
 exports.HandlingBase = HandlingBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 9184:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 9184
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -3616,10 +3617,10 @@ const SubscriptionChangeEventHandler_1 = __webpack_require__(3512);
 Object.defineProperty(exports, "SubscriptionChangeEventDispatcher", ({ enumerable: true, get: function () { return SubscriptionChangeEventHandler_1.SubscriptionChangeEventDispatcher; } }));
 
 
-/***/ }),
+/***/ },
 
-/***/ 6413:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 6413
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -3656,10 +3657,10 @@ class EventManagement {
 exports.EventManagement = EventManagement;
 
 
-/***/ }),
+/***/ },
 
-/***/ 4450:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 4450
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -3708,10 +3709,10 @@ class PromiseSignalDispatcher extends ste_core_1.PromiseDispatcherBase {
 exports.PromiseSignalDispatcher = PromiseSignalDispatcher;
 
 
-/***/ }),
+/***/ },
 
-/***/ 5871:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 5871
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -3730,10 +3731,10 @@ class PromiseSignalHandlingBase extends ste_core_1.HandlingBase {
 exports.PromiseSignalHandlingBase = PromiseSignalHandlingBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 131:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 131
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -3762,10 +3763,10 @@ class PromiseSignalList extends ste_core_1.EventListBase {
 exports.PromiseSignalList = PromiseSignalList;
 
 
-/***/ }),
+/***/ },
 
-/***/ 6042:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 6042
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -3787,10 +3788,10 @@ const PromiseSignalList_1 = __webpack_require__(131);
 Object.defineProperty(exports, "PromiseSignalList", ({ enumerable: true, get: function () { return PromiseSignalList_1.PromiseSignalList; } }));
 
 
-/***/ }),
+/***/ },
 
-/***/ 8589:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 8589
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -3817,10 +3818,10 @@ class DispatchError extends Error {
 exports.DispatchError = DispatchError;
 
 
-/***/ }),
+/***/ },
 
-/***/ 9737:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 9737
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -4067,10 +4068,10 @@ class DispatcherBase {
 exports.DispatcherBase = DispatcherBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 8661:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 8661
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -4195,10 +4196,10 @@ class DispatcherWrapper {
 exports.DispatcherWrapper = DispatcherWrapper;
 
 
-/***/ }),
+/***/ },
 
-/***/ 5636:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 5636
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -4247,10 +4248,10 @@ class EventListBase {
 exports.EventListBase = EventListBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 6372:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 6372
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -4330,10 +4331,10 @@ class PromiseDispatcherBase extends __1.DispatcherBase {
 exports.PromiseDispatcherBase = PromiseDispatcherBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 3324:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 3324
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -4362,10 +4363,10 @@ class SubscriptionChangeEventDispatcher extends __1.DispatcherBase {
 exports.SubscriptionChangeEventDispatcher = SubscriptionChangeEventDispatcher;
 
 
-/***/ }),
+/***/ },
 
-/***/ 6484:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 6484
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -4425,10 +4426,10 @@ class PromiseSubscription {
 exports.PromiseSubscription = PromiseSubscription;
 
 
-/***/ }),
+/***/ },
 
-/***/ 8859:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 8859
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -4479,10 +4480,10 @@ class Subscription {
 exports.Subscription = Subscription;
 
 
-/***/ }),
+/***/ },
 
-/***/ 5722:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 5722
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -4574,10 +4575,10 @@ class HandlingBase {
 exports.HandlingBase = HandlingBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 7852:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 7852
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -4613,10 +4614,10 @@ const SubscriptionChangeEventHandler_1 = __webpack_require__(3324);
 Object.defineProperty(exports, "SubscriptionChangeEventDispatcher", ({ enumerable: true, get: function () { return SubscriptionChangeEventHandler_1.SubscriptionChangeEventDispatcher; } }));
 
 
-/***/ }),
+/***/ },
 
-/***/ 1385:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 1385
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -4653,10 +4654,10 @@ class EventManagement {
 exports.EventManagement = EventManagement;
 
 
-/***/ }),
+/***/ },
 
-/***/ 5829:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 5829
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -4700,10 +4701,10 @@ class NonUniformPromiseSimpleEventList {
 exports.NonUniformPromiseSimpleEventList = NonUniformPromiseSimpleEventList;
 
 
-/***/ }),
+/***/ },
 
-/***/ 3677:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 3677
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -4759,10 +4760,10 @@ class PromiseSimpleEventDispatcher extends ste_core_1.PromiseDispatcherBase {
 exports.PromiseSimpleEventDispatcher = PromiseSimpleEventDispatcher;
 
 
-/***/ }),
+/***/ },
 
-/***/ 8648:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 8648
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -4781,10 +4782,10 @@ class PromiseSimpleEventHandlingBase extends ste_core_1.HandlingBase {
 exports.PromiseSimpleEventHandlingBase = PromiseSimpleEventHandlingBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 5536:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 5536
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -4813,10 +4814,10 @@ class PromiseSimpleEventList extends ste_core_1.EventListBase {
 exports.PromiseSimpleEventList = PromiseSimpleEventList;
 
 
-/***/ }),
+/***/ },
 
-/***/ 4225:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 4225
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -4840,10 +4841,10 @@ const PromiseSimpleEventList_1 = __webpack_require__(5536);
 Object.defineProperty(exports, "PromiseSimpleEventList", ({ enumerable: true, get: function () { return PromiseSimpleEventList_1.PromiseSimpleEventList; } }));
 
 
-/***/ }),
+/***/ },
 
-/***/ 2210:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 2210
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -4870,10 +4871,10 @@ class DispatchError extends Error {
 exports.DispatchError = DispatchError;
 
 
-/***/ }),
+/***/ },
 
-/***/ 5072:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 5072
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -5120,10 +5121,10 @@ class DispatcherBase {
 exports.DispatcherBase = DispatcherBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 1050:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 1050
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -5248,10 +5249,10 @@ class DispatcherWrapper {
 exports.DispatcherWrapper = DispatcherWrapper;
 
 
-/***/ }),
+/***/ },
 
-/***/ 4211:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 4211
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -5300,10 +5301,10 @@ class EventListBase {
 exports.EventListBase = EventListBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 3787:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 3787
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -5383,10 +5384,10 @@ class PromiseDispatcherBase extends __1.DispatcherBase {
 exports.PromiseDispatcherBase = PromiseDispatcherBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 1789:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 1789
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -5415,10 +5416,10 @@ class SubscriptionChangeEventDispatcher extends __1.DispatcherBase {
 exports.SubscriptionChangeEventDispatcher = SubscriptionChangeEventDispatcher;
 
 
-/***/ }),
+/***/ },
 
-/***/ 5485:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 5485
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -5478,10 +5479,10 @@ class PromiseSubscription {
 exports.PromiseSubscription = PromiseSubscription;
 
 
-/***/ }),
+/***/ },
 
-/***/ 8080:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 8080
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -5532,10 +5533,10 @@ class Subscription {
 exports.Subscription = Subscription;
 
 
-/***/ }),
+/***/ },
 
-/***/ 5537:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 5537
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -5627,10 +5628,10 @@ class HandlingBase {
 exports.HandlingBase = HandlingBase;
 
 
-/***/ }),
+/***/ },
 
-/***/ 5575:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 5575
+(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -5666,10 +5667,10 @@ const SubscriptionChangeEventHandler_1 = __webpack_require__(1789);
 Object.defineProperty(exports, "SubscriptionChangeEventDispatcher", ({ enumerable: true, get: function () { return SubscriptionChangeEventHandler_1.SubscriptionChangeEventDispatcher; } }));
 
 
-/***/ }),
+/***/ },
 
-/***/ 3504:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 3504
+(__unused_webpack_module, exports) {
 
 "use strict";
 
@@ -5706,10 +5707,10 @@ class EventManagement {
 exports.EventManagement = EventManagement;
 
 
-/***/ }),
+/***/ },
 
-/***/ 9244:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ 9244
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
@@ -5720,7 +5721,7 @@ __webpack_require__.d(__webpack_exports__, {
 
 // UNUSED EXPORTS: animateFill, createSingleton, delegate, followCursor, hideAll, inlinePositioning, roundArrow, sticky
 
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getWindow.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getWindow.js
 function getWindow(node) {
   if (node == null) {
     return window;
@@ -5733,7 +5734,7 @@ function getWindow(node) {
 
   return node;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/instanceOf.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/instanceOf.js
 
 
 function isElement(node) {
@@ -5757,11 +5758,11 @@ function isShadowRoot(node) {
 }
 
 
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/math.js
+;// ./node_modules/@popperjs/core/lib/utils/math.js
 var math_max = Math.max;
 var math_min = Math.min;
 var round = Math.round;
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/userAgent.js
+;// ./node_modules/@popperjs/core/lib/utils/userAgent.js
 function getUAString() {
   var uaData = navigator.userAgentData;
 
@@ -5773,12 +5774,12 @@ function getUAString() {
 
   return navigator.userAgent;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/isLayoutViewport.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/isLayoutViewport.js
 
 function isLayoutViewport() {
   return !/^((?!chrome|android).)*safari/i.test(getUAString());
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js
 
 
 
@@ -5820,7 +5821,7 @@ function getBoundingClientRect(element, includeScale, isFixedStrategy) {
     y: y
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js
 
 function getWindowScroll(node) {
   var win = getWindow(node);
@@ -5831,14 +5832,14 @@ function getWindowScroll(node) {
     scrollTop: scrollTop
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.js
 function getHTMLElementScroll(element) {
   return {
     scrollLeft: element.scrollLeft,
     scrollTop: element.scrollTop
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getNodeScroll.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getNodeScroll.js
 
 
 
@@ -5850,18 +5851,18 @@ function getNodeScroll(node) {
     return getHTMLElementScroll(node);
   }
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getNodeName.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getNodeName.js
 function getNodeName(element) {
   return element ? (element.nodeName || '').toLowerCase() : null;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js
 
 function getDocumentElement(element) {
   // $FlowFixMe[incompatible-return]: assume body is always available
   return ((isElement(element) ? element.ownerDocument : // $FlowFixMe[prop-missing]
   element.document) || window.document).documentElement;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js
 
 
 
@@ -5875,12 +5876,12 @@ function getWindowScrollBarX(element) {
   // this (e.g. Edge 2019, IE11, Safari)
   return getBoundingClientRect(getDocumentElement(element)).left + getWindowScroll(element).scrollLeft;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js
 
 function getComputedStyle(element) {
   return getWindow(element).getComputedStyle(element);
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js
 
 function isScrollParent(element) {
   // Firefox wants us to check `-x` and `-y` variations as well
@@ -5891,7 +5892,7 @@ function isScrollParent(element) {
 
   return /auto|scroll|overlay|hidden/.test(overflow + overflowY + overflowX);
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.js
 
 
 
@@ -5950,7 +5951,7 @@ function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
     height: rect.height
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js
  // Returns the layout rect of an element relative to its offsetParent. Layout
 // means it doesn't take into account transforms.
 
@@ -5976,7 +5977,7 @@ function getLayoutRect(element) {
     height: height
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getParentNode.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getParentNode.js
 
 
 
@@ -5996,7 +5997,7 @@ function getParentNode(element) {
 
   );
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getScrollParent.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getScrollParent.js
 
 
 
@@ -6013,7 +6014,7 @@ function getScrollParent(node) {
 
   return getScrollParent(getParentNode(node));
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js
 
 
 
@@ -6040,12 +6041,12 @@ function listScrollParents(element, list) {
   return isBody ? updatedList : // $FlowFixMe[incompatible-call]: isBody tells us target will be an HTMLElement here
   updatedList.concat(listScrollParents(getParentNode(target)));
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/isTableElement.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/isTableElement.js
 
 function isTableElement(element) {
   return ['table', 'td', 'th'].indexOf(getNodeName(element)) >= 0;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js
 
 
 
@@ -6115,7 +6116,7 @@ function getOffsetParent(element) {
 
   return offsetParent || getContainingBlock(element) || window;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/enums.js
+;// ./node_modules/@popperjs/core/lib/enums.js
 var enums_top = 'top';
 var bottom = 'bottom';
 var right = 'right';
@@ -6147,7 +6148,7 @@ var beforeWrite = 'beforeWrite';
 var write = 'write';
 var afterWrite = 'afterWrite';
 var modifierPhases = [beforeRead, read, afterRead, beforeMain, main, afterMain, beforeWrite, write, afterWrite];
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/orderModifiers.js
+;// ./node_modules/@popperjs/core/lib/utils/orderModifiers.js
  // source: https://stackoverflow.com/questions/49875255
 
 function order(modifiers) {
@@ -6192,7 +6193,7 @@ function orderModifiers(modifiers) {
     }));
   }, []);
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/debounce.js
+;// ./node_modules/@popperjs/core/lib/utils/debounce.js
 function debounce(fn) {
   var pending;
   return function () {
@@ -6208,7 +6209,7 @@ function debounce(fn) {
     return pending;
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/mergeByName.js
+;// ./node_modules/@popperjs/core/lib/utils/mergeByName.js
 function mergeByName(modifiers) {
   var merged = modifiers.reduce(function (merged, current) {
     var existing = merged[current.name];
@@ -6223,7 +6224,7 @@ function mergeByName(modifiers) {
     return merged[key];
   });
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/createPopper.js
+;// ./node_modules/@popperjs/core/lib/createPopper.js
 
 
 
@@ -6423,7 +6424,7 @@ function popperGenerator(generatorOptions) {
 var createPopper = /*#__PURE__*/(/* unused pure expression or super */ null && (popperGenerator())); // eslint-disable-next-line import/no-unused-modules
 
 
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/eventListeners.js
+;// ./node_modules/@popperjs/core/lib/modifiers/eventListeners.js
  // eslint-disable-next-line import/no-unused-modules
 
 var passive = {
@@ -6473,20 +6474,20 @@ function effect(_ref) {
   effect: effect,
   data: {}
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getBasePlacement.js
+;// ./node_modules/@popperjs/core/lib/utils/getBasePlacement.js
 
 function getBasePlacement(placement) {
   return placement.split('-')[0];
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getVariation.js
+;// ./node_modules/@popperjs/core/lib/utils/getVariation.js
 function getVariation(placement) {
   return placement.split('-')[1];
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js
+;// ./node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js
 function getMainAxisFromPlacement(placement) {
   return ['top', 'bottom'].indexOf(placement) >= 0 ? 'x' : 'y';
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/computeOffsets.js
+;// ./node_modules/@popperjs/core/lib/utils/computeOffsets.js
 
 
 
@@ -6557,7 +6558,7 @@ function computeOffsets(_ref) {
 
   return offsets;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/popperOffsets.js
+;// ./node_modules/@popperjs/core/lib/modifiers/popperOffsets.js
 
 
 function popperOffsets(_ref) {
@@ -6583,7 +6584,7 @@ function popperOffsets(_ref) {
   fn: popperOffsets,
   data: {}
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/computeStyles.js
+;// ./node_modules/@popperjs/core/lib/modifiers/computeStyles.js
 
 
 
@@ -6753,7 +6754,7 @@ function computeStyles(_ref5) {
   fn: computeStyles,
   data: {}
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/applyStyles.js
+;// ./node_modules/@popperjs/core/lib/modifiers/applyStyles.js
 
  // This modifier takes the styles prepared by the `computeStyles` modifier
 // and applies them to the HTMLElements such as popper and arrow
@@ -6838,7 +6839,7 @@ function applyStyles_effect(_ref2) {
   effect: applyStyles_effect,
   requires: ['computeStyles']
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/offset.js
+;// ./node_modules/@popperjs/core/lib/modifiers/offset.js
 
  // eslint-disable-next-line import/no-unused-modules
 
@@ -6893,7 +6894,7 @@ function offset(_ref2) {
   requires: ['popperOffsets'],
   fn: offset
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getOppositePlacement.js
+;// ./node_modules/@popperjs/core/lib/utils/getOppositePlacement.js
 var hash = {
   left: 'right',
   right: 'left',
@@ -6905,7 +6906,7 @@ function getOppositePlacement(placement) {
     return hash[matched];
   });
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.js
+;// ./node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.js
 var getOppositeVariationPlacement_hash = {
   start: 'end',
   end: 'start'
@@ -6915,7 +6916,7 @@ function getOppositeVariationPlacement(placement) {
     return getOppositeVariationPlacement_hash[matched];
   });
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js
 
 
 
@@ -6947,7 +6948,7 @@ function getViewportRect(element, strategy) {
     y: y
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js
 
 
 
@@ -6977,7 +6978,7 @@ function getDocumentRect(element) {
     y: y
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/contains.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/contains.js
 
 function contains(parent, child) {
   var rootNode = child.getRootNode && child.getRootNode(); // First, attempt with faster native method
@@ -7001,7 +7002,7 @@ function contains(parent, child) {
 
   return false;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/rectToClientRect.js
+;// ./node_modules/@popperjs/core/lib/utils/rectToClientRect.js
 function rectToClientRect(rect) {
   return Object.assign({}, rect, {
     left: rect.x,
@@ -7010,7 +7011,7 @@ function rectToClientRect(rect) {
     bottom: rect.y + rect.height
   });
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js
 
 
 
@@ -7081,7 +7082,7 @@ function getClippingRect(element, boundary, rootBoundary, strategy) {
   clippingRect.y = clippingRect.top;
   return clippingRect;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getFreshSideObject.js
+;// ./node_modules/@popperjs/core/lib/utils/getFreshSideObject.js
 function getFreshSideObject() {
   return {
     top: 0,
@@ -7090,19 +7091,19 @@ function getFreshSideObject() {
     left: 0
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/mergePaddingObject.js
+;// ./node_modules/@popperjs/core/lib/utils/mergePaddingObject.js
 
 function mergePaddingObject(paddingObject) {
   return Object.assign({}, getFreshSideObject(), paddingObject);
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/expandToHashMap.js
+;// ./node_modules/@popperjs/core/lib/utils/expandToHashMap.js
 function expandToHashMap(value, keys) {
   return keys.reduce(function (hashMap, key) {
     hashMap[key] = value;
     return hashMap;
   }, {});
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/detectOverflow.js
+;// ./node_modules/@popperjs/core/lib/utils/detectOverflow.js
 
 
 
@@ -7168,7 +7169,7 @@ function detectOverflow(state, options) {
 
   return overflowOffsets;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js
+;// ./node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js
 
 
 
@@ -7212,7 +7213,7 @@ function computeAutoPlacement(state, options) {
     return overflows[a] - overflows[b];
   });
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/flip.js
+;// ./node_modules/@popperjs/core/lib/modifiers/flip.js
 
 
 
@@ -7360,11 +7361,11 @@ function flip(_ref) {
     _skip: false
   }
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getAltAxis.js
+;// ./node_modules/@popperjs/core/lib/utils/getAltAxis.js
 function getAltAxis(axis) {
   return axis === 'x' ? 'y' : 'x';
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/within.js
+;// ./node_modules/@popperjs/core/lib/utils/within.js
 
 function within(min, value, max) {
   return math_max(min, math_min(value, max));
@@ -7373,7 +7374,7 @@ function withinMaxClamp(min, value, max) {
   var v = within(min, value, max);
   return v > max ? max : v;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/preventOverflow.js
+;// ./node_modules/@popperjs/core/lib/modifiers/preventOverflow.js
 
 
 
@@ -7516,7 +7517,7 @@ function preventOverflow(_ref) {
   fn: preventOverflow,
   requiresIfExists: ['offset']
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/arrow.js
+;// ./node_modules/@popperjs/core/lib/modifiers/arrow.js
 
 
 
@@ -7607,7 +7608,7 @@ function arrow_effect(_ref2) {
   requires: ['popperOffsets'],
   requiresIfExists: ['preventOverflow']
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/hide.js
+;// ./node_modules/@popperjs/core/lib/modifiers/hide.js
 
 
 
@@ -7669,7 +7670,7 @@ function hide(_ref) {
   requiresIfExists: ['preventOverflow'],
   fn: hide
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/popper.js
+;// ./node_modules/@popperjs/core/lib/popper.js
 
 
 
@@ -7690,7 +7691,7 @@ var popper_createPopper = /*#__PURE__*/popperGenerator({
  // eslint-disable-next-line import/no-unused-modules
 
 
-;// CONCATENATED MODULE: ./node_modules/tippy.js/dist/tippy.esm.js
+;// ./node_modules/tippy.js/dist/tippy.esm.js
 /**!
 * tippy.js v6.3.7
 * (c) 2017-2021 atomiks
@@ -7981,7 +7982,8 @@ function getFormattedMessage(message) {
 
 var visitedMessages;
 
-if (false) {}
+if (false) // removed by dead control flow
+{}
 
 function resetVisitedMessages() {
   visitedMessages = new Set();
@@ -8068,7 +8070,8 @@ var defaultProps = Object.assign({
 var defaultKeys = Object.keys(defaultProps);
 var setDefaultProps = function setDefaultProps(partialProps) {
   /* istanbul ignore else */
-  if (false) {}
+  if (false) // removed by dead control flow
+{}
 
   var keys = Object.keys(partialProps);
   keys.forEach(function (key) {
@@ -8342,7 +8345,8 @@ function createTippy(reference, passedProps) {
   /* istanbul ignore if */
 
   if (!props.render) {
-    if (false) {}
+    if (false) // removed by dead control flow
+{}
 
     return instance;
   } // ===========================================================================
@@ -8891,7 +8895,8 @@ function createTippy(reference, passedProps) {
     createPopperInstance();
     /* istanbul ignore else */
 
-    if (false) {}
+    if (false) // removed by dead control flow
+{}
   }
 
   function getNestedPopperTree() {
@@ -8981,7 +8986,8 @@ function createTippy(reference, passedProps) {
 
   function setProps(partialProps) {
     /* istanbul ignore else */
-    if (false) {}
+    if (false) // removed by dead control flow
+{}
 
     if (instance.state.isDestroyed) {
       return;
@@ -9041,7 +9047,8 @@ function createTippy(reference, passedProps) {
 
   function show() {
     /* istanbul ignore else */
-    if (false) {} // Early bail-out
+    if (false) // removed by dead control flow
+{} // Early bail-out
 
 
     var isAlreadyVisible = instance.state.isVisible;
@@ -9132,7 +9139,8 @@ function createTippy(reference, passedProps) {
 
   function hide() {
     /* istanbul ignore else */
-    if (false) {} // Early bail-out
+    if (false) // removed by dead control flow
+{} // Early bail-out
 
 
     var isAlreadyHidden = !instance.state.isVisible;
@@ -9188,7 +9196,8 @@ function createTippy(reference, passedProps) {
 
   function hideWithInteractivity(event) {
     /* istanbul ignore else */
-    if (false) {}
+    if (false) // removed by dead control flow
+{}
 
     getDocument().addEventListener('mousemove', debouncedOnMouseMove);
     pushIfUnique(mouseMoveListeners, debouncedOnMouseMove);
@@ -9197,7 +9206,8 @@ function createTippy(reference, passedProps) {
 
   function unmount() {
     /* istanbul ignore else */
-    if (false) {}
+    if (false) // removed by dead control flow
+{}
 
     if (instance.state.isVisible) {
       instance.hide();
@@ -9228,7 +9238,8 @@ function createTippy(reference, passedProps) {
 
   function destroy() {
     /* istanbul ignore else */
-    if (false) {}
+    if (false) // removed by dead control flow
+{}
 
     if (instance.state.isDestroyed) {
       return;
@@ -9251,7 +9262,8 @@ function tippy(targets, optionalProps) {
   var plugins = defaultProps.plugins.concat(optionalProps.plugins || []);
   /* istanbul ignore else */
 
-  if (false) {}
+  if (false) // removed by dead control flow
+{}
 
   bindGlobalEventListeners();
   var passedProps = Object.assign({}, optionalProps, {
@@ -9260,7 +9272,8 @@ function tippy(targets, optionalProps) {
   var elements = getArrayOfElements(targets);
   /* istanbul ignore else */
 
-  if (false) { var isMoreThanOneReferenceElement, isSingleContentElement; }
+  if (false) // removed by dead control flow
+{ var isMoreThanOneReferenceElement, isSingleContentElement; }
 
   var instances = elements.reduce(function (acc, reference) {
     var instance = reference && createTippy(reference, passedProps);
@@ -9343,7 +9356,8 @@ var createSingleton = function createSingleton(tippyInstances, optionalProps) {
   }
 
   /* istanbul ignore else */
-  if (false) {}
+  if (false) // removed by dead control flow
+{}
 
   var individualInstances = tippyInstances;
   var references = [];
@@ -9548,7 +9562,8 @@ var BUBBLING_EVENTS_MAP = {
 
 function delegate(targets, props) {
   /* istanbul ignore else */
-  if (false) {}
+  if (false) // removed by dead control flow
+{}
 
   var listeners = [];
   var childTippyInstances = [];
@@ -9688,7 +9703,8 @@ var animateFill = {
 
     // @ts-ignore
     if (!((_instance$props$rende = instance.props.render) != null && _instance$props$rende.$$tippy)) {
-      if (false) {}
+      if (false) // removed by dead control flow
+{}
 
       return {};
     }
@@ -10145,14 +10161,14 @@ tippy.setDefaultProps({
 //# sourceMappingURL=tippy.esm.js.map
 
 
-/***/ }),
+/***/ },
 
-/***/ 1234:
-/***/ (() => {
+/***/ 1234
+() {
 
 /* (ignored) */
 
-/***/ })
+/***/ }
 
 /******/ 	});
 /************************************************************************/
@@ -10224,11 +10240,12 @@ tippy.setDefaultProps({
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
 (() => {
 "use strict";
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/deprecated.js
+;// ./node_modules/@4site/engrid-scripts/dist/deprecated.js
+/* unused harmony import specifier */ var ENGrid;
 // A way to gracefully handle deprecation.
 // Find and replace HTML Elements, Classes, and more after the DOM is loaded but before any other Javascript fires.
 
@@ -10270,7 +10287,7 @@ class Deprecated {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/interfaces/options.js
+;// ./node_modules/@4site/engrid-scripts/dist/interfaces/options.js
 const OptionsDefaults = {
     backgroundImage: "",
     MediaAttribution: true,
@@ -10290,6 +10307,7 @@ const OptionsDefaults = {
     UseAmountValidatorFromEN: false,
     SkipToMainContentLink: true,
     SrcDefer: true,
+    SuppressPurchaseEcard: false,
     NeverBounceAPI: null,
     NeverBounceDateField: null,
     NeverBounceStatusField: null,
@@ -10314,6 +10332,8 @@ const OptionsDefaults = {
     CountryRedirect: false,
     WelcomeBack: false,
     OptInLadder: false,
+    StickyNSG: false,
+    StickyPrepopulation: false,
     PreferredPaymentMethod: false,
     PageLayouts: [
         "leftleft1col",
@@ -10326,7 +10346,7 @@ const OptionsDefaults = {
     ],
 };
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/interfaces/upsell-options.js
+;// ./node_modules/@4site/engrid-scripts/dist/interfaces/upsell-options.js
 const UpsellOptionsDefaults = {
     image: "https://picsum.photos/480/650",
     imagePosition: "left",
@@ -10362,7 +10382,7 @@ const UpsellOptionsDefaults = {
     upsellCheckbox: false,
 };
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/interfaces/translate-options.js
+;// ./node_modules/@4site/engrid-scripts/dist/interfaces/translate-options.js
 const ptbrTranslation = [
     { field: "supporter.firstName", translation: "Nome" },
     { field: "supporter.lastName", translation: "Sobrenome" },
@@ -10406,7 +10426,7 @@ const TranslateOptionsDefaults = {
     NLD: nlTranslation,
 };
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/interfaces/exit-intent-options.js
+;// ./node_modules/@4site/engrid-scripts/dist/interfaces/exit-intent-options.js
 const ExitIntentOptionsDefaults = {
     enabled: false,
     title: "We are sad that you are leaving",
@@ -10421,7 +10441,7 @@ const ExitIntentOptionsDefaults = {
     },
 };
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/interfaces/frequency-upsell-options.js
+;// ./node_modules/@4site/engrid-scripts/dist/interfaces/frequency-upsell-options.js
 const FrequencyUpsellOptionsDefaults = {
     title: "Before we process your donation...",
     paragraph: "Would you like to make it an annual gift?",
@@ -10436,12 +10456,12 @@ const FrequencyUpsellOptionsDefaults = {
     onDecline: () => { },
 };
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/loader.js
+;// ./node_modules/@4site/engrid-scripts/dist/loader.js
 // Ref: https://app.getguru.com/card/iMgx968T/ENgrid-Loader
 
 class Loader {
     constructor() {
-        this.logger = new logger_EngridLogger("Loader", "gold", "black", "🔁");
+        this.logger = new EngridLogger("Loader", "gold", "black", "🔁");
         this.cssElement = document.querySelector('link[href*="engrid."][rel="stylesheet"]');
         this.jsElement = document.querySelector('script[src*="engrid."]');
     }
@@ -10615,12 +10635,12 @@ class Loader {
 
 // EXTERNAL MODULE: ./node_modules/@4site/engrid-scripts/node_modules/strongly-typed-events/dist/index.js
 var dist = __webpack_require__(3199);
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/en-form.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/en-form.js
 
 
-class en_form_EnForm {
+class EnForm {
     constructor() {
-        this.logger = new logger_EngridLogger("EnForm");
+        this.logger = new EngridLogger("EnForm");
         this._onSubmit = new dist/* SignalDispatcher */.UD();
         this._onValidate = new dist/* SignalDispatcher */.UD();
         this._onError = new dist/* SignalDispatcher */.UD();
@@ -10630,10 +10650,10 @@ class en_form_EnForm {
         this.validatePromise = false;
     }
     static getInstance() {
-        if (!en_form_EnForm.instance) {
-            en_form_EnForm.instance = new en_form_EnForm();
+        if (!EnForm.instance) {
+            EnForm.instance = new EnForm();
         }
-        return en_form_EnForm.instance;
+        return EnForm.instance;
     }
     dispatchSubmit() {
         this._onSubmit.dispatch();
@@ -10669,7 +10689,7 @@ class en_form_EnForm {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/donation-amount.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/donation-amount.js
 
 
 class DonationAmount {
@@ -10804,7 +10824,7 @@ class DonationAmount {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/engrid.js
+;// ./node_modules/@4site/engrid-scripts/dist/engrid.js
 class engrid_ENGrid {
     constructor() {
         if (!engrid_ENGrid.enForm) {
@@ -11004,35 +11024,45 @@ class engrid_ENGrid {
                 case "donation":
                 case "premiumgift":
                     return "DONATION";
-                    break;
+                    // removed by dead control flow
+
                 case "e-card":
                     return "ECARD";
-                    break;
+                    // removed by dead control flow
+
                 case "otherdatacapture":
                 case "survey":
                     return "SURVEY";
-                    break;
+                    // removed by dead control flow
+
                 case "emailtotarget":
                     return "EMAILTOTARGET";
-                    break;
+                    // removed by dead control flow
+
                 case "advocacypetition":
                     return "ADVOCACY";
-                    break;
+                    // removed by dead control flow
+
                 case "emailsubscribeform":
                     return "SUBSCRIBEFORM";
-                    break;
+                    // removed by dead control flow
+
                 case "event":
                     return "EVENT";
-                    break;
+                    // removed by dead control flow
+
                 case "supporterhub":
                     return "SUPPORTERHUB";
-                    break;
+                    // removed by dead control flow
+
                 case "unsubscribe":
                     return "UNSUBSCRIBE";
-                    break;
+                    // removed by dead control flow
+
                 case "tweetpage":
                     return "TWEETPAGE";
-                    break;
+                    // removed by dead control flow
+
                 default:
                     return "UNKNOWN";
             }
@@ -11363,7 +11393,7 @@ class engrid_ENGrid {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/donation-frequency.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/donation-frequency.js
 
 
 class DonationFrequency {
@@ -11480,7 +11510,7 @@ class DonationFrequency {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/processing-fees.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/processing-fees.js
 
 
 
@@ -11488,7 +11518,7 @@ class ProcessingFees {
     constructor() {
         this._onFeeChange = new dist/* SimpleEventDispatcher */.IL();
         this._amount = DonationAmount.getInstance();
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this._fee = 0;
         this._field = null;
         // console.log('%c Processing Fees Constructor', 'font-size: 30px; background-color: #000; color: #FF0');
@@ -11574,7 +11604,7 @@ class ProcessingFees {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/remember-me-events.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/remember-me-events.js
 /**
  * This class is responsible for managing events related to the "Remember Me" functionality.
  * It uses the Singleton design pattern to ensure only one instance of this class exists.
@@ -11584,7 +11614,7 @@ class ProcessingFees {
 
 class RememberMeEvents {
     constructor() {
-        this.logger = new logger_EngridLogger("RememberMeEvents");
+        this.logger = new EngridLogger("RememberMeEvents");
         this._onLoad = new dist/* SimpleEventDispatcher */.IL();
         this._onClear = new dist/* SignalDispatcher */.UD();
         this.hasData = false;
@@ -11612,7 +11642,7 @@ class RememberMeEvents {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/country.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/country.js
 
 
 class Country {
@@ -11656,7 +11686,7 @@ class Country {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/index.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/index.js
 
 
 
@@ -11664,19 +11694,19 @@ class Country {
 
 
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/app.js
+;// ./node_modules/@4site/engrid-scripts/dist/app.js
 
 
 class App extends engrid_ENGrid {
     constructor(options) {
         super();
         // Events
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this._fees = ProcessingFees.getInstance();
         this._amount = DonationAmount.getInstance("transaction.donationAmt", "transaction.donationAmt.other");
         this._frequency = DonationFrequency.getInstance();
         this._country = Country.getInstance();
-        this.logger = new logger_EngridLogger("App", "black", "white", "🍏");
+        this.logger = new EngridLogger("App", "black", "white", "🍏");
         const loader = new Loader();
         this.options = Object.assign(Object.assign({}, OptionsDefaults), options);
         // Add Options to window
@@ -11827,6 +11857,8 @@ class App extends engrid_ENGrid {
         new Autosubmit();
         // Adjust display of event tickets.
         new EventTickets();
+        // StickyNSG - Must load before SwapAmounts
+        new StickyNSG();
         // Swap Amounts
         new SwapAmounts();
         // On the end of the script, after all subscribers defined, let's load the current frequency
@@ -11946,6 +11978,7 @@ class App extends engrid_ENGrid {
         new CheckboxLabel();
         new PostDonationEmbed();
         new FrequencyUpsell();
+        new StickyPrepopulation();
         //Debug panel
         let showDebugPanel = this.options.Debug;
         try {
@@ -12008,12 +12041,12 @@ class App extends engrid_ENGrid {
         }
     }
     static log(message) {
-        const logger = new logger_EngridLogger("Client", "brown", "aliceblue", "🍪");
+        const logger = new EngridLogger("Client", "brown", "aliceblue", "🍪");
         logger.log(message);
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/amount-label.js
+;// ./node_modules/@4site/engrid-scripts/dist/amount-label.js
 // This script checks if the donations amounts are numbers and if they are, appends the correct currency symbol
 
 class AmountLabel {
@@ -12045,7 +12078,7 @@ class AmountLabel {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/apple-pay.js
+;// ./node_modules/@4site/engrid-scripts/dist/apple-pay.js
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -12075,7 +12108,7 @@ class ApplePay {
         this.applePay = document.querySelector('.en__field__input.en__field__input--radio[value="applepay"]');
         this._amount = DonationAmount.getInstance();
         this._fees = ProcessingFees.getInstance();
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this.checkApplePay();
     }
     checkApplePay() {
@@ -12216,7 +12249,7 @@ class ApplePay {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/a11y.js
+;// ./node_modules/@4site/engrid-scripts/dist/a11y.js
 // a11y means accessibility
 // This Component is supposed to be used as a helper for Aria Attributes & Other Accessibility Features
 class A11y {
@@ -12340,14 +12373,14 @@ class A11y {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/capitalize-fields.js
+;// ./node_modules/@4site/engrid-scripts/dist/capitalize-fields.js
 // CapitalizeFields is a class that capitalizes the first letter of the fields passed to it.
 // It subscribes to the onSubmit event of the EnForm class and capitalizes the fields on submit.
 
 
 class CapitalizeFields {
     constructor() {
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this._form.onSubmit.subscribe(() => this.capitalizeFields("en__field_supporter_firstName", "en__field_supporter_lastName", "en__field_supporter_address1", "en__field_supporter_city"));
     }
     capitalizeFields(...fields) {
@@ -12364,7 +12397,7 @@ class CapitalizeFields {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/auto-year.js
+;// ./node_modules/@4site/engrid-scripts/dist/auto-year.js
 // This class changes the Credit Card Expiration Year Field Options to
 // include the current year and the next 19 years.
 class AutoYear {
@@ -12401,13 +12434,13 @@ class AutoYear {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/autocomplete.js
+;// ./node_modules/@4site/engrid-scripts/dist/autocomplete.js
 // This class adds the autocomplete attribute to
 // the most common input elements
 
 class Autocomplete {
     constructor() {
-        this.logger = new logger_EngridLogger("Autocomplete", "#330033", "#f0f0f0", "📇");
+        this.logger = new EngridLogger("Autocomplete", "#330033", "#f0f0f0", "📇");
         this.autoCompleteField('[name="supporter.firstName"]', "given-name");
         this.autoCompleteField('[name="supporter.lastName"]', "family-name");
         this.autoCompleteField("#en__field_transaction_ccexpire", "cc-exp-month");
@@ -12441,12 +12474,12 @@ class Autocomplete {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/ecard.js
+;// ./node_modules/@4site/engrid-scripts/dist/ecard.js
 
 class Ecard {
     constructor() {
-        this._form = en_form_EnForm.getInstance();
-        this.logger = new logger_EngridLogger("Ecard", "red", "#f5f5f5", "🪪");
+        this._form = EnForm.getInstance();
+        this.logger = new EngridLogger("Ecard", "red", "#f5f5f5", "🪪");
         if (!this.shouldRun())
             return;
         this._form.onValidate.subscribe(() => this.checkRecipientFields());
@@ -12504,7 +12537,7 @@ class Ecard {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/click-to-expand.js
+;// ./node_modules/@4site/engrid-scripts/dist/click-to-expand.js
 // This class is used to expand content when a user clicks on a div with the class "click-to-expand".
 // The content is shortened by default and will expand when clicked.
 
@@ -12545,13 +12578,13 @@ class ClickToExpand {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/advocacy.js
+;// ./node_modules/@4site/engrid-scripts/dist/advocacy.js
 // Component to handle advocacy features
 // 1 - Adds EN Polyfill to support "label" clicking on Advocacy Recipient "labels"
 
 class Advocacy {
     constructor() {
-        this.logger = new logger_EngridLogger("Advocacy", "#232323", "#f7b500", "👨‍⚖️");
+        this.logger = new EngridLogger("Advocacy", "#232323", "#f7b500", "👨‍⚖️");
         if (!this.shoudRun())
             return;
         this.setClickableLabels();
@@ -12581,12 +12614,12 @@ class Advocacy {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/data-attributes.js
+;// ./node_modules/@4site/engrid-scripts/dist/data-attributes.js
 // Component that adds data attributes to the Body
 
 class DataAttributes {
     constructor() {
-        this.logger = new logger_EngridLogger("Data Attribute Changed", "#FFFFFF", "#4d9068", "🛠️");
+        this.logger = new EngridLogger("Data Attribute Changed", "#FFFFFF", "#4d9068", "🛠️");
         this._country = Country.getInstance();
         this._frequency = DonationFrequency.getInstance();
         this.setDataAttributes();
@@ -12776,13 +12809,13 @@ class DataAttributes {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/iframe.js
+;// ./node_modules/@4site/engrid-scripts/dist/iframe.js
 
 
 class iFrame {
     constructor() {
-        this._form = en_form_EnForm.getInstance();
-        this.logger = new logger_EngridLogger("iFrame", "brown", "gray", "📡");
+        this._form = EnForm.getInstance();
+        this.logger = new EngridLogger("iFrame", "brown", "gray", "📡");
         if (this.inIframe()) {
             // Add the data-engrid-embedded attribute when inside an iFrame if it wasn't already added by a script in the Page Template
             engrid_ENGrid.setBodyData("embedded", "");
@@ -13055,12 +13088,12 @@ class iFrame {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/input-has-value-and-focus.js
+;// ./node_modules/@4site/engrid-scripts/dist/input-has-value-and-focus.js
 // Component that adds has-value and has-focus classes to form inputs
 
 class InputHasValueAndFocus {
     constructor() {
-        this.logger = new logger_EngridLogger("InputHasValueAndFocus", "yellow", "#333", "🌈");
+        this.logger = new EngridLogger("InputHasValueAndFocus", "yellow", "#333", "🌈");
         this.formInputs = document.querySelectorAll(".en__field--text, .en__field--email:not(.en__field--checkbox), .en__field--telephone, .en__field--number, .en__field--textarea, .en__field--select, .en__field--checkbox");
         if (this.shouldRun()) {
             this.run();
@@ -13107,7 +13140,7 @@ class InputHasValueAndFocus {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/input-placeholders.js
+;// ./node_modules/@4site/engrid-scripts/dist/input-placeholders.js
 // Component that adds input placeholders
 // You can override the default placeholders by adding a Placeholders option to the EngridOptions on the client theme.
 // You can also add an EngridPageOptions override to the page, if you want to override the placeholders on a specific page. Example:
@@ -13193,7 +13226,7 @@ class InputPlaceholders {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/media-attribution.js
+;// ./node_modules/@4site/engrid-scripts/dist/media-attribution.js
 /*
   Looks for specially crafted <img> links and will transform its markup to display an attribution overlay on top of the image
   Depends on "_engrid-media-attribution.scss" for styling
@@ -13261,7 +13294,7 @@ class MediaAttribution {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/live-variables.js
+;// ./node_modules/@4site/engrid-scripts/dist/live-variables.js
 
 
 class LiveVariables {
@@ -13270,7 +13303,7 @@ class LiveVariables {
         this._amount = DonationAmount.getInstance();
         this._fees = ProcessingFees.getInstance();
         this._frequency = DonationFrequency.getInstance();
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this.multiplier = 1 / 12;
         this.options = Object.assign(Object.assign({}, OptionsDefaults), options);
         this.submitLabel =
@@ -13410,19 +13443,19 @@ class LiveVariables {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/upsell-lightbox.js
+;// ./node_modules/@4site/engrid-scripts/dist/upsell-lightbox.js
 
 
 class UpsellLightbox {
     constructor() {
         this.overlay = document.createElement("div");
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this._amount = DonationAmount.getInstance();
         this._fees = ProcessingFees.getInstance();
         this._frequency = DonationFrequency.getInstance();
         this._dataLayer = DataLayer.getInstance();
         this._suggestAmount = 0;
-        this.logger = new logger_EngridLogger("UpsellLightbox", "black", "pink", "🪟");
+        this.logger = new EngridLogger("UpsellLightbox", "black", "pink", "🪟");
         let options = "EngridUpsell" in window ? window.EngridUpsell : {};
         this.options = Object.assign(Object.assign({}, UpsellOptionsDefaults), options);
         //Disable for "applepay" via Vantiv payment method. Adding it to the array like this so it persists
@@ -13775,7 +13808,7 @@ class UpsellLightbox {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/upsell-checkbox.js
+;// ./node_modules/@4site/engrid-scripts/dist/upsell-checkbox.js
 // This component will add a checkbox to the donation form that will allow the user to upgrade their donation to a monthly donation.
 
 
@@ -13795,7 +13828,7 @@ class UpsellCheckbox {
         this.oldAmount = 0;
         this.oldFrequency = "one-time";
         this.resetCheckbox = false;
-        this.logger = new logger_EngridLogger("UpsellCheckbox", "black", "LemonChiffon", "✅");
+        this.logger = new EngridLogger("UpsellCheckbox", "black", "LemonChiffon", "✅");
         let options = "EngridUpsell" in window ? window.EngridUpsell : {};
         this.options = Object.assign(Object.assign({}, UpsellOptionsDefaults), options);
         if (this.options.upsellCheckbox === false) {
@@ -14022,7 +14055,7 @@ class UpsellCheckbox {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/show-hide-radio-checkboxes.js
+;// ./node_modules/@4site/engrid-scripts/dist/show-hide-radio-checkboxes.js
 
 class ShowHideRadioCheckboxes {
     // Create default data attributes on all fields
@@ -14175,7 +14208,7 @@ class ShowHideRadioCheckboxes {
         window.sessionStorage.setItem(`engrid_ShowHideRadioCheckboxesState`, JSON.stringify(state));
     }
     constructor(elements, classes) {
-        this.logger = new logger_EngridLogger("ShowHideRadioCheckboxes", "black", "lightblue", "👁");
+        this.logger = new EngridLogger("ShowHideRadioCheckboxes", "black", "lightblue", "👁");
         this.elements = document.getElementsByName(elements);
         this.classes = classes;
         this.createDataAttributes();
@@ -14195,7 +14228,7 @@ class ShowHideRadioCheckboxes {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/cookie.js
+;// ./node_modules/@4site/engrid-scripts/dist/cookie.js
 /**
 Example:
 import * as cookie from "./cookie";
@@ -14273,7 +14306,7 @@ function remove(name, attributes) {
     set(name, "", Object.assign(Object.assign({}, attributes), { expires: -1 }));
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/translate-fields.js
+;// ./node_modules/@4site/engrid-scripts/dist/translate-fields.js
 // Component to translate fields based on the country selected
 // It will also adapt the state field to the country selected
 
@@ -14823,7 +14856,7 @@ class TranslateFields {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/auto-country-select.js
+;// ./node_modules/@4site/engrid-scripts/dist/auto-country-select.js
 // This class works when the user has added ".simple_country_select" as a class in page builder for the Country select
 
 
@@ -14842,10 +14875,15 @@ class AutoCountrySelect {
             engrid_ENGrid.getUrlParameter("supporter.region") ||
             (engrid_ENGrid.getUrlParameter("ea.url.id") &&
                 !engrid_ENGrid.getUrlParameter("forwarded"));
+        // If fast form is active, then personal details have already been filled somehow and we should not override the country selection
+        // The client is also likely using WelcomeBack.
+        const fastFormActive = engrid_ENGrid.getBodyData("hide-fast-address-details") ||
+            engrid_ENGrid.getBodyData("hide-fast-personal-details");
         if (!engridAutofill &&
             !submissionFailed &&
             hasIntlSupport &&
-            !locationDataInUrl) {
+            !locationDataInUrl &&
+            !fastFormActive) {
             fetch(`https://${window.location.hostname}/cdn-cgi/trace`)
                 .then((res) => res.text())
                 .then((t) => {
@@ -14890,7 +14928,7 @@ class AutoCountrySelect {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/skip-link.js
+;// ./node_modules/@4site/engrid-scripts/dist/skip-link.js
 // Javascript that adds an accessible "Skip Link" button after the <body> opening that jumps to
 // the first <title> or <h1> field in a "body-" section, or the first <h1> if none are found
 // in those sections
@@ -14928,7 +14966,7 @@ class SkipToMainContentLink {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/src-defer.js
+;// ./node_modules/@4site/engrid-scripts/dist/src-defer.js
 // Build Notes: Add the vanilla Javascript version inline inside the page template right before </body>
 // In the event the vanilla javascript is not inlined we should still process any assets with a data-src still defined on it. Plus we only process background video via this JS file as to not block the page with a large video file downloading.
 // // 4Site's simplified image lazy loader
@@ -15000,7 +15038,7 @@ class SrcDefer {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/set-recurr-freq.js
+;// ./node_modules/@4site/engrid-scripts/dist/set-recurr-freq.js
 
 
 class setRecurrFreq {
@@ -15072,14 +15110,14 @@ class setRecurrFreq {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/page-background.js
+;// ./node_modules/@4site/engrid-scripts/dist/page-background.js
 
 class PageBackground {
     constructor() {
         // @TODO: Change page-backgroundImage to page-background
         this.pageBackground = document.querySelector(".page-backgroundImage");
         this.mutationObserver = null;
-        this.logger = new logger_EngridLogger("PageBackground", "lightblue", "darkblue", "🖼️");
+        this.logger = new EngridLogger("PageBackground", "lightblue", "darkblue", "🖼️");
         if (!this.pageBackground) {
             this.logger.log("A background image set in the page was not found, any default image set in the theme on --engrid__page-backgroundImage_url will be used");
             return;
@@ -15316,7 +15354,7 @@ class PageBackground {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/neverbounce.js
+;// ./node_modules/@4site/engrid-scripts/dist/neverbounce.js
 
 
 class NeverBounce {
@@ -15325,12 +15363,12 @@ class NeverBounce {
         this.dateField = dateField;
         this.statusField = statusField;
         this.dateFormat = dateFormat;
-        this.form = en_form_EnForm.getInstance();
+        this.form = EnForm.getInstance();
         this.emailField = null;
         this.emailWrapper = document.querySelector(".en__field--emailAddress");
         this.nbDate = null;
         this.nbStatus = null;
-        this.logger = new logger_EngridLogger("NeverBounce", "#039bc4", "#dfdfdf", "📧");
+        this.logger = new EngridLogger("NeverBounce", "#039bc4", "#dfdfdf", "📧");
         this.shouldRun = true;
         this.nbLoaded = false;
         this.bypassEmails = [
@@ -15622,7 +15660,7 @@ class NeverBounce {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/freshaddress.js
+;// ./node_modules/@4site/engrid-scripts/dist/freshaddress.js
 // According to the FreshAddress documentation, you need to add the following code to your page:
 // jQuery library.
 // <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
@@ -15634,17 +15672,20 @@ class NeverBounce {
 
 class FreshAddress {
     constructor() {
-        this.form = en_form_EnForm.getInstance();
+        var _a;
+        this.form = EnForm.getInstance();
         this.emailField = null;
         this.emailWrapper = document.querySelector(".en__field--emailAddress");
         this.faDate = null;
         this.faStatus = null;
         this.faMessage = null;
-        this.logger = new logger_EngridLogger("FreshAddress", "#039bc4", "#dfdfdf", "📧");
+        this.logger = new EngridLogger("FreshAddress", "#039bc4", "#dfdfdf", "📧");
         this.shouldRun = true;
         this.options = engrid_ENGrid.getOption("FreshAddress");
-        if (this.options === false || !window.FreshAddress)
+        if (this.options === false ||
+            (!window.FreshAddress && !((_a = this.options) === null || _a === void 0 ? void 0 : _a.proxyUrl))) {
             return;
+        }
         this.emailField = document.getElementById("en__field_supporter_emailAddress");
         if (this.emailField) {
             this.createFields();
@@ -15714,7 +15755,12 @@ class FreshAddress {
                 return;
             }
             this.logger.log("Validating " + ((_b = this.emailField) === null || _b === void 0 ? void 0 : _b.value));
-            this.callAPI();
+            if (this.options && this.options.proxyUrl) {
+                this.callProxy();
+            }
+            else {
+                this.callAPI();
+            }
         });
         // Add event listener to submit
         this.form.onValidate.subscribe(this.validate.bind(this));
@@ -15817,7 +15863,7 @@ class FreshAddress {
         else if (this.faStatus.value === "Invalid") {
             this.form.validate = false;
             window.setTimeout(() => {
-                engrid_ENGrid.setError(this.emailWrapper, this.faMessage.value);
+                engrid_ENGrid.setError(this.emailWrapper, "This email address is not valid.");
             }, 100);
             (_a = this.emailField) === null || _a === void 0 ? void 0 : _a.focus();
             engrid_ENGrid.enableSubmit();
@@ -15826,9 +15872,92 @@ class FreshAddress {
         this.form.validate = true;
         return true;
     }
+    callProxy() {
+        var _a, _b;
+        if (!this.options || !this.shouldRun)
+            return;
+        window.FreshAddressStatus = "validating";
+        engrid_ENGrid.disableSubmit("Validating Email Address...");
+        // Before calling the API, do a basic check to see if the email is in a valid format.
+        // This is to prevent unnecessary API calls.
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(this.emailField.value)) {
+            this.logger.log("Invalid Email Format from Basic Check");
+            this.writeToFields("Invalid", "Invalid Email Format");
+            engrid_ENGrid.setError(this.emailWrapper, "This email address is not valid.");
+            (_a = this.emailField) === null || _a === void 0 ? void 0 : _a.focus();
+            engrid_ENGrid.enableSubmit();
+            return;
+        }
+        fetch(this.options.proxyUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email: (_b = this.emailField) === null || _b === void 0 ? void 0 : _b.value }),
+            signal: AbortSignal.timeout(5000),
+        })
+            .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error ${response.status}`);
+            }
+            return response.json();
+        })
+            .then((data) => {
+            this.logger.log("Proxy API Response", data);
+            this.validateProxyResponse(data);
+        })
+            .catch((error) => {
+            // 422 (Unprocessable Content) - This means the email is in an invalid format.
+            if (error.message.includes("422")) {
+                this.logger.log("Invalid Email Format");
+                this.writeToFields("Invalid", "Invalid Email Format");
+                engrid_ENGrid.setError(this.emailWrapper, "This email address is not valid.");
+                return;
+            }
+            if (error.name === "AbortError") {
+                this.logger.log("Proxy API request timed out");
+                this.writeToFields("Request Timeout", "The request took too long.");
+                return;
+            }
+            this.logger.log("Proxy API Error", error);
+            this.writeToFields("Service Error", error.toString());
+        })
+            .finally(() => {
+            window.FreshAddressStatus = "idle";
+            engrid_ENGrid.enableSubmit();
+        });
+    }
+    /*
+     * Validate a request proxied to AtData's Safe To Send API.
+     * https://docs.atdata.com/reference/safe-to-send
+     * https://docs.atdata.com/reference/email-status
+     * https://docs.atdata.com/reference/status-codes-safe-to-send
+     */
+    validateProxyResponse(data) {
+        var _a;
+        // If response is not in expected format, log error and let through.
+        if (!data.safe_to_send) {
+            this.logger.log("Invalid Proxy Response");
+            this.writeToFields("Service Error", "Invalid Proxy Response");
+            return true;
+        }
+        const res = data.safe_to_send;
+        engrid_ENGrid.removeError(this.emailWrapper);
+        this.writeToFields(res.status, res.status_code);
+        if (["invalid", "trap"].includes(res.status)) {
+            this.writeToFields("Invalid", res.status_code); // Must be "Invalid" to trigger validation error on submit
+            engrid_ENGrid.setError(this.emailWrapper, "This email address is not valid.");
+            (_a = this.emailField) === null || _a === void 0 ? void 0 : _a.focus();
+            if (res.email_corrections && res.email_corrections.length > 0) {
+                this.emailField.value = res.email_corrections[0];
+                engrid_ENGrid.setError(this.emailWrapper, `This email address is not valid. Did you mean ${res.email_corrections[0]}?`);
+            }
+        }
+    }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/progress-bar.js
+;// ./node_modules/@4site/engrid-scripts/dist/progress-bar.js
 
 class ProgressBar {
     constructor() {
@@ -15870,13 +15999,13 @@ class ProgressBar {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/remember-me.js
+;// ./node_modules/@4site/engrid-scripts/dist/remember-me.js
 
 
 const remember_me_tippy = (__webpack_require__(9244)/* ["default"] */ .Ay);
 class RememberMe {
     constructor(options) {
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this._events = RememberMeEvents.getInstance();
         this.iframe = null;
         this.remoteUrl = options.remoteUrl ? options.remoteUrl : null;
@@ -16264,13 +16393,13 @@ class RememberMe {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/show-if-amount.js
+;// ./node_modules/@4site/engrid-scripts/dist/show-if-amount.js
 
 
 class ShowIfAmount {
     constructor() {
         this._amount = DonationAmount.getInstance();
-        this.logger = new logger_EngridLogger("ShowIfAmount", "yellow", "black", "👀");
+        this.logger = new EngridLogger("ShowIfAmount", "yellow", "black", "👀");
         this._elements = document.querySelectorAll('[class*="showifamount"]');
         if (this._elements.length > 0) {
             this._amount.onAmountChange.subscribe(() => this.init());
@@ -16383,12 +16512,12 @@ class ShowIfAmount {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/other-amount.js
+;// ./node_modules/@4site/engrid-scripts/dist/other-amount.js
 // This class automatically select other radio input when an amount is entered into it.
 
 class OtherAmount {
     constructor() {
-        this.logger = new logger_EngridLogger("OtherAmount", "green", "black", "💰");
+        this.logger = new EngridLogger("OtherAmount", "green", "black", "💰");
         this._amount = DonationAmount.getInstance();
         "focusin input".split(" ").forEach((e) => {
             var _a;
@@ -16455,12 +16584,12 @@ class OtherAmount {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/logger.js
+;// ./node_modules/@4site/engrid-scripts/dist/logger.js
 
 /**
  * A better logger. It only works if debug is enabled.
  */
-class logger_EngridLogger {
+class EngridLogger {
     constructor(prefix, color, background, emoji) {
         this.prefix = "";
         this.color = "black";
@@ -16541,13 +16670,13 @@ class logger_EngridLogger {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/min-max-amount.js
+;// ./node_modules/@4site/engrid-scripts/dist/min-max-amount.js
 // This script adds an erros message to the page if the amount is greater than the max amount or less than the min amount.
 
 class MinMaxAmount {
     constructor() {
         var _a, _b;
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this._amount = DonationAmount.getInstance();
         this._frequency = DonationFrequency.getInstance();
         this.minAmount = (_a = engrid_ENGrid.getOption("MinAmount")) !== null && _a !== void 0 ? _a : 1;
@@ -16555,7 +16684,7 @@ class MinMaxAmount {
         this.minAmountMessage = engrid_ENGrid.getOption("MinAmountMessage");
         this.maxAmountMessage = engrid_ENGrid.getOption("MaxAmountMessage");
         this.enAmountValidator = null;
-        this.logger = new logger_EngridLogger("MinMaxAmount", "white", "purple", "🔢");
+        this.logger = new EngridLogger("MinMaxAmount", "white", "purple", "🔢");
         if (!this.shouldRun()) {
             // If we're not on a Donation Page, get out
             return;
@@ -16669,14 +16798,14 @@ class MinMaxAmount {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/ticker.js
+;// ./node_modules/@4site/engrid-scripts/dist/ticker.js
 
 class Ticker {
     constructor() {
         this.shuffleSeed = __webpack_require__(3184);
         this.items = [];
         this.tickerElement = document.querySelector(".engrid-ticker");
-        this.logger = new logger_EngridLogger("Ticker", "black", "beige", "🔁");
+        this.logger = new EngridLogger("Ticker", "black", "beige", "🔁");
         if (!this.shouldRun()) {
             this.logger.log("Not running");
             // If we don't find a ticker, get out
@@ -16737,7 +16866,7 @@ class Ticker {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/data-layer.js
+;// ./node_modules/@4site/engrid-scripts/dist/data-layer.js
 // DataLayer: singleton helper for pushing structured analytics events/vars to window.dataLayer.
 // On load it emits one aggregated event `pageJsonVariablesReady` with:
 //   EN_PAGEJSON_* (normalized pageJson), EN_URLPARAM_*, EN_RECURRING_FREQUENCIES (donation pages),
@@ -16759,11 +16888,24 @@ var data_layer_awaiter = (undefined && undefined.__awaiter) || function (thisArg
 
 class DataLayer {
     constructor() {
-        this.logger = new logger_EngridLogger("DataLayer", "#f1e5bc", "#009cdc", "📊");
+        this.logger = new EngridLogger("DataLayer", "#f1e5bc", "#009cdc", "📊");
         this.dataLayer = window.dataLayer || [];
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this.encoder = new TextEncoder();
         this.endOfGiftProcessStorageKey = "ENGRID_END_OF_GIFT_PROCESS_EVENTS";
+        // pageJson entries related to the gift process
+        this.giftFields = [
+            "amount",
+            "currency",
+            "donationLogId",
+            "feeCover",
+            "giftProcess",
+            "paymentType",
+            "receiptNumber",
+            "recurring",
+            "transactionId",
+            "transactionType",
+        ];
         this.excludedFields = [
             // Credit Card
             "transaction.ccnumber",
@@ -16842,13 +16984,27 @@ class DataLayer {
     onLoad() {
         // Collect all data layer variables to push at once
         const dataLayerData = {};
+        const suppressEcardData = engrid_ENGrid.getPageType() === "ECARD" &&
+            engrid_ENGrid.getOption("SuppressPurchaseEcard");
         if (engrid_ENGrid.getGiftProcess()) {
-            this.logger.log("EN_SUCCESSFUL_DONATION");
-            this.addEndOfGiftProcessEventsToDataLayer();
+            // EN will chain together gift process data on the page json when redirecting from a completed donation to an ecard.
+            // Since the ecard page can be embedded on the thank you page of a donation, this can cause confusion in the data layer with events
+            // firing for both the donation and the ecard on the same page.
+            if (suppressEcardData) {
+                this.logger.log("⛔ Gift process was detected BUT suppressing EN_SUCCESSFUL_DONATION event due to SuppressPurchaseEcard option enabled");
+                window.sessionStorage.removeItem(this.endOfGiftProcessStorageKey);
+            }
+            else {
+                this.logger.log("EN_SUCCESSFUL_DONATION");
+                this.addEndOfGiftProcessEventsToDataLayer();
+            }
         }
         if (window.pageJson) {
             const pageJson = window.pageJson;
             for (const property in pageJson) {
+                if (suppressEcardData && this.giftFields.includes(property)) {
+                    continue;
+                }
                 const key = `EN_PAGEJSON_${property.toUpperCase()}`;
                 const value = pageJson[property];
                 dataLayerData[key] = this.transformJSON(value);
@@ -17061,7 +17217,7 @@ class DataLayer {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/data-replace.js
+;// ./node_modules/@4site/engrid-scripts/dist/data-replace.js
 // This script is used to replace merge tags in the EN Blocks of the page.
 // It searches for HTML elements containing the data to be replaced and replaces it.
 // The data to be replaced is passed as URL parameters, example: ?engrid_data[key]=value.
@@ -17072,7 +17228,7 @@ class DataLayer {
 
 class DataReplace {
     constructor() {
-        this.logger = new logger_EngridLogger("DataReplace", "#333333", "#00f3ff", "⤵️");
+        this.logger = new EngridLogger("DataReplace", "#333333", "#00f3ff", "⤵️");
         this.enElements = new Array();
         this.searchElements();
         if (!this.shouldRun())
@@ -17139,7 +17295,7 @@ class DataReplace {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/data-hide.js
+;// ./node_modules/@4site/engrid-scripts/dist/data-hide.js
 // Hides elements based on URL arguments.
 //
 // The DataHide class is used to hide elements based on URL arguments.
@@ -17149,7 +17305,7 @@ class DataReplace {
 
 class DataHide {
     constructor() {
-        this.logger = new logger_EngridLogger("DataHide", "#333333", "#f0f0f0", "🙈");
+        this.logger = new EngridLogger("DataHide", "#333333", "#f0f0f0", "🙈");
         this.enElements = new Array();
         this.logger.log("Constructor");
         this.enElements = engrid_ENGrid.getUrlParameter("engrid_hide[]");
@@ -17207,7 +17363,7 @@ class DataHide {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/add-name-to-message.js
+;// ./node_modules/@4site/engrid-scripts/dist/add-name-to-message.js
 /*
  Adds first and last name when First Name and Last Name fields lose focus if name shortcodes aren't present
 */
@@ -17258,14 +17414,14 @@ class AddNameToMessage {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/expand-region-name.js
+;// ./node_modules/@4site/engrid-scripts/dist/expand-region-name.js
 // Populates hidden supporter field "Region Long Format" with expanded name (e.g FL becomes Florida)
 
 
 class ExpandRegionName {
     constructor() {
-        this._form = en_form_EnForm.getInstance();
-        this.logger = new logger_EngridLogger("ExpandRegionName", "#333333", "#00eb65", "🌍");
+        this._form = EnForm.getInstance();
+        this.logger = new EngridLogger("ExpandRegionName", "#333333", "#00eb65", "🌍");
         if (this.shouldRun()) {
             const expandedRegionField = engrid_ENGrid.getOption("RegionLongFormat");
             console.log("expandedRegionField", expandedRegionField);
@@ -17304,7 +17460,7 @@ class ExpandRegionName {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/url-to-form.js
+;// ./node_modules/@4site/engrid-scripts/dist/url-to-form.js
 // Component that allows to set a field value from URL parameters
 // Workflow:
 // 1. Loop through all the URL parameters
@@ -17313,7 +17469,7 @@ class ExpandRegionName {
 
 class UrlToForm {
     constructor() {
-        this.logger = new logger_EngridLogger("UrlToForm", "white", "magenta", "🔗");
+        this.logger = new EngridLogger("UrlToForm", "white", "magenta", "🔗");
         this.urlParams = new URLSearchParams(document.location.search);
         if (!this.shouldRun())
             return;
@@ -17344,12 +17500,12 @@ class UrlToForm {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/required-if-visible.js
+;// ./node_modules/@4site/engrid-scripts/dist/required-if-visible.js
 
 class RequiredIfVisible {
     constructor() {
-        this.logger = new logger_EngridLogger("RequiredIfVisible", "#FFFFFF", "#811212", "🚥");
-        this._form = en_form_EnForm.getInstance();
+        this.logger = new EngridLogger("RequiredIfVisible", "#FFFFFF", "#811212", "🚥");
+        this._form = EnForm.getInstance();
         this.requiredIfVisibleElements = document.querySelectorAll(`
     .i-required .en__field,
     .i1-required .en__field:nth-of-type(1),
@@ -17406,7 +17562,7 @@ class RequiredIfVisible {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/tidycontact.js
+;// ./node_modules/@4site/engrid-scripts/dist/tidycontact.js
 var tidycontact_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -17420,13 +17576,13 @@ var tidycontact_awaiter = (undefined && undefined.__awaiter) || function (thisAr
 class TidyContact {
     constructor() {
         var _a, _b, _c, _d, _e;
-        this.logger = new logger_EngridLogger("TidyContact", "#FFFFFF", "#4d9068", "📧");
+        this.logger = new EngridLogger("TidyContact", "#FFFFFF", "#4d9068", "📧");
         this.endpoint = "https://api.tidycontact.io";
         this.wasCalled = false; // True if the API endpoint was called
         this.httpStatus = 0;
         this.timeout = 5; // Seconds to API Timeout
         this.isDirty = false; // True if the address was changed by the user
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this.countries_list = [
             ["Afghanistan", "af", "93", "070 123 4567"],
             ["Albania", "al", "355", "067 212 3456"],
@@ -17677,6 +17833,10 @@ class TidyContact {
         this.options = engrid_ENGrid.getOption("TidyContact");
         if (this.options === false || !((_a = this.options) === null || _a === void 0 ? void 0 : _a.cid))
             return;
+        if (!this.shouldRun()) {
+            this.logger.log("TidyContact is disabled on this page type");
+            return;
+        }
         this.loadOptions();
         if (!this.hasAddressFields() && !this.phoneEnabled()) {
             this.logger.log("No address fields found");
@@ -17706,6 +17866,14 @@ class TidyContact {
                 this.setDefaultPhoneCountry();
             }
         }
+    }
+    shouldRun() {
+        if (this.options &&
+            this.options.page_types &&
+            this.options.page_types.length > 0) {
+            return this.options.page_types.includes(engrid_ENGrid.getPageType());
+        }
+        return true;
     }
     loadOptions() {
         var _a, _b, _c, _d;
@@ -18610,12 +18778,12 @@ class TidyContact {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/live-currency.js
+;// ./node_modules/@4site/engrid-scripts/dist/live-currency.js
 // This script enables live currency symbol and code to the page.
 
 class LiveCurrency {
     constructor() {
-        this.logger = new logger_EngridLogger("LiveCurrency", "#1901b1", "#feb47a", "💲");
+        this.logger = new EngridLogger("LiveCurrency", "#1901b1", "#feb47a", "💲");
         this.elementsFound = false;
         this.isUpdating = false;
         this._amount = DonationAmount.getInstance();
@@ -18752,7 +18920,7 @@ class LiveCurrency {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/custom-currency.js
+;// ./node_modules/@4site/engrid-scripts/dist/custom-currency.js
 // This component allows you to customize the currency options in the currency field
 // It is used in the following way:
 //
@@ -18811,7 +18979,7 @@ class LiveCurrency {
 
 class CustomCurrency {
     constructor() {
-        this.logger = new logger_EngridLogger("CustomCurrency", "#1901b1", "#00cc95", "🤑");
+        this.logger = new EngridLogger("CustomCurrency", "#1901b1", "#00cc95", "🤑");
         this.currencyElement = document.querySelector("[name='transaction.paycurrency']");
         this._country = Country.getInstance();
         if (!this.shouldRun())
@@ -18866,13 +19034,13 @@ class CustomCurrency {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/autosubmit.js
+;// ./node_modules/@4site/engrid-scripts/dist/autosubmit.js
 // Automatically submits the page if a URL argument is present
 
 class Autosubmit {
     constructor() {
-        this.logger = new logger_EngridLogger("Autosubmit", "#f0f0f0", "#ff0000", "🚀");
-        this._form = en_form_EnForm.getInstance();
+        this.logger = new EngridLogger("Autosubmit", "#f0f0f0", "#ff0000", "🚀");
+        this._form = EnForm.getInstance();
         if (engrid_ENGrid.checkNested(window.EngagingNetworks, "require", "_defined", "enjs", "checkSubmissionFailed") &&
             !window.EngagingNetworks.require._defined.enjs.checkSubmissionFailed() &&
             engrid_ENGrid.getUrlParameter("autosubmit") === "Y") {
@@ -18884,7 +19052,7 @@ class Autosubmit {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/event-tickets.js
+;// ./node_modules/@4site/engrid-scripts/dist/event-tickets.js
 class EventTickets {
     constructor() {
         // --------------------------------------------
@@ -18910,7 +19078,7 @@ class EventTickets {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/swap-amounts.js
+;// ./node_modules/@4site/engrid-scripts/dist/swap-amounts.js
 // This script allows you to override the default donation amounts in Engaging Networks
 // with a custom list of amounts.
 // If the URL contains a query parameter "engrid-amounts" with a comma separated values, the script will load the
@@ -18946,7 +19114,7 @@ class EventTickets {
 
 class SwapAmounts {
     constructor() {
-        this.logger = new logger_EngridLogger("SwapAmounts", "purple", "white", "💰");
+        this.logger = new EngridLogger("SwapAmounts", "purple", "white", "💰");
         this._amount = DonationAmount.getInstance();
         this._frequency = DonationFrequency.getInstance();
         this.defaultChange = false; // Tracks if user changed away from default after swap
@@ -19030,7 +19198,12 @@ class SwapAmounts {
         }));
     }
     shouldRun() {
-        return !!window.EngridAmounts;
+        const hasNSG = window.EngagingNetworks.suggestedGift !== undefined &&
+            Object.keys(window.EngagingNetworks.suggestedGift).length > 0;
+        if (!!window.EngridAmounts && hasNSG) {
+            this.logger.log("Not swapping amounts because NSG is active on page");
+        }
+        return !!window.EngridAmounts && !hasNSG;
     }
     ignoreCurrentValue() {
         const urlParam = engrid_ENGrid.getUrlParameter("transaction.donationAmt");
@@ -19044,12 +19217,12 @@ class SwapAmounts {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/debug-panel.js
+;// ./node_modules/@4site/engrid-scripts/dist/debug-panel.js
 
 class DebugPanel {
     constructor(pageLayouts) {
         var _a, _b;
-        this.logger = new logger_EngridLogger("Debug Panel", "#f0f0f0", "#ff0000", "💥");
+        this.logger = new EngridLogger("Debug Panel", "#f0f0f0", "#ff0000", "💥");
         this.brandingHtml = new BrandingHtml();
         this.element = null;
         this.currentTimestamp = this.getCurrentTimestamp();
@@ -19554,12 +19727,12 @@ class DebugPanel {
 }
 DebugPanel.debugSessionStorageKey = "engrid_debug_panel";
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/debug-hidden-fields.js
+;// ./node_modules/@4site/engrid-scripts/dist/debug-hidden-fields.js
 // Switches hidden fields to be type text when debug mode is enabled.
 
 class DebugHiddenFields {
     constructor() {
-        this.logger = new logger_EngridLogger("Debug hidden fields", "#f0f0f0", "#ff0000", "🫣");
+        this.logger = new EngridLogger("Debug hidden fields", "#f0f0f0", "#ff0000", "🫣");
         this.ignoreFields = ["transaction.paycurrency"];
         // Query all hidden input elements within the specified selectors
         const fields = document.querySelectorAll(".en__component--row [type='hidden'][class*='en_'], .engrid-added-input[type='hidden']");
@@ -19604,7 +19777,7 @@ class DebugHiddenFields {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/branding-html.js
+;// ./node_modules/@4site/engrid-scripts/dist/branding-html.js
 var branding_html_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -19676,12 +19849,12 @@ class BrandingHtml {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/country-disable.js
+;// ./node_modules/@4site/engrid-scripts/dist/country-disable.js
 // This class allows you to disable some countries from the country dropdown list.
 
 class CountryDisable {
     constructor() {
-        this.logger = new logger_EngridLogger("CountryDisable", "#f0f0f0", "#333333", "🌎");
+        this.logger = new EngridLogger("CountryDisable", "#f0f0f0", "#333333", "🌎");
         const countries = document.querySelectorAll('select[name="supporter.country"], select[name="transaction.shipcountry"], select[name="supporter.billingCountry"], select[name="transaction.infcountry"]');
         const CountryDisable = engrid_ENGrid.getOption("CountryDisable");
         // Remove the countries from the dropdown list
@@ -19700,7 +19873,7 @@ class CountryDisable {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/premium-gift.js
+;// ./node_modules/@4site/engrid-scripts/dist/premium-gift.js
 // Component to handle premium gift features
 // 1 - Add a class to body to indicate which premium gift is selected (data-engrid-premium-gift-name="item-name-slugged")
 // 2 - Add a class to body to indicate if the "maximize my impact" is selected (data-engrid-premium-gift-maximize="true|false")
@@ -19710,7 +19883,7 @@ class CountryDisable {
 
 class PremiumGift {
     constructor() {
-        this.logger = new logger_EngridLogger("PremiumGift", "#232323", "#f7b500", "🎁");
+        this.logger = new EngridLogger("PremiumGift", "#232323", "#f7b500", "🎁");
         this.enElements = new Array();
         this._frequency = DonationFrequency.getInstance();
         this._amount = DonationAmount.getInstance();
@@ -19885,7 +20058,7 @@ class PremiumGift {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/custom-premium.js
+;// ./node_modules/@4site/engrid-scripts/dist/custom-premium.js
 // ENgrid component: CustomPremium
 // Filters premium gifts based on window.EngridPageOptions.CustomPremium configuration
 // Rules:
@@ -19899,10 +20072,10 @@ class PremiumGift {
 
 class CustomPremium {
     constructor() {
-        this.logger = new logger_EngridLogger("CustomPremium", "teal", "white", "🧩");
+        this.logger = new EngridLogger("CustomPremium", "teal", "white", "🧩");
         this._amount = DonationAmount.getInstance();
         this._frequency = DonationFrequency.getInstance();
-        this._enForm = en_form_EnForm.getInstance();
+        this._enForm = EnForm.getInstance();
         this.stylesInjected = false;
         this.pendingFrequencyChange = false;
         if (!this.shouldRun())
@@ -20151,7 +20324,7 @@ class CustomPremium {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/digital-wallets.js
+;// ./node_modules/@4site/engrid-scripts/dist/digital-wallets.js
 
 class DigitalWallets {
     constructor() {
@@ -20308,7 +20481,7 @@ class DigitalWallets {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/mobile-cta.js
+;// ./node_modules/@4site/engrid-scripts/dist/mobile-cta.js
 // This component adds a floating CTA button to the page, which can be used to scroll to the top of the form
 
 class MobileCTA {
@@ -20385,14 +20558,14 @@ class MobileCTA {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/live-frequency.js
+;// ./node_modules/@4site/engrid-scripts/dist/live-frequency.js
 // This script creates merge tags: [[frequency]], [[Frequency]], or [[FREQUENCY]]
 // that gets replaced with the donation frequency
 // and can be used on any Code Block, Text Block, or Form Block
 
 class LiveFrequency {
     constructor() {
-        this.logger = new logger_EngridLogger("LiveFrequency", "#00ff00", "#000000", "🧾");
+        this.logger = new EngridLogger("LiveFrequency", "#00ff00", "#000000", "🧾");
         this.elementsFound = false;
         this._amount = DonationAmount.getInstance();
         this._frequency = DonationFrequency.getInstance();
@@ -20496,7 +20669,7 @@ class LiveFrequency {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/universal-opt-in.js
+;// ./node_modules/@4site/engrid-scripts/dist/universal-opt-in.js
 /**
  * This class will add event listeners to every yes/no radio button or checkbox
  * inside a universal opt-in element (any form block with the CSS class universal-opt-in). When the user clicks on a radio/checkbox
@@ -20509,7 +20682,7 @@ class LiveFrequency {
 
 class UniversalOptIn {
     constructor() {
-        this.logger = new logger_EngridLogger("UniversalOptIn", "#f0f0f0", "#d2691e", "🪞");
+        this.logger = new EngridLogger("UniversalOptIn", "#f0f0f0", "#d2691e", "🪞");
         this._elements = document.querySelectorAll(".universal-opt-in, .universal-opt-in_null");
         if (!this.shouldRun())
             return;
@@ -20589,7 +20762,7 @@ class UniversalOptIn {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/stripe-financial-connections.js
+;// ./node_modules/@4site/engrid-scripts/dist/stripe-financial-connections.js
 /**
  * This component improves EN's implementation of Stripe Financial Connections.
  * Enhancements:
@@ -20599,7 +20772,7 @@ class UniversalOptIn {
 class StripeFinancialConnections {
     constructor() {
         this.stripeModalOpen = false;
-        this.logger = new logger_EngridLogger("Stripe Financial Connections", "black", "pink", "🏛️");
+        this.logger = new EngridLogger("Stripe Financial Connections", "black", "pink", "🏛️");
         const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
                 mutation.addedNodes.forEach((node) => {
@@ -20639,11 +20812,11 @@ class StripeFinancialConnections {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/give-by-select.js
+;// ./node_modules/@4site/engrid-scripts/dist/give-by-select.js
 
 class GiveBySelect {
     constructor() {
-        this.logger = new logger_EngridLogger("GiveBySelect", "#FFF", "#333", "🐇");
+        this.logger = new EngridLogger("GiveBySelect", "#FFF", "#333", "🐇");
         this.transactionGiveBySelect = document.getElementsByName("transaction.giveBySelect");
         this._frequency = DonationFrequency.getInstance();
         if (!this.transactionGiveBySelect)
@@ -20722,12 +20895,12 @@ class GiveBySelect {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/url-params-to-body-attrs.js
+;// ./node_modules/@4site/engrid-scripts/dist/url-params-to-body-attrs.js
 //This component adds any url parameters that begin with "data-engrid-" to the body as attributes.
 
 class UrlParamsToBodyAttrs {
     constructor() {
-        this.logger = new logger_EngridLogger("UrlParamsToBodyAttrs", "white", "magenta", "📌");
+        this.logger = new EngridLogger("UrlParamsToBodyAttrs", "white", "magenta", "📌");
         this.urlParams = new URLSearchParams(document.location.search);
         this.urlParams.forEach((value, key) => {
             if (key.startsWith("data-engrid-")) {
@@ -20738,14 +20911,14 @@ class UrlParamsToBodyAttrs {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/exit-intent-lightbox.js
+;// ./node_modules/@4site/engrid-scripts/dist/exit-intent-lightbox.js
 
 
 class ExitIntentLightbox {
     constructor() {
         this.opened = false;
         this.dataLayer = window.dataLayer || [];
-        this.logger = new logger_EngridLogger("ExitIntentLightbox", "yellow", "black", "🚪");
+        this.logger = new EngridLogger("ExitIntentLightbox", "yellow", "black", "🚪");
         this.triggerDelay = 1000; // Don't run the exit intent lightbox until at least 1 second has passed after page load
         this.triggerTimeout = null;
         let options = "EngridExitIntent" in window ? window.EngridExitIntent : {};
@@ -20885,13 +21058,13 @@ class ExitIntentLightbox {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/supporter-hub.js
+;// ./node_modules/@4site/engrid-scripts/dist/supporter-hub.js
 // Component that adds 4Site Special Features to the Supporter Hub Page
 
 class SupporterHub {
     constructor() {
-        this.logger = new logger_EngridLogger("SupporterHub", "black", "pink", "🛖");
-        this._form = en_form_EnForm.getInstance();
+        this.logger = new EngridLogger("SupporterHub", "black", "pink", "🛖");
+        this._form = EnForm.getInstance();
         if (!this.shoudRun())
             return;
         this.logger.log("Enabled");
@@ -20962,7 +21135,7 @@ class SupporterHub {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/fast-form-fill.js
+;// ./node_modules/@4site/engrid-scripts/dist/fast-form-fill.js
 /**
  * This class adds body data attributes if all mandatory inputs, on specific form blocks, are filled.
  * Related styling (to hide elements) can be found in "fast-form-fill.scss".
@@ -20973,7 +21146,7 @@ class SupporterHub {
 
 class FastFormFill {
     constructor() {
-        this.logger = new logger_EngridLogger("FastFormFill", "white", "magenta", "📌");
+        this.logger = new EngridLogger("FastFormFill", "white", "magenta", "📌");
         this.rememberMeEvents = RememberMeEvents.getInstance();
         if (engrid_ENGrid.getOption("RememberMe")) {
             this.rememberMeEvents.onLoad.subscribe((hasData) => {
@@ -21039,7 +21212,7 @@ class FastFormFill {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/set-attr.js
+;// ./node_modules/@4site/engrid-scripts/dist/set-attr.js
 /*+
   The class is used to set body attributes via click handlers.
   The format is "setattr--{attribute}--{value}".
@@ -21048,7 +21221,7 @@ class FastFormFill {
 
 class SetAttr {
     constructor() {
-        this.logger = new logger_EngridLogger("SetAttr", "black", "yellow", "📌");
+        this.logger = new EngridLogger("SetAttr", "black", "yellow", "📌");
         const enGrid = document.getElementById("engrid");
         if (enGrid) {
             enGrid.addEventListener("click", (e) => {
@@ -21072,7 +21245,7 @@ class SetAttr {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/show-if-present.js
+;// ./node_modules/@4site/engrid-scripts/dist/show-if-present.js
 /**
  * This class contains the logic for special classes that can be used to hide elements if
  * certain supporter questions are present or absent.
@@ -21094,7 +21267,7 @@ class SetAttr {
 
 class ShowIfPresent {
     constructor() {
-        this.logger = new logger_EngridLogger("ShowIfPresent", "yellow", "black", "👀");
+        this.logger = new EngridLogger("ShowIfPresent", "yellow", "black", "👀");
         this.elements = [];
         if (this.shouldRun()) {
             this.run();
@@ -21153,7 +21326,7 @@ class ShowIfPresent {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/en-validators.js
+;// ./node_modules/@4site/engrid-scripts/dist/en-validators.js
 // This component uses EN's Custom Validators on the client side to validate form fields.
 // It's currently behind a feature flag, so it's not enabled by default.
 // To enable it, add the following to your options:
@@ -21161,9 +21334,9 @@ class ShowIfPresent {
 
 class ENValidators {
     constructor() {
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this._enElements = null;
-        this.logger = new logger_EngridLogger("ENValidators", "white", "darkolivegreen", "🧐");
+        this.logger = new EngridLogger("ENValidators", "white", "darkolivegreen", "🧐");
         if (!this.loadValidators()) {
             // This is an error to flag a racing condition. If the script is loaded before the validators are loaded, it will not work.
             this.logger.error("Not Loaded");
@@ -21244,7 +21417,7 @@ class ENValidators {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/modal.js
+;// ./node_modules/@4site/engrid-scripts/dist/modal.js
 
 class Modal {
     constructor(options) {
@@ -21387,7 +21560,7 @@ class Modal {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/postal-code-validator.js
+;// ./node_modules/@4site/engrid-scripts/dist/postal-code-validator.js
 
 
 
@@ -21399,8 +21572,8 @@ class PostalCodeValidator {
     constructor() {
         var _a, _b;
         this.postalCodeField = engrid_ENGrid.getField("supporter.postcode");
-        this._form = en_form_EnForm.getInstance();
-        this.logger = new logger_EngridLogger("Postal Code Validator", "white", "red", "📬");
+        this._form = EnForm.getInstance();
+        this.logger = new EngridLogger("Postal Code Validator", "white", "red", "📬");
         this.supportedSeparators = ["+", "-", " "];
         this.separator = this.getSeparator();
         this.regexSeparator = this.getRegexSeparator(this.separator);
@@ -21507,7 +21680,7 @@ class PostalCodeValidator {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/vgs.js
+;// ./node_modules/@4site/engrid-scripts/dist/vgs.js
 // This component allows you to customize the VGS theme options
 //
 // It is used in the following way:
@@ -21534,11 +21707,11 @@ class PostalCodeValidator {
 
 class VGS {
     constructor() {
-        this.logger = new logger_EngridLogger("VGS", "black", "pink", "💳");
+        this.logger = new EngridLogger("VGS", "black", "pink", "💳");
         this.vgsField = document.querySelector(".en__field--vgs");
         this.options = engrid_ENGrid.getOption("VGS");
         this.paymentTypeField = document.querySelector("#en__field_transaction_paymenttype");
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this.field_expiration_month = null;
         this.field_expiration_year = null;
         this.handleExpUpdate = (e) => {
@@ -21765,7 +21938,7 @@ class VGS {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/country-redirect.js
+;// ./node_modules/@4site/engrid-scripts/dist/country-redirect.js
 // This component allows you to redirect the user to a different page based on their country.
 // It works by checking the country field on the page and comparing it to the list of countries in the CountryRedirect option.
 // If the country matches one of the countries in the list, the user is redirected to the specified URL only if the URL is not the same as the current page.
@@ -21794,7 +21967,7 @@ class VGS {
 
 class CountryRedirect {
     constructor() {
-        this.logger = new logger_EngridLogger("CountryRedirect", "white", "brown", "🛫");
+        this.logger = new EngridLogger("CountryRedirect", "white", "brown", "🛫");
         this._country = Country.getInstance();
         if (!this.shouldRun())
             return;
@@ -21828,7 +22001,7 @@ class CountryRedirect {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/welcome-back.js
+;// ./node_modules/@4site/engrid-scripts/dist/welcome-back.js
 /**
  * This component adds a welcome back message and a personal details summary to the page.
  * It depends on the "fast-personal-details" functionality from the FastFormFill component.
@@ -21843,7 +22016,7 @@ class CountryRedirect {
 class WelcomeBack {
     constructor() {
         var _a;
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this.supporterDetails = {};
         this.options = (_a = engrid_ENGrid.getOption("WelcomeBack")) !== null && _a !== void 0 ? _a : false;
         this.rememberMeEvents = RememberMeEvents.getInstance();
@@ -21931,7 +22104,7 @@ class WelcomeBack {
         ${this.supporterDetails["firstName"]} ${this.supporterDetails["lastName"]}
         <br>
         ${this.supporterDetails["emailAddress"]}
-        ${this.supporterDetails["mobilePhone"]
+        ${this.supporterDetails["mobilePhone"] && options.showPhoneNumber
             ? `<br>${this.supporterDetails["mobilePhone"]}`
             : ""}
      </p>
@@ -22005,7 +22178,7 @@ class WelcomeBack {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/interfaces/ecard-to-target-options.js
+;// ./node_modules/@4site/engrid-scripts/dist/interfaces/ecard-to-target-options.js
 const EcardToTargetOptionsDefaults = {
     targetName: "",
     targetEmail: "",
@@ -22016,7 +22189,7 @@ const EcardToTargetOptionsDefaults = {
     targets: [],
 };
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/ecard-to-target.js
+;// ./node_modules/@4site/engrid-scripts/dist/ecard-to-target.js
 /**
  * This component adjusts an ecard form to target a specific recipient,
  * defined in a code block
@@ -22028,8 +22201,8 @@ const EcardToTargetOptionsDefaults = {
 class EcardToTarget {
     constructor() {
         this.options = EcardToTargetOptionsDefaults;
-        this.logger = new logger_EngridLogger("EcardToTarget", "DarkBlue", "Azure", "📧");
-        this._form = en_form_EnForm.getInstance();
+        this.logger = new EngridLogger("EcardToTarget", "DarkBlue", "Azure", "📧");
+        this._form = EnForm.getInstance();
         this.supporterNameAddedToMessage = false;
         if (!this.shouldRun())
             return;
@@ -22113,7 +22286,7 @@ class EcardToTarget {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/interfaces/embedded-ecard-options.js
+;// ./node_modules/@4site/engrid-scripts/dist/interfaces/embedded-ecard-options.js
 const EmbeddedEcardOptionsDefaults = {
     pageUrl: "",
     headerText: "Send an Ecard notification of your gift",
@@ -22123,7 +22296,7 @@ const EmbeddedEcardOptionsDefaults = {
     requireInMemCheckbox: false,
 };
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/embedded-ecard.js
+;// ./node_modules/@4site/engrid-scripts/dist/embedded-ecard.js
 /**
  * This class handles adding a checkbox to a form that, when checked, will display an embedded ecard form.
  * The embedded ecard form is hosted on a separate page and is displayed in an iframe.
@@ -22134,9 +22307,9 @@ const EmbeddedEcardOptionsDefaults = {
 
 class EmbeddedEcard {
     constructor() {
-        this.logger = new logger_EngridLogger("Embedded Ecard", "#D95D39", "#0E1428", "📧");
+        this.logger = new EngridLogger("Embedded Ecard", "#D95D39", "#0E1428", "📧");
         this.options = EmbeddedEcardOptionsDefaults;
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this.isSubmitting = false;
         this.ecardFormActive = false;
         this.iframe = null;
@@ -22413,7 +22586,7 @@ class EmbeddedEcard {
                         recipientEmail.value = recipient.email;
                         addRecipientButton === null || addRecipientButton === void 0 ? void 0 : addRecipientButton.click();
                     });
-                    const form = en_form_EnForm.getInstance();
+                    const form = EnForm.getInstance();
                     form.submitForm();
                     sessionStorage.removeItem("engrid-embedded-ecard");
                     sessionStorage.removeItem("engrid-send-embedded-ecard");
@@ -22468,7 +22641,7 @@ class EmbeddedEcard {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/us-only-form.js
+;// ./node_modules/@4site/engrid-scripts/dist/us-only-form.js
 /*
  * This class disables the country field and fixes the country to "United States"
  */
@@ -22500,11 +22673,11 @@ class UsOnlyForm {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/thank-you-page-conditional-content.js
+;// ./node_modules/@4site/engrid-scripts/dist/thank-you-page-conditional-content.js
 
 class ThankYouPageConditionalContent {
     constructor() {
-        this.logger = new logger_EngridLogger("ThankYouPageConditionalContent");
+        this.logger = new EngridLogger("ThankYouPageConditionalContent");
         if (!this.shouldRun())
             return;
         this.applyShowHideRadioCheckboxesState();
@@ -22548,14 +22721,14 @@ class ThankYouPageConditionalContent {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/checkbox-label.js
+;// ./node_modules/@4site/engrid-scripts/dist/checkbox-label.js
 // Component to allow the user to set custom labels for the checkboxes,
 // you can customize the checkbox label on a per-page basis, which is not possible with Engaging Networks
 // The .checkbox-label element should be placed right before the checkbox form block
 
 class CheckboxLabel {
     constructor() {
-        this.logger = new logger_EngridLogger("CheckboxLabel", "#00CC95", "#2C3E50", "✅");
+        this.logger = new EngridLogger("CheckboxLabel", "#00CC95", "#2C3E50", "✅");
         this.checkBoxesLabels = document.querySelectorAll(".checkbox-label");
         if (!this.shoudRun())
             return;
@@ -22580,21 +22753,27 @@ class CheckboxLabel {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/optin-ladder.js
-// This component is responsible for showing a ladder of checkboxes, one at a time, to the user.
-// If the page is not embedded in an iframe, and there are EN's Opt-In fields on the page, we will store the values to sessionStorage upon Form Submit.
-// If the page is embedded in an iframe and on a Thank You Page, we will look for .optin-ladder elements, compare the values to sessionStorage, and show the next checkbox in the ladder, removing all but the first match.
-// If the page is embedded in an iframe and on a Thank You Page, and the child iFrame is also a Thank You Page, we will look for a sessionStorage that has the current ladder step and the total number of steps.
-// If the current step is less than the total number of steps, we will redirect to the first page. If the current step is equal to the total number of steps, we will show the Thank You Page.
+;// ./node_modules/@4site/engrid-scripts/dist/optin-ladder.js
+/* unused harmony import specifier */ var optin_ladder_EngridLogger;
+/* unused harmony import specifier */ var optin_ladder_EnForm;
+/* unused harmony import specifier */ var optin_ladder_ENGrid;
+/**
+ * Docs: https://engrid.4sitestudios.com/component/optin-ladder
+ * This component is responsible for showing a ladder of checkboxes, one at a time, to the user.
+ * If the page is not embedded in an iframe, and there are EN's Opt-In fields on the page, we will store the values to sessionStorage upon Form Submit.
+ * If the page is embedded in an iframe and on a Thank You Page, we will look for .optin-ladder elements, compare the values to sessionStorage, and show the next checkbox in the ladder, removing all but the first match.
+ * If the page is embedded in an iframe and on a Thank You Page, and the child iFrame is also a Thank You Page, we will look for a sessionStorage that has the current ladder step and the total number of steps.
+ * If the current step is less than the total number of steps, we will redirect to the first page. If the current step is equal to the total number of steps, we will show the Thank You Page.
+ */
 
 class OptInLadder {
     constructor() {
-        this.logger = new EngridLogger("OptInLadder", "lightgreen", "darkgreen", "✔");
-        this._form = EnForm.getInstance();
+        this.logger = new optin_ladder_EngridLogger("OptInLadder", "lightgreen", "darkgreen", "✔");
+        this._form = optin_ladder_EnForm.getInstance();
         if (!this.inIframe()) {
             this.runAsParent();
         }
-        else if (ENGrid.getPageNumber() === 1) {
+        else if (optin_ladder_ENGrid.getPageNumber() === 1) {
             this.runAsChildRegular();
         }
         else {
@@ -22603,11 +22782,11 @@ class OptInLadder {
     }
     runAsParent() {
         this.logger.log("Running as Parent");
-        if (ENGrid.getPageNumber() > 1 &&
-            ENGrid.getPageNumber() === ENGrid.getPageCount()) {
+        if (optin_ladder_ENGrid.getPageNumber() > 1 &&
+            optin_ladder_ENGrid.getPageNumber() === optin_ladder_ENGrid.getPageCount()) {
             // We are on the Thank You Page as a Parent
             // Check autoinject iFrame
-            const optInLadderOptions = ENGrid.getOption("OptInLadder");
+            const optInLadderOptions = optin_ladder_ENGrid.getOption("OptInLadder");
             if (!optInLadderOptions || !optInLadderOptions.iframeUrl) {
                 this.logger.log("Options not found");
                 return;
@@ -22632,7 +22811,7 @@ class OptInLadder {
             }
             // Check if the current page is part of the excludePageIDs
             if (optInLadderOptions.excludePageIDs &&
-                optInLadderOptions.excludePageIDs.includes(ENGrid.getPageID())) {
+                optInLadderOptions.excludePageIDs.includes(optin_ladder_ENGrid.getPageID())) {
                 this.logger.log("Current page is excluded");
                 return;
             }
@@ -22656,7 +22835,7 @@ class OptInLadder {
                 // Save the checkbox values to sessionStorage
                 this.saveOptInsToSessionStorage("parent");
             });
-            if (ENGrid.getPageNumber() === 1) {
+            if (optin_ladder_ENGrid.getPageNumber() === 1) {
                 // Delete items from sessionStorage
                 this.clearSessionStorage();
             }
@@ -22674,11 +22853,11 @@ class OptInLadder {
             return;
         }
         // Check if the e-mail field exist and is not empty
-        const emailField = ENGrid.getField("supporter.emailAddress");
+        const emailField = optin_ladder_ENGrid.getField("supporter.emailAddress");
         if (!emailField || !emailField.value) {
             this.logger.log("Email field is empty");
             // Since this is a OptInLadder page with no e-mail address, hide the page
-            this.hidePage();
+            this.hidePage(true);
             return;
         }
         const sessionStorageCheckboxValues = JSON.parse(sessionStorage.getItem("engrid.supporter.questions") || "{}");
@@ -22762,6 +22941,12 @@ class OptInLadder {
             return;
         }
         const hasOptInLadderStop = sessionStorage.getItem("engrid.optin-ladder-stop");
+        const hasOptInLadderPersistStop = sessionStorage.getItem("engrid.optin-ladder-persist-stop");
+        if (hasOptInLadderPersistStop) {
+            this.logger.log("OptInLadder has been stopped with persist flag, showing the thank-you page");
+            sessionStorage.removeItem("engrid.optin-ladder-persist-stop");
+            return;
+        }
         if (hasOptInLadderStop) {
             this.logger.log("OptInLadder has been stopped");
             return;
@@ -22769,9 +22954,14 @@ class OptInLadder {
         const sessionStorageOptInLadder = JSON.parse(sessionStorage.getItem("engrid.optin-ladder") || "{}");
         const currentStep = sessionStorageOptInLadder.step || 0;
         const totalSteps = sessionStorageOptInLadder.totalSteps || 0;
-        if (currentStep <= totalSteps) {
-            this.logger.log(`Current step ${currentStep} is less or equal to total steps ${totalSteps}`);
+        if (totalSteps === 0) {
+            this.logger.log("No total steps found in sessionStorage");
             this.hidePage();
+            return;
+        }
+        else if (currentStep <= totalSteps) {
+            this.logger.log(`Current step ${currentStep} is less or equal to total steps ${totalSteps}`);
+            this.hidePage(true);
             // Redirect to the first page
             window.location.href = this.getFirstPageUrl();
             return;
@@ -22793,14 +22983,6 @@ class OptInLadder {
     saveStepToSessionStorage(step, totalSteps) {
         sessionStorage.setItem("engrid.optin-ladder", JSON.stringify({ step, totalSteps }));
         this.logger.log(`Saved step ${step} of ${totalSteps} to sessionStorage`);
-    }
-    getFirstPageUrl() {
-        // Get the current URL and replace the last path with 1?chain
-        const url = new URL(window.location.href);
-        const path = url.pathname.split("/");
-        path.pop();
-        path.push("1");
-        return url.origin + path.join("/") + "?chain";
     }
     saveOptInsToSessionStorage(type = "parent") {
         // Grab all the checkboxes with the name starting with "supporter.questions"
@@ -22829,22 +23011,39 @@ class OptInLadder {
         }
     }
     isEmbeddedThankYouPage() {
-        return ENGrid.getBodyData("embedded") === "thank-you-page-donation";
+        return optin_ladder_ENGrid.getBodyData("embedded") === "thank-you-page-donation";
     }
-    hidePage() {
-        const engridPage = document.querySelector("#engrid");
-        if (engridPage) {
-            engridPage.classList.add("hide");
+    getPageUrl(page, chain = false) {
+        const url = new URL(window.location.href);
+        const path = url.pathname.split("/");
+        path[path.length - 1] = String(page);
+        return url.origin + path.join("/") + (chain ? "?chain" : "");
+    }
+    getFirstPageUrl() {
+        return this.getPageUrl(1, true);
+    }
+    hidePage(forceHide = false) {
+        if (optin_ladder_ENGrid.getBodyData("opt-in-ladder-persist") === "true" && !forceHide) {
+            this.logger.log("Hide activated, but opt-in ladder persist is enabled, showing the thank-you page");
+            sessionStorage.setItem("engrid.optin-ladder-persist-stop", "Y");
+            window.location.href = this.getPageUrl(2);
+        }
+        else {
+            const engridPage = document.querySelector("#engrid");
+            if (engridPage) {
+                engridPage.classList.add("hide");
+            }
         }
     }
     clearSessionStorage() {
         sessionStorage.removeItem("engrid.supporter.questions");
         sessionStorage.removeItem("engrid.optin-ladder");
         sessionStorage.removeItem("engrid.optin-ladder-stop");
+        sessionStorage.removeItem("engrid.optin-ladder-persist-stop");
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/post-donation-embed.js
+;// ./node_modules/@4site/engrid-scripts/dist/post-donation-embed.js
 // This component only works on Thank You pages and the current page IS NOT embedded as an iframe.
 // It searches for a post-donation tag (engrid-post-donation)
 // and if it exists, it will replace it with an iframe of the chained `src` attribute (or the current donation page, replacing the
@@ -22856,7 +23055,7 @@ class OptInLadder {
 
 class PostDonationEmbed {
     constructor() {
-        this.logger = new logger_EngridLogger("PostDonationEmbed", "red", "white", "🖼️");
+        this.logger = new EngridLogger("PostDonationEmbed", "red", "white", "🖼️");
         if (!this.shouldRun())
             return;
         this.logger.log("Post Donation Tag found");
@@ -22911,7 +23110,7 @@ class PostDonationEmbed {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/frequency-upsell-modal.js
+;// ./node_modules/@4site/engrid-scripts/dist/frequency-upsell-modal.js
 /*
  * FrequencyUpsellModal - this is class that creates the modal for the frequency upsell.
  * This component is intentionally "dumb" and only creates the modal renders its content.
@@ -22975,7 +23174,7 @@ class FrequencyUpsellModal extends Modal {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/frequency-upsell.js
+;// ./node_modules/@4site/engrid-scripts/dist/frequency-upsell.js
 /*
  * FrequencyUpsell component which creates a modal to upsell the frequency of the donation
  * This is typically used to upsell a single donation into an annual donation, but the component
@@ -22986,13 +23185,13 @@ class FrequencyUpsellModal extends Modal {
 
 class FrequencyUpsell {
     constructor() {
-        this.logger = new logger_EngridLogger("FrequencyUpsell", "lightgray", "darkblue", "🏦");
+        this.logger = new EngridLogger("FrequencyUpsell", "lightgray", "darkblue", "🏦");
         this.upsellModal = null;
         this.options = null;
         this._frequency = DonationFrequency.getInstance();
         this._amount = DonationAmount.getInstance();
         this._fee = ProcessingFees.getInstance();
-        this._form = en_form_EnForm.getInstance();
+        this._form = EnForm.getInstance();
         this.modalSeen = false;
         if (!this.shouldRun()) {
             this.logger.log("FrequencyUpsell not running");
@@ -23138,12 +23337,339 @@ class FrequencyUpsell {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/preferred-payment-method.js
+;// ./node_modules/@4site/engrid-scripts/dist/sticky-nsg.js
+
+
+
+class StickyNSG {
+    constructor() {
+        this.logger = new EngridLogger("StickyNSG", "teal", "white", "📌");
+        this.cookieName = "engrid-sticky-nsg";
+        if (!this.shouldRun())
+            return;
+        this.logger.log("Sticky NSG is enabled");
+        this.deleteCookieIfGiftProcessComplete();
+        this.createStickyNSGCookie();
+        this.applyStickyNSGCookie();
+    }
+    shouldRun() {
+        return engrid_ENGrid.getOption("StickyNSG") === true;
+    }
+    /*
+     * Determine if NSG provided by EN is active on the page
+     */
+    nsgActiveOnPage() {
+        return (window.EngagingNetworks &&
+            window.EngagingNetworks.suggestedGift &&
+            typeof window.EngagingNetworks.suggestedGift === "object" &&
+            Object.keys(window.EngagingNetworks.suggestedGift).length > 0);
+    }
+    /*
+     * Delete the cookie if the gift process is complete
+     */
+    deleteCookieIfGiftProcessComplete() {
+        if (engrid_ENGrid.getGiftProcess()) {
+            this.logger.log("Gift process complete, removing sticky NSG cookie if it exists");
+            remove(this.cookieName);
+        }
+    }
+    /*
+     * Create the sticky NSG cookie if NSG is active on the page
+     */
+    createStickyNSGCookie() {
+        var _a, _b, _c, _d, _e, _f;
+        if (!this.nsgActiveOnPage()) {
+            this.logger.log("No NSG active on page, not creating sticky NSG cookie");
+            return;
+        }
+        const url = new URL(window.location.href);
+        if (url.searchParams.get("skipstickynsg") === "true") {
+            this.logger.log("'skipstickynsg' param present, not creating sticky NSG cookie");
+            return;
+        }
+        // We do some reformating to match the EngridAmounts format
+        // We also add "Other" to the amounts list
+        const nsg = window.EngagingNetworks.suggestedGift;
+        this.logger.log("Creating sticky NSG cookie", nsg);
+        const oneTimeNsg = (_a = nsg.single) === null || _a === void 0 ? void 0 : _a.reduce((acc, curr) => {
+            acc[curr.value] = curr.value;
+            return acc;
+        }, {});
+        const oneTimeDefault = (_c = (_b = nsg.single) === null || _b === void 0 ? void 0 : _b.find((gift) => gift.nextSuggestedGift)) === null || _c === void 0 ? void 0 : _c.value;
+        const recurringNsg = (_d = nsg.recurring) === null || _d === void 0 ? void 0 : _d.reduce((acc, curr) => {
+            acc[curr.value] = curr.value;
+            return acc;
+        }, {});
+        const recurringDefault = (_f = (_e = nsg.recurring) === null || _e === void 0 ? void 0 : _e.find((gift) => gift.nextSuggestedGift)) === null || _f === void 0 ? void 0 : _f.value;
+        const nsgCookieData = {};
+        if (oneTimeNsg && oneTimeDefault) {
+            nsgCookieData.onetime = {
+                amounts: oneTimeNsg,
+                default: oneTimeDefault,
+                stickyDefault: false,
+            };
+        }
+        if (recurringNsg && recurringDefault) {
+            nsgCookieData.monthly = {
+                amounts: recurringNsg,
+                default: recurringDefault,
+                stickyDefault: false,
+            };
+        }
+        if (Object.keys(nsgCookieData).length === 0) {
+            this.logger.log("No valid NSG data found to create sticky NSG cookie");
+            return;
+        }
+        const cookieValue = JSON.stringify(nsgCookieData);
+        set(this.cookieName, cookieValue, { path: "/", expires: 30 });
+        this.logger.log("Sticky NSG cookie created", cookieValue);
+    }
+    /*
+     * Apply the sticky NSG cookie values to window.EngridAmounts if NSG is not active on the page
+     */
+    applyStickyNSGCookie() {
+        if (this.nsgActiveOnPage()) {
+            this.logger.log("NSG active on page, not applying sticky NSG cookie, leaving the EN NSG values.");
+            return;
+        }
+        const cookieValue = get(this.cookieName);
+        if (!cookieValue) {
+            this.logger.log("No sticky NSG cookie found, nothing to apply");
+            return;
+        }
+        try {
+            const nsg = JSON.parse(cookieValue);
+            this.logger.log("Applying sticky NSG cookie values", nsg);
+            window.EngridAmounts = nsg;
+        }
+        catch (e) {
+            this.logger.error("Error parsing sticky NSG cookie, not applying", e);
+        }
+    }
+}
+
+;// ./node_modules/@4site/engrid-scripts/dist/sticky-prepopulation.js
+var sticky_prepopulation_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+
+
+class StickyPrepopulation {
+    constructor() {
+        this.logger = new EngridLogger("StickyPrepopulation", "teal", "white", "📌");
+        this.options = { fields: [] };
+        this.cookieName = "engrid-sticky-prepop";
+        if (!this.shouldRun()) {
+            return;
+        }
+        this.logger.log("StickyPrepopulation initialized");
+        if (engrid_ENGrid.getGiftProcess()) {
+            this.deleteCookie();
+            return;
+        }
+        if (engrid_ENGrid.getPageNumber() !== 1 || !engrid_ENGrid.getField("supporter.emailAddress")) {
+            this.logger.log("Not on page 1 or email field not present, not creating cookie or applying pre-population.");
+            return;
+        }
+        this.createCookie();
+        this.applyPrepopulation();
+    }
+    /*
+      * Determine if we should run the script
+      * Do not run if RememberMe is active
+      * Do not run if on a chain link
+      * Only run if StickyPrepopulation option is set with fields
+     */
+    shouldRun() {
+        if (engrid_ENGrid.getOption("RememberMe")) {
+            return false;
+        }
+        const url = new URL(window.location.href);
+        const options = engrid_ENGrid.getOption("StickyPrepopulation");
+        if (options && (options === null || options === void 0 ? void 0 : options.fields.length) > 0 && !url.searchParams.has("chain")) {
+            this.options = options;
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    /*
+      * Delete the cookie if the gift process is complete
+     */
+    deleteCookie() {
+        this.logger.log("Gift process complete, removing sticky prepopulation cookie if it exists");
+        remove(this.cookieName);
+    }
+    /*
+     * Create the cookie if we're coming from a campaign link and supporterId is present
+     */
+    createCookie() {
+        var _a;
+        return sticky_prepopulation_awaiter(this, void 0, void 0, function* () {
+            // If we're not coming from a campaign link, don't create the cookie
+            if (!((_a = window.pageJson) === null || _a === void 0 ? void 0 : _a.supporterId)) {
+                this.logger.log("No supporterId present, not creating sticky prepopulation cookie");
+                return;
+            }
+            try {
+                const encryptedSupporterDetails = yield this.encryptSupporterDetails(this.getSupporterDetailsFromFields());
+                set(this.cookieName, window.btoa(JSON.stringify({
+                    encryptedData: encryptedSupporterDetails.encryptedData,
+                    iv: encryptedSupporterDetails.iv,
+                    pageId: engrid_ENGrid.getPageID()
+                })), { path: "/", expires: 7 });
+            }
+            catch (e) {
+                this.logger.log("Error creating sticky prepopulation cookie");
+                return;
+            }
+            this.logger.log("Sticky prepopulation cookie created");
+        });
+    }
+    /*
+     *  If the cookie is present and supporterId is not (it's not a campaign link prefilled by EN),
+     *  then apply the prepopulation
+     */
+    applyPrepopulation() {
+        var _a;
+        return sticky_prepopulation_awaiter(this, void 0, void 0, function* () {
+            const cookieData = get(this.cookieName);
+            if (!cookieData) {
+                this.logger.log("No sticky prepopulation cookie found, not prepopulating fields");
+                return;
+            }
+            if ((_a = window.pageJson) === null || _a === void 0 ? void 0 : _a.supporterId) {
+                this.logger.log("SupporterId present, not applying sticky prepopulation");
+                return;
+            }
+            let supporterDetails = {};
+            try {
+                const encryptedSupporterDetails = JSON.parse(window.atob(cookieData));
+                if (!encryptedSupporterDetails || (encryptedSupporterDetails === null || encryptedSupporterDetails === void 0 ? void 0 : encryptedSupporterDetails.pageId) !== engrid_ENGrid.getPageID()) {
+                    this.logger.log("No encrypted supporter details found in cookie, or page ID does not match");
+                    return;
+                }
+                supporterDetails = JSON.parse(yield this.decryptSupporterDetails(this.base64ToArrayBuffer(encryptedSupporterDetails.encryptedData), new Uint8Array(this.base64ToArrayBuffer(encryptedSupporterDetails.iv))));
+            }
+            catch (e) {
+                this.logger.log("Error decrypting supporter details from cookie");
+                return;
+            }
+            this.options.fields.forEach((fieldName) => {
+                if (!supporterDetails[fieldName])
+                    return;
+                engrid_ENGrid.setFieldValue(fieldName, decodeURIComponent(supporterDetails[fieldName]));
+                this.logger.log(`Setting "${fieldName}" to "${decodeURIComponent(supporterDetails[fieldName])}"`);
+            });
+        });
+    }
+    /*
+    * Get the supporter details from the form fields
+    */
+    getSupporterDetailsFromFields() {
+        const supporterDetails = {};
+        this.options.fields.forEach((fieldName) => {
+            let field = document.querySelector(`[name="${fieldName}"]`);
+            // If it is a radio or checkbox, get the checked value
+            if (field) {
+                if (field.type === "radio" || field.type === "checkbox") {
+                    field = document.querySelector(`[name="${fieldName}"]:checked`);
+                }
+                supporterDetails[fieldName] = encodeURIComponent(field.value);
+            }
+        });
+        return supporterDetails;
+    }
+    /*
+     * Encrypt the supporter details
+     */
+    encryptSupporterDetails(supporterDetails) {
+        return sticky_prepopulation_awaiter(this, void 0, void 0, function* () {
+            const encryptionKey = yield this.createEncryptionKey(this.getSeed());
+            const iv = window.crypto.getRandomValues(new Uint8Array(12));
+            const supporterDetailsString = JSON.stringify(supporterDetails);
+            const encryptedData = yield window.crypto.subtle.encrypt({
+                name: "AES-GCM",
+                iv: iv,
+            }, encryptionKey, new TextEncoder().encode(supporterDetailsString));
+            return {
+                encryptedData: this.arrayBufferToBase64(encryptedData),
+                iv: this.arrayBufferToBase64(iv),
+            };
+        });
+    }
+    /*
+     * Decrypt the supporter details
+     */
+    decryptSupporterDetails(encryptedSupporterDetails, iv) {
+        return sticky_prepopulation_awaiter(this, void 0, void 0, function* () {
+            const encryptionKey = yield this.createEncryptionKey(this.getSeed());
+            const decryptedData = yield window.crypto.subtle.decrypt({ name: "AES-GCM", iv: iv }, encryptionKey, encryptedSupporterDetails);
+            return new TextDecoder().decode(decryptedData);
+        });
+    }
+    /*
+     * Create the encryption key
+     */
+    createEncryptionKey(seed) {
+        return sticky_prepopulation_awaiter(this, void 0, void 0, function* () {
+            const encoder = new TextEncoder();
+            const keyMaterial = yield window.crypto.subtle.importKey("raw", encoder.encode(seed), { name: "PBKDF2" }, false, ["deriveKey"]);
+            return yield window.crypto.subtle.deriveKey({
+                name: "PBKDF2",
+                salt: encoder.encode(seed),
+                iterations: 100000,
+                hash: "SHA-256",
+            }, keyMaterial, { name: "AES-GCM", length: 256 }, false, ["encrypt", "decrypt"]);
+        });
+    }
+    /*
+     * Convert an ArrayBuffer to a base64 string
+     */
+    arrayBufferToBase64(buffer) {
+        let binary = "";
+        const bytes = new Uint8Array(buffer);
+        const len = bytes.byteLength;
+        for (let i = 0; i < len; i++) {
+            binary += String.fromCharCode(bytes[i]);
+        }
+        return window.btoa(binary);
+    }
+    /*
+     * Create an Array Buffer from a base64 string
+     */
+    base64ToArrayBuffer(base64) {
+        const binary_string = window.atob(base64);
+        const len = binary_string.length;
+        const bytes = new Uint8Array(len);
+        for (let i = 0; i < len; i++) {
+            bytes[i] = binary_string.charCodeAt(i);
+        }
+        return bytes.buffer;
+    }
+    /*
+     * Derive a seed from the page URL
+     */
+    getSeed() {
+        const url = new URL(window.location.href);
+        return url.origin + url.pathname + (url.searchParams.get("ea.tracking.id") ? `?ea.tracking.id=${url.searchParams.get("ea.tracking.id")}` : '');
+    }
+}
+
+;// ./node_modules/@4site/engrid-scripts/dist/preferred-payment-method.js
 
 class PreferredPaymentMethod {
     constructor() {
         var _a;
-        this.logger = new logger_EngridLogger("PreferredPaymentMethod", "#ffffff", "#1f2933", "⭐️");
+        this.logger = new EngridLogger("PreferredPaymentMethod", "#ffffff", "#1f2933", "⭐️");
         this.availabilityTimeoutMs = 4000;
         this.cleanupHandlers = [];
         this.selectionFinalized = false;
@@ -23426,11 +23952,13 @@ class PreferredPaymentMethod {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/version.js
-const AppVersion = "0.24.0";
+;// ./node_modules/@4site/engrid-scripts/dist/version.js
+const AppVersion = "0.24.5";
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/index.js
+;// ./node_modules/@4site/engrid-scripts/dist/index.js
  // Runs first so it can change the DOM markup before any markup dependent code fires
+
+
 
 
 
@@ -23524,16 +24052,16 @@ const AppVersion = "0.24.0";
 // Version
 
 
-;// CONCATENATED MODULE: ./src/scripts/main.js
+;// ./src/scripts/main.js
 const customScript = function (App) {
   console.log("ENGrid client scripts are executing");
   // Add your client scripts here
 
   App.setBodyData("client-js-loading", "finished");
 };
-;// CONCATENATED MODULE: ./src/index.ts
+;// ./src/index.ts
  // Uses ENGrid via NPM
-// import { Options, App } from "../../engrid-scripts/packages/common"; // Uses ENGrid via Visual Studio Workspace
+// import { Options, App } from "../../engrid/packages/scripts"; // Uses ENGrid via Visual Studio Workspace
 
 
 
